@@ -7,16 +7,6 @@ from spack.package import *
 
 class PyAwkward(PythonPackage):
     # BEGIN VERSIONS
-    version("2.6.2", sha256="c79c293a7f278ba316959b2246f682f338a4e5caff152bd9b4c45cc7ff8dc0e1", url="https://pypi.org/packages/18/9c/02978c408c7f93f3162e0c6b2f94f50fc0c89261277a948b72c693f642b4/awkward-2.6.2-py3-none-any.whl")
-    version("2.6.1", sha256="9a48d366a42ad4d54f383c3202395db36472eb426e64ff9f09eaf0286516df36", url="https://pypi.org/packages/68/98/fe8f0108b2ca85f198b54660336c6221018a99eef64522a38c1975e248ba/awkward-2.6.1-py3-none-any.whl")
-    version("2.6.0", sha256="715874cb667d0c2071cc35072c21767297020e76722852543322a1d96de42a57", url="https://pypi.org/packages/fe/ee/572155eb9f4a36cc1b0b82b2580c657e445d3e303da097df3bae6aa687f2/awkward-2.6.0-py3-none-any.whl")
-    version("2.5.2", sha256="6b6cbb62cdafb65457c4672980735a2b2e635a5eda5570a51459b4e42359ceb5", url="https://pypi.org/packages/40/7f/33f8f1f0c9f55a01b9ab50431163da364355433730a13330f6e2f136936a/awkward-2.5.2-py3-none-any.whl")
-    version("2.5.1", sha256="9b7f17557b5c44cbed337829d06797e58b7d5bc142e4e53911f55d7d579707d9", url="https://pypi.org/packages/b4/3f/adcb5df88523767cf6bad04012766239ae373e02f63271abce332e8b6772/awkward-2.5.1-py3-none-any.whl")
-    version("2.5.0", sha256="8a97cc97ad662a1130d8481242e732a30cc4809f0298f6443ed86f21aa9fba5c", url="https://pypi.org/packages/2a/3d/75823ab9e30e48d4f38dad23923b858c104041c894184c9760f314507f02/awkward-2.5.0-py3-none-any.whl")
-    version("2.4.10", sha256="a0cc863a686bba98d41443daf7f63add8b93f6c34de77a24322e2946ed029d13", url="https://pypi.org/packages/a7/29/4fecdc892ff6a031a643229426945da5144136acf39f02944f219268c391/awkward-2.4.10-py3-none-any.whl")
-    version("2.4.9", sha256="1f52226dfca1e4fe9283ed83750084e6a8f2ceaca3c7d0d9f361d87df2408967", url="https://pypi.org/packages/22/1b/0ef7291782c14c03f31b1a14786a86891be17ef5dfac746b036334dda081/awkward-2.4.9-py3-none-any.whl")
-    version("2.4.8", sha256="3bb5c505d1ddc78f876d5e2449deedc33e823691bdeaba9a8571284d9f4635e9", url="https://pypi.org/packages/46/6e/94b1f932319a29ca750abb49f36584c97a75b8eb06219d266176a998dbaf/awkward-2.4.8-py3-none-any.whl")
-    version("2.4.7", sha256="e7a6034dec908dc4034eb5d9cd9824119c202a0cb212238e60a1094510c69375", url="https://pypi.org/packages/8d/41/72065697d8977eecb1348c976449c2afbd0ff221d9aa8c6b6bc97a7b9df8/awkward-2.4.7-py3-none-any.whl")
     version("2.1.1", sha256="eb37e9b04054442c6637dffa709623c37fe91cd7a4c9eb99c287eb3c2e32d9ca", url="https://pypi.org/packages/00/52/8da2f684ff3eeb4bc51acdceecbbbf98558f944abb3bb8adff411f6d1054/awkward-2.1.1-py3-none-any.whl")
     version("2.1.0", sha256="880dd7e39c73b8ff5fc9f2bd78ce370cd3111e42084d770fa70e3cde60c00d2b", url="https://pypi.org/packages/9b/f0/fcbc163b47b833bd93916164bba868afca8485ba73abef836122ced23b23/awkward-2.1.0-py3-none-any.whl")
     version("2.0.10", sha256="d0870fe300e94a3ede60cd82c0548a37323a4df0b8249452cc1e174989fd314a", url="https://pypi.org/packages/99/8f/6a477f41f561ede3151f5f8476ce51197395e3ddf30e505f8475825b7bc7/awkward-2.0.10-py3-none-any.whl")
@@ -51,12 +41,6 @@ class PyAwkward(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-awkward-cpp@30", when="@2.6.2")
-        depends_on("py-awkward-cpp@29", when="@2.6:2.6.1")
-        depends_on("py-awkward-cpp@28", when="@2.5.2:2.5")
-        depends_on("py-awkward-cpp@27", when="@2.5.1")
-        depends_on("py-awkward-cpp@26", when="@2.5.0:2.5.1-rc1")
-        depends_on("py-awkward-cpp@25", when="@2.4.7:2.5.0-rc0")
         depends_on("py-awkward-cpp@12", when="@2.1:2.1.1")
         depends_on("py-awkward-cpp@11", when="@2.0.10:2.0")
         depends_on("py-awkward-cpp@10", when="@2.0.9")
@@ -68,11 +52,7 @@ class PyAwkward(PythonPackage):
         depends_on("py-awkward-cpp@4", when="@2.0.2")
         depends_on("py-awkward-cpp@3", when="@2.0.1")
         depends_on("py-awkward-cpp@2", when="@2.0.0-rc8:2.0.0")
-        depends_on("py-fsspec@2022.11:", when="@2.6.1:")
-        depends_on("py-fsspec", when="@2.6:2.6.0")
-        depends_on("py-importlib-metadata@4.13:", when="@2.4: ^python@:3.11")
         depends_on("py-importlib-resources", when="@1.10.5:1,2.0.0-rc4:2.3 ^python@:3.8")
-        depends_on("py-numpy@1.18.0:", when="@2.3:2.6.2")
         depends_on("py-numpy@1.17.0:", when="@2.1:2.2")
         depends_on("py-numpy@1.14.5:", when="@2.0.0-rc5:2.0")
         depends_on("py-packaging", when="@1.10.5:1,2.0.0-rc4:")

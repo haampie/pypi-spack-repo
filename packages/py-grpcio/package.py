@@ -7,18 +7,7 @@ from spack.package import *
 
 class PyGrpcio(PythonPackage):
     # BEGIN VERSIONS
-    version("1.62.1", sha256="6c455e008fa86d9e9a9d85bb76da4277c0d7d9668a3bfa70dbe86e9f3c759947", url="https://pypi.org/packages/c7/bb/d01494037edee2d8e024cac8049b169b2723186b01cebb495ccf677bbba9/grpcio-1.62.1.tar.gz")
-    version("1.62.0", sha256="748496af9238ac78dcd98cce65421f1adce28c3979393e3609683fcd7f3880d7", url="https://pypi.org/packages/50/4e/7ed8c24c93c8d000b9ea2927f555ae3b03cfabe035d65eda0db848cb20b6/grpcio-1.62.0.tar.gz")
-    version("1.62.0-rc1", sha256="6114254bd724749cb2a189eabfcec37c7a975cd9db796e8ce503311a17c24404", url="https://pypi.org/packages/a8/04/28ec8bfc70025692d56eafe0294fda5c88502280f139ad72e43d5a6d96a6/grpcio-1.62.0rc1.tar.gz")
     version("1.60.1", sha256="dd1d3a8d1d2e50ad9b59e10aa7f07c7d1be2b367f3f2d33c5fade96ed5460962", url="https://pypi.org/packages/7d/6d/919fd5886882c066122e69fbd938c1df2dc0aa22ab8de3e047c6aff5ac58/grpcio-1.60.1.tar.gz")
-    version("1.60.0", sha256="2199165a1affb666aa24adf0c97436686d0a61bc5fc113c037701fb7c7fceb96", url="https://pypi.org/packages/61/38/c615b5c2be690fb31871f294cc08a96e598b085b8d07c5967a5018e0b90c/grpcio-1.60.0.tar.gz")
-    version("1.60.0-rc1", sha256="d378ea7527706f14173dcb3ebaf9ae0f7b1e42d92a6a7af9e73cc6ca809ffdb2", url="https://pypi.org/packages/3d/5c/db87642b0f5388879a1dbfba36f31eff32f2db1e202e199ac2d72d9bc102/grpcio-1.60.0rc1.tar.gz")
-    version("1.59.3", sha256="7800f99568a74a06ebdccd419dd1b6e639b477dcaf6da77ea702f8fb14ce5f80", url="https://pypi.org/packages/ab/a1/f838646e25402eb750f037cf84c1ada46084717375e44724c89900ee4c7d/grpcio-1.59.3.tar.gz")
-    version("1.59.2", sha256="d8f9cd4ad1be90b0cf350a2f04a38a36e44a026cac1e036ac593dc48efe91d52", url="https://pypi.org/packages/93/95/7c72028fe9fc46748fb769b13a1e0923acbb79095cd5124b8bac0cebd38c/grpcio-1.59.2.tar.gz")
-    version("1.59.0", sha256="acf70a63cf09dd494000007b798aff88a436e1c03b394995ce450be437b8e54f", url="https://pypi.org/packages/38/98/ca2cb5a81e0e2f3e3a00ebf91338fd3278ea0673e156a7ff2de30fe17113/grpcio-1.59.0.tar.gz")
-    version("1.58.0", sha256="532410c51ccd851b706d1fbc00a87be0f5312bd6f8e5dbf89d4e99c7f79d7499", url="https://pypi.org/packages/5d/a2/781bae6df87dfd31115b24b1fe01213ef29caf9dbd0b8c1688c59aebf617/grpcio-1.58.0.tar.gz")
-    version("1.57.0", sha256="4b089f7ad1eb00a104078bab8015b0ed0ebcb3b589e527ab009c53893fd4e613", url="https://pypi.org/packages/18/b5/3ebe1bd133f472640e2d8941d2208b8de63706ebc08b09e1bb988d7f0071/grpcio-1.57.0.tar.gz")
-    version("1.56.2", sha256="0ff789ae7d8ddd76d2ac02e7d13bfef6fc4928ac01e1dcaa182be51b6bcc0aaa", url="https://pypi.org/packages/2f/7e/ddf5d42c77418ebf6d57f1503084e2955e8cf1d49671372fbdff7a82cbe5/grpcio-1.56.2.tar.gz")
     version("1.52.0", sha256="a5d4a83d29fc39af429c10b9b326c174fec49b73398e4a966a1f2a4f30aa4fdb", url="https://pypi.org/packages/ed/b7/6c5cf5c73445b28ac25347c78c6f2d76f2ed9a5d5966bd45b6904b3e7a51/grpcio-1.52.0.tar.gz")
     version("1.48.1", sha256="660217eccd2943bf23ea9a36e2a292024305aec04bf747fbcff1f5032b83610e", url="https://pypi.org/packages/e2/13/0f91c6c7eb0d934141743c7663e8808f4dc478dd0a7b0fd2a02a286c0d6d/grpcio-1.48.1.tar.gz")
     version("1.43.0", sha256="735d9a437c262ab039d02defddcb9f8f545d7009ae61c0114e19dda3843febe5", url="https://pypi.org/packages/c6/6b/5f7cd38ff3ac80f47cbe56618fe45502f90b41a56f5d9e248ee574e14687/grpcio-1.43.0.tar.gz")

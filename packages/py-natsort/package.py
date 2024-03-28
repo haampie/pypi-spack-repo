@@ -7,15 +7,6 @@ from spack.package import *
 
 class PyNatsort(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("8.4.0", sha256="4732914fb471f56b5cce04d7bae6f164a592c7712e1c85f9ef585e197299521c", url="https://pypi.org/packages/ef/82/7a9d0550484a62c6da82858ee9419f3dd1ccc9aa1c26a1e43da3ecd20b0d/natsort-8.4.0-py3-none-any.whl")
-    version("8.3.1", sha256="d583bc9050dd10538de36297c960b93f873f0cd01671a3c50df5bd86dd391dcb", url="https://pypi.org/packages/5f/e1/70d203ba3ae5476f25fb8a2015d6a7ff156a4ce4795e36955c144ea5a826/natsort-8.3.1-py3-none-any.whl")
-    version("8.3.0", sha256="6c15c663d3fc57dd2af52a56ffa06e9fdf2edfcf8d2e129bf115941a7aeec61e", url="https://pypi.org/packages/c9/86/f2e6cff92686b72068fcf87f7f5fc27bc87fe198814e1bfbb6e69a8ed8bf/natsort-8.3.0-py3-none-any.whl")
-    version("8.2.0", sha256="04fe18fdd2b9e5957f19f687eb117f102ef8dde6b574764e536e91194bed4f5f", url="https://pypi.org/packages/3e/58/61c4b4fd9e597affdcd3347d5991fa5be404af26f19932d3116b67e133da/natsort-8.2.0-py3-none-any.whl")
-    version("8.1.0", sha256="f59988d2f24e77b6b56f8a8f882d5df6b3b637e09e075abc67b486d59fba1a4b", url="https://pypi.org/packages/a9/76/0f624b7326f4458a249580c55e5654756084ec4572ce37a05f799b96bc24/natsort-8.1.0-py3-none-any.whl")
-    version("8.0.2", sha256="09cff3cabb617f9794f643758ab5b337c1c0af1a6df11edf5c04de496fd7fb26", url="https://pypi.org/packages/97/7b/9b5927edcfbb72a6b5e28d99956430187d2c428c8d664776ce1c1c31fa84/natsort-8.0.2-py3-none-any.whl")
-    version("8.0.1", sha256="c504a229c38926e047e9c3952a08920bc585efb62d7d160514ace9898b00ac0b", url="https://pypi.org/packages/4c/af/afef21ca70c9d4ca739a51bbc6ecf8c9def81c0929e0a66d9996a0e8b325/natsort-8.0.1-py3-none-any.whl")
-    version("8.0.0", sha256="5f5f4ea471d655b1b1611eef1cf0c6d3397095d2d3a1aab7098d6a50e4c3901a", url="https://pypi.org/packages/f3/59/ccd817aca7ee1a53af3987f486dbffc06459cc1cd39a0d3e5d60ea7ef56c/natsort-8.0.0-py3-none-any.whl")
-    version("7.2.0", sha256="24f245daf9622683d4d2dfbd6076ba4aa0054074e73bbeea4253b4bfec0ea2bc", url="https://pypi.org/packages/2e/65/fe1a8bea98f5f0620dd2fd77fceffb3a9431dca52f2789c3dcebe4e3c3a8/natsort-7.2.0-py3-none-any.whl")
     version("7.1.1", sha256="d0f4fc06ca163fa4a5ef638d9bf111c67f65eedcc7920f98dec08e489045b67e", url="https://pypi.org/packages/63/23/8b6acd2e9c0b427802dd45aacf0b2a0250893c3b26c7b1340589a588cc2a/natsort-7.1.1-py3-none-any.whl")
     version("7.1.0", sha256="161dfaa30a820a4a274d4eab1f693300990a1be05ae5724af0cc6d3b530fc979", url="https://pypi.org/packages/f0/c3/d16e6abfa2aa3ef339fbe0a5ca785f5cf5209b6f5ba5d18e3115e6e64ce5/natsort-7.1.0-py3-none-any.whl")
     version("7.0.1", sha256="d3fd728a3ceb7c78a59aa8539692a75e37cbfd9b261d4d702e8016639820f90a", url="https://pypi.org/packages/0f/65/81883897f4aaa1e53deaa65137318cfe80b36ce013c2e86f8fd0843cfa02/natsort-7.0.1-py3-none-any.whl")

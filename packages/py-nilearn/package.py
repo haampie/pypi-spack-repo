@@ -8,11 +8,9 @@ from spack.package import *
 class PyNilearn(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
     version("0.10.3", sha256="353bc3c4a73b20ade1d6a35287236c9cccd4f293f9aed75c4fc37110c02ebbb5", url="https://pypi.org/packages/b8/4a/27f961d8f1ebc630c0b1759a914f61b23d9e3ecdc279f3897b7eb4d6e689/nilearn-0.10.3-py3-none-any.whl")
-    version("0.10.2", sha256="db088f5e90930c97ecde4a16fc1658702a96dca9609faaa7149c6349824f4535", url="https://pypi.org/packages/d3/6d/f9e6f3e38bf6d8d2986c6a426f69f3b45191367383494a515f45dd748692/nilearn-0.10.2-py3-none-any.whl")
     version("0.10.1", sha256="4528dc8c04465c0ad0d98168fc4460086ad4ea07dde789a44116d7f124b4b23d", url="https://pypi.org/packages/cc/cd/e83c3ec620bd0f994dbc63b9ea96c42798049f9d254fe1f9f57996741972/nilearn-0.10.1-py3-none-any.whl")
     version("0.10.0", sha256="a78df43e0d9dcea18ac3bc2e56e0683c7bfd98cd2dd17e1e134f3003ce464868", url="https://pypi.org/packages/2c/39/ff1a661c569f01dee8a9c8a1a5887655dbaf28d14dd28e62b0d03b47baf8/nilearn-0.10.0-py3-none-any.whl")
     version("0.9.2", sha256="71b9d9a948ffb3fdb70fe7ff671fdaade436168c91f99d8b8fefa78e2ee2ee6d", url="https://pypi.org/packages/75/a4/2ebfe8ce00f0bab8d4c850c370c94b8f281de207b1bac5a74db76baaefe4/nilearn-0.9.2-py3-none-any.whl")
-    version("0.9.1", sha256="c4fb8e77597ae05bb1153b3ad917decf050f16ba4c70bff4330b4b052c1d93c6", url="https://pypi.org/packages/78/ac/a1dd548f21226723db4e1b22ab168142f7b99c0bccd727a2de09f332f64a/nilearn-0.9.1-py3-none-any.whl")
     version("0.9.0", sha256="3cb16270e53f5dd50ab2979e3e98ad4fc48485284e33b42eb376efba21734546", url="https://pypi.org/packages/45/fe/a25e7413b1d8d0db9729b40cd6537dd08427480b8faf2ed2095dc290b43c/nilearn-0.9.0-py3-none-any.whl")
     version("0.8.1", sha256="15ffbd509d017aea8642c303920e77968f1f7a79646d2019c9c7f839dc32beb0", url="https://pypi.org/packages/06/99/37fce7e258cc663923cc68b08e23ed1b72391f489dfc80e4bbed32b6f44f/nilearn-0.8.1-py3-none-any.whl")
     version("0.8.0", sha256="938635c5bda145f07384ebf704aa3f4312d99b0147eebc572646c60db15088dc", url="https://pypi.org/packages/c7/03/54010b2bbbf0e784ee11ca0d25bd644dba05e618d876f7fb8fdeb8eafaa0/nilearn-0.8.0-py3-none-any.whl")

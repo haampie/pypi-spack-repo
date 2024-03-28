@@ -11,7 +11,6 @@ class PyMatplotlib(PythonPackage):
     version("3.8.2", sha256="01a978b871b881ee76017152f1f1a0cbf6bd5f7b8ff8c96df0df1bd57d8755a1", url="https://pypi.org/packages/fb/ab/38a0e94cb01dacb50f06957c2bed1c83b8f9dac6618988a37b2487862944/matplotlib-3.8.2.tar.gz")
     version("3.8.1", sha256="044df81c1f6f3a8e52d70c4cfcb44e77ea9632a10929932870dfaa90de94365d", url="https://pypi.org/packages/b4/1b/1b80fcc6b7f33a4c7fa025e944416f8b63fa8d278fad32470c82a2edf319/matplotlib-3.8.1.tar.gz")
     version("3.8.0", sha256="df8505e1c19d5c2c26aff3497a7cbd3ccfc2e97043d1e4db3e76afa399164b69", url="https://pypi.org/packages/23/e1/77016194621fb1356aafeb2186f07b5dede62ea2043bf03f82325c4fccc5/matplotlib-3.8.0.tar.gz")
-    version("3.7.5", sha256="1e5c971558ebc811aa07f54c7b7c677d78aa518ef4c390e14673a09e0860184a", url="https://pypi.org/packages/b6/f0/3836719cc3982fbba3b840d18a59db1d0ee9ac7986f24e8c0a092851b67b/matplotlib-3.7.5.tar.gz")
     version("3.7.4", sha256="7cd4fef8187d1dd0d9dcfdbaa06ac326d396fb8c71c647129f0bf56835d77026", url="https://pypi.org/packages/eb/24/471a6a15d27ad69f50b2a861d8f96a8b1d055a5ea2464cd5284189b98fa8/matplotlib-3.7.4.tar.gz")
     version("3.7.3", sha256="f09b3dd6bdeb588de91f853bbb2d6f0ff8ab693485b0c49035eaa510cb4f142e", url="https://pypi.org/packages/bc/06/9ec4ae7c6c3a6e00f19b91439c2f226a4bb4adb24c84a7f8058a2224d2d0/matplotlib-3.7.3.tar.gz")
     version("3.7.2", sha256="a8cdb91dddb04436bd2f098b8fdf4b81352e68cf4d2c6756fcc414791076569b", url="https://pypi.org/packages/e5/59/b859fa2539b4121b016ea85758188203522fc12b0711de8b247cfec3cdac/matplotlib-3.7.2.tar.gz")

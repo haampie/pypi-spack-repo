@@ -7,16 +7,7 @@ from spack.package import *
 
 class PyPythonGitlab(PythonPackage):
     # BEGIN VERSIONS
-    version("4.4.0", sha256="cdad39d016f59664cdaad0f878f194c79cb4357630776caa9a92c1da25c8d986", url="https://pypi.org/packages/70/f3/82ec52f96bbcccd10a6ce8f145115d08463c54a374f31beb278aa16d8b25/python_gitlab-4.4.0-py3-none-any.whl")
-    version("4.3.0", sha256="cc1dc49c562c02ffbad3656e668234c45ea6210688ade59865b284313f45000d", url="https://pypi.org/packages/4e/27/e0f4d075646058bf16694b52b2c5fb8a0a738b44b3d2bbe2fc4851130f7c/python_gitlab-4.3.0-py3-none-any.whl")
-    version("4.2.0", sha256="fa265266f24740ee654de51860ff78c9c3e422bb8a8c7ea8eedf353c75f57609", url="https://pypi.org/packages/87/64/74f68bbfaae077ccb21d740d955af68978eff0917efe80cae00a980ddc19/python_gitlab-4.2.0-py3-none-any.whl")
-    version("4.1.1", sha256="9da309ce97d5de56947bd8ad09e321ab7de21bb360796c6c0e083397d1ff3399", url="https://pypi.org/packages/b3/08/dc30e99eca61b84099165c9cc882891b2bf55a9d535d556403cfd5712f82/python_gitlab-4.1.1-py3-none-any.whl")
-    version("4.1.0", sha256="3e611b90308a5eef44a85876e390b481efb7847cc62824e0ff5fdab111c255ec", url="https://pypi.org/packages/5c/45/836a3f4e2fd4a4e913c97e6955698333f39c531027d65e2368e22d749db5/python_gitlab-4.1.0-py3-none-any.whl")
-    version("4.0.0", sha256="a48385145ef06b41ee75971375bf8ddb1c905024fe71ee97d90a6c859e6b8ebf", url="https://pypi.org/packages/00/57/c8cf7b5b6a8adc192531f200176e4dd2d80390448e952f33ba6daf0d9614/python_gitlab-4.0.0-py3-none-any.whl")
     version("3.15.0", sha256="8f8d1c0d387f642eb1ac7bf5e8e0cd8b3dd49c6f34170cee3c7deb7d384611f3", url="https://pypi.org/packages/38/51/3c7dd08272658e5490d0c0b6c94af15bd0c0649e7ad23c9ed0db1d276143/python_gitlab-3.15.0-py3-none-any.whl")
-    version("3.14.0", sha256="da614c014c6860147783dde8c216218d8fc6bd83a8bd2e3929dcdf11b211aa58", url="https://pypi.org/packages/c9/69/71cc09a564aef5d76be4e88687c45aec082dca7705e83601df299c40ee1a/python_gitlab-3.14.0-py3-none-any.whl")
-    version("3.13.0", sha256="85ae778d8953aba87ad4b78aef7fbb5dae053980d2c20ff200bea29799685743", url="https://pypi.org/packages/2d/ff/54476a038762dfcf68ee633cdbeabcf681f4597ccf3e034ec671b3d33c4c/python_gitlab-3.13.0-py3-none-any.whl")
-    version("3.12.0", sha256="a5eb36b49783fda34563376674d5251dbbdbd1abd23b287dadf82f67d861b2c1", url="https://pypi.org/packages/2a/26/497b2a2d8b4853a194937807555094dae876a22135673b609581ebd3cd12/python_gitlab-3.12.0-py3-none-any.whl")
     version("3.9.0", sha256="ce941f99bf88b6918eea82500ca6206806117f4afe26d4705f4ded2284b35c69", url="https://pypi.org/packages/ea/67/1b00b2fe6942a1c388a40462455f8bb05ab01f5c8b8417186cfcfd523b6c/python_gitlab-3.9.0-py3-none-any.whl")
     version("2.10.1", sha256="581a219759515513ea9399e936ed7137437cfb681f52d2641626685c492c999d", url="https://pypi.org/packages/1b/90/eed6dd7eda176cb6e7300e27f9f7f94ac917df9dc1bb1553924af271f01a/python_gitlab-2.10.1-py3-none-any.whl")
     version("1.8.0", sha256="92041e5d691a8301e39556a61ab429319fa9f968fdaabb502b943863a88ce455", url="https://pypi.org/packages/27/16/b0fef2d26033b19a1ebd1ca02c3c83cd8e265cbf0806b7574a97b032785f/python_gitlab-1.8.0-py2-none-any.whl")

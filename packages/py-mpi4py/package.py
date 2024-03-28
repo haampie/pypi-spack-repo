@@ -13,7 +13,6 @@ class PyMpi4py(PythonPackage):
     version("3.1.2", sha256="40dd546bece8f63e1131c3ceaa7c18f8e8e93191a762cd446a8cfcf7f9cce770", url="https://pypi.org/packages/a6/5d/d58de70175c333255120a25abde95dd119af769bfa4c7ab4dd688b2af15f/mpi4py-3.1.2.tar.gz")
     version("3.1.1", sha256="e11f8587a3b93bb24c8526addec664b586b965d83c0882b884c14dc3fd6b9f5c", url="https://pypi.org/packages/bd/d3/b1e686fcf2fe1677fa010f0a29a1b8a8cd3fd56161aacd59c5be252fe382/mpi4py-3.1.1.tar.gz")
     version("3.0.3", sha256="012d716c8b9ed1e513fcc4b18e5af16a8791f51e6d1716baccf988ad355c5a1f", url="https://pypi.org/packages/ec/8f/bbd8de5ba566dd77e408d8136e2bab7fdf2b97ce06cab830ba8b50a2f588/mpi4py-3.0.3.tar.gz")
-    version("3.0.2", sha256="f8d629d1e3e3b7b89cb99d0e3bc5505e76cc42089829807950d5c56606ed48e0", url="https://pypi.org/packages/04/f5/a615603ce4ab7f40b65dba63759455e3da610d9a155d4d4cece1d8fd6706/mpi4py-3.0.2.tar.gz")
     version("3.0.1", sha256="6549a5b81931303baf6600fa2e3bc04d8bd1d5c82f3c21379d0d64a9abcca851", url="https://pypi.org/packages/55/a2/c827b196070e161357b49287fa46d69f25641930fd5f854722319d431843/mpi4py-3.0.1.tar.gz")
     version("3.0.0", sha256="b457b02d85bdd9a4775a097fac5234a20397b43e073f14d9e29b6cd78c68efd7", url="https://pypi.org/packages/31/27/1288918ac230cc9abc0da17d84d66f3db477757d90b3d6b070d709391a15/mpi4py-3.0.0.tar.gz")
     version("2.0.0", sha256="6543a05851a7aa1e6d165e673d422ba24e45c41e4221f0993fe1e5924a00cb81", url="https://pypi.org/packages/ee/b8/f443e1de0b6495479fc73c5863b7b5272a4ece5122e3589db6cd3bb57eeb/mpi4py-2.0.0.tar.gz")

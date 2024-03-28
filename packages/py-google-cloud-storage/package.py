@@ -7,10 +7,7 @@ from spack.package import *
 
 class PyGoogleCloudStorage(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("2.16.0", sha256="91a06b96fb79cf9cdfb4e759f178ce11ea885c79938f89590344d079305f5852", url="https://pypi.org/packages/cb/e5/7d045d188f4ef85d94b9e3ae1bf876170c6b9f4c9a950124978efc36f680/google_cloud_storage-2.16.0-py2.py3-none-any.whl")
-    version("2.15.0", sha256="5d9237f88b648e1d724a0f20b5cde65996a37fe51d75d17660b1404097327dd2", url="https://pypi.org/packages/a7/0b/810c51757e1815a6e0888a914e1b7493f8ed9f50878fb4e44114693deb24/google_cloud_storage-2.15.0-py2.py3-none-any.whl")
     version("2.14.0", sha256="8641243bbf2a2042c16a6399551fbb13f062cbc9a2de38d6c0bb5426962e9dbd", url="https://pypi.org/packages/3d/48/574463fbf30c7021341ab0620e56103a8c49ad864bdd177935306c057986/google_cloud_storage-2.14.0-py2.py3-none-any.whl")
-    version("2.14.0-rc1", sha256="e7a4706bd7e41fc1beab90c58df7602db71e743fe4c9a3b01c35d7a98c97d0f8", url="https://pypi.org/packages/24/5e/24250f9e7e1ea808086aa3464b2ee3c191569622c506c51b0737b1a9e1d9/google_cloud_storage-2.14.0rc1-py2.py3-none-any.whl")
     version("2.13.0", sha256="ab0bf2e1780a1b74cf17fccb13788070b729f50c252f0c94ada2aae0ca95437d", url="https://pypi.org/packages/04/72/71b1b531cefa1daff8f6a2a70b4d4fa18dd4da851b5486d53578811b0838/google_cloud_storage-2.13.0-py2.py3-none-any.whl")
     version("2.12.0", sha256="bc52563439d42981b6e21b071a76da2791672776eda3ba99d13a8061ebbd6e5e", url="https://pypi.org/packages/68/b8/cb00819641313e67b640857ffff2c5afdcdcfb4940def9f1502bf614a6d9/google_cloud_storage-2.12.0-py2.py3-none-any.whl")
     version("2.11.0", sha256="88cbd7fb3d701c780c4272bc26952db99f25eb283fb4c2208423249f00b5fe53", url="https://pypi.org/packages/3a/9f/7923b9e460023470826d124156503359bf77ee130adb0872570599e8cd98/google_cloud_storage-2.11.0-py2.py3-none-any.whl")
@@ -25,9 +22,7 @@ class PyGoogleCloudStorage(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-google-api-core@2.15.0:", when="@2.15:")
         depends_on("py-google-api-core@1.31.5:1,2.3.1:", when="@2.2:2.14")
-        depends_on("py-google-auth@2.26.1:", when="@2.15:")
         depends_on("py-google-auth@2.23.3:", when="@2.12:2.14")
         depends_on("py-google-auth@1.25:", when="@1.42:2.11")
         depends_on("py-google-auth@1.2:", when="@1.7,1.16:1.23")

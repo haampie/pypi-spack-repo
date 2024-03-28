@@ -7,12 +7,7 @@ from spack.package import *
 
 class PyBottle(PythonPackage):
     # BEGIN VERSIONS
-    version("0.12.25", sha256="d6f15f9d422670b7c073d63bd8d287b135388da187a0f3e3c19293626ce034ea", url="https://pypi.org/packages/bb/1f/5977ea88c6a3df6199db97d320e5da816d415d1eb75a987a1f6823d5cc9d/bottle-0.12.25-py3-none-any.whl")
-    version("0.12.24", sha256="fa88c66413ab07b5046545ac6e47a967d582143aef87f2c0fb0ef571d9977b5e", url="https://pypi.org/packages/ef/74/39f45da835b8654cfa66ccf6a65cea38d99f940db0a5e0d985de4723a1c9/bottle-0.12.24-py3-none-any.whl")
     version("0.12.23", sha256="9f1c363257c590bd34db5fad4693a7f06ff4217e9ad18337451de69c25137127", url="https://pypi.org/packages/63/96/2713bb6e0ca10ee2b7be568d6e6d112cf0a1b604e14879fe744f48ebbed6/bottle-0.12.23-py3-none-any.whl")
-    version("0.12.22", sha256="3de46c62260ae8c7f7223cd5673a9c1edd236efd8fe1fb64123d90f7cc29b1df", url="https://pypi.org/packages/d7/6a/a414d5bb46f71e4a455b5a90fcca1f05e6c313617575c2a9263425749af5/bottle-0.12.22-py3-none-any.whl")
-    version("0.12.21", sha256="6e1c9817019dae3a8c20adacaf09035251798d2ae2fcc8ce43157ee72965f257", url="https://pypi.org/packages/ef/1a/bdc522f3e6540b73b22081797ce985ef3cb2b77143f70b506ccd9d93a83d/bottle-0.12.21-py3-none-any.whl")
-    version("0.12.20", sha256="3c97e1e955c11e4ad2d73a60cdf83c4f4cf7b8b73c8344fc4b72f985432605cb", url="https://pypi.org/packages/30/b3/6ab6e216c38ce1744904782c1d495d04d5f446cd27822311f93d50166a7c/bottle-0.12.20-py3-none-any.whl")
     version("0.12.19", sha256="f6b8a34fe9aa406f9813c02990db72ca69ce6a158b5b156d2c41f345016a723d", url="https://pypi.org/packages/bf/44/aeafdd6ca05a8e1c3f91eeeb272a202d5cb1b3b23730a5ca686a81c48d24/bottle-0.12.19-py3-none-any.whl")
     version("0.12.18", sha256="43157254e88f32c6be16f8d9eb1f1d1472396a4e174ebd2bf62544854ecf37e7", url="https://pypi.org/packages/e9/39/2bf3a1fd963e749cdbe5036a184eda8c37d8af25d1297d94b8b7aeec17c4/bottle-0.12.18-py3-none-any.whl")
     version("0.12.17", sha256="1896a33b2c7c5be07491e6789e341f2e9593a0ff024cc0374615118587c81647", url="https://pypi.org/packages/69/d1/efdd0a5584169cdf791d726264089ce5d96846a8978c44ac6e13ae234327/bottle-0.12.17-py3-none-any.whl")

@@ -7,13 +7,10 @@ from spack.package import *
 
 class PyScikitLearn(PythonPackage):
     # BEGIN VERSIONS
-    version("1.4.1.post1", sha256="93d3d496ff1965470f9977d05e5ec3376fb1e63b10e4fda5e39d23c2d8969a30", url="https://pypi.org/packages/da/b4/5d7b9f64d2c3795ac37da3d8bc303be7950e575ec21ac7d0eb9de34fe0d5/scikit-learn-1.4.1.post1.tar.gz")
     version("1.4.0", sha256="d4373c984eba20e393216edd51a3e3eede56cbe93d4247516d205643c3b93121", url="https://pypi.org/packages/a0/25/f95b39549240d07c7fefa2ab0f81ac418f0ea192c53334f655bbed5015f9/scikit-learn-1.4.0.tar.gz")
-    version("1.4.0-rc1", sha256="a2deae0895ea5e3fa02415e45264dd3182f53b54c1fea523756e665f1d2ca0ea", url="https://pypi.org/packages/eb/a6/f9c1bb67e18a7d00ce94926e1a2fbe6275f14920f113e16aae450ca4c207/scikit-learn-1.4.0rc1.tar.gz")
     version("1.3.2", sha256="a2f54c76accc15a34bfb9066e6c7a56c1e7235dda5762b990792330b52ccfb05", url="https://pypi.org/packages/88/00/835e3d280fdd7784e76bdef91dd9487582d7951a7254f59fc8004fc8b213/scikit-learn-1.3.2.tar.gz")
     version("1.3.1", sha256="1a231cced3ee3fa04756b4a7ab532dc9417acd581a330adff5f2c01ac2831fcf", url="https://pypi.org/packages/4b/49/4b3e90399f49e875a1a6a0e72bb99d7e8fe808fcfe0a6a12b43a77e7d64d/scikit-learn-1.3.1.tar.gz")
     version("1.3.0", sha256="8be549886f5eda46436b6e555b0e4873b4f10aa21c07df45c4bc1735afbccd7a", url="https://pypi.org/packages/72/cd/4761675df1b3dd93072c89697278f3ed3dc004a60c034cd2603c43ff64b5/scikit-learn-1.3.0.tar.gz")
-    version("1.3.0-rc1", sha256="b6e44ab67ea9577ca26502a592948f488282b3c33a3b59d48caf195b6bff40e9", url="https://pypi.org/packages/09/e8/59396cf3a7328bee2ec86073117218f98efd482a079d12c21b76a7583252/scikit-learn-1.3.0rc1.tar.gz")
     version("1.2.2", sha256="8429aea30ec24e7a8c7ed8a3fa6213adf3814a6efbea09e16e0a0c71e1a1a3d7", url="https://pypi.org/packages/c9/fa/8e158d81e3602da1e7bafbd4987938bc003fe4b0f44d65681e7f8face95a/scikit-learn-1.2.2.tar.gz")
     version("1.2.1", sha256="fbf8a5c893c9b4b99bcc7ed8fb3e8500957a113f4101860386d06635520f7cfb", url="https://pypi.org/packages/86/cc/f2685fc3fc37122fe8be22e6c0dfdaeab49026625b8c2cf41bc87b1cdd4d/scikit-learn-1.2.1.tar.gz")
     version("1.2.0", sha256="680b65b3caee469541385d2ca5b03ff70408f6c618c583948312f0d2125df680", url="https://pypi.org/packages/27/a0/95eae31ceabeb7710a694367816edfcc0ccb001c794c14b3b234c148ae50/scikit-learn-1.2.0.tar.gz")

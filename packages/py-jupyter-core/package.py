@@ -7,16 +7,6 @@ from spack.package import *
 
 class PyJupyterCore(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("5.7.2", sha256="4f7315d2f6b4bcf2e3e7cb6e46772eba760ae459cd1f59d29eb57b0a01bd7409", url="https://pypi.org/packages/c9/fb/108ecd1fe961941959ad0ee4e12ee7b8b1477247f30b1fdfd83ceaf017f0/jupyter_core-5.7.2-py3-none-any.whl")
-    version("5.7.1", sha256="c65c82126453a723a2804aa52409930434598fd9d35091d63dfb919d2b765bb7", url="https://pypi.org/packages/86/a1/354cade6907f2fbbd32d89872ec64b62406028e7645ac13acfdb5732829e/jupyter_core-5.7.1-py3-none-any.whl")
-    version("5.7.0", sha256="16eea462f7dad23ba9f86542bdf17f830804e2028eb48d609b6134d91681e983", url="https://pypi.org/packages/4f/64/c15b7ac8915f7cae6c64718a6ffbb5e75fd398cda05d0a8aca2f570f0ed5/jupyter_core-5.7.0-py3-none-any.whl")
-    version("5.6.1", sha256="3d16aec2e1ec84b69f7794e49c32830c1d950ad149526aec954c100047c5f3a7", url="https://pypi.org/packages/9d/27/38fa0cac8acc54a202dd432f98553ddd1826da9633fe875e72b09a9e2b98/jupyter_core-5.6.1-py3-none-any.whl")
-    version("5.6.0", sha256="7613ee3c01f1b0632b927d368bf4e2f5d38503320b2179eec46eea91d026b0ce", url="https://pypi.org/packages/96/ac/94f8c8f6c47901d91a396f2e71a59784942256ee69b0445b0b7085188c84/jupyter_core-5.6.0-py3-none-any.whl")
-    version("5.5.1", sha256="220dfb00c45f0d780ce132bb7976b58263f81a3ada6e90a9b6823785a424f739", url="https://pypi.org/packages/af/51/762357eb0ab8d97751783354ac89cb1a4255dd94e955c5a8e379294c23a8/jupyter_core-5.5.1-py3-none-any.whl")
-    version("5.5.0", sha256="e11e02cd8ae0a9de5c6c44abf5727df9f2581055afe00b22183f621ba3585805", url="https://pypi.org/packages/ab/ea/af6508f71d2bcbf4db538940120cc3d3f10287f62105e756bd315aa345b5/jupyter_core-5.5.0-py3-none-any.whl")
-    version("5.4.0", sha256="66e252f675ac04dcf2feb6ed4afb3cd7f68cf92f483607522dc251f32d471571", url="https://pypi.org/packages/ac/92/bec527b68e2b56d0b1a30db19ce8370cba69fb68d34c981f4549564ca551/jupyter_core-5.4.0-py3-none-any.whl")
-    version("5.3.2", sha256="a4af53c3fa3f6330cebb0d9f658e148725d15652811d1c32dc0f63bb96f2e6d6", url="https://pypi.org/packages/bf/70/7b8dbda173b97be0ad40c5eb673bb1901cfeac29554d30cf9df49e59a694/jupyter_core-5.3.2-py3-none-any.whl")
-    version("5.3.1", sha256="ae9036db959a71ec1cac33081eeb040a79e681f08ab68b0883e9a676c7a90dce", url="https://pypi.org/packages/8c/e0/3f9061c5e99a03612510f892647b15a91f910c5275b7b77c6c72edae1494/jupyter_core-5.3.1-py3-none-any.whl")
     version("5.3.0", sha256="d4201af84559bc8c70cead287e1ab94aeef3c512848dde077b7684b54d67730d", url="https://pypi.org/packages/41/1e/92a67f333b9335f04ce409799c030dcfb291712658b9d9d13997f7c91e5a/jupyter_core-5.3.0-py3-none-any.whl")
     version("5.1.0", sha256="f5740d99606958544396914b08e67b668f45e7eff99ab47a7f4bcead419c02f4", url="https://pypi.org/packages/ba/88/c829e2cef67fa173ab512a054d1ba7047c2559b311e9f9e7c55b0a9d8278/jupyter_core-5.1.0-py3-none-any.whl")
     version("4.11.1", sha256="715e22bb6cc7db3718fddfac1f69f1c7e899ca00e42bdfd4bf3705452b9fd84a", url="https://pypi.org/packages/66/5f/32ee101e07d5ece26876f13526b16179525e19f4e460f8085e9ef8e54cff/jupyter_core-4.11.1-py3-none-any.whl")

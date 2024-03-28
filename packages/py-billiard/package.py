@@ -7,8 +7,6 @@ from spack.package import *
 
 class PyBilliard(PythonPackage):
     # BEGIN VERSIONS
-    version("4.2.0", sha256="07aa978b308f334ff8282bd4a746e681b3513db5c9a514cbdd810cbbdc19714d", url="https://pypi.org/packages/50/8d/6e9fdeeab04d803abc5a715175f87e88893934d5590595eacff23ca12b07/billiard-4.2.0-py3-none-any.whl")
-    version("4.1.0", sha256="0f50d6be051c6b2b75bfbc8bfd85af195c5739c281d3f5b86a5640c65563614a", url="https://pypi.org/packages/e3/a4/ae83eeb0563804a4148ff0e52f530e675bc90718c7c770cdfe4af1340c86/billiard-4.1.0-py3-none-any.whl")
     version("3.6.4.0", sha256="87103ea78fa6ab4d5c751c4909bcff74617d985de7fa8b672cf8618afd5a875b", url="https://pypi.org/packages/2b/89/0c43de91d4e52eaa7bd748771d417f6ac9e51e66b2f61928c2151bf65878/billiard-3.6.4.0-py3-none-any.whl")
     version("3.6.3.0", sha256="bff575450859a6e0fbc2f9877d9b715b0bbc07c3565bb7ed2280526a0cdf5ede", url="https://pypi.org/packages/e8/5e/7591866ff45b370354bd20291cb6f87ddb2eef1f1c88c890a38412037e11/billiard-3.6.3.0-py3-none-any.whl")
     version("3.6.1.0", sha256="01afcb4e7c4fd6480940cfbd4d9edc19d7a7509d6ada533984d0d0f49901ec82", url="https://pypi.org/packages/9a/bb/2a016ac912fca48e06ff5a662407f3d1681aa47df97fb19feba7cc931ee1/billiard-3.6.1.0-py3-none-any.whl")

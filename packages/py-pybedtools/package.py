@@ -7,7 +7,6 @@ from spack.package import *
 
 class PyPybedtools(PythonPackage):
     # BEGIN VERSIONS
-    version("0.9.1", sha256="586a626895b1b7215aef877e985c03fd8a908fd6c636e5b9ff8a1a1d09a1d514", url="https://pypi.org/packages/38/00/f07c17e25f9cc8e2d22b30aace73733e275b1804196f744f0178012a0d16/pybedtools-0.9.1.tar.gz")
     version("0.9.0", sha256="9267c92cd764173449d9c31baedac0659b4eccc3d7c05e22ec378f86c0fc30a3", url="https://pypi.org/packages/58/e2/410bb188b47582e2fd2f7176173b7b7bf46e122bb17fb4422552f4a6c604/pybedtools-0.9.0.tar.gz")
     version("0.8.0", sha256="4eebd2cd1764ee1c604fd881703c3e329195485350b987b7fb8db42d232984f6", url="https://pypi.org/packages/ca/b6/af143d5247cfe331e32c96ca92056293140eb8ce788d37842f6dcea734b4/pybedtools-0.8.0.tar.gz")
     version("0.7.10", sha256="518a2311bd33f29cf2ee8fc1a028dda8c8e380c9fc83fcb0fbaa206933174b50", url="https://pypi.org/packages/09/57/e7668e8644c60413be05b8cc9c23aaea3a0717b4025843d8c26b7c4822af/pybedtools-0.7.10.tar.gz")

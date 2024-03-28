@@ -7,12 +7,6 @@ from spack.package import *
 
 class PyAwkwardCpp(PythonPackage):
     # BEGIN VERSIONS
-    version("30", sha256="5be94ca7351d8e421cb9478a9b71016fa7673621fa122d477d0b07bb68aa7d4c", url="https://pypi.org/packages/38/de/a8df67cfe8fac16282854c96915906b6d29d6ce2182325cf67a17297e5d8/awkward-cpp-30.tar.gz")
-    version("29", sha256="af4b7891b78b903171bce341e88d2add84059fa167f08e8a993005999d1b9d1b", url="https://pypi.org/packages/92/66/6a568a041c59c4c84502c27e3a78c83110fe1314761746a733e7be347ee4/awkward-cpp-29.tar.gz")
-    version("28", sha256="304ebbf900c577368fd3c491a4ddfe6a5790bdec76a2b06bdcc4728176264592", url="https://pypi.org/packages/0e/fb/8e7db64da16a40558e3103a6d9bda0e84953a6f60041f28831b7d75cf224/awkward-cpp-28.tar.gz")
-    version("27", sha256="3c196518bfcce709766d63878041317a4914b62f8083e1a3e03b4fd6ea6f3c8d", url="https://pypi.org/packages/dc/4c/1da5e387a2ec963dfc1004af1a2e404488097f1cea3279a0d79fa11f9333/awkward-cpp-27.tar.gz")
-    version("26", sha256="a37c08f89126b637d4733454a1bf3f28b18d9f7947d21dc6ba12037d883b1c66", url="https://pypi.org/packages/14/b3/08bea6c701ba178d012ccb5ec7f05c34e1be466c8f57fbf6085c7f347752/awkward-cpp-26.tar.gz")
-    version("25", sha256="161aba5d4b79098cff97e2dff567029edf6bb376f2310210b3b8457b1af6b633", url="https://pypi.org/packages/cc/11/a15183b532795a37a08a0930fdd7587598393e50760e3c419fe0dfa54dea/awkward-cpp-25.tar.gz")
     version("12", sha256="429f7fcc37a671afa67fe9680f2edc3a123d1c74d399e5889c654f9529f9f8f2", url="https://pypi.org/packages/3b/2c/bbda35611aa640735de0ae056ad083bc70f82259eb7113a35f5668af05f9/awkward-cpp-12.tar.gz")
     version("11", sha256="02d719a4da7487564b29b8e8b78925a32ac818b6f5572c2f55912b4e0e59c7a4", url="https://pypi.org/packages/19/47/fbcb248e16b711018b8b49e2b0f12d088511227f4aa291b07812b1a87682/awkward-cpp-11.tar.gz")
     version("10", sha256="d1c856cb6ef5cf3d4f67506a7efc59239f595635865cc9f4ab18440b8bfb11c6", url="https://pypi.org/packages/2c/76/943901d54c6dc417674ce49e2a20d606361e1d8cc719651f429b4951bf0f/awkward-cpp-10.tar.gz")
@@ -30,8 +24,6 @@ class PyAwkwardCpp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-importlib-resources", when="@23: ^python@:3.8")
-        depends_on("py-numpy@1.18.0:", when="@20:30")
         depends_on("py-numpy@1.17.0:", when="@12:19")
         depends_on("py-numpy@1.14.5:", when="@3:11")
         depends_on("py-numpy@1.13.1:", when="@1:2")

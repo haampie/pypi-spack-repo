@@ -7,7 +7,6 @@ from spack.package import *
 
 class PyMypy(PythonPackage):
     # BEGIN VERSIONS
-    version("1.9.0", sha256="3cc5da0127e6a478cddd906068496a97a7618a21ce9b54bde5bf7e539c7af974", url="https://pypi.org/packages/72/1e/a587a862c766a755a58b62d8c00aed11b74a15dc415c1bf5da7b607b0efd/mypy-1.9.0.tar.gz")
     version("1.8.0", sha256="6ff8b244d7085a0b425b56d327b480c3b29cafbd2eff27316a004f9a7391ae07", url="https://pypi.org/packages/16/22/25fac51008f0a4b2186da0dba3039128bd75d3fab8c07acd3ea5894f95cc/mypy-1.8.0.tar.gz")
     version("1.7.1", sha256="fcb6d9afb1b6208b4c712af0dafdc650f518836065df0d4fb1d800f5d6773db2", url="https://pypi.org/packages/ae/30/05a7c016431b3fdbaf0bcf663aee7c5e4b3d2293cd4e0568140cecae4967/mypy-1.7.1.tar.gz")
     version("1.7.0", sha256="1e280b5697202efa698372d2f39e9a6713a0395a756b1c6bd48995f8d72690dc", url="https://pypi.org/packages/71/c8/dd3bee454333df813c97938a64c516e838ca5bc17ef35a74ceeb0f31869d/mypy-1.7.0.tar.gz")

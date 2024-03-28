@@ -7,14 +7,11 @@ from spack.package import *
 
 class PyAttrs(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("23.2.0", sha256="99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", url="https://pypi.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl")
     version("23.1.0", sha256="1f28b4522cdc2fb4256ac1a020c78acf9cba2c6b461ccd2c126f3aa8e8335d04", url="https://pypi.org/packages/f0/eb/fcb708c7bf5056045e9e98f62b93bd7467eb718b0202e7698eb11d66416c/attrs-23.1.0-py3-none-any.whl")
     version("22.2.0", sha256="29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836", url="https://pypi.org/packages/fb/6e/6f83bf616d2becdf333a1640f1d463fef3150e2e926b7010cb0f81c95e88/attrs-22.2.0-py3-none-any.whl")
     version("22.1.0", sha256="86efa402f67bf2df34f51a335487cf46b1ec130d02b8d39fd248abfd30da551c", url="https://pypi.org/packages/f2/bc/d817287d1aa01878af07c19505fafd1165cd6a119e9d0821ca1d1c20312d/attrs-22.1.0-py2.py3-none-any.whl")
     version("21.4.0", sha256="2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4", url="https://pypi.org/packages/be/be/7abce643bfdf8ca01c48afa2ddf8308c2308b0c3b239a44e57d020afa0ef/attrs-21.4.0-py2.py3-none-any.whl")
-    version("21.3.0", sha256="8f7335278dedd26b58c38e006338242cc0977f06d51579b2b8b87b9b33bff66c", url="https://pypi.org/packages/79/70/3265c0c6bf3a8f986aac07da384868ecf2a847578481155b27646ba6d633/attrs-21.3.0-py2.py3-none-any.whl")
     version("21.2.0", sha256="149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1", url="https://pypi.org/packages/20/a9/ba6f1cd1a1517ff022b35acd6a7e4246371dfab08b8e42b829b6d07913cc/attrs-21.2.0-py2.py3-none-any.whl")
-    version("21.1.0", sha256="8ee1e5f5a1afc5b19bdfae4fdf0c35ed324074bdce3500c939842c8f818645d9", url="https://pypi.org/packages/2b/00/7f74fb9608daf3626aad5de91181026a5107b997ce2788eabffeb5d41cb1/attrs-21.1.0-py2.py3-none-any.whl")
     version("20.3.0", sha256="31b2eced602aa8423c2aea9c76a724617ed67cf9513173fd3a4f03e3a929c7e6", url="https://pypi.org/packages/c3/aa/cb45262569fcc047bf070b5de61813724d6726db83259222cd7b4c79821a/attrs-20.3.0-py2.py3-none-any.whl")
     version("20.2.0", sha256="fce7fc47dfc976152e82d53ff92fa0407700c21acd20886a13777a0d20e655dc", url="https://pypi.org/packages/14/df/479736ae1ef59842f512548bacefad1abed705e400212acba43f9b0fa556/attrs-20.2.0-py2.py3-none-any.whl")
     version("20.1.0", sha256="2867b7b9f8326499ab5b0e2d12801fa5c98842d2cbd22b35112ae04bf85b4dff", url="https://pypi.org/packages/d6/e1/3aa3b03e7643ffd6e499b203fd2a44f79893443e8b0b520d05d3e5c638d5/attrs-20.1.0-py2.py3-none-any.whl")

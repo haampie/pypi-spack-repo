@@ -8,13 +8,8 @@ from spack.package import *
 class PyNibabel(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
     version("5.2.1", sha256="2cbbc22985f7f9d39d050df47249771dfb8d48447f5e7a993177e4cabfe047f0", url="https://pypi.org/packages/77/3f/ce43b8c2ccc4a7913a87c4d425aaf0080ea3abf947587e47dc2025981a17/nibabel-5.2.1-py3-none-any.whl")
-    version("5.2.0", sha256="77724af6e29fd9c4173702e4d031e7d8c45b5963887905a0f90edab880381b7f", url="https://pypi.org/packages/c9/23/8a8cfdc318231f369a13b7d3b5ebc9d67fc9314d62056efdafb371953020/nibabel-5.2.0-py3-none-any.whl")
     version("5.1.0", sha256="b3deb8130c835b9d26e80880b0d5e443d9e3f30972b3b0302dd2fafa3ca629f8", url="https://pypi.org/packages/9d/60/54aa4ec55ae7cacb8d7e3d18af2e0b55efb55852b3e0ef482113530d3929/nibabel-5.1.0-py3-none-any.whl")
-    version("5.0.1", sha256="f2f1495a00ac3bb914ad4b1740d9100f7ace8f0af399c45da9075ad4cf01fcaa", url="https://pypi.org/packages/8a/53/31c09af674011a215b824ef7044ea174fddf4b332f8eaaa6a8a84a288d5d/nibabel-5.0.1-py3-none-any.whl")
-    version("5.0.0", sha256="f8a4d08890cd95a7351c169e4ce69133b1292da24c6d0b42175c502f2534a21c", url="https://pypi.org/packages/b6/c7/c5d94402bb32898af084df933adab8c3a2b35986382680aa8a6b1ccd18b7/nibabel-5.0.0-py3-none-any.whl")
     version("4.0.2", sha256="c4fe76348aa865f8300beaaf2a69d31624964c861853ef80c06e33d5f244413c", url="https://pypi.org/packages/89/51/c97641cc2cd1b3b14cdec54b4e86fe03fc59753ecd13dc67544716fb7353/nibabel-4.0.2-py3-none-any.whl")
-    version("4.0.1", sha256="4b148a436635c264457945df9286cfad4993688ee7af3e4a5f12d6a31427cdbc", url="https://pypi.org/packages/26/4f/0f934f4e1ce05377e69afba160289f56df449135a80c8c35fa2ccf1d0c9d/nibabel-4.0.1-py3-none-any.whl")
-    version("4.0.0", sha256="c6870ab7b68810bd88517dde325bc10a5bea55b149c3c82073b9b0d9c4349678", url="https://pypi.org/packages/8b/04/0a7e4c27ffdf16af4ae567da35ee73e87efa0c921443537c22fb979b0458/nibabel-4.0.0-py3-none-any.whl")
     version("3.2.2", sha256="7df7a2733461441d3aacc61f36f5e100ec533d43ed09a191293bb4ca5a4f10f6", url="https://pypi.org/packages/c3/f1/6e31b0287aed62233ec93535ac55554ec5e80c81b772b411e878c9d17179/nibabel-3.2.2-py3-none-any.whl")
     version("3.2.1", sha256="7e26cbf60eae8668785fa970294f05f767cefc5538b9e22aa388a07f62c54ebc", url="https://pypi.org/packages/42/bf/ba089fec67237f6439c345b8977ca6dde67402ada6592bf84c2c78d557ff/nibabel-3.2.1-py3-none-any.whl")
     version("2.4.1", sha256="be0c8023cabee9073ccacca26ba7a296f0eb5d2fd24dfac2709fb7886a8d61ff", url="https://pypi.org/packages/66/30/fbed62172920c3fd050b6483541546a87c5e735f4a0ef03f08bb150680b4/nibabel-2.4.1-py2.py3-none-any.whl")

@@ -22,8 +22,8 @@ class PyMesonPython(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-meson@1.2.3:", when="@0.15: ^python@3.12:")
         depends_on("py-meson@0.63.3:", when="@0.15: ^python@:3.11")
+        depends_on("py-meson@1.2.3:", when="@0.15: ^python@3.12:")
         depends_on("py-meson@0.63.3:", when="@0.11:0.14")
         depends_on("py-meson@0.62.0:", when="@0.8.1:0.10")
         depends_on("py-meson@0.60.0:", when="@:0.8.0")

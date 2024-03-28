@@ -8,11 +8,8 @@ from spack.package import *
 class PyPyproj(PythonPackage):
     # BEGIN VERSIONS
     version("3.6.1", sha256="44aa7c704c2b7d8fb3d483bbf75af6cb2350d30a63b144279a09b75fead501bf", url="https://pypi.org/packages/7d/84/2b39bbf888c753ea48b40d47511548c77aa03445465c35cc4c4e9649b643/pyproj-3.6.1.tar.gz")
-    version("3.6.1-rc0", sha256="1789ed7df0726d94dc61b32b29c4233c81f2967d21982980e836500bbc26dc7d", url="https://pypi.org/packages/4b/5e/83cbcac997b585d704bdd085e399b7e842c0d343ddddf64b355fb0b60801/pyproj-3.6.1rc0.tar.gz")
     version("3.6.0", sha256="a5b111865b3f0f8b77b3983f2fbe4dd6248fc09d3730295949977c8dcd988062", url="https://pypi.org/packages/38/77/46fe6a107b934fd23b903cb7402b69c8b2480a6cab9481d9f98c6dc7726e/pyproj-3.6.0.tar.gz")
-    version("3.6.0-rc0", sha256="122fc92dda0e875c985a6a14841c474cd77355e2ccaab9f69abbaf6c54c25aba", url="https://pypi.org/packages/00/4f/f672812136b07bb624a2c23dde631cbbcf0aab33c7231f00017286c14bc9/pyproj-3.6.0rc0.tar.gz")
     version("3.5.0", sha256="9859d1591c1863414d875ae0759e72c2cffc01ab989dc64137fbac572cc81bf6", url="https://pypi.org/packages/9c/f5/cd9371194d3c939dffddff9e118a018bb7c2f560549bea4c6bc21b24eadd/pyproj-3.5.0.tar.gz")
-    version("3.5.0-rc0", sha256="8d0b0f7751b5625fd96354335b3427db1817cad99148017a9afce3742b7f5f28", url="https://pypi.org/packages/10/ce/9235b503514543a2953d58aa6ebdbe4e03d97f5c25b07f8a8fe10f466332/pyproj-3.5.0rc0.tar.gz")
     version("3.4.1", sha256="261eb29b1d55b1eb7f336127344d9b31284d950a9446d1e0d1c2411f7dd8e3ac", url="https://pypi.org/packages/c0/fc/fd53e45d2ad5862d32ab8614e70c3c1f52a8e0d8bd243ee6a23b6a481b4a/pyproj-3.4.1.tar.gz")
     version("3.4.0", sha256="a708445927ace9857f52c3ba67d2915da7b41a8fdcd9b8f99a4c9ed60a75eb33", url="https://pypi.org/packages/aa/d5/492f4284cb88f912d329e8430917ac2f5427833c31843a712cf9dc703471/pyproj-3.4.0.tar.gz")
     version("3.3.1", sha256="b3d8e14d91cc95fb3dbc03a9d0588ac58326803eefa5bbb0978d109de3304fbe", url="https://pypi.org/packages/e3/4d/348402c2fb0d8a8e85a88b8babc6f4efaae9692b7524aedce5fddbef3baf/pyproj-3.3.1.tar.gz")

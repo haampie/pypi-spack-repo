@@ -7,7 +7,6 @@ from spack.package import *
 
 class PyHepunits(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("2.3.3", sha256="2edd3446bab7a853865e402eb14958ea6da6d728a7d9064cc3d8f3bb3a9a1281", url="https://pypi.org/packages/6c/f2/f1c70615308c08e07506d16f3976c57475c3555747482e2de81146eda2c7/hepunits-2.3.3-py3-none-any.whl")
     version("2.3.2", sha256="96267ca79908b8d3c44bd09c3ad98887a7394118d9495657c2471b8e2264d759", url="https://pypi.org/packages/77/18/b4365c940075b74a4d76269e334dc8a6d966346162491197f661043005f5/hepunits-2.3.2-py3-none-any.whl")
     version("2.3.1", sha256="e070c3145fb50526a9a5d2fb557faafdd8bb9b8cb0045a27d2d6ac489269b24d", url="https://pypi.org/packages/91/48/76b99f9cf2ec8fadea882f70ec7866d227644b857791f49892a86083ac82/hepunits-2.3.1-py3-none-any.whl")
     version("2.3.0", sha256="7a48643261e7bf74f91b7a9338be15e555711f1dde8f1d02c7607925a1716c69", url="https://pypi.org/packages/27/55/27f39857f74ca2ca2a95c98d9086b11058a36ad60e0faa9a8b530a54a0bb/hepunits-2.3.0-py3-none-any.whl")

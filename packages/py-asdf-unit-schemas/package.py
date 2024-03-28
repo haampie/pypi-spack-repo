@@ -7,7 +7,6 @@ from spack.package import *
 
 class PyAsdfUnitSchemas(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("0.2.0", sha256="6a2af1aeda688bc4994e7c933badbee0ff7e61f1ba3121159635c51510979b8d", url="https://pypi.org/packages/e8/74/56957ec9c6e04a8ec7f578bbd558d206a1779c394e171ed2cf0da60fc9c3/asdf_unit_schemas-0.2.0-py3-none-any.whl")
     version("0.1.0", sha256="0e104b53c23a9e15541cfa5d101613d2724a9124fc56301324512659afb470d5", url="https://pypi.org/packages/3e/55/78e900affcb8306cb669e52ee2eac670badef4c8d5938e8dae824ef21932/asdf_unit_schemas-0.1.0-py3-none-any.whl")
     # END VERSIONS
 

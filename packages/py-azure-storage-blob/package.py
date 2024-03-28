@@ -7,18 +7,11 @@ from spack.package import *
 
 class PyAzureStorageBlob(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("12.19.1", sha256="c5530dc51c21c9564e4eb706cd499befca8819b10dd89716d3fc90d747556243", url="https://pypi.org/packages/39/96/c0964ea207da669fb6c51a370aef647269c4a21608112a1057440dda8aea/azure_storage_blob-12.19.1-py3-none-any.whl")
     version("12.19.0", sha256="7bbc2c9c16678f7a420367fef6b172ba8730a7e66df7f4d7a55d5b3c8216615b", url="https://pypi.org/packages/f6/82/24b0d7cf67ea63af86f11092756b8fe2adc1d55323241dc4107f5f5748e2/azure_storage_blob-12.19.0-py3-none-any.whl")
-    version("12.19.0-beta1", sha256="5f80b72fee0e4e5dee5ec2159d78f0a628ffb6177117ac81d0bed9a1ebf825b2", url="https://pypi.org/packages/a4/89/1bc063d758bcd4cfde5ea0b206b75de59ea45fdc460ca8acc60a4480fda3/azure_storage_blob-12.19.0b1-py3-none-any.whl")
     version("12.18.3", sha256="c278dde2ac41857a68d615c9f2b36d894ba877a7e84d62795603c7e79d0bb5e9", url="https://pypi.org/packages/be/cd/30306c04f962b55cae44cab2859b5496d0d75521a3bf2e92ec4a6bb61ddb/azure_storage_blob-12.18.3-py3-none-any.whl")
-    version("12.18.2", sha256="ffd864bf9abf33dfc72c6ef37899a19bd9d585a946a2c61e288b4420c035df3a", url="https://pypi.org/packages/7c/14/03baf5163186a95469d5f86031bde2bd35f3dec6ed3c8b87c876aa0f68d4/azure_storage_blob-12.18.2-py3-none-any.whl")
-    version("12.18.1", sha256="00b92568e91d608c04dfd4814c3b180818e690023493bb984c22dfc1a8a96e55", url="https://pypi.org/packages/14/c3/9b6a7f5fee1bf833384925f9741b182d170bb65d0142fbf73b1683a055d2/azure_storage_blob-12.18.1-py3-none-any.whl")
-    version("12.18.0", sha256="11e033f91a9c2bee72251951ef60d45cfcad2eb199476e924074bb1d124e2fed", url="https://pypi.org/packages/37/11/89b45a62e3fe5faf94780fad626a1a7de3edb5040f8ecb19103ee83ae531/azure_storage_blob-12.18.0-py3-none-any.whl")
-    version("12.18.0-beta1", sha256="18efad68cdb769a30ef451cb6aef019a2bb77f8aa98f83664655f0cfc8ed290a", url="https://pypi.org/packages/69/58/387f5cf6a235c02460806fe45a8ae949c51882e7fb6bd68b0529ac41bd0e/azure_storage_blob-12.18.0b1-py3-none-any.whl")
     version("12.17.0", sha256="0016e0c549a80282d7b4920c03f2f4ba35c53e6e3c7dbcd2a4a8c8eb3882c1e7", url="https://pypi.org/packages/f1/06/68c50a905e1e5481b04a6166b69fecddb87681aae7a556ab727f8e8e6f70/azure_storage_blob-12.17.0-py3-none-any.whl")
     version("12.16.0", sha256="91bb192b2a97939c4259c72373bac0f41e30810bbc853d5184f0f45904eacafd", url="https://pypi.org/packages/95/e7/db8bfa32d44436e3753c60be51577420e0836ec101e3209452f3c84920c6/azure_storage_blob-12.16.0-py3-none-any.whl")
     version("12.15.0", sha256="08d8807c577c63a436740627927c1a03a97c963efc29af5c818aed906590e1cf", url="https://pypi.org/packages/46/cf/ef1daa7b7df2b2d72db82fa2a777bf50133f4797b4bdfa6b3bbea09660fe/azure_storage_blob-12.15.0-py3-none-any.whl")
-    version("12.14.1", sha256="52b84658e8df7853a3cf1c563814655b5028b979b2a87905b92aa6bb30be240e", url="https://pypi.org/packages/46/a1/fbb2f313f32dc469be1fadc0d02957399b93d8d713e61492c67ae5c764b8/azure_storage_blob-12.14.1-py3-none-any.whl")
     version("12.14.0", sha256="073c9e99154975644b32ed5c900832d8aa3c041b972b2f34ef269760d023e69b", url="https://pypi.org/packages/c3/04/636de31f41279f21d1b74f7acfcced80b9d2e2f27d8a729b1e3134102c6f/azure_storage_blob-12.14.0-py3-none-any.whl")
     version("12.13.1", sha256="726b86f733dc76218ce45b7a3254b61ba4f0cc3d68b7621be4985248c92ee483", url="https://pypi.org/packages/dd/fb/1501707ae8d921079ea826d16926e1b9b179d15264a2d239a08d7b374522/azure_storage_blob-12.13.1-py3-none-any.whl")
     version("12.12.0", sha256="1eac4c364309ccc193c80ee26c78d25dfbf10926b1309095a448a7a0388526eb", url="https://pypi.org/packages/85/2f/7b8ba0676118a451598c73ad772e47e13b5e66f68a2fc2dfca5c50d17ec4/azure_storage_blob-12.12.0-py3-none-any.whl")

@@ -7,16 +7,7 @@ from spack.package import *
 
 class PyMeson(PythonPackage):
     # BEGIN VERSIONS
-    version("1.4.0", sha256="476a458d51fcfa322a6bdc64da5138997c542d08e6b2e49b9fa68c46fd7c4475", url="https://pypi.org/packages/33/75/b1a37fa7b2dbca8c0dbb04d5cdd7e2720c8ef6febe41b4a74866350e041c/meson-1.4.0-py3-none-any.whl")
-    version("1.4.0-rc2", sha256="204444cc4a2d86606d028215ae2e9b2087874f3f64a147ec92a4d2564635447e", url="https://pypi.org/packages/70/fa/69564edd377b7a855820eaf4081e3fada8462bf372ca41e9b5e6a1f83cfa/meson-1.4.0rc2-py3-none-any.whl")
-    version("1.4.0-rc1", sha256="bcae6bc400c3add0530110da09c49dfd27a3a48087ecb5aa4ba1f75e3339daa9", url="https://pypi.org/packages/60/63/9c7856d213b34af92b375c46e67a498d167d39982160417ec7b92483da98/meson-1.4.0rc1-py3-none-any.whl")
     version("1.3.2", sha256="0ba4a71fbc060c44721c7b674807598c5af9ea51335073cae7a3e9a95b375c89", url="https://pypi.org/packages/39/7c/ff115bec047c5127567048db40818b83b47fd0d3bfcfd0d87630d44ed66f/meson-1.3.2-py3-none-any.whl")
-    version("1.3.1", sha256="d5223ecca9564d735d36daaba2571abc6c032c8c3a7ffa0674e803ef0c7e0219", url="https://pypi.org/packages/53/37/bb38e78b36cb923c65fd70b3027406e9667b2ff31f054584ab23282c07f6/meson-1.3.1-py3-none-any.whl")
-    version("1.3.0", sha256="e9f54046ce5b9a1f3024f7a7d52f19f085fd57c9d26a5db0cfcf0750572a8fd8", url="https://pypi.org/packages/f8/af/e6f06610fcb778e1935d0648c7a42baeb1f51756b3849951a82c40a6193b/meson-1.3.0-py3-none-any.whl")
-    version("1.3.0-rc3", sha256="dca4a94fe6f095a9a8db7f31bd9df9a66c0481ba5cc4d5532a4c8bb08040bfbe", url="https://pypi.org/packages/34/f2/55f4d1200a7deca8a1d64600cc8e68c3173e0c2229b6004a30f8f746ea06/meson-1.3.0rc3-py3-none-any.whl")
-    version("1.3.0-rc2", sha256="0240fcb71e6cc2e319d6bb475bd70cb6ce46e2448a75bf0825fc2d0ec3abf92f", url="https://pypi.org/packages/50/dc/c0dd4a253286d131b7eaf1bdaffb5ff5518f3aede50bcaba547c4002b1a8/meson-1.3.0rc2-py3-none-any.whl")
-    version("1.3.0-rc1", sha256="194883d5f7a17162a18f1583c57301c440d85025863576d7f1baa8a6e8cd7384", url="https://pypi.org/packages/b3/fe/9c30551def432acb21e5ec4f0b3f29868d9638c5dc115295f2ae0c5a217b/meson-1.3.0rc1.tar.gz")
-    version("1.2.3", sha256="17d9124ffad38f5bbb6b198a8de5ecc55ebcd164d35a1d9dae06b8de0605a252", url="https://pypi.org/packages/b0/74/73a0d5264f04c9193d2d588400ae913a167911b4342320cbdde3040b753d/meson-1.2.3-py3-none-any.whl")
     version("1.2.2", sha256="6d0f9cb45aaf70bc032ecb894d5e22a512224b778837bc7e052588c7ce87571d", url="https://pypi.org/packages/4b/62/602e91c1da05abf88d86dbc89e05e09665cf06f42ccebca67401bbce90fe/meson-1.2.2-py3-none-any.whl")
     version("1.2.1", sha256="08f83fc17513e99cd6e82c7554c1f58af70425211887f8f9c7363b2a90209462", url="https://pypi.org/packages/e5/74/a1f1c6ba14e11e0fb050d2c61a78b6db108dd38383b6c0ab51c1becbbeff/meson-1.2.1-py3-none-any.whl")
     version("1.2.0", sha256="10c0364edc67a1b3146f405800b300f0535f42b8736e79c744a8029a855b7c6b", url="https://pypi.org/packages/ae/33/6f4a76e7139cffc2e3d4bab02824875c842922c0689438fc25092d85aecd/meson-1.2.0-py3-none-any.whl")

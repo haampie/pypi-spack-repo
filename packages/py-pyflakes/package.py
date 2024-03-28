@@ -7,13 +7,10 @@ from spack.package import *
 
 class PyPyflakes(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("3.2.0", sha256="84b5be138a2dfbb40689ca07e2152deb896a65c3a3e24c251c5c62489568074a", url="https://pypi.org/packages/d4/d7/f1b7db88d8e4417c5d47adad627a93547f44bdc9028372dbd2313f34a855/pyflakes-3.2.0-py2.py3-none-any.whl")
     version("3.1.0", sha256="4132f6d49cb4dae6819e5379898f2b8cce3c5f23994194c24b77d5da2e36f774", url="https://pypi.org/packages/00/e9/1e1fd7fae559bfd07704991e9a59dd1349b72423c904256c073ce88a9940/pyflakes-3.1.0-py2.py3-none-any.whl")
     version("3.0.1", sha256="ec55bf7fe21fff7f1ad2f7da62363d749e2a470500eab1b555334b67aa1ef8cf", url="https://pypi.org/packages/af/4c/b1c7008aa7788b3e26c06c60aa18da7d3aa1f00e344aa3f18ac92768854b/pyflakes-3.0.1-py2.py3-none-any.whl")
-    version("3.0.0", sha256="e38cbaa285564388a9622d7e440445d40c508d8fbf96e0c0f3ef28e47d8ba8a2", url="https://pypi.org/packages/ad/71/aec2836649684d1cb1066a30a7d44bbe333da62621c79e091805f9d010fa/pyflakes-3.0.0-py2.py3-none-any.whl")
     version("2.5.0", sha256="4579f67d887f804e67edb544428f264b7b24f435b263c4614f384135cea553d2", url="https://pypi.org/packages/dc/13/63178f59f74e53acc2165aee4b002619a3cfa7eeaeac989a9eb41edf364e/pyflakes-2.5.0-py2.py3-none-any.whl")
     version("2.4.0", sha256="3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e", url="https://pypi.org/packages/43/fb/38848eb494af7df9aeb2d7673ace8b213313eb7e391691a79dbaeb6a838f/pyflakes-2.4.0-py2.py3-none-any.whl")
-    version("2.3.1", sha256="7893783d01b8a89811dd72d7dfd4d84ff098e5eed95cfa8905b22bbffe52efc3", url="https://pypi.org/packages/6c/11/2a745612f1d3cbbd9c69ba14b1b43a35a2f5c3c81cd0124508c52c64307f/pyflakes-2.3.1-py2.py3-none-any.whl")
     version("2.3.0", sha256="910208209dcea632721cb58363d0f72913d9e8cf64dc6f8ae2e02a3609aba40d", url="https://pypi.org/packages/57/7e/188ea51830ff05ecf6154b849cd420cf581c0deb60c173215d326e8af197/pyflakes-2.3.0-py2.py3-none-any.whl")
     version("2.2.0", sha256="0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92", url="https://pypi.org/packages/69/5b/fd01b0c696f2f9a6d2c839883b642493b431f28fa32b29abc465ef675473/pyflakes-2.2.0-py2.py3-none-any.whl")
     version("2.1.1", sha256="17dbeb2e3f4d772725c777fabc446d5634d1038f234e77343108ce445ea69ce0", url="https://pypi.org/packages/84/f2/ed0ffb887f8138a8fe5a621b8c0bb9598bfb3989e029f6c6a85ee66628ee/pyflakes-2.1.1-py2.py3-none-any.whl")
@@ -27,11 +24,9 @@ class PyPyflakes(PythonPackage):
     version("1.2.1", sha256="79951a4d3c1a139191e6aade392936565ec5e1987d04c0495ab32d32149c19e3", url="https://pypi.org/packages/bf/1d/00af5299878b6b68009b63692e4f7e7a39d920588d5ff1ab0d2b3db79e43/pyflakes-1.2.1-py2.py3-none-any.whl")
     version("1.2.0", sha256="a2e2a2f68e8321822cb68ccf687a4d8c1668e850135267659ce8152d86adf0d8", url="https://pypi.org/packages/e2/ac/5497dd04fa6ab3dcc9e154b5687459577efef5fcd83097bb65aa35954940/pyflakes-1.2.0-py2.py3-none-any.whl")
     version("1.1.0", sha256="c2ec174a7cff6486176b1f53e7d15d34380c3688410f88d86b323608cc0906fb", url="https://pypi.org/packages/05/00/2867f51e4c2526fd8524176520aecfcd1562033cc5f7110673012294fcc7/pyflakes-1.1.0-py2.py3-none-any.whl")
-    version("1.0.0", sha256="071d121e9e7b33058aa1ba5de7bce9b97bfa3149cfe1acbb6587c21fc1c8eda1", url="https://pypi.org/packages/6d/65/3272c6bb4dba7974175981d8b8e64b6a1d7022a7f9412417684563650e3a/pyflakes-1.0.0-py2.py3-none-any.whl")
     version("0.9.2", sha256="05df584a29eeea9a2a2110dd362e53d04e0c4bb1754b4d71234f651917f3c2f0", url="https://pypi.org/packages/59/70/6fbc74a5554fd6f0230f6cc298c9e74847cc727bdbf07c9f9d01ad8c0dc3/pyflakes-0.9.2-py2.py3-none-any.whl")
     version("0.9.1", sha256="0aaa2e555db3fc5084a1e6143cb54b787e8d5dbfb436d616ba3cb2d634f02923", url="https://pypi.org/packages/f2/56/7ddb2c7ba7c6c6583784043d9408a8f165b9fd0a319400ceae0043dea892/pyflakes-0.9.1-py2.py3-none-any.whl")
     version("0.9.0", sha256="763e6dc73539e90badfdb6f476d71fc68abc8ef572b3ef2022ddc9cc6baec4c3", url="https://pypi.org/packages/aa/72/c2cc75d9eb4da5edb6ad23955df0b52048cdada68eb569d4177955f7c6e0/pyflakes-0.9.0-py2.py3-none-any.whl")
-    version("0.8.1", sha256="ac4571695c10ce1536bcdba1a294b9f2d3e6cc9d0ea171b67d50a0864ce3e042", url="https://pypi.org/packages/49/94/592dfa051cb674d022c8ae6306d114dc752b3b5d3e08b896acaa4b3277f8/pyflakes-0.8.1-py2.py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS

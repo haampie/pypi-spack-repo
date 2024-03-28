@@ -7,15 +7,11 @@ from spack.package import *
 
 class PyCython(PythonPackage):
     # BEGIN VERSIONS
-    version("3.0.9", sha256="a2d354f059d1f055d34cfaa62c5b68bc78ac2ceab6407148d47fb508cf3ba4f3", url="https://pypi.org/packages/0e/17/c5b026cea7a634ee3b8950a7be16aaa49deeb3b9824ba5e81c13ac26f3c4/Cython-3.0.9.tar.gz")
     version("3.0.8", sha256="8333423d8fd5765e7cceea3a9985dd1e0a5dfeb2734629e1a2ed2d6233d39de6", url="https://pypi.org/packages/68/09/ffb61f29b8e3d207c444032b21328327d753e274ea081bc74e009827cc81/Cython-3.0.8.tar.gz")
     version("3.0.7", sha256="fb299acf3a578573c190c858d49e0cf9d75f4bc49c3f24c5a63804997ef09213", url="https://pypi.org/packages/23/e9/ef8607abfbbbaeb93cb1381c8538a22d38d64524df39759dc2787d4909b0/Cython-3.0.7.tar.gz")
     version("3.0.6", sha256="399d185672c667b26eabbdca420c98564583798af3bc47670a8a09e9f19dd660", url="https://pypi.org/packages/d3/20/02f4961b4315b95989abfe4b7cedff263cc89693834222d210a7a62a6214/Cython-3.0.6.tar.gz")
     version("3.0.5", sha256="39318348db488a2f24e7c84e08bdc82f2624853c0fea8b475ea0b70b27176492", url="https://pypi.org/packages/16/fb/82178bc16887eb9b03f2fc73c50aaa96ce528c3fd3c6f89cae631923af15/Cython-3.0.5.tar.gz")
     version("3.0.4", sha256="2e379b491ee985d31e5faaf050f79f4a8f59f482835906efe4477b33b4fbe9ff", url="https://pypi.org/packages/3f/aa/1a5c72615e0ba4dc30cc36de7e8a9a2eca2158922b0677654fced0d3476c/Cython-3.0.4.tar.gz")
-    version("3.0.3", sha256="327309301b01f729f173a94511cb2280c87ba03c89ed428e88f913f778245030", url="https://pypi.org/packages/1a/1d/c79482ecb7217fc5840eceb724f7ebb4d3a70c5bf46309add0c0cd299891/Cython-3.0.3.tar.gz")
-    version("3.0.2", sha256="9594818dca8bb22ae6580c5222da2bc5cc32334350bd2d294a00d8669bcc61b5", url="https://pypi.org/packages/2f/81/c9fb4b69823f674e1e2acc484eac93a47a1e3a59d4d051c76259dadd6984/Cython-3.0.2.tar.gz")
-    version("3.0.1", sha256="f3e49c4eaaa11345486ac0fa2b350636e44a4b45bd7521a6b133924c5ff20bba", url="https://pypi.org/packages/41/eb/416c7f3060a714646a91499822ffac4767ecca6f005d48ef9cef4da10175/Cython-3.0.1.tar.gz")
     version("3.0.0", sha256="350b18f9673e63101dbbfcf774ee2f57c20ac4636d255741d76ca79016b1bd82", url="https://pypi.org/packages/7f/a2/fd5ced5dd33597ef291861bfadd46820de417b41bcb6ca2fa0b5f6fa8152/Cython-3.0.0.tar.gz")
     version("0.29.36", sha256="41c0cfd2d754e383c9eeb95effc9aa4ab847d0c9747077ddd7c0dcb68c3bc01f", url="https://pypi.org/packages/38/db/df0e99d6c5fe19ee5c981d22aad557be4bdeed3ecfae25d47b84b07f0f98/Cython-0.29.36.tar.gz")
     version("0.29.35", sha256="6e381fa0bf08b3c26ec2f616b19ae852c06f5750f4290118bf986b6f85c8c527", url="https://pypi.org/packages/da/a0/298340fb8412574a0b00a0d9856aa27e7038da429b9e31d6825173d1e6bd/Cython-0.29.35.tar.gz")

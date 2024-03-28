@@ -11,12 +11,7 @@ class PyPyfftw(PythonPackage):
     version("0.13.0", sha256="da85102405c0bd95d57eb19e99b01a0729d8406cb204c3900894b873784253da", url="https://pypi.org/packages/18/a1/5eb99c183af0a49bf632fed3260a6cad3f7978bb19fd661a573d3728a986/pyFFTW-0.13.0.tar.gz")
     version("0.12.0", sha256="60988e823ca75808a26fd79d88dbae1de3699e72a293f812aa4534f8a0a58cb0", url="https://pypi.org/packages/4b/38/6f9539d274d02fbc3262e2f9a0c9dbac9b53393b3ed935612993f8df54bf/pyFFTW-0.12.0.tar.gz")
     version("0.11.1", sha256="05ea28dede4c3aaaf5c66f56eb0f71849d0d50f5bc0f53ca0ffa69534af14926", url="https://pypi.org/packages/fa/7f/e65fe8b9f1b66aab22c8d76c2f03180714a558fcef4a723263fa8f3754f8/pyFFTW-0.11.1.tar.gz")
-    version("0.11.0", sha256="282ab6fd1937f7e743c99cd5099e50fa312b4b9c39136c502d3d14408e863500", url="https://pypi.org/packages/64/39/8ab4ffd393bfff34619195227f6cba218972ab9536a46a4845b4e3c8ab25/pyFFTW-0.11.0.tar.gz")
     version("0.10.4", sha256="739b436b7c0aeddf99a48749380260364d2dc027cf1d5f63dafb5f50068ede1a", url="https://pypi.org/packages/c2/2e/b25edc6960fc837e915eb1b38e5f0e3013e32e90aff14a1d0f4556b3d145/pyFFTW-0.10.4.tar.gz")
-    version("0.10.3", sha256="0d32260ee5e4c84d844a1b8d0610fa6419a987b1112d45e691e2db05e4359116", url="https://pypi.org/packages/37/b7/f46110d64a854bb84ad23dd9182a5dfda55e010de8ed913b90299d907022/pyFFTW-0.10.3.tar.gz")
-    version("0.10.2", sha256="ad202d40aa11b318f3e6d2ee028e26da4528674ea015cd29e0c218c619540745", url="https://pypi.org/packages/a0/27/8e563cf640af13e25c84960e9425be62638cc6f1cb14d03b025602a591b3/pyFFTW-0.10.2.tar.gz")
-    version("0.10.1", sha256="fe1c45154ecebbe1f765db25fdb774d09b17178f520b6be74ef6e213b899099d", url="https://pypi.org/packages/f4/c6/6c05ca5349ce62b39f85149507b0f92cc2d58785bc2f83bd35c74f975cbb/pyFFTW-0.10.1.tar.gz")
-    version("0.9.2", sha256="f6bbb6afa93085409ab24885a1a3cdb8909f095a142f4d49e346f2bd1b789074", url="https://pypi.org/packages/e8/36/2a5a12f6b122e6f5b21c21a9eeb974990ef57f912a313e4c1e24b345461b/pyFFTW-0.9.2.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS

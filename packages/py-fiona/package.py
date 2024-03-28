@@ -9,7 +9,6 @@ class PyFiona(PythonPackage):
     # BEGIN VERSIONS
     version("1.9.6", sha256="791b3494f8b218c06ea56f892bd6ba893dfa23525347761d066fb7738acda3b1", url="https://pypi.org/packages/92/2c/2ab81e38aad8cf4f4e2a7b1c0488750ffc512c108fb244a8b4dd4f196cd3/fiona-1.9.6.tar.gz")
     version("1.9.5", sha256="99e2604332caa7692855c2ae6ed91e1fffdf9b59449aa8032dd18e070e59a2f7", url="https://pypi.org/packages/83/a0/6b870864ceebcd046d2e952b0d18932812ff7a48d3b05670af3f702d9c01/fiona-1.9.5.tar.gz")
-    version("1.9.4.post1", sha256="5679d3f7e0d513035eb72e59527bb90486859af4405755dfc739138633106120", url="https://pypi.org/packages/3b/c0/1f49b9026e706304a5f214c0758c022cb91367b9b13d0d2cae19847d3c35/Fiona-1.9.4.post1.tar.gz")
     version("1.9.4", sha256="49f18cbcd3b1f97128c1bb038c3451b2e1be25baa52f02ce906c25cf75af95b6", url="https://pypi.org/packages/53/b6/84916103fe50d6876810687671d2b8814edd50250d117cf2f222679d899b/Fiona-1.9.4.tar.gz")
     version("1.9.3", sha256="60f3789ad9633c3a26acf7cbe39e82e3c7a12562c59af1d599fc3e4e8f7f8f25", url="https://pypi.org/packages/c2/e1/d854d283e8962f3d1b717983ab3dfe99f7447116e9475f1c4a3342095136/Fiona-1.9.3.tar.gz")
     version("1.9.2", sha256="f9263c5f97206bf2eb2c010d52e8ffc54e96886b0e698badde25ff109b32952a", url="https://pypi.org/packages/f1/57/61443cf8b58022cb117c26d8a25c8a1435b24de9dac5d7f848b94a2c584a/Fiona-1.9.2.tar.gz")

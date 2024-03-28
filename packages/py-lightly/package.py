@@ -7,17 +7,9 @@ from spack.package import *
 
 class PyLightly(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("1.5.2", sha256="d5ef340d03c101f9a6e90902939b30ac0bc14dcd3e1028940fd1258af699f673", url="https://pypi.org/packages/03/9b/11149419f27310c1697e3805a57ab5f9ea376cb93bb1f1a0033d1b1f9f3c/lightly-1.5.2-py3-none-any.whl")
-    version("1.5.1", sha256="afa311a11cc5cbccc34fad16579380b7c170a1cfff4ae163e12b260575d30fd4", url="https://pypi.org/packages/56/81/61e40f5a07db29046bb8b96342e03bd7f252875db0ad5a3bb88295365f70/lightly-1.5.1-py3-none-any.whl")
     version("1.5.0", sha256="d17e6b09e2b3b50a02e976dad88bf8d11c7018ffdbe54edd783b7e9911f0892e", url="https://pypi.org/packages/82/81/866ee00fe5a112af2d940f37d2642545fa33f3625c551504bd1f5866423f/lightly-1.5.0-py3-none-any.whl")
     version("1.4.26", sha256="f1477299003c8076ecad70266dc721fec4dc4a69b1fea247c8fa10a809b94d89", url="https://pypi.org/packages/55/3a/d665499e854855390c6c622a47f356a8aa67eb0f88f7b2996861a85558b7/lightly-1.4.26-py3-none-any.whl")
     version("1.4.25", sha256="81c65bc53a88feb9f8e8cb8a077baa2edec87d609907fc557bb31ea8068c5289", url="https://pypi.org/packages/de/25/8f711c8ecf720e16e99f0cb5ef287ce16795c97aaefd7d8c57b4b000ded8/lightly-1.4.25-py3-none-any.whl")
-    version("1.4.24", sha256="2d511f1767e695c99b4a9777ddc3dcf8f215e253a5973f58ef0f0727ed4493e6", url="https://pypi.org/packages/01/66/7245aa36b0e594b6792e6a27aaee8d9154203ee600206b5aa902742eb4ab/lightly-1.4.24-py3-none-any.whl")
-    version("1.4.23", sha256="6ddf582f45f14caaccb37cd5f2c8657d9ad6eebc5fd0211f85f96139eaf941b8", url="https://pypi.org/packages/32/c2/3371046daa3c0650527cbc47c44098dc7457aa6fd8a17b9583a264e13f69/lightly-1.4.23-py3-none-any.whl")
-    version("1.4.22", sha256="3e19c494663ddcc82b48846ba8acda18b5c1047e553a4e7c1ce2a761d52714e4", url="https://pypi.org/packages/72/78/a5415f3668358506049ab7cf163ce2231a3eafa3a5d5de644fb821782c91/lightly-1.4.22-py3-none-any.whl")
-    version("1.4.21", sha256="86cd57a273219d6972da5cc33c5d5dc0af2aa495c0014c444291a82339cb6ea6", url="https://pypi.org/packages/18/53/b68c70be0fb233059183dd2a1af9ccbf198feb7700f70478fdb3189235aa/lightly-1.4.21-py3-none-any.whl")
-    version("1.4.20", sha256="7a240b1310a6fa6542b5ed78e507740f936e3fbdbc7001372a7c097b47549259", url="https://pypi.org/packages/ba/26/9e31728a6abf7a3141db05231ec3e625cadb2a73e615f1b0912d63b84953/lightly-1.4.20-py3-none-any.whl")
-    version("1.4.19", sha256="bab9c653e90f332714d3feef242eea80fe6593a645ca9c2210b6c96d8ebe3d2f", url="https://pypi.org/packages/e6/4e/16d0216b93a1e4e4b961c55ce0988b60bede5b20a43715005ea29d7c510d/lightly-1.4.19-py3-none-any.whl")
     version("1.4.18", sha256="405805ca145169dfe5994f4ea18fb853a5a6138dc33b7c669f3de4e1e04c5ef0", url="https://pypi.org/packages/68/bc/2e373e7bb5b4a5286b4678a3166820e156e46b1a70f650d357587dcbaee6/lightly-1.4.18-py3-none-any.whl")
     version("1.4.17", sha256="f8619d9c0d51fc71ba23ac01832a1c8ea433633160f4223ab384a113d36f4722", url="https://pypi.org/packages/61/99/afb8740d63280e48792d7d3fa1b07f1e128a4c0bd60702b506e1f6d923a2/lightly-1.4.17-py3-none-any.whl")
     version("1.4.16", sha256="1132ac729bf6a0263f1cd9fcdda8b376f55bfa7f3f71dafe0f75a184a2f278eb", url="https://pypi.org/packages/b4/ff/9d8efc9e3f1f9a863ad9b8a63c6ac2ab746b61c749a7e8831185a61131eb/lightly-1.4.16-py3-none-any.whl")

@@ -8,7 +8,6 @@ from spack.package import *
 class PyGrapheneTornado(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
     version("2.6.1", sha256="291c61452917f9fa014ec69d73cef1f74f7f2f39fd85aa6a84a7e20332b7ce4d", url="https://pypi.org/packages/e2/fe/068c5e3adeaeb3245a1756748c311d7214403501c4344baf66a63d719107/graphene_tornado-2.6.1-py2.py3-none-any.whl")
-    version("2.6.0", sha256="5ebbe0f5bfa41dd27b6c1311286534a93365938b76d36d068e21600d7fa2de97", url="https://pypi.org/packages/40/59/bf33621d743b8a1205331dcaca4aa8f4a9d049bcaa013078c8543549fcc8/graphene_tornado-2.6.0-py2.py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS

@@ -7,16 +7,6 @@ from spack.package import *
 
 class PyUproot(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("5.3.2", sha256="be07a6e852bc63636a7835106a032f191ec698d304ebc7dcb291ee407fb68b2d", url="https://pypi.org/packages/69/08/6dbc179914c7e3438eec018b3cbc6e3dddb2164beef61b9d0b6b876c15f1/uproot-5.3.2-py3-none-any.whl")
-    version("5.3.1", sha256="db416b9290f67454cf9d5c99a5b008df4979f2aa1cbb05843c61ba23349fe658", url="https://pypi.org/packages/3b/1a/13102f7461b148382274d4de6017d8c202fc89ef4e187111a86df362997b/uproot-5.3.1-py3-none-any.whl")
-    version("5.3.0", sha256="ad89c3a8a51262e803ce8ad352bed0dfd2a0627f764efbe0e3ab2c553dcd7ce7", url="https://pypi.org/packages/87/d0/99811fca5cac80a6839c1e0144eb6dbc33a23cf9e05735781d26bf3383de/uproot-5.3.0-py3-none-any.whl")
-    version("5.2.2", sha256="df67149509f89ee0ac38e33238d5f36f342a14e3bcf9d46fe6ec1248bf4825eb", url="https://pypi.org/packages/35/cc/d639e5e939aec01282508fd8dea00347bb1d21f8ae1e810e9d9f45ffb93b/uproot-5.2.2-py3-none-any.whl")
-    version("5.2.1", sha256="f09d9fb7c7cb20d3efe2c21046c0cf65db3f1650bec71ea07b85451fd7c2f42e", url="https://pypi.org/packages/cb/6f/04a1d88e7b0770e18057eac17bed91796a8c7e3c2a5d50de8b65601f8020/uproot-5.2.1-py3-none-any.whl")
-    version("5.2.0", sha256="3b6739558b38add54b67b317fb39bda52bb1fe57b5adedb602e234242bccdada", url="https://pypi.org/packages/0f/af/a907cca0197ae700eed89e984c3da1e83eb3d8aeb48b02c6a234a9355320/uproot-5.2.0-py3-none-any.whl")
-    version("5.1.2", sha256="99d0896ee83f2bed0e7112e8abccf22e7b749c63cf8785ac65a81b7e4d913d68", url="https://pypi.org/packages/ad/c8/1418a0621fbf39d6fef02a8375abb2225e46151d1b0cb278dd076add014c/uproot-5.1.2-py3-none-any.whl")
-    version("5.1.1", sha256="6f6e57288c6349d60161bebf9c54ed28668b8d6efd85bfa758da0ff671f9e7b1", url="https://pypi.org/packages/db/7c/c8765183bc551e27f9d602afb372e4cbfea45bc069e9d8cabd051601bf20/uproot-5.1.1-py3-none-any.whl")
-    version("5.1.0", sha256="e9419ebba73e3b298c6ec2bf579004be8042d4ec5f38dfd3716c61710a342f97", url="https://pypi.org/packages/bd/a6/845eb553ea64393625ac3ae35cc36f99efda24cce72b8c12e3fae2186b03/uproot-5.1.0-py3-none-any.whl")
-    version("5.0.13", sha256="055b4b1b827074fffa718194f23759c15573d2de3ea0f0f342b60b27baa9f113", url="https://pypi.org/packages/fb/de/bbfb82eaaacdaf5ed15c766a282304da445d792fe714fa8453b4327962be/uproot-5.0.13-py3-none-any.whl")
     version("5.0.5", sha256="900aad0fd71d4730d5e5d98bbd926d1afabd229756ec63c8959dec57a7a78e88", url="https://pypi.org/packages/ba/ba/9910833d8ece6c5d52613b4bdeece5e2c0df65d384e803a91acd83486a17/uproot-5.0.5-py3-none-any.whl")
     version("5.0.4", sha256="5a4a526fbec5d5bb3c439dcee0876bc689d42a36627a4a89105924afc3b3ec24", url="https://pypi.org/packages/cc/be/000ad141863f38a931fb73d34018a1d9c00884a5dbc263dccd3835bc0ec6/uproot-5.0.4-py3-none-any.whl")
     version("5.0.3", sha256="b826e62ddacc9717045fc95f1ff9b690c683368ece7ee74deba670300c0712bb", url="https://pypi.org/packages/9d/f2/57d054b926de2bafbe702090d4a17da6cd3924f1d8103b120f291fc2556c/uproot-5.0.3-py3-none-any.whl")
@@ -51,16 +41,10 @@ class PyUproot(PythonPackage):
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-awkward@2.4.6:", when="@5.1.0-rc4:")
         depends_on("py-awkward@2.0.0:", when="@5.0.0:5.1.0-rc1")
-        depends_on("py-cramjam@2.5:", when="@5.3.1:")
-        depends_on("py-cramjam@2.8.1:2.8.1.0,2.8.2:", when="@5.3:5.3.0")
-        depends_on("py-fsspec", when="@5.2:")
-        depends_on("py-fsspec-xrootd", when="@5.3.2-rc1:+xrootd")
         depends_on("py-lz4", when="@3:3.2")
         depends_on("py-numpy", when="@2.9.9:2,4:")
         depends_on("py-packaging", when="@5.0.0-rc2:")
         depends_on("py-setuptools", when="@4.0.8:5.0.0-rc1")
-        depends_on("py-typing-extensions@4.1:", when="@5.1: ^python@:3.10")
     # END DEPENDENCIES
 

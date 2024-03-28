@@ -7,16 +7,8 @@ from spack.package import *
 
 class PyFilelock(PythonPackage):
     # BEGIN VERSIONS
-    version("3.13.1", sha256="57dbda9b35157b05fb3e58ee91448612eb674172fab98ee235ccb0b5bee19a1c", url="https://pypi.org/packages/81/54/84d42a0bee35edba99dee7b59a8d4970eccdd44b99fe728ed912106fc781/filelock-3.13.1-py3-none-any.whl")
-    version("3.13.0", sha256="a552f4fde758f4eab33191e9548f671970f8b06d436d31388c9aa1e5861a710f", url="https://pypi.org/packages/ea/c8/407364710cb9631ce306a97abff2d61836d603b258b5e5399b5f12a7f787/filelock-3.13.0-py3-none-any.whl")
     version("3.12.4", sha256="08c21d87ded6e2b9da6728c3dff51baf1dcecf973b768ef35bcbc3447edb9ad4", url="https://pypi.org/packages/5e/5d/97afbafd9d584ff1b45fcb354a479a3609bd97f912f8f1f6c563cb1fae21/filelock-3.12.4-py3-none-any.whl")
-    version("3.12.3", sha256="f067e40ccc40f2b48395a80fcbd4728262fab54e232e090a4063ab804179efeb", url="https://pypi.org/packages/52/90/45223db4e1df30ff14e8aebf9a1bf0222da2e7b49e53692c968f36817812/filelock-3.12.3-py3-none-any.whl")
-    version("3.12.2", sha256="cbb791cdea2a72f23da6ac5b5269ab0a0d161e9ef0100e653b69049a7706d1ec", url="https://pypi.org/packages/00/45/ec3407adf6f6b5bf867a4462b2b0af27597a26bd3cd6e2534cb6ab029938/filelock-3.12.2-py3-none-any.whl")
-    version("3.12.1", sha256="42f1e4ff2b497311213d61ad7aac5fed9050608e5309573f101eefa94143134a", url="https://pypi.org/packages/e2/88/52dfc8182232b85ac63aaae9d5f0947ecd5d4ff24131bc1b3800c2bf7914/filelock-3.12.1-py3-none-any.whl")
     version("3.12.0", sha256="ad98852315c2ab702aeb628412cbf7e95b7ce8c3bf9565670b4eaecf1db370a9", url="https://pypi.org/packages/ad/73/b094a662ae05cdc4ec95bc54e434e307986a5de5960166b8161b7c1373ee/filelock-3.12.0-py3-none-any.whl")
-    version("3.11.0", sha256="f08a52314748335c6460fc8fe40cd5638b85001225db78c2aa01c8c0db83b318", url="https://pypi.org/packages/9e/6b/fdcd53aeee771a868c4187f0955116894a2b1e82d73fb5990c2ef63afc18/filelock-3.11.0-py3-none-any.whl")
-    version("3.10.7", sha256="bde48477b15fde2c7e5a0713cbe72721cb5a5ad32ee0b8f419907960b9d75536", url="https://pypi.org/packages/25/89/3c51e2896bf666fdda7e776f3421f1bfec843c34311c0a3486c90452a04d/filelock-3.10.7-py3-none-any.whl")
-    version("3.10.6", sha256="52f119747b2b9c4730dac715a7b1ab34b8ee70fd9259cba158ee53da566387ff", url="https://pypi.org/packages/ea/2f/0459b7d1d7239d32b0b573f8330d89300a8763451a3150af0e0c8f2ef3b0/filelock-3.10.6-py3-none-any.whl")
     version("3.8.0", sha256="617eb4e5eedc82fc5f47b6d61e4d11cb837c56cb4544e39081099fa17ad109d4", url="https://pypi.org/packages/94/b3/ff2845971788613e646e667043fdb5f128e2e540aefa09a3c55be8290d6d/filelock-3.8.0-py3-none-any.whl")
     version("3.5.0", sha256="a7141afb4feca60925cfc090b411fb9faaf542d06d58ece4f93d940265e6b995", url="https://pypi.org/packages/d4/0b/6cb548cc9bb8450f9823b39f48e397be9fb8d042f7a9c405ba0a53270ad4/filelock-3.5.0-py3-none-any.whl")
     version("3.4.0", sha256="2e139a228bcf56dd8b2274a65174d005c4a6b68540ee0bdbb92c76f43f29f7e8", url="https://pypi.org/packages/e8/3b/b59c7bcacc4cccafcd6e927a9e191268657e79a0a75530132cbf03b22c47/filelock-3.4.0-py3-none-any.whl")

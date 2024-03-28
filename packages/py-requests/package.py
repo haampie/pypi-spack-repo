@@ -8,13 +8,10 @@ from spack.package import *
 class PyRequests(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
     version("2.31.0", sha256="58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", url="https://pypi.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl")
-    version("2.30.0", sha256="10e94cc4f3121ee6da529d358cdaeaff2f1c409cd377dbc72b825852f2f7e294", url="https://pypi.org/packages/96/80/034ffeca15c0f4e01b7b9c6ad0fb704b44e190cde4e757edbd60be404c41/requests-2.30.0-py3-none-any.whl")
-    version("2.29.0", sha256="e8f3c9be120d3333921d213eef078af392fba3933ab7ed2d1cba3b56f2568c3b", url="https://pypi.org/packages/cf/e1/2aa539876d9ed0ddc95882451deb57cfd7aa8dbf0b8dbce68e045549ba56/requests-2.29.0-py3-none-any.whl")
     version("2.28.2", sha256="64299f4909223da747622c030b781c0d7811e359c37124b4bd368fb8c6518baa", url="https://pypi.org/packages/d2/f4/274d1dbe96b41cf4e0efb70cbced278ffd61b5c7bb70338b62af94ccb25b/requests-2.28.2-py3-none-any.whl")
     version("2.28.1", sha256="8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349", url="https://pypi.org/packages/ca/91/6d9b8ccacd0412c08820f72cebaa4f0c0441b5cda699c90f618b6f8a1b42/requests-2.28.1-py3-none-any.whl")
     version("2.28.0", sha256="bc7861137fbce630f17b03d3ad02ad0bf978c844f3536d0edda6499dafce2b6f", url="https://pypi.org/packages/41/5b/2209eba8133fc081d3ffff02e1f6376e3117e52bb16f674721a83e67e68e/requests-2.28.0-py3-none-any.whl")
     version("2.27.1", sha256="f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d", url="https://pypi.org/packages/2d/61/08076519c80041bc0ffa1a8af0cbd3bf3e2b62af10435d269a9d0f40564d/requests-2.27.1-py2.py3-none-any.whl")
-    version("2.27.0", sha256="f71a09d7feba4a6b64ffd8e9d9bc60f9bf7d7e19fd0e04362acb1cfc2e3d98df", url="https://pypi.org/packages/47/01/f420e7add78110940639a958e5af0e3f8e07a8a8b62049bac55ee117aa91/requests-2.27.0-py2.py3-none-any.whl")
     version("2.26.0", sha256="6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24", url="https://pypi.org/packages/92/96/144f70b972a9c0eabbd4391ef93ccd49d0f2747f4f6a2a2738e99e5adc65/requests-2.26.0-py2.py3-none-any.whl")
     version("2.25.1", sha256="c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e", url="https://pypi.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl")
     version("2.24.0", sha256="fe75cc94a9443b9246fc7049224f75604b113c36acb93f87b80ed42c44cbb898", url="https://pypi.org/packages/45/1e/0c169c6a5381e241ba7404532c16a21d86ab872c9bed8bdcd4c423954103/requests-2.24.0-py2.py3-none-any.whl")

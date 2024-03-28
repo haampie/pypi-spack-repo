@@ -7,14 +7,11 @@ from spack.package import *
 
 class PyNumpy(PythonPackage):
     # BEGIN VERSIONS
-    version("2.0.0-beta1", sha256="e0bb33a37d0d0b9a19cd41a093877f830e06bd4d989341b9792896cf08e629f7", url="https://pypi.org/packages/51/fe/e4dab289c176ea4e13f97f11f281cc22d4a3b0add9883406db62d4f94d65/numpy-2.0.0b1.tar.gz")
     version("1.26.4", sha256="2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010", url="https://pypi.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz")
     version("1.26.3", sha256="697df43e2b6310ecc9d95f05d5ef20eacc09c7c4ecc9da3f235d39e71b7da1e4", url="https://pypi.org/packages/d0/b0/13e2b50c95bfc1d5ee04925eb5c105726c838f922d0aaddd57b7c8be0f8b/numpy-1.26.3.tar.gz")
     version("1.26.2", sha256="f65738447676ab5777f11e6bbbdb8ce11b785e105f690bc45966574816b6d3ea", url="https://pypi.org/packages/dd/2b/205ddff2314d4eea852e31d53b8e55eb3f32b292efc3dd86bd827ab9019d/numpy-1.26.2.tar.gz")
     version("1.26.1", sha256="c8c6c72d4a9f831f328efb1312642a1cafafaa88981d9ab76368d50d07d93cbe", url="https://pypi.org/packages/78/23/f78fd8311e0f710fe1d065d50b92ce0057fe877b8ed7fd41b28ad6865bfc/numpy-1.26.1.tar.gz")
     version("1.26.0", sha256="f93fc78fe8bf15afe2b8d6b6499f1c73953169fad1e9a8dd086cdff3190e7fdf", url="https://pypi.org/packages/55/b3/b13bce39ba82b7398c06d10446f5ffd5c07db39b09bd37370dc720c7951c/numpy-1.26.0.tar.gz")
-    version("1.26.0-rc1", sha256="49a8cafece27db51fd9ec78c044546b15b0c9bf95466c57ada9eeae64075c2f8", url="https://pypi.org/packages/33/a9/1233954ed69e96e829e6615a6e4a68e8c99d599661edff756fb4300c9a0b/numpy-1.26.0rc1.tar.gz")
-    version("1.26.0-beta1", sha256="c67eea90827e1e9aa220a3fc380ce8776428deba8ac9e7c931ce7b69e8dce115", url="https://pypi.org/packages/29/5e/5887b95aa544a977d21f4adbc5b052897c0e730aa6408ed9903aece7f18f/numpy-1.26.0b1.tar.gz")
     version("1.25.2", sha256="fd608e19c8d7c55021dffd43bfe5492fab8cc105cc8986f813f8c3c048b38760", url="https://pypi.org/packages/a0/41/8f53eff8e969dd8576ddfb45e7ed315407d27c7518ae49418be8ed532b07/numpy-1.25.2.tar.gz")
     version("1.25.1", sha256="9a3a9f3a61480cc086117b426a8bd86869c213fc4072e606f01c4e4b66eb92bf", url="https://pypi.org/packages/cf/7a/f68d1d658a0e68084097beb212fa9356fee7eabff8b57231cc4acb555b12/numpy-1.25.1.tar.gz")
     version("1.25.0", sha256="f1accae9a28dc3cda46a91de86acf69de0d1b5f4edd44a9b0c3ceb8036dfff19", url="https://pypi.org/packages/d0/b2/fe774844d1857804cc884bba67bec38f649c99d0dc1ee7cbbf1da601357c/numpy-1.25.0.tar.gz")
@@ -60,18 +57,6 @@ class PyNumpy(PythonPackage):
     version("1.17.5", sha256="16507ba6617f62ae3c6ab1725ae6f550331025d4d9a369b83f6d5a470446c342", url="https://pypi.org/packages/d9/09/8e89c05abc450ea347f40b4fa917ec5c69b5228da344487f178586a3187c/numpy-1.17.5.zip")
     version("1.17.4", sha256="f58913e9227400f1395c7b800503ebfdb0772f1c33ff8cb4d6451c06cabdf316", url="https://pypi.org/packages/ff/59/d3f6d46aa1fd220d020bdd61e76ca51f6548c6ad6d24ddb614f4037cf49d/numpy-1.17.4.zip")
     version("1.17.3", sha256="a0678793096205a4d784bd99f32803ba8100f639cf3b932dc63b21621390ea7e", url="https://pypi.org/packages/b6/d6/be8f975f5322336f62371c9abeb936d592c98c047ad63035f1b38ae08efe/numpy-1.17.3.zip")
-    version("1.16.1", sha256="31d3fe5b673e99d33d70cfee2ea8fe8dccd60f265c3ed990873a88647e3dd288", url="https://pypi.org/packages/2b/26/07472b0de91851b6656cbc86e2f0d5d3a3128e7580f23295ef58b6862d6c/numpy-1.16.1.zip")
-    version("1.16.0", sha256="cb189bd98b2e7ac02df389b6212846ab20661f4bafe16b5a70a6f1728c1cc7cb", url="https://pypi.org/packages/04/b6/d7faa70a3e3eac39f943cc6a6a64ce378259677de516bd899dd9eb8f9b32/numpy-1.16.0.zip")
-    version("1.15.4", sha256="3d734559db35aa3697dadcea492a423118c5c55d176da2f3be9c98d4803fc2a7", url="https://pypi.org/packages/2d/80/1809de155bad674b494248bcfca0e49eb4c5d8bee58f26fe7a0dd45029e2/numpy-1.15.4.zip")
-    version("1.15.3", sha256="1c0c80e74759fa4942298044274f2c11b08c86230b25b8b819e55e644f5ff2b6", url="https://pypi.org/packages/83/6b/d03277eacf113697675cd659086a4dcf9472108e2f1a83884c0271bdca46/numpy-1.15.3.zip")
-    version("1.15.2", sha256="27a0d018f608a3fe34ac5e2b876f4c23c47e38295c47dd0775cc294cd2614bc1", url="https://pypi.org/packages/45/ba/2a781ebbb0cd7962cc1d12a6b65bd4eff57ffda449fdbbae4726dc05fbc3/numpy-1.15.2.zip")
-    version("1.15.1", sha256="7b9e37f194f8bcdca8e9e6af92e2cbad79e360542effc2dd6b98d63955d8d8a3", url="https://pypi.org/packages/65/ab/4dfcc20234fae12ee40c714b98077d6e3a10652496bd1488fa4828529b22/numpy-1.15.1.zip")
-    version("1.15.0", sha256="f28e73cf18d37a413f7d5de35d024e6b98f14566a10d82100f9dc491a7d449f9", url="https://pypi.org/packages/3a/20/c81632328b1a4e1db65f45c0a1350a9c5341fd4bbb8ea66cdd98da56fe2e/numpy-1.15.0.zip")
-    version("1.14.6", sha256="1250edf6f6c43e1d7823f0967416bc18258bb271dc536298eb0ea00a9e45b80a", url="https://pypi.org/packages/86/c2/84dc6f58171bca90326f71e098438b87aa0c0d4a21bceda9caba2af6554e/numpy-1.14.6.zip")
-    version("1.14.5", sha256="a4a433b3a264dbc9aa9c7c241e87c0358a503ea6394f8737df1683c7c9a102ac", url="https://pypi.org/packages/d5/6e/f00492653d0fdf6497a181a1c1d46bbea5a2383e7faf4c8ca6d6f3d2581d/numpy-1.14.5.zip")
-    version("1.14.4", sha256="2185a0f31ecaa0792264fa968c8e0ba6d96acf144b26e2e1d1cd5b77fc11a691", url="https://pypi.org/packages/94/b8/09db804ddf3bb7b50767544ec8e559695b152cedd64830040a0f31d6aeda/numpy-1.14.4.zip")
-    version("1.14.3", sha256="9016692c7d390f9d378fc88b7a799dc9caa7eb938163dda5276d3f3d6f75debf", url="https://pypi.org/packages/b0/2b/497c2bb7c660b2606d4a96e2035e92554429e139c6c71cdff67af66b58d2/numpy-1.14.3.zip")
-    version("1.14.2", sha256="facc6f925c3099ac01a1f03758100772560a0b020fb9d70f210404be08006bcb", url="https://pypi.org/packages/0b/66/86185402ee2d55865c675c06a5cfef742e39f4635a4ce1b1aefd20711c13/numpy-1.14.2.zip")
     # END VERSIONS
 
     # BEGIN VARIANTS

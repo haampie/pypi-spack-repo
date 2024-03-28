@@ -7,8 +7,6 @@ from spack.package import *
 
 class PyBlessed(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("1.20.0", sha256="0c542922586a265e699188e52d5f5ac5ec0dd517e5a1041d90d2bbf23f906058", url="https://pypi.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl")
-    version("1.19.1", sha256="63b8554ae2e0e7f43749b6715c734cc8f3883010a809bf16790102563e6cf25b", url="https://pypi.org/packages/94/c5/651224a1bbcb0253fecb7af6f60fa0c9ebabcb1df01ceadb8f4dfd2528cb/blessed-1.19.1-py2.py3-none-any.whl")
     version("1.19.0", sha256="1f2d462631b2b6d2d4c3c65b54ef79ad87a6ca2dd55255df2f8d739fcc8a1ddb", url="https://pypi.org/packages/d4/f3/73c8e1b77396663e2a5121c78f1278d64d7806cade710abe28b65979aced/blessed-1.19.0-py2.py3-none-any.whl")
     version("1.18.1", sha256="dd7c0d33db9a2e7f597b446996484d0ed46e1586239db064fb5025008937dcae", url="https://pypi.org/packages/af/7b/5ae28215407a11f8f935cc8d4e5e67cb473e8a5154c6275f153e3a480357/blessed-1.18.1-py2.py3-none-any.whl")
     version("1.18.0", sha256="5b5e2f0563d5a668c282f3f5946f7b1abb70c85829461900e607e74d7725106e", url="https://pypi.org/packages/26/35/a781470488a304f66843d328052b6cb22df7163246fb47a27bfb21fba4e6/blessed-1.18.0-py2.py3-none-any.whl")

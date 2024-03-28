@@ -7,7 +7,6 @@ from spack.package import *
 
 class PyMaestrowf(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("1.1.10", sha256="8f29fa8f97674fb5d7970e5452ed7eef6b9f880b3d55d2b29cc4ac9ab7557372", url="https://pypi.org/packages/55/11/9d54b62f0f35e038b4dc9b3bd7fb2d91a3d2c9b5119fa0140cd85fe6c355/maestrowf-1.1.10-py3-none-any.whl")
     version("1.1.9", sha256="2693364873ac21e8854d08bacb08378b527f4b691cdbdaae5872d30d850ff855", url="https://pypi.org/packages/47/05/a13794cd893536a97e953500691398678c3adb0f456c97bc5c93ed379af8/maestrowf-1.1.9-py3-none-any.whl")
     version("1.1.8", sha256="a5ef26c79fff0ef027e0033fdf079aa53abeb953014733baf7833908185e8157", url="https://pypi.org/packages/a0/fe/64b2e4256a04adf66a4f6caf21cf30d5b37d1abbd2e9423a35019eb8cab7/maestrowf-1.1.8-py2.py3-none-any.whl")
     version("1.1.7", sha256="0c6ad3cc3d34944d68f47fe7c7d4ed8dd1e73bfb566adc9a3e0f67cfcf7fcda7", url="https://pypi.org/packages/9a/ab/de90982bddacf9d4521d4bda787d4f394c8648534b1c9aff9c2d9c5bdb1a/maestrowf-1.1.7-py2.py3-none-any.whl")
@@ -29,7 +28,6 @@ class PyMaestrowf(PythonPackage):
         depends_on("py-enum34", when="@:1.1.3")
         depends_on("py-filelock", when="@1.1:")
         depends_on("py-jsonschema@3.2:", when="@1.1.7:1.1.7.0,1.1.8:")
-        depends_on("py-packaging@22:", when="@1.1.10:")
         depends_on("py-pyyaml@4:", when="@1.1.4:")
         depends_on("py-pyyaml", when="@:1.1.3")
         depends_on("py-rich", when="@1.1.9:")

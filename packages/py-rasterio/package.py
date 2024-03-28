@@ -8,12 +8,9 @@ from spack.package import *
 class PyRasterio(PythonPackage):
     # BEGIN VERSIONS
     version("1.3.9", sha256="fc6d0d290492fa1a5068711cfebb21cc936968891b7ed9da0690c8a7388885c5", url="https://pypi.org/packages/bd/b8/84f5e6ee1d7915d20ceaa7dbbf2589787c5819907b75c4f2b95386f88961/rasterio-1.3.9.tar.gz")
-    version("1.3.8.post2", sha256="e45c6c46f07902cb87f25ed2f394ce0fddf19ff2396c8071f8afd22263c54258", url="https://pypi.org/packages/44/1b/879365a41fecfd806940b183777d738651dc6d8e98b242e0f7af9d44f83f/rasterio-1.3.8.post2.tar.gz")
-    version("1.3.8.post1", sha256="98d5efd2dca85eb9d36af3928cc2dc430a2d29a7b24ee38b5004122860d75f77", url="https://pypi.org/packages/6d/36/bbcd4d1ca8010da5b7df0a907e8da2f89a5e3e045b7632dea30be19fa64b/rasterio-1.3.8.post1.tar.gz")
     version("1.3.8", sha256="ffdd18e78efdf8ad5861065fd812a66dd34264293317ff6540a078ea891cdef8", url="https://pypi.org/packages/2e/2e/65affa3bd9c6c8f4a3b4f7cbf7947d0a3b3a65675af58162f80201c01510/rasterio-1.3.8.tar.gz")
     version("1.3.7", sha256="abfdcb8f10210b8fad939f40d545d6c47e9e3b5cf4a43773ca8dd11c58204304", url="https://pypi.org/packages/7b/d8/7590109d7a62af60754c406ebf67c55f9646919a40096c5373d0f67bb525/rasterio-1.3.7.tar.gz")
     version("1.3.6", sha256="c8b90eb10e16102d1ab0334a7436185f295de1c07f0d197e206d1c005fc33905", url="https://pypi.org/packages/f2/d2/1772051f222ee507d893d4f3ab49d1e27b52f9c7eca9ffb4f75ad842e2f4/rasterio-1.3.6.tar.gz")
-    version("1.3.5.post1", sha256="78efee9b975c0601c67817abb501333c722125e38d10f90addf1bcb7a49008b3", url="https://pypi.org/packages/ce/93/7249e6874bfdf58b09922c2c372d33366e8c7e3a73a9a2447f61c462557e/rasterio-1.3.5.post1.tar.gz")
     version("1.3.5", sha256="92358c3d4d5d6f3c7cd2812c8832d5175abce02b11bc101ac9548ff07163e8e2", url="https://pypi.org/packages/ca/4a/2a34788caa5d04f805f3619f9198736ce57ab59741133790c5d9cc7bc684/rasterio-1.3.5.tar.gz")
     version("1.3.4", sha256="5a8771405276ecf00b8ee927bd0a81ec21778dcfc97e4a37d0b388f10c9a41a8", url="https://pypi.org/packages/3b/5a/c4111c37c4a45fc41adc91e7fc45cff6da6213e977920e43b9274e1dd7e0/rasterio-1.3.4.tar.gz")
     version("1.3.3", sha256="b6fb1f12489f3a678c05ddcb78a74f0b6f63836219f51c0541e505f5e5208e7d", url="https://pypi.org/packages/51/07/811aa39f0430f51598489fe1fa2cc12bb23d285bd9743d847905c713e6c6/rasterio-1.3.3.tar.gz")
