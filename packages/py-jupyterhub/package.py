@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterhub(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.0.2", sha256="2f389e7d3067e1b11bb4091719048eedecee161039fd2e5b025d031f7ab23c62", url="https://pypi.org/packages/70/4c/1f9cb10007990023f24bebf049e3ac1fcdf846992e8470422da11bf53ee0/jupyterhub-4.0.2-py3-none-any.whl")
     version("4.0.1", sha256="b96e3f83a5d7c543b414266e43407eb380fb590212bcc70097f6c837d5611387", url="https://pypi.org/packages/70/97/850439996c487f1ebab15fe1295f78ce6b6e89cbb27bcf6bbef241c32301/jupyterhub-4.0.1-py3-none-any.whl")
     version("4.0.0", sha256="1f2c2ff069e1bc66bcaa032b15f8ab602356ee3ed19ff5d483c68e73ad13317c", url="https://pypi.org/packages/ff/60/f871001204b71a930cda9ced36064d6023cc7d02184881f263c1b80956f9/jupyterhub-4.0.0-py3-none-any.whl")
@@ -20,7 +20,11 @@ class PyJupyterhub(PythonPackage):
     version("1.4.1", sha256="20372a507b103a5351bd1dd7782c7524c14b013f43c71d95e37a0efaa9ec6ae9", url="https://pypi.org/packages/ac/95/3bb31d8d42aa52f71e713a9027fe3318897f21f76146e7f8843608bb5dbb/jupyterhub-1.4.1-py3-none-any.whl")
     version("1.0.0", sha256="e5ba12ba158ffcb1d42ac351f850d0065be14fce012af765cdf30dfe97a7346a", url="https://pypi.org/packages/0d/67/c1e7d691bcb635fcde61c544d8fbca1edebb7bb4f68f34f5de291eba02d0/jupyterhub-1.0.0-py3-none-any.whl")
     version("0.9.4", sha256="6fd5b19ae152cc637bed2f528ca1bd510042782dc770a32e7ab1ed34e6867873", url="https://pypi.org/packages/23/7d/8f272ff69f05d51143e85753939884ca1e578639e273a8bfc1bda69f15bf/jupyterhub-0.9.4-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-alembic@1.4:", when="@1.4:")
         depends_on("py-alembic", when="@0.7:1.3")
@@ -50,4 +54,5 @@ class PyJupyterhub(PythonPackage):
         depends_on("py-tornado@5.1:", when="@1.3:")
         depends_on("py-tornado@5.0:", when="@0.9:1.2")
         depends_on("py-traitlets@4.3.2:", when="@0.8:")
+    # END DEPENDENCIES
 

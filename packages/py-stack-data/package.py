@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyStackData(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.6.3", sha256="d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695", url="https://pypi.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl")
     version("0.6.2", sha256="cbb2a53eb64e5785878201a97ed7c7b94883f48b87bfb0bbe8b623c74679e4a8", url="https://pypi.org/packages/6a/81/aa96c25c27f78cdc444fec27d80f4c05194c591465e491a1358d8a035bc1/stack_data-0.6.2-py3-none-any.whl")
     version("0.6.1", sha256="960cb054d6a1b2fdd9cbd529e365b3c163e8dabf1272e02cfe36b58403cff5c6", url="https://pypi.org/packages/e7/f1/a1f2fd4a75d371412650b3ddc16741e0de383fe701953566c9288f678a5b/stack_data-0.6.1-py3-none-any.whl")
@@ -17,11 +17,16 @@ class PyStackData(PythonPackage):
     version("0.3.0", sha256="aa1d52d14d09c7a9a12bb740e6bdfffe0f5e8f4f9218d85e7c73a8c37f7ae38d", url="https://pypi.org/packages/f3/99/9e6a7eea1618eecf8767dc7970722003761403893fa978fa30be6f3846eb/stack_data-0.3.0-py3-none-any.whl")
     version("0.2.0", sha256="999762f9c3132308789affa03e9271bbbe947bf78311851f4d485d8402ed858e", url="https://pypi.org/packages/6b/25/9a454b432df53ffbbb4f03198c3347f393c34f4de07fb652563bdbdf91e8/stack_data-0.2.0-py3-none-any.whl")
     version("0.1.4", sha256="02cc0683cbc445ae4ca8c4e3a0e58cb1df59f252efb0aa016b34804a707cf9bc", url="https://pypi.org/packages/42/0b/d09b87028bf9ddc249bf0885367f679cc1a0cc5c9996bbef37eb849b3ee7/stack_data-0.1.4-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-asttokens@2.1:", when="@0.6:")
         depends_on("py-asttokens", when="@0.0.7:0.5")
         depends_on("py-executing@1.2:", when="@0.6:")
         depends_on("py-executing", when="@0.0.7:0.5")
         depends_on("py-pure-eval", when="@0.0.7:")
+    # END DEPENDENCIES
 

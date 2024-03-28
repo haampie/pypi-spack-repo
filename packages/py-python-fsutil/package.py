@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPythonFsutil(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.14.1", sha256="0d45e623f0f4403f674bdd8ae7aa7d24a4b3132ea45c65416bd2865e6b20b035", url="https://pypi.org/packages/4f/e6/c8a2cdf34316bb96a7601ed47778818da266d4917bd9575d3a9ba46aedb7/python_fsutil-0.14.1-py3-none-any.whl")
     version("0.14.0", sha256="babad39e4134e8b1859fe4478c6bd585911de6b919b49a7f08d4dcddcb1822aa", url="https://pypi.org/packages/62/e0/d7da4d52780ce34fcc8cf8a7438f5c7ea77fe8c61e0d198357096cae013b/python_fsutil-0.14.0-py3-none-any.whl")
     version("0.13.1", sha256="b4ad4c57c243ba46ee5aacebe58ce7a6f62ddeff20ea53e52afc420884b5e544", url="https://pypi.org/packages/5b/e4/1c3cdd3417103f2b750c5d13e19d0776bb297ca4506bd31b805972a264fc/python_fsutil-0.13.1-py3-none-any.whl")
@@ -18,7 +18,12 @@ class PyPythonFsutil(PythonPackage):
     version("0.9.2", sha256="6415f479277e6ca62fc31bd2f2f58c203847090836574f70fc4025599f0e7530", url="https://pypi.org/packages/88/68/676343d1c0ea59db1ff85113c56b0d32ec1e59cde6b83a3b40fd6f2f26b6/python_fsutil-0.9.2-py3-none-any.whl")
     version("0.9.1", sha256="e982b872abb6d4ed6ac86b647ec5c4d1c1fa0a4f8116794e6cdc9dd12bdee276", url="https://pypi.org/packages/8e/83/41bee2dc8ca4a6d0b8a5385eb0a71d565ef8e84dfefdcb56d93bcf8db1a8/python_fsutil-0.9.1-py3-none-any.whl")
     version("0.4.0", sha256="3e93c919b96a146de78900b644c9d9f957b1d50ae67c510a39f866d30ab626c7", url="https://pypi.org/packages/4b/b1/d9cd591b718300a3c45d959bd71c87cbac932a906d5efc20892e5d152e67/python_fsutil-0.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-requests", when="@0.4:0.5")
+    # END DEPENDENCIES
 

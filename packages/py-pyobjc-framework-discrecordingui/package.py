@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkDiscrecordingui(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="e0423c548851cd9eb4ad7e9e085da4db2cde2420e1f3e05d46e649498edf97d8", url="https://pypi.org/packages/1c/1c/b316298dd8e426af04bca9dffb4760a753d0abe3b6206534cbfd971e0a53/pyobjc_framework_DiscRecordingUI-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="684925119e4c8f8ea43cfede1a3e39f785b5aa94a48f1aa7a98fd4cdc4c1d2e3", url="https://pypi.org/packages/4c/d9/b09df3dacdf58dc7352bdf784baca6f0bcc8816c5c754b5434b5d82bfa82/pyobjc_framework_DiscRecordingUI-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="c80135d65bb25f1d4c3c40af9a50c3b15125c54703d6e65cf4316fe3ed3bd0e7", url="https://pypi.org/packages/d5/9b/13d1ee1445a2f83c45bed45629f7b9c8f21cbee676c3e156322bd1540437/pyobjc_framework_DiscRecordingUI-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkDiscrecordingui(PythonPackage):
     version("9.0", sha256="9ba40eb285bf7a6c32cbdd7549aa9f122588269ab776cd2a3155a7c4987ff3d1", url="https://pypi.org/packages/9f/93/143ae73185ab399cecd91baa3e946b9db82c7253218e6fdbb9ae2b4a7af1/pyobjc_framework_DiscRecordingUI-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="a92d66f5565125054794004c45e47b6f8276608d1575af3a1d51458fb3d00ab7", url="https://pypi.org/packages/7b/2e/9f2cae2375feac755d765b13ead9c1ce1e066dd0d2aed7a399e1ae85ddaa/pyobjc_framework_DiscRecordingUI-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="821d6b7413ad4ba7770700c1dc7f6788b68bbc588619578798bbfe780a6b3a07", url="https://pypi.org/packages/04/de/58bb765ba0f1f48e6c540278a1b540ae833c9a4c49c2d9c3286e0a320800/pyobjc_framework_DiscRecordingUI-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -49,4 +53,5 @@ class PyPyobjcFrameworkDiscrecordingui(PythonPackage):
         depends_on("py-pyobjc-framework-discrecording@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-discrecording@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-discrecording@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

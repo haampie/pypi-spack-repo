@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBrotlipy(PythonPackage):
+    # BEGIN VERSIONS
     version("0.7.0", sha256="36def0b859beaf21910157b4c33eb3b06d8ce459c942102f16988cca6ea164df", url="https://pypi.org/packages/d9/91/bc79b88590e4f662bd40a55a2b6beb0f15da4726732efec5aa5a3763d856/brotlipy-0.7.0.tar.gz")
     version("0.6.0", sha256="2680f33531ee516baf68943210a74ae5a80d3f0b88673df570d371ff53f04283", url="https://pypi.org/packages/b0/f9/d629de68c3a9f5ce3e1ff2fe70f1cf0396765582bc3194179a2742c47731/brotlipy-0.6.0.tar.gz")
     version("0.5.1", sha256="c30c037d2ab9ff8f59ce08ee13670be776aef7d6b34a98edcd1b2c0c7dbab876", url="https://pypi.org/packages/06/93/aa7e3e95706ad39815b3ede385db8cdc322b8f71302223024977fda4d3a7/brotlipy-0.5.1.tar.gz")
@@ -17,5 +17,10 @@ class PyBrotlipy(PythonPackage):
     version("0.1.5", sha256="8b83d5265c4941238df97a88a2e7174d692e90f2e5b18ca88b580ed82eba4aad", url="https://pypi.org/packages/f2/3b/9047ba1c8489672d172bcb413884dd893e1db0d0a51520341f126cd07d22/brotlipy-0.1.5.tar.gz")
     version("0.1.4", sha256="3beef71d937268304b99597976217161040c2cd9f6ff04c80e414445c041148f", url="https://pypi.org/packages/da/d2/d302bd8f295d963b16775f0f948d4a9dd3771ad4e43dc1202a376c3c58af/brotlipy-0.1.4.tar.gz")
     version("0.1.3", sha256="c95a3952b5a2e67f15d68144bafc4c1a81f7e53d18756ed494cb2efe0f0dd335", url="https://pypi.org/packages/fc/c0/2c31c93c0a34a5f58f88369f79121c002b4184c06448572e51b30a0a29b3/brotlipy-0.1.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

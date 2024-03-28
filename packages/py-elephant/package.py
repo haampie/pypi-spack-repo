@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyElephant(PythonPackage):
+    # BEGIN VERSIONS
     version("0.14.0", sha256="02ce3b2a8d08dc19828f95384551339ea0946bc405c1db9aace54135417c2b0f", url="https://pypi.org/packages/fe/6a/3452291852f1a5b327e99db9a96272914d6bd38b8c9d751e86bea97a0094/elephant-0.14.0.tar.gz")
     version("0.13.0", sha256="2c6463cf9ace41631f2af196c5b80b468bf1c4b264d3a6b1ea0fb587d9e7dd67", url="https://pypi.org/packages/aa/e5/a42131ffa1de8e379ba56d67c85824d2471e6fbedcf710283f589c0dd4a4/elephant-0.13.0.tar.gz")
     version("0.12.0", sha256="81f8d668f92d8688344bb7a9c5abaa8438d824560c935a411e6e36ddf7dc7c72", url="https://pypi.org/packages/73/ef/e5308696a3e7fda842f58363a9db6690d42f30a7ebf818e15cc28014bf87/elephant-0.12.0.tar.gz")
@@ -20,12 +20,31 @@ class PyElephant(PythonPackage):
     version("0.6.4", sha256="b8c5f2c00ad3249e1fe428d0b8a1dbcaee4a69464481f5f8fd55d2f7f22c45a3", url="https://pypi.org/packages/a9/23/5a03b202532cf19196b6f8bab7ea58c3dc2bec9ac183da7e9e02d886e167/elephant-0.6.4.tar.gz")
     version("0.4.1", sha256="86b21a44cbacdc09a6ba6f51738dcd5b42ecd553d73acb29f71a0be7c82eac81", url="https://pypi.org/packages/ff/2b/cf614d7e039f9ffcc9fded53c47a268503e569b1ec0d838eac6edca3211a/elephant-0.4.1.tar.gz")
     version("0.3.0", sha256="747251ccfb5820bdead6391411b5faf205b4ddf3ababaefe865f50b16540cfef", url="https://pypi.org/packages/73/d0/c0695e2221f2a9ff23741f01c42e224dce4cf5e8813861e52a0e611299a4/elephant-0.3.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("docs", default=False)
+    variant("extras", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-jinja2@2.11.2:", when="@0.14:+extras")
+        depends_on("py-jupyter", when="@0.14:+docs")
+        depends_on("py-matplotlib@3.3.2:", when="@0.14:+docs")
+        depends_on("py-nbsphinx@0.8:", when="@0.14:+docs")
         depends_on("py-neo@0.10:", when="@0.14:")
         depends_on("py-numpy@1.19.5:", when="@0.14:")
+        depends_on("py-numpydoc@1.1:", when="@0.14:+docs")
+        depends_on("py-pandas@0.18:", when="@0.14:0+extras")
         depends_on("py-quantities@0.14.1:", when="@0.14:")
+        depends_on("py-scikit-learn@0.23.2:", when="@0.14:+extras")
         depends_on("py-scipy@1.5.4:", when="@0.14:")
         depends_on("py-six@1.10:", when="@0.14:")
+        depends_on("py-sphinx@3.3:", when="@0.14:+docs")
+        depends_on("py-sphinx-tabs@1.3:", when="@0.14:+docs")
+        depends_on("py-sphinxcontrib-bibtex@2:", when="@0.14:+docs")
+        depends_on("py-statsmodels@0.12.1:", when="@0.14:+extras")
         depends_on("py-tqdm", when="@0.14:")
+    # END DEPENDENCIES
 

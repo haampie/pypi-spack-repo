@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyParso(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.8.3", sha256="c001d4636cd3aecdaf33cbb40aebb59b094be2a74c556778ef5576c175e19e75", url="https://pypi.org/packages/05/63/8011bd08a4111858f79d2b09aad86638490d62fbf881c44e434a6dfca87b/parso-0.8.3-py2.py3-none-any.whl")
     version("0.8.2", sha256="a8c4922db71e4fdb90e0d0bc6e50f9b273d3397925e5e60a717e719201778d22", url="https://pypi.org/packages/a9/c4/d5476373088c120ffed82f34c74b266ccae31a68d665b837354d4d8dc8be/parso-0.8.2-py2.py3-none-any.whl")
     version("0.8.1", sha256="15b00182f472319383252c18d5913b69269590616c947747bc50bf4ac768f410", url="https://pypi.org/packages/ad/f0/ef6bdb1eba2dbfda60c985cd8d7b47b6ed8c6a1f5d212f39ff50b64f172c/parso-0.8.1-py2.py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyParso(PythonPackage):
     version("0.6.0", sha256="1376bdc8cb81377ca481976933773295218a2df47d3e1182ba76d372b1acb128", url="https://pypi.org/packages/c6/42/cb41a6b0cf27fff05e5caab37e254cf6a69442634f4c5d4a03f2d5cb12eb/parso-0.6.0-py2.py3-none-any.whl")
     version("0.5.2", sha256="5c1f7791de6bd5dbbeac8db0ef5594b36799de198b3f7f7014643b0c5536b9d3", url="https://pypi.org/packages/9b/b0/90353a5ece0987279837835224dead0c424833a224195683e188d384e06b/parso-0.5.2-py2.py3-none-any.whl")
     version("0.4.0", sha256="17cc2d7a945eb42c3569d4564cdf49bde221bc2b552af3eca9c1aad517dcdd33", url="https://pypi.org/packages/a7/bd/e2f4753c5fa93932899243b4299011a757ac212e9bc8ddf062f38df4e78b/parso-0.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPythonSlugify(PythonPackage):
+    # BEGIN VERSIONS
     version("8.0.4", sha256="276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8", url="https://pypi.org/packages/a4/62/02da182e544a51a5c3ccf4b03ab79df279f9c60c5e82d5e8bec7ca26ac11/python_slugify-8.0.4-py2.py3-none-any.whl")
     version("8.0.3", sha256="c71189c161e8c671f1b141034d9a56308a8a5978cd13d40446c879569212fdd1", url="https://pypi.org/packages/f3/00/d1f681edfd12ba85259932ed08840dc672676e99ffdc8ff34911a8a5f477/python_slugify-8.0.3-py2.py3-none-any.whl")
     version("8.0.2", sha256="428ea9b00c977b8f6c097724398f190b2c18e2a6011094d1001285875ccacdbf", url="https://pypi.org/packages/09/49/e05adaaa2d8604b7cfbce81af14c7a48c67d70a6e06cb47473c9673267db/python_slugify-8.0.2-py2.py3-none-any.whl")
@@ -18,7 +18,12 @@ class PyPythonSlugify(PythonPackage):
     version("6.1.0", sha256="2e3fad0bf38b11514f8de911ea04e7a6c6a08bb1bac18abd96d9566c34404d56", url="https://pypi.org/packages/ac/3b/1d29efed5d3dff7a80323ab5848603969b408df50d6b70a486c95e91b729/python_slugify-6.1.0-py2.py3-none-any.whl")
     version("6.0.1", sha256="89eec682c5180ba64811c9906a28184bbcc0a35792ba1bda3b5c2ab0cb2d0f67", url="https://pypi.org/packages/21/81/cc25cab7e465d3e15bb1653d4a99c6cee0f6fbdf747f9a99458561642db3/python_slugify-6.0.1-py2.py3-none-any.whl")
     version("4.0.0", sha256="a8fc3433821140e8f409a9831d13ae5deccd0b033d4744d94b31fea141bdd84c", url="https://pypi.org/packages/92/5f/7b84a0bba8a0fdd50c046f8b57dcf179dc16237ad33446079b7c484de04c/python-slugify-4.0.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-text-unidecode@1.3:", when="@5:")
+    # END DEPENDENCIES
 

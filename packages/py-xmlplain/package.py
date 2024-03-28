@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,9 +6,15 @@
 from spack.package import *
 
 class PyXmlplain(PythonPackage):
-    version("1.6.0", sha256="a9ccfa8ab36e4df1b0580458312501b7ae7625bad3c4fcc1b8c124aad775d8e3", url="https://pypi.org/packages/2d/a7/56c2d1145b71b4dff6ffa63616760b21f5c25ac4e0d053be5e065c9a938d/xmlplain-1.6.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.6.0", sha256="243c2b64febf7a13716987a4476e34833faf3f037e2533a5b94a2c19ff555c65", url="https://pypi.org/packages/9b/4f/0c7ef1c5cb5358577c81599a1779590741ad0e828a52087ca1dd40792b9f/xmlplain-1.6.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ordereddict")
         depends_on("py-pyyaml")
+    # END DEPENDENCIES
 

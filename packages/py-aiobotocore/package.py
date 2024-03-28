@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAiobotocore(PythonPackage):
+    # BEGIN VERSIONS
     version("2.12.1", sha256="6a9a3d646cf422f45fdc1e4256e78563ebffba64733bc9b8ca9123614e8ba9af", url="https://pypi.org/packages/4d/be/52c4181235cad3e462ac163ae714de37d36bed291efdb4e6591fde119219/aiobotocore-2.12.1-py3-none-any.whl")
     version("2.12.0", sha256="e121503dca049cf361dea19730e335aff2e7508f7f8b24db2e6a43a6fb70299e", url="https://pypi.org/packages/5a/76/5f0f0c933e84fdfd7bf9307c04d1bc2b2528214beac567879ee67e11bcc8/aiobotocore-2.12.0-py3-none-any.whl")
     version("2.11.2", sha256="487fede588040bfa3a43df945275c28c1c73ca75bf705295adb9fbadd2e89be7", url="https://pypi.org/packages/25/cf/c695f7f3301117766d778f536082c41ba20fd01b02e14a5c06f92a5ea75e/aiobotocore-2.11.2-py3-none-any.whl")
@@ -26,7 +26,11 @@ class PyAiobotocore(PythonPackage):
     version("2.1.1", sha256="dbe9ab997851c2458b07a85f682be2ccf35d679d5de0f8f571229f740ad7ba71", url="https://pypi.org/packages/0f/78/da223d2af37066a135c823230a1515c6343e046d4fb14964933f926a5337/aiobotocore-2.1.1.tar.gz")
     version("2.1.0", sha256="5fd4d7aefa0896fe4dd32815ead8a52ed5ccb8016c7c5743fe8ff71c3c074120", url="https://pypi.org/packages/af/71/9fae62115f4a2531a6cb3b40d4304a76265bb56fef0444ea0d4e7c8d7761/aiobotocore-2.1.0.tar.gz")
     version("1.2.1", sha256="58cc422e65fc89f7cb78eca740d241ac8e15f39f6b308cc23152711e8a987d45", url="https://pypi.org/packages/f9/a4/6c6687571b79fe792c627b6fbc31f3437eaf255388f384b5c4853b2b781c/aiobotocore-1.2.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiohttp@3.7.4.post:3", when="@2.6:")
         depends_on("py-aiohttp@3.3.1:3", when="@2.5.1:2.5")
@@ -44,4 +48,5 @@ class PyAiobotocore(PythonPackage):
         depends_on("py-botocore@1.27.59", when="@2.4")
         depends_on("py-botocore@1.23.24", when="@2.1.2:2.1")
         depends_on("py-wrapt@1.10.10:", when="@0.3.2:0.8,0.9.1:1.1,2.1.2:2.1,2.3.4:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGeopandas(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.14.3", sha256="41b31ad39e21bc9e8c4254f78f8dc4ce3d33d144e22e630a00bb336c83160204", url="https://pypi.org/packages/90/37/08e416c9915dcf7d53deb0fbdb702266902c584617dfa6e6c84fb2fc6ee3/geopandas-0.14.3-py3-none-any.whl")
     version("0.14.2", sha256="0efa61235a68862c1c6be89fc3707cdeba67667d5676bb19e24f3c57a8c2f723", url="https://pypi.org/packages/e3/23/00912e3236306ec52a06f95a08918cbb54f900419951726a20a8783a8507/geopandas-0.14.2-py3-none-any.whl")
     version("0.14.1", sha256="ed5a7cae7874bfc3238fb05e0501cc1760e1b7b11e5b76ecad29da644ca305da", url="https://pypi.org/packages/3e/cf/ede993ed7070c5487e6db550aad490178c06eaa48ad26ff5e5263f995fba/geopandas-0.14.1-py3-none-any.whl")
@@ -28,7 +28,11 @@ class PyGeopandas(PythonPackage):
     version("0.5.0", sha256="7261f76afefda02b6039015431cc727f6089fcdfdf69443cef4f31620f1efcac", url="https://pypi.org/packages/74/42/f4b147fc7920998a42046d0c2e65e61000bc5d104f1f8aec719612cb2fc8/geopandas-0.5.0-py2.py3-none-any.whl")
     version("0.4.0", sha256="1c272a9dfa1a382a153d6854d56be33b4c991670ebfdf05d562965877da5e9b8", url="https://pypi.org/packages/24/11/d77c157c16909bd77557d00798b05a5b6615ed60acb5900fbe6a65d35e93/geopandas-0.4.0-py2.py3-none-any.whl")
     version("0.3.0", sha256="38ec319ce8be344728cf124847251952af49adea8d38229723a55cc1ea473d44", url="https://pypi.org/packages/0a/0e/8ae74743ed7915ddb7d70cc8dfa8fc0b9b9cc81205c6e288a01915a46192/geopandas-0.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.14:")
         depends_on("py-descartes", when="@0.2.1:0.3")
@@ -55,4 +59,5 @@ class PyGeopandas(PythonPackage):
         depends_on("py-shapely@1.7.0:1", when="@0.11:0.12.0")
         depends_on("py-shapely@1.6.0:", when="@0.9:0.10")
         depends_on("py-shapely", when="@0.2.1:0.4,0.5.1:0.6.0-rc1,0.6.1:0.8")
+    # END DEPENDENCIES
 

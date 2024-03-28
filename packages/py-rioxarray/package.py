@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRioxarray(PythonPackage):
+    # BEGIN VERSIONS
     version("0.15.1", sha256="75c41e5836a9adba2a42a2cdbc62a50b81e01bd4fcc9f55a96f187322182d671", url="https://pypi.org/packages/48/07/f707d40e8a026a47b9419e11d79216128296c50eb59b0deb241eac3e16e7/rioxarray-0.15.1-py3-none-any.whl")
     version("0.15.0", sha256="d7c0b2efc21075f77fe04302b916a995320004695f3c31e4f06d9ab40acd4498", url="https://pypi.org/packages/4e/34/8ee402df8a49228b6aae89ab2127cdd5aa0ba0976904af7d55270f4f30b8/rioxarray-0.15.0-py3-none-any.whl")
     version("0.14.1", sha256="de8142fcc960fd2121632d1bf50a7e08adad958efc056f52aa78226a6f22e955", url="https://pypi.org/packages/6b/4b/3f16566e7b7bfb1a0bbdc4abf19773d33fe37bbaf66150592ef5b511e8bd/rioxarray-0.14.1-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyRioxarray(PythonPackage):
     version("0.13.0", sha256="b448780070ec8fe194c5ab80c87150535939619dc7552c0be8c802e844c6bec3", url="https://pypi.org/packages/37/d6/914d873f57e29c17bccca102b16e0024f30d437ea8b3db9dcf036a3df2e7/rioxarray-0.13.0-py3-none-any.whl")
     version("0.12.4", sha256="12d2c0b50b847ab1f88b37ee26d3861c2ae788cef2da9fe251066d7c7d9f0dfd", url="https://pypi.org/packages/79/56/a8e5b04bb0456f2b0e7182607ae4d2a203d17c35a3d4c3331669578c5fb7/rioxarray-0.12.4-py3-none-any.whl")
     version("0.4.1.post0", sha256="f043f846724a58518f87dd3fa84acbe39e15a1fac7e64244be3d5dacac7fe62b", url="https://pypi.org/packages/ab/a1/37432860acd0859b7df470150f10bba2fd1d08e879ab8e7a63b85bab9048/rioxarray-0.4.1.post0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.10:", when="@0.15.1:")
         depends_on("python@3.9:", when="@0.14:0.15.0")
@@ -32,4 +36,5 @@ class PyRioxarray(PythonPackage):
         depends_on("py-rasterio@1.1.1:", when="@0.11.2:0.13")
         depends_on("py-xarray@2022:", when="@0.15.1:")
         depends_on("py-xarray@0.17:", when="@0.11.2:0.15.0")
+    # END DEPENDENCIES
 

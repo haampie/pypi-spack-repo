@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOsloUtils(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.1.0", sha256="1d6504526c33cc10ae2c72565d0446a82d2acd43eaa5e6f3fd901d78400a2da0", url="https://pypi.org/packages/f0/bb/d61363eae3418f7862a2d14f96b803d5c395237a929e7fe35e5a1a4b0e23/oslo.utils-7.1.0-py3-none-any.whl")
     version("7.0.0", sha256="dbb724041a2ea0c342d524c4d7c7f07c8bc5016f4762d38c6a41b2ef805b3a8e", url="https://pypi.org/packages/87/98/a105b1e55d81ad791703786281d4dc48c301255b2d251f925cbc395a0ab4/oslo.utils-7.0.0-py3-none-any.whl")
     version("6.3.0", sha256="6bac2e56650f502caae6c0e8ba6e5eda3d7a16743d115f8836cad54538dd667f", url="https://pypi.org/packages/cf/ef/741be3e7f64774c5fdf0370e8937e9d5e3374aa4683208a34734fb04c8dc/oslo.utils-6.3.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyOsloUtils(PythonPackage):
     version("6.0.0", sha256="36b34f0d609bce50b48b0af8d78200f8083171d90f18ee7c1b929f93e36d1e43", url="https://pypi.org/packages/d5/79/95a080ea46002f92e4b196b859ac879c830c62ef238ac123011f7b29ddf5/oslo.utils-6.0.0-py3-none-any.whl")
     version("5.0.0", sha256="f964ef290f1d43aa6daafdcf3c32f55332f38e878f0e2649edcaf8384f455d57", url="https://pypi.org/packages/c7/52/567fc48611230cff7022a11e239ad82e9cc0d80d42aaf76fe94367b1fe87/oslo.utils-5.0.0-py3-none-any.whl")
     version("4.9.2", sha256="ff38bc69bbed11103ceb5d06ac47454fe439ee9351ed2640d47c1b2cc71b2ea5", url="https://pypi.org/packages/0e/28/2acc0e9726c8eff4c9539d3dbf3cb4845e9eb5bc99f26002510e13d7f6f8/oslo.utils-4.9.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-debtcollector@1.2:", when="@3.5:")
         depends_on("py-iso8601@0.1.11:", when="@3.10:")
@@ -33,4 +37,5 @@ class PyOsloUtils(PythonPackage):
         depends_on("py-pyyaml@3.13:", when="@6.3:")
         depends_on("py-tzdata@2022.4:", when="@7.1: ^python@3.9:")
         depends_on("py-tzdata@2022.4:", when="@6.2:7.0")
+    # END DEPENDENCIES
 

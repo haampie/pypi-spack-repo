@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWandb(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.16.5", sha256="023b6c72a6ef13085c9a970f6714548eca64f56d3d8698e42372764950dfd004", url="https://pypi.org/packages/53/7c/f3656d1ce3b916ea35f454c6a32b56342168c08baf09a0683df240ca2dce/wandb-0.16.5-py3-none-any.whl")
     version("0.16.4", sha256="bb9eb5aa2c2c85e11c76040c4271366f54d4975167aa6320ba86c3f2d97fe5fa", url="https://pypi.org/packages/97/c9/5af930be59487ab6c7e76dc1ffa31f7f035be2e50cb17cc56b87ba47ff8f/wandb-0.16.4-py3-none-any.whl")
     version("0.16.3", sha256="b8907ddd775c27dc6c12687386a86b5d6acf291060f9ae680bbc61cc8fc03237", url="https://pypi.org/packages/c4/b0/5efefacd9d12b411ebe57c3db6d05a38883cd52e0ff46ca7b217df3151a1/wandb-0.16.3-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyWandb(PythonPackage):
     version("0.15.10", sha256="bc810879fecd1b62ccd498658e55ade3702939090a94b99418630e77e1f43d50", url="https://pypi.org/packages/fe/10/18b03623c460fd433525d9b4739af58c5e69f5974328dcdd037cfbc855d7/wandb-0.15.10-py3-none-any.whl")
     version("0.15.9", sha256="879365e5fcd00444874785b02f56f25973e7064420d9de3cc08a9948ecdf565b", url="https://pypi.org/packages/3d/2d/4b115c075a4a5eda4c905efb012a585813d6d40ee3199393bc48f1fdba1f/wandb-0.15.9-py3-none-any.whl")
     version("0.13.9", sha256="b8752e5287aca9f8192eca7be352882975973cd3cd0c88815930498fd357569d", url="https://pypi.org/packages/a3/b4/279ec12c6c481d0f672e9cf89fbdf7e57f5aacaf23493c699e1c00671ce0/wandb-0.13.9-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-appdirs@1.4.3:", when="@0.13.8:")
         depends_on("py-click@7.1:8.0.0-rc1,8.0.1:", when="@0.15.5:")
@@ -30,8 +34,8 @@ class PyWandb(PythonPackage):
         depends_on("py-pathtools", when="@0.10.16:0.16.0-beta1")
         depends_on("py-protobuf@3.19.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=windows")
         depends_on("py-protobuf@3.19.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=linux ^python@3.9.1:")
-        depends_on("py-protobuf@3.12.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=linux ^python@:3.8")
         depends_on("py-protobuf@3.15.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=linux ^python@3.9:3.9.0")
+        depends_on("py-protobuf@3.12.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=linux ^python@:3.8")
         depends_on("py-protobuf@3.19.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=freebsd")
         depends_on("py-protobuf@3.19.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=darwin")
         depends_on("py-protobuf@3.19.0:4.21.0-rc2,4.21.1:4", when="@0.13.6: platform=cray")
@@ -42,4 +46,5 @@ class PyWandb(PythonPackage):
         depends_on("py-setproctitle", when="@0.12.11:")
         depends_on("py-setuptools", when="@0.12.16:")
         depends_on("py-typing-extensions", when="@0.13.8: ^python@:3.9")
+    # END DEPENDENCIES
 

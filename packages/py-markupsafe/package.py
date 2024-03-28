@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMarkupsafe(PythonPackage):
+    # BEGIN VERSIONS
     version("2.1.5", sha256="d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b", url="https://pypi.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz")
     version("2.1.4", sha256="3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f", url="https://pypi.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz")
     version("2.1.3", sha256="af598ed32d6ae86f1b747b82783958b1a4ab8f617b06fe68795c7f026abbdcad", url="https://pypi.org/packages/6d/7c/59a3248f411813f8ccba92a55feaac4bf360d29e2ff05ee7d8e1ef2d7dbf/MarkupSafe-2.1.3.tar.gz")
@@ -26,5 +26,10 @@ class PyMarkupsafe(PythonPackage):
     version("0.19", sha256="62fcc5d641df8b5ad271ebbd6b77a19cd92eceba1e1a990de4e96c867789f037", url="https://pypi.org/packages/8e/90/da092a12fb96e0c4cacc279d1f92819ae82bfa291e0a03afe8059518e91a/MarkupSafe-0.19.tar.gz")
     version("0.18", sha256="b7d5d688bdd345bfa897777d297756688cf02e1b3742c56885e2e5c2b996ff82", url="https://pypi.org/packages/98/cf/197c3b0f73224b84eb419a967f87565bcc0b0c1147012397e6bd2d45e253/MarkupSafe-0.18.tar.gz")
     version("0.17", sha256="bdda8df9395253d06af11ce33778aed4d5f297cb1d8cb380ab955c1a04bbb9d4", url="https://pypi.org/packages/04/d0/21c43bb0a9c9b31c8bfeb3676e12ec0aae2b71632497b6bd6505c980a38a/MarkupSafe-0.17.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

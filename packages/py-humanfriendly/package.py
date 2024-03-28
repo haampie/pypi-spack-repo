@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHumanfriendly(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.0", sha256="1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477", url="https://pypi.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl")
     version("9.2", sha256="332da98c24cc150efcc91b5508b19115209272bfdf4b0764a56795932f854271", url="https://pypi.org/packages/92/7e/a06472f484fa589933f39bfb41a7b849ca49f6d8e4fdfe978e27f0e3075c/humanfriendly-9.2-py2.py3-none-any.whl")
     version("9.1", sha256="d5c731705114b9ad673754f3317d9fa4c23212f36b29bdc4272a892eafc9bc72", url="https://pypi.org/packages/93/66/363d01a81da2108a5cf446daf619779f06d49a0c4426dd02b40734f10e2f/humanfriendly-9.1-py2.py3-none-any.whl")
@@ -22,8 +22,13 @@ class PyHumanfriendly(PythonPackage):
     version("6.1", sha256="5a57c973dd28a24f45ab723521c84b111fbe79e9d9fcdca6f9aeb668c18a0f40", url="https://pypi.org/packages/1e/dc/8aac3921fd2a03978542a22eb7485b63c8e85ca75a4d3bb904fab82cf032/humanfriendly-6.1-py2.py3-none-any.whl")
     version("6.0", sha256="d112bb6d6f7859c5cda7233fdebadb82636730b25738c15ba44ce4c4dc023f77", url="https://pypi.org/packages/b0/dd/37a08313472fee1d92b158f771f41bdb5e962160f9bce07d446da15ee833/humanfriendly-6.0-py2.py3-none-any.whl")
     version("4.18", sha256="23057b10ad6f782e7bc3a20e3cb6768ab919f619bbdc0dd75691121bbde5591d", url="https://pypi.org/packages/90/df/88bff450f333114680698dc4aac7506ff7cab164b794461906de31998665/humanfriendly-4.18-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyreadline", when="@4.4.2:9 platform=windows")
         depends_on("py-pyreadline3", when="@10: platform=windows")
+    # END DEPENDENCIES
 

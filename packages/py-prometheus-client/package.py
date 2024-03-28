@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPrometheusClient(PythonPackage):
+    # BEGIN VERSIONS
     version("0.20.0", sha256="cde524a85bce83ca359cc837f28b8c0db5cac7aa653a588fd7e84ba061c329e7", url="https://pypi.org/packages/c7/98/745b810d822103adca2df8decd4c0bbe839ba7ad3511af3f0d09692fc0f0/prometheus_client-0.20.0-py3-none-any.whl")
     version("0.19.0", sha256="c88b1e6ecf6b41cd8fb5731c7ae919bf66df6ec6fafa555cd6c0e16ca169ae92", url="https://pypi.org/packages/bb/9f/ad934418c48d01269fc2af02229ff64bcf793fd5d7f8f82dc5e7ea7ef149/prometheus_client-0.19.0-py3-none-any.whl")
     version("0.18.0", sha256="8de3ae2755f890826f4b6479e5571d4f74ac17a81345fe69a6778fdb92579184", url="https://pypi.org/packages/aa/84/8b11274c61f81376ee06dfb5b60b176097b58166f095d55014f033632f46/prometheus_client-0.18.0-py3-none-any.whl")
@@ -21,5 +21,14 @@ class PyPrometheusClient(PythonPackage):
     version("0.7.1", sha256="71cd24a2b3eb335cb800c7159f423df1bd4dcd5171b234be15e3f31ec9f622da", url="https://pypi.org/packages/b3/23/41a5a24b502d35a4ad50a5bb7202a5e1d9a0364d0c12f56db3dbf7aca76d/prometheus_client-0.7.1.tar.gz")
     version("0.7.0", sha256="ee0c90350595e4a9f36591f291e6f9933246ea67d7cd7d1d6139a9781b14eaae", url="https://pypi.org/packages/36/ae/99d3bfdb9b4eec8de1ef0abf28c833689f8884f192d97e2b9e72f8774f31/prometheus_client-0.7.0.tar.gz")
     version("0.5.0", sha256="e8c11ff5ca53de6c3d91e1510500611cafd1d247a937ec6c588a0a7cc3bef93c", url="https://pypi.org/packages/bc/e1/3cddac03c8992815519c5f50493097f6508fa153d067b494db8ab5e9c4ce/prometheus_client-0.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("twisted", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-twisted", when="@0.8:+twisted")
+    # END DEPENDENCIES
 

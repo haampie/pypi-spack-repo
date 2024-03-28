@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyConfection(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.1.5-alpha0", sha256="e4f81fdcc0b5c513245e47ece99606c54d60e95bfad3148e34c100406126cea0", url="https://pypi.org/packages/a6/b4/00f611b95f1404212a75b59930b93bf696431408438fb44f5bf9d1d37f09/confection-0.1.5a0-py3-none-any.whl")
     version("0.1.4", sha256="a658818d004939069c3e2b3db74a2cb9d956a5e61a1c9ad61788e0ee09a7090f", url="https://pypi.org/packages/39/78/f9d18da7b979a2e6007bfcea2f3c8cc02ed210538ae1ce7e69092aed7b18/confection-0.1.4-py3-none-any.whl")
     version("0.1.3", sha256="58b125c9bc6786f32e37fe4d98bc3a03e5f509a4b9de02541b99c559f2026092", url="https://pypi.org/packages/93/f8/e89268a1f885048fb2ee6b5c9f93c4e90de768534acfef3652f87d97d4cb/confection-0.1.3-py3-none-any.whl")
@@ -17,10 +17,15 @@ class PyConfection(PythonPackage):
     version("0.0.3", sha256="51af839c1240430421da2b248541ebc95f9d0ee385bcafa768b8acdbd2b0111d", url="https://pypi.org/packages/36/9f/03c9137e34b3064f0eba298340d00a8dd4719c0b7021704187a7ddf1e382/confection-0.0.3-py3-none-any.whl")
     version("0.0.2", sha256="20663e54b472d77f2add23c2bc2ecad33b9fcb3c3679d303b74003ad45ff5927", url="https://pypi.org/packages/c9/41/a05cccafe74d2acc64dfdd5908a15dc2f502a5741d984ac3ce1abcfc217f/confection-0.0.2-py3-none-any.whl")
     version("0.0.1", sha256="e4b43ee84af1c2088726d7b91d4b6b958a6d6d5cc374108742a6db585b93ee44", url="https://pypi.org/packages/ed/e6/32f079bbfc92a60db21b269bee49d442eb94acb54bd8ce30bdb3a8daeaa0/confection-0.0.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pydantic@1.7.4:1.7,1.8.2:", when="@0.1.1:")
         depends_on("py-pydantic@1.7.4:1.7,1.8.2:1", when="@0.0.3:0.1.0")
         depends_on("py-pydantic@1.7.4:1.7,1.8.2:1.9", when="@0.0.1:0.0.2")
         depends_on("py-srsly@2.4:2.4.0.0,2.4.1:", when="@0.0.1:")
+    # END DEPENDENCIES
 

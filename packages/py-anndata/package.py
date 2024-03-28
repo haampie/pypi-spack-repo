@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAnndata(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.10.6", sha256="2c625149472fab4430f402208e7bf1efa6a7d45fa5c14827c8122305f4dca206", url="https://pypi.org/packages/9a/02/49ea1209f0604a57f71749531c745d20fbd10ccb3683f8b0bb9806ad3e45/anndata-0.10.6-py3-none-any.whl")
     version("0.10.5.post1", sha256="3be9d5863d60d7a72d57a6e0392a3e7f3bb2bbfc79a038ddc53192a41517f5fc", url="https://pypi.org/packages/42/c7/23c2b5d3dd764650d235b574fdcac8d7252e6ae2f90273f65e95b9ca4e34/anndata-0.10.5.post1-py3-none-any.whl")
     version("0.10.5", sha256="fbcf934a3e99e7dda89b1d48f36f675504ea2e65ab4408daa9526bc305c14ebd", url="https://pypi.org/packages/f8/33/b0250f6b841d6c53f8b089697dfffcca44bbb2f76d7859bf17ea723506b0/anndata-0.10.5-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyAnndata(PythonPackage):
     version("0.9.2", sha256="badab44bf0b4d598ae49403ee634a6ffc8896d9aa21db52f0f6af98d6fe1fceb", url="https://pypi.org/packages/a7/ee/767a05c299d95b438ef9c8ab6dbc15896cfb9121cf4327fe1da160a45343/anndata-0.9.2-py3-none-any.whl")
     version("0.9.1", sha256="6666a39f9d6c4645a70115f38c17ccc2e2ffd9c0d08a1636c395253d73de26f1", url="https://pypi.org/packages/ef/3a/4611e83c2bfca85518535aad65efb15f68c2c7c0831054b3011e6fb9a90d/anndata-0.9.1-py3-none-any.whl")
     version("0.8.0", sha256="2a929360c3c893370865e8ee3d3b9d95ee93239da91bafc5bf5f3c306796746e", url="https://pypi.org/packages/46/7f/ffe1546142d98ed55e7bb70eaedad92861d8e2ab07398ef7f06f4f46d06d/anndata-0.8.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.10:")
         depends_on("py-array-api-compat@1.4.1:1.4,1.5.1:", when="@0.10.6:")
@@ -37,4 +41,5 @@ class PyAnndata(PythonPackage):
         depends_on("py-pandas@1.1.1:", when="@0.7.6:0.9.1")
         depends_on("py-scipy@1.8.1:", when="@0.10.6:")
         depends_on("py-scipy@1.4.1:", when="@0.7.6:0.10.5")
+    # END DEPENDENCIES
 

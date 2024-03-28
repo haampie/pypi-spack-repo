@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLazyObjectProxy(PythonPackage):
+    # BEGIN VERSIONS
     version("1.10.0", sha256="78247b6d45f43a52ef35c25b5581459e85117225408a4128a3daf8bf9648ac69", url="https://pypi.org/packages/2c/f0/f02e2d150d581a294efded4020094a371bbab42423fe78625ac18854d89b/lazy-object-proxy-1.10.0.tar.gz")
     version("1.9.0", sha256="659fb5809fa4629b8a1ac5106f669cfc7bef26fbb389dda53b3e010d1ac4ebae", url="https://pypi.org/packages/20/c0/8bab72a73607d186edad50d0168ca85bd2743cfc55560c9d721a94654b20/lazy-object-proxy-1.9.0.tar.gz")
     version("1.8.0", sha256="c219a00245af0f6fa4e95901ed28044544f50152840c5b6a3e7b2568db34d156", url="https://pypi.org/packages/74/37/591f89e8a09ae4574391bdf8a5eecd34a3dbe545917333e625c9de9a66b0/lazy-object-proxy-1.8.0.tar.gz")
@@ -22,5 +22,10 @@ class PyLazyObjectProxy(PythonPackage):
     version("1.4.1", sha256="4ba73f6089cd9b9478bc0a4fa807b47dbdb8fad1d8f31a0f0a5dbf26a4527a71", url="https://pypi.org/packages/ad/57/a36f682668ffc453e86ddfb5a2a49848edcb7bd04a210a5a8692a48ed9c4/lazy-object-proxy-1.4.1.tar.gz")
     version("1.4.0", sha256="7fb11d33d99a374e4b0c3fb20128890b9cf784ca7e4b91ecbb191d34618bd9fe", url="https://pypi.org/packages/ba/bd/c259aae1ef43cd887e08959b70768861272e65c7a0fd44c66864bcc585f4/lazy-object-proxy-1.4.0.tar.gz")
     version("1.3.1", sha256="eb91be369f945f10d3a49f5f9be8b3d0b93a4c2be8f8a5b83b0571b8123e0a7a", url="https://pypi.org/packages/55/08/23c0753599bdec1aec273e322f277c4e875150325f565017f6280549f554/lazy-object-proxy-1.3.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

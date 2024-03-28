@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyParam(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.1.0", sha256="f31d3745d227347d29b5868c4e4e3077df07463889b91d3bb28e634fde211e1c", url="https://pypi.org/packages/25/7e/8bc23416cf4cd6ded2eaf78e09f90c97975987f705d23075b4d3bfbc065a/param-2.1.0-py3-none-any.whl")
     version("2.1.0-rc1", sha256="7f5c2129af8683ad0124f9daf4fc2185f1efdf0a93052fd0b02d0e0a9b19565d", url="https://pypi.org/packages/2a/51/38b4960dc41346eaddf744fb26aa7d80b3cdfb5bc1143fae1248b0cef793/param-2.1.0rc1-py3-none-any.whl")
     version("2.0.2", sha256="b269fd7397886ec609e544f81035fa52e1950da0e76d20080bfeca3d7a0317ca", url="https://pypi.org/packages/d7/04/d2b3c627bc9ea4477affca78f71bcadb84d73873f133ce4c47a03ebaaf59/param-2.0.2-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyParam(PythonPackage):
     version("1.12.1", sha256="d3b8852815e4012803110cb44a8c9c77e15fc1a62895e2a9a215ef5f5a036933", url="https://pypi.org/packages/e3/fc/d2abf61dafe5eb61892861ee7a4c4610ed0ecd630fb659cc368e35cfe084/param-1.12.1-py2.py3-none-any.whl")
     version("1.12.0", sha256="401929e5b9252c00001d91745c0af1e48d9ca6cda07d2d7b2de9c8fbf2c8e5e7", url="https://pypi.org/packages/e4/1b/a65e2e882f264ee7aac3c37a72003950a7d16ac7df40356017a798aebb60/param-1.12.0-py2.py3-none-any.whl")
     version("1.11.1", sha256="62fd2f679ed4f0dd2c146cf4b399ddc23e50df462e1c3080a3401747be56e195", url="https://pypi.org/packages/c6/38/1e5edf17456faa2502cbc8c1d6662a15a34aadc87ef13d3d9973e5e2f766/param-1.11.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAzureMgmtContainerregistry(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.3.0", sha256="851e1c57f9bc4a3589c6b21fb627c11fd6cbb57a0388b7dfccd530ba3160805f", url="https://pypi.org/packages/93/04/e6e206b9392b39e90d84891bf069a4673ba9fe4bc8ba6be78f0bc684c746/azure_mgmt_containerregistry-10.3.0-py3-none-any.whl")
     version("10.2.0", sha256="fd85ea0f07f94bfb1b72ea0e7c678ef37a8918e228292f6755d1310a00cf59fb", url="https://pypi.org/packages/2c/67/5e4a94ebe42bb28317be58e7d11d823b318e9eb6b5c6d3cf8b13670b5b06/azure_mgmt_containerregistry-10.2.0-py3-none-any.whl")
     version("10.1.0", sha256="35c838a43c5009b935589efa63c7057cf0b1c6578b98196f819214727e344977", url="https://pypi.org/packages/e3/51/4a01768c5fecf286e1059ce65c4dc6b4df0508687f68e0c03fd8b126ce5a/azure_mgmt_containerregistry-10.1.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyAzureMgmtContainerregistry(PythonPackage):
     version("8.0.0", sha256="28678bdb9f678f85b88e003fd4f435b462bc5566348c6030da2277a9cb152b76", url="https://pypi.org/packages/36/d3/c3a18ee144c641576f34207bd1804a2f6dcdc8261f636f36c99cc6c980b3/azure_mgmt_containerregistry-8.0.0-py2.py3-none-any.whl")
     version("3.0.0-rc14", sha256="bac9a280b7c25a0a2acb0e8a00500ebfcaf9c580a2f2a3302b77ab2f4b09261e", url="https://pypi.org/packages/7e/ba/c61d1194088d88de079ae0d02529229dc15c2f84d43c6b7f6c3ed06fa39d/azure_mgmt_containerregistry-3.0.0rc14-py2.py3-none-any.whl")
     version("2.8.0", sha256="7de7c542e29b441f3858447694c4e5ab933eeef74bce2dd5bdab32b6d521ecd3", url="https://pypi.org/packages/97/70/8c2d0509db466678eba16fa2b0a539499f3b351b1f2993126ad843d5be13/azure_mgmt_containerregistry-2.8.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azure-common@1.1:", when="@1,2.2:")
         depends_on("py-azure-mgmt-core@1.3.2:", when="@10.1:")
@@ -29,4 +33,5 @@ class PyAzureMgmtContainerregistry(PythonPackage):
         depends_on("py-msrest@0.6.21:", when="@8.0.0:10.0")
         depends_on("py-msrest@0.5:", when="@2.1:8.0.0-beta1")
         depends_on("py-msrestazure@0.4.32:", when="@2.1:3")
+    # END DEPENDENCIES
 

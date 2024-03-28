@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkFsevents(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="3a75f38bb1d5d2cf6a0d3e92801b3510f32e96cf6443d81b9dd92a84d72eff0a", url="https://pypi.org/packages/6e/5b/42b1dcca24ebf2eebc29846a7779a9f7edc4104b6a2161a62532a7054023/pyobjc-framework-FSEvents-10.2.tar.gz")
     version("10.1", sha256="f5dee8cfbd878006814db264c5f70aeb1a43c06620e98f628ca6c0008beb1b1d", url="https://pypi.org/packages/a4/4f/505fe82b5b90a2f03046817298953b743870ccddea0ca426d658ebc5008e/pyobjc-framework-FSEvents-10.1.tar.gz")
     version("10.0", sha256="a462c1ad6d6c93d9542c9780b970915e5e9fa0f70391187f7145b5b1c64e57d5", url="https://pypi.org/packages/f7/f3/068f2523e564b39a30540e81d69f795330817b5b0b04e197199a5626ffd4/pyobjc-framework-FSEvents-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkFsevents(PythonPackage):
     version("9.0", sha256="3577e67ce41e9dae9eeb7b31c828b65a0234ab808f5b64779f27b0552ef5f265", url="https://pypi.org/packages/ed/b3/2635e51e733351246f8718585af0c6c3781df5df4cfa00118a3ec271498a/pyobjc-framework-FSEvents-9.0.tar.gz")
     version("8.5.1", sha256="c25ec45f6154ee2a42437a33bad6d1ada24f6791742f22d7ab632a524f4dc99f", url="https://pypi.org/packages/3f/0c/10ee54061aaa9e09c6675d9a698e26999d2338867023bfaeee32d982c569/pyobjc-framework-FSEvents-8.5.1.tar.gz")
     version("8.5", sha256="21928fd0d17ad69f45d41f89228b7446d8faf0d1bba0d71e8e23451196701004", url="https://pypi.org/packages/eb/c6/738e7a2197769e75f8b75618c765838a8c05e9f29b82b759944368f58905/pyobjc-framework-FSEvents-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkFsevents(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

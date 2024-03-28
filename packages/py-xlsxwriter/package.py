@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyXlsxwriter(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.2.0", sha256="ecfd5405b3e0e228219bcaf24c2ca0915e012ca9464a14048021d21a995d490e", url="https://pypi.org/packages/a7/ea/53d1fe468e63e092cf16e2c18d16f50c29851242f9dd12d6a66e0d7f0d02/XlsxWriter-3.2.0-py3-none-any.whl")
     version("3.1.9", sha256="b61c1a0c786f82644936c0936ec96ee96cd3afb9440094232f7faef9b38689f0", url="https://pypi.org/packages/f7/3e/05ba2194cd5073602422859c949a4f21310a3c49bf8dccde9e03d4522b11/XlsxWriter-3.1.9-py3-none-any.whl")
     version("3.1.8", sha256="2d8d1f392b3e041adf90042dd2f7b5f7468181a45e5e9a7d8376e64b374104f1", url="https://pypi.org/packages/c8/aa/6162e6842f1853ebb9d60621c0b889a534510eb3e3bcff608f9cf7dc86aa/XlsxWriter-3.1.8-py3-none-any.whl")
@@ -21,5 +21,10 @@ class PyXlsxwriter(PythonPackage):
     version("1.4.3", sha256="1a7fac99687020e76aa7dd0d7de4b9b576547ed748e5cd91a99d52a6df54ca16", url="https://pypi.org/packages/2c/ce/74fd8d638a5b82ea0c6f08a5978f741c2655a38c3d6e82f73a0f084377e6/XlsxWriter-1.4.3-py2.py3-none-any.whl")
     version("1.2.2", sha256="00e9c337589ec67a69f1220f47409146ab1affd8eb1e8eaad23f35685bd23e47", url="https://pypi.org/packages/25/88/a38f35b00ce4dd166a20e1a0a25e438e19e332e680df52af4aeac0df0f03/XlsxWriter-1.2.2-py2.py3-none-any.whl")
     version("1.0.2", sha256="279220b1c58cef2d35b8fd99030945a740a4fde65c0c8598b34177f7e2cd8ffc", url="https://pypi.org/packages/c7/86/748cb5f6ef5ff2d95a7f189ef1c5124f9badc1d1293dbc214c128595e57e/XlsxWriter-1.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

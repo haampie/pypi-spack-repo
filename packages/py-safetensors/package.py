@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySafetensors(PythonPackage):
+    # BEGIN VERSIONS
     version("0.4.2", sha256="acc85dcb09ec5e8aa787f588d7ad4d55c103f31e4ff060e17d92cc0e8b8cac73", url="https://pypi.org/packages/32/b4/24d2855f668c2fbee5855cc6551684bdd3f7b935af324c9c8b20290d8443/safetensors-0.4.2.tar.gz")
     version("0.4.2-rc0", sha256="d971be1de500dd6001af6d31adc576c5df115bbc57ca0765b449937a0642381b", url="https://pypi.org/packages/35/0b/5169b0b1f5d7fecfbbac946df7dd70b5504bf7fbd4d4c368641503f4829c/safetensors-0.4.2rc0.tar.gz")
     version("0.4.1", sha256="2304658e6ada81a5223225b4efe84748e760c46079bffedf7e321763cafb36c9", url="https://pypi.org/packages/37/7b/72f3998263fbdc4b2fe105fbc4d08abf9ee54ef7049ade7a6e79f9af0042/safetensors-0.4.1.tar.gz")
@@ -20,5 +20,10 @@ class PySafetensors(PythonPackage):
     version("0.3.0", sha256="5be8b2fccdc6aec84c9d6732180575fe1ba3afc559cbe96e2301eacc45c5b9a6", url="https://pypi.org/packages/a4/8a/8294e569f4ac4e377d85d20286edb03716b16d2fd4f184da42d314efcbad/safetensors-0.3.0.tar.gz")
     version("0.2.8", sha256="2720b20a6a38c799dca79bd76caeeac2f7df585a9d4f7d59fa7e28eff9ccb27f", url="https://pypi.org/packages/14/02/cd31fbc6a017384480ca92febdac286871a9d1e77f9e081835c2734ab194/safetensors-0.2.8.tar.gz")
     version("0.2.7", sha256="37192b456fdfe09762d6a2ef3322d2379fee52eb2db6d887ebac6e3349de596d", url="https://pypi.org/packages/02/7f/0ade1f66ead6e9c777cb605ae9a37d92d6b58bfdf2c21d89fd4d935f256c/safetensors-0.2.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

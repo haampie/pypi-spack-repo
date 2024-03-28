@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyPytestIsort(PythonPackage):
-    version("0.3.1", sha256="4bfee60dad1870b51700d55a85f5ceda766bd9d3d2878c1bbabee80e61b1be1a", url="https://pypi.org/packages/80/4c/0361c59b69ab463c648d8c928e66b15f06b37bb523a9e6f73a50032b6fc7/pytest-isort-0.3.1.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.3.1", sha256="3be60e0de277b420ff89303ca6494320c41f7819ffa898756b90ef976e4c636a", url="https://pypi.org/packages/e4/01/94bdd1927582263947d37b2225412b9ef1763f8ebc9c42f55a650f718aca/pytest_isort-0.3.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWcwidth(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.2.13", sha256="3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859", url="https://pypi.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl")
     version("0.2.12", sha256="f26ec43d96c8cbfed76a5075dac87680124fa84e0855195a6184da9c187f133c", url="https://pypi.org/packages/31/b1/a59de0ad3aabb17523a39804f4c6df3ae87ead053a4e25362ae03d73d03a/wcwidth-0.2.12-py2.py3-none-any.whl")
     version("0.2.11", sha256="c4b153acf29f1f0d7fb1b00d097cce82b73de7a2016321c8d7ca71bd76dd848b", url="https://pypi.org/packages/b4/1f/40eeda714cdc71558431b16d335accaf21d1c3196ff1d790023e9ff2fcbf/wcwidth-0.2.11-py2.py3-none-any.whl")
@@ -17,6 +17,11 @@ class PyWcwidth(PythonPackage):
     version("0.2.6", sha256="795b138f6875577cd91bba52baf9e445cd5118fd32723b460e30a0af30ea230e", url="https://pypi.org/packages/20/f4/c0584a25144ce20bfcf1aecd041768b8c762c1eb0aa77502a3f0baa83f11/wcwidth-0.2.6-py2.py3-none-any.whl")
     version("0.2.5", sha256="beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784", url="https://pypi.org/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl")
     version("0.2.4", sha256="79375666b9954d4a1a10739315816324c3e73110af9d0e102d906fdb0aec009f", url="https://pypi.org/packages/ef/94/a17155b400812f0558093c6fb99f92ba823e24757d5884e3ec60f5e81319/wcwidth-0.2.4-py2.py3-none-any.whl")
-    version("0.1.7", sha256="3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", url="https://pypi.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz")
+    version("0.1.7", sha256="f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c", url="https://pypi.org/packages/7e/9f/526a6947247599b084ee5232e4f9190a38f398d7300d866af3ab571a5bfe/wcwidth-0.1.7-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

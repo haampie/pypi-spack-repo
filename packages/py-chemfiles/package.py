@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,12 @@
 from spack.package import *
 
 class PyChemfiles(PythonPackage):
-    version("0.10.3", sha256="ffcf09675cfe0b9091a01a898df0c20e128bc68d4a01840d6552b6f663cfca79", url="https://pypi.org/packages/4e/03/71755e68b57d6f9e9aa6971a69d4dd663a6cc373400cbb3ed3003c402d35/chemfiles-0.10.3-py2.py3-none-win_amd64.whl")
+    # BEGIN VERSIONS
+    version("0.10.3", sha256="4bbb8b116492a57dbf6ddb4c84aad0133cd782e0cc0e53e4b957f2d93e6806ea", url="https://pypi.org/packages/40/ed/ad8fc9ac327b791bc20a8daf2b1ce3e83b45bed640575b6ac04ec02723ce/chemfiles-0.10.3.tar.gz")
+    # END VERSIONS
 
-    with default_args(type="run"):
-        depends_on("py-numpy")
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

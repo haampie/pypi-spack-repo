@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGym(PythonPackage):
+    # BEGIN VERSIONS
     version("0.26.2", sha256="e0d882f4b54f0c65f203104c24ab8a38b039f1289986803c7d02cdbe214fbcc4", url="https://pypi.org/packages/ab/b1/eb05a423eb801ab7d0715d6a3b28d92589e30b437052553df19ca2087240/gym-0.26.2.tar.gz")
     version("0.26.1", sha256="a632c3fcee0b4fcb8d110c127fe0e4a195195cf0a3707da4578564afbed96512", url="https://pypi.org/packages/f1/67/ca925439eec51e1e6b5dab6c7412c367b7d9bc5c6c3fa9c8968146d80b8b/gym-0.26.1.tar.gz")
     version("0.26.0", sha256="12992d79ccc41e160b7381db18f475a61a4dcc4973d38475b65cab026e404a7a", url="https://pypi.org/packages/65/75/145c54fdbfa90d440b76b892be2a1922caec759aecd3aa0b66e39caf53ca/gym-0.26.0.tar.gz")
@@ -19,5 +19,10 @@ class PyGym(PythonPackage):
     version("0.23.0", sha256="dbd3d0c50fc1260b57e6f12ba792152b73551730512623b7653d6dfb2f7a105d", url="https://pypi.org/packages/66/17/b4ec403562c0e8c56f1ce095dcf6d65b7faeabff87f46b6097ab45e6001a/gym-0.23.0.tar.gz")
     version("0.19.0", sha256="940069b983806e1ccc400fa6d47b4e34e462accf6a4fb0acb0a5e509ad0f502d", url="https://pypi.org/packages/af/f5/958aa7f6f5b685896dbddf7436d06755bf23b12c65889b156566dd06c514/gym-0.19.0.tar.gz")
     version("0.18.0", sha256="a0dcd25c1373f3938f4cb4565f74f434fba6faefb73a42d09c9dddd0c08af53e", url="https://pypi.org/packages/26/f2/e7ee20bf02b2d02263becba1c5ec4203fef7cfbd57759e040e51307173f4/gym-0.18.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

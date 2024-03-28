@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMypy(PythonPackage):
+    # BEGIN VERSIONS
     version("1.9.0", sha256="3cc5da0127e6a478cddd906068496a97a7618a21ce9b54bde5bf7e539c7af974", url="https://pypi.org/packages/72/1e/a587a862c766a755a58b62d8c00aed11b74a15dc415c1bf5da7b607b0efd/mypy-1.9.0.tar.gz")
     version("1.8.0", sha256="6ff8b244d7085a0b425b56d327b480c3b29cafbd2eff27316a004f9a7391ae07", url="https://pypi.org/packages/16/22/25fac51008f0a4b2186da0dba3039128bd75d3fab8c07acd3ea5894f95cc/mypy-1.8.0.tar.gz")
     version("1.7.1", sha256="fcb6d9afb1b6208b4c712af0dafdc650f518836065df0d4fb1d800f5d6773db2", url="https://pypi.org/packages/ae/30/05a7c016431b3fdbaf0bcf663aee7c5e4b3d2293cd4e0568140cecae4967/mypy-1.7.1.tar.gz")
@@ -43,7 +43,11 @@ class PyMypy(PythonPackage):
     version("0.790", sha256="2b21ba45ad9ef2e2eb88ce4aeadd0112d0f5026418324176fd494a6824b74975", url="https://pypi.org/packages/17/42/cb8f0c1d8191bee469538ccc901c07d0ba1c545a84ea85da82f45c669a41/mypy-0.790.tar.gz")
     version("0.740", sha256="48c8bc99380575deb39f5d3400ebb6a8a1cb5cc669bbba4d3bb30f904e0a0e7d", url="https://pypi.org/packages/af/38/7f4f8a52b6062d63193cdb86b17757e8668367cca7ddae08be99ab98fafc/mypy-0.740.tar.gz")
     version("0.670", sha256="308c274eb8482fbf16006f549137ddc0d69e5a589465e37b99c4564414363ca7", url="https://pypi.org/packages/88/11/8092fdd9cf4c507e6c799bf663e713a5418beb9fda422df810f72641224c/mypy-0.670-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-mypy-extensions@1:", when="@1.6:")
         depends_on("py-mypy-extensions@0.4:0", when="@0.630:0.650,0.670:0.750")
@@ -53,4 +57,5 @@ class PyMypy(PythonPackage):
         depends_on("py-typed-ast@1.3.1:1.3", when="@0.670:0.701")
         depends_on("py-typing-extensions@4.1:", when="@1.6:")
         depends_on("py-typing-extensions@3.7.4:", when="@0.720:0.782")
+    # END DEPENDENCIES
 

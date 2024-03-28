@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFilelock(PythonPackage):
+    # BEGIN VERSIONS
     version("3.13.1", sha256="57dbda9b35157b05fb3e58ee91448612eb674172fab98ee235ccb0b5bee19a1c", url="https://pypi.org/packages/81/54/84d42a0bee35edba99dee7b59a8d4970eccdd44b99fe728ed912106fc781/filelock-3.13.1-py3-none-any.whl")
     version("3.13.0", sha256="a552f4fde758f4eab33191e9548f671970f8b06d436d31388c9aa1e5861a710f", url="https://pypi.org/packages/ea/c8/407364710cb9631ce306a97abff2d61836d603b258b5e5399b5f12a7f787/filelock-3.13.0-py3-none-any.whl")
     version("3.12.4", sha256="08c21d87ded6e2b9da6728c3dff51baf1dcecf973b768ef35bcbc3447edb9ad4", url="https://pypi.org/packages/5e/5d/97afbafd9d584ff1b45fcb354a479a3609bd97f912f8f1f6c563cb1fae21/filelock-3.12.4-py3-none-any.whl")
@@ -30,7 +30,12 @@ class PyFilelock(PythonPackage):
     version("2.0.10", sha256="c73bf706d8a0c5722de0b745495fed9cda0e46c0eabb44eb18ee3f00520fa85f", url="https://pypi.org/packages/c0/66/044ca468c7dd541e9636a5340d77cb418082c4b0dffcf1dabd28efc7a7e0/filelock-2.0.10.tar.gz")
     version("2.0.9", sha256="0f91dce339c9f25d6f2e0733a17e4f9a47b139dffda52619a0e61e013e5c6782", url="https://pypi.org/packages/0d/d1/b2e386af472844abc1c2986e657294495b0e0f732e70afeefec1bf20e8ab/filelock-2.0.9.tar.gz")
     version("2.0.8", sha256="7e48e4906de3c9a5d64d8f235eb3ae1050dfefa63fd65eaf318cc915c935212b", url="https://pypi.org/packages/55/fb/ad353636e03b66bc60c57e0e5e3e196bfdc08a030e5e16885da7cddf1bc0/filelock-2.0.8.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-typing-extensions@4.7.1:", when="@3.12.3 ^python@:3.10")
+    # END DEPENDENCIES
 

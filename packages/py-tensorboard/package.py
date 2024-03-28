@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTensorboard(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.16.2", sha256="9f2b4e7dad86667615c0e5cd072f1ea8403fc032a299f0072d6f74855775cc45", url="https://pypi.org/packages/3a/d0/b97889ffa769e2d1fdebb632084d5e8b53fc299d43a537acee7ec0c021a3/tensorboard-2.16.2-py3-none-any.whl")
     version("2.16.1", sha256="928b62567911a8eeb2ebeb7482a9e4599b35f6713a6f2c56655259c18a139569", url="https://pypi.org/packages/47/0b/4a77524dea22ecae8934d4ff968d7700c66db9cca898799ccc7bb548ccdf/tensorboard-2.16.1-py3-none-any.whl")
     version("2.16.0", sha256="263b909a2009cb3a79daa6abe64c1785cc317c25a54e4db2fecb6429ffc54c58", url="https://pypi.org/packages/92/15/57b5ea84096173214554c5b0c5a7528ff194c2357cc75fed12cf0ee1bc55/tensorboard-2.16.0-py3-none-any.whl")
@@ -35,17 +35,21 @@ class PyTensorboard(PythonPackage):
     version("2.4.0", sha256="cde0c663a85609441cb4d624e7255fd8e2b6b1d679645095aac8a234a2812738", url="https://pypi.org/packages/02/83/179c8f76e5716030cc3ee9433721161cfcc1d854e9ba20c9205180bb100a/tensorboard-2.4.0-py3-none-any.whl")
     version("2.3.0", sha256="d34609ed83ff01dd5b49ef81031cfc9c166bba0dabd60197024f14df5e8eae5e", url="https://pypi.org/packages/e9/1b/6a420d7e6ba431cf3d51b2a5bfa06a958c4141e3189385963dc7f6fbffb6/tensorboard-2.3.0-py3-none-any.whl")
     version("2.2.0", sha256="bb6bbc75ad2d8511ba6cbd49e4417276979f49866e11841e83da8298727dbaed", url="https://pypi.org/packages/54/f5/d75a6f7935e4a4870d85770bc9976b12e7024fbceb83a1a6bc50e6deb7c4/tensorboard-2.2.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.14.1:")
-        depends_on("py-absl-py@0.4:")
+        depends_on("py-absl-py@0.4:", when="@1.13:")
         depends_on("py-google-auth@1.6.3:", when="@2.7:2.15")
-        depends_on("py-google-auth@1.6.3:1", when="@:2.6")
+        depends_on("py-google-auth@1.6.3:1", when="@2.0.1:2.6")
         depends_on("py-google-auth-oauthlib@0.5:", when="@2.15")
         depends_on("py-google-auth-oauthlib@0.5:1.0", when="@2.12.1:2.14")
-        depends_on("py-google-auth-oauthlib@0.4.1:0.4", when="@:2.12.0")
+        depends_on("py-google-auth-oauthlib@0.4.1:0.4", when="@2.0.1:2.12.0")
         depends_on("py-grpcio@1.48.2:", when="@2.12:")
-        depends_on("py-grpcio@1.24.3:", when="@:2.11")
+        depends_on("py-grpcio@1.24.3:", when="@2.0.1:2.11")
         depends_on("py-markdown@2.6.8:")
         depends_on("py-numpy@1.12.0:")
         depends_on("py-protobuf@3.19.6:4.24.0-rc3,4.24.1:", when="@2.15.2:")
@@ -54,9 +58,9 @@ class PyTensorboard(PythonPackage):
         depends_on("py-protobuf@3.9.2:3", when="@2.11")
         depends_on("py-protobuf@3.9.2:3.19", when="@2.9.1:2.10")
         depends_on("py-protobuf@3.9.2:", when="@2.9:2.9.0")
-        depends_on("py-protobuf@3.6:", when="@:2.8")
-        depends_on("py-requests@2.21:", when="@:2.15")
-        depends_on("py-setuptools@41:")
+        depends_on("py-protobuf@3.6:", when="@1.13:2.8")
+        depends_on("py-requests@2.21:", when="@2.0.2:2.15")
+        depends_on("py-setuptools@41:", when="@1.14:")
         depends_on("py-six@1.10:", when="@:2.4,2.14.1:")
         depends_on("py-tensorboard-data-server@0.7:", when="@2.12:")
         depends_on("py-tensorboard-data-server@0.6", when="@2.5:2.11")
@@ -64,6 +68,7 @@ class PyTensorboard(PythonPackage):
         depends_on("py-tf-keras@2.15.0:", when="@2.16.1")
         depends_on("py-tf-keras-nightly", when="@2.16:2.16.0")
         depends_on("py-werkzeug@1.0.1:", when="@2.9:")
-        depends_on("py-werkzeug@0.11.15:", when="@:2.8")
+        depends_on("py-werkzeug@0.11.15:", when="@1.13:2.8")
         depends_on("py-wheel@0.26:", when="@:2.14.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyVsts(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.1.25", sha256="c5595a42c9447888ebc91494d2db03c2b867cbca9f1f5f05c113261b92383e35", url="https://pypi.org/packages/9a/4a/c9a5c90659bf0df577067cf8baf9c690501306290e5688d8aeae07fbd9f8/vsts-0.1.25-py3-none-any.whl")
     version("0.1.24", sha256="b504249260895e524eb3440011a2018194365cb063c73df787e4c36b468ab9ab", url="https://pypi.org/packages/a3/26/06f63ba7d2711f92ca902e48e0e8aa0a9af1e177516e83d4a3276e220f7e/vsts-0.1.24-py3-none-any.whl")
     version("0.1.23", sha256="3c419bb5e3231671adf5506574bdfeb2f8cb85775eb28ad9c1c7923180f63cb6", url="https://pypi.org/packages/67/8f/81cc18b746b3bb4a0a11b4953bb63b314a25a5dd62f9ad8d3e941454e60d/vsts-0.1.23-py3-none-any.whl")
@@ -17,9 +17,14 @@ class PyVsts(PythonPackage):
     version("0.1.18", sha256="3729113d5314a7058cedbbe888bca5f928e90b61a9e003571b5b0752117dfd68", url="https://pypi.org/packages/9e/15/9df17f05a1e4639da672652de8bc4ba1da5a0284aa4c6275c11116540d67/vsts-0.1.18-py3-none-any.whl")
     version("0.1.17", sha256="0ca15d1fbfdc03b4f46b778f0ac5d19858c6ae726ec4806080f451dd5e186334", url="https://pypi.org/packages/ed/f3/08215ff6350fdabece7228c6bfee0db33b7a9450f8b5cb75f1a35b6bc4c0/vsts-0.1.17-py3-none-any.whl")
     version("0.1.16", sha256="35d109a09b6c48ef76f6f97d730c6f9d04d566ccc17f8e9ce0dbcaa371fff742", url="https://pypi.org/packages/95/5e/34d3ff1ae23c87872522f31871227a26570b06a956f7ddf1791ec4a70f9e/vsts-0.1.16-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-msrest@0.6.0:0.6", when="@0.1.20:")
         depends_on("py-msrest@0.5", when="@0.1.18:0.1.19")
         depends_on("py-msrest@0.5:", when="@0.1.13:0.1.17")
+    # END DEPENDENCIES
 

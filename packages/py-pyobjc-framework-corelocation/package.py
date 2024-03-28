@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCorelocation(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="59497cc210023479e03191495c880e61fb6f44ad6c435ed1c8dd8def39f3aada", url="https://pypi.org/packages/e5/f3/3a7008caff53b84df92fface16f9bb66a2d4bcddb79261b57bd374479ad3/pyobjc-framework-CoreLocation-10.2.tar.gz")
     version("10.1", sha256="f43637443c4386233c52b0af3131a545968229543f7b0050764298cac1604fd8", url="https://pypi.org/packages/38/55/3420dd3cc3678d1625fae730a3eae69270e917dd6b45c69476bf92e79cc0/pyobjc-framework-CoreLocation-10.1.tar.gz")
     version("10.0", sha256="d84001ab5ef58441514bd92ed9b2fd4225faf0241d2a09ab503592fbc6a6066d", url="https://pypi.org/packages/a8/d0/4ee78cfbca3e3df0c6dc81e028bad6a23d0f2f08ebd81b933160798dc0fa/pyobjc-framework-CoreLocation-10.0.tar.gz")
@@ -18,7 +18,11 @@ class PyPyobjcFrameworkCorelocation(PythonPackage):
     version("9.0", sha256="8baf43809be6e51a0b390054729f15588ec8900a806e081de10c8e759ee67c5d", url="https://pypi.org/packages/8a/d9/6245937f52724a51f2bd0db145e0448e6f614382bbe7af1849359bf8a134/pyobjc-framework-CoreLocation-9.0.tar.gz")
     version("8.5.1", sha256="86f6ea60e8459a63dde380cc2086ff1faddc54d9c776246a65cae5f7c34492d9", url="https://pypi.org/packages/d8/42/b5ee4d3fa824c589b5f4e2e4fc9004979674b636b39780653ab232559750/pyobjc-framework-CoreLocation-8.5.1.tar.gz")
     version("8.5", sha256="f748573675afddf43440f3768d890d691efbd3e76d04596f412dbe2bc9a40267", url="https://pypi.org/packages/63/71/187e0812fec3a3d06be5e20a005390e416441fee3838356bf1469c9389aa/pyobjc-framework-CoreLocation-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -26,4 +30,5 @@ class PyPyobjcFrameworkCorelocation(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

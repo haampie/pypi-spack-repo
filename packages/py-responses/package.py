@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyResponses(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.18.0", sha256="15c63ad16de13ee8e7182d99c9334f64fd81f1ee79f90748d527c28f7ca9dd51", url="https://pypi.org/packages/79/f3/2b3a6dc5986303b3dd1bbbcf482022acb2583c428cd23f0b6d37b1a1a519/responses-0.18.0-py3-none-any.whl")
     version("0.17.0", sha256="e4fc472fb7374fb8f84fcefa51c515ca4351f198852b4eb7fc88223780b472ea", url="https://pypi.org/packages/3c/f7/3925be6f7c251b331095d3e7302fdf3c7599284b5a616bd4c90fca7ace45/responses-0.17.0-py2.py3-none-any.whl")
     version("0.16.0", sha256="f358ef75e8bf431b0aa203cc62625c3a1c80a600dbe9de91b944bf4e9c600b92", url="https://pypi.org/packages/32/17/f231fbca0c5021507409a3cdd91574a9128c9171366f692276176496164a/responses-0.16.0-py2.py3-none-any.whl")
@@ -17,9 +17,14 @@ class PyResponses(PythonPackage):
     version("0.13.2", sha256="75529f9bea08276cea43545dcb6129f137c299d6a12269485a753785c869e0e2", url="https://pypi.org/packages/a8/ba/03b4c978708510c2ab52a75804530edfd96647f3de44abe1cf25d16150ad/responses-0.13.2-py2.py3-none-any.whl")
     version("0.13.1", sha256="3b1ea9cf026edaaf25e853abc4d3b2687d25467e9d8d41e77ee525cad0673f3e", url="https://pypi.org/packages/b1/a1/162c90162e0f4539534b6ce6d723c4c07be8ad38c1cb975d7c63128502e0/responses-0.13.1-py2.py3-none-any.whl")
     version("0.13.0", sha256="a4a90c8244006c01f4246aecf532fbb5429c4031df4adcc7638061f0f3ce4ceb", url="https://pypi.org/packages/b1/54/1107e50648b975bbc2d10388b83a6782bbe25db0f552dfbb669fb478d958/responses-0.13.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-requests@2:", when="@0.7:0.8,0.10.1:0.21")
         depends_on("py-six", when="@0.7:0.8,0.10.1:0.17")
         depends_on("py-urllib3@1.25.10:", when="@0.10.16:0.23.1")
+    # END DEPENDENCIES
 

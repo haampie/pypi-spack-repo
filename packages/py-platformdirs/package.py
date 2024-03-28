@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPlatformdirs(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.2.0", sha256="0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068", url="https://pypi.org/packages/55/72/4898c44ee9ea6f43396fbc23d9bfaf3d06e01b83698bdf2e4c919deceb7c/platformdirs-4.2.0-py3-none-any.whl")
     version("4.1.0", sha256="11c8f37bcca40db96d8144522d925583bdb7a31f7b0e37e3ed4318400a8e2380", url="https://pypi.org/packages/be/53/42fe5eab4a09d251a76d0043e018172db324a23fcdac70f77a551c11f618/platformdirs-4.1.0-py3-none-any.whl")
     version("4.0.0", sha256="118c954d7e949b35437270383a3f2531e99dd93cf7ce4dc8340d3356d30f173b", url="https://pypi.org/packages/31/16/70be3b725073035aa5fc3229321d06e22e73e3e09f6af78dcfdf16c7636c/platformdirs-4.0.0-py3-none-any.whl")
@@ -33,5 +33,12 @@ class PyPlatformdirs(PythonPackage):
     version("2.4.1", sha256="1d7385c7db91728b83efd0ca99a5afb296cab9d0ed8313a45ed8ba17967ecfca", url="https://pypi.org/packages/9f/3d/4606ee54e0af98aa8f9a672b5acfd69318a5917fbb9f8e2c3aaf9c2f293f/platformdirs-2.4.1-py3-none-any.whl")
     version("2.4.0", sha256="8868bbe3c3c80d42f20156f22e7131d2fb321f5bc86a2a345375c6481a67021d", url="https://pypi.org/packages/b1/78/dcfd84d3aabd46a9c77260fb47ea5d244806e4daef83aa6fe5d83adb182c/platformdirs-2.4.0-py3-none-any.whl")
     version("2.3.0", sha256="8003ac87717ae2c7ee1ea5a84a1a61e87f3fbd16eb5aadba194ea30a9019f648", url="https://pypi.org/packages/15/4d/23989bdcb80a095a4b92a54a1f568e95bfc9793c70707be623dc75c11257/platformdirs-2.3.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("wheel", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

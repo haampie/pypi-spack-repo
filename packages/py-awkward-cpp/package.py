@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAwkwardCpp(PythonPackage):
+    # BEGIN VERSIONS
     version("30", sha256="5be94ca7351d8e421cb9478a9b71016fa7673621fa122d477d0b07bb68aa7d4c", url="https://pypi.org/packages/38/de/a8df67cfe8fac16282854c96915906b6d29d6ce2182325cf67a17297e5d8/awkward-cpp-30.tar.gz")
     version("29", sha256="af4b7891b78b903171bce341e88d2add84059fa167f08e8a993005999d1b9d1b", url="https://pypi.org/packages/92/66/6a568a041c59c4c84502c27e3a78c83110fe1314761746a733e7be347ee4/awkward-cpp-29.tar.gz")
     version("28", sha256="304ebbf900c577368fd3c491a4ddfe6a5790bdec76a2b06bdcc4728176264592", url="https://pypi.org/packages/0e/fb/8e7db64da16a40558e3103a6d9bda0e84953a6f60041f28831b7d75cf224/awkward-cpp-28.tar.gz")
@@ -24,11 +24,16 @@ class PyAwkwardCpp(PythonPackage):
     version("4", sha256="fbc4b5e552873e00ffb6286941efc7b629e4fbc4752e28afb9b54854128937f7", url="https://pypi.org/packages/30/f7/829945455a818abb8eef82d9a9a8db5ec71cd1dc726a2d08bbdb0c5a3da9/awkward-cpp-4.tar.gz")
     version("3", sha256="6070557762bd95d3642ad9c585609db51f899a1e79ce4f41568835efd7d6e066", url="https://pypi.org/packages/c4/17/f0ef5a90be73db62e81e04bf798535f51b17a7f236d3e43936f1dd4cb045/awkward-cpp-3.tar.gz")
     version("2", sha256="5e63f43e3135f76db81e0924a74ecf4870f585c11a9f432568b377c04028868c", url="https://pypi.org/packages/d0/e2/b0df75c750fc6bf98eda8974033bead2e7893bc640996af33c18a791c718/awkward-cpp-2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-importlib-resources", when="@23: ^python@:3.8")
         depends_on("py-numpy@1.18.0:", when="@20:30")
         depends_on("py-numpy@1.17.0:", when="@12:19")
         depends_on("py-numpy@1.14.5:", when="@3:11")
         depends_on("py-numpy@1.13.1:", when="@1:2")
+    # END DEPENDENCIES
 

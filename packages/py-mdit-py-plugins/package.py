@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMditPyPlugins(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.4.0", sha256="b51b3bb70691f57f974e257e367107857a93b36f322a9e6d44ca5bf28ec2def9", url="https://pypi.org/packages/e5/3c/fe85f19699a7b40c8f9ce8ecee7e269b9b3c94099306df6f9891bdefeedd/mdit_py_plugins-0.4.0-py3-none-any.whl")
     version("0.3.5", sha256="ca9a0714ea59a24b2b044a1831f48d817dd0c817e84339f20e7889f392d77c4e", url="https://pypi.org/packages/fe/4c/a9b222f045f98775034d243198212cbea36d3524c3ee1e8ab8c0346d6953/mdit_py_plugins-0.3.5-py3-none-any.whl")
     version("0.3.4", sha256="4f1441264ac5cb39fa40a5901921c2acf314ea098d75629750c138f80d552cdf", url="https://pypi.org/packages/6b/5a/69b3be744aa58aa956fe97a50bfe7488a4b8544cccc907f92ccaa42208fd/mdit_py_plugins-0.3.4-py3-none-any.whl")
@@ -22,10 +22,15 @@ class PyMditPyPlugins(PythonPackage):
     version("0.2.3", sha256="a75072d819f45de4b3bdb83178c92bd2e9466f8dc0866fa60f63fd87419d43ba", url="https://pypi.org/packages/97/23/3e017136aefe61b442fee2869fcc7756c814e3cfe551f225e1e085f27217/mdit_py_plugins-0.2.3-py3-none-any.whl")
     version("0.2.2", sha256="953c86ba91f593ace6e7839cd48da1a631160e270baa630519b9cc32a9173f83", url="https://pypi.org/packages/40/fe/0f06e8545ac0578741342cc00305b8d955863b72755af0c3771f339099fb/mdit_py_plugins-0.2.2-py3-none-any.whl")
     version("0.2.1", sha256="9994aa8c03e8a6fbd15b43413bd98521dafdf9d45aeb6213c769befa52ed58da", url="https://pypi.org/packages/64/f2/b477dfb13e6d3db6421cf61cd7b76562f16141e81cb174d837dda519253b/mdit_py_plugins-0.2.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-markdown-it-py@1.0.0:", when="@0.4:")
         depends_on("py-markdown-it-py@1.0.0:2", when="@0.3")
         depends_on("py-markdown-it-py@1.0.0:1", when="@0.2.7:0.2")
         depends_on("py-markdown-it-py@0.5.8:1", when="@0.2.1:0.2.6")
+    # END DEPENDENCIES
 

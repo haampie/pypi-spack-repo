@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,14 @@
 from spack.package import *
 
 class PyDbfread(PythonPackage):
-    version("2.0.7", sha256="07c8a9af06ffad3f6f03e8fe91ad7d2733e31a26d2b72c4dd4cfbae07ee3b73d", url="https://pypi.org/packages/ad/ae/a5891681f5012724d062a4ca63ec2ff539c73d5804ba594e7e0e72099d3f/dbfread-2.0.7.tar.gz")
-    version("2.0.6", sha256="e2e30e0cee4b640a7bcea01de2eae383be9840c4a04028032fdd2ddcd5b86e12", url="https://pypi.org/packages/92/8b/b7b5d0b9971f4ef8c9f5b4db157a104104a904927c5eecfe5016baf6d356/dbfread-2.0.6.tar.gz")
-    version("2.0.5", sha256="23d5d855c017f58a7a6127b24d96b7210bb1599ec9ac53aff29f81ae12eeaa64", url="https://pypi.org/packages/92/cf/089a87473230feaafa09c937519c50039d8db24876a0fa4e73bb626e20c9/dbfread-2.0.5.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("2.0.7", sha256="f604def58c59694fa0160d7be5d0b8d594467278d2bb6a47d46daf7162c84cec", url="https://pypi.org/packages/4c/94/51349e43503e30ed7b4ecfe68a8809cdb58f722c0feb79d18b1f1e36fe74/dbfread-2.0.7-py2.py3-none-any.whl")
+    version("2.0.6", sha256="265c26735b11a9a64a2c93414320b734a2dcbf0de6d147ba3299bdc91587be44", url="https://pypi.org/packages/00/3a/fc3e64ae2582009af2fe9d4c34c919322ac364b6c28fd511d761b006daa2/dbfread-2.0.6-py2.py3-none-any.whl")
+    version("2.0.5", sha256="d42fdeeda21695f23443efe9c562230191bbcb5d59dd6253bd3533076920aa43", url="https://pypi.org/packages/71/8c/7633dc28e499d08695980bffdd00833206efd5a5372da8153fc0f69dcdd8/dbfread-2.0.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

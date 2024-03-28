@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PyMizani(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.11.1", sha256="d3441e5b7f08168ced8426566a0c084e3df3f03e290b8206747d3f288cf20e40", url="https://pypi.org/packages/2a/eb/777d71d00d0a67659234b50505842cfc44fb304e01d3acf80501b6b2ab63/mizani-0.11.1-py3-none-any.whl")
     version("0.11.0", sha256="eb03df7f598990cc3159fe80c9d564aa46b67648cdeec8b348025ae2b8577e77", url="https://pypi.org/packages/ce/6a/228b679f183111272027a72da5c993466135f0cdcf7e3544053e52351c43/mizani-0.11.0-py3-none-any.whl")
     version("0.10.0", sha256="2fbe6363b4cc71f063b0c35e993a36df80469b06b7fe7b4b722600f183a2ba5c", url="https://pypi.org/packages/24/db/0bf4870bdc44876172ce7b3dc2fe3d1e15523cc90aafe3996efa9e8ab078/mizani-0.10.0-py3-none-any.whl")
     version("0.9.3", sha256="ac5d49b913de88dc2fb28d82141e9777b97407a6971a158f758093ad5bb820a1", url="https://pypi.org/packages/e2/95/d4e33d3f5bc9fee5512637661208b6b595bda58e9b6a66fa867137761dd7/mizani-0.9.3-py3-none-any.whl")
@@ -18,7 +19,11 @@ class PyMizani(PythonPackage):
     version("0.7.4", sha256="f8cd18a4e761846d948ee87429cc84730277d128a46861c719eb6997e6c538a1", url="https://pypi.org/packages/6a/10/999db77b9ce38adc22eb51a869b8c29b6b6fbd9c3b71a627bfee15b8f4d5/mizani-0.7.4-py3-none-any.whl")
     version("0.7.3", sha256="7f95d713e2bd28d51919e065d3453d470a654a0a219a7f777f8e9b6ed6e6ed35", url="https://pypi.org/packages/28/ed/d66698fff045087a220561f2bed1ec4cc9cfc58611a914c1f17bbbc27d05/mizani-0.7.3-py3-none-any.whl")
     version("0.6.0", sha256="da896b6c0e8868d411be0e46c72766596714869912359de44df269496ba9e29b", url="https://pypi.org/packages/e3/76/7a2c9094547ee592f9f43f651ab824aa6599af5e1456250c3f4cc162aece/mizani-0.6.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.10:")
         depends_on("py-backports-zoneinfo", when="@0.8:0.9 ^python@:3.8")
@@ -35,4 +40,5 @@ class PyMizani(PythonPackage):
         depends_on("py-scipy@1.7.0:", when="@0.11:")
         depends_on("py-scipy@1.5.0:", when="@0.7.4:0.10")
         depends_on("py-tzdata", when="@0.8: platform=windows")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAstroid(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.1.0", sha256="951798f922990137ac090c53af473db7ab4e70c770e6d7fae0cec59f74411819", url="https://pypi.org/packages/ed/1c/ee18acf9070f77253954b7d71b4c0cf8f5969fb23067d8f1a8793573ba00/astroid-3.1.0-py3-none-any.whl")
     version("3.0.3", sha256="92fcf218b89f449cdf9f7b39a269f8d5d617b27be68434912e11e79203963a17", url="https://pypi.org/packages/d4/b8/c0f47a9ee6927827116542e12a54d8b8c174b77644c2aba4e2092dfd8de6/astroid-3.0.3-py3-none-any.whl")
     version("3.0.2", sha256="d6e62862355f60e716164082d6b4b041d38e2a8cf1c7cd953ded5108bac8ff5c", url="https://pypi.org/packages/1a/28/fca86b40597d383cbc8ca3c1e5f95c3970a509811da74319108ea5c752ed/astroid-3.0.2-py3-none-any.whl")
@@ -61,12 +61,16 @@ class PyAstroid(PythonPackage):
     version("2.5.6", sha256="4db03ab5fc3340cf619dbc25e42c2cc3755154ce6009469766d7143d1fc2ee4e", url="https://pypi.org/packages/f8/82/a61df6c2d68f3ae3ad1afa0d2e5ba5cfb7386eb80cffb453def7c5757271/astroid-2.5.6-py3-none-any.whl")
     version("2.4.2", sha256="bc58d83eb610252fd8de6363e39d4f1d0619c894b0ed24603b881c02e64c7386", url="https://pypi.org/packages/24/a8/5133f51967fb21e46ee50831c3f5dda49e976b7f915408d670b1603d41d6/astroid-2.4.2-py3-none-any.whl")
     version("1.6.6", sha256="87de48a92e29cedf7210ffa853d11441e7ad94cb47bacd91b023499b51cbc756", url="https://pypi.org/packages/8b/29/0f7ec6fbf28a158886b7de49aee3a77a8a47a7e24c60e9fd6ec98ee2ec02/astroid-1.6.6-py2.py3-none-any.whl")
-    version("1.4.5", sha256="729b986aa59fb77af533707c385021b04e60d136b5f21cc766618556d0816cf6", url="https://pypi.org/packages/d5/f1/e0a2ea651bbb89bbcfedb7108e2cf2ebfb3da0c775d20e73b61494d724d6/astroid-1.4.5.tar.gz")
-    version("1.4.4", sha256="7f7e5512efe515098e77cbd3a60e87c8db8954097b0e025d8d6f72f2e8ddc298", url="https://pypi.org/packages/20/36/b5f57298b9452c533a4866aefad045af41e4ed9fd7b92bb4f0740ef6b328/astroid-1.4.4.tar.gz")
-    version("1.4.3", sha256="8e9ce4e925a17442cec085a7fce05478b99e482c13819c619b7cdd793777bf6b", url="https://pypi.org/packages/f4/ad/2bf975039c0cddd172214b2abcb47a82983a756b0c299017dd4242cc2e9b/astroid-1.4.3.tar.gz")
-    version("1.4.2", sha256="b734fa504179a93aa03314df48b45fb1d9d0d8770a1126e7a126c9ac4aebd5c3", url="https://pypi.org/packages/53/c4/d96b333612c504535bc6419626fa0f27cce5701ab301eb61137a6be91270/astroid-1.4.2.tar.gz")
-    version("1.4.1", sha256="2417a2c62f07bb77485efb6dd94567ac165808a4248ecb09754116662ffa9fc2", url="https://pypi.org/packages/bf/56/c2b3f49fcb1383002d5c346a495ac5e6872739ebdef860744a395aea19f0/astroid-1.4.1.tar.gz")
+    version("1.4.5", sha256="46cd033dddbc3dc602d64991949d43232cf08d53cd4c06cae224895d542d9358", url="https://pypi.org/packages/da/6b/bce6c46354d8bb59ad842f737084c176c636b7f94caf7aa5974d1c41ebbf/astroid-1.4.5-py2.py3-none-any.whl")
+    version("1.4.4", sha256="5e09d952001bce3ad0f700f982f58658b5f2d1ae3761e60d7d2645fa7b19c0fc", url="https://pypi.org/packages/1e/d7/9622bc4593fc86738f47b78c87cf70388ed84cae3305306b17d08ff367d2/astroid-1.4.4-py2.py3-none-any.whl")
+    version("1.4.3", sha256="c4ce2041da305960ee290e0d45482668dcbe7fb5047030636a0996b344ac978a", url="https://pypi.org/packages/4e/e4/692b43ca0228da68179925ef43fa531cdf67c78334bdb5790ed2718141f3/astroid-1.4.3-py2.py3-none-any.whl")
+    version("1.4.2", sha256="34d3ca4e7369e15c5b9f76a441ede106c351d6d0f256cd6eb286b2bebeec0db3", url="https://pypi.org/packages/c9/a2/df818426ce8c437363c35fcb8d0b6570c765181793797cfd9d483fe99bdf/astroid-1.4.2-py2.py3-none-any.whl")
+    version("1.4.1", sha256="3e369a37695390d1c5a4c292b84f3ce7673f5ac93a92f328522c42cb26fd20ef", url="https://pypi.org/packages/3a/5b/66057c670184eec8adffa2d9eda78ee4bbcf9c043acbd839c5f609365e89/astroid-1.4.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-lazy-object-proxy@1.4:", when="@2.5:2")
         depends_on("py-lazy-object-proxy@1.4", when="@2:2.4")
@@ -78,10 +82,11 @@ class PyAstroid(PythonPackage):
         depends_on("py-typing-extensions@4:", when="@2.13.2")
         depends_on("py-typing-extensions@4:", when="@2.13.1 ^python@:3.9")
         depends_on("py-typing-extensions@3.10:", when="@2.8:2.13.0 ^python@:3.9")
-        depends_on("py-wrapt@1.14.0:", when="@2.12.3:2 ^python@3.11:")
         depends_on("py-wrapt@1.11:", when="@2.12.3:2 ^python@:3.10")
+        depends_on("py-wrapt@1.14.0:", when="@2.12.3:2 ^python@3.11:")
         depends_on("py-wrapt@1.11:1.13", when="@2.8.3:2.10")
         depends_on("py-wrapt@1.11:1.12", when="@2.5:2.8.2")
         depends_on("py-wrapt@1.11:", when="@2:2.4,2.11:2.12.2")
         depends_on("py-wrapt", when="@1.6:1")
+    # END DEPENDENCIES
 

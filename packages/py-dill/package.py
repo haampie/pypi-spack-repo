@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDill(PythonPackage):
+    # BEGIN VERSIONS
     version("0.3.8", sha256="c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7", url="https://pypi.org/packages/c9/7a/cef76fd8438a42f96db64ddaa85280485a9c395e7df3db8158cfec1eee34/dill-0.3.8-py3-none-any.whl")
     version("0.3.7", sha256="76b122c08ef4ce2eedcd4d1abd8e641114bfc6c2867f49f3c41facf65bf19f5e", url="https://pypi.org/packages/f5/3a/74a29b11cf2cdfcd6ba89c0cecd70b37cd1ba7b77978ce611eb7a146a832/dill-0.3.7-py3-none-any.whl")
     version("0.3.6", sha256="a07ffd2351b8c678dfc4a856a3005f8067aea51d6ba6c700796a4d9e280f39f0", url="https://pypi.org/packages/be/e3/a84bf2e561beed15813080d693b4b27573262433fced9c1d1fea59e60553/dill-0.3.6-py3-none-any.whl")
@@ -28,5 +28,10 @@ class PyDill(PythonPackage):
     version("0.2.2", sha256="6ad223cc41614dcc8cf217e8d7a32857f13752cd0a5332580c80b9fa054ece69", url="https://pypi.org/packages/f0/a6/6f96502f293e9b126d87dcc18e85283f865664fe89eb0df804f05f1fc1ed/dill-0.2.2.zip")
     version("0.2.1", sha256="a54401bdfae419cfe1c9e0b48e9b290afccaa413d2319d9bb0fdb85c130a7923", url="https://pypi.org/packages/51/76/14048a72ccea086e80621d39b1519fb3219f9c2354ac8481d2a0a027543e/dill-0.2.1.zip")
     version("0.2", sha256="aba8d4c81c4136310e6ce333bd6f4f3ea2d53bd367e2f69c864428f260c0308c", url="https://pypi.org/packages/47/69/9e1312d761d1017363b644864c0e61b741326b220ab7ed8924d8c1937ae8/dill-0.2.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

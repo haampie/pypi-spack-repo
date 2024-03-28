@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytoml(PythonPackage):
+    # BEGIN VERSIONS
     version("0.1.21", sha256="57a21e6347049f73bfb62011ff34cd72774c031b9828cb628a752225136dfc33", url="https://pypi.org/packages/a5/47/c7f8a0f210ad18576840922e0b504f0b7f5f73aea4a52ab14c5b58517edf/pytoml-0.1.21-py2.py3-none-any.whl")
     version("0.1.20", sha256="ca2d0cb127c938b8b76a9a0d0f855cf930c1d50cc3a0af6d3595b566519a1013", url="https://pypi.org/packages/35/35/da1123673c54b6d701453fcd20f751d6a1fae43339b3993ae458875576e4/pytoml-0.1.20.tar.gz")
     version("0.1.19", sha256="42f76a696182570e93581e763da033c1de484973bad82458387b6dee6c184cbc", url="https://pypi.org/packages/a9/81/9235bc836eee11fc1920b3c5c9f02280ac013b9e90df314415861efbc196/pytoml-0.1.19.tar.gz")
@@ -17,5 +17,10 @@ class PyPytoml(PythonPackage):
     version("0.1.13", sha256="53b67248f62f8bb93b22185a158d109704dafe701b96ba9813253f002bcb69a8", url="https://pypi.org/packages/84/02/cce681df600f85a239aa5f5213a136908b68e0162daac13ea11fc2d6f989/pytoml-0.1.13.tar.gz")
     version("0.1.12", sha256="5de1f0c6c60ca10694e72bf3e852bd00fddde9145ba78fbe1f026da5a990c40b", url="https://pypi.org/packages/b4/43/36c3569e15afb39512d00ab305177206107f5184b66cfacbd7a615695f45/pytoml-0.1.12.zip")
     version("0.1.11", sha256="a9aa2e60b254b9e33c8e44562465516cb4db3ae78e68502e881ac6e0ea6a0cb6", url="https://pypi.org/packages/f0/10/e47db5fb819505674b2be4f8c2ae9f29aed840e81569761d6b6b7bf59954/pytoml-0.1.11.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

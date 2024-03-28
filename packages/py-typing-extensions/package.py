@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTypingExtensions(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.10.0", sha256="69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", url="https://pypi.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl")
     version("4.10.0-rc1", sha256="ada05f19b82a2ea6eeac4e7412a2328e70b5237f05f3ffef49cae6db558a914e", url="https://pypi.org/packages/d4/b2/4980568cd3814002f1c04b542e2dd52faa0cec11bd5bda99e43eefe9a808/typing_extensions-4.10.0rc1-py3-none-any.whl")
     version("4.9.0", sha256="af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd", url="https://pypi.org/packages/b7/f4/6a90020cd2d93349b442bfcb657d0dc91eee65491600b2cb1d388bc98e6b/typing_extensions-4.9.0-py3-none-any.whl")
@@ -27,17 +27,22 @@ class PyTypingExtensions(PythonPackage):
     version("4.1.0", sha256="c13180fbaa7cd97065a4915ceba012bdb31dc34743e63ddee16360161d358414", url="https://pypi.org/packages/6a/1e/df241fd31424de8c834a6c0281652a13a30191bdb10c600c35cef02cd160/typing_extensions-4.1.0-py3-none-any.whl")
     version("4.0.1", sha256="7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b", url="https://pypi.org/packages/05/e4/baf0031e39cf545f0c9edd5b1a2ea12609b7fcba2d58e118b11753d68cf0/typing_extensions-4.0.1-py3-none-any.whl")
     version("4.0.0", sha256="829704698b22e13ec9eaf959122315eabb370b0884400e9818334d8b677023d9", url="https://pypi.org/packages/17/61/32c3ab8951142e061587d957226b5683d1387fb22d95b4f69186d92616d1/typing_extensions-4.0.0-py3-none-any.whl")
-    version("3.10.0.2", sha256="49f75d16ff11f1cd258e1b988ccff82a3ca5570217d7ad8c5f48205dd99a677e", url="https://pypi.org/packages/ed/12/c5079a15cf5c01d7f4252b473b00f7e68ee711be605b9f001528f0298b98/typing_extensions-3.10.0.2.tar.gz")
-    version("3.10.0.1", sha256="83af6730a045fda60f46510f7f1f094776d90321caa4d97d20ef38871bef4bd3", url="https://pypi.org/packages/a5/50/6fbfb5a45d4d8024222849f0731f8d8ddc5c7fe657a8f799bd4c605e93e0/typing_extensions-3.10.0.1.tar.gz")
-    version("3.10.0.0", sha256="50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342", url="https://pypi.org/packages/aa/55/62e2d4934c282a60b4243a950c9dbfa01ae7cac0e8d6c0b5315b87432c81/typing_extensions-3.10.0.0.tar.gz")
-    version("3.7.4.3", sha256="99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c", url="https://pypi.org/packages/16/06/0f7367eafb692f73158e5c5cbca1aec798cdf78be5167f6415dd4205fa32/typing_extensions-3.7.4.3.tar.gz")
-    version("3.7.4.2", sha256="79ee589a3caca649a9bfd2a8de4709837400dfa00b6cc81962a1e6a1815969ae", url="https://pypi.org/packages/6a/28/d32852f2af6b5ead85d396249d5bdf450833f3a69896d76eb480d9c5e406/typing_extensions-3.7.4.2.tar.gz")
-    version("3.7.4.1", sha256="091ecc894d5e908ac75209f10d5b4f118fbdb2eb1ede6a63544054bb1edb41f2", url="https://pypi.org/packages/e7/dd/f1713bc6638cc3a6a23735eff6ee09393b44b96176d3296693ada272a80b/typing_extensions-3.7.4.1.tar.gz")
-    version("3.7.4", sha256="2ed632b30bb54fc3941c382decfd0ee4148f5c591651c9272473fea2c6397d95", url="https://pypi.org/packages/59/b6/21774b993eec6e797fbc49e53830df823b69a3cb62f94d36dfb497a0b65a/typing_extensions-3.7.4.tar.gz")
-    version("3.7.2", sha256="fb2cd053238d33a8ec939190f30cfd736c00653a85a2919415cecf7dc3d9da71", url="https://pypi.org/packages/fa/aa/229f5c82d17d10d4ef318b5c22a8626a1c78fc97f80d3307035cf696681b/typing_extensions-3.7.2.tar.gz")
-    version("3.6.6", sha256="51e7b7f3dcabf9ad22eed61490f3b8d23d9922af400fe6656cb08e66656b701f", url="https://pypi.org/packages/fc/e6/3d2f306b12f01bde2861d67458d32c673e206d6fcc255537bf452db8f80c/typing_extensions-3.6.6.tar.gz")
+    version("3.10.0.2", sha256="f1d25edafde516b146ecd0613dabcc61409817af4766fbbcfb8d1ad4ec441a34", url="https://pypi.org/packages/74/60/18783336cc7fcdd95dae91d73477830aa53f5d3181ae4fe20491d7fc3199/typing_extensions-3.10.0.2-py3-none-any.whl")
+    version("3.10.0.1", sha256="045dd532231acfa03628df5e0c66dba64e2cc8fc8b844538d4ad6d5dd6cb82dc", url="https://pypi.org/packages/e8/ee/237d13b6d3d532778a57df23e6df4b2a82fbbeb833c4016054c6b6730d56/typing_extensions-3.10.0.1-py3-none-any.whl")
+    version("3.10.0.0", sha256="779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84", url="https://pypi.org/packages/2e/35/6c4fff5ab443b57116cb1aad46421fb719bed2825664e8fe77d66d99bcbc/typing_extensions-3.10.0.0-py3-none-any.whl")
+    version("3.7.4.3", sha256="7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918", url="https://pypi.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl")
+    version("3.7.4.2", sha256="6e95524d8a547a91e08f404ae485bbb71962de46967e1b71a0cb89af24e761c5", url="https://pypi.org/packages/0c/0e/3f026d0645d699e7320b59952146d56ad7c374e9cd72cd16e7c74e657a0f/typing_extensions-3.7.4.2-py3-none-any.whl")
+    version("3.7.4.1", sha256="cf8b63fedea4d89bab840ecbb93e75578af28f76f66c35889bd7065f5af88575", url="https://pypi.org/packages/03/92/705fe8aca27678e01bbdd7738173b8e7df0088a2202c80352f664630d638/typing_extensions-3.7.4.1-py3-none-any.whl")
+    version("3.7.4", sha256="d8179012ec2c620d3791ca6fe2bf7979d979acdbef1fca0bc56b37411db682ed", url="https://pypi.org/packages/27/aa/bd1442cfb0224da1b671ab334d3b0a4302e4161ea916e28904ff9618d471/typing_extensions-3.7.4-py3-none-any.whl")
+    version("3.7.2", sha256="f3f0e67e1d42de47b5c67c32c9b26641642e9170fe7e292991793705cd5fef7c", url="https://pypi.org/packages/0f/62/c66e553258c37c33f9939abb2dd8d2481803d860ff68e635466f12aa7efa/typing_extensions-3.7.2-py3-none-any.whl")
+    version("3.6.6", sha256="55401f6ed58ade5638eb566615c150ba13624e2f0c1eedd080fc3c1b6cb76f1d", url="https://pypi.org/packages/62/4f/392a1fa2873e646f5990eb6f956e662d8a235ab474450c72487745f67276/typing_extensions-3.6.6-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-typing@3.7:", when="@3.7.4:3.7.4.0")
         depends_on("py-typing@3.6.2:", when="@:3.7.2")
+    # END DEPENDENCIES
 

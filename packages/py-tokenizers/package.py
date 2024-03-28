@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTokenizers(PythonPackage):
+    # BEGIN VERSIONS
     version("0.15.2", sha256="e6e9c6e019dd5484be5beafc775ae6c925f4c69a3487040ed09b45e13df2cb91", url="https://pypi.org/packages/c0/44/625db94e91c6196b6574359fa70bfe28e8eabf57a1b894f8f0ec69727fd1/tokenizers-0.15.2.tar.gz")
     version("0.15.2-rc1", sha256="1530c1480158827377cd3d219eea527844a9eccf54ded86e15dc1bf3ca5fedf2", url="https://pypi.org/packages/1d/1e/9fa9dbc127579fe210c5655040d86ea487a6b43a0049f47a31773e9037a6/tokenizers-0.15.2rc1.tar.gz")
     version("0.15.1", sha256="c0a331d6d5a3d6e97b7f99f562cee8d56797180797bc55f12070e495e717c980", url="https://pypi.org/packages/c9/90/06bd4bd6c33b9a8d4b4a184e2e575906234d3ba0d6f9e48890b6aa06d13b/tokenizers-0.15.1.tar.gz")
@@ -32,9 +32,14 @@ class PyTokenizers(PythonPackage):
     version("0.10.1", sha256="81c35b4bc9238c0b5d0af91a719e732a60ee0d87d8bf76615bfec8f3e3ba8f15", url="https://pypi.org/packages/01/ee/206ac679a6e0e5d8fd685d9a16e8f23229b39a3733c57ec0851efe65f2c6/tokenizers-0.10.1.tar.gz")
     version("0.6.0", sha256="1da11fbfb4f73be695bed0d655576097d09a137a16dceab2f66399716afaffac", url="https://pypi.org/packages/42/82/71bbc4eff999a3e397373b9ccb43f82dad7d6d0865f2ce858d09add2dca6/tokenizers-0.6.0.tar.gz")
     version("0.5.2", sha256="b5a235f9c71d04d4925df6c4fa13b13f1d03f9b7ac302b89f8120790c4f742bc", url="https://pypi.org/packages/f5/d7/a3882b2d36991f613b749fc5e305cccc345ec9d6ab0621ad7e7bf1be8691/tokenizers-0.5.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-huggingface-hub@0.16.4:", when="@0.15:")
         depends_on("py-huggingface-hub@0.16.4:0.17", when="@0.14.1-rc1:0.14")
         depends_on("py-huggingface-hub@0.16.4:0.16", when="@0.14:0.14.0")
+    # END DEPENDENCIES
 

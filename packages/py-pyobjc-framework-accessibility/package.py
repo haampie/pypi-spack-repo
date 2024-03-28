@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkAccessibility(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="275c9ac0df1350bf751dbddc81d98f7702cf03ad66e0271876cef9aa70ca5c24", url="https://pypi.org/packages/b7/4d/18675cb9bb0f1f281fd53d77d5cef2a2ce9268fc6d3a4b6c5f10241ed0a7/pyobjc-framework-Accessibility-10.2.tar.gz")
     version("10.1", sha256="70b812cf2b04b57a520c3fde9df4184c2783795fb355b416a8058114e52ad24a", url="https://pypi.org/packages/ee/09/ed9eb85f68fe1a17ebeb9197ad797368bf6b51381286b491439160129774/pyobjc-framework-Accessibility-10.1.tar.gz")
     version("10.0", sha256="5aa152201ccc235a6bbba271b698de42445a4a058b8dceca982d70384c195255", url="https://pypi.org/packages/d0/16/a8f3b857a2b626a6ad5d6d418c3ae423b14141e77b141cd25d844a9d6de4/pyobjc-framework-Accessibility-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkAccessibility(PythonPackage):
     version("9.0", sha256="1a3ff40f9ff1a3a1385e57384636a5a9dad88fc3288875516a35e78e4c71ca0e", url="https://pypi.org/packages/28/41/a74a7fc47c5c255c95c5bf2180fb47fed3e56aafeed6a1cb4bb6d445a2c0/pyobjc-framework-Accessibility-9.0.tar.gz")
     version("8.5.1", sha256="8f68f5c85eeaa14baa24e439570a577b14bdab78a34140c1a22c17cf7e63560d", url="https://pypi.org/packages/1f/b0/b5f6314872e6a4f98497409f88324adc8b490afaf306b69b89a8b3c95a0f/pyobjc-framework-Accessibility-8.5.1.tar.gz")
     version("8.5", sha256="cfe60c131891ff43fc2b2a94f8135f2d6c42800eb027d1b70886bae249eb77da", url="https://pypi.org/packages/1f/02/00c0f23847bb8d2752a988490dedf36e4e3bcfe254aaa277f09057979723/pyobjc-framework-Accessibility-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -28,4 +32,5 @@ class PyPyobjcFrameworkAccessibility(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-quartz@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-quartz@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

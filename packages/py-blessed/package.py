@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBlessed(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.20.0", sha256="0c542922586a265e699188e52d5f5ac5ec0dd517e5a1041d90d2bbf23f906058", url="https://pypi.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl")
     version("1.19.1", sha256="63b8554ae2e0e7f43749b6715c734cc8f3883010a809bf16790102563e6cf25b", url="https://pypi.org/packages/94/c5/651224a1bbcb0253fecb7af6f60fa0c9ebabcb1df01ceadb8f4dfd2528cb/blessed-1.19.1-py2.py3-none-any.whl")
     version("1.19.0", sha256="1f2d462631b2b6d2d4c3c65b54ef79ad87a6ca2dd55255df2f8d739fcc8a1ddb", url="https://pypi.org/packages/d4/f3/73c8e1b77396663e2a5121c78f1278d64d7806cade710abe28b65979aced/blessed-1.19.0-py2.py3-none-any.whl")
@@ -26,10 +26,15 @@ class PyBlessed(PythonPackage):
     version("1.16.1", sha256="01f3305a2f3c89a11020f2e167fe67b275697b3aead72dd869446aad47dd4707", url="https://pypi.org/packages/fe/31/ab33f900a948491470bbd7f204a1887dcd4d7f4dbba6160eab5d55a84875/blessed-1.16.1-py2.py3-none-any.whl")
     version("1.16.0", sha256="b3ffcc7e840b116fa611ec59bb4ec29a092caca84dfde6d8a6c7d3ff247b2cad", url="https://pypi.org/packages/05/53/b924461ba18644cb3183b9635147cfeb3d38ccc9fee2a31a5585a26ca8c0/blessed-1.16.0-py2.py3-none-any.whl")
     version("1.15.0", sha256="9a0a98c7070b016341ae0300415deeda930a340ef7961d9b920a5cb200a601e2", url="https://pypi.org/packages/3f/96/1915827a8e411613d364dd3a56ef1fbfab84ee878070a69c21b10b5ad1bb/blessed-1.15.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-jinxed@1.1:", when="@1.19: platform=windows")
         depends_on("py-jinxed", when="@1.16:1.18 platform=windows")
         depends_on("py-six@1.9:", when="@1.15:")
         depends_on("py-wcwidth@0.1.4:", when="@1.15:")
+    # END DEPENDENCIES
 

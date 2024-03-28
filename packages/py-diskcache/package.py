@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDiskcache(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.6.3", sha256="5e31b2d5fbad117cc363ebaf6b689474db18a1f6438bc82358b024abd4c2ca19", url="https://pypi.org/packages/3f/27/4570e78fc0bf5ea0ca45eb1de3818a23787af9b390c0b0a0033a1b8236f9/diskcache-5.6.3-py3-none-any.whl")
     version("5.6.1", sha256="558c6a2d5d7c721bb00e40711803d6804850c9f76c426ed81ecc627fe9d2ce2d", url="https://pypi.org/packages/1c/87/5f5efc3606766a8a1621fecb8b8ca2111d1dad4b9b8a631579f070d47939/diskcache-5.6.1-py3-none-any.whl")
     version("5.6.0", sha256="97898b59e15e7a36ee577f6201766486c12e7118c88ee145556dce794cf31799", url="https://pypi.org/packages/29/6e/4451d7499574356920ca43230b32f8a8b630e043e7f5e59e41bf5543ca35/diskcache-5.6.0-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyDiskcache(PythonPackage):
     version("5.0.3", sha256="ff4dc1e69d599dca8c23cecfcf69b23bfecae9c04aca424b4f02c511bb1438c2", url="https://pypi.org/packages/fc/d6/7b8fa70e57f7b54e01da2664a6ee21afc315c29906bd46e9905fb246c5ac/diskcache-5.0.3-py3-none-any.whl")
     version("5.0.2", sha256="3a565dd2851380f3fc3128c77a7fb1d0812fa21bbc51826e67af9d58b1e478c7", url="https://pypi.org/packages/7f/31/c17b0edef8deab30f252f5ef3871acc6691511e42db0b5db3a33cdb1f7d0/diskcache-5.0.2-py3-none-any.whl")
     version("4.1.0", sha256="69b253a6ffe95bb4bafb483b97c24fca3c2c6c47b82e92b36486969a7e80d47d", url="https://pypi.org/packages/ee/cc/d992e1d886d5ce15d2622c2e89b6de52b48312c6f05e34b7ee881b4ccb02/diskcache-4.1.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

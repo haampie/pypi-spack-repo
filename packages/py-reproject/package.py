@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyReproject(PythonPackage):
+    # BEGIN VERSIONS
     version("0.7.1", sha256="95c0fa49e6b4e36455b91fa09ad1b71b230c990ad91d948af67ea3509a1a4ccb", url="https://pypi.org/packages/45/56/6d1a85dcb38185edaf2ff2a8c7924eddb56a680b41c1d89961a567985066/reproject-0.7.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-astropy@3.2:", when="@0.6:0.7")
         depends_on("py-astropy-healpix@0.2:", when="@0.6:0.7")
@@ -20,4 +24,5 @@ class PyReproject(PythonPackage):
 
         # marker: platform_machine != "i686" and extra == "testall"
         # depends_on("py-sunpy", when="@0.7.1:0.7")
+    # END DEPENDENCIES
 

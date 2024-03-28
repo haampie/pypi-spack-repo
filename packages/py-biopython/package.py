@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBiopython(PythonPackage):
+    # BEGIN VERSIONS
     version("1.83", sha256="78e6bfb78de63034037afd35fe77cb6e0a9e5b62706becf78a7d922b16ed83f7", url="https://pypi.org/packages/cc/d4/3d8848191a7a37187704c382e6dfda4d6a47d05a14cd64f004c55a3cd5a1/biopython-1.83.tar.gz")
     version("1.82", sha256="a9b10d959ae88a9744a91c6ce3601f4c86e7ec41679bc93c29f679218f6167bb", url="https://pypi.org/packages/23/7d/55b8dc4a01bc951b3f6d60acd4eb4617aa22cc5a0d27037972f02e5d3844/biopython-1.82.tar.gz")
     version("1.81", sha256="2cf38112b6d8415ad39d6a611988cd11fb5f33eb09346666a87263beba9614e0", url="https://pypi.org/packages/ad/a4/237edd5f5e5b68d9543c79bcd695ef881e6317fbd0eae1b1e53e694f9d54/biopython-1.81.tar.gz")
@@ -20,7 +20,12 @@ class PyBiopython(PythonPackage):
     version("1.73", sha256="70c5cc27dc61c23d18bb33b6d38d70edc4b926033aea3b7434737c731c94a5e0", url="https://pypi.org/packages/7a/4a/0d4381a60b6e942c6772b01cfb931196f1a9c33910cc43fbd4faccbd7d9f/biopython-1.73.tar.gz")
     version("1.70", sha256="4a7c5298f03d1a45523f32bae1fffcff323ea9dce007fb1241af092f5ab2e45b", url="https://pypi.org/packages/72/04/73a4bb22fed40eed26c7e1a673ab51778c577afc3d5dd6f1256424a62c35/biopython-1.70.tar.gz")
     version("1.65", sha256="6d591523ba4d07a505978f6e1d7fac57e335d6d62fb5b0bcb8c40bdde5c8998e", url="https://pypi.org/packages/4e/77/8590d61dcda439d83f378106954e748db1a71e565335168a966642133ef8/biopython-1.65.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy", when="@1.82:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyQpsolvers(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.3.1", sha256="a208aee3a699c0dc7fa41e0e9cd911895fc50ec767dd4361a26611703aa265c8", url="https://pypi.org/packages/9f/97/1723a0db426b132dc5be8bd460c5d61ad23bdadf663ba1c843440f9a0040/qpsolvers-4.3.1-py3-none-any.whl")
     version("4.3.0", sha256="e601f1814f4a02eb1ff593150c4449f7a24e41a4d3161ff6d0d451465be5bacc", url="https://pypi.org/packages/30/bc/9a2cd3e5a2ffd39a00b65266ed9df1308a01a70445d8b789f582e1e0c656/qpsolvers-4.3.0-py3-none-any.whl")
     version("4.2.0", sha256="ed2a274471e0eb718baa450e007f9537791c34feb21392941a0de400dc0801c5", url="https://pypi.org/packages/ff/da/47c16e6ae389f2000f7b89997456a839354c118b8dc46b891edc5215fa42/qpsolvers-4.2.0-py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyQpsolvers(PythonPackage):
     version("3.3.1", sha256="ce161a81e15fbcffa56bcf8e2c1ef0da1f797f050adab63f386ce4c14712f864", url="https://pypi.org/packages/39/46/e7f9d8fbf4d70a842b456e6d8c70e41183e4a7ce928b7eeff17ba49a4b9c/qpsolvers-3.3.1-py3-none-any.whl")
     version("3.2.0", sha256="ba1651a45ce23c49786bcf8327d83943092a124f84024da3dfdc44735c25aae9", url="https://pypi.org/packages/b6/c5/2afcb9c856385f7a1c8d804ff7a52f45bc44b20a5e936f01005213fe24fc/qpsolvers-3.2.0-py3-none-any.whl")
     version("3.1.0", sha256="2b17ca23eb87124aa6f3844fcdb3affbc55b78ac7f89dcb0d2e706df899783c1", url="https://pypi.org/packages/cd/d1/b877f55bc00f2ea99c3862ecb07c1c0ef5ccc7b0cbfb49636d3505911d88/qpsolvers-3.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cvxopt@1.2.6:", when="@3:3.0")
         depends_on("py-daqp@0.5.1:", when="@3.3.1:4.2")
@@ -29,4 +33,5 @@ class PyQpsolvers(PythonPackage):
         depends_on("py-quadprog@0.1.11:", when="@3:3.0")
         depends_on("py-scipy@1.2.0:", when="@1.7.2:")
         depends_on("py-scs@3.2:", when="@3:4.2")
+    # END DEPENDENCIES
 

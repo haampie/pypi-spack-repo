@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWheel(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.43.0", sha256="55c570405f142630c6b9f72fe09d9b67cf1477fcf543ae5b8dcb1f5b7377da81", url="https://pypi.org/packages/7d/cd/d7460c9a869b16c3dd4e1e403cce337df165368c71d6af229a74699622ce/wheel-0.43.0-py3-none-any.whl")
     version("0.42.0", sha256="177f9c9b0d45c47873b619f5b650346d632cdc35fb5e4d25058e09c9e581433d", url="https://pypi.org/packages/c7/c3/55076fc728723ef927521abaa1955213d094933dc36d4a2008d5101e1af5/wheel-0.42.0-py3-none-any.whl")
     version("0.41.3", sha256="488609bc63a29322326e05560731bf7bfea8e48ad646e1f5e40d366607de0942", url="https://pypi.org/packages/fa/7f/4c07234086edbce4a0a446209dc0cb08a19bb206a3ea53b2f56a403f983b/wheel-0.41.3-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyWheel(PythonPackage):
     version("0.38.3", sha256="f3c99240da8d26989dca2d67a7a431015eb91fb301eecacc6e452133689d9d59", url="https://pypi.org/packages/3b/48/7a4e6e610cfbc71d727ac58ddc9abe0daf5772b81d5630a4aef9e919ad46/wheel-0.38.3-py3-none-any.whl")
     version("0.38.2", sha256="7a5a3095dceca97a3cac869b8fef4e89b83fafde21b6688f47b6fda7600eb441", url="https://pypi.org/packages/46/3a/73fcaf6487aa9a9b02ee9df30a24bdc2c1f0292fe559811936d67a9053c1/wheel-0.38.2-py3-none-any.whl")
     version("0.35.1", sha256="497add53525d16c173c2c1c733b8f655510e909ea78cc0e29d374243544b77a2", url="https://pypi.org/packages/a7/00/3df031b3ecd5444d572141321537080b40c1c25e1caa3d86cdd12e5e919c/wheel-0.35.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

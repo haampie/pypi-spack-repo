@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PySnakemakeInterfaceExecutorPlugins(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("9.1.0", sha256="102d06304bc0b63bc1dcdf0e1b07692e6da197607483243245e21a1cbe15b5f0", url="https://pypi.org/packages/64/df/eefd7d59ffc8741eb6988a0c3a7ad5c2f90cb9efcf259a861e60ad641d5b/snakemake_interface_executor_plugins-9.1.0-py3-none-any.whl")
     version("9.0.2", sha256="19831d18cd32a356626a3a47e8adafa7caf0ac5bc9762a8ce948c30ad5fd13c0", url="https://pypi.org/packages/de/8f/6b04b1edbce85c3844287f481c7e3e78018ab6dbd313229209a8fefcc0fd/snakemake_interface_executor_plugins-9.0.2-py3-none-any.whl")
     version("9.0.1", sha256="13f5077c7808d335f257ea13225a5de8af82cf20f28f4aefa256520fd818c74d", url="https://pypi.org/packages/b5/bf/cc0190e195b7eae6cae902d72ac8af0d257c11af1acfade0424f2143c0c6/snakemake_interface_executor_plugins-9.0.1-py3-none-any.whl")
     version("9.0.0", sha256="54e703c14852eb86e6e38e21c5d66af6ff684f6c164d714d5748cfd431bccc6e", url="https://pypi.org/packages/df/87/c8e11d12cbf89609c05dbeedc1540db64cecb09bdf1874c4c2401330bd84/snakemake_interface_executor_plugins-9.0.0-py3-none-any.whl")
@@ -16,11 +17,16 @@ class PySnakemakeInterfaceExecutorPlugins(PythonPackage):
     version("8.1.1", sha256="c39ba893b21425a9322f4055c89cb1219e03acfb57210d9a82265f5376769632", url="https://pypi.org/packages/40/a9/b433960d08f43b7bd4d2d411a567fc63cdbeb2f6585fc1e2714b52360223/snakemake_interface_executor_plugins-8.1.1-py3-none-any.whl")
     version("8.1.0", sha256="180da92e8ff10ed05c26eb2ddb66fd1083a29c0fca72916d9edef578f8406e6b", url="https://pypi.org/packages/40/66/07f339d806c125b19f1cc65ab8aaac6463aa1449b105c2f0ee2c16a61f58/snakemake_interface_executor_plugins-8.1.0-py3-none-any.whl")
     version("8.0.2", sha256="630666bfd907287d0952db6470951626b28f2802654fb6df9a6bd59225651add", url="https://pypi.org/packages/0f/25/1ab127419d7cad9263bdd8cb704346488f462fabfe44c6b2de266ab2f9e1/snakemake_interface_executor_plugins-8.0.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.11:", when="@7:")
         depends_on("python@3.9:", when="@:6")
         depends_on("py-argparse-dataclass@2:")
         depends_on("py-snakemake-interface-common@1.12:", when="@6:")
         depends_on("py-throttler@1.2.2:")
+    # END DEPENDENCIES
 

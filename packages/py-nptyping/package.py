@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNptyping(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.5.0", sha256="764e51836faae33a7ae2e928af574cfb701355647accadcc89f2ad793630b7c8", url="https://pypi.org/packages/b1/28/92edc05378175de13a3d4986cee7531853634a22b7e5e21a988fa84fde3f/nptyping-2.5.0-py3-none-any.whl")
     version("2.4.1", sha256="23e8164b1e2c55e872f392ca7516b9b1b0cb400b03b70accaa63998b4106b0b3", url="https://pypi.org/packages/b2/c1/e6f8c5f28f9b3bdb5c9c1d349a51941a30f90347b82bd5594363e81cf3ff/nptyping-2.4.1-py3-none-any.whl")
     version("2.4.0", sha256="7aa52fe4fb159a4c6314b2ad374fe706aac53d2e347ec97284e2c5f37143546c", url="https://pypi.org/packages/11/e4/66920efbce907f49f725ce22f089c36c1cd98d3074c504b1a843327f3ed5/nptyping-2.4.0-py3-none-any.whl")
@@ -19,11 +19,16 @@ class PyNptyping(PythonPackage):
     version("2.1.0", sha256="1b4b84e3ff9d22d6f90b3cfd95657affb310307746863f5fd7551e26e0863954", url="https://pypi.org/packages/a3/9d/f5f80bca30a8a27463c79e31f251f5269579b02ad136ac3fcdc1dfa90070/nptyping-2.1.0-py3-none-any.whl")
     version("1.4.1", sha256="5ccc9bd3d284af1ffaef32ab7f3eb71f584c8c4e71c1dfac0999054ea47beb1c", url="https://pypi.org/packages/ad/5b/e8c90a98b8462768ca43ad43021d404b81430fde28a6e8f93a8101fe9a8f/nptyping-1.4.1-py3-none-any.whl")
     version("1.0.1", sha256="9f782826d5749fd8448c156b46b2deb84b3a09db860ac4a9881f4e5bd5181afd", url="https://pypi.org/packages/73/11/9e15ef1cd231182a3b568b65a612a173061d826de805481f44848fc27a32/nptyping-1.0.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.20.0:1", when="@2.1:")
         depends_on("py-numpy", when="@:1")
         depends_on("py-typing-extensions@4:", when="@2.1: ^python@:3.9")
         depends_on("py-typish@1.7:", when="@1.4:1")
         depends_on("py-typish@1.5.2:", when="@1:1.3")
+    # END DEPENDENCIES
 

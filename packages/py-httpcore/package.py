@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PyHttpcore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.0.5", sha256="421f18bac248b25d310f3cacd198d55b8e6125c107797b609ff9b7a6ba7991b5", url="https://pypi.org/packages/78/d4/e5d7e4f2174f8a4d63c8897d79eb8fe2503f7ecc03282fee1fa2719c2704/httpcore-1.0.5-py3-none-any.whl")
     version("1.0.4", sha256="ac418c1db41bade2ad53ae2f3834a3a0f5ae76b56cf5aa497d2d033384fc7d73", url="https://pypi.org/packages/2c/93/13f25f2f78646bab97aee7680821e30bd85b2ff0fc45d5fdf5393b79716d/httpcore-1.0.4-py3-none-any.whl")
     version("1.0.3", sha256="9a6a501c3099307d9fd76ac244e08503427679b1e81ceb1d922485e2f2462ad2", url="https://pypi.org/packages/11/a6/24139fa27831cf2127fcf578d6d0a852a611f10cefecd800b1c557333d7a/httpcore-1.0.3-py3-none-any.whl")
     version("1.0.2", sha256="096cc05bca73b8e459a1fc3dcf585148f63e534eae4339559c9b8a8d6399acc7", url="https://pypi.org/packages/56/ba/78b0a99c4da0ff8b0f59defa2f13ca4668189b134bd9840b6202a93d9a0f/httpcore-1.0.2-py3-none-any.whl")
@@ -32,7 +33,11 @@ class PyHttpcore(PythonPackage):
     version("0.13.3", sha256="ff614f0ef875b9e5fe0bdd459b31ea0eea282ff12dc82add83d68b3811ee94ad", url="https://pypi.org/packages/7a/89/29a26a8086268a8043b1fd0228a463bab99990d77fdfaa8a2bd07117851a/httpcore-0.13.3-py3-none-any.whl")
     version("0.11.1", sha256="72cfaa461dbdc262943ff4c9abf5b195391a03cdcc152e636adb4239b15e77e1", url="https://pypi.org/packages/d8/e7/f25e08617b4be99d38e4ef6c4d1b744bf065b9c93156ecd691d95897e0e4/httpcore-0.11.1-py3-none-any.whl")
     version("0.11.0", sha256="7a6804b18e1b8fc61ec4df868cb5c679d225fffbb81e48455ee9b57792cc3ac6", url="https://pypi.org/packages/64/fe/a9db014f98e0bb0c40d62dfee8b265f4e3a959da5daa672f68191776e523/httpcore-0.11.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anyio@3.0.0:", when="@0.16:0")
         depends_on("py-anyio@3", when="@0.13.4:0.15")
@@ -42,4 +47,5 @@ class PyHttpcore(PythonPackage):
         depends_on("py-h11@0.8:0.9", when="@0.5:0.11")
         depends_on("py-h2@3", when="@0.5:0.9")
         depends_on("py-sniffio@1:", when="@0.5:0")
+    # END DEPENDENCIES
 

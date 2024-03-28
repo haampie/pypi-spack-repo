@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyMotmetrics(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.2.0", sha256="78be33a951fe17b4a1b2c17b235b769920b700345b83e46d4b436f3efaf54d9f", url="https://pypi.org/packages/9c/28/9c3bc8e2a87f4c9e7b04ab72856ec7f9895a66681a65973ffaf9562ef879/motmetrics-1.2.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-flake8", when="@1.2:1.2.0")
         depends_on("py-flake8-import-order", when="@1.2:1.2.0")
@@ -18,4 +22,5 @@ class PyMotmetrics(PythonPackage):
         depends_on("py-pytest-benchmark", when="@1.2:1.2.0")
         depends_on("py-scipy@0.19:", when="@:1.0,1.1.1:")
         depends_on("py-xmltodict@0.12:", when="@1.2:")
+    # END DEPENDENCIES
 

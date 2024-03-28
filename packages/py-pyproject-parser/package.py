@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyprojectParser(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.9.1", sha256="800dbf9f24ec1d55bbdb703cf0c49c5a3f02570b13424157c9adab947b1bc899", url="https://pypi.org/packages/ff/5e/91d23fa308a7ee93513b9ca84580eafb57fe1bd1deb8609116e202225dbd/pyproject_parser-0.9.1-py3-none-any.whl")
     version("0.9.0", sha256="7f52e84cb368dcdcc63f5f48641639c5fbc46f668fbdccdc91610d1eceec062e", url="https://pypi.org/packages/27/47/5bf2bdabf1862ffe6df918beef05fcf3d91dbe1154fff40cb8518edd0bf2/pyproject_parser-0.9.0-py3-none-any.whl")
     version("0.9.0-beta2", sha256="4ba20134f2551c880e0afc760e1d248a7f8d0ebf8b0aa1125190bcdbd9c78f23", url="https://pypi.org/packages/25/7d/2911feade1ee37b7e68bf0ae15d6e0867877644984afce03b5ae6091280a/pyproject_parser-0.9.0b2-py3-none-any.whl")
@@ -20,7 +20,11 @@ class PyPyprojectParser(PythonPackage):
     version("0.4.3", sha256="60d9bb9cf411250a1c071788f90202e6fdb6d02954e30cd8fb854433877e0de0", url="https://pypi.org/packages/c2/96/7a463cf58657553e6e05cf7e2e991ddf648b7f3899b5467576a9a8329b53/pyproject_parser-0.4.3-py3-none-any.whl")
     version("0.4.2", sha256="aa92513c3f6990a0c413a555205d83f13d76b9d7b956c6075f8157c9bf32d7f9", url="https://pypi.org/packages/9d/55/9b79ca94f32f55adc1fd9c2e6db5cb718d5dc1964662c858b25b720b3e2d/pyproject_parser-0.4.2-py3-none-any.whl")
     version("0.4.1", sha256="4ba0e7b17f5cdba564163a37eb3d9f2700b845ee6d8ff8f9ed4397a926c023f2", url="https://pypi.org/packages/75/bf/d75c51463608dcd8bd88ef059bef2c3b5dbd643fa9ae4e7a0031227ac874/pyproject_parser-0.4.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-apeye@1:", when="@0.3:0.6")
         depends_on("py-apeye-core@1.0.0:", when="@0.7:")
@@ -34,4 +38,5 @@ class PyPyprojectParser(PythonPackage):
         depends_on("py-tomli@1.2.3:", when="@0.9: ^python@:3.10")
         depends_on("py-typing-extensions@3.7.4.3:4.7.0-rc1,4.7.1:", when="@0.9.1:")
         depends_on("py-typing-extensions@3.7.4.3:", when="@:0.9.0")
+    # END DEPENDENCIES
 

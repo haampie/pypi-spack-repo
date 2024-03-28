@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPipestat(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.8.3-alpha1", sha256="f678656cb920d7c59b6da491eba5d7b2ffeecf3378bbf75b07f11c0ce8d5afac", url="https://pypi.org/packages/e5/cf/205010e1c4cc64eefabbf327f65496a08176d14add1a36817745bf3efad3/pipestat-0.8.3a1-py3-none-any.whl")
     version("0.8.2", sha256="079a392a17314a7aa26aa92f3df64c09a5aa5b58352ef559149b14701852ae7d", url="https://pypi.org/packages/4d/05/625124ed97b885294d5b2ae0cc55a9c175c35c8a24077e026479c6f6fca9/pipestat-0.8.2-py3-none-any.whl")
     version("0.8.2-alpha1", sha256="0eb38fe24f1a0031316124c4157f1996c9dfca4c431b64321d35df9ab81dca9f", url="https://pypi.org/packages/49/0c/7f64daeb627c66feefb70aacad014bb5341bdd5995b8ab3615d905cdcf33/pipestat-0.8.2a1-py3-none-any.whl")
@@ -22,7 +22,11 @@ class PyPipestat(PythonPackage):
     version("0.5.0", sha256="5ed5abce53c61d58fba89d246a032d116439585110180d8be4b3bb18d430ad02", url="https://pypi.org/packages/4c/ec/2062a05ab1903ff2626d18e25742f9c19249f2a53a9c15adeb61832fb591/pipestat-0.5.0-py3-none-any.whl")
     version("0.4.1", sha256="91239689a59244196906ef2d68023161c4421c79fcdb0bf20e80c6a7039f8217", url="https://pypi.org/packages/48/05/773587d75d5d15c9ce429f2ff46987d4eb9b90ef2ba982e1d61c17e42e63/pipestat-0.4.1-py3-none-any.whl")
     version("0.4.0", sha256="45d31092ac30be522fcf7a792a8170268e060273598a575e178218e9ad7299c6", url="https://pypi.org/packages/14/f7/fe41097949eb5c1a7ac9e6b06bd3594b104d54d3add5f57540dde2e2023e/pipestat-0.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-eido", when="@0.4.1:")
         depends_on("py-fastapi", when="@0.6:0.6.0-alpha2")
@@ -42,4 +46,5 @@ class PyPipestat(PythonPackage):
         depends_on("py-yacman@0.9.2:", when="@0.6.0-alpha8:0.8.1")
         depends_on("py-yacman@0.9.1:", when="@0.4.1:0.6.0-alpha7")
         depends_on("py-yacman@0.9:", when="@0.4:0.4.0")
+    # END DEPENDENCIES
 

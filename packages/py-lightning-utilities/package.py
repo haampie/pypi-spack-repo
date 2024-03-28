@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLightningUtilities(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.11.0", sha256="bf576a421027fdbaf48e80cbc2fdf900a3316a469748a953c33a8ca2b2718a20", url="https://pypi.org/packages/ca/7d/16afeaef22e9863a4ba1de55ffca3a85167d119ff6c6cc2373c4b1b3e253/lightning_utilities-0.11.0-py3-none-any.whl")
     version("0.10.1", sha256="e67be3f328b1c14f2b36cc09e84642db5b50afeab94e7704969b2130fe6a3bda", url="https://pypi.org/packages/7d/84/fce34a549e2f795b3a0427e7dd40719dd4f00036e50ba58198a5a706eb75/lightning_utilities-0.10.1-py3-none-any.whl")
     version("0.10.0", sha256="84d09b11fe9bc16c803ae5e412874748239d73ad2f3d1b90862f99ce15a03aa0", url="https://pypi.org/packages/5e/f4/07b748cb9834848de16aaeb1ae38bc9cfcfe3adc22ee2c8ebbe11db82795/lightning_utilities-0.10.0-py3-none-any.whl")
@@ -21,11 +21,16 @@ class PyLightningUtilities(PythonPackage):
     version("0.4.1", sha256="880bbdff34ff7d3ca042b7d6ff0cc4bda1f9079a648752db654beefb6e754b03", url="https://pypi.org/packages/7e/ea/40e64439ad0869663c106de30cd4656254ad046a5871f1d45be326f5ed90/lightning_utilities-0.4.1-py3-none-any.whl")
     version("0.4.0", sha256="36d257f9eb9e1cb2669a43ca200d1dd4a0b4840768b38d9f69a892ff004cb412", url="https://pypi.org/packages/67/17/bed12398a0417be28970bb3f8252a36ae0b2bc0d580b0dcddf6ad5d89a62/lightning_utilities-0.4.0-py3-none-any.whl")
     version("0.3.0", sha256="1ae9bdd8f1be3c81b1ac4820f6eeddcbafcc2505c57a5940054466f4763bc22d", url="https://pypi.org/packages/8f/fc/1f4ff2bcba4e6162276cabe831a431ef14681a7158e693a5cf828dd6fa1b/lightning_utilities-0.3.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-fire", when="@0.2:0.3")
         depends_on("py-packaging@17.1:", when="@0.6.0.post:")
         depends_on("py-packaging@20:", when="@0.5:0.6.0.0")
         depends_on("py-setuptools", when="@0.10:")
         depends_on("py-typing-extensions", when="@0.5:")
+    # END DEPENDENCIES
 

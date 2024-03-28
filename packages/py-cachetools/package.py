@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCachetools(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.3.3", sha256="0abad1021d3f8325b2fc1d2e9c8b9c9d57b04c3932657a72465447332c24d945", url="https://pypi.org/packages/fb/2b/a64c2d25a37aeb921fddb929111413049fc5f8b9a4c1aefaffaafe768d54/cachetools-5.3.3-py3-none-any.whl")
     version("5.3.2", sha256="861f35a13a451f94e301ce2bec7cac63e881232ccce7ed67fab9b5df4d3beaa1", url="https://pypi.org/packages/a2/91/2d843adb9fbd911e0da45fbf6f18ca89d07a087c3daa23e955584f90ebf4/cachetools-5.3.2-py3-none-any.whl")
     version("5.3.1", sha256="95ef631eeaea14ba2e36f06437f36463aac3a096799e876ee55e5cdccb102590", url="https://pypi.org/packages/a9/c9/c8a7710f2cedcb1db9224fdd4d8307c9e48cbddc46c18b515fefc0f1abbe/cachetools-5.3.1-py3-none-any.whl")
@@ -25,5 +25,10 @@ class PyCachetools(PythonPackage):
     version("4.0.0", sha256="b304586d357c43221856be51d73387f93e2a961598a9b6b6670664746f3b6c6c", url="https://pypi.org/packages/08/6a/abf83cb951617793fd49c98cb9456860f5df66ff89883c8660aa0672d425/cachetools-4.0.0-py3-none-any.whl")
     version("3.1.1", sha256="428266a1c0d36dc5aca63a2d7c5942e88c2c898d72139fca0e97fdd2380517ae", url="https://pypi.org/packages/2f/a6/30b0a0bef12283e83e58c1d6e7b5aabc7acfc4110df81a4471655d33e704/cachetools-3.1.1-py2.py3-none-any.whl")
     version("3.1.0", sha256="219b7dc6024195b6f2bc3d3f884d1fef458745cd323b04165378622dcc823852", url="https://pypi.org/packages/39/2b/d87fc2369242bd743883232c463f28205902b8579cb68dcf5b11eee1652f/cachetools-3.1.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

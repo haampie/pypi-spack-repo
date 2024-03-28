@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyparsing(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.1.2", sha256="f9db75911801ed778fe61bb643079ff86601aca99fcae6345aa67292038fb742", url="https://pypi.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl")
     version("3.1.1", sha256="32c7c0b711493c72ff18a981d24f28aaf9c1fb7ed5e9667c9e84e3db623bdbfb", url="https://pypi.org/packages/39/92/8486ede85fcc088f1b3dba4ce92dd29d126fd96b0008ea213167940a2475/pyparsing-3.1.1-py3-none-any.whl")
     version("3.1.0", sha256="d554a96d1a7d3ddaf7183104485bc19fd80543ad6ac5bdb6426719d766fb06c1", url="https://pypi.org/packages/a4/24/6ae4c9c45cf99d96b06b5d99e25526c060303171fb0aea9da2bfd7dbde93/pyparsing-3.1.0-py3-none-any.whl")
@@ -28,8 +28,13 @@ class PyPyparsing(PythonPackage):
     version("2.4.0", sha256="9b6323ef4ab914af344ba97510e966d64ba91055d6b9afa6b30799340e89cc03", url="https://pypi.org/packages/dd/d9/3ec19e966301a6e25769976999bd7bbe552016f0d32b577dc9d63d2e0c49/pyparsing-2.4.0-py2.py3-none-any.whl")
     version("2.3.1", sha256="f6c5ef0d7480ad048c054c37632c67fca55299990fff127850181659eea33fc3", url="https://pypi.org/packages/de/0a/001be530836743d8be6c2d85069f46fecf84ac6c18c7f5fb8125ee11d854/pyparsing-2.3.1-py2.py3-none-any.whl")
     version("2.3.0", sha256="40856e74d4987de5d01761a22d1621ae1c7f8774585acae358aa5c5936c6c90b", url="https://pypi.org/packages/71/e8/6777f6624681c8b9701a8a0a5654f3eb56919a01a78e12bf3c73f5a3c714/pyparsing-2.3.0-py2.py3-none-any.whl")
-    version("2.2.0", sha256="0832bcf47acd283788593e7a0f542407bd9550a55a8a8435214a1960e04bcb04", url="https://pypi.org/packages/3c/ec/a94f8cf7274ea60b5413df054f82a8980523efd712ec55a59e7c3357cf7c/pyparsing-2.2.0.tar.gz")
-    version("2.1.10", sha256="0aa6e8d8c3f9c447a95a33bb04b103ead630121c3f4233e2980348cecf8b69c8", url="https://pypi.org/packages/30/c5/a4f214f66fbdb868d20d5811635d08e386f63a9591c5756ef717b3115796/pyparsing-2.1.10.zip")
-    version("2.0.3", sha256="43d7710fdaa194a3bccf3127d06dec8e2de99a7efe6c47f01d4b748a1d04b192", url="https://pypi.org/packages/52/2d/ad1c5c1919c22588da4dfad86489a03329b5359d8ab8ea6a543e27571e4e/pyparsing-2.0.3.zip")
+    version("2.2.0", sha256="fee43f17a9c4087e7ed1605bd6df994c6173c1e977d7ade7b651292fab2bd010", url="https://pypi.org/packages/6a/8a/718fd7d3458f9fab8e67186b00abdd345b639976bc7fb3ae722e1b026a50/pyparsing-2.2.0-py2.py3-none-any.whl")
+    version("2.1.10", sha256="67101d7acee692962f33dd30b5dce079ff532dd9aa99ff48d52a3dad51d2fe84", url="https://pypi.org/packages/2b/f7/e5a178fc3ea4118a0edce2a8d51fc14e680c745cf4162e4285b437c43c94/pyparsing-2.1.10-py2.py3-none-any.whl")
+    version("2.0.3", sha256="a9c896bab06dbf3759ad5fb63cfdb3777191e2c4ae640e6dd69ed37530f6ba56", url="https://pypi.org/packages/8f/f4/3a70b5e5b865b1ec45fe48dc5a57cd4facb5c7bd80e5cb1255c362732e81/pyparsing-2.0.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

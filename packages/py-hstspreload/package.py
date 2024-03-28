@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHstspreload(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.3.1", sha256="bd192b68d69683b0390816946c0fd705a9ba6d5a4c2cd34b8433a53141a378ea", url="https://pypi.org/packages/25/2a/e9ca0cdf8bd33d61d8d237b19e62d5c2f2666e482ae3fd45e0a80b8dcfd0/hstspreload-2024.3.1-py3-none-any.whl")
     version("2024.2.1", sha256="e53a57b6e17adea47023f93fd1626bd74832f3a67b1272fc8fe7f0b33bfd4ae1", url="https://pypi.org/packages/b5/9f/83329ebd2808e04f2564051e4c4a880a1e2e67bd6410899f728096d0e22f/hstspreload-2024.2.1-py3-none-any.whl")
     version("2024.1.5", sha256="f2bb05cc456bdf38bd9da7c6aa40a7bd7fc60850e5b5a52861877cd7120eb783", url="https://pypi.org/packages/74/37/6fb177217abf90ac8ba7997919dc5075894ff39b11f83ea9ae86cf932fff/hstspreload-2024.1.5-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyHstspreload(PythonPackage):
     version("2022.8.1", sha256="412dcbd86bb57a7efd2e2a0c597eaf77efe1ce1e5e78db492a9c1c1b786c4144", url="https://pypi.org/packages/89/1d/e221b841f5fd0f15e58bda177292c143ee052d9f83f62ba3c354adc98c24/hstspreload-2022.8.1-py3-none-any.whl")
     version("2022.7.10", sha256="a77a775f38ae095498e089adf2c08382573f96e6806525260fb7ab0d7b880813", url="https://pypi.org/packages/ef/7d/e7bc1e37202c9667b0f2aa87a48ecc446721c4ce97b6e78ea3f940c0a663/hstspreload-2022.7.10-py3-none-any.whl")
     version("2020.9.23", sha256="d0b5ee3f9f2aa7d2f0c5e8fe7b3b6605eef26a302ba373e0d5a76e7d8e871504", url="https://pypi.org/packages/ae/c7/48e6c0c9391b277e47de6040732ffd78a4e518fcea07c7adda37219505c9/hstspreload-2020.9.23-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

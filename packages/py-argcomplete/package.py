@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyArgcomplete(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.2.3", sha256="c12355e0494c76a2a7b73e3a59b09024ca0ba1e279fb9ed6c1b82d5b74b6a70c", url="https://pypi.org/packages/88/8c/61021c45428ad2ef6131c6068d14f7f0968767e972e427cd87bd25c9ea7b/argcomplete-3.2.3-py3-none-any.whl")
     version("3.2.2", sha256="e44f4e7985883ab3e73a103ef0acd27299dbfe2dfed00142c35d4ddd3005901d", url="https://pypi.org/packages/f9/75/2cbf82a7ea474786e14b4d5171af88cf2b49e677a927f8b45d091418d889/argcomplete-3.2.2-py3-none-any.whl")
     version("3.2.1", sha256="30891d87f3c1abe091f2142613c9d33cac84a5e15404489f033b20399b691fec", url="https://pypi.org/packages/73/44/42ff5ee76b3881bebe226614c658df9423fe8ddd3d7967e6850b008f4899/argcomplete-3.2.1-py3-none-any.whl")
@@ -29,6 +29,11 @@ class PyArgcomplete(PythonPackage):
     version("1.10.2", sha256="c6aaa1d534adaa1be0a7e9d51d7f5993dba608f6d2a2b765302c05b0b3e9a719", url="https://pypi.org/packages/b8/3e/370189084cdb7b4a8adb18d179f957d9115f8ee06aa5a1d85b56651a59bf/argcomplete-1.10.2-py2.py3-none-any.whl")
     version("1.10.1", sha256="d1136db4db8ff94d8fc345ea48c89a70c8a985a73d77a052b2f9ba032ec36592", url="https://pypi.org/packages/1e/5d/777a2c0532ffce40dfb7cdee850c8b39955af604330a64824951ca6c353c/argcomplete-1.10.1-py2.py3-none-any.whl")
     version("1.10.0", sha256="2f2052ea5156eb5cc7edce9c0ddc937e30c49c1097d51b24f34350a08632a264", url="https://pypi.org/packages/4d/82/f44c9661e479207348a979b1f6f063625d11dc4ca6256af053719bbb0124/argcomplete-1.10.0-py2.py3-none-any.whl")
-    version("1.1.1", sha256="cca45b5fe07000994f4f06a0b95bd71f7b51b04f81c3be0b4ea7b666e4f1f084", url="https://pypi.org/packages/34/da/7d96c307625cda7ff7094f5a4a18638cf109a70072baabe78069bb45fbd9/argcomplete-1.1.1.tar.gz")
+    version("1.1.1", sha256="f9bb1e017aa61e52b28023936475963d97d62046a1f87e0f0dfc5a5b439949ff", url="https://pypi.org/packages/b2/64/f622fc5e6a202f802343cf6363fe0ff6a1e7f99cd7e0184a71f038cdbb4e/argcomplete-1.1.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

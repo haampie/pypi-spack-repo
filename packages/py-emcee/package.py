@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyEmcee(PythonPackage):
+    # BEGIN VERSIONS
     version("3.1.4", sha256="13d216a96b4f60661839d5f6ec482eda9e86b499502cda2bf6d8cc839ccf3e59", url="https://pypi.org/packages/1c/2c/426cf760d1f1161b2c57272c7efc495bef353b0d1d609d91708ddfb831a2/emcee-3.1.4-py2.py3-none-any.whl")
     version("3.1.4-rc1", sha256="f321371834a7a74c51ebc20bed2b7c02d263d2cfc4fdef1f29d5047ec7bff9bb", url="https://pypi.org/packages/09/eb/ff8751a9fccf59718369e6260f2a96377a83d2a7f05b4db7323ddc4a3ce9/emcee-3.1.4rc1-py2.py3-none-any.whl")
     version("3.1.3", sha256="508a4d78933bd4f25c595acb44d3d0f810be69cb0e9b12012a5ed9bd35657987", url="https://pypi.org/packages/98/5f/e899376b4979559d74b082f20a78b159972fec9a4425d33d4eb797cfab55/emcee-3.1.3-py2.py3-none-any.whl")
@@ -19,7 +19,12 @@ class PyEmcee(PythonPackage):
     version("3.0.0", sha256="db451e4a95c15f7828d4ad0af1b0809b54cf067bacc8b827112b9ab40ce6bc31", url="https://pypi.org/packages/00/08/0d86d0af356d50ff00d741c34a90a971e7ae0a0aeb2bd050bcacfdc34229/emcee-3.0.0-py2.py3-none-any.whl")
     version("2.2.1", sha256="b83551e342b37311897906b3b8acf32979f4c5542e0a25786ada862d26241172", url="https://pypi.org/packages/3f/d3/7635106605dedccd08705beac53be4c43a8da1caad6be667adbf93ed0965/emcee-2.2.1.tar.gz")
     version("2.1.0", sha256="5ce1039a3d78fb9e7d53fcd768517585c5998193743bfcfaac407927d375ca63", url="https://pypi.org/packages/de/00/2358f12c98fa74ab58d78e6a4a4f9a8152fadf6ade2d809d98d771dcc31b/emcee-2.1.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy", when="@3.0-rc2:")
+    # END DEPENDENCIES
 

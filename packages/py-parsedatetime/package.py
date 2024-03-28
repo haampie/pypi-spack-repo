@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,11 +6,17 @@
 from spack.package import *
 
 class PyParsedatetime(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.6", sha256="cb96edd7016872f58479e35879294258c71437195760746faffedb692aef000b", url="https://pypi.org/packages/9d/a4/3dd804926a42537bf69fb3ebb9fd72a50ba84f807d95df5ae016606c976c/parsedatetime-2.6-py3-none-any.whl")
-    version("2.5", sha256="d2e9ddb1e463de871d32088a3f3cea3dc8282b1b2800e081bd0ef86900451667", url="https://pypi.org/packages/5f/19/43357ced106dd1ab6bceb1decb866e8619172fc271991a54eb2f680a2e9b/parsedatetime-2.5.tar.gz")
-    version("2.4", sha256="3d817c58fb9570d1eec1dd46fa9448cd644eeed4fb612684b02dfda3a79cb84b", url="https://pypi.org/packages/e3/b3/02385db13f1f25f04ad7895f35e9fe3960a4b9d53112775a6f7d63f264b6/parsedatetime-2.4.tar.gz")
-    version("2.3", sha256="94ca3c9efcf2652a7a8ee6b11983e7344988a3c658fd617f8021689446ab79ee", url="https://pypi.org/packages/32/a8/29473ee95f1ceb5c3428d35387200be404cf6dfc60c110e75d775e27979a/parsedatetime-2.3.tar.gz")
-    version("2.2", sha256="1b1b647812e336f85be84206e4fb1f2df3852e036ac35b18dec809e7ebff1309", url="https://pypi.org/packages/62/a3/0c546deec0c1ea5e20320daf7719df9419c2bee97f1a11b9feaf0143b0fc/parsedatetime-2.2.tar.gz")
-    version("2.1", sha256="17c578775520c99131634e09cfca5a05ea9e1bd2a05cd06967ebece10df7af2d", url="https://pypi.org/packages/8b/20/37822d52be72c99cad913fad0b992d982928cac882efbbc491d4b9d216a9/parsedatetime-2.1.tar.gz")
+    version("2.5", sha256="3b835fc54e472c17ef447be37458b400e3fefdf14bb1ffdedb5d2c853acf4ba1", url="https://pypi.org/packages/4e/26/7612745a21452f6d822c0868ff7168dd8cf592645b2a553a177e1de43901/parsedatetime-2.5-py2-none-any.whl")
+    version("2.4", sha256="9ee3529454bf35c40a77115f5a596771e59e1aee8c53306f346c461b8e913094", url="https://pypi.org/packages/1d/48/ac8d4c6239437592852e951bcb9438dc585f80c29777c391aef69c67dc79/parsedatetime-2.4-py2-none-any.whl")
+    version("2.3", sha256="5a421b51b4847a495541a877421daaf99fbef898c96199039cbde28fcfb7e526", url="https://pypi.org/packages/37/91/0e019ee9d1077584fe49008bc856f2fc464bf4fb7807560b893108baad24/parsedatetime-2.3-py2-none-any.whl")
+    version("2.2", sha256="1612d12dfd7f3e933e4b84461aa4a12c5fbbc856651f0b88588c33955be390db", url="https://pypi.org/packages/9a/1f/1f875b7de7ba37c2b78106b4ec4293ea569ee0d9fdeca1cf00f0078ea37e/parsedatetime-2.2-py2-none-any.whl")
+    version("2.1", sha256="ce9d422165cf6e963905cd5f74f274ebf7cc98c941916169178ef93f0e557838", url="https://pypi.org/packages/85/1f/13fc06097e516f6259d62cea502b116451321c96e18a9d0fff9da3442e02/parsedatetime-2.1-py2-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

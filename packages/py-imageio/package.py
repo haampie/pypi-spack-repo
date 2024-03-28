@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyImageio(PythonPackage):
+    # BEGIN VERSIONS
     version("2.34.0", sha256="08082bf47ccb54843d9c73fe9fc8f3a88c72452ab676b58aca74f36167e8ccba", url="https://pypi.org/packages/02/25/66533a8390e3763cf8254dee143dbf8a830391ea60d2762512ba7f9ddfbe/imageio-2.34.0-py3-none-any.whl")
     version("2.33.1", sha256="c5094c48ccf6b2e6da8b4061cd95e1209380afafcbeae4a4e280938cce227e1d", url="https://pypi.org/packages/c0/69/3aaa69cb0748e33e644fda114c9abd3186ce369edd4fca11107e9f39c6a7/imageio-2.33.1-py3-none-any.whl")
     version("2.33.0", sha256="d580d6576d0ae39c459a444a23f6f61fe72123a3df2264f5fce8c87784a4be2e", url="https://pypi.org/packages/fa/04/9abe71dfe8c77f5ee58e8c50df3b562884f7494b56c318b867bd2dcb6ec8/imageio-2.33.0-py3-none-any.whl")
@@ -22,14 +22,19 @@ class PyImageio(PythonPackage):
     version("2.22.0", sha256="aff0e9b5faf4936728f982a1ab63797b1339847a4533c3e4c8343635149dfbfc", url="https://pypi.org/packages/78/7a/3e4e595faea7112785de0a78efd8349a860b2ce6cd4d8fc15afe42c27f5f/imageio-2.22.0-py3-none-any.whl")
     version("2.16.0", sha256="1ee35330318bcb0ce25de778fc1f61555558a159433a568887d7e3d0317ce63c", url="https://pypi.org/packages/58/fc/1547b93534279bbf2de88f7c4a88975a65cecafd32c2bd3c518b2054ef76/imageio-2.16.0-py3-none-any.whl")
     version("2.10.3", sha256="93ee376a8dc96182ead8d773c3ac2becf79c6f2b93d38f31d7ac036c62a6c72e", url="https://pypi.org/packages/17/be/4a836c9262b40454c2834c5ab1a20a35e2f23216b0744f666395fab8a046/imageio-2.10.3-py3-none-any.whl")
-    version("2.9.0", sha256="52ddbaeca2dccf53ba2d6dec5676ca7bc3b2403ef8b37f7da78b7654bb3e10f0", url="https://pypi.org/packages/c3/73/f37f428748c4f10a7991ac5bff00f113a34bcc0d0a78957d6e1cdc29a94e/imageio-2.9.0.tar.gz")
-    version("2.5.0", sha256="42e65aadfc3d57a1043615c92bdf6319b67589e49a0aae2b985b82144aceacad", url="https://pypi.org/packages/69/4a/0387d708394d5e25d95b1abe427c301614152d1bebea18d9b06fa7199704/imageio-2.5.0.tar.gz")
+    version("2.9.0", sha256="3604d751f03002e8e0e7650aa71d8d9148144a87daf17cb1f3228e80747f2e6b", url="https://pypi.org/packages/6e/57/5d899fae74c1752f52869b613a8210a2480e1a69688e65df6cb26117d45d/imageio-2.9.0-py3-none-any.whl")
+    version("2.5.0", sha256="1a2bbbb7cd38161340fa3b14d806dfbf914abf3ee6fd4592af2afb87d049f209", url="https://pypi.org/packages/af/0a/943c965d372dae0b1f1482677d29030ab834351a61a9a632fd62f27f1523/imageio-2.5.0-py3-none-any.whl")
     version("2.4.1", sha256="16b8077bc8a5fa7a58b3e744f7ecbb156d8c088132df31e0f4f546c98de3514a", url="https://pypi.org/packages/28/b4/cbb592964dfd71a9de6a5b08f882fd334fb99ae09ddc82081dbb2f718c81/imageio-2.4.1.tar.gz")
-    version("2.3.0", sha256="c4fd5183c342d47fdc2e98552d14e3f24386021bbc3efedd1e3b579d7d249c07", url="https://pypi.org/packages/99/c5/16b4e3e9078ccb92a8b010455e62bd77585e807aff44028d6c70fc2b62df/imageio-2.3.0.tar.gz")
+    version("2.3.0", sha256="0f8281453c74433fcf4c7a1cf36801e6da9a4ba3117799fffd5a4db7d745e1b7", url="https://pypi.org/packages/a7/1d/33c8686072148b3b0fcc12a2e0857dd8316b8ae20a0fa66c8d6a6d01c05c/imageio-2.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.20.0:", when="@2.16")
         depends_on("py-numpy", when="@2.10:2.15,2.17:")
         depends_on("py-pillow@8.3.2:10.0", when="@2.31.6:2.32")
         depends_on("py-pillow@8.3.2:", when="@2.10:2.31.5,2.33:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTables(PythonPackage):
+    # BEGIN VERSIONS
     version("3.9.2", sha256="d470263c2e50c4b7c8635a0d99ac1ff2f9e704c24d71e5fa33c4529e7d0ad9c3", url="https://pypi.org/packages/31/83/8a13be8338219c3fe0aa7357d1ec4edb27bc346e0f224df7212892b243b5/tables-3.9.2.tar.gz")
     version("3.9.1", sha256="48331503cd509c9f1f95cf2f5c64a57c48c0aa5141423f0eca352965c4f9bf81", url="https://pypi.org/packages/01/69/eb8a7666086352a9840a834a526326e42abc5dd984e0c0d6961e782f5cda/tables-3.9.1.tar.gz")
     version("3.9.0", sha256="27c9ca14c359d875caf945a6a527c12690e017650402dd17d8eb8b6caf6687d5", url="https://pypi.org/packages/a7/e4/0e26466476bbc5e23ff53d5c96270608f0f677b957fadcb9c9180c938b5e/tables-3.9.0.tar.gz")
@@ -19,7 +19,15 @@ class PyTables(PythonPackage):
     version("3.4.3", sha256="b6aafe47154e2140c0a91bb38ebdb6ba67a24dd86263f1c294af8c11cb7deed4", url="https://pypi.org/packages/98/bb/0192955689d2e5972e2714300433eff57e5bef4147248cb15c7b6f04ae9e/tables-3.4.3.tar.gz")
     version("3.3.0", sha256="8383ccf02e041a5d55494a09fc5514140b4653055a2732c981b5fd0f7408822c", url="https://pypi.org/packages/97/eb/ea2102f5a210a62f9f7387cf9912cb841f4a9089dbb232e642daa2626769/tables-3.3.0.tar.gz")
     version("3.2.2", sha256="3564b351a71ec1737b503b001eb7ceae1f65d5d6e3ffe1ea75aafba10f37fa84", url="https://pypi.org/packages/af/38/85a4581084ad2aaed4318b7f3a46c5bed3ecb32bae0929add5d7c752d8fc/tables-3.2.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("bzip2", default=False)
+    variant("lzo", default=False)
+    variant("zlib", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@3.9.1:")
         depends_on("py-blosc2@2.3:", when="@3.9.2:")
@@ -32,4 +40,5 @@ class PyTables(PythonPackage):
         depends_on("py-packaging", when="@3.9:")
         depends_on("py-py-cpuinfo", when="@3.9:")
         depends_on("py-six@1.9:", when="@3.4.4:3.4")
+    # END DEPENDENCIES
 

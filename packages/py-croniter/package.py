@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCroniter(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.3", sha256="84dc95b2eb6760144cc01eca65a6b9cc1619c93b2dc37d8a27f4319b3eb740de", url="https://pypi.org/packages/75/b4/a0b97aa934f623fe2342a3c681c70b46f398e91788498802d6147f8f3ff1/croniter-2.0.3-py2.py3-none-any.whl")
     version("2.0.2", sha256="78bf110a2c7dbbfdd98b926318ae6c64a731a4c637c7befe3685755110834746", url="https://pypi.org/packages/32/92/b8cbafea73dba32ed348ff696ff5f2122c8e4fe92fcc33ca75e600d7ce75/croniter-2.0.2-py2.py3-none-any.whl")
     version("2.0.1", sha256="4cb064ce2d8f695b3b078be36ff50115cf8ac306c10a7e8653ee2a5b534673d7", url="https://pypi.org/packages/27/86/c1ce37af79385a106aacdd40b6e25ff25b2d888f2e64a05ee4e5b05f5768/croniter-2.0.1-py2.py3-none-any.whl")
@@ -23,8 +23,13 @@ class PyCroniter(PythonPackage):
     version("1.3.8", sha256="d6ed8386d5f4bbb29419dc1b65c4909c04a2322bd15ec0dc5b2877bfa1b75c7a", url="https://pypi.org/packages/0f/4d/0cc5a7f4bdcefecebdf8a95c8372606c13d3355e8536d9cd3e7070e94269/croniter-1.3.8-py2.py3-none-any.whl")
     version("1.3.7", sha256="12369c67e231c8ce5f98958d76ea6e8cb5b157fda4da7429d245a931e4ed411e", url="https://pypi.org/packages/80/12/4cf1fa220d521702db5b4e3a06603cac89ecd233ad69b050aa98f08e52ce/croniter-1.3.7-py2.py3-none-any.whl")
     version("1.3.6", sha256="cec33758fec04a9af0894a85fb2ba9dd3bb9312aa11c3ee5f0a054aacf09c8de", url="https://pypi.org/packages/0d/64/fe015a6e7fa56bd0d6d1cb47eaa2446b859435d7420cab489f70c4ffc783/croniter-1.3.6-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-python-dateutil", when="@0.3.25:")
         depends_on("py-pytz@2021.3:", when="@2:")
+    # END DEPENDENCIES
 

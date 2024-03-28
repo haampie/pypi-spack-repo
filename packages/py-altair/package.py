@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAltair(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.2.0", sha256="8c4888ad11db7c39f3f17aa7f4ea985775da389d79ac30a6c22856ab238df399", url="https://pypi.org/packages/c5/e4/7fcceef127badbb0d644d730d992410e4f3799b295c9964a172f92a469c7/altair-5.2.0-py3-none-any.whl")
     version("5.1.2", sha256="7219708ec33c152e53145485040f428954ed15fd09b2a2d89e543e6d111dae7f", url="https://pypi.org/packages/17/16/b12fca347ff9d062e3c44ad9641d2ec50364570a059f3078ada3a5119d7a/altair-5.1.2-py3-none-any.whl")
     version("5.1.1", sha256="bb421459b53c80ad45f2bd009c87da2a81165b8f7d5a90658e0fc1ffc741bf34", url="https://pypi.org/packages/f2/b4/02a0221bd1da91f6e6acdf0525528db24b4b326a670a9048da474dfe0667/altair-5.1.1-py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyAltair(PythonPackage):
     version("4.0.0", sha256="9947ae1e5f99b55c3ffaaf376494cd504bcdbfd33b8326061500c86ec0d89d93", url="https://pypi.org/packages/67/fe/2584ab143719f073abb4884049a1ef2e5daf277d9c5a3a47df03cd7ad4ab/altair-4.0.0-py2.py3-none-any.whl")
     version("3.3.0", sha256="540c3651a4df7310efd0c4f3f5060ebfee50c2b9546ca865068f992357b1a562", url="https://pypi.org/packages/1f/ef/1311cb19c78954ebf23842e6710cc2ecf4bd1966934ca3cd41f005b77221/altair-3.3.0-py2.py3-none-any.whl")
     version("3.2.0", sha256="bd8f42b487ffb67bdb1d2ae7970df69c0801431c9201742599525037bc8bd56d", url="https://pypi.org/packages/34/24/3e50e226a79db1bb1427bf8c58cc4dc7c2f74c39b728af005f4b11d1760c/altair-3.2.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-entrypoints", when="@2.1:4")
         depends_on("py-jinja2", when="@2.3:")
@@ -39,4 +43,5 @@ class PyAltair(PythonPackage):
         depends_on("py-six", when="@2.1:3")
         depends_on("py-toolz", when="@2.1:")
         depends_on("py-typing-extensions@4.0.1:", when="@5: ^python@:3.10")
+    # END DEPENDENCIES
 

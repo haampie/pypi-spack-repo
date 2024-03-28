@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySetuptools(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("69.2.0", sha256="c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c", url="https://pypi.org/packages/92/e1/1c8bb3420105e70bdf357d57dd5567202b4ef8d27f810e98bb962d950834/setuptools-69.2.0-py3-none-any.whl")
     version("69.1.1", sha256="02fa291a0471b3a18b2b2481ed902af520c69e8ae0919c13da936542754b4c56", url="https://pypi.org/packages/c0/7a/3da654f49c95d0cc6e9549a855b5818e66a917e852ec608e77550c8dc08b/setuptools-69.1.1-py3-none-any.whl")
     version("69.1.0", sha256="c054629b81b946d63a9c6e732bc8b2513a7c3ea645f11d0139a2191d735c60c6", url="https://pypi.org/packages/bb/0a/203797141ec9727344c7649f6d5f6cf71b89a6c28f8f55d4f18de7a1d352/setuptools-69.1.0-py3-none-any.whl")
@@ -52,5 +52,10 @@ class PySetuptools(PythonPackage):
     version("58.1.0", sha256="7324fd4b66efa05cdfc9c89174573a4410acc7848f318cc0565c7fb659dfdc81", url="https://pypi.org/packages/4e/2e/f8e006dbaaa46ed1e762c287585b92476deb8d3ccb79b720ed3b86bc6113/setuptools-58.1.0-py3-none-any.whl")
     version("58.0.4", sha256="69cc739bc2662098a68a9bc575cd974a57969e70c1d58ade89d104ab73d79770", url="https://pypi.org/packages/c4/c1/aed7dfedb18ea73d7713bf6ca034ab001a6425be49ffa7e79bbd5999f677/setuptools-58.0.4-py3-none-any.whl")
     version("58.0.3", sha256="1ceadf3ea9a821ef305505db995f2e21550ea62500900164278c4b23109204f3", url="https://pypi.org/packages/37/72/18182298997d20e333d4bae0bead740add1b09ca99200eae65a73d9aa732/setuptools-58.0.3-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

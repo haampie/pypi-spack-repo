@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyomo(PythonPackage):
+    # BEGIN VERSIONS
     version("6.7.1", sha256="735b66c45937f1caa43f073d8218a4918b6de658914a699397d38d5b8c219a40", url="https://pypi.org/packages/24/12/e8fe851bdaecfd99f7a9054cda020a4d3984318559ba2fa193cc526a238f/Pyomo-6.7.1.tar.gz")
     version("6.7.0", sha256="a245ec609ef2fd907269f0b8e0923f74d5bf868b2ec0e62bf2a30b3f253bd17b", url="https://pypi.org/packages/43/46/80bf188f20812381b29d95f3123ced89be68955c821b8d229af0a0439e79/Pyomo-6.7.0.tar.gz")
     version("6.6.2", sha256="c8ad55213ff8b1a2c4e469110db8079722d5a6f364c6c46a42e2f750fc9e4d26", url="https://pypi.org/packages/9b/73/0c11bb78ef7db2bf04424a4a7511c1f0a63777d7120f98a6f1d9e59e9dc7/Pyomo-6.6.2.tar.gz")
@@ -30,10 +30,19 @@ class PyPyomo(PythonPackage):
     version("5.7.1", sha256="1228204d7eb4cdd217fed6323a7434de68e89a2aaa74085ea47f1b42fb64d8cd", url="https://pypi.org/packages/2a/63/8346a9a444835ba6ba3deffbb626f1f513085f9f3db4ce01d2106db669fa/Pyomo-5.7.1.tar.gz")
     version("5.7", sha256="27e3a3c8411de9bc52e5e6aa88e9a0de0dd7369126bc905996e23057775905d7", url="https://pypi.org/packages/ef/92/cfeec79a5949d4b16e3789015e1adea9c35d0ab7711a8994255e0f5dba8f/Pyomo-5.7.tar.gz")
     version("5.6.9", sha256="ad7c41ce82d55a7a1d093413b7df758599163e883f658c89c5946488350e146c", url="https://pypi.org/packages/17/12/a6270a9153d767787ccde6f3166cab01ea99c6c7dd60ee261d8925402f85/Pyomo-5.6.9-py2.py3-none-any.whl")
-    version("5.6.8", sha256="28cbe034b06a477053616a3ce5ef43149bfd7d025cac490c2a3dd006c388b60d", url="https://pypi.org/packages/73/74/7c6e39e224e95ea02497bfc9383c4a950d40f0c0c53f7579019d5eddd240/Pyomo-5.6.8.tar.gz")
-    version("5.6.7", sha256="fc97cc9d5a55c5185358ba65c1f9530c9af17e67a9aae7b36c3414f159030ae0", url="https://pypi.org/packages/7d/42/f69572c768addbcf407e2841957d4e26192d34c1c4c324a9edbf4a5b913c/Pyomo-5.6.7.tar.gz")
-    version("5.6.6", sha256="813e14a604b9d3ac63bdd0880c07f5f4e1b8f0a8a10345f1b42bee762219c001", url="https://pypi.org/packages/ec/7a/dc4fbc9812dd6c9c396faf619968bd02cfb69019f290d0233f1e29ef6713/Pyomo-5.6.6.tar.gz")
+    version("5.6.8", sha256="cba1c1598f07c6ed0755df7db61d09a46065d576419c0f1863d60d17f690515a", url="https://pypi.org/packages/af/27/e42538d57971eac8b5f7bc994db13231037169143fe0e5efeedc26f13f30/Pyomo-5.6.8-py3-none-any.whl")
+    version("5.6.7", sha256="1337cf686ee7f3d1203c7f109f11d7ad0ba470efafd7013e62375c2c8a401a19", url="https://pypi.org/packages/39/77/0d57b41656d786e456f94764daeae96cdcdac41b4d8ef38d0f433d8580aa/Pyomo-5.6.7-py3-none-any.whl")
+    version("5.6.6", sha256="55aa16663c662adf9ab0b935fca8d71d0b6bc2139a0a51c3c27d338c9f76a53b", url="https://pypi.org/packages/3a/13/a6e4e1b4aa9c0d49feb9c4a13ccefbc7f5249fd145bc94932eac566d05a3/Pyomo-5.6.6-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("cython", default=False)
+    variant("docs", default=False)
+    variant("optional", default=False)
+    variant("tests", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.9", when="@6.2")
         depends_on("py-appdirs", when="@5.5.1:5.7.0")
@@ -44,4 +53,5 @@ class PyPyomo(PythonPackage):
         depends_on("py-pyutilib@5.7.2:", when="@5.6.7")
         depends_on("py-pyutilib@5.7.1:", when="@5.6.6")
         depends_on("py-six@1.4:", when="@5.5.1:5.7.0")
+    # END DEPENDENCIES
 

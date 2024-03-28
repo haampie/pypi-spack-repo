@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyStrawberryfields(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.23.0", sha256="3298b77b07e5e8e16e63af253ac20b826a9df926f8002450ea421e7c9faaeac7", url="https://pypi.org/packages/c0/16/e0062ed6fb37bc3734660aed2a4ddbef0cfd82b78dae48b82e9aa2019075/StrawberryFields-0.23.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-networkx@2:", when="@0.7.3:")
         depends_on("py-numba", when="@0.13:")
@@ -23,4 +27,5 @@ class PyStrawberryfields(PythonPackage):
         depends_on("py-toml", when="@0.11:")
         depends_on("py-urllib3@1.25.3:", when="@0.13:")
         depends_on("py-xanadu-cloud-client@0.2.1:", when="@0.23:")
+    # END DEPENDENCIES
 

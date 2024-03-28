@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTexttable(PythonPackage):
+    # BEGIN VERSIONS
     version("1.7.0", sha256="72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917", url="https://pypi.org/packages/24/99/4772b8e00a136f3e01236de33b0efda31ee7077203ba5967fcc76da94d65/texttable-1.7.0-py2.py3-none-any.whl")
     version("1.6.7", sha256="b7b68139aa8a6339d2c320ca8b1dc42d13a7831a346b446cb9eb385f0c76310c", url="https://pypi.org/packages/ba/a7/2c12b543f853dae886286b824200eb9d7cd2466e3d14eff1799fbe8223b9/texttable-1.6.7-py2.py3-none-any.whl")
     version("1.6.6", sha256="1ccd7d4f410555d7ec20d124c2ecd74ebdc385667ba05d8c9bf2e9699eca83af", url="https://pypi.org/packages/63/80/e9928c84a25a7edc0891a4a939a5402e14c6c3346783eb4e1c002974f68c/texttable-1.6.6-py2.py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyTexttable(PythonPackage):
     version("1.6.1", sha256="2b60a5304ccfbeac80ffae7350d7c2f5d7a24e9aab5036d0f82489746419d9b2", url="https://pypi.org/packages/04/c6/7d2514d76fefba65bfe2fa4e1082c3adea9edef5a149a3027b8f2d5ee0eb/texttable-1.6.1.tar.gz")
     version("1.6.0", sha256="624b9d6a94255b3d168b22f0808b78eca8b765d8b14c095e530641b8655c7dfc", url="https://pypi.org/packages/2e/e4/101fddb4f58143b810283f0ee438596eb241c0135cc9691f7d43794dbf90/texttable-1.6.0.tar.gz")
     version("1.5.0", sha256="1ba399c103c825202659c4d638946c15ffc565ad7846ee0672964786f437fb57", url="https://pypi.org/packages/bd/a8/45aa1c64f0aea4967766d9b46be3c0b03b096d8fb8c3cfe119884cfeed5e/texttable-1.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

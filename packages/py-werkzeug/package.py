@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWerkzeug(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.1", sha256="90a285dc0e42ad56b34e696398b8122ee4c681833fb35b8334a095d82c56da10", url="https://pypi.org/packages/c3/fc/254c3e9b5feb89ff5b9076a23218dafbc99c96ac5941e900b71206e6313b/werkzeug-3.0.1-py3-none-any.whl")
     version("3.0.0", sha256="cbb2600f7eabe51dbc0502f58be0b3e1b96b893b05695ea2b35b43d4de2d9962", url="https://pypi.org/packages/b6/a5/54b01f663d60d5334f6c9c87c26274e94617a4fd463d812463626423b10d/werkzeug-3.0.0-py3-none-any.whl")
     version("2.3.8", sha256="bba1f19f8ec89d4d607a3bd62f1904bd2e609472d93cd85e9d4e178f472c3748", url="https://pypi.org/packages/fd/21/0a674dfe66e9df9072c46269c882e9f901d36d987d8ea50ead033a9c1e01/werkzeug-2.3.8-py3-none-any.whl")
@@ -29,10 +29,15 @@ class PyWerkzeug(PythonPackage):
     version("0.15.1", sha256="96da23fa8ccecbc3ae832a83df5c722c11547d021637faacb0bec4dd2f4666c8", url="https://pypi.org/packages/24/4d/2fc4e872fbaaf44cc3fd5a9cd42fda7e57c031f08e28c9f35689e8b43198/Werkzeug-0.15.1-py2.py3-none-any.whl")
     version("0.15.0", sha256="ee11b0f0640c56fb491b43b38356c4b588b3202b415a1e03eacf1c5561c961cf", url="https://pypi.org/packages/29/5e/d54398f8ee78166d2cf07e46d19096e55aba506e44de998a1ad85b83ec8d/Werkzeug-0.15.0-py2.py3-none-any.whl")
     version("0.14.1", sha256="d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b", url="https://pypi.org/packages/20/c4/12e3e56473e52375aa29c4764e70d1b8f3efa6682bef8d0aae04fe335243/Werkzeug-0.14.1-py2.py3-none-any.whl")
-    version("0.12.2", sha256="903a7b87b74635244548b30d30db4c8947fe64c5198f58899ddcd3a13c23bb26", url="https://pypi.org/packages/56/41/c095a77eb2dd69bf278dd664a97d3416af04e9ba1a00b8c138f772741d31/Werkzeug-0.12.2.tar.gz")
-    version("0.11.15", sha256="455d7798ac263266dbd38d4841f7534dd35ca9c3da4a8df303f8488f38f3bcc0", url="https://pypi.org/packages/fe/7f/6d70f765ce5484e07576313897793cb49333dd34e462488ee818d17244af/Werkzeug-0.11.15.tar.gz")
-    version("0.11.11", sha256="e72c46bc14405cba7a26bd2ce28df734471bc9016bc8b4cb69466c2c14c2f7e5", url="https://pypi.org/packages/43/2e/d822b4a4216804519ace92e0368dcfc4b0b2887462d852fdd476b253ecc9/Werkzeug-0.11.11.tar.gz")
+    version("0.12.2", sha256="e8549c143af3ce6559699a01e26fa4174f4c591dbee0a499f3cd4c3781cdec3d", url="https://pypi.org/packages/97/02/306e0d57fdbf467ec1c763bc1757ec6ba20b1332e0ea7e49111533d71d1c/Werkzeug-0.12.2-py2.py3-none-any.whl")
+    version("0.11.15", sha256="c6f6f89124df0514d886782c658c3e12f2caaa94da34cee3fd82eebf4ebf052b", url="https://pypi.org/packages/ef/c6/3c431fea5f93c8bc869ec9c7bdad9ffef4ff9c81bfe1d294217447206c46/Werkzeug-0.11.15-py2.py3-none-any.whl")
+    version("0.11.11", sha256="eb3108af06aed08fb2f4fc883f2adf04c8f4997f6368517591b2becf15ae0da2", url="https://pypi.org/packages/a9/5e/41f791a3f380ec50f2c4c3ef1399d9ffce6b4fe9a7f305222f014cf4fe83/Werkzeug-0.11.11-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-markupsafe@2.1.1:", when="@2.2:")
+    # END DEPENDENCIES
 

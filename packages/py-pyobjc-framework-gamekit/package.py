@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkGamekit(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="0ef877db88e8888ecf682b09b9fb1ee6b879f23d521ce3a738a1b0fb2b885974", url="https://pypi.org/packages/0c/e0/89bec2f22f568644254db7f5469f2cc6cf1a2ba3ff3dbcb8a354300359cc/pyobjc-framework-GameKit-10.2.tar.gz")
     version("10.1", sha256="6fa87a29556cdaf78c86851fc61edb6d384f1a7370a75a66bdd208ed1250899f", url="https://pypi.org/packages/81/5a/6f8102707f5b7a366289551f461dfc204f3cc2bd4928a1ee14f8107d24e6/pyobjc-framework-GameKit-10.1.tar.gz")
     version("10.0", sha256="6febacef9b003b58eeb6ca936cd83825bd22fe55475b965e0deb29b48d5912c5", url="https://pypi.org/packages/61/f6/07abe9ef376412045c066aa4470d2b3f8bfdad89a5c97177b3fa8ddc4c5e/pyobjc-framework-GameKit-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkGamekit(PythonPackage):
     version("9.0", sha256="2c9e404a124513da6e5e286cc59a519648fd923847aba616125aab046297b3a6", url="https://pypi.org/packages/17/09/58eb523868fff94982427dd648588f40b356d6a8432aac2c703998ec66d1/pyobjc-framework-GameKit-9.0.tar.gz")
     version("8.5.1", sha256="3de0782b3ec865a58ba08faaa726a8106b4ddf50ab5947f50ff8aaab7c656f0e", url="https://pypi.org/packages/a5/a2/7079a838629e198f9e136e568fa96b0914a714fa5fe5fa4a3ceb27f54688/pyobjc-framework-GameKit-8.5.1.tar.gz")
     version("8.5", sha256="612284664ff2234f2d36fa8d928a65160a7dd40c90c5044e6155db652926fae2", url="https://pypi.org/packages/4f/aa/4f74c91149dd210ba62f5bdc812abc3b1c641abcd97ced7cabc49f9f7dd2/pyobjc-framework-GameKit-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -28,4 +32,5 @@ class PyPyobjcFrameworkGamekit(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-quartz@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-quartz@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

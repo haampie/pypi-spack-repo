@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNumcodecs(PythonPackage):
+    # BEGIN VERSIONS
     version("0.12.1", sha256="05d91a433733e7eef268d7e80ec226a0232da244289614a8f3826901aec1098e", url="https://pypi.org/packages/b7/1b/1f1d880e29e719c7c6205065d1afbc91114c0d91935ac419faa43e5e08b0/numcodecs-0.12.1.tar.gz")
     version("0.12.0", sha256="6388e5f4e94d18a7165fbd1c9d3637673b74157cff8bc644005f9e2a4c717d6e", url="https://pypi.org/packages/cd/cf/790853e781102997154abb093c4afe9f380065615490a3b045e38c690ca6/numcodecs-0.12.0.tar.gz")
     version("0.11.0", sha256="6c058b321de84a1729299b0eae4d652b2e48ea1ca7f9df0da65cb13470e635eb", url="https://pypi.org/packages/19/0f/006424c07b551a13c773b59a3656beadbaadbcf9df1601e87fcae342618c/numcodecs-0.11.0.tar.gz")
@@ -19,7 +19,15 @@ class PyNumcodecs(PythonPackage):
     version("0.8.0", sha256="7c7d0ea56b5e2a267ae785bdce47abed62829ef000f03be8e32e30df62d3749c", url="https://pypi.org/packages/59/99/355e23e418f003a0e99db515b95fb09e0754acfb2ab0d782c7144db4293f/numcodecs-0.8.0.tar.gz")
     version("0.7.3", sha256="022b12ad83eb623ec53f154859d49f6ec43b15c36052fa864eaf2d9ee786dd85", url="https://pypi.org/packages/fa/1d/644b26dbc7fe9666223e8744680213e5dad4db0fe67034ddf6d02ec8b1a0/numcodecs-0.7.3.tar.gz")
     version("0.6.4", sha256="ef4843d5db4d074e607e9b85156835c10d006afc10e175bda62ff5412fca6e4d", url="https://pypi.org/packages/53/2a/1dc435cbd1d082827190a3e46168fd04f74e266e91313969d5a1aab601bf/numcodecs-0.6.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("msgpack", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-msgpack", when="@0.12:+msgpack")
         depends_on("py-numpy@1.7:", when="@0.12:")
+    # END DEPENDENCIES
 

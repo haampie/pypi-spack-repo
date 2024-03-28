@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMultidict(PythonPackage):
+    # BEGIN VERSIONS
     version("6.0.5", sha256="f7e301075edaf50500f0b341543c41194d8df3ae5caf4702f2095f3ca73dd8da", url="https://pypi.org/packages/f9/79/722ca999a3a09a63b35aac12ec27dfa8e5bb3a38b0f857f7a1a209a88836/multidict-6.0.5.tar.gz")
     version("6.0.4", sha256="3666906492efb76453c0e7b97f2cf459b0682e7402c0489a95484965dbc1da49", url="https://pypi.org/packages/4a/15/bd620f7a6eb9aa5112c4ef93e7031bcd071e0611763d8e17706ef8ba65e0/multidict-6.0.4.tar.gz")
     version("6.0.3", sha256="2523a29006c034687eccd3ee70093a697129a3ffe8732535d3b2df6a4ecc279d", url="https://pypi.org/packages/b5/5b/1dd3b9cf73c474ea1d0f0b1f8b7b712b0f13817493fd93101256ec856b59/multidict-6.0.3.tar.gz")
@@ -27,5 +27,10 @@ class PyMultidict(PythonPackage):
     version("4.6.0", sha256="56fb5c003ef5d7b0d4957fe2d36fc29df16e56667ef78ee2a5bc5379c874fff0", url="https://pypi.org/packages/b7/8f/1ec863af20356921e9eb9b69a2ccb55fbe24550270354f17acbdaa6965cd/multidict-4.6.0.tar.gz")
     version("4.5.2", sha256="024b8129695a952ebd93373e45b5d341dbb87c17ce49637b34000093f243dd4f", url="https://pypi.org/packages/7f/8f/b3c8c5b062309e854ce5b726fc101195fbaa881d306ffa5c2ba19efa3af2/multidict-4.5.2.tar.gz")
     version("4.5.1", sha256="985dbf59e92f475573a04598f9a00f92b4fdb64fc41f1df2ea6f33b689319537", url="https://pypi.org/packages/21/30/f08438389a2540b9b2145f47a1ef9e64687a8b90b374e74829d8acd13c0b/multidict-4.5.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

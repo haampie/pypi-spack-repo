@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyVcversioner(PythonPackage):
-    version("2.16.0.0", sha256="dae60c17a479781f44a4010701833f1829140b1eeccd258762a74974aa06e19b", url="https://pypi.org/packages/c5/cc/33162c0a7b28a4d8c83da07bc2b12cee58c120b4a9e8bba31c41c8d35a16/vcversioner-2.16.0.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("2.16.0.0", sha256="1b81bd26218944e6c86b03c7a840e058c697f014a03374296dc2f8969d1adf36", url="https://pypi.org/packages/5a/6b/6f5da157648cadbaf83f625c395cd23ff6be3421268b7bf54523b8d9aaab/vcversioner-2.16.0.0-py2-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

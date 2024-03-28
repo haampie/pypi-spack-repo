@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,11 +6,17 @@
 from spack.package import *
 
 class PyClickRepl(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.3.0", sha256="fb7e06deb8da8de86180a33a9da97ac316751c094c6899382da7feeeeb51b812", url="https://pypi.org/packages/52/40/9d857001228658f0d59e97ebd4c346fe73e138c6de1bce61dc568a57c7f8/click_repl-0.3.0-py3-none-any.whl")
-    version("0.2.0", sha256="cd12f68d745bf6151210790540b4cb064c7b13e571bc64b6957d98d120dacfd8", url="https://pypi.org/packages/60/30/11d3f09eff5ae3627bca79563855035e8d241444520500a3c7914eae6a74/click-repl-0.2.0.tar.gz")
-    version("0.1.6", sha256="b9f29d52abc4d6059f8e276132a111ab8d94980afe6a5432b9d996544afa95d5", url="https://pypi.org/packages/51/99/6a722e232f92fdc21c46fd042fea63e7c2fcda3086ff5db62edd595d3f49/click-repl-0.1.6.tar.gz")
+    version("0.2.0", sha256="94b3fbbc9406a236f176e0506524b2937e4b23b6f4c0c0b2a0a83f8a64e9194b", url="https://pypi.org/packages/9b/33/15f401400cc0cf2470aa777d225e772f83a68541495e015d2fa5c77d33d0/click_repl-0.2.0-py3-none-any.whl")
+    version("0.1.6", sha256="9c4c3d022789cae912aad8a3f5e1d7c2cdd016ee1225b5212ad3e8691563cda5", url="https://pypi.org/packages/6c/4e/577214ee76a5a36af485ae9ec01b4a47ee607b5d413b2063dafccf41f3ad/click_repl-0.1.6-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click@7:", when="@0.3:")
         depends_on("py-prompt-toolkit@3.0.36:", when="@0.3:")
+    # END DEPENDENCIES
 

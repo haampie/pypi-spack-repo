@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMsrestazure(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.6.4", sha256="3de50f56147ef529b31e099a982496690468ecef33f0544cb0fa0cfe1e1de5b9", url="https://pypi.org/packages/5e/3a/7adb08fd2f0ee6fdfd03685fac38477b64f184943dcf6ea0cbffb205f22d/msrestazure-0.6.4-py2.py3-none-any.whl")
     version("0.6.3", sha256="0ae7f903ff81631512beef39602c4104a8fe04cb7d166f28a1ec43c0f0985749", url="https://pypi.org/packages/01/70/4abd575d876428e3892ca6b7acafb59b53cb9923fa6aec2cbbf173495ce1/msrestazure-0.6.3-py2.py3-none-any.whl")
     version("0.6.2", sha256="63db9f646fffc9244b332090e679d1e5f283ac491ee0cc321f5116f9450deb4a", url="https://pypi.org/packages/68/75/5cb56ca8cbc6c5fe476e4878c73f57a331edcf55e5d3fcb4a7377d7d659d/msrestazure-0.6.2-py2.py3-none-any.whl")
@@ -24,7 +24,11 @@ class PyMsrestazure(PythonPackage):
     version("0.4.27", sha256="f4aba0e3e7965ebca58f2c1e4fa272e2ea906b5a3a1faa68f5bb60cab22c4f76", url="https://pypi.org/packages/ab/0f/9aaa6639f83dcc81b8280f97373e3e2102db8ccbb673735b24d130e95c42/msrestazure-0.4.27-py2.py3-none-any.whl")
     version("0.4.26", sha256="12ec979af4cbc8edd29ea14bafb87ea93d336719e7c2659ece50d1ab547c8b70", url="https://pypi.org/packages/06/fc/27dc2b8510e317fac23b743204da37e26dbb1df41d3581b1eaed2ed7b281/msrestazure-0.4.26-py2.py3-none-any.whl")
     version("0.4.25", sha256="ff7537e67fab0929673b2ed481d293ffd3d906b2665269e83c6ea0098a4bb88f", url="https://pypi.org/packages/35/16/c8c876a17f674663cb1f8c516e911f2be6cc3475c15f61ee64ec6bf55e24/msrestazure-0.4.25-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-adal@0.6:", when="@0.5:")
         depends_on("py-adal@0.5:", when="@0.4.30:0.4")
@@ -35,4 +39,5 @@ class PyMsrestazure(PythonPackage):
         depends_on("py-msrest@0.4.28:", when="@0.4.27:0.5")
         depends_on("py-msrest@0.4.25:", when="@0.4.20:0.4.26")
         depends_on("py-six", when="@0.6.4:")
+    # END DEPENDENCIES
 

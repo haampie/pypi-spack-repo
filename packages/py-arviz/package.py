@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyArviz(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.17.1", sha256="c6d24bea85a801d781d95cd21b583079ae882aa4a25ff385321a83eb47ee1e4a", url="https://pypi.org/packages/d7/4d/cb2a58af7c747c30af357972151233f5d24d1699276e2d38621e57a22aa8/arviz-0.17.1-py3-none-any.whl")
     version("0.17.0", sha256="3f00f83af5b8db129b01fa9c52a8138a25da32e1154a905b6dddf5e88d1f7089", url="https://pypi.org/packages/9b/c5/6fb0c9b9941cd1e59bbd3d2cd20ccaecbb156ec2030a027cfbb0b6837657/arviz-0.17.0-py3-none-any.whl")
     version("0.16.1", sha256="872d1d685719f81a31f94c25278cbaef314df7f6cad0671935f26a006182b8d4", url="https://pypi.org/packages/8c/43/b5be65de19e4ca0cfeb522addc3ac4abdafa9d29f3512dec05b8a672c615/arviz-0.16.1-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyArviz(PythonPackage):
     version("0.12.1", sha256="95a2b94995e30683b52c30f82326eed1544d057244bea468d421d5c42ed1f245", url="https://pypi.org/packages/95/c0/dd9b4bf085d974de1c6d5fffea8e25153e8208ece6b363fa3a9263ed7e51/arviz-0.12.1-py3-none-any.whl")
     version("0.12.0", sha256="08ef308a90ddbe52332ef90aeffa367ea080960ada4104a88716cc234dbcee1f", url="https://pypi.org/packages/90/ba/97a37d1208434357bbc8b249063b2afb6fce34eeb1aab101d740adf7c4f6/arviz-0.12.0-py3-none-any.whl")
     version("0.6.1", sha256="fa613e6f796501f352462c747638d7e1d7ae3e3ed36e665e547def1b2524602c", url="https://pypi.org/packages/ec/8b/83472d660e004a69b8e7b3c1dd12a607167774097138445d0dda1a3590dc/arviz-0.6.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.16:")
         depends_on("py-h5netcdf@1.0.2:", when="@0.15:")
@@ -46,4 +50,5 @@ class PyArviz(PythonPackage):
         depends_on("py-xarray@0.11:", when="@0.5:0.9")
         depends_on("py-xarray-einstats@0.3:", when="@0.13:")
         depends_on("py-xarray-einstats@0.2:", when="@0.12.1:0.12")
+    # END DEPENDENCIES
 

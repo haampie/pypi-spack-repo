@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHuggingfaceHub(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.21.4", sha256="df37c2c37fc6c82163cdd8a67ede261687d80d1e262526d6c0ce73b6b3630a7b", url="https://pypi.org/packages/ab/28/d4b691840d73126d4c9845f8a22dad033ac872509b6d3a0d93b456eef424/huggingface_hub-0.21.4-py3-none-any.whl")
     version("0.21.3", sha256="b183144336fdf2810a8c109822e0bb6ef1fd61c65da6fb60e8c3f658b7144016", url="https://pypi.org/packages/47/8f/cf6683de320cf3873850ba48b7383db96958fe435b8e227db92119f6d867/huggingface_hub-0.21.3-py3-none-any.whl")
     version("0.21.2", sha256="16955c2b60bcff32a0778f84b9e9ae8f61d7f003da6aa1fbb7bc897a0c37b28c", url="https://pypi.org/packages/3d/c8/c3342c97848896df5d78d18abd94c558e457a4f02feec99a79989d8c30e0/huggingface_hub-0.21.2-py3-none-any.whl")
@@ -41,11 +41,18 @@ class PyHuggingfaceHub(PythonPackage):
     version("0.0.11", sha256="1e62128a5e82134f2446b56e48f8068ea5eca425cfadd9c1df5d8e77bdc4f025", url="https://pypi.org/packages/45/94/27f4f66d8d763f60204f447287cbe78d8bdf9c86d87dbc1fe26e792e727a/huggingface_hub-0.0.11-py3-none-any.whl")
     version("0.0.10", sha256="447cb5ac83da68dba8b5c42069165da81c4d9450b3d6a78ce027a9e5cce9461f", url="https://pypi.org/packages/3c/e3/fb7b6aefaf0fc7b792cebbbd590b1895c022ab0ff27f389e1019c6f2e68a/huggingface_hub-0.0.10-py3-none-any.whl")
     version("0.0.8", sha256="feec10c3cff31bab75fa90ed801a1979301d4ebcbdf681312cb0371f77f53dff", url="https://pypi.org/packages/a1/88/7b1e45720ecf59c6c6737ff332f41c955963090a18e72acbcbeac6b25e86/huggingface_hub-0.0.8-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("cli", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-filelock")
         depends_on("py-fsspec@2023.5:", when="@0.18:")
         depends_on("py-fsspec", when="@0.14:0.17")
+        depends_on("py-inquirerpy@0.3.4:", when="@0.10:+cli")
         depends_on("py-packaging@20.9:", when="@0.0.11:")
         depends_on("py-pyyaml@5.1:", when="@0.7:")
         depends_on("py-pyyaml", when="@0.0.19:0.6")
@@ -55,4 +62,5 @@ class PyHuggingfaceHub(PythonPackage):
         depends_on("py-tqdm", when="@:0.11")
         depends_on("py-typing-extensions@3.7.4.3:", when="@0.1.1:")
         depends_on("py-typing-extensions", when="@0.0.9:0.1.0")
+    # END DEPENDENCIES
 

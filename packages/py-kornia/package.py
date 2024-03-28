@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKornia(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.2", sha256="411e09ccdc4efde351f90a81f35a6eb9fad3bcf58ac037cbec4d41a8364dd039", url="https://pypi.org/packages/ac/fa/5612c4b1ad83b3044062e9dd0ca3c91937d8023cff0836269e18573655b0/kornia-0.7.2-py2.py3-none-any.whl")
     version("0.7.1", sha256="bd1cbe99373beafe6e59423be2374afbc2086a9ba57a8c66b94db6622b86f091", url="https://pypi.org/packages/34/5b/f1ee7ec4826cdd34f95f822c975f5a889c99dfd29491cebfc71db03b40e8/kornia-0.7.1-py2.py3-none-any.whl")
     version("0.7.0", sha256="daa77a65f9cbfc1a67487d64a6b23d18a81f10eb94380312cda255d431bcc18a", url="https://pypi.org/packages/55/da/72cb83aa364ebb4d0109965e20c5d33d7063ccab15332c3fd0acfd5609c9/kornia-0.7.0-py2.py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyKornia(PythonPackage):
     version("0.6.2", sha256="5269279f6777aad92bd3926b333e5e8f6b7aee856eb95b6ec841364b673ae370", url="https://pypi.org/packages/89/d9/b78d36a1b1168170537c3220da0a2e09c191012526c162c119fa851e9cce/kornia-0.6.2-py2.py3-none-any.whl")
     version("0.6.1", sha256="c896398fd2c3b4db08c4927a88f859925a24491d2e25476f62d8d4fa5a5a2a7e", url="https://pypi.org/packages/6d/ea/fcc3e64977446c9e27a8e2aca1070c495a0f660a57644ce680b95dd72ddc/kornia-0.6.1-py2.py3-none-any.whl")
     version("0.5.10", sha256="14ff44044bf07eb6f5b8dc5f5244e064bb02e5b05a500d161c495f69cfa607a4", url="https://pypi.org/packages/c0/98/ae65c5e539ca450d60489cda5f1d07f889b02b552140f97518a26e4c4230/kornia-0.5.10-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-kornia-rs@0.1:", when="@0.7.2:")
         depends_on("py-numpy", when="@0.3:0.5.4")
@@ -31,4 +35,5 @@ class PyKornia(PythonPackage):
         depends_on("py-torch@1.9.1:", when="@0.6.9:")
         depends_on("py-torch@1.8.1:", when="@0.6:0.6.8")
         depends_on("py-torch@1.6:", when="@0.4.1:0.5")
+    # END DEPENDENCIES
 

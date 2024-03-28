@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAzureMgmtResource(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("23.0.1", sha256="f185eec72bbc39f42bcb83ae6f1bad744f0e3f20a12d9b2b3e70d16c74ad9cc0", url="https://pypi.org/packages/40/14/9e0ffa0b24958081416005b49a7d903c1c12712accdd2cf9ebad7b3b41ee/azure_mgmt_resource-23.0.1-py3-none-any.whl")
     version("23.0.0", sha256="b556803a3b8699dbcd1f4c33c8229830225c8c61ba058323d5bae7dc7785d65e", url="https://pypi.org/packages/c6/53/6a8118e1063d2b60ea33e8dd16ea2dafd1e89c91ee83a6581f108fdea940/azure_mgmt_resource-23.0.0-py3-none-any.whl")
     version("22.0.0", sha256="5c9712aacb230c7dde59cd7b43a734ed88a326140042ae02746d095fe779ae20", url="https://pypi.org/packages/b7/0a/8826c211f8904dbbe88cddaf39c7d38a419427f8f7454ea6cf8ab0962e10/azure_mgmt_resource-22.0.0-py3-none-any.whl")
@@ -32,7 +32,11 @@ class PyAzureMgmtResource(PythonPackage):
     version("6.0.0", sha256="a557a87fad2a2a5190d03e12cd7cf6307a194604e808773972c34847503b482b", url="https://pypi.org/packages/76/2e/5ba951dda43e5bddc65730e5b39bc45f04074612db69477fdb2ef9dd0702/azure_mgmt_resource-6.0.0-py2.py3-none-any.whl")
     version("5.1.0", sha256="50ffb1986056a67b5381d366f0a6ada0cdd5ad275c0e85b07baa91cb1de08997", url="https://pypi.org/packages/7c/0d/80815326fa04f2a73ea94b0f57c29669c89df5aa5f5e285952f6445a91c4/azure_mgmt_resource-5.1.0-py2.py3-none-any.whl")
     version("5.0.0", sha256="ce901f97d04257b13c7424d27dc1c8585c0527fca19942ac0419e99a5591da54", url="https://pypi.org/packages/74/ae/ea83233d6d3315151b0f08266cd8c33bad32bd109f68b520c6320006b034/azure_mgmt_resource-5.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azure-common@1.1:", when="@1.2:2.0.0-rc1,2.1:")
         depends_on("py-azure-mgmt-core@1.3.2:", when="@21.2:")
@@ -43,4 +47,5 @@ class PyAzureMgmtResource(PythonPackage):
         depends_on("py-msrest@0.6.21:", when="@16.1:21.1")
         depends_on("py-msrest@0.5:", when="@2.1:16.0")
         depends_on("py-msrestazure@0.4.32:", when="@2.1:13")
+    # END DEPENDENCIES
 

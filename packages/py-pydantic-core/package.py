@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPydanticCore(PythonPackage):
+    # BEGIN VERSIONS
     version("2.16.3", sha256="1cac689f80a3abab2d3c0048b29eea5751114054f032a941a32de4c852c59cad", url="https://pypi.org/packages/77/3f/65dbe5231946fe02b4e6ea92bc303d2462f45d299890fd5e8bfe4d1c3d66/pydantic_core-2.16.3.tar.gz")
     version("2.16.2", sha256="0ba503850d8b8dcc18391f10de896ae51d37fe5fe43dbfb6a35c5c5cad271a06", url="https://pypi.org/packages/0d/72/64550ef171432f97d046118a9869ad774925c2f442589d5f6164b8288e85/pydantic_core-2.16.2.tar.gz")
     version("2.16.1", sha256="daff04257b49ab7f4b3f73f98283d3dbb1a65bf3500d55c7beac3c66c310fe34", url="https://pypi.org/packages/a0/a7/61d013c73773bb03d02de9de8e4e5b2ed2c100dc98ae7046d54485ecf5d4/pydantic_core-2.16.1.tar.gz")
@@ -19,10 +19,15 @@ class PyPydanticCore(PythonPackage):
     version("2.0.2", sha256="996ffb7ae3c8cb7506a58dae52bbf13a7bbbfce6c3110a2b44c20d2587e57b9b", url="https://pypi.org/packages/bb/c9/a03a85dcfdfac6907b7203f375368460e473f2d48417ad83c88b564995a0/pydantic_core-2.0.2.tar.gz")
     version("2.0.1", sha256="f9fffcb5507bff84a1312d1616406cad157806f105d78bd184d1e6b3b00e6417", url="https://pypi.org/packages/22/c3/0219aff361b6975724349a1894f0a6ef808d65b268e52a9c8b1efdf8758c/pydantic_core-2.0.1.tar.gz")
     version("0.25.0", sha256="6ed58ce669d13c076095adaea3331f48ab914485eb1ce6f462c08c982edf935e", url="https://pypi.org/packages/3c/05/64fd21f0151ad7387b3ef19e9ebbf313eb6ebb4d94c377419fbb252148fb/pydantic_core-0.25.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@:0.0")
         depends_on("py-typing-extensions@4.6:4.7.0-rc1,4.7.1:", when="@2.0.2:")
         depends_on("py-typing-extensions@4.6:", when="@2:2.0.1")
         depends_on("py-typing-extensions", when="@0.1:0 ^python@:3.10")
+    # END DEPENDENCIES
 

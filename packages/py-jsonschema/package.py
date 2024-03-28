@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJsonschema(PythonPackage):
+    # BEGIN VERSIONS
     version("4.21.1", sha256="7996507afae316306f9e2290407761157c6f78002dcf7419acb99822143d1c6f", url="https://pypi.org/packages/39/9d/b035d024c62c85f2e2d4806a59ca7b8520307f34e0932fbc8cc75fe7b2d9/jsonschema-4.21.1-py3-none-any.whl")
     version("4.21.0", sha256="70a09719d375c0a2874571b363c8a24be7df8071b80c9aa76bc4551e7297c63c", url="https://pypi.org/packages/76/f4/41e31ff45e30a9ed80f3e399b23481ac3db1cb796d315bc8813716ed8d5f/jsonschema-4.21.0-py3-none-any.whl")
     version("4.20.0", sha256="ed6231f0429ecf966f5bc8dfef245998220549cbbcf140f913b7464c52c3b6b3", url="https://pypi.org/packages/0f/ed/0058234d8dd2b1fc6beeea8eab945191a05e9d391a63202f49fe23327586/jsonschema-4.20.0-py3-none-any.whl")
@@ -35,14 +35,18 @@ class PyJsonschema(PythonPackage):
     version("3.0.2", sha256="5f9c0a719ca2ce14c5de2fd350a64fd2d13e8539db29836a86adc990bb1a068f", url="https://pypi.org/packages/54/48/f5f11003ceddcd4ad292d4d9b5677588e9169eef41f88e38b2888e7ec6c4/jsonschema-3.0.2-py2.py3-none-any.whl")
     version("3.0.1", sha256="a5f6559964a3851f59040d3b961de5e68e70971afb88ba519d27e6a039efff1a", url="https://pypi.org/packages/aa/69/df679dfbdd051568b53c38ec8152a3ab6bc533434fc7ed11ab034bf5e82f/jsonschema-3.0.1-py2.py3-none-any.whl")
     version("3.0.0", sha256="dd3f8ecb1b52d94d45eedb67cb86cac57b94ded562c5d98f63719e55ce58557b", url="https://pypi.org/packages/cd/e6/be1b2a6ebebdaf1f790f1e750bb720fbda0335c2a19601ea9d8bb5059f38/jsonschema-3.0.0-py2.py3-none-any.whl")
-    version("2.6.0", sha256="6ff5f3180870836cae40f06fa10419f557208175f13ad7bc26caa77beb1f6e02", url="https://pypi.org/packages/58/b9/171dbb07e18c6346090a37f03c7e74410a1a56123f847efed59af260a298/jsonschema-2.6.0.tar.gz")
+    version("2.6.0", sha256="000e68abd33c972a5248544925a0cae7d1125f9bf6c58280d37546b946769a08", url="https://pypi.org/packages/77/de/47e35a97b2b05c2fadbec67d44cfcdcd09b8086951b331d82de90d2912da/jsonschema-2.6.0-py2.py3-none-any.whl")
     version("2.5.1", sha256="71e7b3bcf9fca408bcb65bb60892f375d3abdd2e4f296eeeb8fe0bbbfcde598e", url="https://pypi.org/packages/bd/cc/5388547ea3504bd8cbf99ba2ae7a3231598f54038e9b228cbd174f8ec6a1/jsonschema-2.5.1-py2.py3-none-any.whl")
     version("2.5.0", sha256="d3daa59dc98bf8cbad0d8c18a751a739fb752461c509597598cf2d9595702c65", url="https://pypi.org/packages/7b/ba/139de79e48de67999ac3b0de5503fd46dbe11d105b70c3611b1538f61fb5/jsonschema-2.5.0.zip")
-    version("2.4.0", sha256="acf1e360b4682d64ba6acc35dbc65d81d9bde68a291a97f14f16f4282733f5a4", url="https://pypi.org/packages/51/d5/66d3d9494945806961139adea9b435030ecc619f427abff40075e3696fd4/jsonschema-2.4.0.zip")
+    version("2.4.0", sha256="5af36686c271097f25ec023546c397cb99bc67a5db3836e52e6b37bdb45ca21e", url="https://pypi.org/packages/5e/55/9e973774cb3a47d0d025fc9626c8cff96b104e3764493f91b49fa125d8ec/jsonschema-2.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("format", default=False)
     variant("format-nongpl", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@22.2:", when="@4.18:")
         depends_on("py-attrs@17.4:", when="@3.0.0-alpha4:4.17")
@@ -77,4 +81,5 @@ class PyJsonschema(PythonPackage):
         depends_on("py-webcolors@1.11:", when="@4.0.0-alpha6:+format")
         depends_on("py-webcolors", when="@3.2:4.0.0-alpha5+format-nongpl")
         depends_on("py-webcolors", when="@2.5,3.0.0-alpha4:4.0.0-alpha5+format")
+    # END DEPENDENCIES
 

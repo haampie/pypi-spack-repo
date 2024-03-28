@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyVermin(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.6.0", sha256="f1fa9ee40f59983dc40e0477eb2b1fa8061a3df4c3b2bcf349add462a5610efb", url="https://pypi.org/packages/2e/98/1a2ca43e6d646421eea16ec19977e2e6d1ea9079bd9d873bfae513d43f1c/vermin-1.6.0-py2.py3-none-any.whl")
     version("1.5.2", sha256="c1566ad4e1c8e1b0e98cf5f7d69b691d44a578e2ce9c5aa1d418736bc4944b32", url="https://pypi.org/packages/46/ed/420955392d9c2743c93e0418928927e34aba355c716a70c6bdba209b930f/vermin-1.5.2-py2.py3-none-any.whl")
     version("1.5.1", sha256="420995de564ac0c31e2157220259d7ac82556e8fa69c112d8005b78c14b0caf5", url="https://pypi.org/packages/d2/9d/7dc49fece1a9c99c87671f11df1355fcfe620407f524235e503f5602e58d/vermin-1.5.1-py2.py3-none-any.whl")
@@ -30,5 +30,10 @@ class PyVermin(PythonPackage):
     version("0.10.5", sha256="c66ae418e4030915de4cdc53f26fe375fea9b51c17fa04bae2cc63efc0b780b3", url="https://pypi.org/packages/7a/ce/e96f49f4957cd6cc14f7924f2960f27d947a9ffdebc0b0a2cbaab3f30c1f/vermin-0.10.5-py2.py3-none-any.whl")
     version("0.10.4", sha256="32d5ae48d3104e402db4297da23e877c01af793897396930ff9573c27a5cd17f", url="https://pypi.org/packages/9b/95/0284010434b7d848f422d1506b1e9b5ff514ca94ed4e4c88e0e6f643ff49/vermin-0.10.4-py2.py3-none-any.whl")
     version("0.10.0", sha256="d5ef8d0861193965d25b59a640eb08e573b24bec207136b931b93ce161d52e7e", url="https://pypi.org/packages/1b/39/43794d1a6162cd7bc8a0c3c77b49b65e5a487aac7a160d5380e6fd6dc562/vermin-0.10.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

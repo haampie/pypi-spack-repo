@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyarrow(PythonPackage):
+    # BEGIN VERSIONS
     version("15.0.2", sha256="9c9bc803cb3b7bfacc1e96ffbfd923601065d9d3f911179d81e72d99fd74a3d9", url="https://pypi.org/packages/35/a1/b7c9bacfd17a9d1d8d025db2fc39112e0b1a629ea401880e4e97632dbc4c/pyarrow-15.0.2.tar.gz")
     version("15.0.1", sha256="21d812548d39d490e0c6928a7c663f37b96bf764034123d4b4ab4530ecc757a9", url="https://pypi.org/packages/ac/f8/38a8498b294a6d3c74cd81bb411c510d52dfdd40d082651ded761fa7a964/pyarrow-15.0.1.tar.gz")
     version("15.0.0", sha256="876858f549d540898f927eba4ef77cd549ad8d24baa3207cf1b72e5788b50e83", url="https://pypi.org/packages/b3/1b/bc36a07706f630709bfd5a7936d2875e153e3d084a6d95dae583c3ad9de7/pyarrow-15.0.0.tar.gz")
@@ -37,10 +37,21 @@ class PyPyarrow(PythonPackage):
     version("0.12.1", sha256="10db6e486c918c3af999d0114a22d92770687e3a6607ea3f14e6748854824c2a", url="https://pypi.org/packages/43/f9/457938a5025244eb073bee7cfcb4d5c767ce125a9bebdff94f4c25cfb356/pyarrow-0.12.1.tar.gz")
     version("0.11.0", sha256="07a6fd71c5d7440f2c42383dd2c5daa12d7f0a012f1e88288ed08a247032aead", url="https://pypi.org/packages/1d/b6/c4e63f8bdb175d2223df26ddf12e2a0ba3fa347890128b5f128cb3f72589/pyarrow-0.11.0.tar.gz")
     version("0.9.0", sha256="7db8ce2f0eff5a00d6da918ce9f9cfec265e13f8a119b4adb1595e5b19fd6242", url="https://pypi.org/packages/be/2d/11751c477e4e7f4bb07ac7584aafabe0d0608c170e4bff67246d695ebdbe/pyarrow-0.9.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("cuda", default=False)
+    variant("cuda_arch", default=False)
+    variant("dataset", default=False)
+    variant("orc", default=False)
+    variant("parquet", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-futures", when="@:0.9")
         depends_on("py-numpy@1.14.0:", when="@0.11:0")
         depends_on("py-numpy@1.10:", when="@:0.10")
         depends_on("py-six@1.0.0:", when="@:0.16")
+    # END DEPENDENCIES
 

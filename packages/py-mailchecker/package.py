@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMailchecker(PythonPackage):
+    # BEGIN VERSIONS
     version("6.0.1", sha256="3d7a3a75f880a82d560ffcf934123a51955497f73096fa2a283c9f648e1f9f6b", url="https://pypi.org/packages/09/66/bc31f106b89d87672be10024bcd9d3ee51049757b75cd4f9d0b98528cf21/mailchecker-6.0.1.tar.gz")
     version("5.0.9", sha256="8b083907da42daa448d93eb19f0c978dde2e8565617a5e76271b35a5f7285ccd", url="https://pypi.org/packages/da/e3/d11a469f4f36770f5e529753088737d6e2e4266c04ba8e05aac63ef2911d/mailchecker-5.0.9.tar.gz")
     version("5.0.8", sha256="aea6b23755be76a1d27511fb3452ad0f4eebd8eced42ae4506131a2442378b06", url="https://pypi.org/packages/b8/ee/6dc388d61a006227d379ea48b4c52778f64eab9a44e55adbe71a87dc1f42/mailchecker-5.0.8.tar.gz")
@@ -19,5 +19,10 @@ class PyMailchecker(PythonPackage):
     version("5.0.1", sha256="7c9a15fe634899d713a490ba736ce66166425e50562ce3fee56e47b26c36c8e4", url="https://pypi.org/packages/38/b4/e9601671ac5791d2b58b39ad999304a7688630f87d275b8f62ceba225e02/mailchecker-5.0.1.tar.gz")
     version("5.0.0", sha256="77c446fcf4963c7bd0cbba3db4f2cf1ab129d2bfd8dc95b05a84f7712e22477f", url="https://pypi.org/packages/1c/1e/715564005f3a4cf9029f995f0f9b7e092afabfc935091b64c970306de72a/mailchecker-5.0.0.tar.gz")
     version("4.0.3", sha256="00dbe9739c754366233eb3887c5deef987672482a26e814314c3e749fc7b1d1f", url="https://pypi.org/packages/5a/0d/513e57bf531843ea4613fec8b6843c3b44d57307c9e4d815875f79329d9c/mailchecker-4.0.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

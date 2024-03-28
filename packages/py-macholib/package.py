@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMacholib(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.16.3", sha256="0e315d7583d38b8c77e815b1ecbdbf504a8258d8b3e17b61165c6feb60d18f2c", url="https://pypi.org/packages/d1/5d/c059c180c84f7962db0aeae7c3b9303ed1d73d76f2bfbc32bc231c8be314/macholib-1.16.3-py2.py3-none-any.whl")
     version("1.16.2", sha256="44c40f2cd7d6726af8fa6fe22549178d3a4dfecc35a9cd15ea916d9c83a688e0", url="https://pypi.org/packages/5f/8c/8d7c7437f2799f570f9f4cb1fc974f671eff6fecd659f5e4097858a014ef/macholib-1.16.2-py2.py3-none-any.whl")
     version("1.16", sha256="5a0742b587e6e57bfade1ab90651d4877185bf66fd4a176a488116de36878229", url="https://pypi.org/packages/dc/02/0d0f2010c17918055a253ba00653b88b4c3af2ec960004fe35c2aaf36f8e/macholib-1.16-py2.py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyMacholib(PythonPackage):
     version("1.13", sha256="c72bda118afe7799570fcb4114315d5c9c5416e48eacf1198da39b4d77201559", url="https://pypi.org/packages/93/be/cc6ac3fb59e38f2033c9006be147c198d77c28c2f2180e66743d4881571c/macholib-1.13-py2.py3-none-any.whl")
     version("1.11", sha256="ac02d29898cf66f27510d8f39e9112ae00590adb4a48ec57b25028d6962b1ae1", url="https://pypi.org/packages/41/f1/6d23e1c79d68e41eb592338d90a33af813f98f2b04458aaf0b86908da2d8/macholib-1.11-py2.py3-none-any.whl")
     version("1.10", sha256="a8941ff2cf2519859ed64d1248782442c98f5e1e28a1c331911d5501f74b7b37", url="https://pypi.org/packages/a1/01/845b2df65117dbdabf00c6df879625f4968ede6f512956710f05f4c7663a/macholib-1.10-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-altgraph@0.17:", when="@1.16.2:")
         depends_on("py-altgraph@0.15:", when="@1.9:1.16.0")
+    # END DEPENDENCIES
 

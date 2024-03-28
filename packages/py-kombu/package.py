@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKombu(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.3.5", sha256="0eac1bbb464afe6fb0924b21bf79460416d25d8abc52546d4f16cad94f789488", url="https://pypi.org/packages/f7/88/daca086d72832c74a7e239558ad484644c8cda0b9ae8a690f247bf13c268/kombu-5.3.5-py3-none-any.whl")
     version("5.3.4", sha256="63bb093fc9bb80cfb3a0972336a5cec1fa7ac5f9ef7e8237c6bf8dda9469313e", url="https://pypi.org/packages/a8/cc/24160d61e8c44bd76a775017c0859a403db471ddbd701e725fdf2becafa6/kombu-5.3.4-py3-none-any.whl")
     version("5.3.3", sha256="6cd5c5d5ef77538434b8f81f3e265c414269418645dbb47dbf130a8a05c3e357", url="https://pypi.org/packages/c4/05/0504dce43327e610cbe05c223691992bdb0212202bb830f105d57641665f/kombu-5.3.3-py3-none-any.whl")
@@ -22,7 +22,13 @@ class PyKombu(PythonPackage):
     version("4.6.6", sha256="e7465aa85a1db889116819f08c5de29520d2fa103324dcdca5e90af345f01771", url="https://pypi.org/packages/f7/86/496db94e44c6d0a16a52a1b539b5315d98e8aa59d14a8d4f1009d4eab6c2/kombu-4.6.6-py2.py3-none-any.whl")
     version("4.5.0", sha256="7b92303af381ef02fad6899fd5f5a9a96031d781356cd8e505fa54ae5ddee181", url="https://pypi.org/packages/b7/af/1914e93314f1b98756d5c5e366193124a0ffaab0e6d0e51e0f6f65fa851d/kombu-4.5.0-py2.py3-none-any.whl")
     version("4.3.0", sha256="7a2cbed551103db9a4e2efafe9b63222e012a61a18a881160ad797b9d4e1d0a1", url="https://pypi.org/packages/29/48/c709a54c8533ed46fd868e593782c6743da33614f8134b82bc0955455031/kombu-4.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("redis", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-amqp@5.1.1:", when="@5.3:")
         depends_on("py-amqp@5.0.9:", when="@5.2.3:5.2")
@@ -33,6 +39,14 @@ class PyKombu(PythonPackage):
         depends_on("py-backports-zoneinfo@0.2.1:+tzdata", when="@5.3.0: ^python@:3.8")
         depends_on("py-backports-zoneinfo@0.2.1:", when="@5.3.0-rc2 ^python@:3.8")
         depends_on("py-importlib-metadata@0.18:", when="@4.6.4:4.6.6")
+        depends_on("py-redis@4.5.2:4.5.4,4.6:", when="@5.3.3:+redis")
+        depends_on("py-redis@4.5.2:", when="@5.3.0-rc2:5.3.2+redis")
+        depends_on("py-redis@4.3.6:4.3", when="@5.3.0-rc1+redis")
+        depends_on("py-redis@3.4.1:4.0.0-rc2,4.0.2:", when="@5.2.3:5.2+redis")
+        depends_on("py-redis@3.3.11:", when="@4.6.6:5.2.0+redis")
+        depends_on("py-redis@3.2:", when="@4.4:4.6.5+redis")
+        depends_on("py-redis@2.10.5:", when="@4.2:4.3+redis")
         depends_on("py-typing-extensions", when="@5.3: ^python@:3.9")
         depends_on("py-vine", when="@5.1:")
+    # END DEPENDENCIES
 

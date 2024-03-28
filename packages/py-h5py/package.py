@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyH5py(PythonPackage):
+    # BEGIN VERSIONS
     version("3.10.0", sha256="d93adc48ceeb33347eb24a634fb787efc7ae4644e6ea4ba733d099605045c049", url="https://pypi.org/packages/37/fc/0b1825077a1c4c79a13984c59997e4b36702962df0bca420698f77b70b10/h5py-3.10.0.tar.gz")
     version("3.9.0", sha256="e604db6521c1e367c6bd7fad239c847f53cc46646f2d2651372d05ae5e95f817", url="https://pypi.org/packages/57/ea/e59bf321fdbfed5ada0b856b3ed1d319733adaebe55aeb132673b5aa8501/h5py-3.9.0.tar.gz")
     version("3.8.0", sha256="6fead82f0c4000cf38d53f9c030780d81bfa0220218aee13b90b7701c937d95f", url="https://pypi.org/packages/69/f4/3172bb63d3c57e24aec42bb93fcf1da4102752701ab5ad10b3ded00d0c5b/h5py-3.8.0.tar.gz")
@@ -27,5 +27,12 @@ class PyH5py(PythonPackage):
     version("2.6.0", sha256="b2afc35430d5e4c3435c996e4f4ea2aba1ea5610e2d2f46c9cae9f785e33c435", url="https://pypi.org/packages/22/82/64dada5382a60471f85f16eb7d01cc1a9620aea855cd665609adf6fdbb0d/h5py-2.6.0.tar.gz")
     version("2.5.0", sha256="9833df8a679e108b561670b245bcf9f3a827b10ccb3a5fa1341523852cfac2f6", url="https://pypi.org/packages/6c/03/e3c8c484687466ffcc83e575b997ae6fcdedead573b9522297f53da6e68b/h5py-2.5.0.tar.gz")
     version("2.4.0", sha256="faaeadf4b8ca14c054b7568842e0d12690de7d5d68af4ecce5d7b8fc104d8e60", url="https://pypi.org/packages/84/ad/77e92b47445d5ec5c7e5e8a61196457b47acebc3d7eca166056e7e1291da/h5py-2.4.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("mpi", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

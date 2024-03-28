@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCloudpickle(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.0", sha256="246ee7d0c295602a036e86369c77fecda4ab17b506496730f2f576d9016fd9c7", url="https://pypi.org/packages/96/43/dae06432d0c4b1dc9e9149ad37b4ca8384cf6eb7700cd9215b177b914f0a/cloudpickle-3.0.0-py3-none-any.whl")
     version("2.2.1", sha256="61f594d1f4c295fa5cd9014ceb3a1fc4a70b0de1164b94fbc2d854ccba056f9f", url="https://pypi.org/packages/15/80/44286939ca215e88fa827b2aeb6fa3fd2b4a7af322485c7170d6f9fd96e0/cloudpickle-2.2.1-py3-none-any.whl")
     version("2.2.0", sha256="7428798d5926d8fcbfd092d18d01a2a03daf8237d8fcdc8095d256b8490796f0", url="https://pypi.org/packages/cf/26/cd6c4177273ee35f7a31245893489c68bc340988f12ca315b392f1f18a93/cloudpickle-2.2.0-py3-none-any.whl")
@@ -22,5 +22,10 @@ class PyCloudpickle(PythonPackage):
     version("1.2.0", sha256="dd676f23926110c9ae6998eb3a5c1f88cddcf78c5b4b35e35c1135c8c590d8c8", url="https://pypi.org/packages/f1/95/d329d89318b85f29936e6b121a662d5cf276a37aac7920ad1acc29de9757/cloudpickle-1.2.0-py2.py3-none-any.whl")
     version("1.1.1", sha256="d119fb6627e65d43541bdf927975a0f2a5d40074a30d691c8585f761d721bf49", url="https://pypi.org/packages/24/fb/4f92f8c0f40a0d728b4f3d5ec5ff84353e705d8ff5e3e447620ea98b06bd/cloudpickle-1.1.1-py2.py3-none-any.whl")
     version("0.5.2", sha256="604c1cb39c2043ba44f017444dd89b7f82541701dfa8a64f5ae72e6346755c0b", url="https://pypi.org/packages/aa/18/514b557c4d8d4ada1f0454ad06c845454ad438fd5c5e0039ba51d6b032fe/cloudpickle-0.5.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

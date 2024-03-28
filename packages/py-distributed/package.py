@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDistributed(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.3.1", sha256="abab8658122e97c507ce8a5b0d46dc6cb414a2a531f92e1c5933d7c5e0dd65ac", url="https://pypi.org/packages/3c/a1/13c23f0eb985f8150670e47fb71d59c8a3343cc252d60a3818bfe932753a/distributed-2024.3.1-py3-none-any.whl")
     version("2024.3.0", sha256="467f52bb624ff6f4b6c3e9827652147d78ea3264d16ea3b802b878679082e82e", url="https://pypi.org/packages/c6/5c/90275fcf214bab9c3aefeb4b6d86cd39c1941fabedff71d66a273ed274d9/distributed-2024.3.0-py3-none-any.whl")
     version("2024.2.1", sha256="633947b55198a0c7444272342c425d14f127a44d26a8ac46824d0daa3940da34", url="https://pypi.org/packages/3d/74/6d08be57bc06ddefd6fe9cf09f322e1c1105da0ae2264145600312d72099/distributed-2024.2.1-py3-none-any.whl")
@@ -33,7 +33,11 @@ class PyDistributed(PythonPackage):
     version("2021.6.2", sha256="68251734ec68254280d855db5a77cead2712df2580ec9d44fde14321e7f3806c", url="https://pypi.org/packages/14/03/104c2cb8f498165da0037fbe76581678027ea2722bac2775f04aaeafef65/distributed-2021.6.2-py3-none-any.whl")
     version("2021.4.1", sha256="fe0e005e9aa79d68e185008bd2ce6562388311efd1c59a04ab6127ee631b8808", url="https://pypi.org/packages/63/f8/ac2c18adde6477bca3881c4d3cfa74c7f4da7ee82f3c83c201aa3b9ca5ee/distributed-2021.4.1-py3-none-any.whl")
     version("2020.12.0", sha256="532294b005009ce7c480073e467f9043c5292a735ed535f3fd00517a83a51bfc", url="https://pypi.org/packages/b5/12/3c25bb53c9b508e6332b62c33a8806ec7a33c926d8e32e7e53df0b512b84/distributed-2020.12.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2023.5.1:")
         depends_on("py-click@8.0.0:", when="@2023.3.1:")
@@ -91,4 +95,5 @@ class PyDistributed(PythonPackage):
         depends_on("py-zict@2.2:", when="@2023.4:2023.8")
         depends_on("py-zict@2.1:", when="@2023:2023.3")
         depends_on("py-zict@0.1.3:", when="@1.19:2022")
+    # END DEPENDENCIES
 

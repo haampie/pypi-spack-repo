@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOnnx(PythonPackage):
+    # BEGIN VERSIONS
     version("1.16.0", sha256="237c6987c6c59d9f44b6136f5819af79574f8d96a760a1fa843bede11f3822f7", url="https://pypi.org/packages/b3/fe/0978403c8d710ece2f34006367e78de80410743fe0e7680c8f33f2dab20d/onnx-1.16.0.tar.gz")
     version("1.15.0", sha256="b18461a7d38f286618ca2a6e78062a2a9c634ce498e631e708a8041b00094825", url="https://pypi.org/packages/f4/6e/2b2963f9e3a7201c8c3a30656f9c81bc9d32d198a88a747456ab2874166a/onnx-1.15.0.tar.gz")
     version("1.14.1", sha256="70903afe163643bd71195c78cedcc3f4fa05a2af651fd950ef3acbb15175b2d1", url="https://pypi.org/packages/8f/71/1543d8dad6a26df1da8953653ebdbedacea9f1a5bcd023fe10f8c5f66d63/onnx-1.14.1.tar.gz")
@@ -20,7 +20,11 @@ class PyOnnx(PythonPackage):
     version("1.8.1", sha256="9d65c52009a90499f8c25fdfe5acda3ac88efe0788eb1d5f2575a989277145fb", url="https://pypi.org/packages/2b/8d/c924f54e19ec71543c18658d86e8337579d5a784bd524b7f18e2e2cd6f17/onnx-1.8.1.tar.gz")
     version("1.6.0", sha256="3b88c3fe521151651a0403c4d131cb2e0311bd28b753ef692020a432a81ce345", url="https://pypi.org/packages/81/a9/a14c3bc32908c37b46b19a89eb6185b0c90fd9c03ef12379d51940b8fc71/onnx-1.6.0.tar.gz")
     version("1.5.0", sha256="1a584a4ef62a6db178c257fffb06a9d8e61b41c0a80bfd8bcd8a253d72c4b0b4", url="https://pypi.org/packages/1a/a7/a7aecbfe51f01f754b579ab3fbefaa53f03abdd8cc205cc9b0996089df34/onnx-1.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.20.0:", when="@1.16:")
         depends_on("py-numpy", when="@1.6:1.7,1.15")
@@ -28,4 +32,5 @@ class PyOnnx(PythonPackage):
         depends_on("py-protobuf", when="@1.6:1.7")
         depends_on("py-six", when="@1.6:1.7")
         depends_on("py-typing-extensions@3.6.2.1:", when="@1.6:1.7")
+    # END DEPENDENCIES
 

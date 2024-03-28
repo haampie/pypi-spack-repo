@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,9 +6,14 @@
 from spack.package import *
 
 class PyMlflow(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.1", sha256="3c1e2f20f9a556b099d3b50e0cfdc4577e05c60ad11e5d5fae57122bb1dc7c06", url="https://pypi.org/packages/c2/ad/a90f7670677b853f68e7955e6ba4ae9e9ba17aa3ffb638cf7f0d46582e64/mlflow-2.0.1-py3-none-any.whl")
     version("1.17.0", sha256="ee0b8bb6a8fab5825a282b0677b6f2f30af508f27582cfe28e6bb701c494e6a1", url="https://pypi.org/packages/78/95/66f2e43a3662b27409fdce1775e1fbe8fdb5557140467d9e6654a87cc22e/mlflow-1.17.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-alembic", when="@1.28:2.2")
         depends_on("py-alembic@:1.4.1", when="@1.7.2:1.7,1.11:1.22")
@@ -65,4 +69,5 @@ class PyMlflow(PythonPackage):
         depends_on("py-waitress@:2", when="@1.28:2.10 platform=windows")
         depends_on("py-waitress", when="@1.8:1.26 platform=windows")
         depends_on("py-waitress", when="@1.7.1:1.7")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyUvicorn(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.29.0", sha256="2c2aac7ff4f4365c206fd773a39bf4ebd1047c238f8b8268ad996829323473de", url="https://pypi.org/packages/73/f5/cbb16fcbe277c1e0b8b3ddd188f2df0e0947f545c49119b589643632d156/uvicorn-0.29.0-py3-none-any.whl")
     version("0.28.1", sha256="5162f6d652f545be91b1feeaee8180774af143965ca9dc8a47ff1dc6bafa4ad5", url="https://pypi.org/packages/6e/12/57c09286f0293e73343e95427072ec7b700324f858637887c5b7e9c687b7/uvicorn-0.28.1-py3-none-any.whl")
     version("0.28.0", sha256="6623abbbe6176204a4226e67607b4d52cc60ff62cda0ff177613645cefa2ece1", url="https://pypi.org/packages/25/bd/c20daf18824b1552d37579fc2f8cc147355c113d55aff21211443a2f89b9/uvicorn-0.28.0-py3-none-any.whl")
@@ -18,9 +18,13 @@ class PyUvicorn(PythonPackage):
     version("0.24.0.post1", sha256="7c84fea70c619d4a710153482c0d230929af7bcf76c7bfa6de151f0a3a80121e", url="https://pypi.org/packages/7e/17/4b7a76fffa7babf397481040d8aef2725b2b81ae19f1a31b5ca0c17d49e6/uvicorn-0.24.0.post1-py3-none-any.whl")
     version("0.24.0", sha256="3d19f13dfd2c2af1bfe34dd0f7155118ce689425fdf931177abe832ca44b8a04", url="https://pypi.org/packages/ed/0c/a9b90a856bbdd75bf71a1dd191af1e9c9ac8a272ed337f7200950c3d3dd4/uvicorn-0.24.0-py3-none-any.whl")
     version("0.20.0", sha256="c3ed1598a5668208723f2bb49336f4509424ad198d6ab2615b7783db58d919fd", url="https://pypi.org/packages/96/f3/f39ac8ac3bdf356b4934b8f7e56173e96681f67ef0cd92bd33a5059fae9e/uvicorn-0.20.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("standard", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click@7:", when="@0.15:")
         depends_on("py-colorama@0.4:", when="@0.13:+standard platform=windows")
@@ -35,4 +39,5 @@ class PyUvicorn(PythonPackage):
         depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="@0.13.4:+standard platform=cray")
         depends_on("py-watchfiles@0.13:", when="@0.18:+standard")
         depends_on("py-websockets@10.4:", when="@0.20:+standard")
+    # END DEPENDENCIES
 

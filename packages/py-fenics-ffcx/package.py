@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,11 +6,16 @@
 from spack.package import *
 
 class PyFenicsFfcx(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.0", sha256="638232b92d289a28d9722959ec3ecd88a771d6ae856a4129b17206cbfe91401a", url="https://pypi.org/packages/88/d2/341aa6c6f3345bcc0320c0dcde63bbbe41bc7bbd27a808aeed2e797fb167/fenics_ffcx-0.7.0-py3-none-any.whl")
     version("0.6.0", sha256="07afc04553e0822955a1eff85e1e1c73fa697ac79bc96c132353cb6a6d9ba9c6", url="https://pypi.org/packages/76/5f/a3b446ddfd8cd19098dbad83514ed0657852b74f34aee512fc7c5e8ec7c1/fenics_ffcx-0.6.0-py3-none-any.whl")
     version("0.5.0.post0", sha256="bc080e2529526c8448507ef51d9fd5119f30139b86049ab66a5d2097cd5a6282", url="https://pypi.org/packages/23/a6/d5de266501eb487949d57b2005a396f792bc3793398ce876326c771a0144/fenics_ffcx-0.5.0.post0-py3-none-any.whl")
     version("0.4.2", sha256="c83b6c52af80e14e09e7f77fe7c52a97d4186dd523a9f3629afffb0b991fe503", url="https://pypi.org/packages/6c/12/c2b66b33a55f36ee17685aea5198a346a34a71acc3a6eafada7f66163a64/fenics_ffcx-0.4.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cffi")
         depends_on("py-fenics-basix@0.7:", when="@0.7:")
@@ -24,4 +28,5 @@ class PyFenicsFfcx(PythonPackage):
         depends_on("py-fenics-ufl@2022:2022.1", when="@:0.4")
         depends_on("py-numpy")
         depends_on("py-setuptools", when="@0.5:")
+    # END DEPENDENCIES
 

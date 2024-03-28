@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCoreservices(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="90fa09e68e840fdd229b33354f4b2e55e9f95a221fcc30612f4bd92cdc530518", url="https://pypi.org/packages/2f/eb/5b87d6b59745386df3d30a57d4b13d6708fdc4fd3bf62b224f509f5b9cb3/pyobjc-framework-CoreServices-10.2.tar.gz")
     version("10.1", sha256="43d507f2b3d84a5aab808c3f67bf21fb6a7d1367d506e2e9877bf1cac9bad2eb", url="https://pypi.org/packages/49/0e/591ad9387e58a5e1385f6272ec9922a32f6367f4e352d4f62197c0915f18/pyobjc-framework-CoreServices-10.1.tar.gz")
     version("10.0", sha256="a6e80770ead727979e9ffd4ea97c30889e1fdec49873bb5129bf3ef3c5b90005", url="https://pypi.org/packages/ca/98/9a5b01126ffacb6c4d79e9417480e07f5933e4c06ec9276d38c86f0113af/pyobjc-framework-CoreServices-10.0.tar.gz")
@@ -18,7 +18,11 @@ class PyPyobjcFrameworkCoreservices(PythonPackage):
     version("9.0", sha256="476d6d4aa3afa7706f09dc9b9c8ec22c724953d123bed4d2c419db825cd1d66b", url="https://pypi.org/packages/2f/c9/5fccdd5b3d72322bd46bb68509c548d2b8e2b08492d691c749847b795b68/pyobjc-framework-CoreServices-9.0.tar.gz")
     version("8.5.1", sha256="97e8b27b32a32ca7d7d0c780b4e5812a09b109f9867fc3890031f2bb42fd37ee", url="https://pypi.org/packages/01/36/c94eb0148ffadaf693a01d73023ac1f72309152252a78c6a1d86112fd649/pyobjc-framework-CoreServices-8.5.1.tar.gz")
     version("8.5", sha256="58bad844c8e5ee82852d860b117d1238c3ed2db8dd57f754feb6bd5801fe878d", url="https://pypi.org/packages/51/9d/cbc424195e9a8834c84075979fa519d2675cce577fb827d3b638fcccc28b/pyobjc-framework-CoreServices-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -28,4 +32,5 @@ class PyPyobjcFrameworkCoreservices(PythonPackage):
         depends_on("py-pyobjc-framework-fsevents@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-fsevents@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-fsevents@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWeasel(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.3.4", sha256="ee48a944f051d007201c2ea1661d0c41035028c5d5a8bcb29a0b10f1100206ae", url="https://pypi.org/packages/d5/e5/b63b8e255d89ba4155972990d42523251d4d1368c4906c646597f63870e2/weasel-0.3.4-py3-none-any.whl")
     version("0.3.3", sha256="141b12fd0d38599ff8c567208d1db0f5af1b532363fadeba27d7bc87d751d88a", url="https://pypi.org/packages/a6/76/41433e70b7c9ed47db8206536ecc6408362db44111c27f59e76af20377f2/weasel-0.3.3-py3-none-any.whl")
     version("0.3.2", sha256="f2921a7fa78ad69dcd7068fa40a43786f3acf7edd6c35b44763e9163e045b664", url="https://pypi.org/packages/de/f5/6786a5fd1ab6a38511f3772c9002f312a2d509c1237ae514631adf145ad4/weasel-0.3.2-py3-none-any.whl")
@@ -15,7 +15,11 @@ class PyWeasel(PythonPackage):
     version("0.2.0", sha256="b07edb0cd0dba1dec277f68c0450f9ee637ac715c1ae28990f88db9c6a8d9acd", url="https://pypi.org/packages/d2/2b/94d755de15d8cf2dd52857f0d99884ae149aeeb39a192477227b96b3beb5/weasel-0.2.0-py3-none-any.whl")
     version("0.1.1", sha256="e33f88504670b9d6531c8467b7fc8d02831ac96a55d5ae6f842cfb62900f8d6a", url="https://pypi.org/packages/a4/5c/05fd82fa1bdc30498b0b0838bd50d3ddd5b9b61316075bc695f547d5b572/weasel-0.1.1-py3-none-any.whl")
     version("0.1.0", sha256="1e9a5971b63df237a96477301c0f64ab149de4ab8b6798f024682ce3edea2a27", url="https://pypi.org/packages/dd/f7/719fb4757da6efb2a0f3339e4c57377dfe01a678397e8935c7adc7fe449a/weasel-0.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-catalogue@2.0.6:2.0", when="@0.1:0.3.0")
         depends_on("py-cloudpathlib@0.7:0.16", when="@0.3.3:")
@@ -32,4 +36,5 @@ class PyWeasel(PythonPackage):
         depends_on("py-typer@0.3:0.9", when="@0.3.2:")
         depends_on("py-typer@0.3:0.7", when="@0.1:0.3.1")
         depends_on("py-wasabi@0.9.1:", when="@0.1:")
+    # END DEPENDENCIES
 

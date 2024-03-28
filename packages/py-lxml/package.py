@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLxml(PythonPackage):
+    # BEGIN VERSIONS
     version("5.1.0", sha256="3eea6ed6e6c918e468e693c41ef07f3c3acc310b70ddd9cc72d9ef84bc9564ca", url="https://pypi.org/packages/2b/b4/bbccb250adbee490553b6a52712c46c20ea1ba533a643f1424b27ffc6845/lxml-5.1.0.tar.gz")
     version("5.0.1", sha256="4432a1d89a9b340bc6bd1201aef3ba03112f151d3f340d9218247dc0c85028ab", url="https://pypi.org/packages/83/18/1d0c7cf3df839cc2827a0deee2e4b42f4048bc4c1c15612271e2db3928e5/lxml-5.0.1.tar.gz")
     version("5.0.0", sha256="2219cbf790e701acf9a21a31ead75f983e73daf0eceb9da6990212e4d20ebefe", url="https://pypi.org/packages/80/2c/076fafd979728858829fb9ce2e13fa6367b6be9acc4da0cff6367aa6a1ce/lxml-5.0.0.zip")
@@ -27,5 +27,18 @@ class PyLxml(PythonPackage):
     version("4.2.5", sha256="36720698c29e7a9626a0dc802ef8885f8f0239bfd1689628ecd459a061f2807f", url="https://pypi.org/packages/4b/20/ddf5eb3bd5c57582d2b4652b4bbcf8da301bdfe5d805cb94e805f4d7464d/lxml-4.2.5.tar.gz")
     version("3.7.3", sha256="aa502d78a51ee7d127b4824ff96500f0181d3c7826e6ee7b800d068be79361c7", url="https://pypi.org/packages/39/e8/a8e0b1fa65dd021d48fe21464f71783655f39a41f218293c1c590d54eb82/lxml-3.7.3.tar.gz")
     version("2.3", sha256="eea1b8d29532739c1383cb4794c5eacd6176f0972b59e8d29348335b87ff2e66", url="https://pypi.org/packages/ea/f8/c62f5857ca8274d89932696cb0876dab40385e2293a709a359f92793141e/lxml-2.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("cssselect", default=False)
+    variant("html5", default=False)
+    variant("htmlsoup", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-beautifulsoup4", when="@4.2.2,4.2.4:4.5,4.9.4:+htmlsoup")
+        depends_on("py-cssselect@0.7:", when="@4.2.2,4.2.4:4.5,4.9.4:+cssselect")
+        depends_on("py-html5lib", when="@4.2.2,4.2.4:4.5,4.9.4:+html5")
+    # END DEPENDENCIES
 

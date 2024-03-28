@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFfmpy(PythonPackage):
+    # BEGIN VERSIONS
     version("0.3.2", sha256="475ebfff1044661b8d969349dbcd2db9bf56d3ee78c0627e324769b49a27a78f", url="https://pypi.org/packages/1d/70/07914754979f5dd80bda947a0ffd181c08bfcb137b01c3c0cef45254d271/ffmpy-0.3.2.tar.gz")
     version("0.3.1", sha256="a173b8f42c7c669ff722df7fb31e1e870067713697f745224fa6e621b82f0004", url="https://pypi.org/packages/9a/06/49b275a312eb207e2a2718a7414dedfded05088437352b67aaa9a355f948/ffmpy-0.3.1.tar.gz")
     version("0.3.0", sha256="757591581eee25b4a50ac9ffb9b58035a2794533db47e0512f53fb2d7b6f9adc", url="https://pypi.org/packages/bf/e2/947df4b3d666bfdd2b0c6355d215c45d2d40f929451cb29a8a2995b29788/ffmpy-0.3.0.tar.gz")
@@ -17,5 +17,10 @@ class PyFfmpy(PythonPackage):
     version("0.1.0", sha256="5bb2206b4ec5de2a5097404c38eea802dee132d5c3bed0714261a794f87da898", url="https://pypi.org/packages/2b/3e/533a056e4e2fb4628d9c1426515e3dbd035f43d631ee09ed70fd7abd042c/ffmpy-0.1.0.tar.gz")
     version("0.0.6", sha256="b01f77eb51d569fb7093c45b51a8a7acbb4eb6a042ee70751674a84ce15450cc", url="https://pypi.org/packages/b8/b3/2f6427cd788adbac14bc44972f2bfabb683b4b3fd24248deb0a4b55637b4/ffmpy-0.0.6.tar.gz")
     version("0.0.5", sha256="754eede7737134d011106f8ddca2a6fdd80a433e6bb182e5fdfa12eb3e4ad7e6", url="https://pypi.org/packages/0f/90/eab93dc0c3258a20262b1ea7959a9eeb99e17db126d5aff8962f12231b2f/ffmpy-0.0.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPystac(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.9.0", sha256="64d5654166290169ad6ad2bc0d5337a1664ede1165635f0b73b327065b801a2f", url="https://pypi.org/packages/2a/34/190016e443ff35ed24efacc810b0ae5d770022e8d3fb460608c0764f6c6d/pystac-1.9.0-py3-none-any.whl")
     version("1.8.4", sha256="0d9917bf3abc71fca3edfb2dd5f66be44b22a63774cda520c81484a126fa780e", url="https://pypi.org/packages/d9/33/528355f091d6522e5f11e02b1309cb4713e21ef8f772dd9b38e8276da011/pystac-1.8.4-py3-none-any.whl")
     version("1.8.3", sha256="91805520b0b5386db84aae5296dc6d4fb6754410c481d0a00a8afedc3b4c75d5", url="https://pypi.org/packages/d2/35/efb3ada4f8db776144d786338a41d38e5128f2c1e4a86b681c658fe1151e/pystac-1.8.3-py3-none-any.whl")
@@ -23,9 +23,13 @@ class PyPystac(PythonPackage):
     version("1.1.0", sha256="107e5e1646a5accac27771d110945afaa9b7e8105f3823451fbb89ecc29fb395", url="https://pypi.org/packages/c6/37/28140fa27b46285ce66751656ed07d9ae96bd12841db406900793d92bd7f/pystac-1.1.0-py3-none-any.whl")
     version("1.0.1", sha256="a22575494df7ee19fc1570555f8180b7d5e2c2efa5a355a63d572f3c323e6ce9", url="https://pypi.org/packages/9d/73/f45629060d6456cc55e74ee3ba13d0ff1637ea78f38d0bb0ea2b993f8b29/pystac-1.0.1-py3-none-any.whl")
     version("0.5.4", sha256="d617e1eef351788fcc7b856e8492c8387e883a0b2695ee17200cb85fbe1da122", url="https://pypi.org/packages/69/17/86b6e1531e1295c52d400e0a7d03b2d3a4ae75d92faec6fa00265a05ef86/pystac-0.5.4-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("validation", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.9:")
         depends_on("py-importlib-resources@5.12:", when="@1.8 ^python@:3.8")
@@ -35,4 +39,5 @@ class PyPystac(PythonPackage):
         depends_on("py-jsonschema@3.0.0:", when="@1:1.6.0+validation")
         depends_on("py-jsonschema@3.2:3", when="@0.5.0:0+validation")
         depends_on("py-python-dateutil@2.7:", when="@0.3.1:")
+    # END DEPENDENCIES
 

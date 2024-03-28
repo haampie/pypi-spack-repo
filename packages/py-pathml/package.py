@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyPathml(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.1.0", sha256="953848b9c56d01624e20a060cd0a78631304882e1401a11467524deb2cce8863", url="https://pypi.org/packages/3f/ae/01734cac44cdadda95d4cbd817dfd15667f23c8daec7aa892171c9a4b3d2/pathml-2.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anndata@0.7.6:", when="@:1.0.dev,1.0.2:")
         depends_on("py-dask+distributed", when="@:1.0.dev,1.0.2:")
@@ -28,4 +32,5 @@ class PyPathml(PythonPackage):
         depends_on("py-scipy", when="@:1.0.dev,1.0.2:")
         depends_on("py-statsmodels", when="@:1.0.dev,1.0.2:")
         depends_on("py-torch", when="@:1.0.dev,1.0.2:")
+    # END DEPENDENCIES
 

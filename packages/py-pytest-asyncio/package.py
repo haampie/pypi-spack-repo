@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytestAsyncio(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.23.6", sha256="68516fdd1018ac57b846c9846b954f0393b26f094764a28c955eabb0536a4e8a", url="https://pypi.org/packages/e0/c9/de22c040d4c821c6c797ca1d720f1f4b2f4293d5757e811c62ae544496c4/pytest_asyncio-0.23.6-py3-none-any.whl")
     version("0.23.5.post1", sha256="30f54d27774e79ac409778889880242b0403d09cabd65b727ce90fe92dd5d80e", url="https://pypi.org/packages/16/a6/4b561db5e5ed2c928288b32d2c30265c4e6453bb172de926579c2bd979f6/pytest_asyncio-0.23.5.post1-py3-none-any.whl")
     version("0.23.5", sha256="4e7093259ba018d58ede7d5315131d21923a60f8a6e9ee266ce1589685c89eac", url="https://pypi.org/packages/ce/0c/a60bcaeb3ba2f938b4d76e535180ea9f43e8da5fa6933fd9401f6f6e46ae/pytest_asyncio-0.23.5-py3-none-any.whl")
@@ -19,10 +19,15 @@ class PyPytestAsyncio(PythonPackage):
     version("0.21.1", sha256="8666c1c8ac02631d7c51ba282e0c69a8a452b211ffedf2599099845da5c5c37b", url="https://pypi.org/packages/7d/2c/2e5ab8708667972ee31b88bb6fed680ed5ba92dfc2db28e07d0d68d8b3b1/pytest_asyncio-0.21.1-py3-none-any.whl")
     version("0.18.3", sha256="16cf40bdf2b4fb7fc8e4b82bd05ce3fbcd454cbf7b92afc445fe299dabb88213", url="https://pypi.org/packages/8b/d6/4ecdd0c5b49a2209131b6af78baa643cec35f213abbc54d0eb1542b3786d/pytest_asyncio-0.18.3-1-py3-none-any.whl")
     version("0.9.0", sha256="a962e8e1b6ec28648c8fe214edab4e16bacdb37b52df26eb9d63050af309b2a9", url="https://pypi.org/packages/33/7f/2ed9f460872ebcc62d30afad167673ca10df36ff56a6f6df2f1d3671adc8/pytest_asyncio-0.9.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pytest@7.0.0:7", when="@0.23.4-alpha0:0.23.4")
         depends_on("py-pytest@7.0.0:", when="@0.21:0.23.3,0.23.5-alpha0:")
         depends_on("py-pytest@6.1:", when="@0.17.1:0.20")
         depends_on("py-pytest@3.0.6:", when="@0.6:0.10")
+    # END DEPENDENCIES
 

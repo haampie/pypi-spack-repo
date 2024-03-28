@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNetworkx(PythonPackage):
+    # BEGIN VERSIONS
     version("3.2.1", sha256="f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2", url="https://pypi.org/packages/d5/f0/8fbc882ca80cf077f1b246c0e3c3465f7f415439bdea6b899f6b19f61f70/networkx-3.2.1-py3-none-any.whl")
     version("3.2", sha256="8b25f564bd28f94ac821c58b04ae1a3109e73b001a7d476e4bb0d00d63706bf8", url="https://pypi.org/packages/f6/eb/5585c96636bbb2755865c31d83a19dd220ef88e716df4659dacb86e009cc/networkx-3.2-py3-none-any.whl")
     version("3.1", sha256="4f33f68cb2afcf86f28a45f43efc27a9386b535d567d2127f8f61d51dec58d36", url="https://pypi.org/packages/a8/05/9d4f9b78ead6b2661d6e8ea772e111fc4a9fbd866ad0c81906c11206b55e/networkx-3.1-py3-none-any.whl")
@@ -33,17 +33,46 @@ class PyNetworkx(PythonPackage):
     version("2.0", sha256="cd5ff8f75d92c79237f067e2f0876824645d37f017cfffa5b7c9678cae1454aa", url="https://pypi.org/packages/73/58/0add7d81cf64958f7a062aa287237364eb0a0959bf7a817f708d5c25d043/networkx-2.0.zip")
     version("1.11", sha256="1b229b54fe9ccb009cee4de02a88552191497a542a7d5d34adab216b9f15c1ff", url="https://pypi.org/packages/d3/2c/e473e54afc9fae58dfa97066ef6709a7e35a1dd1c28c5a3842989322be00/networkx-1.11-py2.py3-none-any.whl")
     version("1.10", sha256="1406d08a22eb52eaea22b47d3670fd6885442fcc5689b6b00db68a12f27d5b9a", url="https://pypi.org/packages/e6/e6/4b487d52f918102b46a00242b78e549ffe9c2a1621de5c69f9ea73afeac1/networkx-1.10.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("default", default=False)
+    variant("extra", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@3.2-rc0:")
         depends_on("py-decorator@4.3:4", when="@2.5.1:2.5")
         depends_on("py-decorator@4.3:", when="@2.4-rc2:2.5.0")
+        depends_on("py-lxml@4.6:", when="@2.7-rc1:+extra")
+        depends_on("py-lxml@4.5:", when="@2.6-rc1:2.6+extra")
+        depends_on("py-matplotlib@3.5.0:", when="@3.2-rc0:+default")
+        depends_on("py-matplotlib@3.4.0:", when="@2.7-rc1:3.1+default")
+        depends_on("py-matplotlib@3.3.0:", when="@2.6.2:2.6+default")
         depends_on("py-matplotlib@3.3.0:", when="@2.6-rc2:2.6.1")
         depends_on("py-matplotlib@3.3.0:", when="@2.6-rc1 ^python@:3.9")
+        depends_on("py-numpy@1.22.0:", when="@3.2-rc0:+default")
+        depends_on("py-numpy@1.20.0:", when="@3:3.1+default")
+        depends_on("py-numpy@1.19.0:", when="@2.6.2:2+default")
         depends_on("py-numpy@1.19.0:", when="@2.6-rc2:2.6.1")
         depends_on("py-numpy@1.19.0:", when="@2.6-rc1 ^python@:3.9")
+        depends_on("py-pandas@1.4.0:", when="@3.2-rc0:+default")
+        depends_on("py-pandas@1.3.0:", when="@2.7-rc1:3.1+default")
+        depends_on("py-pandas@1.1.0:", when="@2.6.2:2.6+default")
         depends_on("py-pandas@1.1.0:", when="@2.6-rc2:2.6.1")
         depends_on("py-pandas@1.1.0:", when="@2.6-rc1 ^python@:3.9")
+        depends_on("py-pydot@1.4.2:", when="@2.7-rc1:+extra")
+        depends_on("py-pydot@1.4.1:", when="@2.6-rc1:2.6+extra")
+        depends_on("py-pygraphviz@1.11:", when="@3.2-rc0:+extra")
+        depends_on("py-pygraphviz@1.10:", when="@3:3.1+extra")
+        depends_on("py-pygraphviz@1.9:", when="@2.7-rc1:2+extra")
+        depends_on("py-pygraphviz@1.7:", when="@2.6-rc1:2.6+extra")
+        depends_on("py-scipy@1.9.0:1.11.0-rc2,1.11.2:", when="@3.2-rc0:+default")
+        depends_on("py-scipy@1.8.0:", when="@2.7-rc1:3.1+default")
+        depends_on("py-scipy@1.5.0:1.6.0,1.6.2:", when="@2.6.2:2.6+default")
         depends_on("py-scipy@1.5.0:1.6.0,1.6.2:", when="@2.6-rc2:2.6.1")
         depends_on("py-scipy@1.5.0:1.6.0,1.6.2:", when="@2.6-rc1 ^python@:3.9")
+        depends_on("py-sympy@1.10:", when="@2.8-rc1:+extra")
+    # END DEPENDENCIES
 

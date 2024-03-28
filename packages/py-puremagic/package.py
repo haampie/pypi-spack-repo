@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPuremagic(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.21", sha256="8fe85c05800fe1eacdd5aa943b9e7fdbee66bc41a17aacf80efd6c668c63df45", url="https://pypi.org/packages/34/cd/a96792f38675965954e7529a0c19a9320cafba2412ebf225e18eb7c2287b/puremagic-1.21-py3-none-any.whl")
     version("1.20", sha256="14817470dc1e3339356088b58576820efd12544a676c20d7d5e738ea1e06f852", url="https://pypi.org/packages/bf/b8/40b2c2a06f0ce0058f65bb82bff3cb728dabf1f6c8f628288b2cf664eab3/puremagic-1.20-py3-none-any.whl")
     version("1.15", sha256="349e179f04bcc14eb0e2c3941cd9ee4ea74881ab6ccac63ea0c37c98f7a80b22", url="https://pypi.org/packages/de/b6/8c4d331d55d8a6cbdaadcd3830baec7e2216c2c0fe7e6c8f4cdbe737dd52/puremagic-1.15-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyPuremagic(PythonPackage):
     version("1.10", sha256="3603ac88bfa06689b4a3a2e90ef30f8cc5769df2f269bf546620bfe6b18c06d6", url="https://pypi.org/packages/d5/6e/62d1cef9a0d8edf2d9c44b0a1b91b0b29b66fb693c94af278a0c76ddfd8c/puremagic-1.10-py3-none-any.whl")
     version("1.9", sha256="563d16453ce9ebfdd919f0dc3908ae5d681345e81fcc6e7e13d9a27a0bb9532e", url="https://pypi.org/packages/bb/f8/e44acc4960629fb05f4d1318fb3b6b737a372fbdcf62496b047503a097ea/puremagic-1.9-py3-none-any.whl")
     version("1.8", sha256="af43d5abfc0139e0abe251d902e33218bdfe1fadefd025a1c2c308d51e149e17", url="https://pypi.org/packages/92/7f/db327a1e8c154130ecd7c35e7bd6cdf8cd36f9e9a8abf1fcfe57e0359860/puremagic-1.8-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-argparse", when="@1.4:1.10")
+    # END DEPENDENCIES
 

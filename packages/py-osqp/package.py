@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOsqp(PythonPackage):
+    # BEGIN VERSIONS
     version("0.6.5", sha256="b2810aee7be2373add8b6c0be5ad99b810288774abca421751cb032d6a5aedef", url="https://pypi.org/packages/fa/2d/a8b4a4e2c531fb96c384f3b060ee62425dbf36cb4503f3b4aaef59ff5585/osqp-0.6.5.tar.gz")
     version("0.6.4", sha256="cfa33e0be422ee5d3e792e7c081bcbf6fa222fc2175b6fdde4c4a219354c5e42", url="https://pypi.org/packages/7a/23/786fed3b3bf90a3a097c011ca0125676253acbb287906ff00e577ab853c7/osqp-0.6.4.tar.gz")
     version("0.6.3", sha256="03e460e683ec2ce0f839353ddfa3c4c8ffa509ab8cf6a2b2afbb586fa453e180", url="https://pypi.org/packages/f8/ce/951a029a1d783025242c4ee6a42f14d37c58fc6cba104c1be5c1fc6ecfee/osqp-0.6.3.tar.gz")
@@ -18,11 +18,16 @@ class PyOsqp(PythonPackage):
     version("0.6.2.post0", sha256="5f0695f26a3bef0fae91254bc283fab790dcca0064bfe0f425167f9c9e8b4cbc", url="https://pypi.org/packages/c0/90/4cf48c200a89e46bcad87e12469ee36fc03d0c3f16b703b747e8c4bf618e/osqp-0.6.2.post0.tar.gz")
     version("0.6.2", sha256="262162039f6ad6c9ffee658541b18cfae8240b65edbde71d9b9e3af42fbfe4b3", url="https://pypi.org/packages/7a/b8/291caf5b448de7b35969b71df83b0733c853656b0304516f6fea8f1c9f78/osqp-0.6.2.tar.gz")
     version("0.6.1", sha256="47b17996526d6ecdf35cfaead6e3e05d34bc2ad48bcb743153cefe555ecc0e8c", url="https://pypi.org/packages/ba/17/49790ce2ce7a6b95cd250642ebc68bd723ddefdd052ee8dcc1e0dcf4ffca/osqp-0.6.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-future", when="@0.2:0.2.0,0.4:0.6.1")
         depends_on("py-numpy@1.7:", when="@0.2:0.2.0,0.4:0.6.1,0.6.4:0")
         depends_on("py-qdldl", when="@0.6.4:0")
         depends_on("py-scipy@0.13.2:1.11", when="@0.6.5:0")
         depends_on("py-scipy@0.13.2:", when="@0.2:0.2.0,0.4:0.6.1,0.6.4")
+    # END DEPENDENCIES
 

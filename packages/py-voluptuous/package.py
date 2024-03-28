@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyVoluptuous(PythonPackage):
+    # BEGIN VERSIONS
     version("0.14.2", sha256="efc1dadc9ae32a30cc622602c1400a17b7bf8ee2770d64f70418144860739c3b", url="https://pypi.org/packages/3e/21/0424844b889dccd8f1899f92f239d6eca5f4995f5c86baff094694140828/voluptuous-0.14.2-py3-none-any.whl")
     version("0.14.1", sha256="ab202b5164b4bbd2c9bf2d4f264efef6f0f30fc0f570be27f1332be4514eefe0", url="https://pypi.org/packages/12/44/2d0c03d9cc9edaed681842a441a9ab3e960b62adb172865692745fc9eff1/voluptuous-0.14.1-py3-none-any.whl")
     version("0.14.0", sha256="f9d63353f270c87d5f3aea29f8c251beddfd164d74d934e54dad7b8f84ad7a74", url="https://pypi.org/packages/ce/03/7b91e5fa5b36947cb858c45bc50270fee86b3db6c2cd002eac2ee68c09a1/voluptuous-0.14.0-py3-none-any.whl")
@@ -17,6 +17,11 @@ class PyVoluptuous(PythonPackage):
     version("0.12.0", sha256="0fff348a097c9a74f9f4a991d2cf01a6185780e997ad953bde49cb3efbb411be", url="https://pypi.org/packages/d3/e9/861cec3f4da0728d9d085db9c338b598351cbacb10521c25f0857f55c6d4/voluptuous-0.12.0-py3-none-any.whl")
     version("0.11.7", sha256="2abc341dbc740c5e2302c7f9b8e2e243194fb4772585b991931cb5b22e9bf456", url="https://pypi.org/packages/24/3b/fe531688c0d9e057fccc0bc9430c0a3d4b90e0d2f015326e659c2944e328/voluptuous-0.11.7.tar.gz")
     version("0.11.6", sha256="d2ca99ae1d1ed0313e8965720d1d75a780fc7f312fea4e3dbbb56ccfe5a8306d", url="https://pypi.org/packages/aa/0e/b2651c8f5e7a1b5bb426986bbef26b3a7612080ad653cf2da355aac97699/voluptuous-0.11.6.tar.gz")
-    version("0.11.5", sha256="567a56286ef82a9d7ae0628c5842f65f516abcb496e74f3f59f1d7b28df314ef", url="https://pypi.org/packages/6e/5e/4e721e30cf175f9e11a5acccf4cd74898c32cae93580308ecd4cf7d2a454/voluptuous-0.11.5.tar.gz")
+    version("0.11.5", sha256="303542b3fc07fb52ec3d7a1c614b329cdbee13a9d681935353d8ea56a7bfa9f1", url="https://pypi.org/packages/59/95/fa6218477c6999c9b7fdfab7c12c1bd4da2d5930f5eb2b232ec74eb344e7/voluptuous-0.11.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyVirtualenv(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("20.25.1", sha256="961c026ac520bac5f69acb8ea063e8a4f071bcc9457b9c1f28f6b085c511583a", url="https://pypi.org/packages/16/65/0d0bdfdac31e2db8c6d6c18fe1e00236f0dea279f9846f94a9aafa49cfc9/virtualenv-20.25.1-py3-none-any.whl")
     version("20.25.0", sha256="4238949c5ffe6876362d9c0180fc6c3a824a7b12b80604eeb8085f2ed7460de3", url="https://pypi.org/packages/83/22/54b1180756d2d6194bcafb7425d437c3034c4bff92129c3e1e633079e2c4/virtualenv-20.25.0-py3-none-any.whl")
     version("20.24.7", sha256="a18b3fd0314ca59a2e9f4b556819ed07183b3e9a3702ecfe213f593d44f7b3fd", url="https://pypi.org/packages/7f/1b/433ebb5530c48d70bebe1bf10ec7591af9f66847e34c4fcbca16d5eaaa0c/virtualenv-20.24.7-py3-none-any.whl")
@@ -37,7 +37,11 @@ class PyVirtualenv(PythonPackage):
     version("15.0.1", sha256="13ce1079910a6bc60e2ce1d79813a99f30b2fd1e571427fcde1fabb0ff4c436c", url="https://pypi.org/packages/bb/83/1aa921ab8c7d017e4098582acbc422a30485f820290577b361c8fc407d53/virtualenv-15.0.1-py2.py3-none-any.whl")
     version("13.0.1", sha256="da85f7ea539cfec9437f4d87d12f95d34d92a6d30485e85a4bc434bcdff7c6c3", url="https://pypi.org/packages/3f/21/8503e2592183d552c6e47fc431b3976c7b53256b1d1c50eb1f12ada2238c/virtualenv-13.0.1-py2.py3-none-any.whl")
     version("1.11.6", sha256="a8e07085d85c637c463ae23dc0911f32c871eddef69765ff9fa26cac9f2c5053", url="https://pypi.org/packages/c6/e3/f1eaf5a62fb7df7d98f39e7f45521f562bed2b6ab405a81d678e844a4ef2/virtualenv-1.11.6-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-backports-entry-points-selectable@1.0.4:", when="@20.5:20.10")
         depends_on("py-distlib@0.3.7:", when="@20.24.2:")
@@ -56,4 +60,5 @@ class PyVirtualenv(PythonPackage):
         depends_on("py-platformdirs@2.4:2", when="@20.16.3:20.18")
         depends_on("py-platformdirs@2.0.0:2", when="@20.5:20.16.2")
         depends_on("py-six@1.9:", when="@20.0.4:20.15")
+    # END DEPENDENCIES
 

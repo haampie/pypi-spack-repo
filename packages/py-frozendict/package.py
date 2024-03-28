@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFrozendict(PythonPackage):
+    # BEGIN VERSIONS
     version("2.4.0", sha256="c26758198e403337933a92b01f417a8240c954f553e1d4b5e0f8e39d9c8e3f0a", url="https://pypi.org/packages/8d/af/ea169c16f17f1c11a3fb2db3d56ca51cfec6b9bce8765cab58eed5ad1a49/frozendict-2.4.0.tar.gz")
     version("2.3.10", sha256="aadc83510ce82751a0bb3575231f778bc37cbb373f5f05a52b888e26cbb92f79", url="https://pypi.org/packages/c8/0b/5892fa56dca4a3f133f317f5e1e59d99916d649b4d47b7408bae7ac26b1a/frozendict-2.3.10.tar.gz")
     version("2.3.9", sha256="8c4771eec34a8a47a62d3520465e7ac2d8f583d8ed99fea8dbba4218756e9360", url="https://pypi.org/packages/a0/d8/4baca0c09c88bac4a1dc5779aa11a800cfca42af9cf8f71ee8cdcced4911/frozendict-2.3.9.tar.gz")
@@ -18,5 +18,10 @@ class PyFrozendict(PythonPackage):
     version("2.3.3", sha256="398539c52af3c647d103185bbaa1291679f0507ad035fe3bab2a8b0366d52cf1", url="https://pypi.org/packages/bb/06/bf6ce91e80b1304a0768c2cfab0a57ad2c51e46417c619c03d9f0564d1ae/frozendict-2.3.3.tar.gz")
     version("2.3.2", sha256="7fac4542f0a13fbe704db4942f41ba3abffec5af8b100025973e59dff6a09d0d", url="https://pypi.org/packages/90/c9/92204146ee2833ef1d509076b22705448c05b623cc7bed4716b2dff1d096/frozendict-2.3.2.tar.gz")
     version("1.2", sha256="774179f22db2ef8a106e9c38d4d1f8503864603db08de2e33be5b778230f6e45", url="https://pypi.org/packages/4e/55/a12ded2c426a4d2bee73f88304c9c08ebbdbadb82569ebdd6a0c007cfd08/frozendict-1.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

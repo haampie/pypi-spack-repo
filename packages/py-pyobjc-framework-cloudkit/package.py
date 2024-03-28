@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCloudkit(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="32bd77c2b9109113b2321feb6ed6d754af99df6569d953371f1547123be80467", url="https://pypi.org/packages/80/e3/2030ff7ec63b3d3ba0aa178bc17a902e2e3f51b9b7747660ccd653aec855/pyobjc_framework_CloudKit-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="ffdedaaa8384a64df6b30d45c834dffa002a63b8e74578012b6261780f31c28c", url="https://pypi.org/packages/9e/5c/5b4c81e2df4d604984cebaf7a0c27b9f0794e94f2899a5c4b683f622b9fd/pyobjc_framework_CloudKit-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="cf58196fc29c0fec8f5471172d0fc2f4fe03ded5ccb4d4c1075967283164aad3", url="https://pypi.org/packages/c6/88/e8e2e8ea069a67ab082ff9547343c7cfa18bfd0fdde0b91c6699f6db8cea/pyobjc_framework_CloudKit-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkCloudkit(PythonPackage):
     version("9.0", sha256="4181b816a3dc174acfcb6488df16478bbcda32ee59e5b705c13849aa74fcf2fa", url="https://pypi.org/packages/a0/7c/38cead66e6a905e50bd5cf6af6e659b7b3d0215b2219eacee6c2dbebc6ca/pyobjc_framework_CloudKit-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="47a8490ab6ced6891b2dcc1f3b28ae06cf595ff558201747a9464394dea3520b", url="https://pypi.org/packages/85/43/c5f869d3ba6b2c8fce31e2dbc4a1b71561afe33ad15911740a63682780bf/pyobjc_framework_CloudKit-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="2beb0509ef5b3dc8f6110517939b43317d5011aeda79c134f93b9d84d76f5f43", url="https://pypi.org/packages/72/54/c3d4ddc3e9529a80d25ffdd2ad2ff2e826901a5a9d5a176871529cf48210/pyobjc_framework_CloudKit-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -69,4 +73,5 @@ class PyPyobjcFrameworkCloudkit(PythonPackage):
         depends_on("py-pyobjc-framework-corelocation@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-corelocation@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-corelocation@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

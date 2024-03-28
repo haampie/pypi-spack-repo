@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJsonnet(PythonPackage):
+    # BEGIN VERSIONS
     version("0.20.0", sha256="7e770c7bf3a366b97b650a39430450f77612e74406731eb75c5bd59f3f104d4f", url="https://pypi.org/packages/a5/0e/76e5029265bc4bc4d99ad521fcb32a83070af29a0babc331ad181c299ee0/jsonnet-0.20.0.tar.gz")
     version("0.20.0-rc1", sha256="b5ce28f3dd6e4f2def349d9d1ad85d48754fd342ba5d2aa89c770ddf030cfc5b", url="https://pypi.org/packages/a3/a4/553e0dd882c5a3b880c0f2e94567adeaa15208aa713ffbcc7aeb8f70e790/jsonnet-0.20.0rc1.tar.gz")
     version("0.19.1", sha256="1728dea70933f0ae1e9355cdafc99dd296ae5c7457b374e2df4e94595e2a8115", url="https://pypi.org/packages/8e/18/b098e97bd738d3ef832112d2c87a9afbde32297974c2671d6e2c0a09b6f4/jsonnet-0.19.1.tar.gz")
@@ -17,5 +17,10 @@ class PyJsonnet(PythonPackage):
     version("0.15.0", sha256="e8fcf1049df374c0e81ed13288bdc6d826fd381e7fc2671b0946f4964b06f915", url="https://pypi.org/packages/33/b8/a8588d4010f13716a324f55d23999259bad9db2320f4fe919a66b2f651f3/jsonnet-0.15.0.tar.gz")
     version("0.14.0", sha256="7b27c12e0c91d1f7a885287f039a217ed851c45b9b07dd34e35f25e206e2cd15", url="https://pypi.org/packages/fe/a6/e69e38f1f259fcf8532d8bd2c4bc88764f42d7b35a41423a7f4b035cc5ce/jsonnet-0.14.0.tar.gz")
     version("0.13.0", sha256="b9ac8ba0b44aac85a66bf950a155ee6286f0234db162a92a3f8cd2ef7a58a9cc", url="https://pypi.org/packages/a9/a8/adba6cd0f84ee6ab064e7f70cd03a2836cefd2e063fd565180ec13beae93/jsonnet-0.13.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

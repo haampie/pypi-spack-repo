@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,9 @@
 from spack.package import *
 
 class PyBotocore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.34.72", sha256="a6b92735a73c19a7e540d77320420da3af3f32c91fa661c738c0b8c9f912d782", url="https://pypi.org/packages/dc/7e/23b72fa8190bb16c40d7ae8ca287eb5334e3977ddd31d57ce3f49a2a108b/botocore-1.34.72-py3-none-any.whl")
+    version("1.34.71", sha256="3bc9e23aee73fe6f097823d61f79a8877790436038101a83fa96c7593e8109f8", url="https://pypi.org/packages/a9/2e/60f206e1cf4c7d39c0be409b3ebc718f32ac8cb6af89a92fa24a823f9ca7/botocore-1.34.71-py3-none-any.whl")
     version("1.34.70", sha256="c86944114e85c8a8d5da06fb84f2609ed3bd23cd2fc06b30250bef7e37e8c589", url="https://pypi.org/packages/1f/f5/f17f028786e6e6e62bbd81beac7d17c3d0343077aa602a7ee4afdf7488f7/botocore-1.34.70-py3-none-any.whl")
     version("1.34.69", sha256="d3802d076d4d507bf506f9845a6970ce43adc3d819dd57c2791f5c19ed6e5950", url="https://pypi.org/packages/c6/78/919e50b633035216dfb68627b1a4eac1235148b89b34a28f07fd99e8ac17/botocore-1.34.69-py3-none-any.whl")
     version("1.34.68", sha256="3ad0ec67f78beecc039c3c31c93a83181e30b6f789261bdbb9f5c8e8dc551812", url="https://pypi.org/packages/03/26/ea66a6fde66ecd5dcc8724ff592ab97db377e7b41933472a228a127b8451/botocore-1.34.68-py3-none-any.whl")
@@ -15,8 +17,6 @@ class PyBotocore(PythonPackage):
     version("1.34.65", sha256="3b0012d7293880c0a4883883047e93f2888d7317b5e9e8a982a991b90d951f3e", url="https://pypi.org/packages/08/67/c6609ff28b0f097ccd00681b078d86b76669c60c645d2d6ef805b77d2eb2/botocore-1.34.65-py3-none-any.whl")
     version("1.34.64", sha256="0ab760908749fe82325698591c49755a5bb20307d85a419aca9cc74e783b9407", url="https://pypi.org/packages/22/7e/7eea3d93fbc0d7ec8c322d2a6aef9be330a97f3fc4cffdcdc54c0455457d/botocore-1.34.64-py3-none-any.whl")
     version("1.34.63", sha256="8a6cbc3a5c5988725c00815f8f7f6baf81980b19d9a2ee414b031e726759dba9", url="https://pypi.org/packages/ed/1b/1e150fa8bc26ab8114eb42715e97c832522da1b227c8b224f2206949368d/botocore-1.34.63-py3-none-any.whl")
-    version("1.34.62", sha256="7d215bb6c47e26a2b2b07a39769060c301d15186a302fba12260529870d64d64", url="https://pypi.org/packages/8a/5c/2a79469540a97ca3f2287bc15d33c7b50fa9ac61cba76d493c9363b1465c/botocore-1.34.62-py3-none-any.whl")
-    version("1.34.61", sha256="079f3288d38f97fd5656c25c44a94bea0e7090b938abfdeea463eaadb210c4a0", url="https://pypi.org/packages/1d/4f/79dc11e13879bec49b577319a073f346ff340b0d00ebbd669ace4325bbbd/botocore-1.34.61-py3-none-any.whl")
     version("1.34.51", sha256="01d5156247f991b3466a8404e3d7460a9ecbd9b214f9992d6ba797d9ddc6f120", url="https://pypi.org/packages/03/01/f25f3fe0e7315a1ba0b1c8771515884b566426358749b5cabc89ccf1e73c/botocore-1.34.51-py3-none-any.whl")
     version("1.34.50", sha256="fda510559dbe796eefdb59561cc81be1b99afba3dee53fd23db9a3d587adc0ab", url="https://pypi.org/packages/a2/c9/ee20ae608f29b25b031ab59ce4bba001a0df63167be7112fd3d0bf74f476/botocore-1.34.50-py3-none-any.whl")
     version("1.34.49", sha256="4ed9d7603a04b5bb5bd5de63b513bc2c8a7e8b1cd0088229c5ceb461161f43b6", url="https://pypi.org/packages/bd/e3/6bb6c8abea700d5dfeb14bbe41bdfe27e0aa665d06a911397a51e57aaa69/botocore-1.34.49-py3-none-any.whl")
@@ -129,13 +129,18 @@ class PyBotocore(PythonPackage):
     version("1.13.38", sha256="81b588e5a0e33e75c619f992d315b14b81597fe8bd1291a801724861df4d8cef", url="https://pypi.org/packages/89/7b/91602326d58e4a59a0e510e88858b4c072110679044053148545b5a170fb/botocore-1.13.38-py2.py3-none-any.whl")
     version("1.12.253", sha256="dc080aed4f9b220a9e916ca29ca97a9d37e8e1d296fe89cbaeef929bf0c8066b", url="https://pypi.org/packages/8e/7b/88f10115b4748f86be6b7b1d8761ba5023fccf6e6cbe762e368f63eddcf9/botocore-1.12.253-py2.py3-none-any.whl")
     version("1.12.169", sha256="22e7d079b62562591bc5b00a4fa97e0626b6ffb1b605929c7b023171c33a548a", url="https://pypi.org/packages/28/ac/a43d37f371f5854514128d7c54887176b8df3bc9925a25e5096298033f93/botocore-1.12.169-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-jmespath@0.7.1:", when="@1.24.21:")
-        depends_on("py-jmespath@0.7.1:0", when="@1.17.25:1.24.20")
-        depends_on("py-python-dateutil@2:", when="@1.17.25:")
+        depends_on("py-jmespath@0.7.1:0", when="@1.17.25:1.21.40,1.21.42:1.24.20")
+        depends_on("py-python-dateutil@2:", when="@1.17.25:1.21.40,1.21.42:")
         depends_on("py-urllib3@1.25.4:2.1,2.2.1:", when="@1.34.63: ^python@3.10:")
         depends_on("py-urllib3@1.25.4:1", when="@1.31.62: ^python@:3.9")
         depends_on("py-urllib3@1.25.4:2.0", when="@1.31.62:1.34.62 ^python@3.10:")
-        depends_on("py-urllib3@1.25.4:1", when="@1.19.17:1.31.61")
+        depends_on("py-urllib3@1.25.4:1", when="@1.19.17:1.21.40,1.21.42:1.31.61")
+    # END DEPENDENCIES
 

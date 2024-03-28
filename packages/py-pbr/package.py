@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPbr(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.0.0", sha256="4a7317d5e3b17a3dccb6a8cfe67dab65b20551404c52c8ed41279fa4f0cb4cda", url="https://pypi.org/packages/64/dd/171c9fb653591cf265bcc89c436eec75c9bde3dec921cc236fa71e5698df/pbr-6.0.0-py2.py3-none-any.whl")
     version("5.11.1", sha256="567f09558bae2b3ab53cb3c1e2e33e726ff3338e7bae3db5dc954b3a44eef12b", url="https://pypi.org/packages/01/06/4ab11bf70db5a60689fc521b636849c8593eb67a2c6bdf73a16c72d16a12/pbr-5.11.1-py2.py3-none-any.whl")
     version("5.11.0", sha256="db2317ff07c84c4c63648c9064a79fe9d9f5c7ce85a9099d4b6258b3db83225a", url="https://pypi.org/packages/e5/37/10e8a53f196cf0bcb93008daed42e2c47c7876430a7efd044ff4d647f30a/pbr-5.11.0-py2.py3-none-any.whl")
@@ -33,7 +33,12 @@ class PyPbr(PythonPackage):
     version("0.10.3", sha256="87d67997a3d6570f6688aa4e938699439efae17abc452d4572442168043870f1", url="https://pypi.org/packages/d2/78/c6824d6fec5169cca21295093b42d1c609a54d21a18c953cf7f16dfaf1f5/pbr-0.10.3-py2.py3-none-any.whl")
     version("0.10.2", sha256="22c3f4a8c91dc2d2e99271d662b72cfeb90ec436ca0553ece620ae8576096a2b", url="https://pypi.org/packages/c2/39/653746d50ebd66a8784c5469e439e73b717f48fa463165d7c734d25a2de6/pbr-0.10.2-py2.py3-none-any.whl")
     version("0.10.1", sha256="64a051044009f18da4a5ed8faefe8eb9540cab8d3431b9b6d510d877c4b36a82", url="https://pypi.org/packages/db/20/4b2c63698053d5a03e2f1d5cf39735a890901a97fff513adfc7e7bd0729a/pbr-0.10.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pip", when="@0.10.1:0")
+    # END DEPENDENCIES
 

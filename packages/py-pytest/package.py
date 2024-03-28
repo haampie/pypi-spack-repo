@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytest(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("8.1.1", sha256="2a8386cfc11fa9d2c50ee7b2a57e7d898ef90470a7a34c4b949ff59662bb78b7", url="https://pypi.org/packages/4d/7e/c79cecfdb6aa85c6c2e3cf63afc56d0f165f24f5c66c03c695c4d9b84756/pytest-8.1.1-py3-none-any.whl")
     version("8.1.0", sha256="ee32db7af8de4629a455806befa90559f307424c07b8413ccfc30bf5b221dd7e", url="https://pypi.org/packages/5a/4a/3f626e3974bea1e6d471bd86f7965c67cd06d5770d1fec9aae445c44da7b/pytest-8.1.0-py3-none-any.whl")
     version("8.0.2", sha256="edfaaef32ce5172d5466b5127b42e0d6d35ebbe4453f0e3505d96afd93f6b096", url="https://pypi.org/packages/a7/ea/d0ab9595a0d4b2320483e634123171deaf50885e29d442180efcbf2ed0b2/pytest-8.0.2-py3-none-any.whl")
@@ -43,9 +43,13 @@ class PyPytest(PythonPackage):
     version("3.7.2", sha256="96bfd45dbe863b447a3054145cd78a9d7f31475d2bce6111b133c0cc4f305118", url="https://pypi.org/packages/98/37/4b988e339251ec5359824f2529930e793d75b7039f2fa88736743f0ed415/pytest-3.7.2-py2.py3-none-any.whl")
     version("3.7.1", sha256="e74466e97ac14582a8188ff4c53e6cc3810315f342f6096899332ae864c1d432", url="https://pypi.org/packages/d2/86/7b9513da923b94e48c2cf013ae4eae8184a36ebeb7fe27d386bc3db4f56f/pytest-3.7.1-py2.py3-none-any.whl")
     version("3.5.1", sha256="829230122facf05a5f81a6d4dfe6454a04978ea3746853b2b84567ecf8e5c526", url="https://pypi.org/packages/76/52/fc48d02492d9e6070cb672d9133382e83084f567f88eff1c27bd2c6c27a8/pytest-3.5.1-py2.py3-none-any.whl")
-    version("3.0.7", sha256="b70696ebd1a5e6b627e7e3ac1365a4bc60aaf3495e843c1e70448966c5224cab", url="https://pypi.org/packages/00/e9/f77dcd80bdb2e52760f38dbd904016da018ab4373898945da744e5e892e9/pytest-3.0.7.tar.gz")
-    version("3.0.2", sha256="64d8937626dd2a4bc15ef0edd307d26636a72a3f3f9664c424d78e40efb1e339", url="https://pypi.org/packages/2b/05/e20806c99afaff43331f5fd8770bb346145303882f98ef3275fa1dd66f6d/pytest-3.0.2.tar.gz")
+    version("3.0.7", sha256="66f332ae62593b874a648b10a8cb106bfdacd2c6288ed7dec3713c3a808a6017", url="https://pypi.org/packages/8e/81/40a4b62b1d15441c282db485f8f08c7c38edab9ffe750a31d77805cd5f6a/pytest-3.0.7-py2.py3-none-any.whl")
+    version("3.0.2", sha256="4b0872d00159dd8d7a27c4a45a2be77aac8a6e70c3af9a7c76c040c3e3715b9d", url="https://pypi.org/packages/c4/bf/80d1cd053b1c86f6ecb23300fba3a7c572419b5edc155da0f3f104d42775/pytest-3.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-atomicwrites@1:", when="@5.3:7.1.2 platform=windows")
         depends_on("py-atomicwrites@1:", when="@3.6:5.2")
@@ -73,4 +77,5 @@ class PyPytest(PythonPackage):
         depends_on("py-tomli@1:", when="@7.2: ^python@:3.10")
         depends_on("py-tomli@1:", when="@7:7.1")
         depends_on("py-wcwidth", when="@4.5:5")
+    # END DEPENDENCIES
 

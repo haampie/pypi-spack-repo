@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyjwt(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.8.0", sha256="59127c392cc44c2da5bb3192169a91f429924e17aff6534d70fdc02ab3e04320", url="https://pypi.org/packages/2b/4f/e04a8067c7c96c364cef7ef73906504e2f40d690811c021e1a1901473a19/PyJWT-2.8.0-py3-none-any.whl")
     version("2.7.0", sha256="ba2b425b15ad5ef12f200dc67dd56af4e26de2331f965c5439994dad075876e1", url="https://pypi.org/packages/c7/e8/01b2e35d81e618a8212e651e10c91660bdfda49c1d15ce66f4ca1ff43649/PyJWT-2.7.0-py3-none-any.whl")
     version("2.6.0", sha256="d83c3d892a77bbb74d3e1a2cfa90afaadb60945205d1095d9221f04466f64c14", url="https://pypi.org/packages/40/46/505f0dd53c14096f01922bf93a7abb4e40e29a06f858abbaa791e6954324/PyJWT-2.6.0-py3-none-any.whl")
@@ -24,16 +24,21 @@ class PyPyjwt(PythonPackage):
     version("1.6.1", sha256="bca523ef95586d3a8a5be2da766fe6f82754acba27689c984e28e77a12174593", url="https://pypi.org/packages/31/8f/19c302aa9a391dd1fbd249362b749021b88d40fb59af0363939a2250afed/PyJWT-1.6.1-py2.py3-none-any.whl")
     version("1.6.0", sha256="b752500cafd4df9f0dc6efe9063603e36a4e1a5c24fee48234d2949b6606aa59", url="https://pypi.org/packages/fc/fd/02c195aa48beef5e4b018259634dd885fa1a9df351c708a8486e7ddf2216/PyJWT-1.6.0-py2.py3-none-any.whl")
     version("1.5.3", sha256="a4e5f1441e3ca7b382fd0c0b416777ced1f97c64ef0c33bfa39daf38505cfd2f", url="https://pypi.org/packages/8a/a6/4d931a2c77a224d27c78382f4ce8ec07542d4426ea2793bea77a689273c2/PyJWT-1.5.3-py2.py3-none-any.whl")
-    version("1.5.2", sha256="1179f0bff86463b5308ee5f7aff1c350e1f38139d62a723e16fb2c557d1c795f", url="https://pypi.org/packages/ac/b2/72a8bff872e6f8e2aed4f4210aa24ba9c9f4f03a67f34e2f867905122235/PyJWT-1.5.2.tar.gz")
-    version("1.5.1", sha256="d6b363d2015c33afd63dfd961d38ae40e97f7abd3db50c87ac626238bc1039a0", url="https://pypi.org/packages/b2/b0/7fb49bcbc43f1ea70f1cb7c68e2d444295ec53dfd641f1d3600f44bbfc5b/PyJWT-1.5.1.tar.gz")
-    version("1.5.0", sha256="fd182b728d13f04c289d9b2623d09256d356c9b4a6778018001454a954d7c54b", url="https://pypi.org/packages/53/d1/bc6a0296a4a63277c45ab22f4b4a58a0d2ada12d6d60905dbdc40989d8fd/PyJWT-1.5.0.tar.gz")
+    version("1.5.2", sha256="9e7d780c30cd03bb0d29510b03e09caa95c6d880b3897450eb0f2d1678d3e5b1", url="https://pypi.org/packages/46/63/9e57342802642c447f0620dea41a18033abbb466af9417543295ab56b8b9/PyJWT-1.5.2-py2.py3-none-any.whl")
+    version("1.5.1", sha256="715813107a3e75c4479a32dfae4b3fbdb617e5037400e53a1c5a6bcb53c07795", url="https://pypi.org/packages/c5/e7/0827289521d3725fcf3882df0fd499d23c02d1be0fed806d2a6f4585536f/PyJWT-1.5.1-py2.py3-none-any.whl")
+    version("1.5.0", sha256="ad60a3fb9b393667864ed4b8abc9c3b570747f80bf77a113ead2fbaf0f0cedf3", url="https://pypi.org/packages/9a/68/6b31dcb5bb193227db30a91d774ffd3e18d9e4f1a9333cb07a6528db1883/PyJWT-1.5.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("crypto", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cryptography@3.4:", when="@2.6:+crypto")
         depends_on("py-cryptography@3.3.1:", when="@2.2:2.5+crypto")
         depends_on("py-cryptography@3.3.1:3", when="@2.0.0:2.1+crypto")
         depends_on("py-cryptography@1.4:", when="@1.5.3:1+crypto")
         depends_on("py-types-cryptography@3.3.21:", when="@2.5+crypto")
+    # END DEPENDENCIES
 

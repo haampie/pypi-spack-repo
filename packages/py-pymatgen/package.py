@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPymatgen(PythonPackage):
+    # BEGIN VERSIONS
     version("2024.3.1", sha256="798937cf2c33d8469ea1347607e22fbca6c94528b4b1343057b63e94892653a3", url="https://pypi.org/packages/c5/c8/37069017466f04bdfd321f36795762b72ccb776bff110d327faf950f2748/pymatgen-2024.3.1.tar.gz")
     version("2024.2.23", sha256="48764e1bdf8d6b0209b650a96c86947b73d41bc7d2cc4ff13b2ac54dd1c308eb", url="https://pypi.org/packages/4d/a0/903a79eeddd76e1913af8d7911dc7edc4b6898cc616642a8229124a1d21a/pymatgen-2024.2.23.tar.gz")
     version("2024.2.20", sha256="76645ade67f00a60fa14f954a191716bb3021b7482d8d76ca4407d2b051a22d4", url="https://pypi.org/packages/df/f0/a2c60b88bc8c28a385f9b74310c236b39f0a9d51a1508a99d01abead75d1/pymatgen-2024.2.20.tar.gz")
@@ -20,25 +20,30 @@ class PyPymatgen(PythonPackage):
     version("2022.9.8", sha256="2250e05b81af3313bc0fc70cb558c2f528ed4eefb32d943ed9bd7a9756f03652", url="https://pypi.org/packages/92/f5/f85118b4ca8af05b147fda11dda53a699f5932293fd78268e3c5438b1d31/pymatgen-2022.9.8.tar.gz")
     version("2021.3.9", sha256="a6f22d69133a48b7801bfd5e6a2878b47b4b4b2ef1a377b87c6c573be14cbf16", url="https://pypi.org/packages/18/06/8f4a5288ea5d940773d9c8651aee59535006353b1b592ac1e61802b0749f/pymatgen-2021.3.9.tar.gz")
     version("2020.12.31", sha256="5002490facd47c55d2dae42c35712e061c1f5d881180485c0543a899589856d6", url="https://pypi.org/packages/e1/18/274b40cff34257a728071199d21105ced3116b42dd60793113eee7b1b5ca/pymatgen-2020.12.31.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2023.9:")
         depends_on("py-joblib", when="@2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-matplotlib@1.5:", when="@2017.8.14:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-matplotlib@1.5:", when="@2017.8.14:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
         depends_on("py-monty@2024.2:", when="@2024.2:")
-        depends_on("py-monty@3.0.2:", when="@2019.10.3:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:2024.1")
-        depends_on("py-networkx@2.2:", when="@2019.7.21:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-monty@3.0.2:", when="@2019.10.3:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:2024.1")
+        depends_on("py-networkx@2.2:", when="@2019.7.21:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
         depends_on("py-numpy@1.25.0:", when="@2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-palettable@3.1.1:", when="@2019.7.21:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-pandas", when="@2017.12:2020.1,2020.3.13:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-plotly@4.5.0:", when="@2020.4:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-palettable@3.1.1:", when="@2019.7.21:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-pandas", when="@2017.12:2020.1,2020.3.13:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-plotly@4.5.0:", when="@2020.4:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
         depends_on("py-pybtex", when="@2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-requests", when="@2017.8.14:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-requests", when="@2017.8.14:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
         depends_on("py-ruamel-yaml@0.17:", when="@2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-scipy@1.5.0:", when="@2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-scipy@1.5.0:", when="@2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
         depends_on("py-spglib@2.0.2:", when="@2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-sympy", when="@2017.8.14:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-tabulate", when="@2017.8.14:2020.7,2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-sympy", when="@2017.8.14:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-tabulate", when="@2017.8.14:2020.7,2023.9.10,2023.10:2023.10.3,2023.10.11:")
         depends_on("py-tqdm", when="@2023.9.10,2023.10:2023.10.3,2023.10.11:")
-        depends_on("py-uncertainties@3.1.4:", when="@2022.0.14,2023.9.10,2023.10:2023.10.3,2023.10.11:")
+        depends_on("py-uncertainties@3.1.4:", when="@2023.9.10,2023.10:2023.10.3,2023.10.11:")
+    # END DEPENDENCIES
 

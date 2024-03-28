@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PyTyper(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.11.0", sha256="049cc47bef39f46b043eddd9165492209fdd9bc7d79afa7ba9cc5cd017caa817", url="https://pypi.org/packages/ed/55/c47933592c0bb9f4355e1b31c5f15088c0b3c8a93ebdf3f0e0347decea77/typer-0.11.0-py3-none-any.whl")
     version("0.10.0", sha256="b8a587aa06d3c5422c09c2e9935eb80b4c9de8605fd5ab702b2f92d72246ca48", url="https://pypi.org/packages/d9/07/8100c125307a26f03c305764f22cd995ae1878071ddf1df3588add73b53c/typer-0.10.0-py3-none-any.whl")
     version("0.9.4", sha256="aa6c4a4e2329d868b80ecbaf16f807f2b54e192209d7ac9dd42691d63f7a54eb", url="https://pypi.org/packages/62/39/82c9d3e10979851847361d922a373bdfef4091020da7f893acfaf07c0225/typer-0.9.4-py3-none-any.whl")
     version("0.9.3", sha256="683d3055ac04e63d062de74db0ce2051e91bd784605200865e2aa42b5808f4f8", url="https://pypi.org/packages/82/e9/eeae6b93f120d7a74147456f6eac95cce43cce121fb28af05e5014f4ca78/typer-0.9.3-py3-none-any.whl")
@@ -24,9 +25,15 @@ class PyTyper(PythonPackage):
     version("0.3.2", sha256="ba58b920ce851b12a2d790143009fa00ac1d05b3ff3257061ff69dbdfc3d161b", url="https://pypi.org/packages/90/34/d138832f6945432c638f32137e6c79a3b682f06a63c488dcfaca6b166c64/typer-0.3.2-py3-none-any.whl")
     version("0.3.1", sha256="778a9695e68eb26a0a0321ca9d3f1a8809783f6f083549b84c67bc2385bf014e", url="https://pypi.org/packages/73/5d/94781aa6849c98bf71e9389efc7112ecc171fe544b55ceab8583228d039d/typer-0.3.1-py3-none-any.whl")
     version("0.3.0", sha256="a2a7b4b6388debc2b7160c8b7a54368df85b56c3f1447846bad630e99d629ffc", url="https://pypi.org/packages/20/82/d8e6c9100f31b7cffb7274603d41e77af1c70ea2d9f03671313ec7868454/typer-0.3.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@7.1.1:", when="@0.4:")
+        depends_on("py-click@8.0.0:", when="@0.11:")
+        depends_on("py-click@7.1.1:", when="@0.4:0.10")
         depends_on("py-click@7.1.1:7", when="@0.0.10:0.3")
         depends_on("py-typing-extensions@3.7.4.3:", when="@0.9:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleAuth(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.28.2", sha256="9fd67bbcd40f16d9d42f950228e9cf02a2ded4ae49198b27432d0cded5a74c38", url="https://pypi.org/packages/92/94/35ba55b5011185ea1c995938e7851b25e6092f15658afa9263cd65a67dd4/google_auth-2.28.2-py2.py3-none-any.whl")
     version("2.28.1", sha256="25141e2d7a14bfcba945f5e9827f98092716e99482562f15306e5b026e21aa72", url="https://pypi.org/packages/b7/1d/f152a5f6d243b6acbb2a710ed19aa47154d678359bed995abdd9daf0cff0/google_auth-2.28.1-py2.py3-none-any.whl")
     version("2.28.0", sha256="7634d29dcd1e101f5226a23cbc4a0c6cda6394253bf80e281d9c5c6797869c53", url="https://pypi.org/packages/ff/ce/1b4dc8b5ecdc9a99202b093729192b69301c33064d0e312fb8d9e384dbe0/google_auth-2.28.0-py2.py3-none-any.whl")
@@ -33,14 +33,23 @@ class PyGoogleAuth(PythonPackage):
     version("1.30.1", sha256="b3ca7a8ff9ab3bdefee3ad5aefb11fc6485423767eee016f5942d8e606ca23fb", url="https://pypi.org/packages/35/d2/0a79bc7e201c1b38ce46d607eb9398dc362dff1b054c7bba8e4e195c2ed7/google_auth-1.30.1-py2.py3-none-any.whl")
     version("1.30.0", sha256="588bdb03a41ecb4978472b847881e5518b5d9ec6153d3d679aa127a55e13b39f", url="https://pypi.org/packages/d2/c1/44179a1cfc5c3b5832a5f9c925161612471ec5f346bcd186235651d74f35/google_auth-1.30.0-py2.py3-none-any.whl")
     version("1.6.3", sha256="20705f6803fd2c4d1cc2dcb0df09d4dfcb9a7d51fd59e94a3a28231fd93119ed", url="https://pypi.org/packages/c5/9b/ed0516cc1f7609fb0217e3057ff4f0f9f3e3ce79a369c6af4a6c5ca25664/google_auth-1.6.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("aiohttp", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-aiohttp@3.6.2:3", when="@1.22.1:+aiohttp")
         depends_on("py-aiohttp@3.6.2:3", when="@1.22:1.22.0")
         depends_on("py-cachetools@2:4", when="@1.10:2.3")
         depends_on("py-cachetools@2:", when="@0.10:1.6,2.4:")
         depends_on("py-pyasn1-modules@0.2:", when="@1.3:")
+        depends_on("py-requests@2.20:", when="@1.30.2:2.0.0.0,2.0.1:+aiohttp")
         depends_on("py-rsa@3.1.4:", when="@0.1:0.6,0.9:1.6,1.17:")
         depends_on("py-setuptools@40.3:", when="@1.7:2.3")
         depends_on("py-six@1.9:", when="@0.1:0.6,0.9:1,2.0.0.dev:2.0.0,2.3.1:2.22")
         depends_on("py-urllib3@:1", when="@2.18:2.23.0")
+    # END DEPENDENCIES
 

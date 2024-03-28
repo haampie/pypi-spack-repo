@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHdbscan(PythonPackage):
+    # BEGIN VERSIONS
     version("0.8.33", sha256="57fabc5f0e45f48d2407b35c731192abc896376411fe7e4bb836ffa03d38f90d", url="https://pypi.org/packages/44/2c/b6bb84999f1c82cf0abd28595ff8aff2e495e18f8718b6b18bb11a012de4/hdbscan-0.8.33.tar.gz")
     version("0.8.32", sha256="2d80b371f3800d0f178540e3ec4474df54acd1c483e68a5121f4b0e15dac1e0b", url="https://pypi.org/packages/85/a5/8505f66eb8e7a717fb7e40a5cc74bf00f9e7ff19ea6733b3e20ebaf6dc84/hdbscan-0.8.32.tar.gz")
     version("0.8.31", sha256="3bb47a5844330d425d0fc796c908c50447b13ffd9210a5467958fe47959a9a87", url="https://pypi.org/packages/4a/11/92c8c98005cc4c8f61d4299f496376791a6e498c3f1b0812c0e6eb68a6c5/hdbscan-0.8.31.tar.gz")
@@ -17,5 +17,10 @@ class PyHdbscan(PythonPackage):
     version("0.8.26", sha256="81a61cd011e010b20e7cbd8d235053a98892504d32881d379d1902278817927e", url="https://pypi.org/packages/22/2f/2423d844072f007a74214c1adc46260e45f034bb1679ccadfbb8a601f647/hdbscan-0.8.26.tar.gz")
     version("0.8.25", sha256="92cccf0cfcb544007529841a387e97379cfe5d2d33ab620777cf2b17a925b19e", url="https://pypi.org/packages/8a/a6/2524f6cff01a2da18f07f6a2b04977297f8a094ef3a92aa6bfc6c3924687/hdbscan-0.8.25.tar.gz")
     version("0.8.24", sha256="fe31a7ea0ce2c9babd190a195e491834ff9f64c74daa4ca94fa65a88f701269a", url="https://pypi.org/packages/9f/db/c3e6b58518d0a19861eb0309670b8432a2237acae253db92ba9b523f9082/hdbscan-0.8.24.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

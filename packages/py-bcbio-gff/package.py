@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBcbioGff(PythonPackage):
+    # BEGIN VERSIONS
     version("0.7.1", sha256="98b18c797fbabd27f47c2edc2a5c5e75d37a353cc2286684c4650728e66ff8fd", url="https://pypi.org/packages/4d/fc/fb0ad7988b7db0bd88c2764fd6b82657786e61cd5ab7f051e823c1aa1d4a/bcbio_gff-0.7.1-py3-none-any.whl")
     version("0.7.0", sha256="9f1bc9629ef1be13e713971c208223e1812ba1a6119979e9ce80b25212120d65", url="https://pypi.org/packages/65/ca/a662629e1b030af679d228aed5c813f0a8ceedec69f30885f1ec5571ea8a/bcbio_gff-0.7.0-py3-none-any.whl")
     version("0.6.9", sha256="34dfa970e14f4533dc63c0a5512b7b5221e4a06449e6aaa344162ed5fdd7a1de", url="https://pypi.org/packages/cd/de/13a70a7a158fc9d61ea18b9dadd2ef07584c44a912708b6d29de0185fc1d/bcbio-gff-0.6.9.tar.gz")
@@ -17,8 +17,13 @@ class PyBcbioGff(PythonPackage):
     version("0.6.4", sha256="e0efddc2376ed11b8f9682029b58bfd523a9aa62199f870b4ce64509ff99820b", url="https://pypi.org/packages/94/df/e2d75cc688ac6eb53f5fb4e2cffd240596bbcd5be28bab8d4f6404a6f86c/bcbio-gff-0.6.4.tar.gz")
     version("0.6.2", sha256="c682dc46a90e9fdb124ab5723797a5f71b2e3534542ceff9f6572b64b9814e68", url="https://pypi.org/packages/d2/02/722db105394093e107c6d4aeb7b8526909a2580b984e9b4f90202e9db1ab/bcbio-gff-0.6.2.tar.gz")
     version("0.6.1", sha256="7ba2e69ddf1956b93750062592026cbfebad28176bcc79ad0e82d6a06ca8cba5", url="https://pypi.org/packages/26/ff/e3f26bad87926bd397173ddafed4b0a6e30394ed7d1717879bdc19142ceb/bcbio-gff-0.6.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-biopython", when="@0.7:")
         depends_on("py-six", when="@0.7:")
+    # END DEPENDENCIES
 

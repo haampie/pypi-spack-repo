@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRasterio(PythonPackage):
+    # BEGIN VERSIONS
     version("1.3.9", sha256="fc6d0d290492fa1a5068711cfebb21cc936968891b7ed9da0690c8a7388885c5", url="https://pypi.org/packages/bd/b8/84f5e6ee1d7915d20ceaa7dbbf2589787c5819907b75c4f2b95386f88961/rasterio-1.3.9.tar.gz")
     version("1.3.8.post2", sha256="e45c6c46f07902cb87f25ed2f394ce0fddf19ff2396c8071f8afd22263c54258", url="https://pypi.org/packages/44/1b/879365a41fecfd806940b183777d738651dc6d8e98b242e0f7af9d44f83f/rasterio-1.3.8.post2.tar.gz")
     version("1.3.8.post1", sha256="98d5efd2dca85eb9d36af3928cc2dc430a2d29a7b24ee38b5004122860d75f77", url="https://pypi.org/packages/6d/36/bbcd4d1ca8010da5b7df0a907e8da2f89a5e3e045b7632dea30be19fa64b/rasterio-1.3.8.post1.tar.gz")
@@ -24,7 +24,11 @@ class PyRasterio(PythonPackage):
     version("1.2.3", sha256="d8c345e01052b70ac3bbbe100c83def813c0ab19f7412c2c98e553d03720c1c5", url="https://pypi.org/packages/97/85/3591f1b04fc9e9038aff7d6c5ddc816e8a7c0c8362f69b70ed6455ebcebd/rasterio-1.2.3.tar.gz")
     version("1.1.8", sha256="f7cac7e2ecf65b4b1eb78c994c63bd429b67dc679b0bc0ecfe487d3d5bf88fd5", url="https://pypi.org/packages/73/2d/3e1bc56d75bf7c4cd5df51536992b3420197f2aa5ddd4d93e12100715dff/rasterio-1.1.8.tar.gz")
     version("1.1.5", sha256="ebe75c71f9257c780615caaec8ef81fa4602702cf9290a65c213e1639284acc9", url="https://pypi.org/packages/86/43/aae52a19a69ee30d28d0374c5f22d473ba3ba98ace4a5a5330a26590df95/rasterio-1.1.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.4-alpha1:")
         depends_on("py-affine", when="@0.29:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
@@ -34,4 +38,5 @@ class PyRasterio(PythonPackage):
         depends_on("py-cligj@0.5:", when="@1.0.7:1.0.18,1.0.21:1.1.5")
         depends_on("py-numpy", when="@0.29:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
         depends_on("py-snuggs@1.4.1:", when="@1.0-alpha6:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
+    # END DEPENDENCIES
 

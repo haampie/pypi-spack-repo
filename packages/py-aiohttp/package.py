@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAiohttp(PythonPackage):
+    # BEGIN VERSIONS
     version("3.9.3", sha256="90842933e5d1ff760fae6caca4b2b3edba53ba8f4b71e95dacf2818a2aca06f7", url="https://pypi.org/packages/18/93/1f005bbe044471a0444a82cdd7356f5120b9cf94fe2c50c0cdbf28f1258b/aiohttp-3.9.3.tar.gz")
     version("3.9.2", sha256="b0ad0a5e86ce73f5368a164c10ada10504bf91869c05ab75d982c6048217fbf7", url="https://pypi.org/packages/07/2f/27c9ae85646de72784529a86d2a98c7cfae4ff9eab0004becf47da66c7ec/aiohttp-3.9.2.tar.gz")
     version("3.9.1", sha256="8fc49a87ac269d4529da45871e2ffb6874e87779c3d0e2ccd813c0899221239d", url="https://pypi.org/packages/54/07/9467d3f8dae29b14f423b414d9e67512a76743c5bb7686fb05fe10c9cc3e/aiohttp-3.9.1.tar.gz")
@@ -20,7 +20,11 @@ class PyAiohttp(PythonPackage):
     version("3.8.0", sha256="d3b19d8d183bcfd68b25beebab8dc3308282fe2ca3d6ea3cb4cd101b3c279f8d", url="https://pypi.org/packages/48/1a/ba9542a545aed4b0b6ef128561f68dd3c2812ff5abfa9ed5b96547a728ea/aiohttp-3.8.0.tar.gz")
     version("3.7.4", sha256="5d84ecc73141d0a0d61ece0742bb7ff5751b0657dab8405f899d3ceb104cc7de", url="https://pypi.org/packages/7a/95/eb60aaad7943e18c9d091de93c9b0b5ed40aa67c7d5e3c5ee9b36f100a38/aiohttp-3.7.4.tar.gz")
     version("3.6.2", sha256="259ab809ff0727d0e834ac5e8a283dc5e3e0ecc30c4d80b3cd17a4139ce1f326", url="https://pypi.org/packages/00/94/f9fa18e8d7124d7850a5715a0b9c0584f7b9375d331d35e157cee50f27cc/aiohttp-3.6.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiosignal@1.1.2:", when="@3.8.6:3")
         depends_on("py-async-timeout@4.0.0:", when="@3.9:3 ^python@:3.10")
@@ -33,4 +37,5 @@ class PyAiohttp(PythonPackage):
         depends_on("py-multidict@4.5:", when="@3.8.6:3")
         depends_on("py-multidict@4.5:4", when="@3.6.1-beta3:3.6.2,4.0.0-alpha1:")
         depends_on("py-yarl@1:", when="@3.0.0:3.6.2,3.8.6:")
+    # END DEPENDENCIES
 

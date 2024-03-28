@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleCloudAppengineLogging(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.4.3", sha256="8e30af51d853f219caf29e8b8b342b9ce8214b29f334dafae38d39aaaff7d372", url="https://pypi.org/packages/98/05/5a85665473aacae44094cdd0ee986b1893a5430172eb3980797cc5339d38/google_cloud_appengine_logging-1.4.3-py2.py3-none-any.whl")
     version("1.4.2", sha256="08d46bacf7e6bb4cb963dc5c0ab6995f2cd3fec69c7a2862405e98dce0c194bc", url="https://pypi.org/packages/ea/ce/f1378e69b78ac7738ee7e5a704a855a0924378f07d2c9cdca0fb91f00a3a/google_cloud_appengine_logging-1.4.2-py2.py3-none-any.whl")
     version("1.4.1", sha256="851dad2c4dd85dcf5b9e32879acda998a250e82c4d4f2bd5ef67b904840c7b17", url="https://pypi.org/packages/ea/4c/cc55e3ebaeca3cbb87441cd296051d5aafce3c9f5ff8b7f5b69549fc66a5/google_cloud_appengine_logging-1.4.1-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyGoogleCloudAppengineLogging(PythonPackage):
     version("1.2.0", sha256="8257fe68d0c2f4eb1085fde875e2929196e4ded9cb522c3faaddf14307e8e588", url="https://pypi.org/packages/82/07/eeba8e8b156e329e60869c7acff967194e18b845d30efc498212179c1b94/google_cloud_appengine_logging-1.2.0-py2.py3-none-any.whl")
     version("1.1.6", sha256="75091dc527c2ff3459f5327d6e699069f12d68ee8732c08dcdba894aa1f0faec", url="https://pypi.org/packages/7e/db/17ced89c1977e3ba51c9feb6433b89442beb60b9f4c14c963e2bdb72ef3c/google_cloud_appengine_logging-1.1.6-py2.py3-none-any.whl")
     version("1.1.5", sha256="1a06dc41997c7daacadd83497b26208d49c30625103e790c4ce6dafa8ea5501c", url="https://pypi.org/packages/d8/ff/0e8ea6e2a904e0167cbb10cd7a6ba2ab7055ce56161e42d69eb17cd132ad/google_cloud_appengine_logging-1.1.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-google-api-core@1.34.1:1,2.11:+grpc", when="@1.4.2:")
         depends_on("py-google-api-core@1.34:1,2.11:+grpc", when="@1.2:1.4.1")
@@ -29,4 +33,5 @@ class PyGoogleCloudAppengineLogging(PythonPackage):
         depends_on("py-proto-plus@1.22:", when="@1.1.4:1.3")
         depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0-rc2,4.21.6:4", when="@1.1.6:")
         depends_on("py-protobuf@3.20.2:4", when="@1.1.5")
+    # END DEPENDENCIES
 

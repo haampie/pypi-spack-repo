@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPsycopg2(PythonPackage):
+    # BEGIN VERSIONS
     version("2.9.9", sha256="d1454bde93fb1e224166811694d600e746430c006fbb031ea06ecc2ea41bf156", url="https://pypi.org/packages/c9/5e/dc6acaf46d78979d6b03458b7a1618a68e152a6776fce95daac5e0f0301b/psycopg2-2.9.9.tar.gz")
     version("2.9.8", sha256="3da6488042a53b50933244085f3f91803f1b7271f970f3e5536efa69314f6a49", url="https://pypi.org/packages/9e/78/3b15ee8bbbf36f8bace9b0e6fe8a7481372650c76bcf1a7de1ed723cce96/psycopg2-2.9.8.tar.gz")
     version("2.9.7", sha256="f00cc35bd7119f1fed17b85bd1007855194dde2cbd8de01ab8ebb17487440ad8", url="https://pypi.org/packages/f7/fa/6e6bb7a7bbe4e02b35aa2fc009fb53221663a5e07e333b72cb5a85e4dbb0/psycopg2-2.9.7.tar.gz")
@@ -18,5 +18,10 @@ class PyPsycopg2(PythonPackage):
     version("2.9.1", sha256="de5303a6f1d0a7a34b9d40e4d3bef684ccc44a49bbe3eb85e3c0bffb4a131b7c", url="https://pypi.org/packages/aa/8a/7c80e7e44fb1b4277e89bd9ca509aefdd4dd1b2c547c6f293afe9f7ffd04/psycopg2-2.9.1.tar.gz")
     version("2.9", sha256="b12073fdf2002e828e5921be2c39ff9c6eab361c5c0bd6c529619fc23677accc", url="https://pypi.org/packages/6c/79/6df8af2405e2aa60732c47757453fc7fa4af5c90a1796b3392ef892d3a52/psycopg2-2.9.tar.gz")
     version("2.8.6", sha256="fb23f6c71107c37fd667cb4ea363ddeb936b348bbd6449278eb92c189699f543", url="https://pypi.org/packages/fd/ae/98cb7a0cbb1d748ee547b058b14604bd0e9bf285a8e0cc5d148f8a8a952e/psycopg2-2.8.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

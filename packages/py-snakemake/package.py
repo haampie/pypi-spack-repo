@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySnakemake(PythonPackage):
+    # BEGIN VERSIONS
     version("8.5.2", sha256="13d32a9dfa2f835ef38350776a96069970bde3a71da08e396eaf3114c82592ab", url="https://pypi.org/packages/a4/7d/cf4883281f0b4aca3301727ab767db3df812e61f58fc1c4429f5d2bf2741/snakemake-8.5.2-py3-none-any.whl")
     version("7.32.4", sha256="fdc3f15dd7b06fabb7da30d460e0a3b1fba08e4ea91f9c32c47a83705cdc7b6e", url="https://pypi.org/packages/f4/94/884160dab89886cef7802df0a8c8217bfb2d795427dee01ad0e0dc15964a/snakemake-7.32.4.tar.gz")
     version("7.31.1", sha256="919c1494b3f2caa8100de4282cddffac11fb26e49c41b1655b8eb70ffafa5732", url="https://pypi.org/packages/cb/84/2065f4618a950dbf7aca49351587bd8f80f7bb58d4bfa594c0b2d2b00a31/snakemake-7.31.1-py3-none-any.whl")
@@ -26,11 +26,27 @@ class PySnakemake(PythonPackage):
     version("6.15.1", sha256="a219601d57037f565ead9963e6bd8d04d3bdd985d172371e54197dcbdba79865", url="https://pypi.org/packages/a7/11/1fcb957dd6cf61cb5dca23c598c098aa96615de5d1b7f8ef6d398f0ee163/snakemake-6.15.1.tar.gz")
     version("6.13.1", sha256="22f57dcd8b1ca8a30aaa45c5d2c0f56d381d4731abd0988f24f9de46b7d9827c", url="https://pypi.org/packages/a2/c0/23fa94e97c23d194b927b1882382711afcaa2368aedde26c9b7162a5ebc5/snakemake-6.13.1.tar.gz")
     version("6.12.3", sha256="af86af9a540da3dceb05dad1040f1d3d733e6a695f8b3f8c30f8cf3bc6570a88", url="https://pypi.org/packages/dc/44/a08cde4ad3d552892791ca9ea59a5bc9ac0ad6c12fff6d3b1d9bd590d4cf/snakemake-6.12.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("azure", default=False)
+    variant("ftp", default=False)
+    variant("google-cloud", default=False)
+    variant("http", default=False)
+    variant("reports", default=False)
+    variant("s3", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.11:", when="@8:")
         depends_on("python@3.9:", when="@7.30.2:7.31.0")
         depends_on("py-appdirs", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
+        depends_on("py-azure-batch", when="@7.28:7.32.2,7.32.4:7+azure")
+        depends_on("py-azure-core", when="@7.28:7.32.2,7.32.4:7+azure")
+        depends_on("py-azure-identity", when="@7.28:7.32.2,7.32.4:7+azure")
+        depends_on("py-azure-mgmt-batch", when="@7.28:7.32.2,7.32.4:7+azure")
+        depends_on("py-azure-storage-blob", when="@7.28:7.32.2,7.32.4:7+azure")
         depends_on("py-conda-inject@1.3.1:", when="@8:")
         depends_on("py-configargparse", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
         depends_on("py-connection-pool@0.0.3:", when="@7.8.5:7.32.2,7.32.4:")
@@ -38,15 +54,21 @@ class PySnakemake(PythonPackage):
         depends_on("py-docutils", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
         depends_on("py-dpath@2.1.6:", when="@8.3:")
         depends_on("py-gitpython", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
+        depends_on("py-google-api-python-client", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:7+google-cloud")
+        depends_on("py-google-cloud-storage", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:7+google-cloud")
+        depends_on("py-google-crc32c", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:7+google-cloud")
         depends_on("py-humanfriendly", when="@7.20:7.32.2,7.32.4:")
         depends_on("py-immutables", when="@8:")
         depends_on("py-jinja2@3.0.0:", when="@7.8.5:7.32.2,7.32.4:")
+        depends_on("py-jinja2", when="@5.24.1:5.27.0,7.8.5:7.19+reports")
         depends_on("py-jsonschema", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
         depends_on("py-nbformat", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
+        depends_on("py-oauth2client", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:7+google-cloud")
         depends_on("py-packaging", when="@7.29:7.32.2,7.32.4:")
         depends_on("py-psutil", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
         depends_on("py-pulp@2.3.1:", when="@8.1.2:")
         depends_on("py-pulp@2:", when="@5.25:5.27.0,7.8.5:7.32.2,7.32.4:8.1.1")
+        depends_on("py-pygments", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:+reports")
         depends_on("py-pyyaml", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
         depends_on("py-requests@2.8.1:", when="@8.4.12:")
         depends_on("py-requests", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:8.4.11")
@@ -65,4 +87,5 @@ class PySnakemake(PythonPackage):
         depends_on("py-wrapt", when="@5.24.1:5.27.0,7.8.5:7.32.2,7.32.4:")
         depends_on("py-yte@1.5:", when="@7.28.1:7.32.2,7.32.4:")
         depends_on("py-yte@1:", when="@7.8.5:7.28.0")
+    # END DEPENDENCIES
 

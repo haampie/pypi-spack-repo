@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTransformers(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.38.2", sha256="c4029cb9f01b3dd335e52f364c52d2b37c65b4c78e02e6a08b1919c5c928573e", url="https://pypi.org/packages/b6/4d/fbe6d89fde59d8107f0a02816c4ac4542a8f9a85559fdf33c68282affcc1/transformers-4.38.2-py3-none-any.whl")
     version("4.38.1", sha256="a7a9265fb060183e9d975cbbadc4d531b10281589c43f6d07563f86322728973", url="https://pypi.org/packages/3e/6b/1b589f7b69aaea8193cf5bc91cf97410284aecd97b6312cdb08baedbdffe/transformers-4.38.1-py3-none-any.whl")
     version("4.38.0", sha256="a6d7ae9afcfcc0773d8b9ef20940344bd1cae54fe49175ddea61c7c8d11fb52a", url="https://pypi.org/packages/91/89/5416dc364c7ef0711c564fd61a69b03d1e40eeb5c506c38e53ba8a969e79/transformers-4.38.0-py3-none-any.whl")
@@ -21,7 +21,11 @@ class PyTransformers(PythonPackage):
     version("4.24.0", sha256="b7ab50039ef9bf817eff14ab974f306fd20a72350bdc9df3a858fd009419322e", url="https://pypi.org/packages/a4/df/3248eac2923ceffdf55686ff318e002b558e7c51f6a909dd870cf3185949/transformers-4.24.0-py3-none-any.whl")
     version("4.6.1", sha256="9d6569e31e5a4b7ab399eaf224f46ddcbb957e18a7c58cc7d469cb70e96467ea", url="https://pypi.org/packages/d5/43/cfe4ee779bbd6a678ac6a97c5a5cdeb03c35f9eaebbb9720b036680f9a2d/transformers-4.6.1-py3-none-any.whl")
     version("2.8.0", sha256="2b64cfe0033a47ba664837758cd9750196666ea1306e5c40ad5617353c3dc2fc", url="https://pypi.org/packages/a3/78/92cedda05552398352ed9784908b834ee32a0bd071a9b32de287327370b7/transformers-2.8.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-boto3", when="@2:2.8")
         depends_on("py-filelock", when="@2.4:")
@@ -48,4 +52,5 @@ class PyTransformers(PythonPackage):
         depends_on("py-tokenizers@0.10.1:0.10", when="@4.3.0:4.15")
         depends_on("py-tokenizers@0.5.2:0.5", when="@2.5.1:2.8")
         depends_on("py-tqdm@4.27:", when="@2.4:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJinja2(PythonPackage):
+    # BEGIN VERSIONS
     version("3.1.3", sha256="7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa", url="https://pypi.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl")
     version("3.1.2", sha256="6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61", url="https://pypi.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl")
     version("3.1.1", sha256="539835f51a74a69f41b848a9645dbdc35b4f20a3b601e2d9a7e22947b15ff119", url="https://pypi.org/packages/76/02/af4045156cde8feeefa30cb1c051e10321d4960c418bd52346a497feb302/Jinja2-3.1.1-py3-none-any.whl")
@@ -26,17 +26,27 @@ class PyJinja2(PythonPackage):
     version("2.10.2", sha256="d599309630bb8b054b78089c567e29f805b4ac3b1fafc4ef03a149f2bf97914b", url="https://pypi.org/packages/38/31/cc05057b7a9aa08762fe692f09969d2006f7ef740e36b36f4479b63ffa4c/Jinja2-2.10.2-py2.py3-none-any.whl")
     version("2.10.1", sha256="14dd6caf1527abb21f08f86c784eac40853ba93edb79552aa1e4b8aef1b61c7b", url="https://pypi.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl")
     version("2.10", sha256="74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd", url="https://pypi.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl")
-    version("2.9.6", sha256="ddaa01a212cd6d641401cb01b605f4a4d9f37bfc93043d7f760ec70fb99ff9ff", url="https://pypi.org/packages/90/61/f820ff0076a2599dd39406dcb858ecb239438c02ce706c8e91131ab9c7f1/Jinja2-2.9.6.tar.gz")
-    version("2.9.5", sha256="702a24d992f856fa8d5a7a36db6128198d0c21e1da34448ca236c42e92384825", url="https://pypi.org/packages/71/59/d7423bd5e7ddaf3a1ce299ab4490e9044e8dfd195420fc83a24de9e60726/Jinja2-2.9.5.tar.gz")
-    version("2.8", sha256="bc1ff2ff88dbfacefde4ddde471d1417d3b304e8df103a7a9437d47269201bf4", url="https://pypi.org/packages/f2/2f/0b98b06a345a761bec91a079ccae392d282690c2d8272e708f4d10829e22/Jinja2-2.8.tar.gz")
+    version("2.9.6", sha256="2231bace0dfd8d2bf1e5d7e41239c06c9e0ded46e70cc1094a0aa64b0afeb054", url="https://pypi.org/packages/5e/73/10c45b82a88ed6b7751bd40da31eeefd7b362e07b56a99aa6e56655a0794/Jinja2-2.9.6-py2.py3-none-any.whl")
+    version("2.9.5", sha256="a7b7438120dbe76a8e735ef7eba6048eaf4e0b7dbc530e100812f8ec462a4d50", url="https://pypi.org/packages/3c/d1/49d69bc23d0e0c7612248dd8f5391bd043648865132309616c280ca1c837/Jinja2-2.9.5-py2.py3-none-any.whl")
+    version("2.8", sha256="1cc03ef32b64be19e0a5b54578dd790906a34943fe9102cfdae0d4495bd536b4", url="https://pypi.org/packages/96/a1/c56bc4d99dc2663514a8481511e80eba8994133ae75eebdadfc91a5597d9/Jinja2-2.8-py2.py3-none-any.whl")
     version("2.7.3", sha256="2e24ac5d004db5714976a04ac0e80c6df6e47e98c354cb2c0d82f8879d4f8fdb", url="https://pypi.org/packages/b0/73/eab0bca302d6d6a0b5c402f47ad1760dc9cb2dd14bbc1873ad48db258e4d/Jinja2-2.7.3.tar.gz")
     version("2.7.2", sha256="310a35fbccac3af13ebf927297f871ac656b9da1d248b1fe6765affa71b53235", url="https://pypi.org/packages/23/94/ca42176bf7a252ce1f5d165953013573dffdbe4b5dac07f57146146ea432/Jinja2-2.7.2.tar.gz")
     version("2.7.1", sha256="5cc0a087a81dca1c08368482fb7a92fe2bdd8cfbb22bc0fccfe6c85affb04c8b", url="https://pypi.org/packages/47/83/679b5592feb54e948d6599edf5dac61d2991778c3ecbef6b8041663f4740/Jinja2-2.7.1.tar.gz")
     version("2.7", sha256="474f1518d189ae7e318b139fecc1d30b943f124448cfa0f09582ca23e069fa4d", url="https://pypi.org/packages/33/db/9931c645626f9bf7867cc3c4225e7a8abf7aff37ecddb7e7d5df90a3b6c4/Jinja2-2.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("i18n", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-babel@2.7:", when="@3.0.0-rc1:+i18n")
+        depends_on("py-babel@2.1:", when="@3:3.0.0-alpha1+i18n")
+        depends_on("py-babel", when="@2.10:2+i18n")
         depends_on("py-markupsafe@2.0.0:", when="@3.0.1:")
         depends_on("py-markupsafe@2.0.0-rc2:", when="@3.0.0-rc1:3.0.0")
         depends_on("py-markupsafe@1.1:", when="@3:3.0.0-alpha1")
         depends_on("py-markupsafe@0.23:", when="@2.10:2")
+    # END DEPENDENCIES
 

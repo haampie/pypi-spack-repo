@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPromptToolkit(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.43", sha256="a11a29cb3bf0a28a387fe5122cdb649816a957cd9261dcedf8c9f1fef33eacf6", url="https://pypi.org/packages/ee/fd/ca7bf3869e7caa7a037e23078539467b433a4e01eebd93f77180ab927766/prompt_toolkit-3.0.43-py3-none-any.whl")
     version("3.0.42", sha256="3b50b5fc50660dc8e39dfe464b170959ad82ff185ffa53bfd3be02222e7156a1", url="https://pypi.org/packages/82/d3/9a794648e76d04e68ddd13889da4aae01a0368814728cb968e1147600d79/prompt_toolkit-3.0.42-py3-none-any.whl")
     version("3.0.41", sha256="f36fe301fafb7470e86aaf90f036eef600a3210be4decf461a5b1ca8403d3cb2", url="https://pypi.org/packages/1f/9d/be9b01085bbd67a71c4b6aa02518fade8104e7a2224e5de5e947811d7176/prompt_toolkit-3.0.41-py3-none-any.whl")
@@ -24,27 +24,32 @@ class PyPromptToolkit(PythonPackage):
     version("3.0.17", sha256="4cea7d09e46723885cb8bc54678175453e5071e9449821dce6f017b1d1fbfc1a", url="https://pypi.org/packages/ce/ee/08ceeb759c570bf96b4c636582ebf18c14c3c844a601b2e77b17f462aa6b/prompt_toolkit-3.0.17-py3-none-any.whl")
     version("3.0.16", sha256="62c811e46bd09130fb11ab759012a4ae385ce4fb2073442d1898867a824183bd", url="https://pypi.org/packages/a6/0b/c6de29441b29f8b54d5bbe29a8b223de6e400714ff50e85541bd4c783421/prompt_toolkit-3.0.16-py3-none-any.whl")
     version("3.0.7", sha256="83074ee28ad4ba6af190593d4d4c607ff525272a504eb159199b6dd9f950c950", url="https://pypi.org/packages/2b/c1/53ac685833200eb77ef485c2220dac5bfc255418e660790a9eb5cf3abf25/prompt_toolkit-3.0.7-py3-none-any.whl")
-    version("2.0.10", sha256="f15af68f66e664eaa559d4ac8a928111eebd5feda0c11738b5998045224829db", url="https://pypi.org/packages/0c/37/7ad3bf3c6dbe96facf9927ddf066fdafa0f86766237cff32c3c7355d3b7c/prompt_toolkit-2.0.10.tar.gz")
-    version("2.0.9", sha256="2519ad1d8038fd5fc8e770362237ad0364d16a7650fb5724af6997ed5515e3c1", url="https://pypi.org/packages/94/a0/57dc47115621d9b3fcc589848cdbcbb6c4c130186e8fc4c4704766a7a699/prompt_toolkit-2.0.9.tar.gz")
-    version("2.0.8", sha256="c6655a12e9b08edb8cf5aeab4815fd1e1bdea4ad73d3bbf269cf2e0c4eb75d5e", url="https://pypi.org/packages/0d/f7/571edf48b2e11678fa21245369678815a965bac1d96e09fa60fe365ff79d/prompt_toolkit-2.0.8.tar.gz")
-    version("2.0.7", sha256="fd17048d8335c1e6d5ee403c3569953ba3eb8555d710bfc548faf0712666ea39", url="https://pypi.org/packages/d9/a5/4b2dd1a05403e34c3ba0d9c00f237c01967c0a4f59a427c9b241129cdfe4/prompt_toolkit-2.0.7.tar.gz")
-    version("2.0.6", sha256="82766ffd7397e6661465e20bd1390db0781ca4fbbab4cf6c2578cacdd8b09754", url="https://pypi.org/packages/96/29/179b81ea51e5abbd04888489d745ef4817c0c1b29b2a3f8efe7ea569b4a4/prompt_toolkit-2.0.6.tar.gz")
-    version("2.0.5", sha256="5eff0c9fd652384ecfe730bbcdf3658868725c6928fbf608d9338834d7a974b6", url="https://pypi.org/packages/20/a0/ab97596da4ae545d4b936600c3ddc23b2b9ad8d0f96a4414cb3d6668aa32/prompt_toolkit-2.0.5.tar.gz")
-    version("2.0.4", sha256="ff58ce8bb82c11c43416dd3eec7701dcbe8c576e2d7649f1d2b9d21a2fd93808", url="https://pypi.org/packages/77/bf/5d7664605c91db8f39a3e49abb57a3c933731a90b7a58cdcafd4a9bcbe97/prompt_toolkit-2.0.4.tar.gz")
-    version("2.0.3", sha256="d9ea14304a2633e4b40dde874c63da6b94a075f61e837011e035ffcd5bb39a1d", url="https://pypi.org/packages/3e/36/d24222c4a44cb7b8d902db407e1918d8553c765b1384d78c7ea7a85b144c/prompt_toolkit-2.0.3.tar.gz")
-    version("2.0.2", sha256="33cd9b986f1732f720666d6b412f1cb071a92743c5a61cfc3f39dee39248241b", url="https://pypi.org/packages/89/81/3790d4121a6eb1cccfbb4d0861af95601166f22253ad016f8a4d9d09a391/prompt_toolkit-2.0.2.tar.gz")
-    version("2.0.1", sha256="188438afe6d47f178bf1b9015428c333aa96d03fa3320a32f39b87605bef05c5", url="https://pypi.org/packages/93/3d/2f319bf8b43e865d3ebc01b261664eafa2fca114bb92acb38636efe3c18f/prompt_toolkit-2.0.1.tar.gz")
-    version("1.0.18", sha256="dd4fca02c8069497ad931a2d09914c6b0d1b50151ce876bc15bde4c747090126", url="https://pypi.org/packages/c5/64/c170e5b1913b540bf0c8ab7676b21fdd1d25b65ddeb10025c6ca43cccd4c/prompt_toolkit-1.0.18.tar.gz")
-    version("1.0.17", sha256="0579dd4eef2205ea6fa667922d398107b96547ff7ccc484d133df6d859ca51b8", url="https://pypi.org/packages/5b/61/8b34545dfffe3e90453c81798bc03845078d6b33f38400bd69ed640102f1/prompt_toolkit-1.0.17.tar.gz")
-    version("1.0.16", sha256="c1cedd626e08b8ee830ee65897de754113ff3f3035880030c08b01674d85c5b4", url="https://pypi.org/packages/f1/03/bb36771dc9fa7553ac4bdc639a9ecdf6fda0ff4176faf940d97e3c16e41d/prompt_toolkit-1.0.16.tar.gz")
-    version("1.0.15", sha256="858588f1983ca497f1cf4ffde01d978a3ea02b01c8a26a8bbc5cd2e66d816917", url="https://pypi.org/packages/8a/ad/cf6b128866e78ad6d7f1dc5b7f99885fb813393d9860778b2984582e81b5/prompt_toolkit-1.0.15.tar.gz")
-    version("1.0.14", sha256="cc66413b1b4b17021675d9f2d15d57e640b06ddfd99bb724c73484126d22622f", url="https://pypi.org/packages/55/56/8c39509b614bda53e638b7500f12577d663ac1b868aef53426fc6a26c3f5/prompt_toolkit-1.0.14.tar.gz")
-    version("1.0.13", sha256="33d68ca09f76cd73287fde7df5748ffacf26a8238dd61ee81ac50860ea7c6776", url="https://pypi.org/packages/23/be/4876b52d5cc159cbd4b0ff6e7aa419a26470849a43a8f647857a4a24467b/prompt_toolkit-1.0.13.tar.gz")
-    version("1.0.10", sha256="dcc056c506e977e3679dc4d53bc66223111d16e09b506b4336f60ea6b530a670", url="https://pypi.org/packages/3e/e9/bc909966f2091e0a00952402c59cc6590c96de71fb97cc2d502b0d5916c5/prompt_toolkit-1.0.10.tar.gz")
-    version("1.0.9", sha256="cd6523b36adc174cc10d54b1193eb626b4268609ff6ea92c15bcf1996609599c", url="https://pypi.org/packages/83/14/5ac258da6c530eca02852ee25c7a9ff3ca78287bb4c198d0d0055845d856/prompt_toolkit-1.0.9.tar.gz")
-    version("1.0.8", sha256="b686ff216fc016dcbdf9ddf18d0ded480457213886ed4cda9fbc21002d18be54", url="https://pypi.org/packages/7f/72/845e3e5678ebe016fe2cff2ffaf91fc9615b9b1a630134f34cf394aa3927/prompt_toolkit-1.0.8.tar.gz")
-    version("1.0.7", sha256="ef0b8188179fe7d052161ed274b43e18f5a680ff84d01462293b327e1668d2ef", url="https://pypi.org/packages/dd/55/2fb4883d2b21d072204fd21ca5e6040faa253135554590d0b67380669176/prompt_toolkit-1.0.7.tar.gz")
+    version("2.0.10", sha256="e7f8af9e3d70f514373bf41aa51bc33af12a6db3f71461ea47fea985defb2c31", url="https://pypi.org/packages/66/6a/2c0693ec21528c10dfea279662788b28b2a01cce961160791084d975521a/prompt_toolkit-2.0.10-py2-none-any.whl")
+    version("2.0.9", sha256="977c6583ae813a37dc1c2e1b715892461fcbdaa57f6fc62f33a528c4886c8f55", url="https://pypi.org/packages/c8/ab/10d2c114828bd20ca0d757acee37ab5a7bae588139739b24d6cd3f45f8de/prompt_toolkit-2.0.9-py2-none-any.whl")
+    version("2.0.8", sha256="df5835fb8f417aa55e5cafadbaeb0cf630a1e824aad16989f9f0493e679ec010", url="https://pypi.org/packages/f0/fe/564f7f7d2735265460225232441cb8aadee8e58e6a3cefae38220d38481e/prompt_toolkit-2.0.8-py2-none-any.whl")
+    version("2.0.7", sha256="d4c47f79b635a0e70b84fdb97ebd9a274203706b1ee5ed44c10da62755cf3ec9", url="https://pypi.org/packages/c7/f8/04aec108fe1d76b59d93c98438bce32bc633e99e7e1453e22b8d82722b14/prompt_toolkit-2.0.7-py2-none-any.whl")
+    version("2.0.6", sha256="646b3401b3b0bb7752100bc9b7aeecb36cb09cdfc63652b5856708b5ba8db7da", url="https://pypi.org/packages/bb/5d/0952036a5bd109cd911885cdba543eda9d93ce34728eafcedc6091d03111/prompt_toolkit-2.0.6-py2-none-any.whl")
+    version("2.0.5", sha256="81da9ecf6ca6806a549697529af8ec3ac5b739c13ac14607218e650db1b53131", url="https://pypi.org/packages/40/fa/3e88dae1d06d3d718cdf9fe974ecab223f6a423309bcd178a826e13059bd/prompt_toolkit-2.0.5-py2-none-any.whl")
+    version("2.0.4", sha256="12e076b21178064b5627f74c4819559c125e31046b55a28d5e024b85fef5617e", url="https://pypi.org/packages/fe/6e/29d42360930704dbf461a9802737930d96c44297bde8e0ad709af1f9cea7/prompt_toolkit-2.0.4-py2-none-any.whl")
+    version("2.0.3", sha256="2e684ce7278eefb2eb6715e026169031376b60711eb62b3faf1f0d21f158280f", url="https://pypi.org/packages/bc/03/b779acfe9171a684e8ce0ab508f9950590beed1c784a582f8534389b89b3/prompt_toolkit-2.0.3-py2-none-any.whl")
+    version("2.0.2", sha256="3e87a08d1acd179d2ddf0e0670437da03b88df8c8033d0843ad03cf7e69f1322", url="https://pypi.org/packages/a3/e6/a535cdfc133bb9fb6411b782c61f9195ff99b4220be19634009bbeb29c1a/prompt_toolkit-2.0.2-py2-none-any.whl")
+    version("2.0.1", sha256="bbecacf5310a0b0b590446e8e1d3d83d8dc9cae68adb361214e561fa4775e6e1", url="https://pypi.org/packages/9b/8c/30b7b8891eb95c791f71256ca5ab134651a92136a2b72c1fd3eb7474249e/prompt_toolkit-2.0.1-py2-none-any.whl")
+    version("1.0.18", sha256="37925b37a4af1f6448c76b7606e0285f79f434ad246dda007a27411cca730c6d", url="https://pypi.org/packages/64/27/5fd61a451d086ad4aa806dc72fe1383d2bc0e74323668672287f616d5d51/prompt_toolkit-1.0.18-py3-none-any.whl")
+    version("1.0.17", sha256="be243da571de5a96590e02f2180497e11600c422a76519040444b41699eff27f", url="https://pypi.org/packages/10/97/fdc9cb23f6522e2e1d37b795dd6b4a628e6d6416523fddcf5f00323577cb/prompt_toolkit-1.0.17-py2-none-any.whl")
+    version("1.0.16", sha256="1e71341526efa4b11bb44d323e687a5d9cef204aabe2907e3f0dc1534cda0ecc", url="https://pypi.org/packages/57/a8/a151b6c61718eabe6b4672b6aa760b734989316d62ec1ba4996765e602d4/prompt_toolkit-1.0.16-py3-none-any.whl")
+    version("1.0.15", sha256="3f473ae040ddaa52b52f97f6b4a493cfa9f5920c255a12dc56a7d34397a398a4", url="https://pypi.org/packages/d1/b0/1a6c262da35c779dd79550137aa7c298a424987240a28792ec5ccf48f848/prompt_toolkit-1.0.15-py2-none-any.whl")
+    version("1.0.14", sha256="82c7f8e07d7a0411ff5367a5a8ff520f0112b9179f3e599ee8ad2ad9b943d911", url="https://pypi.org/packages/4b/85/58829b76140b81b30d2d455040808665b2041b923134a287643b684de4e3/prompt_toolkit-1.0.14-py2-none-any.whl")
+    version("1.0.13", sha256="92e946fc7b87417924605b0d688347cba85048f958fb6a929db032f1380719a3", url="https://pypi.org/packages/dc/da/d464207343a08ff5e97ed991556ec1c69dafca55007f2c0baff17dbad978/prompt_toolkit-1.0.13-py2-none-any.whl")
+    version("1.0.10", sha256="32a8929dbfa17c49f81d7838b167c1a965f5263e3727eed3060d50c9b11f3244", url="https://pypi.org/packages/49/23/83991804adb65d16b414a4666f5416c8ff710b7c5f6c2327f6558cf31ff0/prompt_toolkit-1.0.10-py2-none-any.whl")
+    version("1.0.9", sha256="b7bbbc221159be8daab91269d48575f6c740000c03d537fc076ee176476c8b4c", url="https://pypi.org/packages/fc/80/6a3cb891118635fd79be261c1f5a5d1fe479f15841526808c5aaa246f1ef/prompt_toolkit-1.0.9-py2-none-any.whl")
+    version("1.0.8", sha256="608bd2c7070a5feb00bc02fe63cdd2e404901dac12ed47519e7c0d85eaf48717", url="https://pypi.org/packages/47/87/65c959e0aef5d9fbd2aa2b92507891253b80d8ffa0b635cd9c8e43d9bba2/prompt_toolkit-1.0.8-py2-none-any.whl")
+    version("1.0.7", sha256="2611504e98b09c8e726073596f218b05632e24c8c20dc66a27b35621507dcbd8", url="https://pypi.org/packages/03/66/aad0711f484f1388ce6f368bbed29b68a247bfd7d701b0d01a9822e3eefd/prompt_toolkit-1.0.7-py2-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-wcwidth", when="@3:")
+    # END DEPENDENCIES
 

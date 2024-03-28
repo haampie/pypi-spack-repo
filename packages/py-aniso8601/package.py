@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAniso8601(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("9.0.1", sha256="1d2b7ef82963909e93c4f24ce48d4de9e66009a21bf1c1e1c85bdd0812fe412f", url="https://pypi.org/packages/e3/04/e97c12dc034791d7b504860acfcdd2963fa21ae61eaca1c9d31245f812c3/aniso8601-9.0.1-py2.py3-none-any.whl")
     version("9.0.0", sha256="36b8db7035ae3e1308e56550d586f6c7c58cbc6f33357e76dd8dd3c138fbaa3b", url="https://pypi.org/packages/ae/16/db3a1a970e0a7dc89204d07cff6401760380a9ab90a9dc399a8e7df3b430/aniso8601-9.0.0-py2.py3-none-any.whl")
     version("8.1.1", sha256="f59914762c5049ffd956cad037aa82fe0cabf8baf51900e2af24026761090b0b", url="https://pypi.org/packages/2c/09/c26ecac7a5e187db69380e66cbad27f8d53ae98b3d5188af08fdd5e34d9f/aniso8601-8.1.1-py2.py3-none-any.whl")
@@ -22,7 +22,12 @@ class PyAniso8601(PythonPackage):
     version("4.0.0", sha256="41e649cf0a8b4f5642f0a2acf557a072a024a991b4693e775ebb9febd3a19f9f", url="https://pypi.org/packages/56/93/c29b08cc9cc583863d607324325f5b665627eac1827d4033aae8f4ee0af6/aniso8601-4.0.0-py2.py3-none-any.whl")
     version("3.0.2", sha256="94f90871fcd314a458a3d4eca1c84448efbd200e86f55fe4c733c7a40149ef50", url="https://pypi.org/packages/17/13/eecdcc638c0ea3b105ebb62ff4e76914a744ef1b6f308651dbed368c6c01/aniso8601-3.0.2-py2.py3-none-any.whl")
     version("3.0.0", sha256="f7052eb342bf2000c6264a253acedb362513bf9270800be2bc8e3e229fe08b5a", url="https://pypi.org/packages/ba/8c/4cd25b3facc5f443cb083f4582483e8c8e7901380c71c44aff6eeda4dc54/aniso8601-3.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-relativetimebuilder@0.2:", when="@5.1:5")
+    # END DEPENDENCIES
 

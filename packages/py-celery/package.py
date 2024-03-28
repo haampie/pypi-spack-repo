@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCelery(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.3.6", sha256="9da4ea0118d232ce97dff5ed4974587fb1c0ff5c10042eb15278487cdd27d1af", url="https://pypi.org/packages/37/c2/4c8a67a4d98a6fcd55dbdd79b641f945d7f59637c3e885c4abbda3c431f6/celery-5.3.6-py3-none-any.whl")
     version("5.3.5", sha256="30b75ac60fb081c2d9f8881382c148ed7c9052031a75a1e8743ff4b4b071f184", url="https://pypi.org/packages/a3/fb/0bcea0312649a374601d5a15092b2a3659801d578e70cec03aa72053ccaa/celery-5.3.5-py3-none-any.whl")
     version("5.3.4", sha256="1e6ed40af72695464ce98ca2c201ad0ef8fd192246f6c9eac8bba343b980ad34", url="https://pypi.org/packages/98/e9/023b8f75128d747d4aee79da84e4ac58eff63bb21f1c0aa7c452a353d207/celery-5.3.4-py3-none-any.whl")
@@ -18,10 +18,14 @@ class PyCelery(PythonPackage):
     version("5.2.6", sha256="da31f8eae7607b1582e5ee2d3f2d6f58450585afd23379491e3d9229d08102d0", url="https://pypi.org/packages/a0/ed/8a2e381aa9fa6fa5ac6891b0b472e927892f57a39842eff18cc917ceba57/celery-5.2.6-py3-none-any.whl")
     version("5.2.5", sha256="1f31c196e61dde344e322f9c0d33d1bb88c0dbaccbab5019fbb519a43d44706d", url="https://pypi.org/packages/19/72/1075b1fdb3e44d8ae78fdb51f209403ec3a41860be6ba488a369b101fd97/celery-5.2.5-py3-none-any.whl")
     version("5.2.3", sha256="8aacd02fc23a02760686d63dde1eb0daa9f594e735e73ea8fb15c2ff15cb608c", url="https://pypi.org/packages/1e/c2/52a01d3f53ddf57c80b011714dd63295c69426121d35d0ff41976b83506c/celery-5.2.3-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("redis", default=False)
     variant("sqlalchemy", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-backports-zoneinfo@0.2.1:", when="@5.3.0-rc1: ^python@:3.8")
         depends_on("py-billiard@4.2:", when="@5.3.5:")
@@ -51,4 +55,5 @@ class PyCelery(PythonPackage):
         depends_on("py-tzdata@2022.7:", when="@5.3.0-rc1:")
         depends_on("py-vine@5.1:", when="@5.3.5:")
         depends_on("py-vine@5.0.0:", when="@5:5.3.4")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySphinx(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.2.6", sha256="1e09160a40b956dc623c910118fa636da93bd3ca0b9876a7b3df90f07d691560", url="https://pypi.org/packages/b2/b6/8ed35256aa530a9d3da15d20bdc0ba888d5364441bb50a5a83ee7827affe/sphinx-7.2.6-py3-none-any.whl")
     version("7.2.5", sha256="9269f9ed2821c9ebd30e4204f5c2339f5d4980e377bc89cb2cb6f9b17409c20a", url="https://pypi.org/packages/a6/54/f4fcf7113eb051a46476ecce9485c463f58dbc3887c06dbfe1e67a8ce7c0/sphinx-7.2.5-py3-none-any.whl")
     version("7.2.4", sha256="9b3aa23254ffc5be468646810543e491653bf5a67f3f23e4ccd4e515b0bd0b9c", url="https://pypi.org/packages/12/68/eac1b2f976569d5323306d4ad9668d181fc5b78456f5ce5d1eb152c632dd/sphinx-7.2.4-py3-none-any.whl")
@@ -68,13 +68,18 @@ class PySphinx(PythonPackage):
     version("1.8.5", sha256="9f3e17c64b34afc653d7c5ec95766e03043cc6d80b0de224f59b6b6e19d37c3c", url="https://pypi.org/packages/7d/66/a4af242b4348b729b9d46ce5db23943ce9bca7da9bbe2ece60dc27f26420/Sphinx-1.8.5-py2.py3-none-any.whl")
     version("1.8.4", sha256="b53904fa7cb4b06a39409a492b949193a1b68cc7241a1a8ce9974f86f0d24287", url="https://pypi.org/packages/75/25/905f901fb749e45cb201f1d946e82f59d84730c430287ea7980b0bcbd2dc/Sphinx-1.8.4-py2.py3-none-any.whl")
     version("1.8.2", sha256="b348790776490894e0424101af9c8413f2a86831524bd55c5f379d3e3e12ca64", url="https://pypi.org/packages/ff/d5/3a8727d6f890b1ae45da72a55bf8449e9f2c535a444923b338c3f509f203/Sphinx-1.8.2-py2.py3-none-any.whl")
-    version("1.7.4", sha256="e9b1a75a3eae05dded19c80eb17325be675e0698975baae976df603b6ed1eb10", url="https://pypi.org/packages/40/45/d4a68a1f8dc669714f48d251afb4352036f87be5e9873cd27e57b9c141f0/Sphinx-1.7.4.tar.gz")
-    version("1.6.3", sha256="af8bdb8c714552b77d01d4536e3d6d2879d6cb9d25423d29163d5788e27046e6", url="https://pypi.org/packages/10/91/ceb2e0d763e0c626f7afd7e3272a5bb76dd06eed1f0b908270ea31984062/Sphinx-1.6.3.tar.gz")
-    version("1.6.1", sha256="7581d82c3f206f0ac380edeeba890a2e2d2be011e5abe94684ceb0df4b6acc3f", url="https://pypi.org/packages/0a/32/594257b9fccc8ce4d120e86d481cabe55ee9de7c1686af2ee58eb4ec741e/Sphinx-1.6.1.tar.gz")
-    version("1.5.5", sha256="4064ea6c56feeb268838cb8fbbee507d0c3d5d92fa63a7df935a916b52c9e2f5", url="https://pypi.org/packages/64/78/9d63754981e97c8e7cf14500d262fc573145624d4c765d5047f58e3fdf4e/Sphinx-1.5.5.tar.gz")
-    version("1.4.5", sha256="c5df65d97a58365cbf4ea10212186a9a45d89c61ed2c071de6090cdf9ddb4028", url="https://pypi.org/packages/8b/78/eeea2b837f911cdc301f5f05163f9729a2381cadd03ccf35b25afe816c90/Sphinx-1.4.5.tar.gz")
-    version("1.3.1", sha256="1a6e5130c2b42d2de301693c299f78cc4bd3501e78b610c08e45efc70e2b5114", url="https://pypi.org/packages/d9/56/7c0b0e60c69ae5e995c9a6c9bbe66ad381a00a44cd090f21dcd179c47460/Sphinx-1.3.1.tar.gz")
+    version("1.7.4", sha256="2e7ad92e96eff1b2006cf9f0cdb2743dacbae63755458594e9e8238b0c3dc60b", url="https://pypi.org/packages/89/44/73cd04b856fa35a69e9e2e790aa283e2eaefb684e116f1d46d01a5e7986f/Sphinx-1.7.4-py2.py3-none-any.whl")
+    version("1.6.3", sha256="3ea0faf3e152a0e40372d8495c8cbd59e93f89266231c367d8098ec0dfede98f", url="https://pypi.org/packages/2d/96/97bebe9e13284fac32b6712ddf1dab5441f649ef24343ebfec98ba017553/Sphinx-1.6.3-py2.py3-none-any.whl")
+    version("1.6.1", sha256="50974b1405f0d2a452013283b7d3ff20305b4bd8ecb65566c6f9f6192b7625a0", url="https://pypi.org/packages/57/61/991b604fe8e928a94afc3fd20d515f473b6969670233c92c0ad81cf931fc/Sphinx-1.6.1-py2.py3-none-any.whl")
+    version("1.5.5", sha256="11f271e7a9398385ed730e90f0bb41dc3815294bdcd395b46ed2d033bc2e7d87", url="https://pypi.org/packages/5e/66/760dc216df24dc890dc87741631af02f81659105d970a30e5a80c6c8cf75/Sphinx-1.5.5-py2.py3-none-any.whl")
+    version("1.4.5", sha256="a1901af3d437473662daca2ee8f03c232d84af08a0b119d6bc55020661b12ab8", url="https://pypi.org/packages/d1/ad/9fe56e099e0bd288f1fdc037c2146b0698e2cba1d9a48636660f39a0e791/Sphinx-1.4.5-py2.py3-none-any.whl")
+    version("1.4", sha256="d4eda728fa077373f48468693376850016b11959fd23d5abef6b693ac6e0ef6b", url="https://pypi.org/packages/f1/01/6e6f29c3dbc57dddfd82710128f23c1be10a814c9fd4e77525fb3e6157d1/Sphinx-1.4-py2.py3-none-any.whl")
+    version("1.3.1", sha256="2ddf18da3b0621fa43fee4b7290da0ae789b46fb899278a8acccda195c4979a7", url="https://pypi.org/packages/63/2c/0a30c391708f827039be5569164ed039b1e46906a4bff5a348b0abe2945e/Sphinx-1.3.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@7.2:")
         depends_on("py-alabaster@0.7:", when="@1.7.5:")
@@ -123,4 +128,5 @@ class PySphinx(PythonPackage):
         depends_on("py-sphinxcontrib-serializinghtml@1.1.5:", when="@4.1.1:7.2.2")
         depends_on("py-sphinxcontrib-serializinghtml", when="@2:4.1.0")
         depends_on("py-sphinxcontrib-websupport", when="@1.7.5:1")
+    # END DEPENDENCIES
 

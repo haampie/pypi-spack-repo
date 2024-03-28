@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySpglib(PythonPackage):
+    # BEGIN VERSIONS
     version("2.3.1", sha256="736e25ec67c220cb20fab7017c4fe6382eedee223076d57f4047342b1bc68ce3", url="https://pypi.org/packages/bf/16/642c725894cef0d599f86e989c877a8f0bcbce4607d494ab653b2cbf3b5c/spglib-2.3.1.tar.gz")
     version("2.3.0", sha256="3dc375ed49107a2c22a91e47faa43a3a26b71debb42d7b3931def05418544e02", url="https://pypi.org/packages/23/c7/a333f2dbb9141a73c6a91065fdce163fbbd041f82314cd3476f9964be805/spglib-2.3.0.tar.gz")
     version("2.2.0", sha256="4a7c71f6adb860cbe14acdfd6ca43dcd29ecd9aed3f38c02cd76da80ffa5d01c", url="https://pypi.org/packages/54/13/04a95b4550bb698a4df25852b3a0b52379af2da23ec86c8c5079e843db20/spglib-2.2.0.tar.gz")
@@ -19,7 +19,12 @@ class PySpglib(PythonPackage):
     version("1.16.3", sha256="ff1420967d64c2d4f0d747886116a6836d9b473454cdd73d560dbfe973a8a038", url="https://pypi.org/packages/f2/d1/87d8b5d08fb1256daa9be7a7980cdd99e850f66b9fa8a65a1f9b72816b22/spglib-1.16.3.tar.gz")
     version("1.16.1", sha256="9fd2fefbd83993b135877a69c498d8ddcf20a9980562b65b800cfb4cdadad003", url="https://pypi.org/packages/4e/9a/e3f7a39a110593e117f3a6d5047c0f85d48923aef78c952da3a718ccecd0/spglib-1.16.1.tar.gz")
     version("1.9.9.18", sha256="cbbb8383320b500dc6100b83d5e914a26a97ef8fc97c82d8921b10220e4126cd", url="https://pypi.org/packages/59/55/cd46678b8aa5bb2a126de0611c3d693b3696733baed5bbfe8405680f0a6e/spglib-1.9.9.18.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy", when="@1.9.9.121:1.9.10.0,1.10:1.10.0.0,1.10.2:1.10.3.5,1.10.3.20:1.10.3.65,1.10.4.11:1.12,1.13.0.post5:1.16.0,2.1:")
+        depends_on("py-numpy", when="@1.9.9.121:1.9.10.0,1.10:1.10.0.0,1.10.2:1.10.3.5,1.10.3.20:1.10.3.65,1.10.4.11:1.12,1.13.0.post5:1.15,2.1:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyEinops(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.0", sha256="0f3096f26b914f465f6ff3c66f5478f9a5e380bb367ffc6493a68143fbbf1fd1", url="https://pypi.org/packages/29/0b/2d1c0ebfd092e25935b86509a9a817159212d82aa43d7fb07eca4eeff2c2/einops-0.7.0-py3-none-any.whl")
     version("0.7.0-rc2", sha256="864a685729720687143c1e9b19c32feebef68b9bd35e181cdf595a799d3c3d0d", url="https://pypi.org/packages/04/03/6cfabe372be60e55fe88eb4f8d34f7863a35d9b076823283a90e46dde69b/einops-0.7.0rc2-py3-none-any.whl")
     version("0.6.2-rc0", sha256="0e042c02f189bf88c771e70abf6a09d9ecfbdb44e38837d37e206580c8cd8a24", url="https://pypi.org/packages/e3/e3/eeef5673b945cc17a814266803f98faeb25523a7c1b0aa64cfee3deff5e3/einops-0.6.2rc0-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyEinops(PythonPackage):
     version("0.3.1", sha256="00d0e3dfdca0120032bcd059d62efe8af81f7c0600b71c12b121d0728685cc5e", url="https://pypi.org/packages/2c/69/1ffc4d768d3b7ff488dbe7c7e97c278f10e9dc184d2a039f46f4c1c00c87/einops-0.3.1-py3-none-any.whl")
     version("0.3.0", sha256="a91c6190ceff7d513d74ca9fd701dfa6a1ffcdd98ea0ced14350197c07f75c73", url="https://pypi.org/packages/5d/a0/9935e030634bf60ecd572c775f64ace82ceddf2f504a5fd3902438f07090/einops-0.3.0-py2.py3-none-any.whl")
     version("0.2.0", sha256="96b1bac57ddb591cccb927d24934d7601c3cdf3343a79a43d316a118d66e1043", url="https://pypi.org/packages/89/32/5ded0a73d2e14ef5a6908a930c3e1e9f92ffead482a2f153182b7429066e/einops-0.2.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

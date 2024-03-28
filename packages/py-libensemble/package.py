@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLibensemble(PythonPackage):
+    # BEGIN VERSIONS
     version("1.2.2", sha256="936e34ed4e8129a9980187b21d586472b6362403889a739595d6b631335a8678", url="https://pypi.org/packages/95/21/137deb1c213f62ad310819e9f523052070f8747ef9721286c63d14b7ade2/libensemble-1.2.2.tar.gz")
     version("1.2.1", sha256="b80e77548a1e2a71483352b3b00e22b47191e45ca5741324c2b0f20b05579a3d", url="https://pypi.org/packages/60/42/8d0caf3d3ae01befff3388db28798aada8913122b00907f573e546585e90/libensemble-1.2.1.tar.gz")
     version("1.2.0", sha256="e1076e8eea7844d3799f92d136586eca4da34ec753bf41a8d1be04d7a45ec4c1", url="https://pypi.org/packages/68/4a/fc682ef3503950248f4b57efc9b2dbf5f84d31be603e997220273474180d/libensemble-1.2.0.tar.gz")
@@ -32,5 +32,18 @@ class PyLibensemble(PythonPackage):
     version("0.3.0", sha256="c8efdf45d0da0ef6299ee778cea1c285c95972af70d3a729ee6dc855e66f9294", url="https://pypi.org/packages/c4/48/1830dbe7fcc8f5fef31283984df50fc55c93f18ac46f0d655e01d0890276/libensemble-0.3.0.tar.gz")
     version("0.2.0", sha256="ecac7275d4d0f4a5e497e5c9ef2cd998da82b2c020a0fb87546eeea262f495ff", url="https://pypi.org/packages/b1/73/bd3329cb1c558f1ba2c4bacf1aef6ec8851b71b7c581ba6091f502638b40/libensemble-0.2.0.tar.gz")
     version("0.1.0", sha256="0b27c59ae80f7af8b1bee92fcf2eb6c9a8fd3494bf2eb6b3ea17a7c03d3726bb", url="https://pypi.org/packages/38/25/541b860084b034a323615e8c6226e37225f8f255daea63f7a7d8d59440fc/libensemble-0.1.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("deap", default=False)
+    variant("mpi", default=False)
+    variant("mpmath", default=False)
+    variant("nlopt", default=False)
+    variant("petsc4py", default=False)
+    variant("scipy", default=False)
+    variant("tasmanian", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

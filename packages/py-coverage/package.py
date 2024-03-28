@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCoverage(PythonPackage):
+    # BEGIN VERSIONS
     version("7.4.4", sha256="c901df83d097649e257e803be22592aedfd5182f07b3cc87d640bbb9afd50f49", url="https://pypi.org/packages/bf/d5/f809d8b630cf4c11fe490e20037a343d12a74ec2783c6cdb5aee725e7137/coverage-7.4.4.tar.gz")
     version("7.4.3", sha256="276f6077a5c61447a48d133ed13e759c09e62aff0dc84274a68dc18660104d52", url="https://pypi.org/packages/d2/e2/f2d313169e0ecf1b46295b3ddf28a6818d02c1b047413f38b6325823cb2b/coverage-7.4.3.tar.gz")
     version("7.4.2", sha256="1a5ee18e3a8d766075ce9314ed1cb695414bae67df6a4b0805f5137d93d6f1cb", url="https://pypi.org/packages/bf/4f/a873791c3caa6c064a05332a5954f73b7ad6cfd6c1a1368aef1dd4ff1cfe/coverage-7.4.2.tar.gz")
@@ -42,10 +42,15 @@ class PyCoverage(PythonPackage):
     version("4.3.4", sha256="eaaefe0f6aa33de5a65f48dd0040d7fe08cac9ac6c35a56d0a7db109c3e733df", url="https://pypi.org/packages/6e/33/01cb50da2d0582c077299651038371dba988248058e03c7a7c4be0c84c40/coverage-4.3.4.tar.gz")
     version("4.3.3", sha256="688baf4f54a3c73f3c6609b70c7b7516de11bd11e5796a6a72aad9a652097c22", url="https://pypi.org/packages/ea/93/dbb8e58e56edc255bcea554cd2f14df0e0726bce634c407925ab34b19894/coverage-4.3.3.tar.gz")
     version("4.0-alpha6", sha256="afb4e6f0795c3ca233ba8130921b18b1d169427ced80f1240135d3b711230fa1", url="https://pypi.org/packages/d1/4c/87136ba38cc99e188e6288de24c4065cf96e3998453e13158c9965aaf43b/coverage-4.0a6.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("toml", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-toml", when="@5.0-beta1:5.2.0+toml")
         depends_on("py-tomli", when="@7.3.2:+toml ^python@:3.10")
+    # END DEPENDENCIES
 

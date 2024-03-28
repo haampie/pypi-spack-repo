@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAzureCliTelemetry(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.1.0", sha256="2fc12608c0cf0ea6e69b392af9cab92f1249340b8caff7e9674cf91b3becb337", url="https://pypi.org/packages/7e/23/5940808a891282e7fdd240d689aedc91bc945b4eb653c15e694f45a4babc/azure_cli_telemetry-1.1.0-py3-none-any.whl")
     version("1.0.8.post20221028041827", sha256="6c5d26af05136048a3d8fe8a056b329169643e4e4cffe120ec1f39e888f7de04", url="https://pypi.org/packages/a1/4b/a69789e61e83bbc4334a7b29be6af58b4d40866d7697937c204e7048ef4e/azure_cli_telemetry-1.0.8.post20221028041827-py3-none-any.whl")
     version("1.0.8", sha256="502cbd90723a16603822909befd096ca0b1707de1e70cf730e7b4700ddd7a456", url="https://pypi.org/packages/8d/3a/5e8c5a923aea492384342254bad0eecf054b62bdee168fa63963066c365e/azure_cli_telemetry-1.0.8-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyAzureCliTelemetry(PythonPackage):
     version("1.0.3", sha256="39a006a054d9b7c04eae06476a7e078c17b23f3d6eab155276dfadddb01310cc", url="https://pypi.org/packages/e1/74/5d77fada646ba77626fd427f49616dedc9dffa45a192e520e6eeb62e8a22/azure_cli_telemetry-1.0.3-py2.py3-none-any.whl")
     version("1.0.2", sha256="946de5b922e3183be13afe348eae6691883d6694ff43806752662e661757de4c", url="https://pypi.org/packages/08/e8/5d56f3527c0db6a9e7ba8f52a0773b5e896ad3d097cafdd153e84c193cae/azure_cli_telemetry-1.0.2-py2.py3-none-any.whl")
     version("1.0.1", sha256="45c02276c571b8e87bb8e8f9111b97dd542d18127ca9e8d667c7e963f3b9c106", url="https://pypi.org/packages/e0/6b/bc6faa2f578b53888e383138fd22bb04dc3aea5718292dd5543ac0898d80/azure_cli_telemetry-1.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-applicationinsights@0.11.1:0.11.7", when="@1.0.2")
         depends_on("py-applicationinsights@0.11.1:", when="@:1.0.1,1.0.3:")
@@ -25,4 +29,5 @@ class PyAzureCliTelemetry(PythonPackage):
         depends_on("py-portalocker@1.6:", when="@1.0.7:")
         depends_on("py-portalocker@1.2:1", when="@1.0.3:1.0.6")
         depends_on("py-portalocker@1.2.1:1.2", when="@:1.0.2")
+    # END DEPENDENCIES
 

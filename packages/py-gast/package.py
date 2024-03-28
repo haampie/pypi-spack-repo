@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGast(PythonPackage):
+    # BEGIN VERSIONS
     version("0.5.4", sha256="6fc4fa5fa10b72fb8aab4ae58bcb023058386e67b6fa2e3e34cec5c769360316", url="https://pypi.org/packages/fa/39/5aae571e5a5f4de9c3445dae08a530498e5c53b0e74410eeeb0991c79047/gast-0.5.4-py3-none-any.whl")
     version("0.5.3", sha256="211aac1e58c167b25d3504998f2db694454a24bb1fb1225bce99420166f21d6a", url="https://pypi.org/packages/5f/1c/b59500a88c5c3d9d601c5ca62b9df5e0964764472faed82a182958a922c5/gast-0.5.3-py3-none-any.whl")
     version("0.5.2", sha256="7d095d4027b10bc3fc49e7828db14bc8d5b8ff48c571daa549eda12d398dd4aa", url="https://pypi.org/packages/ad/b0/a6c8bc1e77409b63755bb0788ac4d497d31b72082de5945c0122259c533e/gast-0.5.2-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyGast(PythonPackage):
     version("0.3.0", sha256="b3ff536c7637979ca7bca9c73e73afbda883a714bf167062b460e624c28bffcc", url="https://pypi.org/packages/1a/cd/bf80d2145a2bca1907434876d6762dbb380fda887458cdfe2013cd7fa87a/gast-0.3.0.tar.gz")
     version("0.2.2", sha256="fe939df4583692f0512161ec1c880e0a10e71e6a232da045ab8edd3756fbadf0", url="https://pypi.org/packages/4e/35/11749bf99b2d4e3cceb4d55ca22590b0d7c2c62b9de38ac4a4a7f4687421/gast-0.2.2.tar.gz")
     version("0.2.0", sha256="7068908321ecd2774f145193c4b34a11305bd104b4551b09273dfd1d6a374930", url="https://pypi.org/packages/5c/78/ff794fcae2ce8aa6323e789d1f8b3b7765f601e7702726f430e814822b96/gast-0.2.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

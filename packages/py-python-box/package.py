@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPythonBox(PythonPackage):
+    # BEGIN VERSIONS
     version("7.1.1", sha256="2a3df244a5a79ac8f8447b5d11b5be0f2747d7b141cb2866060081ae9b53cc50", url="https://pypi.org/packages/69/0d/b463241f95bc0dc47dee176508fb0c1cf2d5ca100832ccf10b75401bfed4/python-box-7.1.1.tar.gz")
     version("7.1.0", sha256="695eab5c10198d76011f2020ba4dec4a41f640a389fd9991169a060eb1ed132f", url="https://pypi.org/packages/d4/eb/e2fef51eeb6104216c54e0ebf40b8bb9ca5dfd365f99f7ef0c2172176cab/python-box-7.1.0.tar.gz")
     version("7.0.1", sha256="dc6724f88255ccbc07092abd506281439cc2b75c6569c754ffc2b22580e7ae06", url="https://pypi.org/packages/11/b4/3db81c812236f252f833dcfd470a559a26d0a86a0371be70b84f4f283440/python-box-7.0.1.tar.gz")
@@ -18,10 +18,17 @@ class PyPythonBox(PythonPackage):
     version("5.4.1", sha256="60ae9156de34cf92b899bd099580950df70a5b0813e67a3310a1cdd1976457fa", url="https://pypi.org/packages/db/e8/cf1e8543ee7c9cc9b858bf033870c669a91f0fb0e4901a474eff01de6d1e/python_box-5.4.1-py3-none-any.whl")
     version("5.4.0", sha256="992b550d4b51f7fdab80b5d770fd25b03ac47f54042d5bd4c32c6da004d63a0d", url="https://pypi.org/packages/92/67/f4f34c196550cb2694dd69c8224c3ec9f7a28e52b7bfcbfa6f649f6a8bdc/python_box-5.4.0-py3-none-any.whl")
     version("5.3.0", sha256="f2a531f9f5bbef078c175fad6abb31e9b59d40d121ea79993197e6bb221c6be6", url="https://pypi.org/packages/ae/55/b81be1c1456d93db93905b364d19cac5dde22fb8f442b42d41087c2fe28f/python_box-5.3.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("extras", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ruamel-yaml@0.17:", when="@7.0.0-rc2:7.0.0-rc3")
         depends_on("py-ruamel-yaml", when="@4")
         depends_on("py-toml", when="@4")
         depends_on("py-tomli@1.2.3:", when="@7.0.0-rc2:7.0.0-rc3 ^python@:3.10")
+    # END DEPENDENCIES
 

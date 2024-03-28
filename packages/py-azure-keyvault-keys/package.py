@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAzureKeyvaultKeys(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.9.0", sha256="05eff85600f2f288a38e5c818ff77c5121840d327e66188cfa7ad333defb545b", url="https://pypi.org/packages/ad/ce/2414b3cdc9cd2a2f09fb048eb2d5b7677dfce8ef89c0eb7efaec78f079fe/azure_keyvault_keys-4.9.0-py3-none-any.whl")
     version("4.8.0", sha256="d1080fa1ffcb3bc16fc3a6b7acce63c8f0e81ad0b498673b2871b162396674f0", url="https://pypi.org/packages/57/6e/8622fe03dc6c8d76faddd052cb67f8d2de7117d21ab0e2d40c1e121eabdd/azure_keyvault_keys-4.8.0-py3-none-any.whl")
     version("4.7.0", sha256="cab6d1efc19381c6d9b1a1c8e38c3673af5b2f5a98314c85cd3b725aff346e06", url="https://pypi.org/packages/00/fc/0dd62814c52558475371e3a7675e6048189802e2d0e082bbd271b23ad9c1/azure_keyvault_keys-4.7.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyAzureKeyvaultKeys(PythonPackage):
     version("4.3.0", sha256="a50e6f663378f3603a66d80c7c01e9544ae7e9cfdf4d3a3ae92f5df9fb9f64da", url="https://pypi.org/packages/6d/3b/1dfc8170e2546424a21b89d459581ca2d9c40674025963bbcfff20c8f5f4/azure_keyvault_keys-4.3.0-py2.py3-none-any.whl")
     version("4.2.0", sha256="1f81de153d37a64bde43d2038371780159c71419d66671f8ee54079066584aa3", url="https://pypi.org/packages/52/d5/a7f1a6963efb2d24af77f250d9bcc63a56bbd9a494d4a345e84014c4f11a/azure_keyvault_keys-4.2.0-py2.py3-none-any.whl")
     version("4.1.0", sha256="baf18c6a4b1724a783531ae222a83a5c4600d7fbb581e4d694f3ee759ef18579", url="https://pypi.org/packages/bd/11/2b9f1b1dd59337f844b9f857e1bcd1db87af28f84716b6e44fbd48cffea6/azure_keyvault_keys-4.1.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azure-common@1.1:", when="@:4.0,4.2.0:4.9.0-beta3")
         depends_on("py-azure-core@1.29.5:", when="@4.9.0:")
@@ -32,4 +36,5 @@ class PyAzureKeyvaultKeys(PythonPackage):
         depends_on("py-msrest@0.6.0:", when="@4.0.1:4.3")
         depends_on("py-six@1.12:", when="@4.4.0-beta3:4.8.0-beta1")
         depends_on("py-typing-extensions@4.0.1:", when="@4.8.0-beta2:")
+    # END DEPENDENCIES
 

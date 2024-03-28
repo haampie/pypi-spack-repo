@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyTestfixtures(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.16.0", sha256="017f1924f464189915e67162f530758537175ddd1461b211c666f0587ebc2939", url="https://pypi.org/packages/2b/93/8e1da41ef50d4e13f3a16c586dd366556bf2c6840defc4b87ed9ab10b923/testfixtures-6.16.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

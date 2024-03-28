@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkBusinesschat(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="aa51d4d0b3b3eb050242e0d0e48b29e020ccfeb82a39c0d3a2289512734f53e4", url="https://pypi.org/packages/97/35/0cedf1bba964b7fc92680d65463365e2e4954584316355671d4cc60e1e59/pyobjc_framework_BusinessChat-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="60df5660a9a90a461c68a6cb49326c25e81f3412e951e84be7ccc98b62eb5404", url="https://pypi.org/packages/a5/99/c86cbd34f466ea9f00e8d0902f463a37a2e757702c1226fdb0ecd7d10882/pyobjc_framework_BusinessChat-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="2eb35f6f3585302c32cab1af13501b13f97badd13c0ed885c4ecd66ed24add15", url="https://pypi.org/packages/e9/22/52303092efde25a233088344eee747ca2be8ba51968b97481778937c217a/pyobjc_framework_BusinessChat-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkBusinesschat(PythonPackage):
     version("9.0", sha256="90fb99a3c11210d36bc8c683ef93b8b09e0af94aadcc53e9e3bd7ed1b40383a2", url="https://pypi.org/packages/f4/37/6964c6ee3f17ff8d772cc5dc8248f058f43465774435316084e32d9f8356/pyobjc_framework_BusinessChat-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="f2a82452444df68999aea48ed5ce71cb485f48104ed58cad6561888ccb328781", url="https://pypi.org/packages/c4/43/a3e7eeaab441b79496095724348ea48e394a69d8f01d162fe6d301102c76/pyobjc_framework_BusinessChat-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="c2be517d75370d8fe0bc00a0ef182d8c79b5628f619b0922efe03a3358256781", url="https://pypi.org/packages/0e/c9/3413f20d405cfaca8e35c4a929c53dd1030c4c706eca53b35687a927d25d/pyobjc_framework_BusinessChat-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkBusinesschat(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

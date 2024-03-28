@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyEccodes(PythonPackage):
+    # BEGIN VERSIONS
     version("1.7.0", sha256="0f233009eac228b99be6e40e5f7cc175b477d322bd91c0dac6bf226f0222cb17", url="https://pypi.org/packages/d7/b1/445b5976010f31d5a78e14f9a7cf92fadd9d24c82553d9598078746262d3/eccodes-1.7.0.tar.gz")
     version("1.6.1", sha256="0d23e88cf9f3b4f5a2bee76f2b38080fd4b84386531d06d830831af3b1a18473", url="https://pypi.org/packages/be/80/9831e82aa58389dec9f4f8c7abde07a519aed779a13814e27483a18a3168/eccodes-1.6.1.tar.gz")
     version("1.6.0", sha256="59393040bcf89d8048127410926582aaffc688e174bebd464719307bbc5d9e15", url="https://pypi.org/packages/f5/4c/8a3c62a4f055b13d407b28d9073fef771127c2f80999380fd09464bdb836/eccodes-1.6.0.tar.gz")
@@ -18,10 +18,15 @@ class PyEccodes(PythonPackage):
     version("1.4.0", sha256="b737b75c48aaaa5bd72de4c3efdec6ace15ad15ca41451d4885dcd7654357380", url="https://pypi.org/packages/26/a4/85feb994756be13f2d1d00afdda85aa81f80ed46970985d49b13599d323a/eccodes-1.4.0.tar.gz")
     version("1.3.3", sha256="60284cfc753a57239515a89bef8d65d78cb36fdd042214027d4ac71303f029b5", url="https://pypi.org/packages/65/e6/551f5f522f0c0c1316028114a180f03ee785759f2f77cd91518e5184c5df/eccodes-1.3.3.tar.gz")
     version("1.3.2", sha256="f282adfdc1bc658356163c9cef1857d4b2bae99399660d3d4fcb145a52d3b2a6", url="https://pypi.org/packages/79/1d/d5209cb0b5261e832f0b43c83ef3f47e05fd22f09310dc83f82347da082c/eccodes-1.3.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs", when="@:1.2,1.7:")
         depends_on("py-cffi", when="@:1.2,1.7:")
         depends_on("py-findlibs", when="@1.7:")
         depends_on("py-numpy", when="@:1.2,1.7:")
+    # END DEPENDENCIES
 

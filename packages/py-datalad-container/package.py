@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDataladContainer(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.2.5", sha256="b4b0f34d87bdbf783b996b09244615de1cbf55166aa978574f544d83bcb81ca2", url="https://pypi.org/packages/4b/a5/e6999cb129d9581674eefd4579e7d318a1aee32c1032586c7314f71cf799/datalad_container-1.2.5-py3-none-any.whl")
     version("1.2.4", sha256="c7a76f79fa7a00ab31c39712d2f7a900d11217d501f0857f28c82f26bcc61d48", url="https://pypi.org/packages/08/fa/7bbd0e32595b05904d24dd0c040105dff86db510a50c27276d2d2cf159df/datalad_container-1.2.4-py3-none-any.whl")
     version("1.2.3", sha256="f3f74f2c50d6cf160004fd06e23bcb381d928bebd21886811d1f64929f4ec7ad", url="https://pypi.org/packages/d3/b8/c92d8dda7643f06f8761753c76cf779d92b855d0a721dbd8ad435f154d2c/datalad_container-1.2.3-py3-none-any.whl")
@@ -18,9 +18,14 @@ class PyDataladContainer(PythonPackage):
     version("1.1.7", sha256="0a628b21ad1145ba3512eee2d8cf49196a1dce344a6f35782a44b1eb7f9fa588", url="https://pypi.org/packages/1c/24/bf1e49b6bde41e09d6c5cb951c4540c21b2cef3075431f00f32a05b43845/datalad_container-1.1.7-py3-none-any.whl")
     version("1.1.6", sha256="a70b6525d8a82d295e8836018d01f2113e551f8fb0b5455ef301126b91821b8b", url="https://pypi.org/packages/d4/ef/cb1549f6adc7103c2da502b02a82c60aa2c93e8ad6566410b17dbd6dbbc9/datalad_container-1.1.6-py3-none-any.whl")
     version("1.1.5", sha256="5b4f40edb781c95f7bf91091894bb73b920531dabb7e5a3b9b79ee118b6097cb", url="https://pypi.org/packages/a2/7f/e615773bd6a1a54ab3ec868d3eefe2f3ce841b04278fe7e44333875b698c/datalad_container-1.1.5-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-datalad@0.18:", when="@1.1.9:")
         depends_on("py-datalad@0.13.0:", when="@1.1:1.1.8")
         depends_on("py-requests@1.2:", when="@0.1.1:0.3,0.5.1:0,1.0.1:")
+    # END DEPENDENCIES
 

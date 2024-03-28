@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWasabi(PythonPackage):
+    # BEGIN VERSIONS
     version("1.1.2", sha256="0a3f933c4bf0ed3f93071132c1b87549733256d6c8de6473c5f7ed2e171b5cf9", url="https://pypi.org/packages/8f/69/26cbf0bad11703241cb84d5324d868097f7a8faf2f1888354dac8883f3fc/wasabi-1.1.2-py3-none-any.whl")
     version("1.1.1", sha256="32e44649d99a64e08e40c1c96cddb69fad460bd0cc33802a53cab6714dfb73f8", url="https://pypi.org/packages/58/5f/1f2833d59abf53e24dbadc21b0565fe10c64545da8705faed8eff3b14745/wasabi-1.1.1-py3-none-any.whl")
     version("1.1.0", sha256="e4be528edf13d25656f676bf8a1b8a54d2b18c1c20bd2ca608b0405d10b290a3", url="https://pypi.org/packages/d4/6e/fdf8d3d4d4e5a08b2fa732f7835c5c0214880de2bf99e4f0584791ba44d6/wasabi-1.1.0-py3-none-any.whl")
@@ -20,7 +20,12 @@ class PyWasabi(PythonPackage):
     version("0.7.1", sha256="ee3809f4ce00e1e7f424b1572c753cff0dcaca2ca684e67e31f985033a9f070b", url="https://pypi.org/packages/4e/d1/a23917773a5759b36d1dc8433d15fb40700ca29d5ba924d6350c38a8ef8e/wasabi-0.7.1.tar.gz")
     version("0.7.0", sha256="e875f11d7126a2796999ff7f092195f24005edbd90b32b2df16dde5d392ecc8c", url="https://pypi.org/packages/04/e5/aa1892776a8ed6f6d552ba1be0640e6403f07e850d36e79f475f1e605aa9/wasabi-0.7.0.tar.gz")
     version("0.6.0", sha256="da1f100e0025fe1e50fd67fa5b0b05df902187d5c65c86dc110974ab856d1f05", url="https://pypi.org/packages/21/e1/e4e7b754e6be3a79c400eb766fb34924a6d278c43bb828f94233e0124a21/wasabi-0.6.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama@0.4.6:", when="@1: platform=windows")
+    # END DEPENDENCIES
 

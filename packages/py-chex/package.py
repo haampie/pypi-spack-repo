@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyChex(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.1.86", sha256="251c20821092323a3d9c28e1cf80e4a58180978bec368f531949bd9847eee568", url="https://pypi.org/packages/e6/ed/625d545d08c6e258d2d63a93a0bf8ed8a296c09d254208e73f9d4fb0b746/chex-0.1.86-py3-none-any.whl")
     version("0.1.85", sha256="32c96719aa94045339174138a6aec14aed2630a8a17fb2633ad3eb868890551d", url="https://pypi.org/packages/9a/82/257141baabfaf8b0187521ddb83e996f2a71cdd4f7796d9599ca3e3ea4a9/chex-0.1.85-py3-none-any.whl")
     version("0.1.84", sha256="a41603ed1a3c1d59c15aa017238b36b2437c82ef0a69d5bc4b1140fb32610ea5", url="https://pypi.org/packages/41/ab/662e3961529746ea9410f25cbea3d1565bed16a5e94bfa3e8b906e8f5337/chex-0.1.84-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyChex(PythonPackage):
     version("0.1.6", sha256="5e04a28fcab3c2c0fb05431c6e646e8e4889cacb3e1670369e556f12029cf785", url="https://pypi.org/packages/ff/32/23b2b468c7f85fc84ddcb73e5170f781477c30a4da5c13e882abe5506a9c/chex-0.1.6-py3-none-any.whl")
     version("0.1.5", sha256="b3321184850d5fc29b2eca63087cdbdd83a1b3e4f33c1314ff8b3b8bd67abbca", url="https://pypi.org/packages/38/ee/bce278eceda025e8f7d1939b5a5fd8ebfe4f3307fe33dab7c243b2bc3668/chex-0.1.5-py3-none-any.whl")
     version("0.1.0", sha256="7fd187a68285aae9a35e314817ba037b6e0996da782a40689cfafae1fe7d0536", url="https://pypi.org/packages/09/dc/c10c71ec92a4a0e31b4bb0b930389ad4f2c7ad82e7c74aca9bd5bcfc7842/chex-0.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.1.8:")
         depends_on("py-absl-py@0.9:")
@@ -34,4 +38,5 @@ class PyChex(PythonPackage):
         depends_on("py-toolz@0.9:")
         depends_on("py-typing-extensions@4.2:", when="@0.1.8:")
         depends_on("py-typing-extensions@4.2:", when="@0.1.6:0.1.7 ^python@:3.10")
+    # END DEPENDENCIES
 

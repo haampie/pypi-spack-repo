@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySentencepiece(PythonPackage):
+    # BEGIN VERSIONS
     version("0.2.0", sha256="a52c19171daaf2e697dc6cbe67684e0fa341b1248966f6aebb541de654d15843", url="https://pypi.org/packages/c9/d2/b9c7ca067c26d8ff085d252c89b5f69609ca93fb85a00ede95f4857865d4/sentencepiece-0.2.0.tar.gz")
     version("0.1.99", sha256="189c48f5cb2949288f97ccdb97f0473098d9c3dcf5a3d99d4eabe719ec27297f", url="https://pypi.org/packages/d8/87/b37ebc960d0a85e10785a1a92d796edbd975840bee150a9ae3ba5d7a0250/sentencepiece-0.1.99.tar.gz")
     version("0.1.98", sha256="947cf0a4b8a480510d560a922f8256f34e93984a86cf870be4d05731f59fb28d", url="https://pypi.org/packages/30/ea/b6cc06f178c4ad88f265011d7a2649a7d5278a88a7afa63cda9344513ea6/sentencepiece-0.1.98.tar.gz")
@@ -17,5 +17,10 @@ class PySentencepiece(PythonPackage):
     version("0.1.93", sha256="52d3417b2d15f9ac287d7e4091e2fa38cc38d2a9fe32bff1bcf394de9791eb1c", url="https://pypi.org/packages/10/0b/c138719d683561fee1ac619b5445d74c981d5402e37d4a62b2a158222d7e/sentencepiece-0.1.93.tar.gz")
     version("0.1.92", sha256="5daf059b31ef82b52698f86891ed8376550d36a5b87a4a3590a94a255346ee08", url="https://pypi.org/packages/18/f3/2f9006ce3bd44dd4a198dfee37eb5f5bdddcf5f5880c35812c646a92cfa3/sentencepiece-0.1.92.tar.gz")
     version("0.1.91", sha256="f9700cf607ea064d9fad34c751fbf49953dcc56fe68c54b277481aa0aec5c18f", url="https://pypi.org/packages/ba/f6/520b56e5977f62aee48833da8b4ff2fdc2b10ebfa0dd78556b1d707d4086/sentencepiece-0.1.91.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

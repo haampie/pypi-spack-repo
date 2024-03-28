@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPymongo(PythonPackage):
+    # BEGIN VERSIONS
     version("4.6.2", sha256="ab7d01ac832a1663dad592ccbd92bb0f0775bc8f98a1923c5e1a7d7fead495af", url="https://pypi.org/packages/e6/bb/696f6db3a1e8b696f9a1a4859352a065534a6c70d8070c73a9d7ce134485/pymongo-4.6.2.tar.gz")
     version("4.6.1", sha256="31dab1f3e1d0cdd57e8df01b645f52d43cc1b653ed3afd535d2891f4fc4f9712", url="https://pypi.org/packages/1d/f0/b5fcf9aee64ac3650a3df3bd1d7e8870838a82944fa4868768ab9db5416a/pymongo-4.6.1.tar.gz")
     version("4.6.0", sha256="fb1c56d891f9e34303c451998ef62ba52659648bb0d75b03c5e4ac223a3342c2", url="https://pypi.org/packages/b4/5e/11fad226acae56ef8cfee205bf491f4d50f9c12c5bf3294680006d04de54/pymongo-4.6.0.tar.gz")
@@ -25,5 +25,10 @@ class PyPymongo(PythonPackage):
     version("3.9.0", sha256="4249c6ba45587b959292a727532826c5032d59171f923f7f823788f413c2a5a3", url="https://pypi.org/packages/c0/69/9388b715d013444ae8e5d497a6825d120f6a7a67ef5aa8ddea62f601cbff/pymongo-3.9.0.tar.gz")
     version("3.6.0", sha256="c6de26d1e171cdc449745b82f1addbc873d105b8e7335097da991c0fc664a4a8", url="https://pypi.org/packages/69/8a/2384c55f4bd494eeb6104a9b35c36714ba1178dcd08ee5a73b92eed3d8c1/pymongo-3.6.0.tar.gz")
     version("3.3.0", sha256="3d45302fc2622fabf34356ba274c69df41285bac71bbd229f1587283b851b91e", url="https://pypi.org/packages/31/63/5a7826bdee88db6d49ef1737a17de63cf6f50f8cb04f2a0339f048cb33b5/pymongo-3.3.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

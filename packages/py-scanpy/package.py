@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyScanpy(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.10.0", sha256="8cd83448837b808ebf4005fcb78a89fc3b7c4d5a97580b6a4254e394ab062911", url="https://pypi.org/packages/e4/78/1ae66df53e8dfe2d83a186719bc0585caa55bbbad916d353513ce1ea8385/scanpy-1.10.0-py3-none-any.whl")
     version("1.9.8", sha256="abcca12dfe6975146277b6a76841e2328e07c6a9f518d234ba6a889b26b456dc", url="https://pypi.org/packages/3b/72/436046ca332b933ca7d09cd45b86154232203e068e8307a102d5349e9444/scanpy-1.9.8-py3-none-any.whl")
     version("1.9.7", sha256="046af177640f5d00a240f47a384cb7e769f1707a9af4871d9437d230e3cfc028", url="https://pypi.org/packages/15/c9/c278b9d9eb6cb0270821e4f94be35e93b441f2eb1040fea3b5c412aa5135/scanpy-1.9.7-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyScanpy(PythonPackage):
     version("1.9.2", sha256="cdf4e3f86a64f12f1e1d0b98d69bc41a8e04e09e15479489d2f0a0af7ac572a7", url="https://pypi.org/packages/f4/a9/cfd581f27f0b1dac4bbbaccad78a2d0ef497011790f9ad3018648db44136/scanpy-1.9.2-py3-none-any.whl")
     version("1.9.1", sha256="9fca3597aef176034ebc3438be3bf859db5c47441e36481d7f9272bd4cd51d2a", url="https://pypi.org/packages/51/87/a55c7992cba9b189de70eae37e9f1e2abe6fdaf3f087d30356f28698948e/scanpy-1.9.1-py3-none-any.whl")
     version("1.9.0", sha256="d454b150e77a39f69f3f5f390288060f83fd1b87f1af1b57bf02c4a0640284f6", url="https://pypi.org/packages/a4/0f/5667b6d6a60cb8ab11a7bfc80d82f0eefc7b2023ccacd2d2459752029539/scanpy-1.9.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.10:")
         depends_on("py-anndata@0.8.0:", when="@1.10:")
@@ -61,4 +65,5 @@ class PyScanpy(PythonPackage):
         depends_on("py-tqdm", when="@:0.2.4,0.2.9:0.2.9.0,0.4:0.4.0,0.4.2,1.4.4,1.4.5.post2:1.4.5,1.5:")
         depends_on("py-umap-learn@0.5.1:", when="@1.10:")
         depends_on("py-umap-learn@0.3.10:", when="@1.4.5.post2:1.4.5,1.5:1.6.0,1.7.0:1.9")
+    # END DEPENDENCIES
 

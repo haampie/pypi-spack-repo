@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyTensorflowDatasets(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.4.0", sha256="b373e7b724a357637d15f29a11bb7bef3dc62bd144defffe5fec1b8b4f6cf580", url="https://pypi.org/packages/93/83/85f14bcf27df5ae23502803502f8506eefec18a285fea909aa67dc9b736e/tensorflow_datasets-4.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.10:", when="@4.9.4:")
         depends_on("python@3.9:", when="@4.9.3")
@@ -25,4 +29,5 @@ class PyTensorflowDatasets(PythonPackage):
         depends_on("py-tensorflow-metadata")
         depends_on("py-termcolor")
         depends_on("py-tqdm")
+    # END DEPENDENCIES
 

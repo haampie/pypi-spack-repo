@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyScipy(PythonPackage):
+    # BEGIN VERSIONS
     version("1.13.0-rc1", sha256="72e29d3dc0a00fe6cb71d3210f30b3f8f63e6bdd456c6218d25bc702eb10a8c9", url="https://pypi.org/packages/dc/23/9948855f3227e8327713a103df97a32dc0109aada23e0fe3df3429ea2e55/scipy-1.13.0rc1.tar.gz")
     version("1.12.0", sha256="4bf5abab8a36d20193c698b0f1fc282c1d083c94723902c447e5d2f1780936a3", url="https://pypi.org/packages/30/85/cdbf2c3c460fe5aae812917866392068a88d02f07de0fe31ce738734c477/scipy-1.12.0.tar.gz")
     version("1.12.0-rc2", sha256="3054d36d182ae41f690e72837f0d69779b9fab8aa02af424a42673f4e4a07931", url="https://pypi.org/packages/fd/3b/69060d528565fd558442fcaf8aab745a264b3153f74d7b3f13461eefc947/scipy-1.12.0rc2.tar.gz")
@@ -45,7 +45,11 @@ class PyScipy(PythonPackage):
     version("1.4.0", sha256="31f7cfa93b01507c935c12b535e24812594002a02a56803d7cd063e9920d25e8", url="https://pypi.org/packages/48/74/ed053620f675ce5408b8dda34949fdc403e5f40db779c07a4436631dcbfb/scipy-1.4.0.tar.gz")
     version("1.3.3", sha256="64bf4e8ae0db2d42b58477817f648d81e77f0b381d0ea4427385bba3f959380a", url="https://pypi.org/packages/a7/5c/495190b8c7cc71977c3d3fafe788d99d43eeb4740ac56856095df6a23fbd/scipy-1.3.3.tar.gz")
     version("1.3.2", sha256="a03939b431994289f39373c57bbe452974a7da724ae7f9620a1beee575434da4", url="https://pypi.org/packages/df/20/2f147945396fa74b467d696e42aa55eb603d166490a8ebe4d79e54c793df/scipy-1.3.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.11.4:")
         depends_on("python@3.9:3.12", when="@1.11:1.11.3")
@@ -59,4 +63,5 @@ class PyScipy(PythonPackage):
         depends_on("py-numpy@1.18.5:1.25", when="@1.9")
         depends_on("py-numpy@1.14.5:", when="@1.5:1.5.1")
         depends_on("py-numpy@1.13.3:", when="@1.3:1.4")
+    # END DEPENDENCIES
 

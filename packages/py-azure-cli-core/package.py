@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyAzureCliCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.9.1", sha256="28bad5b4a8d90e98af4b556cbe560517a9be7187b0ea05bebe449c6838a03756", url="https://pypi.org/packages/cd/31/8801d6d4e96472e7d13eaf13227be57e1be78b3734ebbb4a79b832c9a8cd/azure_cli_core-2.9.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-adal@1.2.3:", when="@2.6:2.19")
         depends_on("py-argcomplete@1.8:1", when="@2.0.68:2.43")
@@ -30,4 +34,5 @@ class PyAzureCliCore(PythonPackage):
         depends_on("py-pyopenssl@17.1:", when="@2.0.32:")
         depends_on("py-requests@2.22:", when="@2.6:2.25")
         depends_on("py-six@1.12:", when="@2.0.77:2.29")
+    # END DEPENDENCIES
 

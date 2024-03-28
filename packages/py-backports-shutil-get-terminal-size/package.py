@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyBackportsShutilGetTerminalSize(PythonPackage):
-    version("1.0.0", sha256="713e7a8228ae80341c70586d1cc0a8caa5207346927e23d09dcbcaf18eadec80", url="https://pypi.org/packages/ec/9c/368086faa9c016efce5da3e0e13ba392c9db79e3ab740b763fe28620b18b/backports.shutil_get_terminal_size-1.0.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.0.0", sha256="0975ba55054c15e346944b38956a4c9cbee9009391e41b86c68990effb8c1f64", url="https://pypi.org/packages/7d/cd/1750d6c35fe86d35f8562091737907f234b78fdffab42b29c72b1dd861f4/backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

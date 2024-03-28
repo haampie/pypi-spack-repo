@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySimplejson(PythonPackage):
+    # BEGIN VERSIONS
     version("3.19.2", sha256="9eb442a2442ce417801c912df68e1f6ccfcd41577ae7274953ab3ad24ef7d82c", url="https://pypi.org/packages/79/79/3ccb95bb4154952532f280f7a41979fbfb0fbbaee4d609810ecb01650afa/simplejson-3.19.2.tar.gz")
     version("3.19.1", sha256="6277f60848a7d8319d27d2be767a7546bc965535b28070e310b3a9af90604a4c", url="https://pypi.org/packages/c0/5c/61e2afbe62bbe2e328d4d1f426f6e39052b73eddca23b5ba524026561250/simplejson-3.19.1.tar.gz")
     version("3.18.4", sha256="6197cfebe659ac802a686b5408494115a7062b45cdf37679c4d6a9d4f39649b7", url="https://pypi.org/packages/00/cd/62392cee6e24da6768a578651907c8e08ae316fc931d09ba98e5114d561d/simplejson-3.18.4.tar.gz")
@@ -25,5 +25,10 @@ class PySimplejson(PythonPackage):
     version("3.8.1", sha256="428ac8f3219c78fb04ce05895d5dff9bd813c05a9a7922c53dc879cd32a12493", url="https://pypi.org/packages/70/b0/c8169f6c2b7927614bea25636485992248ae0b1d7bc83858a9185461f57b/simplejson-3.8.1.tar.gz")
     version("3.8.0", sha256="217e4797da3a9a4a9fbe6722e0db98070b8443a88212d7acdbd241a7668141d9", url="https://pypi.org/packages/36/c9/746cec37ec357c9882011d1d4ed06e6fe27bea48c4272ebbbc7512bcb7da/simplejson-3.8.0.tar.gz")
     version("3.3.0", sha256="7a8a6bd82e111976aeb06138316ab10847adf612925072eaff8512228bcf9a1f", url="https://pypi.org/packages/fc/7c/f9cec79ab9c8fc190821c69fdbcb15ecba438ff35f13b3f8d9675efcfd0d/simplejson-3.3.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

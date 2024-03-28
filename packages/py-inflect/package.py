@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyInflect(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.0.0", sha256="9544afed6182176e43955c44b1acdaed30f9b2b56c16d1fc5b222d98218b546e", url="https://pypi.org/packages/fb/c6/d9feb758be584f729424390af24687d3a4363d968164f94079f83cd536b4/inflect-7.0.0-py3-none-any.whl")
     version("6.2.0", sha256="5a005e0c9afe152cc95d552a59b8b0c19efc51823405b43d89e984f0c33bc243", url="https://pypi.org/packages/6a/e1/79603e4ae91b38a91dfd855f92321afb65e7f3d0192ac831d00bc9c45cca/inflect-6.2.0-py3-none-any.whl")
     version("6.1.1", sha256="b63199be340df9dc4c08eefca88e533f1f47f8eab360df3e468ddf3d6c8681a7", url="https://pypi.org/packages/c6/d5/f8fa4cc77e5137c949d7b98690e880cd7f3bc74793454834847657102dc1/inflect-6.1.1-py3-none-any.whl")
@@ -18,10 +18,15 @@ class PyInflect(PythonPackage):
     version("6.0.1", sha256="27164f5627eb2753c55a0b09c615919d535001ba8c44d94dfc1ce5ea2664d91b", url="https://pypi.org/packages/84/3b/eab2a8afb639ab4cba4f3975b830340037800881afef434e3a6e82b77d7f/inflect-6.0.1-py3-none-any.whl")
     version("6.0.0", sha256="e3b85d65a296843268f35f4136283ad7c012a129375db1529d49b4b01ecb400b", url="https://pypi.org/packages/d3/0f/c51780fb99b156e998a8bcbc418aea9179ccd301f8c2a8c1bb255c294af6/inflect-6.0.0-py3-none-any.whl")
     version("5.0.2", sha256="f125f678288f4830f0ee4a4f51e088ff869ac44451a5717627a4ed38d734144c", url="https://pypi.org/packages/a8/d7/9ee314763935ce36e3023103ea2c689e6026147230037503a7772cdad6c1/inflect-5.0.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pydantic@1.9.1:1", when="@6.0.5:6.1")
         depends_on("py-pydantic@1.9.1:", when="@6.0.2:6.0.4,6.2:")
         depends_on("py-pydantic", when="@6:6.0.1")
         depends_on("py-typing-extensions", when="@6.2:")
+    # END DEPENDENCIES
 

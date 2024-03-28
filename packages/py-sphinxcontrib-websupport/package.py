@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySphinxcontribWebsupport(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.2.7", sha256="2dc179d7f821ebd54f31f93c894ca52435ebc5364e4e4dfb0da834ac119d51fd", url="https://pypi.org/packages/be/36/bd45372471d95ef2d08dd17528b5ffb5fab04acefeb3b9dd1029821757e1/sphinxcontrib_websupport-1.2.7-py3-none-any.whl")
     version("1.2.6", sha256="c43c2031b93799ad688c2af233e330740768adc57c02746d5ec197e815b9469e", url="https://pypi.org/packages/40/d2/fd1c52203f1385bc95775d36e9f334358cc457ea3e44046fc6d78a868d10/sphinxcontrib_websupport-1.2.6-py3-none-any.whl")
     version("1.2.5", sha256="e438d4bb72b4536c135768bfd88495fa43ad4e71b107df362d97cb8a6a30de00", url="https://pypi.org/packages/1d/5b/b6f6d68a2478654bf9120bc04430551cf5011a9288c88d38c6541c36086e/sphinxcontrib_websupport-1.2.5-py3-none-any.whl")
@@ -17,11 +17,16 @@ class PySphinxcontribWebsupport(PythonPackage):
     version("1.2.0", sha256="50fb98fcb8ff2a8869af2afa6b8ee51b3baeb0b17dacd72505105bf15d506ead", url="https://pypi.org/packages/e8/f3/660c7df68d36fb314303155863136c4541bad3ec360d93406c20535f3f1d/sphinxcontrib_websupport-1.2.0-py2.py3-none-any.whl")
     version("1.1.2", sha256="e02f717baf02d0b6c3dd62cf81232ffca4c9d5c331e03766982e3ff9f1d2bc3f", url="https://pypi.org/packages/2a/59/d64bda9b7480a84a3569be4dde267c0f6675b255ba63b4c8e84469940457/sphinxcontrib_websupport-1.1.2-py2.py3-none-any.whl")
     version("1.1.0", sha256="68ca7ff70785cbe1e7bccc71a48b5b6d965d79ca50629606c7861a21b206d9dd", url="https://pypi.org/packages/52/69/3c2fbdc3702358c5b34ee25e387b24838597ef099761fc9a42c166796e8f/sphinxcontrib_websupport-1.1.0-py2.py3-none-any.whl")
-    version("1.0.1", sha256="7a85961326aa3a400cd4ad3c816d70ed6f7c740acd7ce5d78cd0a67825072eb9", url="https://pypi.org/packages/c5/6b/f0630436b931ad4f8331a9399ca18a7d447f0fcc0c7178fb56b1aee68d01/sphinxcontrib-websupport-1.0.1.tar.gz")
+    version("1.0.1", sha256="f4932e95869599b89bf4f80fc3989132d83c9faa5bf633e7b5e0c25dffb75da2", url="https://pypi.org/packages/56/0f/3ee19ca5e5a1d9751cf4bbeb372d40a46421c4321fe55a4703ba66d0bafb/sphinxcontrib_websupport-1.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.2.5:")
         depends_on("py-jinja2", when="@1.2.5:")
         depends_on("py-sphinx@5.0.0:", when="@1.2.5:")
         depends_on("py-sphinxcontrib-serializinghtml", when="@1.2.4:")
+    # END DEPENDENCIES
 

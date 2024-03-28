@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRadicalPilot(PythonPackage):
+    # BEGIN VERSIONS
     version("1.47.0", sha256="58f41a0c42fe61381f15263a63424294732606ab7cee717540c0b730308f7908", url="https://pypi.org/packages/91/8b/eefffbbf6696e34334744e9074c81cb6e16a5ed5365df082bad6f2094cf7/radical.pilot-1.47.0.tar.gz")
     version("1.39.0", sha256="7ba0bfa3258b861db71e73d52f0915bfb8b3ac1099badacf69628307cab3b913", url="https://pypi.org/packages/39/38/1f865240477134b83b9bd645749dac42d81cab49ac31be1d0be33381f445/radical.pilot-1.39.0.tar.gz")
     version("1.20.0", sha256="a0747e573a01a856dc330797dbee158f7e1cf8652001dc26f06a1d6c5e553bc6", url="https://pypi.org/packages/74/90/fbd7f43a7ea406325a8c46afa7ce98fe54ed1b41fab5f887b410fe674efb/radical.pilot-1.20.0.tar.gz")
@@ -24,5 +24,10 @@ class PyRadicalPilot(PythonPackage):
     version("1.8.0", sha256="a4c3bca163db61206e15a2d820d9a64e888da5c72672448ae975c26768130b9d", url="https://pypi.org/packages/a2/d0/5bb623b306c09383a89b67dafbdd20eac524ae21ede4b3209cbac9bf874e/radical.pilot-1.8.0.tar.gz")
     version("1.6.8", sha256="fa8fd3f348a68b54ee8338d5c5cf1a3d99c10c0b6da804424a839239ee0d313d", url="https://pypi.org/packages/d2/cd/51fce5e7bfeb775ea4638d7a7d0ff0c6d4abbca529057e9873b255072d4f/radical.pilot-1.6.8.tar.gz")
     version("1.6.7", sha256="6ca0a3bd3cda65034fa756f37fa05681d5a43441c1605408a58364f89c627970", url="https://pypi.org/packages/48/64/d5829d2adaeb668193b88098f0fee2ccf5e8e8538ef5f8a11521b6b304ee/radical.pilot-1.6.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

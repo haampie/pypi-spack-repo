@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPackaging(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("24.0", sha256="2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", url="https://pypi.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl")
     version("23.2", sha256="8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7", url="https://pypi.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl")
     version("23.1", sha256="994793af429502c4ea2ebf6bf664629d07c1a9fe974af92966e4b8d2df7edc61", url="https://pypi.org/packages/ab/c3/57f0601a2d4fe15de7a553c00adbc901425661bf048f2a22dfc500caf121/packaging-23.1-py3-none-any.whl")
@@ -27,7 +27,11 @@ class PyPackaging(PythonPackage):
     version("19.0", sha256="9e1cbf8c12b1f1ce0bb5344b8d7ecf66a6f8a6e91bcb0c84593ed6d3ab5c4ab3", url="https://pypi.org/packages/91/32/58bc30e646e55eab8b21abf89e353f59c0cc02c417e42929f4a9546e1b1d/packaging-19.0-py2.py3-none-any.whl")
     version("17.1", sha256="e9215d2d2535d3ae866c3d6efc77d5b24a0192cce0ff20e42896cc0664f889c0", url="https://pypi.org/packages/ad/c2/b500ea05d5f9f361a562f089fc91f77ed3b4783e13a08a3daf82069b1224/packaging-17.1-py2.py3-none-any.whl")
     version("16.8", sha256="99276dc6e3a7851f32027a68f1095cd3f77c148091b092ea867a351811cfe388", url="https://pypi.org/packages/87/1b/c39b7c65b5612812b83d6cab7ef2885eac9f6beb0b7b8a7071a186aea3b1/packaging-16.8-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs", when="@19.1")
         depends_on("py-pyparsing@2.0.2:3.0.4,3.0.6:", when="@21.3:21")
@@ -35,4 +39,5 @@ class PyPackaging(PythonPackage):
         depends_on("py-pyparsing@2.0.2:", when="@17:21.0")
         depends_on("py-pyparsing", when="@16")
         depends_on("py-six", when="@16.1:20.4")
+    # END DEPENDENCIES
 

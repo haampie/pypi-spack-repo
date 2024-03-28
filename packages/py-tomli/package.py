@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTomli(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.1", sha256="939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc", url="https://pypi.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl")
     version("2.0.0", sha256="b5bde28da1fed24b9bd1d4d2b8cba62300bfb4ec9a6187a957e8ddb9434c5224", url="https://pypi.org/packages/e2/9f/5e1557a57a7282f066351086e78f87289a3446c47b2cb5b8b2f614d8fe99/tomli-2.0.0-py3-none-any.whl")
     version("1.2.3", sha256="e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c", url="https://pypi.org/packages/05/e4/74f9440db36734d7ba83c574c1e7024009ce849208a41f90e94a134dc6d1/tomli-1.2.3-py3-none-any.whl")
@@ -17,5 +17,12 @@ class PyTomli(PythonPackage):
     version("1.0.4", sha256="0713b16ff91df8638a6a694e295c8159ab35ba93e3424a626dd5226d386057be", url="https://pypi.org/packages/ec/81/e0741c4f4dfde87348987869e66de74d13378aa7c0fe97dd1eba2a69f74c/tomli-1.0.4-py3-none-any.whl")
     version("1.0.3", sha256="e4f5bfadf0355dde1143c85ba9436363062c8d8d2cfe6913fd98288c828fe490", url="https://pypi.org/packages/15/bf/0095f834dfaf726cc3c4b31a7a227dba0c7a8aa815c1a540f0a6cb7423c6/tomli-1.0.3-py3-none-any.whl")
     version("1.0.2", sha256="840d68c981538a193a98414d86608f17dfbf8e25adf3619af27e2bf2ace4348e", url="https://pypi.org/packages/62/d8/e8db603b80af9c3bb6463164180936c3538a851a0800a133f96ccba3049b/tomli-1.0.2-py3-none-any.whl")
+    version("1.0.1", sha256="dce66410edbec030792fc81653d8658ff675998076f31c45c0aafb1da824e9c7", url="https://pypi.org/packages/b0/24/6096b4a5518350b02e8e29ae767753d6edfc33cb1b51207bdb0218bb368f/tomli-1.0.1-py3-none-any.whl")
+    version("1.0.0", sha256="96e8efdf42dd939192a1cfbb89b72801473a87b2b7aa360b6921f187fa7ce5ef", url="https://pypi.org/packages/4d/70/ddb7c8ca31e965ec22aa95dd7815838c6e7e723dcd47fe4337cda8fcc77f/tomli-1.0.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

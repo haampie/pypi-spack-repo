@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCfnetwork(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="18ebd22c645b5b77c1df6d973a91cc035ddd4666346912b2a0c847803c23f4d4", url="https://pypi.org/packages/8c/cf/f7f8e8e91f6fa62b9bd774f9f64e3efa32b075423ad3c9ca37f55558a36c/pyobjc-framework-CFNetwork-10.2.tar.gz")
     version("10.1", sha256="898fa3ec863b9d72b3262135e1b0a24bc73879b65c69a2a7b213fe840e2a11de", url="https://pypi.org/packages/31/fd/d31594eeb11208dd1c182b7310f37454de7322046f7bbed4d9f33ecca869/pyobjc-framework-CFNetwork-10.1.tar.gz")
     version("10.0", sha256="18118d62e05e37692e3cfa5b1ab8c0b82079aad72240bcb6d626740aa4405480", url="https://pypi.org/packages/a7/76/92a099fe82b4f20e54ae848a26b5613ad4dd67ab0fa02fcbf15152860067/pyobjc-framework-CFNetwork-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkCfnetwork(PythonPackage):
     version("9.0", sha256="5173487185c0343af8c98ba58456bfbbbb56a5de2c3aa65be9090cf1be7bc604", url="https://pypi.org/packages/b8/cd/0597dcaddade02254cd7853ac338434fd33bae3a1c7f9d43a6056484f2ab/pyobjc-framework-CFNetwork-9.0.tar.gz")
     version("8.5.1", sha256="9a3759111ea2c3b8bb956a9f0af8f1c8d0b08a5f2ccd23b6d49ccd8e43079e43", url="https://pypi.org/packages/5d/46/b1c40bcc86aea61679b70c8adf49934b8c3e9e45ae8e90a7991aaf477e0f/pyobjc-framework-CFNetwork-8.5.1.tar.gz")
     version("8.5", sha256="6c588d1846faa623b4611a1a22132c1d794330b90190b3ff1ab14fdb6d884c34", url="https://pypi.org/packages/c4/f5/374ea435c7338ed67a9be1e384e0ecab0dfbcd52d60edea7a8e95b1a808f/pyobjc-framework-CFNetwork-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkCfnetwork(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

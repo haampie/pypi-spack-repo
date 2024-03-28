@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyZarr(PythonPackage):
+    # BEGIN VERSIONS
     version("2.17.1", sha256="e25df2741a6e92645f3890f30f3136d5b57a0f8f831094b024bbcab5f2797bc7", url="https://pypi.org/packages/fe/fd/7db2cb2c87cc47f971065edf2d7ab1e54202b286f6d01bf5c197c660cd69/zarr-2.17.1-py3-none-any.whl")
     version("2.17.0", sha256="d287cb61019c4a0a0f386f76eeaa7f0b1160b1cb90cf96173a4b6cbc135df6e1", url="https://pypi.org/packages/f1/69/ecaaa497d704c58621d0828bd1336d8040e09c94e822ca8d28410fbdeff2/zarr-2.17.0-py3-none-any.whl")
     version("2.16.1", sha256="de4882433ccb5b42cc1ec9872b95e64ca3a13581424666b28ed265ad76c7056f", url="https://pypi.org/packages/ba/55/0f5ec28561a1698ac5c11edc5724f8c6d48d01baecf740ffd62107d95e7f/zarr-2.16.1-py3-none-any.whl")
@@ -24,7 +24,11 @@ class PyZarr(PythonPackage):
     version("2.5.0", sha256="f86c95fef1442d974adae3269c0b5a5e5200f0d46b6572bad6a9ee2c1a262478", url="https://pypi.org/packages/22/17/37cc7afabdec7b5759d68fab0bc5afd950799a4ce2189826caf5ee087414/zarr-2.5.0-py3-none-any.whl")
     version("2.4.0", sha256="53aa21b989a47ddc5e916eaff6115b824c0864444b1c6f3aaf4f6cf9a51ed608", url="https://pypi.org/packages/a3/87/383d77399148ef0772da3472b513ecf143252e7c365c51b0f06714800366/zarr-2.4.0.tar.gz")
     version("2.3.2", sha256="c62d0158fb287151c978904935a177b3d2d318dea3057cfbeac8541915dfa105", url="https://pypi.org/packages/d0/d0/02a3457f4e86a8f74104e7686c43b6bf0c76534b626f174eb20786a6f781/zarr-2.3.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.17:")
         depends_on("py-asciitree", when="@:0.0,2.5:")
@@ -35,4 +39,5 @@ class PyZarr(PythonPackage):
         depends_on("py-numpy@1.20.0:1.21.0-rc2,1.21.1:", when="@2.16.1:2.16")
         depends_on("py-numpy@1.20.0:", when="@2.13.6:2.16.0")
         depends_on("py-numpy@1.7:", when="@:0.0,2.5:2.13.3")
+    # END DEPENDENCIES
 

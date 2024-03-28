@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFtfy(PythonPackage):
+    # BEGIN VERSIONS
     version("6.2.0", sha256="f94a2c34b76e07475720e3096f5ca80911d152406fbde66fdb45c4d0c9150026", url="https://pypi.org/packages/f4/f0/21efef51304172736b823689aaf82f33dbc64f54e9b046b75f5212d5cee7/ftfy-6.2.0-py3-none-any.whl")
     version("6.1.3", sha256="e49c306c06a97f4986faa7a8740cfe3c13f3106e85bcec73eb629817e671557c", url="https://pypi.org/packages/91/f8/dfa32d06cfcbdb76bc46e0f5d69c537de33f4cedb1a15cd4746ab45a6a26/ftfy-6.1.3-py3-none-any.whl")
     version("6.1.1", sha256="0ffd33fce16b54cccaec78d6ec73d95ad370e5df5a25255c8966a6147bd667ca", url="https://pypi.org/packages/e1/1e/bf736f9576a8979752b826b75cbd83663ff86634ea3055a766e2d8ad3ee5/ftfy-6.1.1-py3-none-any.whl")
@@ -18,8 +18,13 @@ class PyFtfy(PythonPackage):
     version("5.9", sha256="8c4fb2863c0b82eae2ab3cf353d9ade268dfbde863d322f78d6a9fd5cefb31e9", url="https://pypi.org/packages/04/06/e5c80e2e0f979628d47345efba51f7ba386fe95963b11c594209085f5a9b/ftfy-5.9.tar.gz")
     version("5.8", sha256="51c7767f8c4b47d291fcef30b9625fb5341c06a31e6a3b627039c706c42f3720", url="https://pypi.org/packages/ff/e2/3b51c53dffb1e52d9210ebc01f1fb9f2f6eba9b3201fa971fd3946643c71/ftfy-5.8.tar.gz")
     version("4.4.3", sha256="3c0066db64a98436e751e56414f03f1cdea54f29364c0632c141c36cca6a5d94", url="https://pypi.org/packages/21/5d/9385540977b00df1f3a0c0f07b7e6c15b5e7a3109d7f6ae78a0a764dab22/ftfy-4.4.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-wcwidth@0.2.12:", when="@6.1.3:")
         depends_on("py-wcwidth@0.2.5:", when="@6.1:6.1.1")
+    # END DEPENDENCIES
 

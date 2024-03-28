@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyCurrent(PythonPackage):
-    version("0.3.1", sha256="207613dc19a6cc8e1a756f26e416733c8f82a70e4ae81103d22f483aae6492a8", url="https://pypi.org/packages/7f/c8/bccb923ccbcde64527baa29cfc4c6d1235970e4fd01afbd5dde1bf01b7b5/current-0.3.1.zip")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.3.1", sha256="5b1e2ddabd3de44be215b66abc840061787d9e82a6f1d332e3cf23786652f12a", url="https://pypi.org/packages/79/c3/40a7568d3ab53b70d40b5a169b425932b8c84dd6244d5ede629a329fa322/current-0.3.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

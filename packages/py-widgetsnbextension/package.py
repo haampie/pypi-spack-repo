@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWidgetsnbextension(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.0.10", sha256="d37c3724ec32d8c48400a435ecfa7d3e259995201fbefa37163124a9fcb393cc", url="https://pypi.org/packages/99/bc/82a8c3985209ca7c0a61b383c80e015fd92e74f8ba0ec1af98f9d6ca8dce/widgetsnbextension-4.0.10-py3-none-any.whl")
     version("4.0.9", sha256="91452ca8445beb805792f206e560c1769284267a30ceb1cec9f5bcc887d15175", url="https://pypi.org/packages/29/03/107d96077c4befed191f7ad1a12c7b52a8f9d2778a5836d59f9855c105f6/widgetsnbextension-4.0.9-py3-none-any.whl")
     version("4.0.8", sha256="2e37f0ce9da11651056280c7efe96f2db052fe8fc269508e3724f5cbd6c93018", url="https://pypi.org/packages/8e/d4/d31b12ac0b87e8cc9fdb6ea1eb6596de405eaaa2f25606aaa755d0eebbc0/widgetsnbextension-4.0.8-py3-none-any.whl")
@@ -31,8 +31,13 @@ class PyWidgetsnbextension(PythonPackage):
     version("3.4.1", sha256="bd2a92a68cb783b33abb47a23e0d1d9638c0d250a0d17633c262172d76641dd8", url="https://pypi.org/packages/3c/9a/9a690e18e335fc4470a2fa38163774940159375798ba6cce043d5cd94bae/widgetsnbextension-3.4.1-py2.py3-none-any.whl")
     version("3.4.0", sha256="7e8fc9688d4fb68c96537ce00604cf8d3bbf48bd348f2c4dfb91174c308b1e10", url="https://pypi.org/packages/83/03/ed063ec3ecf499d5491734822d8cadfc80f531a41ae1604277b25fbed795/widgetsnbextension-3.4.0-py2.py3-none-any.whl")
     version("3.3.0", sha256="af7412053b646a5372278bf772714543acdd6e0ad87f18171ba6a0c9009e3114", url="https://pypi.org/packages/b9/43/f6ff09448f7b961e102fd75b7e46a5d44b68b9746bb1ab5c4be64c3e236d/widgetsnbextension-3.3.0-py2.py3-none-any.whl")
-    version("1.2.6", sha256="c618cfb32978c9517caf0b4ef3aec312f8dd138577745e7b0d4abfcc7315ce51", url="https://pypi.org/packages/a2/0f/7044b0de3709d9564248dd124209348c4f3b1dae0143aa272f8a2abe04ce/widgetsnbextension-1.2.6.tar.gz")
+    version("1.2.6", sha256="d177773d363c643430c7b10c46d655e0eac2615aec653cd99d92330ea0d4505c", url="https://pypi.org/packages/42/20/24730ef6a6f52117562e893e829f546fdbff300fd50203fc2d4449c70635/widgetsnbextension-1.2.6-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-notebook@4.4.1:", when="@2.0.0-beta18:3.0.0-alpha2,3.0.0-alpha4:3")
+    # END DEPENDENCIES
 

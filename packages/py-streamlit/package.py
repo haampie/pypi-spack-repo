@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyStreamlit(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.20.0", sha256="41a544b8dc618ee65726da3ac76149c5b2bf3da7bde6d50625c4f7ec95e6c9e8", url="https://pypi.org/packages/ed/7c/04aafd3877ab37635b6dbbf72dc95264cd7679e9e9f08978437e7a597809/streamlit-1.20.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.9.6,3.9.8:", when="@1.12.1-rc1:")
         depends_on("py-altair@3.2:4", when="@1.20:1.22")
@@ -39,4 +43,5 @@ class PyStreamlit(PythonPackage):
         depends_on("py-watchdog", when="@0.74:1.24 platform=freebsd")
         depends_on("py-watchdog", when="@0.74:1.24 platform=cray")
         depends_on("py-watchdog", when="@0.16.2:0.17.0,0.26:0.73")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySphinxcontribApplehelp(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.0.8", sha256="cb61eb0ec1b61f349e5cc36b2028e9e7ca765be05e49641c97241274753067b4", url="https://pypi.org/packages/56/89/fea3fbf6785b388e6cb8a1beaf62f96e80b37311bdeed6e133388a732426/sphinxcontrib_applehelp-1.0.8-py3-none-any.whl")
     version("1.0.7", sha256="094c4d56209d1734e7d252f6e0b3ccc090bd52ee56807a5d9315b19c122ab15d", url="https://pypi.org/packages/c0/0c/261c0949083c0ac635853528bb0070c89e927841d4e533ba0b5563365c06/sphinxcontrib_applehelp-1.0.7-py3-none-any.whl")
     version("1.0.6", sha256="c0578efa23cab5a2f3aaa8af5691b952433f4fdfaac255befd3452448e7ea4a4", url="https://pypi.org/packages/b1/db/2c9a62f9d7c8abf45fa79d28a9d0c80e16cb42deac58a699cbd952efda1a/sphinxcontrib_applehelp-1.0.6-py3-none-any.whl")
@@ -16,8 +16,13 @@ class PySphinxcontribApplehelp(PythonPackage):
     version("1.0.2", sha256="806111e5e962be97c29ec4c1e7fe277bfd19e9652fb1a4392105b43e01af885a", url="https://pypi.org/packages/dc/47/86022665a9433d89a66f5911b558ddff69861766807ba685de2e324bd6ed/sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl")
     version("1.0.1", sha256="fb8dee85af95e5c30c91f10e7eb3c8967308518e0f7488a2828ef7bc191d0d5d", url="https://pypi.org/packages/13/9a/4428b3114d654cb1cd34d90d5e6fab938d5436f94a571155187ea1dd78b4/sphinxcontrib_applehelp-1.0.1-py2.py3-none-any.whl")
     version("1.0.0", sha256="0d7c946681539cc4999d5d16de91689221a79a5032a448267b11492d1d407dcf", url="https://pypi.org/packages/68/a4/6a6704005f3828106bd513bdf9d8f671e650efbc6e9f686a07c26a8a0c97/sphinxcontrib_applehelp-1.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.0.5:")
         depends_on("py-sphinx@5.0.0:", when="@1.0.5:1.0.7")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,10 +6,14 @@
 from spack.package import *
 
 class PyNumba(PythonPackage):
+    # BEGIN VERSIONS
     version("0.59.1", sha256="76f69132b96028d2774ed20415e8c528a34e3299a40581bae178f0994a2f370b", url="https://pypi.org/packages/bb/84/468592513867604800592b58d106f5e7e6ef61de226b59c1e9313917fbbb/numba-0.59.1.tar.gz")
     version("0.59.0", sha256="12b9b064a3e4ad00e2371fc5212ef0396c80f41caec9b5ec391c8b04b6eaf2a8", url="https://pypi.org/packages/a3/5e/ad8f7a2ca55b5903cea0aa6ec0bb0eee7faeec3ca1c4f871d99ff46aad36/numba-0.59.0.tar.gz")
+    version("0.59.0-rc1", sha256="c8aab21a34081f0c659890d9e49fda42e537d782f6a90c046280c6eae2069d78", url="https://pypi.org/packages/d6/14/2064202a50f34521a5c62ce5cc00e67e70e53681271f01afec14609f71a2/numba-0.59.0rc1.tar.gz")
     version("0.58.1", sha256="487ded0633efccd9ca3a46364b40006dbdaca0f95e99b8b83e778d1195ebcbaa", url="https://pypi.org/packages/13/2b/0f750d451fd961fd91d6bc86c512781fa46f9ef64813007e501482522ff9/numba-0.58.1.tar.gz")
     version("0.58.0", sha256="e5d5a318dc65a101ef846d7fd93f3cf2f7942494019e8342e51238b360739125", url="https://pypi.org/packages/c6/95/985695c7355606dc631f0ba75609e004aa5d36dc5d3d56fbb5a747a214df/numba-0.58.0.tar.gz")
+    version("0.58.0-rc2", sha256="8df88077285e6fc634a657f25b254697099635a4a5992592b8c5cf3da328ed26", url="https://pypi.org/packages/eb/8f/e7800efe89fcb636d16e1d0ac4583dda8d094c9a94a023e8da2b023e604a/numba-0.58.0rc2.tar.gz")
+    version("0.58.0-rc1", sha256="9f330643538b5f874250058b1a196a14a1dd68f7044f472d284c39664126d8fe", url="https://pypi.org/packages/a7/a2/de73d05da98c4bc5c304fb54d66b9fa545d654014a4f7c3f10bab85a71e5/numba-0.58.0rc1.tar.gz")
     version("0.57.1", sha256="33c0500170d213e66d90558ad6aca57d3e03e97bb11da82e6d87ab793648cb17", url="https://pypi.org/packages/f0/51/cc9d67b9357ac04e7c838dfa880acbfee0c15e02ca5a35b3e064a36131f7/numba-0.57.1.tar.gz")
     version("0.57.0", sha256="2af6d81067a5bdc13960c6d2519dbabbf4d5d597cf75d640c5aeaefd48c6420a", url="https://pypi.org/packages/7e/cf/aa289fc5d668c368b2c7655e6ac916dbee34df96dc6eae9ad70993b169cb/numba-0.57.0.tar.gz")
     version("0.56.4", sha256="32d9fef412c81483d7efe0ceb6cf4d3310fde8b624a9cecca00f790573ac96ee", url="https://pypi.org/packages/e2/1e/de917b683bb5f0b6078fb1397293eab84c4eaa825fbf94d73d6488eb354f/numba-0.56.4.tar.gz")
@@ -31,7 +34,13 @@ class PyNumba(PythonPackage):
     version("0.50.0", sha256="c9e5752821530694294db41ee19a4b00e5826c689821907f6c2ece9a02756b29", url="https://pypi.org/packages/34/c1/6cad072da9dba912aa67bcf16f952ddbf6e4598e48180c402057d062df19/numba-0.50.0.tar.gz")
     version("0.49.1", sha256="89e1ad8215918036b0ffc53501888d44ed44c1f2cb09a9e047d06af5cd7e7a5a", url="https://pypi.org/packages/a8/23/d56b70e79c18c34c1787bf2cda957f821790ec7ccd35a1962d5be102d572/numba-0.49.1.tar.gz")
     version("0.48.0", sha256="9d21bc77e67006b5723052840c88cc59248e079a907cc68f1a1a264e1eaba017", url="https://pypi.org/packages/c3/81/453926761dc00b02b22d1cd6935aaa8a736fca011d33615315bc7c132788/numba-0.48.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("tbb", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.59:")
         depends_on("python@:3.10", when="@0.55")
@@ -44,4 +53,5 @@ class PyNumba(PythonPackage):
         depends_on("py-numpy@1.22.0:1", when="@0.59:")
         depends_on("py-numpy@1.15.0:", when="@0.48:0.50")
         depends_on("py-setuptools", when="@0.47:0.50")
+    # END DEPENDENCIES
 

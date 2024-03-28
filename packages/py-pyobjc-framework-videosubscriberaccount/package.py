@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkVideosubscriberaccount(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="300c9f419821aab400ab9798bed9fc659984f19eb8577934e6faae0428b89096", url="https://pypi.org/packages/13/81/9b32994d20adbb9f3ce8ce5764bbcb4f9bc5d872e2d44ba7aac5c74f2ad3/pyobjc_framework_VideoSubscriberAccount-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="f32716070f849989e3ff052effb54f951b89a538208651426848d9d924ac1625", url="https://pypi.org/packages/f1/73/a595029be9e5b3dd79d2433cd276cf4651f3e9e4e8b73a52fb91f83e2354/pyobjc_framework_VideoSubscriberAccount-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="d7616cc2302372211a415e5afb83f3b52b9582b2f1381ba83b0cf955180ca2ba", url="https://pypi.org/packages/7b/1a/ee6e6ea9a41f3fd6014f44078bdb8c83857b5558e68098b999fb5b1415fe/pyobjc_framework_VideoSubscriberAccount-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkVideosubscriberaccount(PythonPackage):
     version("9.0", sha256="7cc1f988169e3fe3abcbdfe936d30f3454f680b47f6fee1271443740f0c3a30c", url="https://pypi.org/packages/99/fd/f4f82bd862dff73750e5f239470063ea95f621b02e7317039cbf9bcae2de/pyobjc_framework_VideoSubscriberAccount-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="d46a3fefdcc204faa41ab96a7c7778426594c8d02a2b32b2a7bf41aafb423c75", url="https://pypi.org/packages/bb/0c/9446080c42dedf104cc7286a04138abb2c9157da6cb52be75f2399ad9e70/pyobjc_framework_VideoSubscriberAccount-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="08b355939a2d595a0864cccc2693933159b3956deef3e1e24d3c55413ca297b9", url="https://pypi.org/packages/2f/fc/c62a7a490ffaade30aca092ab55629740bcb3aca0599a11eedd7ca5cdc19/pyobjc_framework_VideoSubscriberAccount-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkVideosubscriberaccount(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

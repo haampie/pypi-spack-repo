@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyprecice(PythonPackage):
+    # BEGIN VERSIONS
     version("2.5.0.2", sha256="44f54d13884343da0185b3b179d7e859238caaf3215b5f2342b2207a3f82d67c", url="https://pypi.org/packages/c2/85/868d99a904a7e08ebb2adba932e481ff0614d6d25d1ff0c848f3b777f4c2/pyprecice-2.5.0.2.tar.gz")
     version("2.5.0.1", sha256="a1e0273580fc9ace49c114a401498a6f58eece1265464fe2a2de24ee5889f64c", url="https://pypi.org/packages/4b/90/1d735a00b516f7e5262afe0f46a68a189f9ab920627ac7a53dd9f29317bf/pyprecice-2.5.0.1.tar.gz")
     version("2.4.0.0", sha256="f89c47a78991f0e558b3b9a38b13746777380d45cb5ca58c3ba8c4d0cb88274e", url="https://pypi.org/packages/f4/7a/5ef42fe516283ff271f94b10206b1d614e7c91d2d29db1af47270fb10cc9/pyprecice-2.4.0.0.tar.gz")
@@ -21,5 +21,10 @@ class PyPyprecice(PythonPackage):
     version("2.0.1.1", sha256="816783c11b2bb23784c19486b725d8a3bef822b906ed23e40caa98e9c3535951", url="https://pypi.org/packages/99/f8/523751a118a706d6cd18011c1048b9aa54e54b7d2db394752b4b6777032d/pyprecice-2.0.1.1.tar.gz")
     version("2.0.0.2", sha256="0291926761117e32c3f39fda8561753ba5a8ddb0c96fe4e96b398dba14bd7642", url="https://pypi.org/packages/c2/f1/053aa3c781f25a72c774e017a233426f6e328e8a7065a75d9f5d4467ea31/pyprecice-2.0.0.2.tar.gz")
     version("2.0.0.1", sha256="2102c1c258fc769754239ec0682a3ab5ea1092b63b81c876fcef6646f4c6cf3f", url="https://pypi.org/packages/a6/fb/66f78168394afa2adca62ecd9079a98e741fbf3c6a96845719641ea27912/pyprecice-2.0.0.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWatchdog(PythonPackage):
+    # BEGIN VERSIONS
     version("4.0.0", sha256="e3e7065cbdabe6183ab82199d7a4f6b3ba0a438c5a512a68559846ccb76a78ec", url="https://pypi.org/packages/cd/3c/43eeaa9ea17a2657d639aa3827beaa77042809410f86fb76f0d0ea6a2102/watchdog-4.0.0.tar.gz")
     version("3.0.0", sha256="4d98a320595da7a7c5a18fc48cb633c2e73cda78f93cac2ef42d42bf609a33f9", url="https://pypi.org/packages/95/a6/d6ef450393dac5734c63c40a131f66808d2e6f59f6165ab38c98fbe4e6ec/watchdog-3.0.0.tar.gz")
     version("2.3.1", sha256="d9f9ed26ed22a9d331820a8432c3680707ea8b54121ddcc9dc7d9f2ceeb36906", url="https://pypi.org/packages/a5/17/a31fc6b90ff861a27debd0650bfbca17e074fdc3e037f392872fad76c726/watchdog-2.3.1.tar.gz")
@@ -27,5 +27,12 @@ class PyWatchdog(PythonPackage):
     version("0.8.1", sha256="d6ec6be582b244834a888c8ccc2d451816184ab104b5454b5e5cd7649e8f671c", url="https://pypi.org/packages/96/c3/f48841b9399ba7c7331330e18d2c144ad20b29e5721e2073428d29979401/watchdog-0.8.1.tar.gz")
     version("0.8.0", sha256="a86bb2d8b94bb4bf76fcc2ff36f741c0e511ec24c4d3a1059b47d49e377d64f5", url="https://pypi.org/packages/8a/bf/1a6fbeb5dc69d55718e3f03d19a1f285eb3629200ebbc9d4ef69367a4355/watchdog-0.8.0.tar.gz")
     version("0.7.1", sha256="54ca64fdf0a2fb23cecba6349f9587e62fd31840ae22a71898a65adb8c6b52f9", url="https://pypi.org/packages/a6/ad/57748d1625d616a9f2adeef38f27f19679712b318d39cd40466bfb15d904/watchdog-0.7.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("watchmedo", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkExternalaccessory(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="e62af0029b2fd7e07c17a4abe52b20495dba05cba45d7e901acbd43ad19c4cc3", url="https://pypi.org/packages/54/fa/c9dcd5b9185eba20d6734e4f993368324122e7fd272e2a35061381f30dd5/pyobjc-framework-ExternalAccessory-10.2.tar.gz")
     version("10.1", sha256="1c206f2e27aedb0258a3cf425ed89cbea0657521829f061362b4fca586e033a8", url="https://pypi.org/packages/61/e5/d0c34dad237b132330fcb3a44db46bf22c647d148feb1f03130cfad4b471/pyobjc-framework-ExternalAccessory-10.1.tar.gz")
     version("10.0", sha256="4b00f07e6ec8e68974d89242789720bfecdc474c26bf0f2b2b2d648e6b6155cc", url="https://pypi.org/packages/91/53/4e210e92d8e1ccb69ad7e19eb285c4c5f90fbdd122d9db9670b0c28fcd67/pyobjc-framework-ExternalAccessory-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkExternalaccessory(PythonPackage):
     version("9.0", sha256="57ca98fdf9cf52033849a10ef52f094c9a5a17d80ccdbb49d4904269b55672c2", url="https://pypi.org/packages/8a/e3/cf748444052811f31aff1fa2d3b96480401adf125a5bfc4b2193b8d87f47/pyobjc-framework-ExternalAccessory-9.0.tar.gz")
     version("8.5.1", sha256="f81fdded05de0a00b41becc0fafb5b30d92da442fc72eb5737f043ab49dfe6da", url="https://pypi.org/packages/f6/35/9d8bf07c210d10ac548def257e168753797b2143849a45176d0a1c73b308/pyobjc-framework-ExternalAccessory-8.5.1.tar.gz")
     version("8.5", sha256="37e8d782fedcedf062140d1c3df6b5e145e1bbe692f3c8db6bc7d736bc6f2c17", url="https://pypi.org/packages/1d/12/e000b6d09132457f0dbaf15f16413866bac48875d5f98c54e6908a658a23/pyobjc-framework-ExternalAccessory-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkExternalaccessory(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

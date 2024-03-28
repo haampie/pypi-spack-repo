@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIsort(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.13.2", sha256="8ca5e72a8d85860d5a3fa69b8745237f2939afe12dbf656afbcb47fe72d947a6", url="https://pypi.org/packages/d1/b3/8def84f539e7d2289a02f0524b944b15d7c75dab7628bedf1c4f0992029c/isort-5.13.2-py3-none-any.whl")
     version("5.13.1", sha256="56a51732c25f94ca96f6721be206dd96a95f42950502eb26c1015d333bc6edb7", url="https://pypi.org/packages/22/15/3bd09f1fb8bfa9385ecbccbb9aa1c2cce992f4427b1aa852def9e7d81318/isort-5.13.1-py3-none-any.whl")
     version("5.13.0", sha256="15e0e937819b350bc256a7ae13bb25f4fe4f8871a0bc335b20c3627dba33f458", url="https://pypi.org/packages/ec/1d/4f685e2287dddcebc71624eadfe1fb0b550e39c2a2caa0b90dc47613c6de/isort-5.13.0-py3-none-any.whl")
@@ -21,10 +21,19 @@ class PyIsort(PythonPackage):
     version("5.9.3", sha256="e17d6e2b81095c9db0a03a8025a957f334d6ea30b26f9ec70805411e5c7c81f2", url="https://pypi.org/packages/c4/1d/f4e03047d6767e35c1efb13a280c1ef8b88807230f902da4cfc431a9f602/isort-5.9.3-py3-none-any.whl")
     version("5.9.1", sha256="8e2c107091cfec7286bc0f68a547d0ba4c094d460b732075b6fba674f1035c0c", url="https://pypi.org/packages/b3/3f/4e39910865572d2ff209e601d9c1d15180ef1b735538a0c7bc2d15b63ac6/isort-5.9.1-py3-none-any.whl")
     version("4.3.20", sha256="f57abacd059dc3bd666258d1efb0377510a89777fda3e3274e3c01f7c03ae22d", url="https://pypi.org/packages/1c/d9/bf5848b376e441ff358a14b954476423eeeb8c9b78c10074b7f53ce2918d/isort-4.3.20-py2.py3-none-any.whl")
-    version("4.2.15", sha256="79f46172d3a4e2e53e7016e663cc7a8b538bec525c36675fcfd2767df30b3983", url="https://pypi.org/packages/4d/d5/7c8657126a43bcd3b0173e880407f48be4ac91b4957b51303eab744824cf/isort-4.2.15.tar.gz")
+    version("4.2.15", sha256="cd5d3fc2c16006b567a17193edf4ed9830d9454cbeb5a42ac80b36ea00c23db4", url="https://pypi.org/packages/a9/83/ca1c7737c9a43a3e5bd2b9954add88700267801415310395d4191e5ff8e3/isort-4.2.15-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("colors", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-colorama@0.4.6:", when="@5.13:5.13.0,5.13.2:5+colors")
+        depends_on("py-colorama@0.4.3:", when="@5.2.1:5.12,6:+colors")
         depends_on("py-pip-api", when="@5.13:5.13.0")
         depends_on("py-pipreqs", when="@5.13:5.13.0")
         depends_on("py-requirementslib", when="@5.13:5.13.0")
+    # END DEPENDENCIES
 

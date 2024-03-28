@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyParticle(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.23.0", sha256="d3734768b3dbcc40b3d6457266f87204ce61f6fdad0c8be2c0f6ced74208a46d", url="https://pypi.org/packages/06/b0/69334d12d8680705cf35d7ca7b4e8e7805e3ba9ca3dd8b846d6a1db8dda5/particle-0.23.0-py3-none-any.whl")
     version("0.22.1", sha256="9fce7d549d59a2f477103f1046360b1de093d0378b1c3046b0234e0abee52fa7", url="https://pypi.org/packages/c0/ec/e97d3ba0fea0b7277187225d7ba03ae0f0d16848ab7f2d72d064beb240cc/particle-0.22.1-py3-none-any.whl")
     version("0.22.0", sha256="b2bb8b4579372c5a8f5340dd98b72a1f95dfa3a41d41c3cd98ec2549370d474a", url="https://pypi.org/packages/c1/1b/caaa7616203082858e4bee9e1c8612896d506e162b59c2c57a727b88ad44/particle-0.22.0-py3-none-any.whl")
@@ -22,11 +22,16 @@ class PyParticle(PythonPackage):
     version("0.15.1", sha256="4029e9d2d4517d61325140687bff1a7f887e33c79994b12b2ad04f781a26f5eb", url="https://pypi.org/packages/3b/5a/721b23aee3573703b358246448a07c463019c6b8cc9391c0d6941d2713d5/particle-0.15.1-py2.py3-none-any.whl")
     version("0.14.1", sha256="d12ffd3cfcb0b662046013f4ac67dfb719c297c6c8c6fc25a9c6672a23faf674", url="https://pypi.org/packages/ff/4b/645684fd2511f685b2116fb1df98175532ed27b47b89d28a3bd3bc9c5585/particle-0.14.1-py2.py3-none-any.whl")
     version("0.11.0", sha256="23472cb842c6509dd1b17920b069081bb455449a1d2c074b10c172fe6c3363b4", url="https://pypi.org/packages/d9/a4/893f995c981c107c76df952b4e5eaf61e9d7f24d38088978e0131174db81/particle-0.11.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@19.2:", when="@0.10:")
         depends_on("py-deprecated", when="@0.16:0.20.0,0.22:0.23.0")
         depends_on("py-hepunits@2:", when="@0.13:")
         depends_on("py-hepunits@1.2:", when="@0.10:0.12")
         depends_on("py-importlib-resources@2:", when="@0.16: ^python@:3.8")
+    # END DEPENDENCIES
 

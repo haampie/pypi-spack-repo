@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBokeh(PythonPackage):
+    # BEGIN VERSIONS
     version("3.4.0", sha256="d8d9ba026b734317740f90a8a58502d63c76b96c58752fc421ad4aa04df1fbcd", url="https://pypi.org/packages/f9/24/d8949753839db67197a33014b854cbed2126f8c871e03723e7abddcca12a/bokeh-3.4.0-py3-none-any.whl")
     version("3.3.4", sha256="ad7b6f89d0a7c2be01eff1db0ca24e2755ac41de14539db919a62e791809c309", url="https://pypi.org/packages/39/ba/aefd7aacc9e086e2c7f3bb42e99cb8e2a8f24dcb4bf78519ef25a9102988/bokeh-3.3.4-py3-none-any.whl")
     version("3.3.3", sha256="8f4a95f80e6e03a59eb0ae3c1bce67db3c888a7a5c4f287d4ef9f817849a8b2a", url="https://pypi.org/packages/74/42/1530abfe144a3d7db290de6c9989ecd5c01239fe26d3b27ccb0aa631cb91/bokeh-3.3.3-py3-none-any.whl")
@@ -30,7 +30,11 @@ class PyBokeh(PythonPackage):
     version("2.3.3", sha256="a5fdcc181835561447fcc5a371300973fce4114692d5853addec284d1cdeb677", url="https://pypi.org/packages/40/85/9c8c47dc99671590e21d0cecf5cf1208db0ddb525093b2fecdbb233e3645/bokeh-2.3.3.tar.gz")
     version("1.3.4", sha256="e2d97bed5b199a10686486001fed5c854e4c04ebe28859923f27c52b93904754", url="https://pypi.org/packages/89/25/a07183dd96ca22dafe429254985cbf8241ccd35730c5568d6502b3bc6bb7/bokeh-1.3.4.tar.gz")
     version("0.12.2", sha256="18fd6a1a4f37c8ad2f8f14d3368eefc0ae116ae0621b2bfd7d00cc9db772461c", url="https://pypi.org/packages/7b/81/6422f47023358a749cf7d5f7a748410cc933af3c9726383189b6c84254e3/bokeh-0.12.2.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.10:", when="@3.5:")
         depends_on("python@3.9:", when="@3.2:3.4")
@@ -47,4 +51,5 @@ class PyBokeh(PythonPackage):
         depends_on("py-tornado@5.1:", when="@2.4:3.3,3.4.0.dev:3.4.0.dev6")
         depends_on("py-typing-extensions@3.10:", when="@2.4:3.0.0")
         depends_on("py-xyzservices@2021.9.1:", when="@3:")
+    # END DEPENDENCIES
 

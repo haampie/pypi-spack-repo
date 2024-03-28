@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCoreml(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="a1d7743a91160d096ccd3f5f5d824dafdd6b99d0c4342e8c18852333c9b3318e", url="https://pypi.org/packages/69/99/42c8a299a5b936eadac2c80429991194720514805950c8a13161d4d9df0b/pyobjc-framework-CoreML-10.2.tar.gz")
     version("10.1", sha256="4cda220d5ad5b677a95d4d29256b076b411b692b64219c2dcb81c702fc34d57d", url="https://pypi.org/packages/16/36/1c9e980b141062c046908fb7ff74999aff9497a26eb355332ce62d980873/pyobjc-framework-CoreML-10.1.tar.gz")
     version("10.0", sha256="11b70aaa34d45b2a325231ddc571686b8e5c6404b74eb647c84c0cb2cf51052a", url="https://pypi.org/packages/fe/d2/9a4eb76cbbe677f6be42cef386eb7eb49a2529218f5acbf1a1275fe9e07b/pyobjc-framework-CoreML-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkCoreml(PythonPackage):
     version("9.0", sha256="db89c9ee5e32b80be481e7b48a0fd1dccec7184ace62a1eeaaceb621fadc11de", url="https://pypi.org/packages/9a/c4/b6e1b6203915965dfd7a16d3631b92f92fd09257c256d37b2a3331cdb5b2/pyobjc-framework-CoreML-9.0.tar.gz")
     version("8.5.1", sha256="8840c3cb2be40d7d5ab63b418919afbfc73a4a01661814e9f967e9e072b797dd", url="https://pypi.org/packages/5c/61/5df3c3d26da7e15b832f2bf1dc38c64c7f8163df740835066e00e7ca3608/pyobjc-framework-CoreML-8.5.1.tar.gz")
     version("8.5", sha256="9da426d5df78cc232a4ed5d8e5d2b36d2dfd8d5c3cc1cdd92159afa4901f4136", url="https://pypi.org/packages/b6/ec/24aeb037c655d9e5cd5147bea61e7d9ea05d9c5793ca2bfe5fe8685a7b38/pyobjc-framework-CoreML-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkCoreml(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

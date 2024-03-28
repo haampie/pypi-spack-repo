@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.7.2", sha256="4f7315d2f6b4bcf2e3e7cb6e46772eba760ae459cd1f59d29eb57b0a01bd7409", url="https://pypi.org/packages/c9/fb/108ecd1fe961941959ad0ee4e12ee7b8b1477247f30b1fdfd83ceaf017f0/jupyter_core-5.7.2-py3-none-any.whl")
     version("5.7.1", sha256="c65c82126453a723a2804aa52409930434598fd9d35091d63dfb919d2b765bb7", url="https://pypi.org/packages/86/a1/354cade6907f2fbbd32d89872ec64b62406028e7645ac13acfdb5732829e/jupyter_core-5.7.1-py3-none-any.whl")
     version("5.7.0", sha256="16eea462f7dad23ba9f86542bdf17f830804e2028eb48d609b6134d91681e983", url="https://pypi.org/packages/4f/64/c15b7ac8915f7cae6c64718a6ffbb5e75fd398cda05d0a8aca2f570f0ed5/jupyter_core-5.7.0-py3-none-any.whl")
@@ -29,18 +29,23 @@ class PyJupyterCore(PythonPackage):
     version("4.2.0", sha256="0a168fb999e27f909900893bf14a7b7dc16ee7445bd8d420f1c9e55de19e0853", url="https://pypi.org/packages/ee/79/fa82a10cdf484b0e3153eeaa8c3ddad181e78d0d46eaa2236edee61305c4/jupyter_core-4.2.0-py2.py3-none-any.whl")
     version("4.1.1", sha256="33c9d6f61d271e8a8197cd5a2b1a1923bfe28d50eb947c1c30d51fe4f42e852d", url="https://pypi.org/packages/77/f0/fe465528064523f2d519b99a0b1591636a19011ab6dd4b02f03a2c6ad9a3/jupyter_core-4.1.1-py2.py3-none-any.whl")
     version("4.1.0", sha256="53c41ef5b4e62d452239aca4f4ce0147fac4033cde02a8b9a12ffded11eacad7", url="https://pypi.org/packages/87/cf/43a9c0d8ea808db7a4edd9157f8ba612e80c14be4ec5535ed2d300300628/jupyter_core-4.1.0-py2.py3-none-any.whl")
-    version("4.0.6", sha256="4e69b7a5ba2113d5467e2339945643562507d23f639bf9b1f9d15fc3ada8b77c", url="https://pypi.org/packages/f4/c0/18f17bac9e6724ffa9223e47b4a40cd9400f90575a5b1826e7d56b539734/jupyter_core-4.0.6.zip")
-    version("4.0.5", sha256="95fe760d913ffe272c4077fe198945ac6f4257b3b50979e96c4b7b309da433f0", url="https://pypi.org/packages/0a/d5/8534755aaa117aea0c10b42984e327374c716c33c72473c9e43c3ace099b/jupyter_core-4.0.5.zip")
-    version("4.0.4", sha256="566918882629ca9f8dd8a8ff6a9efb2af7ca41c41b65e53efae3dee279b55790", url="https://pypi.org/packages/7b/7b/0efc0bb1239fd4b4fbb1bc49f8c189fd490c45554fda1df809c5cf8d7e4c/jupyter_core-4.0.4.zip")
-    version("4.0.3", sha256="eaad6b8d323040c9434c976c2b1b6040006e9fbb76b115c3e208ed7ec4a18cce", url="https://pypi.org/packages/01/9b/364ea6577828283b8e094ba790b703fd58c3d1761eb65ce62de5e3268eb2/jupyter_core-4.0.3.zip")
-    version("4.0.2", sha256="f0887b897ffdc269315fadcba50743d5350d9a01eeb61a09c2e84afbe2c1a951", url="https://pypi.org/packages/78/b1/90573dfd410aa40fbec7453b85243787abc66fae643485abdd069f03af88/jupyter_core-4.0.2.zip")
-    version("4.0.1", sha256="7c165f7de7a063596f8be1bcfc86e9ba6897e38baf24e8510514690963600122", url="https://pypi.org/packages/75/62/f1b1b9930bb92060e762e8bbe378b7c65337e60b1d31c092b6bad0bdf765/jupyter_core-4.0.1.tar.gz")
-    version("4.0.0", sha256="9025208cdfc40718c7e3ab62b5e17aacf68e3fc66e34ff21fe032d553620122a", url="https://pypi.org/packages/49/a2/043f306100a13430fd293c4414979243d38e9628c13764c5f0210d79d82a/jupyter_core-4.0.0.tar.gz")
+    version("4.0.6", sha256="985f2de832fef15a159b8d6ff14e4a90b7a10cb1f9beb102da710fd4cfcfd630", url="https://pypi.org/packages/37/45/182ca59bf976794b910c03138692e2f73785a6e475ea17553f9988332595/jupyter_core-4.0.6-py2.py3-none-any.whl")
+    version("4.0.5", sha256="dac2033109158e90886e9a907d7ed5504aace96140f9ac798229cc375f3bbd17", url="https://pypi.org/packages/c8/fd/ce7a1dc81cbae811ca75bb3bcd91a7268401dee65f0cf86524b39205a332/jupyter_core-4.0.5-py2.py3-none-any.whl")
+    version("4.0.4", sha256="672eabd762be76332f367b694462c3f49376fc2b7f47471daa21bb93b66002f7", url="https://pypi.org/packages/fa/35/a080617e7b7aaacbe859d0a93532b22f13ef0ab91b6be32079f89b4cf282/jupyter_core-4.0.4-py2.py3-none-any.whl")
+    version("4.0.3", sha256="53c9b14e283625a24f6dc4f3cd38d5424a1593316f37432984f87c53822a260d", url="https://pypi.org/packages/e2/95/794da9ef8200e9302e747d5cec94eb0ffe30ecbe9dc3563d9ac1cffeaee9/jupyter_core-4.0.3-py2.py3-none-any.whl")
+    version("4.0.2", sha256="881ef7e96d28a1fa1ebd72d27edb8d6324b279313de3e2729ebe1f2a4a0bc6b4", url="https://pypi.org/packages/86/7a/a6ab40c0b6ce81cc16be090082eeb0a2f7e5b0d83d309375f0e8405443cd/jupyter_core-4.0.2-py2.py3-none-any.whl")
+    version("4.0.1", sha256="e3d1f13da845e88ed0fbc69da11d4090a762a95f43fb23cfc38e1a88c737dd2a", url="https://pypi.org/packages/1c/9a/fa1c65053b88bfded751e9ee9dc191e6a5112523fcdf6e6968681149a015/jupyter_core-4.0.1-py2.py3-none-any.whl")
+    version("4.0.0", sha256="e9a60713cde81db888a5714f4f208be1b4e013c8adeb94e4f931df7a5914211a", url="https://pypi.org/packages/1f/6d/696c26f03bf64b402bd9f22884d6c5f59c87394f30a80bd1344be22128fb/jupyter_core-4.0.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-platformdirs@2.5:", when="@5.1:")
         depends_on("py-pywin32@300:", when="@5.3: platform=windows")
         depends_on("py-pywin32", when="@4.6:5.2 platform=windows")
         depends_on("py-traitlets@5.3:5.3.0.0,5.4:", when="@5.1:")
         depends_on("py-traitlets", when="@4.1:5.0")
+    # END DEPENDENCIES
 

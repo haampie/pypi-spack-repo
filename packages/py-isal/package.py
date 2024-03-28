@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIsal(PythonPackage):
+    # BEGIN VERSIONS
     version("1.6.1", sha256="7b64b75d260b544beea3f59cb25a6f520c04768818ef4ac316ee9a1f2ebf18f5", url="https://pypi.org/packages/50/a8/25887c43941b2a6ca85529e242fd8e57906e6047fde51ee36510f9d525fa/isal-1.6.1.tar.gz")
     version("1.6.0", sha256="d9bd3697177afdf65286c6804ef4ad2735dcf0f000f97a182a2333a20667ee27", url="https://pypi.org/packages/8c/e9/31ba563f7a7c2fc56271f4847151a4d136fcc712d17c3e0b2f61f10376ce/isal-1.6.0.tar.gz")
     version("1.5.3", sha256="01d9b76db3535374d720a06f5d66031f74e609698f0382fdd6ab3a0351210b72", url="https://pypi.org/packages/08/07/228b14e3a58f5d1294a54120f82efeadf1d5ebf39af43d93ba71f1e7e74c/isal-1.5.3.tar.gz")
@@ -20,5 +20,10 @@ class PyIsal(PythonPackage):
     version("1.2.0", sha256="7e968efcb628a69ea990894d2b6cd8cc8afc4e86fb648001ae0ba6dd2e79042a", url="https://pypi.org/packages/7b/94/123cd2aa9632824ccd5d2bb45ec391de78c34cf9b1aaf2ebc045881802a3/isal-1.2.0.tar.gz")
     version("1.1.0", sha256="1364f4e3255a57d51c01422ab3ae785a43c076d516ebf49f6a25adecf8232105", url="https://pypi.org/packages/72/21/885d092e829e454700eb8acd1b086acb35d9c2756882afc0d22f4cec2ae5/isal-1.1.0.tar.gz")
     version("1.0.0", sha256="a30369de6852109eef8ca1bdd46d7e4b5c4517846a25acfc707cbb19db66ac80", url="https://pypi.org/packages/4f/0a/e500ff6f277d93649bf8d24d9043b0b9c080fe26c50bae7dcd39ba1ba7e1/isal-1.0.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

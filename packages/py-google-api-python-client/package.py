@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleApiPythonClient(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.122.0", sha256="a5953e60394b77b98bcc7ff7c4971ed784b3b693e9a569c176eaccb1549330f2", url="https://pypi.org/packages/90/82/eeffa2e210482ac66ecfca2f08e89184111a29ea5865970b22ff7e0f0113/google_api_python_client-2.122.0-py2.py3-none-any.whl")
     version("2.121.0", sha256="bb4da677150dd16c45818620baca8a63208c6f4180a0691ad1c1708b384c10be", url="https://pypi.org/packages/c6/5a/8285f25d8bfe1586cf543e816e4c371e8c01826af49ef8a0d098b2cfa32c/google_api_python_client-2.121.0-py2.py3-none-any.whl")
     version("2.120.0", sha256="e2cdf4497bfc758fb44a4b487920cc1ca0571c2428187697a8e43e3b9feba1c9", url="https://pypi.org/packages/9a/3d/1709ca24b093d37aa3233b78161a6d96d190922408041a6fea9df9c78646/google_api_python_client-2.120.0-py2.py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyGoogleApiPythonClient(PythonPackage):
     version("2.113.0", sha256="25659d488df6c8a69615b2a510af0e63b4c47ab2cb87d71c1e13b28715906e27", url="https://pypi.org/packages/39/fe/24b02d442dfef2456f46e0dd9e5b833f2dbfb6a8393602a600153ac3781a/google_api_python_client-2.113.0-py2.py3-none-any.whl")
     version("2.80.0", sha256="b9cd2550c2cdfeb78c3150d8c52208841082dabe597063a116476937170907ab", url="https://pypi.org/packages/f8/63/fea1330ab4966d37a64bfd23378f8c32722ed7b91178cab4ab3601f4fd5e/google_api_python_client-2.80.0-py2.py3-none-any.whl")
     version("1.7.10", sha256="60f2ac2f27997d9af10ae126d9937b7d8c1fd061d12668ccaf94b4347ee85021", url="https://pypi.org/packages/ab/4b/66b7591b83864caef0d960aefd05a110bcf9cb18cc6dd957414e34861530/google_api_python_client-1.7.10-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-google-api-core@1.31.5:1,2.3.1:", when="@2.40:")
         depends_on("py-google-auth@1.19:", when="@2.52:")
@@ -31,4 +35,5 @@ class PyGoogleApiPythonClient(PythonPackage):
         depends_on("py-six@1.6.1:", when="@1.5.4:1.12.0")
         depends_on("py-uritemplate@3.0.1:", when="@2.34:")
         depends_on("py-uritemplate@3", when="@1.5.4:2.25")
+    # END DEPENDENCIES
 

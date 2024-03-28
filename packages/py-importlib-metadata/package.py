@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyImportlibMetadata(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.1.0", sha256="30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570", url="https://pypi.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl")
     version("7.0.2", sha256="f4bc4c0c070c490abf4ce96d715f68e95923320370efb66143df00199bb6c100", url="https://pypi.org/packages/db/62/6879ab53ad4997b627fc67241a41eabf7163299c59580c6ca4aa5ae6b677/importlib_metadata-7.0.2-py3-none-any.whl")
     version("7.0.1", sha256="4805911c3a4ec7c3966410053e9ec6a1fecd629117df5adee56dfc9432a1081e", url="https://pypi.org/packages/c0/8b/d8427f023c081a8303e6ac7209c16e6878f2765d5b59667f3903fbcfd365/importlib_metadata-7.0.1-py3-none-any.whl")
@@ -43,7 +43,12 @@ class PyImportlibMetadata(PythonPackage):
     version("0.23", sha256="d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af", url="https://pypi.org/packages/f6/d2/40b3fa882147719744e6aa50ac39cf7a22a913cbcba86a0371176c425a3b/importlib_metadata-0.23-py2.py3-none-any.whl")
     version("0.19", sha256="80d2de76188eabfbfcf27e6a37342c2827801e59c4cc14b0371c56fed43820e3", url="https://pypi.org/packages/ad/aa/25fcbded2ab4ed4ff3071d1e000cd4f8f9c65653d2d7157dd105a8e81d42/importlib_metadata-0.19-py2.py3-none-any.whl")
     version("0.18", sha256="6dfd58dfe281e8d240937776065dd3624ad5469c835248219bd16cf2e12dbeb7", url="https://pypi.org/packages/bd/23/dce4879ec58acf3959580bfe769926ed8198727250c5e395e6785c764a02/importlib_metadata-0.18-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-zipp@0.5:", when="@0.11:")
+    # END DEPENDENCIES
 

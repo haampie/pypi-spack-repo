@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkScreensaver(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="00c6a312467abb516fd2f19e3166c4609eed939edc0f2c888ccd8c9f0fdd30f1", url="https://pypi.org/packages/21/95/ceab6db3dd4ffd801f927e071be8cc62215de566ed45f59707b80e096aab/pyobjc-framework-ScreenSaver-10.2.tar.gz")
     version("10.1", sha256="d1b890c7cae9e5c43582fe834aebcb6a1ecf52467a8ed7a28ba9d873bbf582d5", url="https://pypi.org/packages/57/f6/809407db2ccd7216a4d8da1015f37d9f5d74d26cffb8f4b20f4563e4c7f9/pyobjc-framework-ScreenSaver-10.1.tar.gz")
     version("10.0", sha256="84b658c81469305f29aaad61ac29aaad4db27ef9e9b8a13568ddb3a6bfbb902d", url="https://pypi.org/packages/a9/49/d51c483177837692faa8f83a64ef8e90cf46938592c60f99c4265f191c49/pyobjc-framework-ScreenSaver-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkScreensaver(PythonPackage):
     version("9.0", sha256="f171eb308d7dfeaf0ef3cf10bc7d50c391cc5a64b5341cc1ca38cb0fe63f0185", url="https://pypi.org/packages/cf/dd/17f008a8ab9e1bd82787c4d1300c6239347e552d447d2dcfba6649363434/pyobjc-framework-ScreenSaver-9.0.tar.gz")
     version("8.5.1", sha256="8f8978371536e0b8f068d8158562ef2a0cb07d94a652bf53172f5e555f9fd489", url="https://pypi.org/packages/03/2b/5c631307d9f20b7caa52d366757f0b0358fad5a8788c802457d6b5b328ae/pyobjc-framework-ScreenSaver-8.5.1.tar.gz")
     version("8.5", sha256="ee52cb4d7081faba606368c294baccbccb8e616bd2d2510b85101c8333032a1b", url="https://pypi.org/packages/9c/cc/9c53010d376267b895d767018e72bf95e1f420968b85f913470c2cb1709a/pyobjc-framework-ScreenSaver-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkScreensaver(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

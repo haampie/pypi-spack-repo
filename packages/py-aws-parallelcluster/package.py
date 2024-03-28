@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAwsParallelcluster(PythonPackage):
+    # BEGIN VERSIONS
     version("2.11.9", sha256="261754a1ef4e0cfbd47cc8fc466b7b252ff62148d6baf903a66276ce184846e2", url="https://pypi.org/packages/8b/cf/154355f046c01fd88d71c972d03c1ef4aa5cf3f4a0ac010563c08a66f648/aws_parallelcluster-2.11.9-py3-none-any.whl")
     version("2.11.8", sha256="ef8d5aac1abb8b6236673c55d2293523cee142e97a99e3af20481bdd4c276ebc", url="https://pypi.org/packages/05/47/9a04812dadbd0af188f1735ea90319c4f883ea08caf09cd19716ed779abd/aws_parallelcluster-2.11.8-py3-none-any.whl")
     version("2.11.7", sha256="3bcb43479b0495e7d93cc0eea68f071ec9ec8740298dba960643b98b32bf6e1c", url="https://pypi.org/packages/00/cf/f647f35cc5cf6a076812b8c90a0aeb9f9e824e4f9c7a6733c3ccd48463bf/aws_parallelcluster-2.11.7-py3-none-any.whl")
@@ -31,7 +31,11 @@ class PyAwsParallelcluster(PythonPackage):
     version("2.6.0", sha256="aaed6962cf5027206834ac24b3d312da91e0f96ae8607f555e12cb124b869f0c", url="https://pypi.org/packages/a1/2e/b9648aedb476fca241accec1051393510685409fc325555c759a9ba9eea9/aws-parallelcluster-2.6.0.tar.gz")
     version("2.5.1", sha256="4fd6e14583f8cf81f9e4aa1d6188e3708d3d14e6ae252de0a94caaf58be76303", url="https://pypi.org/packages/d0/c5/9b1c3ac4861fa239c884eeb688fb6ca097e5a2be124b3d45dfbbd78111e4/aws-parallelcluster-2.5.1.tar.gz")
     version("2.5.0", sha256="3b0209342ea0d9d8cc95505456103ad87c2d4e35771aa838765918194efd0ad3", url="https://pypi.org/packages/d5/f9/c6bd79c75ad4bb92461af81111aad3b8f14aa1e9463d76f8e806d81fafd5/aws-parallelcluster-2.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-boto3@1.16.14:", when="@2.10.4:")
         depends_on("py-future@0.16:0.18.2", when="@2.10.4:2.10")
@@ -42,4 +46,5 @@ class PyAwsParallelcluster(PythonPackage):
         depends_on("py-tabulate@0.8.8:0.8", when="@2.11.8:2,3.4:")
         depends_on("py-tabulate@0.8.2:0.8.9", when="@2.11:2.11.7")
         depends_on("py-tabulate@0.8.2:0.8.7", when="@2.10.4:2.10")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleAuthOauthlib(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.2.0", sha256="297c1ce4cb13a99b5834c74a1fe03252e1e499716718b190f56bcb9c4abc4faf", url="https://pypi.org/packages/71/bf/9e125754d1adb3bc4bd206c4e5df756513b1d23675ac06caa471278d1f3f/google_auth_oauthlib-1.2.0-py2.py3-none-any.whl")
     version("1.1.0", sha256="089c6e587d36f4803ac7e0720c045c6a8b1fd1790088b8424975b90d0ee61c12", url="https://pypi.org/packages/ce/33/a907b4b67245647746dde8d61e1643ef5d210c88e090d491efd89eff9f95/google_auth_oauthlib-1.1.0-py2.py3-none-any.whl")
     version("1.0.0", sha256="95880ca704928c300f48194d1770cf5b1462835b6e49db61445a520f793fd5fb", url="https://pypi.org/packages/4a/07/8d9a8186e6768b55dfffeb57c719bc03770cf8a970a074616ae6f9e26a57/google_auth_oauthlib-1.0.0-py2.py3-none-any.whl")
@@ -24,7 +24,11 @@ class PyGoogleAuthOauthlib(PythonPackage):
     version("0.4.3", sha256="dabffbf594a6be2fd6d054060846d1201569252efb10dfb749b504a7591f8af0", url="https://pypi.org/packages/cb/f5/6e656a95ca0b432c5f090239962f618c3b45447037d21e1c049123521f53/google_auth_oauthlib-0.4.3-py2.py3-none-any.whl")
     version("0.4.2", sha256="d4d98c831ea21d574699978827490a41b94f05d565c617fe1b420e88f1fc8d8d", url="https://pypi.org/packages/81/67/e2c34bb0628984c7ce71cce6ba6964cb29c418873847fc285f826e032e6e/google_auth_oauthlib-0.4.2-py2.py3-none-any.whl")
     version("0.4.1", sha256="a92a0f6f41a0fb6138454fbc02674e64f89d82a244ea32f98471733c8ef0e0e1", url="https://pypi.org/packages/7b/b8/88def36e74bee9fce511c9519571f4e485e890093ab7442284f4ffaef60b/google_auth_oauthlib-0.4.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-google-auth@2.15:", when="@0.8:")
         depends_on("py-google-auth@2.14:", when="@0.7.1:0.7")
@@ -32,4 +36,5 @@ class PyGoogleAuthOauthlib(PythonPackage):
         depends_on("py-google-auth@1:", when="@0.4.3:0.6")
         depends_on("py-google-auth", when="@:0.4.2")
         depends_on("py-requests-oauthlib@0.7:")
+    # END DEPENDENCIES
 

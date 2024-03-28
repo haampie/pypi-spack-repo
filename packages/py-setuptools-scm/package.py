@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySetuptoolsScm(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("8.0.4", sha256="b47844cd2a84b83b3187a5782c71128c28b4c94cad8bfb871da2784a5cb54c4f", url="https://pypi.org/packages/0e/a3/b9a8b0adfe672bf0df5901707aa929d30a97ee390ba651910186776746d2/setuptools_scm-8.0.4-py3-none-any.whl")
     version("8.0.3", sha256="813822234453438a13c78d05c8af29918fbc06f88efb33d38f065340bbb48c39", url="https://pypi.org/packages/ca/04/4ea91c627355ae6d976bf7f1fc2815372a96b1b87bf290c8d726d10a08a1/setuptools_scm-8.0.3-py3-none-any.whl")
     version("8.0.2", sha256="b737bb0f195ae024759188e7080fe15fe6d9353e1b3f6e40b41e4d298f76c147", url="https://pypi.org/packages/cd/ce/7d8579e32a6cf28bf4a71fb0ea49344cf5508bd5edd8ebd19ccfcb5d8640/setuptools_scm-8.0.2-py3-none-any.whl")
@@ -32,14 +32,24 @@ class PySetuptoolsScm(PythonPackage):
     version("3.3.3", sha256="1f11cb2eea431346d46589c2dafcafe2e7dc1c7b2c70bc4c3752d2048ad5c148", url="https://pypi.org/packages/1d/70/97966deebaeeda0b81d3cd63ba9f8ec929b838871ed17476de9d8159db3e/setuptools_scm-3.3.3-py2.py3-none-any.whl")
     version("3.1.0", sha256="cc6953d224a22f10e933fa2f55c95979317c55259016adcf93310ba2997febfa", url="https://pypi.org/packages/b2/d5/970632917c53a1fb2751f7da8b288d26546f2b113e4321674051fc9f81e4/setuptools_scm-3.1.0-py2.py3-none-any.whl")
     version("1.15.6", sha256="dac89650c7909d238965e163e10b736cbd3a72f28e2dd5c0fea6cf5e49e8562e", url="https://pypi.org/packages/54/66/00a0e93b02409454af83cfbd782887b5b131dd915af23d53c6651d7cc039/setuptools_scm-1.15.6-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("toml", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-importlib-metadata@4.6:", when="@8:8.0.2 ^python@:3.9")
         depends_on("py-packaging@20:", when="@6.3:")
+        depends_on("py-setuptools@42:", when="@6.3:7+toml")
         depends_on("py-setuptools@45:", when="@6:6.2")
         depends_on("py-setuptools", when="@4:5,6.3:")
+        depends_on("py-toml", when="@4:6.0,6.1.0.dev:6.1.0+toml")
         depends_on("py-tomli@1:", when="@7.1: ^python@:3.10")
+        depends_on("py-tomli@1:", when="@6.3+toml")
         depends_on("py-tomli@1:", when="@6.2,6.3.1:7.0")
         depends_on("py-typing-extensions", when="@8:8.0.3 ^python@:3.10")
         depends_on("py-typing-extensions", when="@7,8.0.4:")
+    # END DEPENDENCIES
 

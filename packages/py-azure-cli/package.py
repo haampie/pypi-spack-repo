@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyAzureCli(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.9.1", sha256="82ddf1cc3050f2f477053fc1cb43aa2647e14483a4355f237f6bd5c81b01592a", url="https://pypi.org/packages/3a/c6/61e1b816a87f6b8cd766d5f4be53c15e43430cece1e1be1e23ea4a6e80ff/azure_cli-2.9.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-antlr4-python3-runtime@4.7.2:4.7", when="@2.4:2.36")
         depends_on("py-azure-batch@9", when="@2.4:2.16")
@@ -97,4 +101,5 @@ class PyAzureCli(PythonPackage):
         depends_on("py-vsts-cd-manager@1.0.2:", when="@2.0.68:2.25")
         depends_on("py-websocket-client@0.56", when="@2.0.68:2.34")
         depends_on("py-xmltodict@0.12:", when="@2.0.68:")
+    # END DEPENDENCIES
 

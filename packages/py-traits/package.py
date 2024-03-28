@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTraits(PythonPackage):
+    # BEGIN VERSIONS
     version("6.4.3", sha256="a9bbfd9e0c08b7de07e86ef64e69cb96a29c2105a43bf832cd8b162fa1e22f44", url="https://pypi.org/packages/b1/08/ab5a95c4e3f7ebff53c4b58cdeee5ad161a8a285e02620928ff566185a48/traits-6.4.3.tar.gz")
     version("6.4.2", sha256="5be7cc5fb7a99cba7e9014786373e3ad2f75efb445eeced094654bbaf3b0fa82", url="https://pypi.org/packages/73/29/3c105ce8464a9993c1437a4922f3f9b48572cd49a49ff5180c4daf447426/traits-6.4.2.tar.gz")
     version("6.4.1", sha256="78bb2ccafd60aff606515aac46de64668a0a81cb5c54c650b9877a841aa9e812", url="https://pypi.org/packages/ca/72/8d08717884ac41811c4cdbd5bce3101a3df64e0a1890aab7b1a1311c1f50/traits-6.4.1.tar.gz")
@@ -21,5 +21,10 @@ class PyTraits(PythonPackage):
     version("5.2.0", sha256="8194696df87ec93815204f29e119dd88ce9a0def2801ae9020431442c1dde1ac", url="https://pypi.org/packages/4b/2d/b9add8861abe5c85b771005a0dc34c2f91aaf8ee97d38f79b9457b97b434/traits-5.2.0.tar.gz")
     version("5.1.2", sha256="7a78594f84dd81486cd876fdfe3648583836377cb9fb02973f307dc06fc52728", url="https://pypi.org/packages/95/d5/aa0e6622e9183008cb9a3e91b147685035991a6faf7e03450029786b6526/traits-5.1.2.tar.gz")
     version("5.1.1", sha256="c4489dffb3272f94549a01fccbe447675c0186d2b8d59e8c7013c328e7c39553", url="https://pypi.org/packages/81/80/2b5bb0036bbd05b971546b0d3a942b97896122681d4c657edb12d299d891/traits-5.1.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

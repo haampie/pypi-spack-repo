@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNumpy(PythonPackage):
+    # BEGIN VERSIONS
     version("2.0.0-beta1", sha256="e0bb33a37d0d0b9a19cd41a093877f830e06bd4d989341b9792896cf08e629f7", url="https://pypi.org/packages/51/fe/e4dab289c176ea4e13f97f11f281cc22d4a3b0add9883406db62d4f94d65/numpy-2.0.0b1.tar.gz")
     version("1.26.4", sha256="2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010", url="https://pypi.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz")
     version("1.26.3", sha256="697df43e2b6310ecc9d95f05d5ef20eacc09c7c4ecc9da3f235d39e71b7da1e4", url="https://pypi.org/packages/d0/b0/13e2b50c95bfc1d5ee04925eb5c105726c838f922d0aaddd57b7c8be0f8b/numpy-1.26.3.tar.gz")
@@ -72,9 +72,14 @@ class PyNumpy(PythonPackage):
     version("1.14.4", sha256="2185a0f31ecaa0792264fa968c8e0ba6d96acf144b26e2e1d1cd5b77fc11a691", url="https://pypi.org/packages/94/b8/09db804ddf3bb7b50767544ec8e559695b152cedd64830040a0f31d6aeda/numpy-1.14.4.zip")
     version("1.14.3", sha256="9016692c7d390f9d378fc88b7a799dc9caa7eb938163dda5276d3f3d6f75debf", url="https://pypi.org/packages/b0/2b/497c2bb7c660b2606d4a96e2035e92554429e139c6c71cdff67af66b58d2/numpy-1.14.3.zip")
     version("1.14.2", sha256="facc6f925c3099ac01a1f03758100772560a0b020fb9d70f210404be08006bcb", url="https://pypi.org/packages/0b/66/86185402ee2d55865c675c06a5cfef742e39f4635a4ce1b1aefd20711c13/numpy-1.14.2.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.25,1.26.2:")
         depends_on("python@3.9:3.12", when="@1.26:1.26.1")
         depends_on("python@:3.10", when="@1.21.2:1.21")
+    # END DEPENDENCIES
 

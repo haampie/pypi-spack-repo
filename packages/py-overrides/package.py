@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOverrides(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.7.0", sha256="c7ed9d062f78b8e4c1a7b70bd8796b35ead4d9f510227ef9c5dc7626c60d7e49", url="https://pypi.org/packages/2c/ab/fc8290c6a4c722e5514d80f62b2dc4c4df1a68a41d1364e625c35990fcf3/overrides-7.7.0-py3-none-any.whl")
     version("7.6.0", sha256="c36e6635519ea9c5b043b65c36d4b886aee8bd45b7d4681d2a6df0898df4b654", url="https://pypi.org/packages/ad/c3/f5f590a982ca2cbe29b570de61d6f387a41e7020a8340309901d769066e0/overrides-7.6.0-py3-none-any.whl")
     version("7.5.0", sha256="188e7b06039850c2a66a42973afd76ce15cb02be2ddc7f35a88a7d2dfda22738", url="https://pypi.org/packages/d7/2a/2eae0362d14f76f13e0e51e7f1774cda65211dbf1fa1d07e983fa2a9394b/overrides-7.5.0-py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyOverrides(PythonPackage):
     version("7.1.0", sha256="037921cc66674f3c9436baeac4ad14101e7e673e70ea8b87f31f76d65174cf16", url="https://pypi.org/packages/96/89/ec696b7d56f5780db53c3cb50a46fc249a059a7901a4605b514c8358ca02/overrides-7.1.0-py3-none-any.whl")
     version("7.0.0", sha256="f6e4696acba91e5d4fd8ebb6e05cc9fc4d49c7b0ea4064cc0a1f64a1e09861c8", url="https://pypi.org/packages/2c/ca/bf16d08734ec6d5d502fff617973136e3df8cd0fbfaed339aa169032205b/overrides-7.0.0-py3-none-any.whl")
     version("6.5.0", sha256="005ce7cf550b4f896624ba08c386a1262699ec8b4e3a609375edafb0f0652589", url="https://pypi.org/packages/d8/79/5a54931bec272a7d14713f1b19b76c172f7b730bd15ca920aab60a194e43/overrides-6.5.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

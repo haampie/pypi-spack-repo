@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkInstantmessage(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="65db5cb1f163700a6cb915506f8f7ae2f28d8d3f6464f7b122b0535b1694859a", url="https://pypi.org/packages/82/76/5453d27459ee4d2183981603ac4a6f0bd21872eff7a9b45303ee7e448755/pyobjc_framework_InstantMessage-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="c03a9a99faaa14ff0a477114b691d628117422a15995523deb25ff2d1d07a36d", url="https://pypi.org/packages/03/02/b1284ce955c74e731686edc83964251c28a521af2f533c7b3ba9143ced8b/pyobjc_framework_InstantMessage-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="c53dd8ddf2b28dd87cdb67c21798b15d432d659abc633fc3c0a27433bc7a241a", url="https://pypi.org/packages/ea/32/979ff5a181c0167f9901957a25140d86392b233443185f5b3d516cad403e/pyobjc_framework_InstantMessage-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkInstantmessage(PythonPackage):
     version("9.0", sha256="b607da937b67e079b9024010cfe122d11395639d9b071c82796b66df93ea42fd", url="https://pypi.org/packages/ef/02/65a6c9338f37a4ee5077fbcd4f8ec6b5a6271bbd639fb640bf04e2e148cd/pyobjc_framework_InstantMessage-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="493401544cef8f371a78c8557009ef3c2ace182b534c5b76c55b4cacf98e3c14", url="https://pypi.org/packages/62/39/800d89c25d81384b805990a45823744487a53f4efd3f2007e567d6876f17/pyobjc_framework_InstantMessage-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="4f4c1f49a63ff223e856a8ac89eb884e10920d202df82674d8e13679300f75d0", url="https://pypi.org/packages/b4/74/2214977771916658baf4fc31b381d377c32a9790700410b8b99447fc7bc1/pyobjc_framework_InstantMessage-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -49,4 +53,5 @@ class PyPyobjcFrameworkInstantmessage(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-quartz@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-quartz@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

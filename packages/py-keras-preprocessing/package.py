@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKerasPreprocessing(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.1.2", sha256="7b82029b130ff61cc99b55f3bd27427df4838576838c5b2f65940e4fcec99a7b", url="https://pypi.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl")
     version("1.1.1", sha256="138012da7bbc5508d59681515636c01618644322db08c1f4c6d66e63de8ddb73", url="https://pypi.org/packages/5e/ac/d66d66e98b572559028ddbcd47df341a467ee438b185fa18f47f0eec8890/Keras_Preprocessing-1.1.1-py2.py3-none-any.whl")
     version("1.1.0", sha256="44aee5f2c4d80c3b29f208359fcb336df80f293a0bb6b1c738da43ca206656fb", url="https://pypi.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl")
@@ -18,10 +18,15 @@ class PyKerasPreprocessing(PythonPackage):
     version("1.0.3", sha256="ecfdc0d0a396aa0065bd35c8c43f702579901e1569488a024383987ac5d71b0e", url="https://pypi.org/packages/b3/bd/796f986980da4d6adc77ffd8b2b11074e7b17a7b74b03789aefac5709c4b/Keras_Preprocessing-1.0.3-py2.py3-none-any.whl")
     version("1.0.2", sha256="f44ab7bac195ae77ace2ce082413de2d6794e89d09a71a822a6bafd2aa32276b", url="https://pypi.org/packages/71/26/1e778ebd737032749824d5cba7dbd3b0cf9234b87ab5ec79f5f0403ca7e9/Keras_Preprocessing-1.0.2-py2.py3-none-any.whl")
     version("1.0.1", sha256="5283236f0b22a57b30bda766fc819b2ed2483c52f3e1f8b39fcc528f51f772e7", url="https://pypi.org/packages/f8/33/275506afe1d96b221f66f95adba94d1b73f6b6087cfb6132a5655b6fe338/Keras_Preprocessing-1.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-keras@2.1.6:", when="@:1.0.3")
         depends_on("py-numpy@1.9.1:")
         depends_on("py-scipy@0.14:", when="@:1.0.3")
         depends_on("py-six@1.9:")
+    # END DEPENDENCIES
 

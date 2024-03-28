@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyColored(PythonPackage):
+    # BEGIN VERSIONS
     version("2.2.4", sha256="a7069673bd90a35f46cb748d012c17284a0668d2f1c06bc7a51822a2d5ad2112", url="https://pypi.org/packages/75/d1/548f697f88872321525e294f8863efbdd1c313964b7f94e49ab0dc4f2895/colored-2.2.4-py3-none-any.whl")
     version("2.2.3", sha256="1318b2fb8e0313d39724b8ab0707af79d1e2c0e60710b608a00e70fe0f84ff5d", url="https://pypi.org/packages/6f/0d/a10351ef1a98e0b03d66887ec2d87c261f9a0fbff8f2bdb75614cc0a2850/colored-2.2.3-py3-none-any.whl")
     version("2.2.2", sha256="c7790b4557c8911ac877fff211a3ebe8b8655d4f0281dbbe1930d33ff23f96ed", url="https://pypi.org/packages/3d/03/15850bec2dcbccaa9c1d9779acd26e3c020b6c3528b086a3c5ecfaec956c/colored-2.2.2-py3-none-any.whl")
@@ -18,7 +18,12 @@ class PyColored(PythonPackage):
     version("1.5.0", sha256="dcc1f29223b8e2e8fbace0570a4ebf888b3321373fa14db45fecd3fe0261e679", url="https://pypi.org/packages/31/5e/75b2e14e2177655d3572df324e851efd035294ae67044f4934d68a67d5b2/colored-1.5.0-py3-none-any.whl")
     version("1.4.4", sha256="04ff4d4dd514274fe3b99a21bb52fb96f2688c01e93fba7bef37221e7cb56ce0", url="https://pypi.org/packages/f3/d6/00203998f27ab30b2417998006ad0608f236740bb129494dd7c5621861e1/colored-1.4.4.tar.gz")
     version("1.4.2", sha256="056fac09d9e39b34296e7618897ed1b8c274f98423770c2980d829fd670955ed", url="https://pypi.org/packages/b2/16/04827e24c14266d9161bd86bad50069fea453fa006c3d2b31da39251184a/colored-1.4.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.5:")
+    # END DEPENDENCIES
 

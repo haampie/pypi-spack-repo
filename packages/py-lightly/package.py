@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLightly(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.5.2", sha256="d5ef340d03c101f9a6e90902939b30ac0bc14dcd3e1028940fd1258af699f673", url="https://pypi.org/packages/03/9b/11149419f27310c1697e3805a57ab5f9ea376cb93bb1f1a0033d1b1f9f3c/lightly-1.5.2-py3-none-any.whl")
     version("1.5.1", sha256="afa311a11cc5cbccc34fad16579380b7c170a1cfff4ae163e12b260575d30fd4", url="https://pypi.org/packages/56/81/61e40f5a07db29046bb8b96342e03bd7f252875db0ad5a3bb88295365f70/lightly-1.5.1-py3-none-any.whl")
     version("1.5.0", sha256="d17e6b09e2b3b50a02e976dad88bf8d11c7018ffdbe54edd783b7e9911f0892e", url="https://pypi.org/packages/82/81/866ee00fe5a112af2d940f37d2642545fa33f3625c551504bd1f5866423f/lightly-1.5.0-py3-none-any.whl")
@@ -35,7 +35,11 @@ class PyLightly(PythonPackage):
     version("1.4.3", sha256="501e88da56c7426048a6200531f413b6ceaa384fe6120aa27e241d2fb25e3923", url="https://pypi.org/packages/a1/2b/1e9e37961d1f1eb85cdfa2409f17943d549b60acb8c7cd31d911b1cb7352/lightly-1.4.3-py3-none-any.whl")
     version("1.4.2", sha256="4e931d2aff77a61f5ee4cf4fccdacae6df4945be196eee78ddd678a28d9eb210", url="https://pypi.org/packages/fe/12/29a57e70e017d63adad6d60c42cd8b5e13d046dbf53f452bf4cd9e69df9d/lightly-1.4.2-py3-none-any.whl")
     version("1.4.1", sha256="5c9890910e2574ab913824daae8c393467fa32fd227e8f976fc7b8509a3066bc", url="https://pypi.org/packages/7f/62/a19d0f3555bd031216cbf0e0f72b9b54bb8c7ef8b8a760d031108952304f/lightly-1.4.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aenum@3.1.11:", when="@1.4.8:")
         depends_on("py-certifi@14:", when="@1.1:")
@@ -54,4 +58,5 @@ class PyLightly(PythonPackage):
         depends_on("py-tqdm@4.44:", when="@1.1:")
         depends_on("py-urllib3@1.25.3:", when="@1.4.8:")
         depends_on("py-urllib3@1.15.1:", when="@1.1:1.4.25")
+    # END DEPENDENCIES
 

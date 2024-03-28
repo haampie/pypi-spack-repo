@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOmegaconf(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.4.0.dev3", sha256="acffa42eab0d9cb09ccead6e80d1dfd20a625e21602353f267f3bc2cd131f7b2", url="https://pypi.org/packages/dc/08/29b30970ce5e22440e2bc1fd929a79de08feb3c6c054bc7e832228fc1a94/omegaconf-2.4.0.dev3-py3-none-any.whl")
     version("2.4.0.dev2", sha256="23b3837e5943ab46ea27b8ef7c54741bc320cb7895028fccc95580b260320492", url="https://pypi.org/packages/a8/3f/0c50b5e353837c14f99923b07a281b6da7687044b39e7efdebe8e6bd01f7/omegaconf-2.4.0.dev2-py3-none-any.whl")
     version("2.4.0.dev1", sha256="6c202560ac43d3a5aa5aa52d0d5911ea86dc35e56ab02d9e1675f11c7984e729", url="https://pypi.org/packages/67/d4/f0117bc2d36185e0b90c39755259dcdfb86e0f362a9c9db46193501f7c9e/omegaconf-2.4.0.dev1-py3-none-any.whl")
@@ -21,11 +21,16 @@ class PyOmegaconf(PythonPackage):
     version("2.2.0", sha256="61ade5dbc667cb51d290e8f5e7d54850ebf145f14dddf81222123bab5f0f7bc1", url="https://pypi.org/packages/b5/f6/b463d1ddb249ae59a9b1c7c2ef423b60262973da70db781e06aee19d5f8b/omegaconf-2.2.0-py3-none-any.whl")
     version("2.1.2", sha256="2ae9cbbc1105991da5301b7a0ac8b960958c311239bb2dfd4e3f5e60d2a51029", url="https://pypi.org/packages/2f/ae/5fd6ba3e3ef122bc5acf51e58a0dce03c9aa90e69069993133aa190be768/omegaconf-2.1.2-py3-none-any.whl")
     version("2.1.1", sha256="be93d73eaa2564fbe52d88ee13e3b79f4c6e04876b2f326551a21391f7dc6367", url="https://pypi.org/packages/66/c8/7ef11e12f3844b210add2e003abf8a0c7981ce7b5553dc630b635e7b905e/omegaconf-2.1.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-antlr4-python3-runtime@4.9", when="@2.2.0.dev3:2.4.0.dev0")
         depends_on("py-antlr4-python3-runtime@4.8", when="@2.1:2.2.0.dev2")
         depends_on("py-pyyaml@5.1:", when="@2.1:")
         depends_on("py-typing-extensions", when="@2.4.0.dev1: ^python@:3.9.0")
         depends_on("py-typing-extensions", when="@2.0.0-rc3:2.0")
+    # END DEPENDENCIES
 

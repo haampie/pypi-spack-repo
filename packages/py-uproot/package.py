@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PyUproot(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("5.3.2", sha256="be07a6e852bc63636a7835106a032f191ec698d304ebc7dcb291ee407fb68b2d", url="https://pypi.org/packages/69/08/6dbc179914c7e3438eec018b3cbc6e3dddb2164beef61b9d0b6b876c15f1/uproot-5.3.2-py3-none-any.whl")
     version("5.3.1", sha256="db416b9290f67454cf9d5c99a5b008df4979f2aa1cbb05843c61ba23349fe658", url="https://pypi.org/packages/3b/1a/13102f7461b148382274d4de6017d8c202fc89ef4e187111a86df362997b/uproot-5.3.1-py3-none-any.whl")
     version("5.3.0", sha256="ad89c3a8a51262e803ce8ad352bed0dfd2a0627f764efbe0e3ab2c553dcd7ce7", url="https://pypi.org/packages/87/d0/99811fca5cac80a6839c1e0144eb6dbc33a23cf9e05735781d26bf3383de/uproot-5.3.0-py3-none-any.whl")
     version("5.2.2", sha256="df67149509f89ee0ac38e33238d5f36f342a14e3bcf9d46fe6ec1248bf4825eb", url="https://pypi.org/packages/35/cc/d639e5e939aec01282508fd8dea00347bb1d21f8ae1e810e9d9f45ffb93b/uproot-5.2.2-py3-none-any.whl")
@@ -16,7 +17,6 @@ class PyUproot(PythonPackage):
     version("5.1.1", sha256="6f6e57288c6349d60161bebf9c54ed28668b8d6efd85bfa758da0ff671f9e7b1", url="https://pypi.org/packages/db/7c/c8765183bc551e27f9d602afb372e4cbfea45bc069e9d8cabd051601bf20/uproot-5.1.1-py3-none-any.whl")
     version("5.1.0", sha256="e9419ebba73e3b298c6ec2bf579004be8042d4ec5f38dfd3716c61710a342f97", url="https://pypi.org/packages/bd/a6/845eb553ea64393625ac3ae35cc36f99efda24cce72b8c12e3fae2186b03/uproot-5.1.0-py3-none-any.whl")
     version("5.0.13", sha256="055b4b1b827074fffa718194f23759c15573d2de3ea0f0f342b60b27baa9f113", url="https://pypi.org/packages/fb/de/bbfb82eaaacdaf5ed15c766a282304da445d792fe714fa8453b4327962be/uproot-5.0.13-py3-none-any.whl")
-    version("5.0.12", sha256="211ba7bc2210182e57069fdcd15b0f48c665b1012c7278e4ab972560f41862c4", url="https://pypi.org/packages/2b/5a/d36ce908c11b5b0c7ee831104321434f73f01586d408904837d041afd64d/uproot-5.0.12-py3-none-any.whl")
     version("5.0.5", sha256="900aad0fd71d4730d5e5d98bbd926d1afabd229756ec63c8959dec57a7a78e88", url="https://pypi.org/packages/ba/ba/9910833d8ece6c5d52613b4bdeece5e2c0df65d384e803a91acd83486a17/uproot-5.0.5-py3-none-any.whl")
     version("5.0.4", sha256="5a4a526fbec5d5bb3c439dcee0876bc689d42a36627a4a89105924afc3b3ec24", url="https://pypi.org/packages/cc/be/000ad141863f38a931fb73d34018a1d9c00884a5dbc263dccd3835bc0ec6/uproot-5.0.4-py3-none-any.whl")
     version("5.0.3", sha256="b826e62ddacc9717045fc95f1ff9b690c683368ece7ee74deba670300c0712bb", url="https://pypi.org/packages/9d/f2/57d054b926de2bafbe702090d4a17da6cd3924f1d8103b120f291fc2556c/uproot-5.0.3-py3-none-any.whl")
@@ -41,16 +41,26 @@ class PyUproot(PythonPackage):
     version("4.0.8", sha256="ff590a7a142441c244532944c5c501890862899e83eb0f1d41f2c47c59c84d73", url="https://pypi.org/packages/a5/99/bf1b3995f9cafad30c8df34a99ab286f522cf762a2eb2152ac47609be04e/uproot-4.0.8-py2.py3-none-any.whl")
     version("4.0.7", sha256="7fbe065eb75f271819542df691499518ecc56caaa8e0166876d3d13be5bf08b3", url="https://pypi.org/packages/73/85/06dda0d02fa68f726d49eacce836eb501c1dfde33fe1162ee80358f4ca6b/uproot-4.0.7-py2.py3-none-any.whl")
     version("4.0.6", sha256="03988d9d7eee951182eb483884f68715a1c6d5c37b0f5918c020dea99f109203", url="https://pypi.org/packages/ae/01/efb4100d671aec20b3f04c289dfe19d0930e534de538ee8f748e72f783d6/uproot-4.0.6-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("lz4", default=False)
+    variant("xrootd", default=False)
+    variant("zstd", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-awkward@2.4.6:", when="@5.1.0-rc4:")
         depends_on("py-awkward@2.0.0:", when="@5.0.0:5.1.0-rc1")
         depends_on("py-cramjam@2.5:", when="@5.3.1:")
         depends_on("py-cramjam@2.8.1:2.8.1.0,2.8.2:", when="@5.3:5.3.0")
         depends_on("py-fsspec", when="@5.2:")
+        depends_on("py-fsspec-xrootd", when="@5.3.2-rc1:+xrootd")
         depends_on("py-lz4", when="@3:3.2")
         depends_on("py-numpy", when="@2.9.9:2,4:")
         depends_on("py-packaging", when="@5.0.0-rc2:")
         depends_on("py-setuptools", when="@4.0.8:5.0.0-rc1")
         depends_on("py-typing-extensions@4.1:", when="@5.1: ^python@:3.10")
+    # END DEPENDENCIES
 

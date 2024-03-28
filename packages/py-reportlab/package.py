@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyReportlab(PythonPackage):
+    # BEGIN VERSIONS
     version("4.1.0", sha256="28a40d5000afbd8ccae15a47f7abe2841768461354bede1a9d42841132997c98", url="https://pypi.org/packages/d2/70/c44e5fb6099cf28d01255ff1dfc6a4c8f2b981f314707018c802ac179e4e/reportlab-4.1.0-py3-none-any.whl")
     version("4.0.9", sha256="c9656216321897486e323be138f7aea67851cedc116b8cc35f8ec7f8cc763538", url="https://pypi.org/packages/cc/da/de8af288738de0980a7e982c62853efe9994ee7d07e59ed20fdccc8a658e/reportlab-4.0.9-py3-none-any.whl")
     version("4.0.8", sha256="d00693de8ab8761b122e409de883ba976c24839f93867090c0d40b5d5906e847", url="https://pypi.org/packages/44/2c/f09a5abefa8f2b575acfc19ed4536a365ef0432ae3bce94a57a2de9b4f52/reportlab-4.0.8-py3-none-any.whl")
@@ -18,10 +18,15 @@ class PyReportlab(PythonPackage):
     version("3.6.13", sha256="6f75d33f7a3720cf47371ab63ced0f0ebd1aeb6db19386ae92f8977a09be9611", url="https://pypi.org/packages/65/82/45b443db5acaf7edb471be57335a22d9f3bb6e4e9c9133ffa926f8ecdf2a/reportlab-3.6.13.tar.gz")
     version("3.6.12", sha256="b13cebf4e397bba14542bcd023338b6ff2c151a3a12aabca89eecbf972cb361a", url="https://pypi.org/packages/b8/ac/10d68a650b321bd8c4d8cbefd9994e7727d57b381c9bdb0a013273011e62/reportlab-3.6.12.tar.gz")
     version("3.4.0", sha256="5beaf35e59dfd5ebd814fdefd76908292e818c982bd7332b5d347dfd2f01c343", url="https://pypi.org/packages/87/f9/53b34c58d3735a6df7d5c542bf4de60d699cfa6035e113ca08b3ecdcca3f/reportlab-3.4.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-chardet", when="@4.0.8:")
         depends_on("py-freetype-py@2.3", when="@4:4.0.0")
         depends_on("py-pillow@9:", when="@4:")
         depends_on("py-rlpycairo@0.2:", when="@4:4.0.0")
+    # END DEPENDENCIES
 

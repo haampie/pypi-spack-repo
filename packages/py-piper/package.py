@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPiper(PythonPackage):
+    # BEGIN VERSIONS
     version("0.14.0", sha256="874706b253f159b5546016c8b6a180118d4e64df53b7698a8f39c271d20f93cd", url="https://pypi.org/packages/ad/76/9ccdbf937a57a82cb303b51cefbc8469f98456d5484556e13f055ce34edb/piper-0.14.0-py3-none-any.whl")
     version("0.14.0-alpha2", sha256="fbd117755d56af3d3719a71c44d568e3f050f150d83ac362001f33fb201de01b", url="https://pypi.org/packages/fa/c2/9d3adc4b19235ec85f4c47adff7096e1ca26944803e25ed35add408692ac/piper-0.14.0a2-py3-none-any.whl")
     version("0.14.0-alpha1", sha256="221dbb96bc775680f2c45395711b0df84cecb441f72ac808d03ee6e5e50673ce", url="https://pypi.org/packages/79/71/26836ba428248a5d5b2ddaa46895e06ae2e305c9b411894d428d0efa1163/piper-0.14.0a1-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPiper(PythonPackage):
     version("0.12.3", sha256="b7da6286fc883d129bd3456179946bbe8f2f9455b81032ffcc97410b8f4dd572", url="https://pypi.org/packages/a1/ca/c102d69056eb6d3d235e623e801aeda1de509a9cc504b976163def8887ab/piper-0.12.3-py3-none-any.whl")
     version("0.12.2", sha256="60492e0a6a2924040de95f2c993c90d053f538fd56c276fa22f241438a34c01d", url="https://pypi.org/packages/bc/3a/89c79854a9e6580d1512e3cc63fbfdd9d35d7242a01134e9fec027ed43ce/piper-0.12.2.tar.gz")
     version("0.12.1", sha256="d3e292a7383f6011759f0803aeb2f62489ecb457c4e916637a74dbbffdfcb3bd", url="https://pypi.org/packages/4b/6e/d365deaeebb50378dfaddddc34d394b25b38f340604910ea163b483d3546/piper-0.12.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attmap@0.12.5:", when="@0.12.3:0.13")
         depends_on("py-logmuse@0.2.4:", when="@0.12.3:")
@@ -30,4 +34,5 @@ class PyPiper(PythonPackage):
         depends_on("py-psutil", when="@0.9.2,0.12.3:")
         depends_on("py-ubiquerg@0.4.5:", when="@0.12.3:")
         depends_on("py-yacman", when="@0.12.3:")
+    # END DEPENDENCIES
 

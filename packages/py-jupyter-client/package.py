@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterClient(PythonPackage):
+    # BEGIN VERSIONS
     version("8.6.1", sha256="3b7bd22f058434e3b9a7ea4b1500ed47de2713872288c0d511d19926f99b459f", url="https://pypi.org/packages/75/6d/d7b55b9c1ac802ab066b3e5015e90faab1fffbbd67a2af498ffc6cc81c97/jupyter_client-8.6.1-py3-none-any.whl")
     version("8.6.0", sha256="909c474dbe62582ae62b758bca86d6518c85234bdee2d908c778db6d72f39d99", url="https://pypi.org/packages/43/ae/5f4f72980765e2e5e02b260f9c53bcc706cefa7ac9c8d7240225c55788d4/jupyter_client-8.6.0-py3-none-any.whl")
     version("8.5.0", sha256="c3877aac7257ec68d79b5c622ce986bd2a992ca42f6ddc9b4dd1da50e89f7028", url="https://pypi.org/packages/ab/1f/d93fd1d2bf75233134a4aa1f56186b3c1975932fbfb58322e8de2906ea3d/jupyter_client-8.5.0-py3-none-any.whl")
@@ -47,10 +47,14 @@ class PyJupyterClient(PythonPackage):
     version("4.2.2", sha256="278d5870a0d2350b1fb7495fd70a86d90543c10eb0e5d3b7636e453f1347d4a6", url="https://pypi.org/packages/fd/7a/07ad70876fa3e6906440ff8bbecbb24d958d3547ca350544ac70fe2221bf/jupyter_client-4.2.2-py2.py3-none-any.whl")
     version("4.2.1", sha256="4596380adfa76d583cfa376ae21990b938443e938f8ec8b24adbea20a55efc04", url="https://pypi.org/packages/cc/c8/ab3b82f3436bef22b4e6a5bde26fce2d038362607ac0d0c4999bfa05a3cd/jupyter_client-4.2.1-py2.py3-none-any.whl")
     version("4.2.0", sha256="2cb24e9e760a7d512d57193d9740dee9f25bbc1502ac5f43251134988577eca7", url="https://pypi.org/packages/c3/4d/6431e0fbb301f8f6ebf52f4a4f5bb4cbf9f64d64e2e2c16c305b95b17e25/jupyter_client-4.2.0-py2.py3-none-any.whl")
-    version("4.1.1", sha256="05a57405a8fd149356147cfa5e545bdeeed85bf5f4f7d2606144a04335a1e28c", url="https://pypi.org/packages/dc/0e/3ff75bf088953f34d742b301ee8dc5f0bf516754150faf5a955af1ff484d/jupyter_client-4.1.1.zip")
+    version("4.1.1", sha256="c1290dadbd215e12ef72b8350155538dd59dc462fe37d46d2a31be9359d5c31d", url="https://pypi.org/packages/b0/d5/418205a8c83cd34dc1e83b852936a6fe02e4ba3bdc420dc12a0a0ca7c3d8/jupyter_client-4.1.1-py2.py3-none-any.whl")
     version("4.1.0", sha256="969d01e95a8b092302901f936fc8b4c16e59197ab1825bd12aaaad1f88638d54", url="https://pypi.org/packages/ff/3f/9dbbe6fc01be4ac5b63b8becdda2408663492305763fd999a1616399e760/jupyter_client-4.1.0.zip")
-    version("4.0.0", sha256="a39a4181ea2021daf6e821acae836999ef6e0fefe603813a7a7d4658d2ffa2ac", url="https://pypi.org/packages/46/df/a277a5bdbfdcb89aaa201de0822748b08c4faf1b377fee1d130d8658f8c4/jupyter_client-4.0.0.tar.gz")
+    version("4.0.0", sha256="ca9e4bf694953a009e6dc7fd40300547f43abd846c70a995da74d19cbd013309", url="https://pypi.org/packages/39/bc/3679bee00a2958230a42e5d6b31bbea178119a7f167e233fdec67ebef3b2/jupyter_client-4.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-entrypoints", when="@7.0.0-alpha1:8.0.0-alpha2")
         depends_on("py-importlib-metadata@4.8.3:", when="@8.0.0-alpha3: ^python@:3.9")
@@ -71,4 +75,5 @@ class PyJupyterClient(PythonPackage):
         depends_on("py-tornado@4.1:", when="@5.2.2:7.1")
         depends_on("py-traitlets@5.3:5.3.0.0,5.4:", when="@8.0.0-beta2:")
         depends_on("py-traitlets", when="@4.2:8.0.0-alpha4")
+    # END DEPENDENCIES
 

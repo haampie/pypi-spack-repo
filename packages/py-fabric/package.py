@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFabric(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.2.2", sha256="91c47c0be68b14936c88b34da8a1f55e5710fd28397dac5d4ff2e21558113a6f", url="https://pypi.org/packages/d6/1f/e99e23ee01847147fa194e8d41cfcf2535a2dbfcb51414c541cadb15c5d7/fabric-3.2.2-py3-none-any.whl")
     version("3.2.1", sha256="23440a56510a981c97aaa2d4be17c759d6c60e5691bc49a66eb70f319d55f118", url="https://pypi.org/packages/e5/d3/f3e4c990eac9b48b7774b1f81ff24dc371a587174418e9ad060f0c6608ca/fabric-3.2.1-py3-none-any.whl")
     version("3.2.0", sha256="b6c5e3345da60b0d0c54d5ace22d110081550bbd03023b38c6edf1f3453c0b33", url="https://pypi.org/packages/82/a0/699cda78b695a1f73fc21cde7977b5e9d5f8679808fa9bf0ac3537bdd0e1/fabric-3.2.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyFabric(PythonPackage):
     version("2.6.0", sha256="7a71714b8b8f28cf828eceb155196f43ebac1bd4c849b7161ed5993d1cbcaa40", url="https://pypi.org/packages/c1/9d/59df62b620985871a4ba7d8b509b84340bbd1573257e55a427ae2df2d56e/fabric-2.6.0-py2.py3-none-any.whl")
     version("2.5.0", sha256="160331934ea60036604928e792fa8e9f813266b098ef5562aa82b88527740389", url="https://pypi.org/packages/d7/cb/47feeb00dae857f0fbd1153a61e902e54ed77ccdc578b371a514a3959a19/fabric-2.5.0-py2.py3-none-any.whl")
     version("2.4.0", sha256="98538f2f3f63cf52497a8d0b24d18424ae83fe67ac7611225c72afb9e67f2cf6", url="https://pypi.org/packages/d9/e4/e6fa248c94ee5d45def54b609fcf70f39d0b7f7050f2d4405c5f156b5516/fabric-2.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cryptography@1.1:", when="@2:2.4")
         depends_on("py-decorator@5:", when="@3.1:")
@@ -28,4 +32,5 @@ class PyFabric(PythonPackage):
         depends_on("py-invoke@1.1:1", when="@2.2:2.4")
         depends_on("py-paramiko@2.4:", when="@2:")
         depends_on("py-pathlib2", when="@2.6:2")
+    # END DEPENDENCIES
 

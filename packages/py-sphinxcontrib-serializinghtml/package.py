@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySphinxcontribSerializinghtml(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.1.10", sha256="326369b8df80a7d2d8d7f99aa5ac577f51ea51556ed974e7716cfd4fca3f6cb7", url="https://pypi.org/packages/38/24/228bb903ea87b9e08ab33470e6102402a644127108c7117ac9c00d849f82/sphinxcontrib_serializinghtml-1.1.10-py3-none-any.whl")
     version("1.1.9", sha256="9b36e503703ff04f20e9675771df105e58aa029cfcbc23b8ed716019b7416ae1", url="https://pypi.org/packages/95/d6/2e0bda62b2a808070ac922d21a950aa2cb5e4fcfb87e5ff5f86bc43a2201/sphinxcontrib_serializinghtml-1.1.9-py3-none-any.whl")
     version("1.1.8", sha256="27849e7227277333d3d32f17c138ee148a51fa01f888a41cd6d4e73bcabe2d06", url="https://pypi.org/packages/dc/85/ea34b6be0494eff8ae281107bb4a83f6c83066b358f2525a251dc852817c/sphinxcontrib_serializinghtml-1.1.8-py3-none-any.whl")
@@ -17,8 +17,13 @@ class PySphinxcontribSerializinghtml(PythonPackage):
     version("1.1.3", sha256="db6615af393650bf1151a6cd39120c29abaf93cc60db8c48eb2dddbfdc3a9768", url="https://pypi.org/packages/57/b3/3648e48fa5682e61e9839d62de4e23af1795ceb738d68d73bd974257a95c/sphinxcontrib_serializinghtml-1.1.3-py2.py3-none-any.whl")
     version("1.1.1", sha256="01d9b2617d7e8ddf7a00cae091f08f9fa4db587cc160b493141ee56710810932", url="https://pypi.org/packages/9e/1e/57beb109ebfd765ac1adf35eb982ac35692d7a25f7002281afffcbd2f817/sphinxcontrib_serializinghtml-1.1.1-py2.py3-none-any.whl")
     version("1.1.0", sha256="4989174ec3f49b5440344bb5397ac2c81ca266413c370186e8f9c3eadc66450a", url="https://pypi.org/packages/fb/47/5fa80011869d85500a179ec1ede43487b5ddc0f57e77cefe858613581102/sphinxcontrib_serializinghtml-1.1.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.1.6:")
         depends_on("py-sphinx@5.0.0:", when="@1.1.6:1.1.9")
+    # END DEPENDENCIES
 

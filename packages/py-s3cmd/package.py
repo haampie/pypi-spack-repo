@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyS3cmd(PythonPackage):
+    # BEGIN VERSIONS
     version("2.3.0", sha256="2204306742c33c24fbca02b78e059bacfc1bfc04af09c7e9866f267a11a9ddb2", url="https://pypi.org/packages/6a/ba/828b5b88aeca434938b8d7a6aece672fa738f6909f19b9611aae54ff08eb/s3cmd-2.3.0-py2.py3-none-any.whl")
     version("2.2.0", sha256="50ef46a83c6292439aaa2b15d6d134eddb3f28757732e3c65e30cbed2a8a9565", url="https://pypi.org/packages/1e/88/9630c6e894575f03c1685104a6562a31ecf9e82b5b687d8516445a051fbe/s3cmd-2.2.0-py2.py3-none-any.whl")
     version("2.1.0", sha256="49cd23d516b17974b22b611a95ce4d93fe326feaa07320bd1d234fed68cbccfa", url="https://pypi.org/packages/26/44/19e08f69b2169003f7307565f19449d997895251c6a6566ce21d5d636435/s3cmd-2.1.0-py2.py3-none-any.whl")
@@ -16,8 +16,13 @@ class PyS3cmd(PythonPackage):
     version("1.6.1", sha256="9772aa810189bf20e9ae292e489521376741c53f7db01dc1acbdbf4a5f26edaf", url="https://pypi.org/packages/fb/01/058591e96c8369bf68fda7d699fe77f98e1399b878003d2609173890cc10/s3cmd-1.6.1.zip")
     version("1.6.0", sha256="abd99e42b69775129e20f28935ccc80aa32f51f9cff1b064eecdafc7e22bed25", url="https://pypi.org/packages/a7/40/91218e3986488d607b54e1f7456a8d052c00468f1b58d177ae860aafb429/s3cmd-1.6.0.zip")
     version("1.5.2", sha256="84996210190c82be69c262069293efca8fd50abfe3dbcc5022fde1ad0c00d850", url="https://pypi.org/packages/1a/29/5184124615ac56997b667bfa0f426b06c8b4c864ed7bee3767502b30ffa0/s3cmd-1.5.2.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-python-dateutil", when="@2.1:")
         depends_on("py-python-magic", when="@2.1:")
+    # END DEPENDENCIES
 

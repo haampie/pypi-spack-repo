@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBabel(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.14.0", sha256="efb1a25b7118e67ce3a259bed20545c29cb68be8ad2c784c83689981b7a57287", url="https://pypi.org/packages/0d/35/4196b21041e29a42dc4f05866d0c94fa26c9da88ce12c38c2265e42c82fb/Babel-2.14.0-py3-none-any.whl")
     version("2.13.1", sha256="7077a4984b02b6727ac10f1f7294484f737443d7e2e66c5e4380e41a3ae0b4ed", url="https://pypi.org/packages/86/14/5dc2eb02b7cc87b2f95930310a2cc5229198414919a116b564832c747bc1/Babel-2.13.1-py3-none-any.whl")
     version("2.13.0", sha256="fbfcae1575ff78e26c7449136f1abbefc3c13ce542eeb13d43d50d8b047216ec", url="https://pypi.org/packages/ff/37/b0241795c3a320a3def948cd0d06daf70310e7fea1d8fda312629bc22ea9/Babel-2.13.0-py3-none-any.whl")
@@ -22,10 +22,15 @@ class PyBabel(PythonPackage):
     version("2.6.0", sha256="6778d85147d5d85345c14a26aada5e478ab04e39b078b0745ee6870c2b5cf669", url="https://pypi.org/packages/b8/ad/c6f60602d3ee3d92fbed87675b6fb6a6f9a38c223343ababdb44ba201f10/Babel-2.6.0-py2.py3-none-any.whl")
     version("2.4.0", sha256="e86ca5a3a6bb64b9bbb62b9dac37225ec0ab5dfaae3c2492ebd648266468042f", url="https://pypi.org/packages/5f/cf/17935db603f7044d188ce3e3a6545c4b4500dbaa8835d50da2934b738111/Babel-2.4.0-py2.py3-none-any.whl")
     version("2.3.4", sha256="3318ed2960240d61cbc6558858ee00c10eed77a6508c4d1ed8e6f7f48399c975", url="https://pypi.org/packages/b4/ec/acd307eac2e23f9cab1c8bdbe29b3b1d43215e31c32f8aa91b3a97925b5b/Babel-2.3.4-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pytz@2015.7:", when="@2.12: ^python@:3.8")
         depends_on("py-pytz@2015.7:", when="@2.7:2.11")
         depends_on("py-pytz", when="@2.1:2.6")
         depends_on("py-setuptools", when="@2.13.1:2.13 ^python@3.12:")
+    # END DEPENDENCIES
 

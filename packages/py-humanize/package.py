@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHumanize(PythonPackage):
+    # BEGIN VERSIONS
     version("4.9.0", sha256="ce284a76d5b1377fd8836733b983bfb0b76f1aa1c090de2566fcf008d7f6ab16", url="https://pypi.org/packages/aa/2b/2ae0c789fd08d5b44e745726d08a17e6d3d7d09071d05473105edc7615f2/humanize-4.9.0-py3-none-any.whl")
     version("4.8.0", sha256="8bc9e2bb9315e61ec06bf690151ae35aeb65651ab091266941edf97c90836404", url="https://pypi.org/packages/4a/52/cccfc7a0d3bcf52cca6f6e1792786075df979346d638bf4cf5bc8bf2be3c/humanize-4.8.0-py3-none-any.whl")
     version("4.7.0", sha256="df7c429c2d27372b249d3f26eb53b07b166b661326e0325793e0a988082e3889", url="https://pypi.org/packages/5e/81/60bbbb745b397fa56b82ec71ecbada00f574319b8f36c5f53c6c0c0c0601/humanize-4.7.0-py3-none-any.whl")
@@ -20,7 +20,12 @@ class PyHumanize(PythonPackage):
     version("4.0.0", sha256="8d86333b8557dacffd4dce1dbe09c81c189e2caf7bb17a970b2212f0f58f10f2", url="https://pypi.org/packages/89/8a/eea987b881522536af2a8fc008214a2bf1ac14b61ae483643165cedbbf35/humanize-4.0.0-py3-none-any.whl")
     version("3.12.0", sha256="4c71c4381f0209715cd993058e717c1b74d58ae2f8c6da7bdb59ab66473b9ab0", url="https://pypi.org/packages/fd/5e/9840102591431f86c2e99c5a8e4f18bb399f9f2e982b0dbba87c98ae800f/humanize-3.12.0-py3-none-any.whl")
     version("0.5.1", sha256="a43f57115831ac7c70de098e6ac46ac13be00d69abbf60bdcac251344785bb19", url="https://pypi.org/packages/8c/e0/e512e4ac6d091fc990bbe13f9e0378f34cf6eecd1c6c268c9e598dcf5bb9/humanize-0.5.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-setuptools", when="@3:3.12")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyUmapLearn(PythonPackage):
+    # BEGIN VERSIONS
     version("0.5.5", sha256="c54d607364413eade968b73ba07c8b3ea14412817f53cd07b6f720ac957293c4", url="https://pypi.org/packages/4f/3c/a81281db93878bcd80da672a9b520674f930e0a18d73a2e4b23e8b176cb6/umap-learn-0.5.5.tar.gz")
     version("0.5.4", sha256="8cb2fa20b2493f9adbff3bfa3b3e3787f6d67d1547e688ea2bdc272b37d89e18", url="https://pypi.org/packages/6a/e4/d1be60ef2f558b0892f7b0b7f5457c4577fc5231d7c5831eb994c8a9b3ea/umap-learn-0.5.4.tar.gz")
     version("0.5.3", sha256="dbd57cb181c2b66d238acb5635697526bf24c798082daed0cf9b87f6a3a6c0c7", url="https://pypi.org/packages/e1/eb/dca6cfd872e8542fb57dd56ff2d5d67baed270aee6db739c6414d8d5b3b5/umap-learn-0.5.3.tar.gz")
@@ -17,5 +17,10 @@ class PyUmapLearn(PythonPackage):
     version("0.4.5", sha256="b12fb3518b9d8b0270fd0715a837a67f25a46d81cbb5e570bfbfce9b330a6f98", url="https://pypi.org/packages/1a/ac/02cb40c535a19b5b956b1d3fdf534612b0f5d0a729fb9bbc8b5a2bf093f3/umap-learn-0.4.5.tar.gz")
     version("0.4.4", sha256="7e4668915d170c5c444760a7d544a3107398a193f07cf420029eb9c732f3a6eb", url="https://pypi.org/packages/6b/85/8ffd8d76b5f825690535656cd6551a2b64fdc47adbb2bbc5e2fe62194918/umap-learn-0.4.4.tar.gz")
     version("0.4.3", sha256="e4ac9f537f05a0f511a318b63a15ad0b26a485a2d51b85c392f832bc1c28c4d9", url="https://pypi.org/packages/93/ac/838287c562b8f73448ea0d1a989e696d10ba401ce1eaeb64a227f2bca8c4/umap-learn-0.4.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

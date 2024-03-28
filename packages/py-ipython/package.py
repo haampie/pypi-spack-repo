@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIpython(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("8.22.2", sha256="3c86f284c8f3d8f2b6c662f885c4889a91df7cd52056fd02b7d8d6195d7f56e9", url="https://pypi.org/packages/2f/4c/a960e920f0566d46084b7dd03888c1fec2a86e9f09dddae3bedfaab1d459/ipython-8.22.2-py3-none-any.whl")
     version("8.22.1", sha256="869335e8cded62ffb6fac8928e5287a05433d6462e3ebaac25f4216474dd6bc4", url="https://pypi.org/packages/11/3e/956d40991c152010d71b38b1a9763edc8fe5944d360e1c256fae60cb9165/ipython-8.22.1-py3-none-any.whl")
     version("8.22.0", sha256="a3e962e1d42927f5825dab048f4de617f5856cf3272fff1cb9245bea0c785a46", url="https://pypi.org/packages/06/96/8e836e2144d294fe2db06b0529c30f723d8b3c0d75a4834309a03a00d9dd/ipython-8.22.0-py3-none-any.whl")
@@ -37,9 +37,13 @@ class PyIpython(PythonPackage):
     version("7.18.1", sha256="2e22c1f74477b5106a6fb301c342ab8c64bb75d702e350f05a649e8cb40a0fb8", url="https://pypi.org/packages/72/36/89e1bb437f4f2275c33acc6eb333ab2d1c64e732ad23d6f34825b512e1a3/ipython-7.18.1-py3-none-any.whl")
     version("7.5.0", sha256="54c5a8aa1eadd269ac210b96923688ccf01ebb2d0f21c18c3c717909583579a8", url="https://pypi.org/packages/a9/2e/41dce4ed129057e05a555a7f9629aa2d5f81fdcd4d16568bc24b75a1d2c9/ipython-7.5.0-py3-none-any.whl")
     version("7.3.0", sha256="5d3e020a6b5f29df037555e5c45ab1088d6a7cf3bd84f47e0ba501eeb0c3ec82", url="https://pypi.org/packages/14/3b/3fcf422a99a04ee493e6a4fc3014e3c8ff484a7feed238fef68bdc285085/ipython-7.3.0-py3-none-any.whl")
-    version("5.8.0", sha256="4bac649857611baaaf76bc82c173aa542f7486446c335fe1a6c05d0d491c8906", url="https://pypi.org/packages/41/a6/2d25314b1f9375639d8f8e0f8052e8cec5df511d3449f22c4f1c2d8cb3c6/ipython-5.8.0.tar.gz")
-    version("5.1.0", sha256="2db893efa27c237f314a4f28294279f5dabafff1d0a7bbb45f95e44edb17810c", url="https://pypi.org/packages/d4/0b/70c913ed4c99eb84c589e5e25b28985ba93ca2a57e08959bb14372f7f5f8/ipython-5.1.0.zip")
+    version("5.8.0", sha256="0371b7e4bd74954a35086eac949beeac5b1c9f5ce231e2e77df2286a293765e3", url="https://pypi.org/packages/3c/01/72cfbf8d195f98cff18e7b160c5c3b5e3fb71ad7be08e630f6ba0793c561/ipython-5.8.0-py3-none-any.whl")
+    version("5.1.0", sha256="4452b99ed28453c68dbd2765899d3df8fa5b2bb98dcceb2028ca9c0ccbcc37eb", url="https://pypi.org/packages/66/d3/8830812574574c39f97bd6390475ba76294ed70cf489995dd30bd9b38245/ipython-5.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.10:", when="@8.19:")
         depends_on("python@3.9:", when="@8.13.1:8.18")
@@ -78,4 +82,5 @@ class PyIpython(PythonPackage):
         depends_on("py-traitlets@4.2:", when="@5:7")
         depends_on("py-typing-extensions", when="@8.12: ^python@:3.9")
         depends_on("py-win-unicode-console@0.5:", when="@5.0.0-rc1:5.1 platform=windows")
+    # END DEPENDENCIES
 

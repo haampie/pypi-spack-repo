@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAlabaster(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.16", sha256="b46733c07dce03ae4e150330b975c75737fa60f0a7c591b6c8bf4928a28e2c92", url="https://pypi.org/packages/32/34/d4e1c02d3bee589efb5dfa17f88ea08bdb3e3eac12bc475462aec52ed223/alabaster-0.7.16-py3-none-any.whl")
     version("0.7.15", sha256="d99c6fd0f7a86fca68ecc5231c9de45227991c10ee6facfb894cf6afb953b142", url="https://pypi.org/packages/a8/11/a3159174442867ea12826e60a9f1d6f6299c2ae3f896d2a47566ab826686/alabaster-0.7.15-py3-none-any.whl")
     version("0.7.14", sha256="bae0286b61103c84f426bd21faaca8624725a089cf640d95f9ab9901c897fc9f", url="https://pypi.org/packages/42/9b/3db2373bee67e39e343ee411f405ec991413986c1ce345377bea04103fe4/alabaster-0.7.14-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyAlabaster(PythonPackage):
     version("0.7.9", sha256="d3e64a74919373d6d4d1d36bd717206584cb64cbb0532dfce3bc2081cba6817b", url="https://pypi.org/packages/5d/da/2e59e6b040f1062843eb9e874f504bc6779053b77da5d1ed7f1b46618e13/alabaster-0.7.9-py2.py3-none-any.whl")
     version("0.7.8", sha256="e86ae2eb1a0297454ce6bbe94414fbb272ed9f148b9ca5344dc213164e0d3d74", url="https://pypi.org/packages/a4/c6/dd6bd26e13ae655e70f6f79acd46e86a3abd4e308083c4daae5a80ccb122/alabaster-0.7.8-py2.py3-none-any.whl")
     version("0.7.7", sha256="d57602b3d730c2ecb978a213face0b7a16ceaa4a263575361bd4fd9e2669a544", url="https://pypi.org/packages/25/e6/86e30d0d818955e92ee37c64f92a7a3b2cb4bbdd07a7e74a6a7c028c1f3a/alabaster-0.7.7-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.7.14:")
+    # END DEPENDENCIES
 

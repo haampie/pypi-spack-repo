@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyBackportsOs(PythonPackage):
-    version("0.1.1", sha256="b472c4933094306ca08ec90b2a8cbb50c34f1fb2767775169a1c1650b7b74630", url="https://pypi.org/packages/78/16/ffe0a1501ddc9a740b06ef30b63df9c2079c5a8f5358dac07b9053f293ea/backports.os-0.1.1.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.1.1", sha256="05b2801a021753d33e3402ac8857a3ba395eb7febbd7381fb27d880d07803061", url="https://pypi.org/packages/2b/e0/e7f8afefb8219e6b686722923db073b5bd54e1336b5a8b32da66c2edd0e8/backports.os-0.1.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

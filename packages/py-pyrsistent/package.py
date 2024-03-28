@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyrsistent(PythonPackage):
+    # BEGIN VERSIONS
     version("0.20.0", sha256="4c48f78f62ab596c679086084d0dd13254ae4f3d6c72a83ffdf5ebdef8f265a4", url="https://pypi.org/packages/ce/3a/5031723c09068e9c8c2f0bc25c3a9245f2b1d1aea8396c787a408f2b95ca/pyrsistent-0.20.0.tar.gz")
     version("0.19.3", sha256="1a2994773706bbb4995c31a97bc94f1418314923bd1048c6d964837040376440", url="https://pypi.org/packages/bf/90/445a7dbd275c654c268f47fa9452152709134f61f09605cf776407055a89/pyrsistent-0.19.3.tar.gz")
     version("0.19.2", sha256="bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2", url="https://pypi.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz")
@@ -20,5 +20,10 @@ class PyPyrsistent(PythonPackage):
     version("0.16.1", sha256="aa2ae1c2e496f4d6777f869ea5de7166a8ccb9c2e06ebcf6c7ff1b670c98c5ef", url="https://pypi.org/packages/80/18/1492d651693ef7d40e0a40377ed56a8cc5c5fe86073eb6c56e53513f4480/pyrsistent-0.16.1.tar.gz")
     version("0.16.0", sha256="28669905fe725965daa16184933676547c5bb40a5153055a8dee2a4bd7933ad3", url="https://pypi.org/packages/9f/0d/cbca4d0bbc5671822a59f270e4ce3f2195f8a899c97d0d5abb81b191efb5/pyrsistent-0.16.0.tar.gz")
     version("0.15.7", sha256="cdc7b5e3ed77bed61270a47d35434a30617b9becdf2478af76ad2c6ade307280", url="https://pypi.org/packages/90/aa/cdcf7ef88cc0f831b6f14c8c57318824c9de9913fe8de38e46a98c069a35/pyrsistent-0.15.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

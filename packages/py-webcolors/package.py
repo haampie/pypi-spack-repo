@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWebcolors(PythonPackage):
+    # BEGIN VERSIONS
     version("1.13", sha256="29bc7e8752c0a1bd4a1f03c14d6e6a72e93d82193738fa860cbff59d0fcc11bf", url="https://pypi.org/packages/d5/e1/3e9013159b4cbb71df9bd7611cbf90dc2c621c8aeeb677fc41dad72f2261/webcolors-1.13-py3-none-any.whl")
     version("1.12", sha256="d98743d81d498a2d3eaf165196e65481f0d2ea85281463d856b1e51b09f62dce", url="https://pypi.org/packages/af/a9/71beaebcacd7dd848af470740dbe7f39aa6bd23a60b8162f8c050090eed4/webcolors-1.12-py3-none-any.whl")
     version("1.11.1", sha256="b8cd5d865a25c51ff1218f0c90d0c0781fc64312a49b746b320cf50de1648f6e", url="https://pypi.org/packages/12/05/3350559de9714b202e443a9e6312937341bd5f79f4e4f625744295e7dd17/webcolors-1.11.1-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyWebcolors(PythonPackage):
     version("1.8.1", sha256="b3b88e5ef2b35fa9e01e3fabe99dddf49da074459c44774c59f3ccab3be4f121", url="https://pypi.org/packages/1d/44/c4902683be73beba20afd299705e11f0a753a01cc7f9d6a070841848605b/webcolors-1.8.1-py2.py3-none-any.whl")
     version("1.8", sha256="da3cb551060f46f417341b041b36d329d699c125a13a4412dde5c2e310d63344", url="https://pypi.org/packages/8d/79/91fdb622b9fdacd7acde3e65048857999981006720f0f4a1b8dfe66a7c46/webcolors-1.8.tar.gz")
     version("1.7", sha256="e47e68644d41c0b1f1e4d939cfe4039bdf1ab31234df63c7a4f59d4766487206", url="https://pypi.org/packages/1c/11/d9fb5a7c872a941ad8b30a4be191253d5a9028834c4d69eab55bb6bc60be/webcolors-1.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-six", when="@1.9:1.10")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkSyncservices(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="1c76073484924201336e6aab40f10358573bc640a92ed4066b8062c748957576", url="https://pypi.org/packages/b0/d6/bc6bca1b287612b899913e688d72b95a2e1a24107132b24bc66e7531edc9/pyobjc-framework-SyncServices-10.2.tar.gz")
     version("10.1", sha256="644d394b84468fa6178b5aa609771252ca416ca2be2bac5501222b3c5151846d", url="https://pypi.org/packages/c6/e5/198590bbde83390a6e63d932c157bb2812ffd5ad58d624ad62656bdd516e/pyobjc-framework-SyncServices-10.1.tar.gz")
     version("10.0", sha256="3060a5b66c42a276b3a5765f7c41fe6a80491685977b0f78b67ef2e8f2325673", url="https://pypi.org/packages/6c/e1/0e262b043ab749844866bf2f308758980e1a61cea32c97136940653d8097/pyobjc-framework-SyncServices-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkSyncservices(PythonPackage):
     version("9.0", sha256="3a62d69cd2f599ded5d616869c0f870e52f5574f5073c0e379744764d5138d98", url="https://pypi.org/packages/5c/ef/d920624f2b4270ba7cf6278bdd536036d694ecbf4efbe94a8d48ad2f04d4/pyobjc-framework-SyncServices-9.0.tar.gz")
     version("8.5.1", sha256="7eb9740709105bafc9d29eb3e400084aa9db34aaa578954fd2ad4484161aede5", url="https://pypi.org/packages/4a/58/50422a9dceaf318fdce78b3119c10c5e0cf92ea36dad929f5d315f0f6c68/pyobjc-framework-SyncServices-8.5.1.tar.gz")
     version("8.5", sha256="97d690570bb3d71b115b3b40a9983d7822b621e4c99bfd1e789c47ebceba8ce9", url="https://pypi.org/packages/5e/16/ea2fd44e5af6ad6a8821bfef6be90dbffec508d6c001331327c4815d8ae9/pyobjc-framework-SyncServices-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -28,4 +32,5 @@ class PyPyobjcFrameworkSyncservices(PythonPackage):
         depends_on("py-pyobjc-framework-coredata@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-coredata@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-coredata@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

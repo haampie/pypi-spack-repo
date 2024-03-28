@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGitpython(PythonPackage):
+    # BEGIN VERSIONS
     version("3.1.42", sha256="1bf9cd7c9e7255f77778ea54359e54ac22a72a5b51288c457c881057b7bb9ecd", url="https://pypi.org/packages/67/c7/995360c87dd74e27539ccbfecddfb58e08f140d849fcd7f35d2ed1a5f80f/GitPython-3.1.42-py3-none-any.whl")
     version("3.1.41", sha256="c36b6634d069b3f719610175020a9aed919421c87552185b085e04fbbdb10b7c", url="https://pypi.org/packages/45/c6/a637a7a11d4619957cb95ca195168759a4502991b1b91c13d3203ffc3748/GitPython-3.1.41-py3-none-any.whl")
     version("3.1.40", sha256="cf14627d5a8049ffbf49915732e5eddbe8134c3bdb9d476e6182b676fc573f8a", url="https://pypi.org/packages/8d/c4/82b858fb6483dfb5e338123c154d19c043305b01726a67d89532b8f8f01b/GitPython-3.1.40-py3-none-any.whl")
@@ -44,10 +44,15 @@ class PyGitpython(PythonPackage):
     version("3.1.0", sha256="43da89427bdf18bf07f1164c6d415750693b4d50e28fc9b68de706245147b9dd", url="https://pypi.org/packages/d3/2f/6a366d56c9b1355b0880be9ea66b166cb3536392638d8d91413ec66305ad/GitPython-3.1.0-py3-none-any.whl")
     version("3.0.9", sha256="ecf785b0b23bb6d28f5fff3d67cc4a07cb607e94476495d2a943d2e57d9fd473", url="https://pypi.org/packages/b5/b6/b56e9fa46e592769b00ba5402e570474829736db6ae869c70a1f7fa36d96/GitPython-3.0.9-py3-none-any.whl")
     version("0.3.6", sha256="f3f42ca085eedbd3a9956b5e639de58bbe77a119f6b3d5c3af27669a2322c4a9", url="https://pypi.org/packages/e9/d5/807cea9ffbfa398a23bbaff35d3fd37aa330c8c264c9489ed104b6192f74/GitPython-0.3.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-gitdb@4:", when="@3.1:")
         depends_on("py-gitdb2@3", when="@3.0.9:3.0")
         depends_on("py-typing-extensions@3.7.4.3:", when="@3.1.19:3.1.24 ^python@:3.9")
         depends_on("py-typing-extensions@3.7.4:", when="@3.1.15")
+    # END DEPENDENCIES
 

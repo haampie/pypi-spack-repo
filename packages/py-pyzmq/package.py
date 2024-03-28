@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyzmq(PythonPackage):
+    # BEGIN VERSIONS
     version("26.0.0-beta2", sha256="89d2ed84e3ee93e11eedc00eb291c787313ed03040c9b6ed9da6efe950cd64f5", url="https://pypi.org/packages/67/10/ab31a95f1733cddda6bbbff5f4a1e339b4390694d5cebe95c627500b1283/pyzmq-26.0.0b2.tar.gz")
     version("26.0.0-beta1", sha256="2ac03c7c6f6cc0237f34c4a78c7cb89d943b0d56bad2d1044879e17af5e01325", url="https://pypi.org/packages/a4/71/a44240bcd3e4d763aeba340358d5e1fbcb0aadbd77f73c1875d503faa1ec/pyzmq-26.0.0b1.tar.gz")
     version("25.1.2", sha256="93f1aa311e8bb912e34f004cf186407a4e90eec4f0ecc0efd26056bf7eda0226", url="https://pypi.org/packages/3a/33/1a3683fc9a4bd64d8ccc0290da75c8f042184a1a49c146d28398414d3341/pyzmq-25.1.2.tar.gz")
@@ -32,5 +32,10 @@ class PyPyzmq(PythonPackage):
     version("18.1.0", sha256="93f44739db69234c013a16990e43db1aa0af3cf5a4b8b377d028ff24515fbeb3", url="https://pypi.org/packages/7a/d2/1eb3a994374802b352d4911f3317313a5b4ea786bc830cc5e343dad9b06d/pyzmq-18.1.0.tar.gz")
     version("16.0.2", sha256="0322543fff5ab6f87d11a8a099c4c07dd8a1719040084b6ce9162bcdf5c45c9d", url="https://pypi.org/packages/af/37/8e0bf3800823bc247c36715a52e924e8f8fd5d1432f04b44b8cd7a5d7e55/pyzmq-16.0.2.tar.gz")
     version("14.7.0", sha256="77994f80360488e7153e64e5959dc5471531d1648e3a4bff14a714d074a38cc2", url="https://pypi.org/packages/8c/dd/fa50d34f3698058298e0d3d2817a25b491928e7fedfdf9e1c7e9d47c2d57/pyzmq-14.7.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

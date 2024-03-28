@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFlaskCompress(PythonPackage):
+    # BEGIN VERSIONS
     version("1.14", sha256="b86c9808f0f38ea2246c9730972cf978f2cdf6a9a1a69102ba81e07891e6b26c", url="https://pypi.org/packages/3f/d2/23fd656d38d4c896fa14371990b9978722c48a30d0edcf6b5f7054775a07/Flask_Compress-1.14-py3-none-any.whl")
     version("1.13", sha256="1128f71fbd788393ce26830c51f8b5a1a7a4d085e79a21a5cddf4c057dcd559b", url="https://pypi.org/packages/20/80/8cdb28e467d3ffdc221992145114a709c1e7c011b84c66bc250e27596286/Flask_Compress-1.13-py3-none-any.whl")
     version("1.12", sha256="9f4e40211755e86f85e5eb7d414856ef1e8751912caa78d62853169400335f0c", url="https://pypi.org/packages/d5/08/91ffc9506cb569f45cc4781ac8d35c6be19b9c3c8b1f8bc77aed56a46b53/Flask_Compress-1.12-py3-none-any.whl")
@@ -18,8 +18,13 @@ class PyFlaskCompress(PythonPackage):
     version("1.7.0", sha256="965e832684160871b5268f97879c5e85a88569cc6e3e353a7779215664eefdad", url="https://pypi.org/packages/de/eb/6bb0f8cb872167752eab8b06b67724566342de873dcfd85faaf7761944d9/Flask-Compress-1.7.0.tar.gz")
     version("1.6.0", sha256="2d551211eca86e684c170491c857692b6c4c94a147ab6b41995decac8ee63567", url="https://pypi.org/packages/2f/83/dfac4e00a20b094a6c7870e97fc30e3e9e2eedc41c1d02c13d0539810dc2/Flask-Compress-1.6.0.tar.gz")
     version("1.4.0", sha256="468693f4ddd11ac6a41bca4eb5f94b071b763256d54136f77957cfee635badb3", url="https://pypi.org/packages/0e/2a/378bd072928f6d92fd8c417d66b00c757dc361c0405a46a0134de6fd323d/Flask-Compress-1.4.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-brotli", when="@1.8:")
         depends_on("py-flask", when="@1.8:")
+    # END DEPENDENCIES
 

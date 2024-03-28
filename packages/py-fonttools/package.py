@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFonttools(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.38.0", sha256="820466f43c8be8c3009aef8b87e785014133508f0de64ec469e4efb643ae54fb", url="https://pypi.org/packages/e3/d9/e9bae85e84737e76ebbcbea13607236da0c0699baed0ae4f1151b728a608/fonttools-4.38.0-py3-none-any.whl")
     version("4.37.4", sha256="afae1b39555f9c3f0ad1f0f1daf678e5ad157e38c8842ecb567951bf1a9b9fd7", url="https://pypi.org/packages/59/73/d8f2d961ecd548685d770fb005e355514573d2108d8ed9460d7a1f1870b5/fonttools-4.37.4-py3-none-any.whl")
     version("4.37.3", sha256="a5bc5f5d48faa4085310b8ebd4c5d33bf27c6636c5f10a7de792510af2745a81", url="https://pypi.org/packages/cc/1c/ed3d02ee49952bab33318269bbc316cde6b92205ca77224e558de76f1cd6/fonttools-4.37.3-py3-none-any.whl")
@@ -21,5 +21,10 @@ class PyFonttools(PythonPackage):
     version("4.29.1", sha256="1933415e0fbdf068815cb1baaa1f159e17830215f7e8624e5731122761627557", url="https://pypi.org/packages/1d/46/65a58d7b92905e2767000b3f6eb1d0301e9ed7d459d14461075c1db63349/fonttools-4.29.1-py3-none-any.whl")
     version("4.28.1", sha256="68071406009e7ef6a5fdcd85d95975cd6963867bb226f2b786bfffe15d1959ef", url="https://pypi.org/packages/42/98/897d6a04ca4a3927dcd6f1237c5d5c49e068962fd4f2c015463a50ba07ed/fonttools-4.28.1-py3-none-any.whl")
     version("4.26.2", sha256="47ce4aedc815a9d101d3b522c580264ca7e4a921cca6183ed460ad2c65d46f98", url="https://pypi.org/packages/a4/73/0364d5ce3cb43b3568fc756b86a633ad1f4c7f6d9a380fb39b9f21d6fb93/fonttools-4.26.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

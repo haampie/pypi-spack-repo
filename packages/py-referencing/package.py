@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyReferencing(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.34.0", sha256="d53ae300ceddd3169f1ffa9caf2cb7b769e92657e4fafb23d34b93679116dfd4", url="https://pypi.org/packages/42/8e/ae1de7b12223986e949bdb886c004de7c304b6fa94de5b87c926c1099656/referencing-0.34.0-py3-none-any.whl")
     version("0.33.0", sha256="39240f2ecc770258f28b642dd47fd74bc8b02484de54e1882b74b35ebd779bd5", url="https://pypi.org/packages/90/10/1c92edb0a0a14b67ff825bc338e74bc49ab27d3f3bae3f9a02838cba546f/referencing-0.33.0-py3-none-any.whl")
     version("0.32.1", sha256="7e4dc12271d8e15612bfe35792f5ea1c40970dadf8624602e33db2758f7ee554", url="https://pypi.org/packages/14/2a/0a9f649354cd2d40f6c4f16eadabd9727377e3b9bc2ccec6cb630d9a6765/referencing-0.32.1-py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyReferencing(PythonPackage):
     version("0.30.1", sha256="185d4a29f001c6e8ae4dad3861e61282a81cb01b9f0ef70a15450c45c6513a0d", url="https://pypi.org/packages/dd/95/eba31f9bd6d2a16246bce844c5ca7c5ba777f0b854cca05d75a2e4e78e09/referencing-0.30.1-py3-none-any.whl")
     version("0.30.0", sha256="c257b08a399b6c2f5a3510a50d28ab5dbc7bbde049bcaf954d43c446f83ab548", url="https://pypi.org/packages/ea/c3/f75f0ce2cdacca3d68a70b1756635092a1add1002e34afb4895b9fb62598/referencing-0.30.0-py3-none-any.whl")
     version("0.29.3", sha256="7e059500cac23dc5d7d11687291ab60ba1e77ccdf9739b039c1177c06304e98c", url="https://pypi.org/packages/e6/54/f8b868da0d8035cdcae74dbc581c36336ba94d5a1c994d0406d3a8890969/referencing-0.29.3-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@22.2:", when="@0.9:")
         depends_on("py-rpds-py@0.7:", when="@0.25:")
+    # END DEPENDENCIES
 

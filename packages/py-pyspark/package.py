@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyspark(PythonPackage):
+    # BEGIN VERSIONS
     version("3.5.1", sha256="dd6569e547365eadc4f887bf57f153e4d582a68c4b490de475d55b9981664910", url="https://pypi.org/packages/73/e5/c9eb78cc982dafb7b5834bc5c368fe596216c8b9f7c4b4ffa104c4d2ab8f/pyspark-3.5.1.tar.gz")
     version("3.5.0", sha256="d41a9b76bd2aca370a6100d075c029e22ba44c5940927877e9435a3a9c566558", url="https://pypi.org/packages/92/11/5c0f24537fa68624cb6271d2a8a8982e81bd05f5cb51e9d2d2a89baa0e1a/pyspark-3.5.0.tar.gz")
     version("3.4.2", sha256="088db1b8ff33a748b802f1710ff6f6dcef0e0f2cca7d69bbbe55b187a0d55c3f", url="https://pypi.org/packages/6f/bb/fc3f8e3d306a91ad65d33385b13ce0b9b7b653dbc369a55023e30c8f7e6d/pyspark-3.4.2.tar.gz")
@@ -21,5 +21,10 @@ class PyPyspark(PythonPackage):
     version("3.1.3", sha256="39ac641ef5559a3d1286154779fc990316e9934520853615ae4785c1af52d14b", url="https://pypi.org/packages/c0/87/b1ebdce4cd29459787a35d32eda8fb200302ac534c1348f9348496336c04/pyspark-3.1.3.tar.gz")
     version("3.1.2", sha256="5e25ebb18756e9715f4d26848cc7e558035025da74b4fc325a0ebc05ff538e65", url="https://pypi.org/packages/89/db/e18cfd78e408de957821ec5ca56de1250645b05f8523d169803d8df35a64/pyspark-3.1.2.tar.gz")
     version("3.0.1", sha256="38b485d3634a86c9a2923c39c8f08f003fdd0e0a3d7f07114b2fb4392ce60479", url="https://pypi.org/packages/f0/26/198fc8c0b98580f617cb03cb298c6056587b8f0447e20fa40c5b634ced77/pyspark-3.0.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMarkdown2(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.4.13", sha256="855bde5cbcceb9beda7c80efdf7f406c23e6079172c497fcfce22fdce998e892", url="https://pypi.org/packages/5a/09/a9ef8d5fe4b08bfd0dd133084deefcffc4b2a37a9ca35a22b48622d59262/markdown2-2.4.13-py2.py3-none-any.whl")
     version("2.4.12", sha256="98f47591006f0ace0644cbece03fed6f3845513286f6c6e9f8bcf6a575174e2c", url="https://pypi.org/packages/70/4c/674a82d120c2be454c792907fd81210f4d713eddb98c8b229c2c7f06bcf1/markdown2-2.4.12-py2.py3-none-any.whl")
     version("2.4.11", sha256="2fff5d8e9283218797c5db0e9caad14c4307839919297c5be6ae507d4eeaddbc", url="https://pypi.org/packages/c9/38/183d3c253b9dc884c9d698dd5d68f258d0f853726260362f0fa49400279d/markdown2-2.4.11-py2.py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyMarkdown2(PythonPackage):
     version("2.4.5", sha256="dad0842969293bdec3e740267feed9ffaaee18f9eba7024cac0ab42a4d0207eb", url="https://pypi.org/packages/71/d9/19edf5726b8267a3a731c9d5f98b935c0de48250fd2819342914c56f31a5/markdown2-2.4.5-py2.py3-none-any.whl")
     version("2.4.4", sha256="32845d9db23a93bf57d841d4fed085545499508dd4f0707317c547b07bbfab2d", url="https://pypi.org/packages/3b/83/3a32f2c06f210a32d8e217e98ba4f2ec2acfe75bbbf1371283acf8120e63/markdown2-2.4.4-py2.py3-none-any.whl")
     version("2.4.0", sha256="8d4ef4a2d090c99532069c4611a9a2b9bea6ae1fa29b6c3727c95d1e31a8f6c5", url="https://pypi.org/packages/5d/be/3924cc1c0e12030b5225de2b4521f1dc729730773861475de26be64a0d2b/markdown2-2.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

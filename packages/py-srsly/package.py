@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySrsly(PythonPackage):
+    # BEGIN VERSIONS
     version("2.4.8", sha256="b24d95a65009c2447e0b49cda043ac53fecf4f09e358d87a57446458f91b8a91", url="https://pypi.org/packages/59/7f/17259e0962bb9433f39aa99ec45fd36851961491c562bc2f8c731cc476a6/srsly-2.4.8.tar.gz")
     version("2.4.7", sha256="93c2cc4588778261ccb23dd0543b24ded81015dd8ab4ec137cd7d04965035d08", url="https://pypi.org/packages/3c/65/95b58400f96ff8db3a60e1dd0b8915790df9e9e87d72f91cd96f031358b3/srsly-2.4.7.tar.gz")
     version("2.4.6", sha256="47b41f323aba4c9c3311abf60e443c03a9efe9c69f65dc402d173c32f7744a6f", url="https://pypi.org/packages/7d/50/c5dcea9cba3f3d698a847bda584be85e414a4a5cdae8019c4a7f4434d377/srsly-2.4.6.tar.gz")
@@ -29,7 +29,12 @@ class PySrsly(PythonPackage):
     version("0.2.0", sha256="aa02e2a62093ef09d7904343ee7381b9c9bab5b4f06960dfbeaa12035d0f0a3e", url="https://pypi.org/packages/1e/5b/f83e478fbf44c0d04f182e56db0871a53f5096febb8eb0be7cec75dca73b/srsly-0.2.0.tar.gz")
     version("0.1.0", sha256="5cc0dc561fa70cf12d21d192990a48388a78c8062cd3dcadcf336fc1c3953ed1", url="https://pypi.org/packages/b0/63/b68061954228346cbab2c41adb36339678605c47da016f5c71c7ef65f510/srsly-0.1.0.tar.gz")
     version("0.0.7", sha256="f3a2948b088064f719918ef46a1f14ffbd3ccab4c639c4ecb65053814fb036ed", url="https://pypi.org/packages/84/59/6f276ab6d74888eed0e999d617101ed7357fc1ee073e9aac92d53260bd23/srsly-0.0.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-catalogue@2.0.3:2.0", when="@2.4.8:")
+    # END DEPENDENCIES
 

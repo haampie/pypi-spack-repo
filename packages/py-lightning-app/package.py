@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLightningApp(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.0", sha256="fdecdb2cfc8d7c472158ba08f2a417ee301e3ef8a0cdeb5791826a48bf69f712", url="https://pypi.org/packages/e9/fd/aacc30c97d17028fb6b8f4ef1bc0cbbe9dd23a8d248562d79748934d159a/lightning_app-0.7.0-py3-none-any.whl")
     version("0.6.3", sha256="966ed5a2a36f2da23c1757302817a0425b88bd3198a22523f21043bf1c15ad05", url="https://pypi.org/packages/5f/dc/9e07afc92c245d01e5428d8f2704ab0e934b07b7c835d0a7428f158b3e35/lightning_app-0.6.3-py3-none-any.whl")
     version("0.6.2", sha256="b2edd1dc4046fd99f06d0313ae46339a4736822d960d896715a50d64a528f409", url="https://pypi.org/packages/5e/23/9fc5682eaa03be2ad0feaa783c711b6d73ec43f669a916b27988c3e02894/lightning_app-0.6.2-py3-none-any.whl")
@@ -20,7 +20,11 @@ class PyLightningApp(PythonPackage):
     version("0.5.3", sha256="60f528773f413e1362291bdbdf6b942774e33a51d47c5986518e14757b89911a", url="https://pypi.org/packages/47/97/e0e53dae88cf6524e67100694d6d45f8026d4b1af1232d350a81be43682c/lightning_app-0.5.3-py3-none-any.whl")
     version("0.5.2", sha256="d22d6c0412d092cc130094a3503c4ec70fe66389b6590eb6a9c95ba6e153cb42", url="https://pypi.org/packages/d7/64/3412302fcbfdc3dfd30cf982a547e9ce9c0163d5719ff335344841c3bb97/lightning_app-0.5.2-py3-none-any.whl")
     version("0.5.1", sha256="ce4cbbf907acaa08032e8e3caa15e77dfbc07295cab3bd8db84f094091830055", url="https://pypi.org/packages/d1/9b/9b1ebd416aff195fd70516a43bfe7ad002e440888c6012bdd59959ec1536/lightning_app-0.5.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-arrow@1.2:", when="@0.6:1.8")
         depends_on("py-beautifulsoup4", when="@0.6.3:1.8.2")
@@ -49,4 +53,5 @@ class PyLightningApp(PythonPackage):
         depends_on("py-traitlets@5.3:5.3.0.0,5.4:", when="@0.6.1:1.8")
         depends_on("py-traitlets", when="@0.5.1:0.6.0")
         depends_on("py-urllib3", when="@0.5:0.5.2")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMayavi(PythonPackage):
+    # BEGIN VERSIONS
     version("4.8.1", sha256="9f427ef2ca6c91ae78d92d3689ba6beca24c8460e2706d8a1c9b84289ad3fd9e", url="https://pypi.org/packages/bc/1e/cd53cd7ec13768e571252f7ae6ec9c1e12ec04454691e666728234022ed5/mayavi-4.8.1.tar.gz")
     version("4.8.0", sha256="4c604361d9f5fa3b81be18d5bf14f30650b0ee38eed5bba16cc8a44394178f63", url="https://pypi.org/packages/8a/54/90dd60c62e685ee56bdfaa6a7af62b0c762568a962e3137fc954b4f845bc/mayavi-4.8.0.tar.gz")
     version("4.7.4", sha256="ec50e7ec6afb0f9224ad1863d104a0d1ded6c8deb13e720652007aaca2303332", url="https://pypi.org/packages/c3/72/e8b3abcb0cb87fcb3c096a7988125392cd7d0532de82b25f2a838dafb63c/mayavi-4.7.4.tar.gz")
@@ -17,5 +17,10 @@ class PyMayavi(PythonPackage):
     version("4.6.2", sha256="7480f0f87c146888846b1a063893bb24549f4f01a4d602cf501074dda8724291", url="https://pypi.org/packages/83/9e/293ba57353ed258c2f64d54bf00ca1447c1f38f4eb60d0e762ddec57bf51/mayavi-4.6.2.tar.bz2")
     version("4.6.1", sha256="588264ced9c05a2b178f50c78fadd51443a2a069695e787fb2dfa0aa875438c0", url="https://pypi.org/packages/36/8f/ab9555a37ab7c30560928c2eb0a9715f4492a11536f057aada019a319661/mayavi-4.6.1.tar.bz2")
     version("4.6.0", sha256="19d27dad02a6dcc0aeec476bbbded9bab6fe958f4f1c824afaf58b3958ed836e", url="https://pypi.org/packages/ff/05/1d38b1fd6ce1779e063b1f3a993552fb975e4e738ae197065f08b8c5f9fd/mayavi-4.6.0.tar.bz2")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

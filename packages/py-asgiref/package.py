@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAsgiref(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.8.1", sha256="3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47", url="https://pypi.org/packages/39/e3/893e8757be2612e6c266d9bb58ad2e3651524b5b40cf56761e985a28b13e/asgiref-3.8.1-py3-none-any.whl")
     version("3.8.0", sha256="30fc07797ad71a0abb8fe34aa03c8043308a8389abc7942d797ea9911540bc28", url="https://pypi.org/packages/15/1e/c8a0cae47d0e10a241c40d4eaf32ae555a968cccbe297192223c7246ac8c/asgiref-3.8.0-py3-none-any.whl")
     version("3.7.2", sha256="89b2ef2247e3b562a16eef663bc0e2e703ec6468e2fa8a5cd61cd449786d4f6e", url="https://pypi.org/packages/9b/80/b9051a4a07ad231558fcd8ffc89232711b4e618c15cb7a392a17384bbeef/asgiref-3.7.2-py3-none-any.whl")
@@ -27,8 +27,13 @@ class PyAsgiref(PythonPackage):
     version("3.2.0", sha256="abfe78df4bdefdbdc6902b1900c14e60b4cd7fea2ce218b5f12d998a46a9eb18", url="https://pypi.org/packages/fb/58/27f90221f17bbda171d345f06009749004b60aea53a723443903bd99673d/asgiref-3.2.0-py2.py3-none-any.whl")
     version("3.1.4", sha256="b718a9d35e204a96e2456c2271b0ef12e36124c363b3a8fd1d626744f23192aa", url="https://pypi.org/packages/ce/2e/dd4b5afc37d595fc44def4f365cc8ee080a4962a0eb1e05e79da65a8e074/asgiref-3.1.4-py2.py3-none-any.whl")
     version("3.1.3", sha256="34227987327d13bc4b19d338faa6fed8a25cea79cca2e9e50490d212f56470f8", url="https://pypi.org/packages/c2/c4/db607d2dcdd1d88763528de1066dec9f36cca470c1d101de5cc35c90b0b9/asgiref-3.1.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-typing-extensions@4:", when="@3.7.1: ^python@:3.10")
         depends_on("py-typing-extensions", when="@3.7:3.7.0 ^python@:3.10")
+    # END DEPENDENCIES
 

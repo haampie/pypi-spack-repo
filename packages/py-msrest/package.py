@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMsrest(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.1", sha256="21120a810e1233e5e6cc7fe40b474eeb4ec6f757a15d7cf86702c369f9567c32", url="https://pypi.org/packages/15/cf/f2966a2638144491f8696c27320d5219f48a072715075d168b31d3237720/msrest-0.7.1-py3-none-any.whl")
     version("0.7.0", sha256="59b06d168ea11448b79921be0760f488347e140d69fb2c2b9f37000615ca4a39", url="https://pypi.org/packages/88/08/fea1a9f515e0ce7bc86560485efaec1b16d7f066441a52fa8670b76e62d4/msrest-0.7.0-py2.py3-none-any.whl")
     version("0.6.21", sha256="c840511c845330e96886011a236440fafc2c9aff7b2df9c0a92041ee2dee3782", url="https://pypi.org/packages/e8/cc/6c96bfb3d3cf4c3bdedfa6b46503223f4c2a4fa388377697e0f8082a4fed/msrest-0.6.21-py2.py3-none-any.whl")
@@ -25,11 +25,16 @@ class PyMsrest(PythonPackage):
     version("0.5.2", sha256="d31d956683ceb00184185d156214d3b21b6dd8e35f33f86aa9aedb6c5b48bac5", url="https://pypi.org/packages/7a/6e/b03d37c1b30b82d235de2b358839864986ae5721940e1ed5e45b4f550668/msrest-0.5.2-py2.py3-none-any.whl")
     version("0.5.1", sha256="c17405bd07c3c9e70aea002faa86f5ee2fab2e53050e0cfefda7c634fe661d53", url="https://pypi.org/packages/93/d4/e82b67cbfc117ba2d45d8c515f0650273c22a77c913fea220eb0ed4aa2bd/msrest-0.5.1-py2.py3-none-any.whl")
     version("0.5.0", sha256="42549175aa25d6243d0df6d77d9a3837fa2eda2c547713e882ef82ff0719ee6e", url="https://pypi.org/packages/63/40/20aa720915463bd4e4ea6c979c5501ddbee4e9dbbe0fb3267d18aca12ebd/msrest-0.5.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azure-core@1.24:", when="@0.7:")
         depends_on("py-certifi@2017.4:", when="@0.4.8:")
         depends_on("py-isodate@0.6:", when="@0.4.26:")
         depends_on("py-requests@2.16:", when="@0.5:")
         depends_on("py-requests-oauthlib@0.5:", when="@0.0.2:")
+    # END DEPENDENCIES
 

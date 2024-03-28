@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRapidfuzz(PythonPackage):
+    # BEGIN VERSIONS
     version("3.7.0", sha256="620df112c39c6d27316dc1e22046dc0382d6d91fd60d7c51bd41ca0333d867e9", url="https://pypi.org/packages/65/75/e52ee00ebf8c13f8ca60b61641dfc1b8786b0d0d2fd4065cb337c861fe3e/rapidfuzz-3.7.0.tar.gz")
     version("3.6.2", sha256="cf911e792ab0c431694c9bf2648afabfd92099103f2e31492893e078ddca5e1a", url="https://pypi.org/packages/11/7c/36511ff0e2e5f6cce4e854dfc1974a1519929214a38a165322f38dd01a19/rapidfuzz-3.6.2.tar.gz")
     version("3.6.1", sha256="35660bee3ce1204872574fa041c7ad7ec5175b3053a4cb6e181463fc07013de7", url="https://pypi.org/packages/d4/f4/039e35e99c967100d73616ec08d4c02325f67e0d5c32a6d5a49a7f620942/rapidfuzz-3.6.1.tar.gz")
@@ -29,5 +29,10 @@ class PyRapidfuzz(PythonPackage):
     version("2.13.2", sha256="1c67007161655c59e13bba130a2db29d7c9e5c81bcecb8846a3dd7386065eb24", url="https://pypi.org/packages/7a/85/b880d556130d19ac415bfaf1af9406263f7597b5b7ba062db1f532e587b9/rapidfuzz-2.13.2.tar.gz")
     version("2.2.0", sha256="acb8839aac452ec61a419fdc8799e8a6e6cd21bed53d04678cdda6fba1247e2f", url="https://pypi.org/packages/80/2a/0841832a010c57b69a1d515fb9725ada03367a0d028acc960e65e6c31f5f/rapidfuzz-2.2.0.tar.gz")
     version("1.8.2", sha256="d6efbb2b6b18b3a67d7bdfbcd9bb72732f55736852bbef823bdf210f9e0c6c90", url="https://pypi.org/packages/21/c5/92864654ef66a451fd9d014213f56d9e9b62bde7415f6962e2ea51ae6d07/rapidfuzz-1.8.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAwkward(PythonPackage):
+    # BEGIN VERSIONS
     version("2.6.2", sha256="c79c293a7f278ba316959b2246f682f338a4e5caff152bd9b4c45cc7ff8dc0e1", url="https://pypi.org/packages/18/9c/02978c408c7f93f3162e0c6b2f94f50fc0c89261277a948b72c693f642b4/awkward-2.6.2-py3-none-any.whl")
     version("2.6.1", sha256="9a48d366a42ad4d54f383c3202395db36472eb426e64ff9f09eaf0286516df36", url="https://pypi.org/packages/68/98/fe8f0108b2ca85f198b54660336c6221018a99eef64522a38c1975e248ba/awkward-2.6.1-py3-none-any.whl")
     version("2.6.0", sha256="715874cb667d0c2071cc35072c21767297020e76722852543322a1d96de42a57", url="https://pypi.org/packages/fe/ee/572155eb9f4a36cc1b0b82b2580c657e445d3e303da097df3bae6aa687f2/awkward-2.6.0-py3-none-any.whl")
@@ -45,7 +45,11 @@ class PyAwkward(PythonPackage):
     version("1.2.2", sha256="89f126a072d3a6eee091e1afeed87e0b2ed3c34ed31a1814062174de3cab8d9b", url="https://pypi.org/packages/4d/6a/59a260ba06f088a8885d52c9db26a64428831f406bc5770f70c14c23722d/awkward-1.2.2.tar.gz")
     version("1.1.2", sha256="4ae8371d9e6d5bd3e90f3686b433cebc0541c88072655d2c75ec58e79b5d6943", url="https://pypi.org/packages/88/82/f13c3c09b1295d1a4e5d449eb0d27a2d4513429f12059a3ca7c737ebe478/awkward-1.1.2.tar.gz")
     version("1.0.2", sha256="3468cb80cab51252a1936e5e593c7df4588ea0e18dcb6fb31e3d2913ba883928", url="https://pypi.org/packages/21/0a/9988d6c23a2d12d64552f9436bace86e1c6cb441ad3017386a312d4c51c4/awkward-1.0.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-awkward-cpp@30", when="@2.6.2")
         depends_on("py-awkward-cpp@29", when="@2.6:2.6.1")
@@ -73,4 +77,5 @@ class PyAwkward(PythonPackage):
         depends_on("py-numpy@1.14.5:", when="@2.0.0-rc5:2.0")
         depends_on("py-packaging", when="@1.10.5:1,2.0.0-rc4:")
         depends_on("py-typing-extensions@4.1:", when="@2.0.0-rc5: ^python@:3.10")
+    # END DEPENDENCIES
 

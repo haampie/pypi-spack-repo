@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAliyunPythonSdkCore(PythonPackage):
+    # BEGIN VERSIONS
     version("2.15.0", sha256="edc4555488d8a9f1c61bd419c7be27b23974b2a052971b4614fcd229eaeeb382", url="https://pypi.org/packages/cf/0f/c191007d4a0c068725009489d7f928614151da938598b875568a6323cff2/aliyun-python-sdk-core-2.15.0.tar.gz")
     version("2.14.0", sha256="c806815a48ffdb894cc5bce15b8259b9a3012cc0cda01be2f3dfbb844f3f4f21", url="https://pypi.org/packages/1e/e3/8623c0305022610466ded2b0010a7221e9585046116263dd27cb2e56df36/aliyun-python-sdk-core-2.14.0.tar.gz")
     version("2.13.36", sha256="20bd54984fa316da700c7f355a51ab0b816690e2a0fcefb7b5ef013fed0da928", url="https://pypi.org/packages/55/5a/6eec6c6e78817e5ca2afee661f2bbb33dbcfa2ce09a2980b52223323bd2e/aliyun-python-sdk-core-2.13.36.tar.gz")
@@ -17,5 +17,10 @@ class PyAliyunPythonSdkCore(PythonPackage):
     version("2.13.31", sha256="fc2b23b9e259f68e99c8f52bd8321041024a70ca8bcfa7321999e071ab50f4f7", url="https://pypi.org/packages/9d/59/19f12ecc7e44fbb484af318f9ef1a2e2294a2e478c844c6f990a63f299d8/aliyun-python-sdk-core-2.13.31.tar.gz")
     version("2.13.30", sha256="b32632e2ce60ebf66a23039ebe43a2dc8ed8c9423684590837801909faa39e47", url="https://pypi.org/packages/31/3b/478b25cf081a266b25720cb5dc7185a8ba61b6e47bc6855edb9227a0f801/aliyun-python-sdk-core-2.13.30.tar.gz")
     version("2.13.29", sha256="019fbe5e1727adaeff8b063b70bc7df2cbf9c91a2ea0c83a1e5849c0de470806", url="https://pypi.org/packages/3d/28/a149b3ddd6fbb483e91ad1861ec2aac5509245add5f1566fb5535444a223/aliyun-python-sdk-core-2.13.29.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

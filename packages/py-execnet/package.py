@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyExecnet(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.2", sha256="88256416ae766bc9e8895c76a87928c0012183da3cc4fc18016e6f050e025f41", url="https://pypi.org/packages/e8/9c/a079946da30fac4924d92dbc617e5367d454954494cf1e71567bcc4e00ee/execnet-2.0.2-py3-none-any.whl")
     version("2.0.1", sha256="eb9d131005116496240eabb9682a580c11e46071b7e873fdc30e4251d5e7945c", url="https://pypi.org/packages/38/39/b999208ba22a6ede2254e2f91808641aaebcc0ceb876cb7fd79380b3800b/execnet-2.0.1-py3-none-any.whl")
     version("2.0.0", sha256="9e30983ff42c20bac5b18807910512058b12a79f6bccddd9ce813bf22b079a9c", url="https://pypi.org/packages/c0/6f/a42c78f48715a1462d557a460a8647c90023b20d06d981fd547b8525f799/execnet-2.0.0-py3-none-any.whl")
@@ -18,7 +18,12 @@ class PyExecnet(PythonPackage):
     version("1.6.1", sha256="64dcdc248d007060f6f6500e7c79a4f87ee692063e3ec51e9bebf30ef2ea21d7", url="https://pypi.org/packages/9a/73/5be9d235327b3770c330bed707766c8885e8157577db85f11b874b26da34/execnet-1.6.1-py2.py3-none-any.whl")
     version("1.6.0", sha256="027ee5d961afa01e97b90d6ccc34b4ed976702bc58e7f092b3c513ea288cb6d2", url="https://pypi.org/packages/77/1a/f69e1f73bc36f55d3273afd1c52936def71ac67d9c5215be3a4ca3a45577/execnet-1.6.0-py2.py3-none-any.whl")
     version("1.4.1", sha256="d2b909c7945832e1c19cfacd96e78da68bdadc656440cfc7dfe59b766744eb8c", url="https://pypi.org/packages/07/16/51d99ff02e7b03dfdf407b05c157b8d578e23fb0404a640c0ef57ce708e9/execnet-1.4.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-apipkg@1.4:", when="@1.4:1.8")
+    # END DEPENDENCIES
 

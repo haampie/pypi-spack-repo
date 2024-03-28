@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyPapermill(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.4.0", sha256="baa76f0441257d9a25b3ad7c895e761341b94f9a70ca98cf419247fc728932d9", url="https://pypi.org/packages/a2/e2/2f02a7aa739b4a03d20032d2f711e9eb0fd52202debd6df54518eab4403e/papermill-2.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ansiwrap", when="@0.8.8:0.13.2,0.13.4:2.4.0")
         depends_on("py-azure-datalake-store@0.0.30:", when="@0.15:0.17")
@@ -22,4 +26,5 @@ class PyPapermill(PythonPackage):
         depends_on("py-requests", when="@0.11:0.13.2,0.13.4:")
         depends_on("py-tenacity", when="@0.19.1:2.4.0")
         depends_on("py-tqdm@4.32.2:", when="@1.1:")
+    # END DEPENDENCIES
 

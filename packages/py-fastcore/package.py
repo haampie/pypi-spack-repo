@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFastcore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.5.29", sha256="a7d7e89faf968f2d8584df2deca344c3974f6cf476e1299cd3c067d8fa7440e9", url="https://pypi.org/packages/39/b8/3059245adb5e4421222aab3852ac7f47d68eba82c8c62b88928ec1c69431/fastcore-1.5.29-py3-none-any.whl")
     version("1.5.28", sha256="8547b108a348d705ce04949bd327d9ad7871aacf35bce44f20bc475d1d9fa124", url="https://pypi.org/packages/51/88/488fc7f9a051e9681a7f9c0f89f20fcf58ab9413e8aa2f272c785179c872/fastcore-1.5.28-py3-none-any.whl")
     version("1.5.27", sha256="79dffaa3de96066e4d7f2b8793f1a8a9468c82bc97d3d48ec002de34097b2a9f", url="https://pypi.org/packages/a6/f7/d622436fb6dce10dce17c348ea3b5bc1fd389b507039174be2a7967e1895/fastcore-1.5.27-py3-none-any.whl")
@@ -25,11 +25,16 @@ class PyFastcore(PythonPackage):
     version("1.3.24", sha256="cd5bde119e84bc598139d574579e6299d3fed33ed9c608f0ed051152ab579a3e", url="https://pypi.org/packages/b3/b8/d2ad78881d2843bd8cdcb6e6b79fcb37c1b984f8d1622a2b1d494f177413/fastcore-1.3.24-py3-none-any.whl")
     version("1.3.23", sha256="269755ed1ec9992cc2a0be34cc48169f37afbfeb21d02aad19bc7dcd7932093a", url="https://pypi.org/packages/1a/55/594e1cafccd18e890cbbba9b8f9652781612bfcb7fc81d3f06d1325377d6/fastcore-1.3.23-py3-none-any.whl")
     version("1.3.22", sha256="7fab78762a5425ecdc332daba1645c08ed5cb6c5b5d912c285f0de6d38784cf0", url="https://pypi.org/packages/82/3f/665013950d6d7ab514a561a615b7dc647b6d54d904469e15f78e55bce7b2/fastcore-1.3.22-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-matplotlib", when="@:0.0.1")
         depends_on("py-numpy", when="@:1.0.4")
         depends_on("py-packaging", when="@0.1.25:")
         depends_on("py-pandas", when="@:0.1.5")
         depends_on("py-pip", when="@0.1.25:")
+    # END DEPENDENCIES
 

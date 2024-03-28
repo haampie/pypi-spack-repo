@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPylint(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.1.0", sha256="507a5b60953874766d8a366e8e8c7af63e058b26345cfcb5f91f89d987fd6b74", url="https://pypi.org/packages/4d/2b/dfcf298607c73c3af47d5a699c3bd84ba580f1b8642a53ba2a53eead7c49/pylint-3.1.0-py3-none-any.whl")
     version("3.0.4", sha256="59ab3532506f32affefeb50d5057a221bb351f5a1383fa36c424c2c6c05e7005", url="https://pypi.org/packages/86/97/d4b9cf8ea5d8660f38ec6812c3a0c22562b6a5add9676f3841471859a971/pylint-3.0.4-py3-none-any.whl")
     version("3.0.3", sha256="7a1585285aefc5165db81083c3e06363a27448f6b467b3b0f30dbd0ac1f73810", url="https://pypi.org/packages/0b/59/289c76e3ebdaa2ce9910b366aea437dbc1e0e602a0a513abca757fc4997a/pylint-3.0.3-py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyPylint(PythonPackage):
     version("2.13.5", sha256="c149694cfdeaee1aa2465e6eaab84c87a881a7d55e6e93e09466be7164764d1e", url="https://pypi.org/packages/9f/53/e1d8da0d381e4a303cc812238e733073abdd9099525c42cb100b20faf8b9/pylint-2.13.5-py3-none-any.whl")
     version("2.11.1", sha256="0f358e221c45cbd4dad2a1e4b883e75d28acdcccd29d40c76eb72b307269b126", url="https://pypi.org/packages/37/42/948d1486727806df2e0016f1cfc2d3beafe289f96d53dfc85d967f79afc5/pylint-2.11.1-py3-none-any.whl")
     version("2.8.2", sha256="f7e2072654a6b6afdf5e2fb38147d3e2d2d43c89f648637baab63e026481279b", url="https://pypi.org/packages/10/f0/9705d6ec002876bc20b6923cbdeeca82569a895fc214211562580e946079/pylint-2.8.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-astroid@3.1:", when="@3.1:")
         depends_on("py-astroid@3.0.1:3.0", when="@3.0.2:3.0")
@@ -41,8 +45,8 @@ class PyPylint(PythonPackage):
         depends_on("py-colorama@0.4.5:", when="@2.14.3:2,3.0.0-alpha6: platform=windows")
         depends_on("py-colorama", when="@1.7.5:2.14.2,3:3.0.0-alpha5 platform=windows")
         depends_on("py-dill@0.3.7:", when="@3.0.0-alpha7: ^python@3.12:")
-        depends_on("py-dill@0.3.6:", when="@2.15.9:2.16.0.0,2.16.1:2,3.0.0-alpha6: ^python@3.11:")
         depends_on("py-dill@0.2:", when="@2.15.9:2.16.0.0,2.16.1:2,3.0.0-alpha6: ^python@:3.10")
+        depends_on("py-dill@0.3.6:", when="@2.15.9:2.16.0.0,2.16.1:2,3.0.0-alpha6: ^python@3.11:")
         depends_on("py-dill@0.2:", when="@2.13:2.15.8,2.16.0.dev:2.16.0,3.0.0-alpha5")
         depends_on("py-isort@4.2.5:5.12,5.13.1:5", when="@3.0.3:")
         depends_on("py-isort@4.2.5:5", when="@2:3.0.2")
@@ -53,4 +57,5 @@ class PyPylint(PythonPackage):
         depends_on("py-tomli@1.1:", when="@2.13:2,3.0.0-alpha5: ^python@:3.10")
         depends_on("py-tomlkit@0.10.1:", when="@2.14:2,3.0.0-alpha5:")
         depends_on("py-typing-extensions@3.10:", when="@2.11:2,3.0.0-alpha5: ^python@:3.9")
+    # END DEPENDENCIES
 

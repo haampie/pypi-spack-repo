@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySupervisor(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.2.5", sha256="2ecaede32fc25af814696374b79e42644ecaba5c09494c51016ffda9602d0f08", url="https://pypi.org/packages/2c/7a/0ad3973941590c040475046fef37a2b08a76691e61aa59540828ee235a6e/supervisor-4.2.5-py2.py3-none-any.whl")
     version("4.2.4", sha256="bbae57abf74e078fe0ecc9f30068b6da41b840546e233ef1e659a12e4c875af6", url="https://pypi.org/packages/3d/47/b4030b2b01f6c559bd528974cee72bee7fe75594b31cc3e064678a454548/supervisor-4.2.4-py2.py3-none-any.whl")
     version("4.2.3", sha256="515d3649314b1ee2dbc77a0b6c37780a57d7400490b687492c33e1db5fb7254e", url="https://pypi.org/packages/17/bd/67ca5b63c1c58530d64e859a9c0b8588d892f2603cba8f5b556bf52d0ebf/supervisor-4.2.3-py2.py3-none-any.whl")
@@ -17,8 +17,13 @@ class PySupervisor(PythonPackage):
     version("4.0.4", sha256="43e87c7b572a94acdb586aaebb06844dae1aa02856b984c5a738032abd753fb7", url="https://pypi.org/packages/a5/27/03ee384818f4fc5f678743bb20ac49c5b4fc9f531bd404dec4b61a8b5d42/supervisor-4.0.4-py2.py3-none-any.whl")
     version("4.0.3", sha256="a3289b9124e59aee1621d43b55cd1634468cb3212d09c5b0114a3183cc080cca", url="https://pypi.org/packages/3f/1c/78026a80b8ff35e7c14adb331efb28e6ff2964dbae7e8bd9c52ef7c377a0/supervisor-4.0.3-py2.py3-none-any.whl")
     version("4.0.2", sha256="cb16df95144b68f016d652a2311a47d0f8cd8935a524d77b7c490eae77c44989", url="https://pypi.org/packages/a3/cf/38490f22074863763c3cedddce893e5a2423ac144ec77a04d78a43b4ab75/supervisor-4.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-meld3@1:", when="@4:4.0")
         depends_on("py-setuptools", when="@4.2.3:")
+    # END DEPENDENCIES
 

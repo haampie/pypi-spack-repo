@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFlitCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.9.0", sha256="7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301", url="https://pypi.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl")
     version("3.8.0", sha256="64a29ec845164a6abe1136bf4bc5ae012bdfe758ed42fc7571a9059a7c80bd83", url="https://pypi.org/packages/04/ac/f91a0219e0d4162762f218e4876bf328f16e4d283e691cd7f42a02b22634/flit_core-3.8.0-py3-none-any.whl")
     version("3.7.1", sha256="e454fdbf68c7036e1c7435ec7479383f9d9a1650ca5b304feb184eba1efcdcef", url="https://pypi.org/packages/ad/38/80992c4cb490a05474c886850ec818276d09c0a6722bd5b43bc487818ac7/flit_core-3.7.1-py3-none-any.whl")
@@ -20,9 +20,14 @@ class PyFlitCore(PythonPackage):
     version("3.1.0", sha256="1d06e64a6af7e1fd1496563b160df29dd32714e00b473f3b763f6e6810476517", url="https://pypi.org/packages/ed/0c/50352b127c0936cd59dd762db41d0e17986401c42ba613fa502e926d33ec/flit_core-3.1.0-py3-none-any.whl")
     version("3.0.0", sha256="a787754978cfe3c192a5fc6baf2179ae85b05395804de7d7fe2864d9431e8d03", url="https://pypi.org/packages/a8/66/67758f788959c2557c4d0f80e4895c3c0802873be95b82a5213ea39542d7/flit_core-3.0.0-py3-none-any.whl")
     version("2.3.0", sha256="a8f8904b534966712390e0a2e434cd33f76037730a0aaed299a286f9e18cac2b", url="https://pypi.org/packages/4b/3c/82798771fc1fd978c9225c5ae25eef45cb23b0df4728f208024a5b57901f/flit_core-2.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pytoml", when="@2.0-rc2:3.0")
         depends_on("py-toml", when="@3.1:3.3")
         depends_on("py-tomli", when="@3.4:3.5")
+    # END DEPENDENCIES
 

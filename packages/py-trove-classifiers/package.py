@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTroveClassifiers(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.3.3", sha256="3a84096861b385ec422c79995d1f6435dde47a9b63adaa3c886e53232ba7e6e0", url="https://pypi.org/packages/bb/81/a16cb58f719e68d0cce72fb9afd6f0f50c0e474d7b8dc267c8309c3e2793/trove_classifiers-2024.3.3-py3-none-any.whl")
     version("2024.2.23", sha256="3094534b8021dc1822aadb1d11d4c7b62a854d464d19458fd0a49d6fe2b68b77", url="https://pypi.org/packages/56/45/6887993f3d1fd941fe129c8dc3aa648d5bd20e0e02c08f99df961fd1e908/trove_classifiers-2024.2.23-py3-none-any.whl")
     version("2024.2.22", sha256="42d63b69107462dfbfb2b0ce01f8738ca7900b89cfa7dc5478f0ce557ca22adb", url="https://pypi.org/packages/54/f8/e898f12a66f7828037e706b4c0e48796075c7f19439cdced4a24bad118ef/trove_classifiers-2024.2.22-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyTroveClassifiers(PythonPackage):
     version("2023.11.9", sha256="f9784ab55054bb327d0c8d33931fb2555b81e5b4868832490ab7959ae3ea9186", url="https://pypi.org/packages/69/39/ec2275fd5550d5a0d09fa07d319a9d62641af7677f791268075c74c767f2/trove_classifiers-2023.11.9-py3-none-any.whl")
     version("2023.8.7", sha256="a676626a31286130d56de2ea1232484df97c567eb429d56cfcb0637e681ecf09", url="https://pypi.org/packages/14/c6/35e478a586e857c2a6d31fc7b1586d4ff965f729a290552b5c2eb7b9f807/trove_classifiers-2023.8.7-py3-none-any.whl")
     version("2023.3.9", sha256="06fd10c95d285e7ddebd59e6a4ba299f03d7417d38d369248a4a40c9754a68fa", url="https://pypi.org/packages/c9/27/f1a53dbb6c5062bf216c3f145ec6f76c828c08b6ea843acda2eb2ba24b33/trove_classifiers-2023.3.9-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

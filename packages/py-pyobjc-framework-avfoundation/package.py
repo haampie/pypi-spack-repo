@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkAvfoundation(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="4d394014f2477c0c6a596dbb01ef5d92944058d0e0d954ce6121a676ae9395ce", url="https://pypi.org/packages/e1/10/f0867dcd21afac4edc6d6435e0ab65743503143a911de1ab80648346d3b4/pyobjc-framework-AVFoundation-10.2.tar.gz")
     version("10.1", sha256="07e065c6904fbd6afc434a79888461cdd4097b4153dd592dcbe9c8bef01ee701", url="https://pypi.org/packages/d6/98/e71002607a3b352bf9e9135b81fa8a43a40cc1cbcbd1e4b876c12158591f/pyobjc-framework-AVFoundation-10.1.tar.gz")
     version("10.0", sha256="40366a8c6bb964e7b7263e8cf060350f69ad365e6a5356d6ccab9f256a9987f7", url="https://pypi.org/packages/7e/6f/5623cecd7e1d57600582b9912caf204f2a1523e69b743b5f2d4fd13b9dc4/pyobjc-framework-AVFoundation-10.0.tar.gz")
@@ -18,7 +18,11 @@ class PyPyobjcFrameworkAvfoundation(PythonPackage):
     version("9.0", sha256="c7986e4fa46b25bcefb556458ea6c82f3eacce28be9c27da7f5f60b50b9ea3fc", url="https://pypi.org/packages/97/b5/52c9b5cd83de48171be988dac0129d0bcb41f243495aad1356cd1099b068/pyobjc-framework-AVFoundation-9.0.tar.gz")
     version("8.5.1", sha256="99ccd94c5e31a599310b2cee2eb9c0d77c61d1eab4b799157b8982956ca30a24", url="https://pypi.org/packages/41/e9/215fd9060e582d57fec6ba1c0cf8ee87ddd1458e33da4990c7ca7fbd5bac/pyobjc-framework-AVFoundation-8.5.1.tar.gz")
     version("8.5", sha256="5872245447703535c71839ee9db22472bc3dcf4a2468d72fb48b0e29933bb248", url="https://pypi.org/packages/8e/88/8fbfdddec5981a6eacb694f9eb6f86a8ef6a2ea39fedb1aaafbe69aab187/pyobjc-framework-AVFoundation-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -35,4 +39,5 @@ class PyPyobjcFrameworkAvfoundation(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-quartz@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-quartz@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

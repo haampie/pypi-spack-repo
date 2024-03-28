@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCorehaptics(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="c67fae4b543fc070cece622cfe5803796016a36d1020812428e0f22e5f5674aa", url="https://pypi.org/packages/03/f7/4f2ba6545cb17e589596d23256cc1a825ba1461e4d94a125dc28783c0c47/pyobjc_framework_CoreHaptics-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="ae6143c041b0846a58199826c0094cfb2fb9080f139c93e6b63f51a6b2766552", url="https://pypi.org/packages/82/5e/9d494b4f294115dc6a2bdfd027842b4e754338808d49994a9aaa9456a68f/pyobjc_framework_CoreHaptics-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="5c7bbc18db031be82bdbdde8f96045220a0309e200e8779bc7e361eb2d482892", url="https://pypi.org/packages/dc/51/f4dc751825330e3920f33e54e5dc3af5704bc1eb25d4358d2b4339256c95/pyobjc_framework_CoreHaptics-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkCorehaptics(PythonPackage):
     version("9.0", sha256="697e7f11b1db0060267dabadda91ee6b1d956bd7c5f2734d1739dcb1fc87eb47", url="https://pypi.org/packages/d5/8e/431cfe8e868d63daacf697317a9a0c3025d23b735237a674a05213535af0/pyobjc_framework_CoreHaptics-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="3c6fcd97f49b26d43e78063392280097ab39ea8114bf67a9f3e64ee03dde5efe", url="https://pypi.org/packages/88/7a/76e20defc9361933377d5c83e42451956a3ca399222ce468524e97e00609/pyobjc_framework_CoreHaptics-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="3b13b00d5d518a7cac3a24aaec1f2eb07b67d9658a5e4afc74d23658fba3b856", url="https://pypi.org/packages/68/b6/59357bf4d1a3253d2b97bbb2633f8225a5516a9d1062869aa1e2503cba9a/pyobjc_framework_CoreHaptics-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkCorehaptics(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PySnakemakeStoragePluginS3(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.2.10", sha256="8604e73694470e93d5736baae809dc17359292aced58894df370edaaf2231ece", url="https://pypi.org/packages/54/4f/5fc5b99425ed7af30d556a4d2e2c71b799cff49b3b1971da4b5fc05bccae/snakemake_storage_plugin_s3-0.2.10-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.11:", when="@0.2.3:")
         depends_on("python@3.9:", when="@:0.2.1")
@@ -17,4 +21,5 @@ class PySnakemakeStoragePluginS3(PythonPackage):
         depends_on("py-snakemake-interface-common@1.14:", when="@0.2.8:")
         depends_on("py-snakemake-interface-storage-plugins@3:", when="@0.2.7:")
         depends_on("py-urllib3@2.0.0:2.1", when="@0.2.10:")
+    # END DEPENDENCIES
 

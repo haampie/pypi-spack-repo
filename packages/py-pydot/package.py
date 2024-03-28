@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPydot(PythonPackage):
+    # BEGIN VERSIONS
     version("2.0.0", sha256="408a47913ea7bd5d2d34b274144880c1310c4aee901f353cf21fe2e526a4ea28", url="https://pypi.org/packages/7f/90/c9b51f3cdff89cd8f93382060330f43d1af098a6624cff439e700791e922/pydot-2.0.0-py3-none-any.whl")
     version("1.4.2", sha256="66c98190c65b8d2e2382a441b4c0edfdb4f4c025ef9cb9874de478fb0793a451", url="https://pypi.org/packages/ea/76/75b1bb82e9bad3e3d656556eaa353d8cd17c4254393b08ec9786ac8ed273/pydot-1.4.2-py2.py3-none-any.whl")
     version("1.4.1", sha256="67be714300c78fda5fd52f79ec994039e3f76f074948c67b5ff539b433ad354f", url="https://pypi.org/packages/33/d1/b1479a770f66d962f545c2101630ce1d5592d90cb4f083d38862e93d16d2/pydot-1.4.1-py2.py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyPydot(PythonPackage):
     version("1.2.2", sha256="04a97a885ed418dcc193135cc525fa356cad8b16719293295a149b30718ce400", url="https://pypi.org/packages/87/d0/3f3a3d2a57b2ca29ea37c93917a3b25858f4cccc5611767bcdef9770ccc7/pydot-1.2.2.tar.gz")
     version("1.1.0", sha256="469d2cf565994064236be24e87ab3571c1c1243fbc8d2ad836d16637d1a5049b", url="https://pypi.org/packages/da/9c/2ee9bed5653839c00252670b65b28c734803ff2d61e97e99ef58a4a4e715/pydot-1.1.0.tar.gz")
     version("1.0.29", sha256="3472c7fb21364c2f844477e0a6fc62424afbd12dbd593cfc96f6d7bbe44f1de9", url="https://pypi.org/packages/8d/ca/bed32e7ced110aeef48a223610e57382bc52a043e14de656de98a492546c/pydot-1.0.29.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyparsing@3.0.0:", when="@2:")
         depends_on("py-pyparsing@2.1.4:", when="@1.3:1")
+    # END DEPENDENCIES
 

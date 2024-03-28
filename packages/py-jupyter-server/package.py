@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterServer(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.13.0", sha256="77b2b49c3831fbbfbdb5048cef4350d12946191f833a24e5f83e5f8f4803e97b", url="https://pypi.org/packages/95/85/483b8e09a897d1bc2194646d30d4ce6ae166106e91ecbd11d6b6d9ccfc36/jupyter_server-2.13.0-py3-none-any.whl")
     version("2.12.5", sha256="184a0f82809a8522777cfb6b760ab6f4b1bb398664c5860a27cec696cb884923", url="https://pypi.org/packages/25/d6/6ee093c967d11144aeb1b0b4952d30e51da8eb2737837ab612084c783a58/jupyter_server-2.12.5-py3-none-any.whl")
     version("2.12.4", sha256="a125ae18a60de568f78f55c84dd58759901a18ef279abf0418ac220653ca1320", url="https://pypi.org/packages/f9/12/92ddd4af39e6c994722f6a016602647dbab74c3a2ff661b257e44f3ce27d/jupyter_server-2.12.4-py3-none-any.whl")
@@ -37,7 +37,13 @@ class PyJupyterServer(PythonPackage):
     version("1.10.2", sha256="491c920013144a2d6f5286ab4038df6a081b32352c9c8b928ec8af17eb2a5e10", url="https://pypi.org/packages/b0/3b/fc133648ef2f296e87ea13dd4709b0ac057fe9abb34c6e9e13731953f25f/jupyter_server-1.10.2-py3-none-any.whl")
     version("1.9.0", sha256="1a6bfcf4cd58a84dfe9d3060a76bf98428c08b8a177202fc0cadcec5f7d74090", url="https://pypi.org/packages/29/b7/7377d007118f7798b21362a6c0a0bf20c93cdc19345105276a862e1263d6/jupyter_server-1.9.0-py3-none-any.whl")
     version("1.6.1", sha256="ce7609d75c624d2e6b6eb9159ef019a0320cc55c3b77795ee295c3eb72a08425", url="https://pypi.org/packages/c8/12/05d6ec3576611696acc736dc80f0254f5b98cc19a38449a09f05b5517b52/jupyter_server-1.6.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("typescript", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anyio@3.1:", when="@1.15:1.16,2.2.1:")
         depends_on("py-anyio@3.1:3", when="@1.8:1.13,1.17:2.2.0")
@@ -82,4 +88,5 @@ class PyJupyterServer(PythonPackage):
         # marker: os_name == "nt"
         # depends_on("py-pywinpty", when="@1.15:")
         # depends_on("py-pywinpty@:1", when="@1.13.5:1.13")
+    # END DEPENDENCIES
 

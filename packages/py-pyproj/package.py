@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyproj(PythonPackage):
+    # BEGIN VERSIONS
     version("3.6.1", sha256="44aa7c704c2b7d8fb3d483bbf75af6cb2350d30a63b144279a09b75fead501bf", url="https://pypi.org/packages/7d/84/2b39bbf888c753ea48b40d47511548c77aa03445465c35cc4c4e9649b643/pyproj-3.6.1.tar.gz")
     version("3.6.1-rc0", sha256="1789ed7df0726d94dc61b32b29c4233c81f2967d21982980e836500bbc26dc7d", url="https://pypi.org/packages/4b/5e/83cbcac997b585d704bdd085e399b7e842c0d343ddddf64b355fb0b60801/pyproj-3.6.1rc0.tar.gz")
     version("3.6.0", sha256="a5b111865b3f0f8b77b3983f2fbe4dd6248fc09d3730295949977c8dcd988062", url="https://pypi.org/packages/38/77/46fe6a107b934fd23b903cb7402b69c8b2480a6cab9481d9f98c6dc7726e/pyproj-3.6.0.tar.gz")
@@ -26,8 +26,13 @@ class PyPyproj(PythonPackage):
     version("2.6.0", sha256="977542d2f8cf2981cf3ad72cedfebcd6ac56977c7aa830d9b49fa7888b56e83d", url="https://pypi.org/packages/c0/c2/8c7f27e57835782563715970ec73da41dffc5bb93622f86cc7c3626a9317/pyproj-2.6.0.tar.gz")
     version("2.2.0", sha256="0a4f793cc93539c2292638c498e24422a2ec4b25cb47545addea07724b2a56e5", url="https://pypi.org/packages/73/ef/53a7e9e98595baf4d7212aa731fcec256b432a3db60a55b58a027a4d9d47/pyproj-2.2.0.tar.gz")
     version("2.1.3", sha256="99c52788b01a7bb9a88024bf4d40965c0a66a93d654600b5deacf644775f424d", url="https://pypi.org/packages/a5/05/edfcfd0752e1e3fe5e06245863412bb9aa77888143f6c8900dea62aecdc2/pyproj-2.1.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@3.6:")
         depends_on("py-certifi", when="@3.6.1-rc0:")
+    # END DEPENDENCIES
 

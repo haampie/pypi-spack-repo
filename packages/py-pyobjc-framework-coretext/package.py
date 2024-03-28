@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkCoretext(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="59ef8ca8d88bb53ce9980dda0b8094daa3e2dabe355847365ba965ff0b49f961", url="https://pypi.org/packages/51/51/17409f0a85753e780893515d9a525eb291852428cac18839601161535553/pyobjc-framework-CoreText-10.2.tar.gz")
     version("10.1", sha256="b6a112e2ae8720be42af19e0fe9b866b43d7e9196726caa366d61d18294e6248", url="https://pypi.org/packages/3b/9c/77d12eb9ff0740a94677d719476c9cf7a482a62e4dfd78d91f58507c9ed1/pyobjc-framework-CoreText-10.1.tar.gz")
     version("10.0", sha256="2c157d82373b8128afb9a61df26cbf029896adf86bf86876ce3f8cc3c3f3cb1b", url="https://pypi.org/packages/b3/bd/4da5277e3fcfa374d0039fc4361e1a2e8d87332a6c5a195c3d0e0744f657/pyobjc-framework-CoreText-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkCoretext(PythonPackage):
     version("9.0", sha256="ac72b8bef194399e6d991938ee98b36892c944eedb0c085ae17b9b3a2081d80c", url="https://pypi.org/packages/09/f6/c65c6c475c31ec61edd87e414a6bb20ff65bf3c1dd7dd6d9254f8c93bd11/pyobjc-framework-CoreText-9.0.tar.gz")
     version("8.5.1", sha256="3c90ee9d10314372a2844ca6ba0e4749a73b96d168d38ba410dd2cfe4bf3911c", url="https://pypi.org/packages/2b/30/ae8478aff5514d971a1d86e2e376fa1945f6c60db7dffeb4a2133285a5b8/pyobjc-framework-CoreText-8.5.1.tar.gz")
     version("8.5", sha256="541b662897cb97ac770a0467bf50707030f8b31f70e3ba5a957fff5d4e916f78", url="https://pypi.org/packages/eb/51/9a5dc46afe1486c715c640186f2bf1a3b2d8ee57a3473d3273ab63c16742/pyobjc-framework-CoreText-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -28,4 +32,5 @@ class PyPyobjcFrameworkCoretext(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-quartz@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-quartz@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

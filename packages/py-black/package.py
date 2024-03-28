@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBlack(PythonPackage):
+    # BEGIN VERSIONS
     version("24.3.0", sha256="a0c9c4a0771afc6919578cec71ce82a3e31e054904e7197deacbc9382671c41f", url="https://pypi.org/packages/8f/5f/bac24a952668c7482cfdb4ebf91ba57a796c9da8829363a772040c1a3312/black-24.3.0.tar.gz")
     version("24.2.0", sha256="bce4f25c27c3435e4dace4815bcb2008b87e167e3bf4ee47ccdc5ce906eb4894", url="https://pypi.org/packages/29/69/f3ab49cdb938b3eecb048fa64f86bdadb1fac26e92c435d287181d543b0a/black-24.2.0.tar.gz")
     version("24.1.1", sha256="48b5760dcbfe5cf97fd4fba23946681f3a81514c6ab8a45b50da67ac8fbc6c7b", url="https://pypi.org/packages/77/ec/a429d15d2e7f996203bff98e2b2e84ad4cb3de318de147b0038dc93fbc71/black-24.1.1.tar.gz")
@@ -27,19 +27,43 @@ class PyBlack(PythonPackage):
     version("22.6.0", sha256="6c6d39e28aed379aec40da1c65434c77d75e65bb59a1e1c283de545fb4e7c6c9", url="https://pypi.org/packages/61/11/551b0d067a7e6836fc0997ab36ee46ec65259fea8f30104f4870092f3301/black-22.6.0.tar.gz")
     version("22.3.0", sha256="35020b8886c022ced9282b51b5a875b6d1ab0c387b31a065b84db7c33085ca79", url="https://pypi.org/packages/ee/1f/b29c7371958ab41a800f8718f5d285bf4333b8d0b5a5a8650234463ee644/black-22.3.0.tar.gz")
     version("22.1.0", sha256="a7c0192d35635f6fc1174be575cb7915e92e5dd629ee79fdaf0dcfa41a80afb5", url="https://pypi.org/packages/42/58/8a3443a5034685152270f9012a9d196c9f165791ed3f2777307708b15f6c/black-22.1.0.tar.gz")
+    version("21.12-beta0", sha256="a615e69ae185e08fdd73e4715e260e2479c861b5740057fde6e8b4e3b7dd589f", url="https://pypi.org/packages/9b/27/b2f98b627738b02dcac06ae9e2ab13f14ab906fe6dd6366050c76883d4b5/black-21.12b0-py3-none-any.whl")
+    version("21.11-beta1", sha256="802c6c30b637b28645b7fde282ed2569c0cd777dbe493a41b6a03c1d903f99ac", url="https://pypi.org/packages/c7/24/0de05480822e5f0f2cc539fce9029bc2507b44b7f85ec1a9e23d89dea6c3/black-21.11b1-py3-none-any.whl")
+    version("21.11-beta0", sha256="0b1f66cbfadcd332ceeaeecf6373d9991d451868d2e2219ad0ac1213fb701117", url="https://pypi.org/packages/3d/ad/1cf514e7f9ee4c3d8df7c839d7977f7605ad76557f3fca741ec67f76dba6/black-21.11b0-py3-none-any.whl")
+    version("21.10-beta0", sha256="6eb7448da9143ee65b856a5f3676b7dda98ad9abe0f87fce8c59291f15e82a5b", url="https://pypi.org/packages/12/df/0e55791b9c6ca07b4a3404eef6cee1ca42503bf16e9fc9df0247b4803cf1/black-21.10b0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("colorama", default=False)
+    variant("d", default=False)
+    variant("jupyter", default=False)
+    variant("uvloop", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=linux")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=freebsd")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=darwin")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=cray")
+        depends_on("py-aiohttp@3.7.4:", when="@21.10-beta0:21,22.10:+d")
         depends_on("py-click@8.0.0:", when="@22.10:")
+        depends_on("py-click@7.1.2:", when="@20.8-beta1:21")
+        depends_on("py-colorama@0.4.3:", when="@20:21,22.10:+colorama")
+        depends_on("py-ipython@7.8:", when="@21.8-beta0:21,22.10:+jupyter")
         depends_on("py-mypy-extensions@0.4.3:", when="@20:21,22.10:")
         depends_on("py-packaging@22:", when="@23.1.0:")
-        depends_on("py-pathspec@0.9:", when="@22.10:")
+        depends_on("py-pathspec@0.9:", when="@21.8-beta0:21,22.10:")
         depends_on("py-platformdirs@2.0.0:", when="@21.8-beta0:21,22.10:")
+        depends_on("py-regex@2021.4:", when="@21.11-beta1:21.11")
+        depends_on("py-regex@2020.1.8:", when="@20:21.11-beta0")
+        depends_on("py-tokenize-rt@3.2:", when="@21.8-beta0:21,22.10:+jupyter")
         depends_on("py-tomli@1.1:", when="@22.10: ^python@:3.10")
+        depends_on("py-tomli@0.2.6:1", when="@21.7-beta0:21")
         depends_on("py-typing-extensions@4.0.1:", when="@23.9: ^python@:3.10")
         depends_on("py-typing-extensions@3.10:", when="@22.10:23.7 ^python@:3.9")
+        depends_on("py-typing-extensions@:3.10.0.0,3.10.0.2:", when="@21.8-beta0:21 ^python@3.10:")
         depends_on("py-typing-extensions@3.10:", when="@21.8-beta0:21")
+        depends_on("py-uvloop@0.15.2:", when="@21.5-beta2:21,22.10:+uvloop")
+    # END DEPENDENCIES
 

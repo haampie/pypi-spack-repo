@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFastremap(PythonPackage):
+    # BEGIN VERSIONS
     version("1.14.1", sha256="067d42d6cb3b1b0789889efd1d7fae58006c82ada4a8446d40e9e838b358ee7c", url="https://pypi.org/packages/27/65/c7890a77c208f345d25b5c6f3cef32de203f9cbb78250e2accef10688865/fastremap-1.14.1.tar.gz")
     version("1.14.0", sha256="189d329a60d741fcef8945ad79068e3165e80bc5aa69b8d8897c2d33e701e95c", url="https://pypi.org/packages/fa/22/ff00fd695541f36f649518ea952a5e4062cbbd8da8213fdfb09df81b30d5/fastremap-1.14.0.tar.gz")
     version("1.13.5", sha256="c5bfad45426b7cf8edb4af2a28c03e3a6e1d9e378f5f2ea983c0ca8bdb2d1a7a", url="https://pypi.org/packages/31/97/4fea5a0e71f6f8eb8b5c46c9b02daba59d838456d6dc8fd7dd371e59b909/fastremap-1.13.5.tar.gz")
@@ -17,5 +17,10 @@ class PyFastremap(PythonPackage):
     version("1.12.1", sha256="85532fb238db3197a46dd9be0e632c9e61f7f4ba236784c4b7631e9963890bbb", url="https://pypi.org/packages/06/91/c5d2d20cd5024ca9a2d33249cb83b29949914f33affd0315caf1275d507f/fastremap-1.12.1.tar.gz")
     version("1.12.0", sha256="a870a5f587da3ada58fdd797400b18f07582a04a24ceaef73caa47027bcb5442", url="https://pypi.org/packages/3f/ce/aeddf9e9c1c6ecf6dad994ed0b84324843489e9cd40a9377ab71c7a30979/fastremap-1.12.0.tar.gz")
     version("1.11.4", sha256="6c0f118fb2f5ece59772ab5a48266b23ab03a9c4c43cb4ac62c2ff0c508102e3", url="https://pypi.org/packages/5d/9c/5ad28feba105cc0319937ad1cd70c24df3f427b154ad2a5b4fad78ae5f3e/fastremap-1.11.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

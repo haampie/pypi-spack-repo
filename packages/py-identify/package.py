@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIdentify(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.5.35", sha256="c4de0081837b211594f8e877a6b4fad7ca32bbfc1a9307fdd61c28bfe923f13e", url="https://pypi.org/packages/f7/c8/78c694ee4a51677c68796ba11aa36004cde895b451eb59fa23b26a600de3/identify-2.5.35-py2.py3-none-any.whl")
     version("2.5.34", sha256="a4316013779e433d08b96e5eabb7f641e6c7942e4ab5d4c509ebd2e7a8994aed", url="https://pypi.org/packages/86/07/9acfd6988cc9dccabbb8ecf3bfd9a2ea60a70c93b9ef8188efe680de625f/identify-2.5.34-py2.py3-none-any.whl")
     version("2.5.33", sha256="d40ce5fcd762817627670da8a7d8d8e65f24342d14539c59488dc603bf662e34", url="https://pypi.org/packages/a8/a3/9578c3b5dd725f65d277923dc5cc8fd881d87f68067f8267670b346a5593/identify-2.5.33-py2.py3-none-any.whl")
@@ -21,5 +21,10 @@ class PyIdentify(PythonPackage):
     version("2.5.5", sha256="ef78c0d96098a3b5fe7720be4a97e73f439af7cf088ebf47b620aeaa10fadf97", url="https://pypi.org/packages/fd/80/681ca4485f8cefe72ee43b9a0b0c15f7a78642c6c187d5e4bed8421cc576/identify-2.5.5-py2.py3-none-any.whl")
     version("2.5.3", sha256="25851c8c1370effb22aaa3c987b30449e9ff0cece408f810ae6ce408fdd20893", url="https://pypi.org/packages/0c/ed/ee58d0ae16c7407762171c493db655b19b68c40d15b4294ef5d827ee33ea/identify-2.5.3-py2.py3-none-any.whl")
     version("1.4.7", sha256="4f1fe9a59df4e80fcb0213086fcf502bc1765a01ea4fe8be48da3b65afd2a017", url="https://pypi.org/packages/87/e4/66e3c82550017d3ee03c9f216e0c3dbf1c8c580c567777537adce8823597/identify-1.4.7-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

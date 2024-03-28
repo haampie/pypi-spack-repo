@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNbconvert(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.16.2", sha256="0c01c23981a8de0220255706822c40b751438e32467d6a686e26be08ba784382", url="https://pypi.org/packages/4f/90/a522a41247a2c80289f265890d096821698819a15b12f30ff6e51ac00fe6/nbconvert-7.16.2-py3-none-any.whl")
     version("7.16.1", sha256="3188727dffadfdc9c6a1c7250729063d7bc78b355ad7aa023138afa030d1cd07", url="https://pypi.org/packages/dc/6f/2c4e3dafb36dff2c98a170c1d61275f2e2d6bfd0f07d25771c1c18a6a529/nbconvert-7.16.1-py3-none-any.whl")
     version("7.16.0", sha256="ad3dc865ea6e2768d31b7eb6c7ab3be014927216a5ece3ef276748dd809054c7", url="https://pypi.org/packages/c9/ec/c120b21e7f884a701e12a241992754e719adaf430d0d6b30c6655776bc35/nbconvert-7.16.0-py3-none-any.whl")
@@ -35,9 +35,15 @@ class PyNbconvert(PythonPackage):
     version("5.6.0", sha256="48d3c342057a2cf21e8df820d49ff27ab9f25fc72b8f15606bd47967333b2709", url="https://pypi.org/packages/f9/df/4505c0a7fea624cac461d0f41051f33456ae656753f65cee8c2f43121cb2/nbconvert-5.6.0-py2.py3-none-any.whl")
     version("5.5.0", sha256="4a978548d8383f6b2cfca4a3b0543afb77bc7cb5a96e8b424337ab58c12da9bc", url="https://pypi.org/packages/35/e7/f46c9d65f149271e47fca6ab084ef5c6e4cb1870f4c5cce6690feac55231/nbconvert-5.5.0-py2.py3-none-any.whl")
     version("4.2.0", sha256="fde887f769d8a727f3496999aa388b07355220b5a7c0479840f41b0c9f0be77f", url="https://pypi.org/packages/55/76/7989c6958ac939324ccc1589cfed0bb1f5cd984e604a24a8ea525b97b7c2/nbconvert-4.2.0-py2.py3-none-any.whl")
-    version("4.1.0", sha256="fe86fe30dc53c522112d09c9917fc19320f033f48c1623fa50dd3eaf11e906e9", url="https://pypi.org/packages/2c/00/1b2d87164492fc3883e4514c470ba90e65999d4aa89ec0df88bf908894dc/nbconvert-4.1.0.zip")
-    version("4.0.0", sha256="472ad15d1a71f1ef00c4094c11bb93638858fc89fb2c5838b3aa6b67d981b437", url="https://pypi.org/packages/99/c9/22b9392e5a1386971a645d3e12c675905b5b388488d6ff6ae6e376d8af88/nbconvert-4.0.0.tar.gz")
+    version("4.1.0", sha256="18542116114f4340bbde64204cfb542612dfb6a6dcade3caedf13909834e27b5", url="https://pypi.org/packages/26/98/39e08d99ba3a514203973d2d1c9098f1db5e95652951670962bb6f8e7514/nbconvert-4.1.0-py2.py3-none-any.whl")
+    version("4.0.0", sha256="8fbbc2739ce3dd0d893ba2ffd30e719407057e742ecaf0ba260e42f4a9b54c4e", url="https://pypi.org/packages/50/14/eedaf095daeb4bf13c14748c0522aeb5a4989ad67cf42ae56e41ed79086c/nbconvert-4.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("serve", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-beautifulsoup4", when="@6.4.4:")
         depends_on("py-bleach@:4,5.0.1:", when="@7.5:")
@@ -71,8 +77,12 @@ class PyNbconvert(PythonPackage):
         depends_on("py-pygments", when="@4.2:5")
         depends_on("py-testpath", when="@5.0.0:6.4")
         depends_on("py-tinycss2", when="@6.5:")
+        depends_on("py-tornado@6.1:", when="@6.5:+serve")
+        depends_on("py-tornado@4:", when="@5:6.4+serve")
+        depends_on("py-tornado", when="@4.2:4+serve")
         depends_on("py-traitlets@5.1:", when="@7.5:")
         depends_on("py-traitlets@5.0.0:", when="@6.1:7.4")
         depends_on("py-traitlets@4.2:", when="@5:6.0")
         depends_on("py-traitlets", when="@4.2:4")
+    # END DEPENDENCIES
 

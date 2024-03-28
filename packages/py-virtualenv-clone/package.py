@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyVirtualenvClone(PythonPackage):
+    # BEGIN VERSIONS
     version("0.5.7", sha256="44d5263bceed0bac3e1424d64f798095233b64def1c5689afa43dc3223caf5b0", url="https://pypi.org/packages/21/ac/e07058dc5a6c1b97f751d24f20d4b0ec14d735d77f4a1f78c471d6d13a43/virtualenv_clone-0.5.7-py3-none-any.whl")
     version("0.5.6", sha256="997fc0d8fd2aa60f6b76af6c1c42ef64fa82b0c5478745b1337bec06d1075076", url="https://pypi.org/packages/d8/e3/480dbb179f501bad53f15170f3e55f78aa31dbfed8da1b28e7f065c0ba7a/virtualenv_clone-0.5.6-py3-none-any.whl")
     version("0.5.5", sha256="29c6fe43bc6d40f836f47e9a40bf6fbe9527aac11e92c76ace195580d22588bb", url="https://pypi.org/packages/94/d4/be2a756db2fb2ed9b88480a5b0e0183337960d8d64a1215575bc0d0fc9ab/virtualenv_clone-0.5.5-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyVirtualenvClone(PythonPackage):
     version("0.4.0", sha256="afce268508aa5596c90dda234abe345deebc401a57d287bcbd76baa140a1aa58", url="https://pypi.org/packages/16/9d/6419a4f0fe4350db7fdc01e9d22e949779b6f2d2650e4884aa8aededc5ae/virtualenv_clone-0.4.0-py2.py3-none-any.whl")
     version("0.3.0", sha256="4507071d81013fd03ea9930ec26bc8648b997927a11fa80e8ee81198b57e0ac7", url="https://pypi.org/packages/6d/c2/dccb5ccf599e0c5d1eea6acbd058af7a71384f9740179db67a9182a24798/virtualenv_clone-0.3.0-py2.py3-none-any.whl")
     version("0.2.6", sha256="6b3be5cab59e455f08c9eda573d23006b7d6fb41fae974ddaa2b275c93cc4405", url="https://pypi.org/packages/36/66/d95f83255138ded1aec242de5ee51536226fa7b2582a7ce0863fea5dc4f2/virtualenv-clone-0.2.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

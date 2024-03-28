@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTqdm(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.66.2", sha256="1ee4f8a893eb9bef51c6e35730cebf234d5d0b6bd112b0271e10ed7c24a02bd9", url="https://pypi.org/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl")
     version("4.66.1", sha256="d302b3c5b53d47bce91fea46679d9c3c6508cf6332229aa1e7d8653723793386", url="https://pypi.org/packages/00/e5/f12a80907d0884e6dff9c16d0c0114d81b8cd07dc3ae54c5e962cc83037e/tqdm-4.66.1-py3-none-any.whl")
     version("4.66.0", sha256="39d459c7140b7890174e69d4d68d6291bc774a55b4bc5d93c0b760798ac5a03e", url="https://pypi.org/packages/a5/d6/502a859bac4ad5e274255576cd3e15ca273cdb91731bc39fb840dd422ee9/tqdm-4.66.0-py3-none-any.whl")
@@ -35,8 +35,18 @@ class PyTqdm(PythonPackage):
     version("4.44.0", sha256="f0fc945df434e5e612fb7eb93bf29e924940913590450c3760f198dd75a2cd19", url="https://pypi.org/packages/ee/57/823bec179380e4829021cae90c8519f58d426e4b712d2a50b6651990461a/tqdm-4.44.0-py2.py3-none-any.whl")
     version("4.36.1", sha256="dd3fcca8488bb1d416aa7469d2f277902f26260c45aa86b667b074cd44b3b115", url="https://pypi.org/packages/e1/c1/bc1dba38b48f4ae3c4428aea669c5e27bd5a7642a74c8348451e0bd8ff86/tqdm-4.36.1-py2.py3-none-any.whl")
     version("4.19.9", sha256="782aa84b61a5246c4f9e5b938875009e0b759d9a5c9d16b12e4f8deefdff7892", url="https://pypi.org/packages/b3/c4/b67cf1ab472b770e08e94105a0c7ca7032cd070627c435f5998c9cf6e64f/tqdm-4.19.9-py2.py3-none-any.whl")
-    version("4.8.4", sha256="4b955731304a533f1e92c05579296cb3531372aa4e5632d13d29a0d6dea27efe", url="https://pypi.org/packages/64/5b/cc47ee68389ebf815ad6e2f7fe70449d0c1b02d91f01852551e3946c955e/tqdm-4.8.4.zip")
+    version("4.8.4", sha256="a28f0ee0b8ec63659604c5432291e77147fb0c66e78242ed343aaccf89362f6d", url="https://pypi.org/packages/3a/c0/2653e9a90aef358da8880980c155218791f79b9a1d479a9a00f88ac42aac/tqdm-4.8.4-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("notebook", default=False)
+    variant("telegram", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama", when="@4.61.2: platform=windows")
+        depends_on("py-ipywidgets@6.0.0:", when="@4.59:+notebook")
+        depends_on("py-requests", when="@4.55:+telegram")
+    # END DEPENDENCIES
 

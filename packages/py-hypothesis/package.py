@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHypothesis(PythonPackage):
+    # BEGIN VERSIONS
     version("6.99.9", sha256="1b19bca587d8ead95875d30a38f38211d5a8de72f4df86953cc6fc060aff740e", url="https://pypi.org/packages/3a/5b/677e216d890db363b68c296f4202bd088c0ec233c9225334cc3d5dcd7457/hypothesis-6.99.9-py3-none-any.whl")
     version("6.99.8", sha256="8b5175a906c0a11967c3a04eeb17c42b4b395cacd02a246ce926613189a14279", url="https://pypi.org/packages/6a/87/102586821543e55e4d1885ce5303b6990d2a182c22aaefd699dc0c0c3267/hypothesis-6.99.8-py3-none-any.whl")
     version("6.99.7", sha256="d6fe9518613ef2c292007e059a49422c90413370cd955d3c99d4f31a47ac927e", url="https://pypi.org/packages/87/ed/da48c79788030c09e8c114577b66a7c685c6caf11661bf39a4247fef021d/hypothesis-6.99.7-py3-none-any.whl")
@@ -21,13 +21,32 @@ class PyHypothesis(PythonPackage):
     version("5.3.0", sha256="bfdac4e9ca4c6f9850be67699293dba3016f9c0521a73f5210f3d647888d6256", url="https://pypi.org/packages/a1/7e/75407f8633f20e4254effc8209b52b93197fa2ddf000e20fff8edccb0e1c/hypothesis-5.3.0-py3-none-any.whl")
     version("4.57.1", sha256="94f0910bc87e0ae8c098f4ada28dfdc381245e0c8079c674292b417dbde144b5", url="https://pypi.org/packages/f3/3b/16830a2b289079c5e8933344bde6326adf1fa4fbe4b4510083fab750eba9/hypothesis-4.57.1-py3-none-any.whl")
     version("4.41.2", sha256="acd47600deb55e9c2c98de6deef23384160ed0fdaafb6753146e556c077d3c78", url="https://pypi.org/packages/bc/af/392c2f90d69c6d3c5214a9c25fc7d336e1e600adf7ff80638139f12f7ae5/hypothesis-4.41.2-py3-none-any.whl")
-    version("4.24.3", sha256="fd90a319f409f34a173156ca704d6c0c6c0bb30a2e43dbf26aced2c75569e5d5", url="https://pypi.org/packages/86/9a/7b9eabe8252ca9e5a1c0c14e3dd44a4570cc9271adbf70ce01889c77f0f2/hypothesis-4.24.3.tar.gz")
-    version("4.7.2", sha256="87944c6379f77634474b88abbf1e5ed5fe966637cc926131eda5e2af5b54a608", url="https://pypi.org/packages/93/12/25ce8a0f4af85f3d7cd37a7f7d0350c841ae8f099faf232c5e4a96b2facd/hypothesis-4.7.2.tar.gz")
+    version("4.24.3", sha256="a2daa11895e1b93a0d11efd15bbc95b56309233a39e0ab6981df207199ed6a04", url="https://pypi.org/packages/ee/4b/717286b878b4f16a1bea68281612f82763a7472b3e1021f76e968872c7db/hypothesis-4.24.3-py3-none-any.whl")
+    version("4.7.2", sha256="e3894dcda1f044c560882afe8485235c9e86736363a2c4658f7c13a5fc3f1aa8", url="https://pypi.org/packages/51/f3/d2522da59a8578ca58866bc873b92d5e7cc7a6a822af9947914613587762/hypothesis-4.7.2-py3-none-any.whl")
     version("3.7.0", sha256="0fea49d08f2d5884f014151a5af6fb48d862f6ad567ffc4a2e84abf2f186c423", url="https://pypi.org/packages/e1/cb/a444d3e96721240a86c7acc243b55355bf3b7161286e10184f57d30c51dc/hypothesis-3.7.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("django", default=False)
+    variant("numpy", default=False)
+    variant("pandas", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@22.2:", when="@6.91.1:")
         depends_on("py-attrs@19.2:", when="@4.38.2:6.91.0")
+        depends_on("py-django@3.2:", when="@6.54.2:+django")
+        depends_on("py-django@2.2:", when="@5.8.1:6.54.1+django")
+        depends_on("py-django@1.11:", when="@4.24.6:5.8.0+django")
         depends_on("py-exceptiongroup@1.0.0:", when="@6.56.4: ^python@:3.10")
+        depends_on("py-numpy@1.17.3:", when="@6.79.4:+numpy")
+        depends_on("py-numpy@1.9:", when="@3.19,4.24.6:6.72,6.74:6.74.0+numpy")
+        depends_on("py-pandas@1.1.0:", when="@6.73,6.74.1:+pandas")
+        depends_on("py-pandas@0.25.0:", when="@5.41.3:6.52+pandas")
+        depends_on("py-pandas@0.19.0:", when="@4.24.6:5.41.2+pandas")
+        depends_on("py-pytz@2014:", when="@4.56.1:6.30+django")
+        depends_on("py-pytz", when="@3.19,4.24.6:4.56.0+django")
         depends_on("py-sortedcontainers@2.1:", when="@4.55:")
+    # END DEPENDENCIES
 

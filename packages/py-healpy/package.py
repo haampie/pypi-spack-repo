@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHealpy(PythonPackage):
+    # BEGIN VERSIONS
     version("1.16.6", sha256="0ab26e828fcd251a141095af6d9bf3dba43cec6f0f5cd48b65bf0af8f56329f1", url="https://pypi.org/packages/2a/73/d2215e43c122098daad1a666f621479cca0fd04ca89976170896d9afe03a/healpy-1.16.6.tar.gz")
     version("1.16.5", sha256="9f99cd5ed2d8791dbfcefe1552a73e550ec85b87637127938756280008d0ed29", url="https://pypi.org/packages/76/f7/9442e25555c4952584a0c6d9d350964955b73101a6a5fca98e74344bf9e7/healpy-1.16.5.tar.gz")
     version("1.16.3", sha256="9fb7ad9c895fa399f814fcf69cafe13027edf8ab92f8d7ccb36e5c4c44f3d147", url="https://pypi.org/packages/cf/d4/5ff0f67f75eb393958b9e32aaf4e5594618757d3be3374c1b60362b20a98/healpy-1.16.3.tar.gz")
@@ -19,11 +19,16 @@ class PyHealpy(PythonPackage):
     version("1.14.0", sha256="2720b5f96c314bdfdd20b6ffc0643ac8091faefcf8fd20a4083cedff85a66c5e", url="https://pypi.org/packages/52/bb/21e57f6b3a4c2a3bb59fb2a284fccf6ea15241a180e86ace1f9b891e251b/healpy-1.14.0.tar.gz")
     version("1.13.0", sha256="d0ae02791c2404002a09c643e9e50bc58e3d258f702c736dc1f39ce1e6526f73", url="https://pypi.org/packages/26/74/0c8592686027a8196e275cb81999e8aae88d0416c223fa55a7f0cb5bdd26/healpy-1.13.0.tar.gz")
     version("1.7.4", sha256="3cca7ed7786ffcca70e2f39f58844667ffb8521180ac890d4da651b459f51442", url="https://pypi.org/packages/6a/cf/bbbfd1d300e35ca7b5e005f4d3872b392a36618705f0029ccc8155277117/healpy-1.7.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.16.6:")
         depends_on("py-astropy", when="@1.16.6:")
         depends_on("py-matplotlib", when="@1.16.6:")
         depends_on("py-numpy@1.19.0:", when="@1.16.6:")
         depends_on("py-scipy", when="@1.16.6:")
+    # END DEPENDENCIES
 

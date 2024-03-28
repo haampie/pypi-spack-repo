@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTblib(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.0", sha256="80a6c77e59b55e83911e1e607c649836a69c103963c5f28a46cbeef44acf8129", url="https://pypi.org/packages/9b/87/ce70db7cae60e67851eb94e1a2127d4abb573d3866d2efd302ceb0d4d2a5/tblib-3.0.0-py3-none-any.whl")
     version("2.0.0", sha256="9100bfa016b047d5b980d66e7efed952fbd20bd85b56110aaf473cb97d18709a", url="https://pypi.org/packages/9e/bd/ccb241b97e39dd8ec143418f89b3fd5752f872c862877a0f1b2d9fb9e815/tblib-2.0.0-py3-none-any.whl")
     version("1.7.0", sha256="289fa7359e580950e7d9743eab36b0691f0310fce64dee7d9c31065b8f723e23", url="https://pypi.org/packages/f8/cd/2fad4add11c8837e72f50a30e2bda30e67a10d70462f826b291443a55c7d/tblib-1.7.0-py2.py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyTblib(PythonPackage):
     version("1.3.1", sha256="4f367132adb66d4729b0451368bbd3dff08fadeda36da60757dd04c5afe32dd5", url="https://pypi.org/packages/f0/05/8f00888eb387adfe17df6eec9f885b69b5b42dafa6f3cedc7f721c1fb31f/tblib-1.3.1-py2.py3-none-any.whl")
     version("1.3.0", sha256="42385bbba5967051ba689b38d3d16acb4cac66d0a076f6f1ec827e308ca6b8be", url="https://pypi.org/packages/32/1a/4011e2ea21918bfd353f0dc4e5cb2bf6c5e1350a42e6d75fca1da8b7ec9b/tblib-1.3.0-py2.py3-none-any.whl")
     version("1.2.0", sha256="c635fa39d7c436be2cfeb6891906b6e0eda01038f87a8341b998fa4b37aca246", url="https://pypi.org/packages/a2/41/b180d2a1505ae8a5e9dfbd1a7b8c5c8c77d5802ff7334a96e383896dd846/tblib-1.2.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

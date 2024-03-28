@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyAlpacaFarm(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.1.9", sha256="24ba2fa007205a98f8c7208071e54edcf295a03bb2d19b71a1da27d27dafc537", url="https://pypi.org/packages/15/40/c7098f4ebe1006e2b6843eebfd05f15431d5312dcc37efa785f4089a78d3/alpaca_farm-0.1.9-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.10:", when="@0.1.6:")
         depends_on("python@3.9:", when="@:0.1.5")
@@ -29,4 +33,5 @@ class PyAlpacaFarm(PythonPackage):
         depends_on("py-torch@1.13.1:")
         depends_on("py-transformers@4.26:", when="@:0.1.9")
         depends_on("py-wandb")
+    # END DEPENDENCIES
 

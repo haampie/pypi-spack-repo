@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleApiCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.18.0", sha256="5a63aa102e0049abe85b5b88cb9409234c1f70afcda21ce1e40b285b9629c1d6", url="https://pypi.org/packages/86/75/59a3ad90d9b4ff5b3e0537611dbe885aeb96124521c9d35aa079f1e0f2c9/google_api_core-2.18.0-py3-none-any.whl")
     version("2.18.0-rc0", sha256="d785ba174593d89483b07116dd809ae7ac46f0173ab13c780be361618755ccc7", url="https://pypi.org/packages/5d/aa/95763e643e307f56dc2745ee4cb258d3decac507a6bf5dfb9e16e2cabd16/google_api_core-2.18.0rc0-py3-none-any.whl")
     version("2.17.1", sha256="610c5b90092c360736baccf17bd3efbcb30dd380e7a6dc28a71059edb8bd0d8e", url="https://pypi.org/packages/0f/87/373ab788a4682adc1a6900e54d54c750b7bd4be456d75b8bf64eccc23ef9/google_api_core-2.17.1-py3-none-any.whl")
@@ -34,9 +34,13 @@ class PyGoogleApiCore(PythonPackage):
     version("1.31.4", sha256="ed59c6a695a81f601e4ba0f37ca9dbde3c43b3309e161a1a8946f266db4a0c4e", url="https://pypi.org/packages/ab/a5/4c97704976f1cba8a2e8a1afb2026f56f34cf76ab8788b3bf6ddc6ba0679/google_api_core-1.31.4-py2.py3-none-any.whl")
     version("1.31.3", sha256="f52c708ab9fd958862dea9ac94d9db1a065608073fe583c3b9c18537b177f59a", url="https://pypi.org/packages/bc/06/93572c5216b9b7a49468f1b185dcbeb83704b6aad8286ab23078fddd7cb2/google_api_core-1.31.3-py2.py3-none-any.whl")
     version("1.14.2", sha256="b2b91107bcc3b981633c89602b46451f6474973089febab3ee51c49cb7ae6a1f", url="https://pypi.org/packages/71/e5/7059475b3013a3c75abe35015c5761735ab224eb1b129fee7c8e376e7805/google_api_core-1.14.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("grpc", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-google-auth@2.14.1:", when="@2.11:")
         depends_on("py-google-auth@1.25:", when="@1.33:2.10")
@@ -65,4 +69,5 @@ class PyGoogleApiCore(PythonPackage):
         depends_on("py-setuptools@34:", when="@:1.24")
         depends_on("py-six@1.13:", when="@1.22.3:1.32")
         depends_on("py-six@1.10:", when="@:1.22.2")
+    # END DEPENDENCIES
 

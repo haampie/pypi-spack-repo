@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFaker(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("24.3.0", sha256="9978025e765ba79f8bf6154c9630a9c2b7f9c9b0f175d4ad5e04b19a82a8d8d6", url="https://pypi.org/packages/0d/7c/572d8c44860a5b4bdbcbdadb4a2c957bc0c1c46e038a1b668662faf021a3/Faker-24.3.0-py3-none-any.whl")
     version("24.2.1", sha256="cf07e69b9293a28cb0390086bf773c8933e122bc15704c836ebbc33ba64b7a09", url="https://pypi.org/packages/9b/35/7ced81e9e945f7f86a007a0c3ea3337d9c33282e9916ca7b93a9575bfb8e/Faker-24.2.1-py3-none-any.whl")
     version("24.2.0", sha256="dce4754921f9fa7e2003c26834093361b8f45072e0f46f172d6ca1234774ecd4", url="https://pypi.org/packages/83/25/45f53826b94f596b5d9f97ec3a6e1ae02969c297e6aea40804991145c910/Faker-24.2.0-py3-none-any.whl")
@@ -37,9 +37,14 @@ class PyFaker(PythonPackage):
     version("9.7.1", sha256="aad59a0cb82ac072f3109667fb2ba35ac45981ec22436c649d8fcdbf1c9e6927", url="https://pypi.org/packages/19/1c/0d3248616f697230305bf910669e3cf11898962a6a91757df6c07c1488f4/Faker-9.7.1-py3-none-any.whl")
     version("9.7.0", sha256="cfaa967791920c041b053716c1297ecef48bdccdbadc4a363ffdf7b2a4ee4db0", url="https://pypi.org/packages/0e/3c/ed7eaaf37412bf041eb1ebaf0f39f49bbc8e6330ba7f6342296b2c8730f1/Faker-9.7.0-py3-none-any.whl")
     version("9.6.0", sha256="8ffd1ca479364a2ea78fe23a5710d5f940c50576f45c3f62edf9f7f9242cec0b", url="https://pypi.org/packages/7b/9c/402c93c91eae893e6f213701ba055714cf5841c24e3f59ed532647f3455f/Faker-9.6.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-python-dateutil@2.4:", when="@0.7.3,0.7.6:")
         depends_on("py-text-unidecode@1.3:", when="@2.0.2:11")
         depends_on("py-typing-extensions@3.10.0.1:", when="@19: ^python@:3.8.0")
+    # END DEPENDENCIES
 

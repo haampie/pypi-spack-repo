@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyColorlog(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.8.2", sha256="4dcbb62368e2800cb3c5abd348da7e53f6c362dda502ec27c560b2e58a66bd33", url="https://pypi.org/packages/f3/18/3e867ab37a24fdf073c1617b9c7830e06ec270b1ea4694a624038fc40a03/colorlog-6.8.2-py3-none-any.whl")
     version("6.8.0", sha256="4ed23b05a1154294ac99f511fabe8c1d6d4364ec1f7fc989c7fb515ccc29d375", url="https://pypi.org/packages/95/df/520663eb7f7a329f7c585834b754bcc3cbcc03957d85fcbba4a2a723ad9d/colorlog-6.8.0-py3-none-any.whl")
     version("6.7.0", sha256="0d33ca236784a1ba3ff9c532d4964126d8a2c44f1f0cb1d2b0728196f512f662", url="https://pypi.org/packages/58/43/a363c213224448f9e194d626221123ce00e3fb3d87c0c22aed52b620bdd1/colorlog-6.7.0-py2.py3-none-any.whl")
@@ -19,7 +19,12 @@ class PyColorlog(PythonPackage):
     version("4.8.0", sha256="3dd15cb27e8119a24c1a7b5c93f9f3b455855e0f73993b1c25921b2f646f1dcd", url="https://pypi.org/packages/51/62/61449c6bb74c2a3953c415b2cdb488e4f0518ac67b35e2b03a6d543035ca/colorlog-4.8.0-py2.py3-none-any.whl")
     version("4.0.2", sha256="450f52ea2a2b6ebb308f034ea9a9b15cea51e65650593dca1da3eb792e4e4981", url="https://pypi.org/packages/68/4d/892728b0c14547224f0ac40884e722a3d00cb54e7a146aea0b3186806c9e/colorlog-4.0.2-py2.py3-none-any.whl")
     version("3.1.4", sha256="8b234ebae1ba1237bc79c0d5f1f47b31a3f3e90c0b4c2b0ebdde63a174d3b97b", url="https://pypi.org/packages/69/eb/58ae10d3c46a0195ffdd0e3943d255d0d5029d71e5457785ecd665bcf0f3/colorlog-3.1.4-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama", when="@3.1.4: platform=windows")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,15 +6,21 @@
 from spack.package import *
 
 class PyPydub(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.25.1", sha256="65617e33033874b59d87db603aa1ed450633288aefead953b30bded59cb599a6", url="https://pypi.org/packages/a6/53/d78dc063216e62fc55f6b2eebb447f6a4b0a59f55c8406376f76bf959b08/pydub-0.25.1-py2.py3-none-any.whl")
     version("0.25.0", sha256="d857a384f29eae6138d222aeadf51d02a87288c8991db5c1c9e3c57e356226eb", url="https://pypi.org/packages/8c/74/e6258e98c8fd43ca8e74a411a3a163ac2f12fc2374d2a609c23442ec90a5/pydub-0.25.0-py2.py3-none-any.whl")
-    version("0.24.1", sha256="630c68bfff9bb27cbc5e1f02923f717c3bc5f4d73fd685fda08b6ce90f76dc69", url="https://pypi.org/packages/42/0d/ec49832a1a0d296ea5d2d0f4b6a9d5e23f3848049822ba63b96c89315f4b/pydub-0.24.1.tar.gz")
-    version("0.24.0", sha256="ed3bbb49a1ca4858d4bd153b3c0e2f2ce523d2aa054b5f17c6f9df01ab6e5051", url="https://pypi.org/packages/97/ec/b6b8cb2b021543153ff5da37d0057d30270db0b55f5604c2619f6061f988/pydub-0.24.0.tar.gz")
-    version("0.23.1", sha256="c362fa02da1eebd1d08bd47aa9b0102582dff7ca2269dbe9e043d228a0c1ea93", url="https://pypi.org/packages/aa/20/e6ec4fe31d56d2ad4d6adbbd3afd03bb9b960926c42dfb1fdf42dc826787/pydub-0.23.1.tar.gz")
-    version("0.23.0", sha256="07d5eec305110cf1dfe1a0c45eed84bc31f889b1b19feab3859a05dc45b70e7b", url="https://pypi.org/packages/bd/d5/ecc8f209baff59f1e393ee45c6732e397290e9b891e9146fcfd2888f6228/pydub-0.23.0.tar.gz")
-    version("0.22.1", sha256="20beff39e9959a3b2cb4392802aecb9b2417837fff635d2b00b5ef5f5326d313", url="https://pypi.org/packages/73/75/07243e160519ace20d7d32e10ae5dc7fc59b34cf2de934101e9770f183c8/pydub-0.22.1.tar.gz")
-    version("0.22.0", sha256="91192b94a28121cccd64bfaef1d12da59f3a69a5f4c35f67d428bfc395f390b5", url="https://pypi.org/packages/d4/de/74122f16fde828d18e754f36d15eefcae52094b3cf75a345414e95ca5cb9/pydub-0.22.0.tar.gz")
-    version("0.21.0", sha256="27acc5977b0f5220682175d44fda737bbf818143b0832c0c3863b5dde38e197a", url="https://pypi.org/packages/1f/cf/af7d67189fc17f790a88e5da7dd1803273bf4420732c1582da05286fcc2d/pydub-0.21.0.tar.gz")
-    version("0.20.0", sha256="7b764206854ca70321be986674e6ad98d255e8ee018b0a649f444f03efde1a43", url="https://pypi.org/packages/9d/df/5d0b3a123bddf08b162a8dbc6fd0fdf461c995b48f88befc10d6b6d939fc/pydub-0.20.0.tar.gz")
+    version("0.24.1", sha256="25fdfbbfd4c69363006a27c7bd2346c4b886a0dd3da264c14d858b71a9593284", url="https://pypi.org/packages/7b/d1/fbfa79371a8cd9bb15c2e3c480d7e6e340ed5cc55005174e16f48418333a/pydub-0.24.1-py2.py3-none-any.whl")
+    version("0.24.0", sha256="6f986c504b4fb57ec7aaf7454ce04ed5c9f3252fd5ffa259f32bfb9452811a30", url="https://pypi.org/packages/ba/f9/2cd255898c11179a57415937d601ab1e8a14a7c6a8331ff9c365e97e41f6/pydub-0.24.0-py2.py3-none-any.whl")
+    version("0.23.1", sha256="d29901a486fb421c5d7b0f3d5d3a60527179204d8ffb20e74e1ae81c17e81b46", url="https://pypi.org/packages/79/db/eaf620b73a1eec3c8c6f8f5b0b236a50f9da88ad57802154b7ba7664d0b8/pydub-0.23.1-py2.py3-none-any.whl")
+    version("0.23.0", sha256="c703e220917be686fc83d24231849a11c95ba540963ffb3ae5bb322788974d79", url="https://pypi.org/packages/2f/73/bb9c093882d647437a9e6e87c7e6592d2df852f83ffac6f348b878979be0/pydub-0.23.0-py2.py3-none-any.whl")
+    version("0.22.1", sha256="b17c5b01a94bb6c50e3e4ff1953d61919b156e774182038d92389215976bd6a1", url="https://pypi.org/packages/13/e5/7f0270e220d1be373a8b2c982b6fa1a0b67248fc1737e83ea215d930b351/pydub-0.22.1-py2.py3-none-any.whl")
+    version("0.22.0", sha256="c0f2b8740f3831e9c0ff08fe111c0a404483513183d803e7bffe4b9321fbad67", url="https://pypi.org/packages/c4/f5/1ed76122c43b1a8db51f0b31ee4f0e0c0d66dfaf5f192a11a164013e5239/pydub-0.22.0-py2.py3-none-any.whl")
+    version("0.21.0", sha256="19eb8ec423e7a2bcee2f1cf6ceeaf433ee57f404ab2d892aaf4f6752cef265da", url="https://pypi.org/packages/0d/9b/42f18092c27a0904a63ffb04ff49d49d782b7de64440de5005a36f765ff0/pydub-0.21.0-py2.py3-none-any.whl")
+    version("0.20.0", sha256="77251f892e1ec5ae5969d5e8fafa31559f09ce78280ac08ec5851596ce50858e", url="https://pypi.org/packages/6b/a5/8a863766dca1a1334a0b0219442a7af0947860ffb8a8266a1d7a43126702/pydub-0.20.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

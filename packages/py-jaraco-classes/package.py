@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJaracoClasses(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.3.1", sha256="86b534de565381f6b3c1c830d13f931d7be1a75f0081c57dff615578676e2206", url="https://pypi.org/packages/eb/57/d3590a153d7c1970f466f69fa2570e1a93a34d8f88f23c11411df73729bf/jaraco.classes-3.3.1-py3-none-any.whl")
     version("3.3.0", sha256="10afa92b6743f25c0cf5f37c6bb6e18e2c5bb84a16527ccfc0040ea377e7aaeb", url="https://pypi.org/packages/c7/6b/1bc8fa93ea85146e08f0e0883bc579b7c7328364ed7df90b1628dcb36e10/jaraco.classes-3.3.0-py3-none-any.whl")
     version("3.2.3", sha256="2353de3288bc6b82120752201c6b1c1a14b058267fa424ed5ce5984e3b922158", url="https://pypi.org/packages/60/28/220d3ae0829171c11e50dded4355d17824d60895285631d7eb9dee0ab5e5/jaraco.classes-3.2.3-py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyJaracoClasses(PythonPackage):
     version("3.1.0", sha256="116429c2047953f525afdcae165475c4589c7b14870e78b2d068ecb01018827e", url="https://pypi.org/packages/68/ce/8f43aa0d0f18120e687ae0192fe3168630040841a3e87bed93c5fe024dbe/jaraco.classes-3.1.0-py2.py3-none-any.whl")
     version("3.0.0", sha256="dec765a9df411d1bd688e377d4ca4fad515dec84cc32091ea5f37ac6afd29c15", url="https://pypi.org/packages/fb/85/3e298241e4aff50eddaedcd9678b5409b01da5496a6353d9d072baa2d500/jaraco.classes-3.0.0-py2.py3-none-any.whl")
     version("2.0", sha256="d43d73bc8e4ed67c45b540fc7ea171444ff05779710104a120926ba517327df6", url="https://pypi.org/packages/f9/6c/d5ad4d56ed9a6f5d2bf843f30562e4bea2d1a694ecfabe6c56227ef31e90/jaraco.classes-2.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-more-itertools", when="@3:")
         depends_on("py-six", when="@1.4.1:2")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJsmin(PythonPackage):
+    # BEGIN VERSIONS
     version("3.0.1", sha256="c0959a121ef94542e807a674142606f7e90214a2b3d1eb17300244bbb5cc2bfc", url="https://pypi.org/packages/5e/73/e01e4c5e11ad0494f4407a3f623ad4d87714909f50b17a06ed121034ff6e/jsmin-3.0.1.tar.gz")
     version("3.0.0", sha256="88fc1bd6033a47c5911dbcada7d279c7a8b7ad0841909590f6a742c20c4d2e08", url="https://pypi.org/packages/b6/fd/a796adb763263f1291cb92f323ec27a8754fd3f09d653cd2f554c202cbb0/jsmin-3.0.0.tar.gz")
     version("2.2.2", sha256="b6df99b2cd1c75d9d342e4335b535789b8da9107ec748212706ef7bbe5c2553b", url="https://pypi.org/packages/17/73/615d1267a82ed26cd7c124108c3c61169d8e40c36d393883eaee3a561852/jsmin-2.2.2.tar.gz")
@@ -17,5 +17,10 @@ class PyJsmin(PythonPackage):
     version("2.1.4", sha256="c26baf0c1ceccc3ea13328445d22b3b931a7fc8d3c2d00f0f22e10ba14dabbc4", url="https://pypi.org/packages/06/3b/4732fa74c6a27ed7f9476be11ee4c49a916d3c5607879455a194f45afe06/jsmin-2.1.4.tar.gz")
     version("2.1.3", sha256="fe72bf36959793f3242c8443a12ca3528357b6d19a76a2306527c2357710b88c", url="https://pypi.org/packages/3d/14/c0cc3982b7110059f9ed493ebdb7c0d8436c13d0305e2ff950f5a72f21f6/jsmin-2.1.3.tar.gz")
     version("2.1.2", sha256="5e710e9db14f210dfd55ebec43bca5c812d34c5b6179dbcba2e61d9f965bf4e1", url="https://pypi.org/packages/56/b0/700a7ffb7c67530e8f99e43c91343e9f4ed0ded87a0f39b961375113ff6d/jsmin-2.1.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

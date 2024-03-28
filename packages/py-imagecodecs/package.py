@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyImagecodecs(PythonPackage):
+    # BEGIN VERSIONS
     version("2024.1.1", sha256="fde46bd698d008255deef5411c59b35c0e875295e835bf6079f7e2ab22f216eb", url="https://pypi.org/packages/92/e3/e17c8b9703dc467041ac76d41fe18f67d877ea0ab35d8fac2046e3873945/imagecodecs-2024.1.1.tar.gz")
     version("2023.9.18", sha256="bf4b4be4759fc3b27b5022228aada83e735744e4b7c204bcdccaa961c3f79d4d", url="https://pypi.org/packages/5e/a7/394dd3fe67042c4234a74c47d4bf0b3f436d9af6c7fb5c889c3fd55f687a/imagecodecs-2023.9.18.tar.gz")
     version("2023.9.4", sha256="1f09a2f9df6f6e29abbe2a20a1e7f5990edd1bd2c02dcb0611c841ffc5b8b178", url="https://pypi.org/packages/dc/e5/4f8a026d95b5973bcca7640a0448e7d7df7ed0f54ee89bbba74945789936/imagecodecs-2023.9.4.tar.gz")
@@ -18,8 +18,13 @@ class PyImagecodecs(PythonPackage):
     version("2022.12.24", sha256="c5282a808786dadb8e3ee238bb213b2e065574f1bb0f4b51e8bf93747e0babb3", url="https://pypi.org/packages/ed/bb/34abf4c2c9aaac8a449696872eed1202df7dc68a5f43f7ff43528208d8b1/imagecodecs-2022.12.24.tar.gz")
     version("2022.12.22", sha256="c685eb1fbd004918980aa3314e4c2ac22e931130943a83a55912020d720cd731", url="https://pypi.org/packages/58/fa/31fa49734b05d770c9ed14df9a5105999804bc91e979af142bdf27daa818/imagecodecs-2022.12.22.tar.gz")
     version("2022.2.22", sha256="062bef6b003290a8163abed2744b406854238208dfdd41cf7165253c6e01c0bd", url="https://pypi.org/packages/59/2d/344eaece340a87945b22dff57afb954487772394b801486c01184c4684ce/imagecodecs-2022.2.22.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2023.7:")
         depends_on("py-numpy", when="@2023.9.18:")
+    # END DEPENDENCIES
 

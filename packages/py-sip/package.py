@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySip(PythonPackage):
+    # BEGIN VERSIONS
     version("6.8.3", sha256="11c332566de0d752df92906101260e81401bf574417a6bc31fb99364ae6b652d", url="https://pypi.org/packages/22/cb/3763a07a046884cdc14668758895cc6a8cd1b8d06281d5b6914b0e6948bc/sip-6.8.3-py3-none-any.whl")
     version("6.8.2", sha256="dabd8a065564b63f1314698811fcffac4dec8da51539a5b584b0f472b591895c", url="https://pypi.org/packages/5e/20/a5f88409f0152d707e72809eac9b5a58fc5c7e989145fcfe051ba087ade8/sip-6.8.2-py3-none-any.whl")
     version("6.8.1", sha256="ce489991d249777321bc48e42aff7f107b3333d217b8b5ebb858179a7d4116a7", url="https://pypi.org/packages/e9/5a/157a032999c8b69132182c73193801e429cf973b6e5ee71fee7998bdc140/sip-6.8.1-py3-none-any.whl")
@@ -20,9 +20,16 @@ class PySip(PythonPackage):
     version("6.6.2", sha256="0e3efac1c5dfd8e525ae57140927df26993e13f58b89d1577c314f4105bfd90d", url="https://pypi.org/packages/5b/cb/c27c925ae07bd03a2597fa1db17bfc2a4ac57da61aeb90f8ec98ffbb975b/sip-6.6.2.tar.gz")
     version("6.4.0", sha256="42ec368520b8da4a0987218510b1b520b4981e4405086c1be384733affc2bcb0", url="https://pypi.org/packages/c4/de/76c2927ea8f74dc4909c9affeba4c0191c43a4aefbe2118cc69b2cbd8461/sip-6.4.0.tar.gz")
     version("5.5.0", sha256="5d024c419b30fea8a6de8c71a560c7ab0bc3c221fbfb14d55a5b865bd58eaac5", url="https://pypi.org/packages/33/e9/27730ac17713c0a80d81d8f3bb56213f1549d96f9dc183fd16a7eec6287c/sip-5.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("module", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-packaging", when="@5.0.1:5.3,6.8:")
         depends_on("py-setuptools", when="@6.8:")
         depends_on("py-tomli", when="@6.8: ^python@:3.10")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAnnexremote(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.6.4", sha256="74fdf4d4e20fd3b5a5bc827b4c488dd5de95cb8161cda77ad06a6b5fbd22e82b", url="https://pypi.org/packages/e4/6d/94c47068d57ff648fe1b4cc284fec65c7151ee2b8eb15e61927e1035cab2/annexremote-1.6.4-py3-none-any.whl")
     version("1.6.3", sha256="9ed441bbaad1d3f42a800e4aef156241ddce4358966bf9aaf496738352a1acb2", url="https://pypi.org/packages/d5/84/70e2084a1cef470237766f070c1fa57f298666b6cf18240301b322606525/annexremote-1.6.3-py3-none-any.whl")
     version("1.6.0", sha256="bc5bd2e456d64679e33d71226705673ac213040f8ae495467e9629b550c2ca53", url="https://pypi.org/packages/66/81/32d0563cd017cca305a8b8883abb177880cedde1385213a6b4b33cc07e45/annexremote-1.6.0-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyAnnexremote(PythonPackage):
     version("1.4.2", sha256="c7382c81d51149717f6c4520524f41ba4c4ac911978ebb9c871ee83f98a871c9", url="https://pypi.org/packages/61/21/99ce15c8976cb7a988c993909a62bf8f243440f8a3014ef1ae8ef4cf53aa/annexremote-1.4.2-py3-none-any.whl")
     version("1.3.1", sha256="3265cebfa07bad3357d1abccab74b68c46d1ec6d025d22e506716397f334d2d8", url="https://pypi.org/packages/e4/67/ae5821eae1d79524e1dcd1b4bf0338398ffb15f2ec4af79d731b0bfddadb/annexremote-1.3.1-py3-none-any.whl")
     version("1.3.0", sha256="8228a3d80310ca3aa0a75313402658d06c2169a9c9538a7ed93116b2e4cbce10", url="https://pypi.org/packages/0c/8e/96cc871200bab00ce4f84d631ce323c72cc6538d5fd330695b063f599a7c/annexremote-1.3.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-future", when="@1.3:1.5")
+    # END DEPENDENCIES
 

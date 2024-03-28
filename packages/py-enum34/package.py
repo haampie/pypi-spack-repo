@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,15 +6,21 @@
 from spack.package import *
 
 class PyEnum34(PythonPackage):
-    version("1.1.10", sha256="cce6a7477ed816bd2542d03d53db9f0db935dd013b70f336a95c73979289f248", url="https://pypi.org/packages/11/c4/2da1f4952ba476677a42f25cd32ab8aaf0e1c0d0e00b89822b835c7e654c/enum34-1.1.10.tar.gz")
-    version("1.1.9", sha256="13ef9a1c478203252107f66c25b99b45b1865693ca1284aab40dafa7e1e7ac17", url="https://pypi.org/packages/a4/04/94310230b388f6c1992cec62716229b5f2258ad14002346509152d398e3e/enum34-1.1.9.tar.gz")
-    version("1.1.8", sha256="36db3d880f7a9a4989b1dfba625381a82294d1d3cfaa62bbbf18b594e195fa31", url="https://pypi.org/packages/a7/9a/909b721496b6f3e7776345c250d55cbdbcb1302fb42cf79de0d929af74c1/enum34-1.1.8.tar.gz")
-    version("1.1.6", sha256="2d81cbbe0e73112bdfe6ef8576f2238f2ba27dd0d55752a776c41d38b7da2850", url="https://pypi.org/packages/e8/26/a6101edcf724453845c850281b96b89a10dac6bd98edebc82634fccce6a5/enum34-1.1.6.zip")
-    version("1.1.5", sha256="7580699f440ebc08ce51e04efd34e685264779e64bb5312112a785eac769e037", url="https://pypi.org/packages/f0/0b/8a8665427c6ad17083958eb8df3987cde8206ad5c27c3ba17373316be34c/enum34-1.1.5.zip")
-    version("1.1.4", sha256="c0379e8193e55dbb84892cddab4eb5cb965b3176f8442378994ca4de4b3a8b27", url="https://pypi.org/packages/66/b9/ea04f447a7815b4774544e8970a7983312e6920c18445020d3e97b871eb8/enum34-1.1.4.zip")
-    version("1.1.3", sha256="d3c5a5241ca8670b20fa9629ec480b78382b18077d7f0de96e275f3ce1ca0a52", url="https://pypi.org/packages/ee/e4/5644bb98bc1e2e189b4d0d16ef76e4748ae8bb238ff20921eb64d4e9f5af/enum34-1.1.3.zip")
+    # BEGIN VERSIONS
+    version("1.1.10", sha256="c3858660960c984d6ab0ebad691265180da2b43f07e061c0f8dca9ef3cffd328", url="https://pypi.org/packages/63/f6/ccb1c83687756aeabbf3ca0f213508fcfb03883ff200d201b3a4c60cedcc/enum34-1.1.10-py3-none-any.whl")
+    version("1.1.9", sha256="98df1f1937840b7d8012fea7f0b36392a3e6fd8a2f429c48a3ff4b1aad907f3f", url="https://pypi.org/packages/bf/04/c2ab08074863e385ba27068f2da9df5e61e732664b0f932d396bbf46015b/enum34-1.1.9-py2-none-any.whl")
+    version("1.1.8", sha256="075e6c23fbf537eaf379ebe17dbcb65a4f2d2ecd03ac5a3ac534c313afbdfa33", url="https://pypi.org/packages/f0/43/55233ddb2e5f8fc6288147155faac30c404f039a7177c662044148da0989/enum34-1.1.8-py2-none-any.whl")
+    version("1.1.6", sha256="644837f692e5f550741432dd3f223bbb9852018674981b1664e5dc339387588a", url="https://pypi.org/packages/af/42/cb9355df32c69b553e72a2e28daee25d1611d2c0d9c272aa1d34204205b2/enum34-1.1.6-py3-none-any.whl")
+    version("1.1.5", sha256="01a4abc326ead6c92169ab8c6f6af3cff9706a6a047c8738168f7a50b8def231", url="https://pypi.org/packages/a6/4b/d2614fef376fcc5d0de1e86d1758c75ef79eda345ecfa07e0d16676706c3/enum34-1.1.5-py2.py3-none-any.whl")
+    version("1.1.4", sha256="fb882434f2ae319f454b6b5d07bfac73104a16c1fcdbb30c3cef70df216610e9", url="https://pypi.org/packages/30/3c/7b6debc06c8f6bbfa20104fa31aeaae4a425e45c51f3522d87e35dcfc910/enum34-1.1.4-py2.py3-none-any.whl")
+    version("1.1.3", sha256="994fe36b8fa494e37e60d3edefbd11c08dc2f884e26e35e71527f7e984890810", url="https://pypi.org/packages/03/ef/643b63a6b93d77d2806744b983c67a45d7267c37dca34cc1a32695b95b99/enum34-1.1.3-py2.py3-none-any.whl")
     version("1.1.2", sha256="35907defb0f992b75ab7788f65fedc1cf20ffa22688e0e6f6f12afc06b3ea501", url="https://pypi.org/packages/e2/2c/17f8aba7f80bf2d0acc1b5e0122a79ea6e79535f3b8ab8110d974175e941/enum34-1.1.2.zip")
     version("1.1.1", sha256="4d33459c33254e1badcfdb47a340a801cd80466e46fbe35d25d308bf148dad70", url="https://pypi.org/packages/2e/a8/1430b36bf50f447a6aeb196b326cf493a53850cbb28dc06a5497d8327284/enum34-1.1.1.zip")
     version("1.1.0", sha256="9e4c1fe67c2cc884d747724eebcb94822b1c2d16411ff15eb0686d9b302ae377", url="https://pypi.org/packages/35/25/9e755853a1ae29fe0f102b1d6b805104344df70e460f4b908f1c98e1fe67/enum34-1.1.0.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

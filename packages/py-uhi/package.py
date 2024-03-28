@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyUhi(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.4.0", sha256="c7e82826314c66b8e7fee7869b75eb038f500b034f5371ef928def41c8db70bc", url="https://pypi.org/packages/2a/9a/d5de1ec139e24f0f8d9e1b9cfdf6b3ade0d0d204f99b20ff921472206b91/uhi-0.4.0-py3-none-any.whl")
     version("0.3.3", sha256="4805a4194550310ee2a58aa8c777e6ab80f8896c96469d7c16fd2436aef4c9c3", url="https://pypi.org/packages/70/e7/599c0589e0fcb3f330ea6cc13b3fde9d3f0a65fe939f9b5634c50dde6349/uhi-0.3.3-py3-none-any.whl")
     version("0.3.2", sha256="427d7d54f1ac072a52f3b476457732ecd3767da00b2a8b6fdc38dd6820db107e", url="https://pypi.org/packages/ad/36/fbc93bc03270b16fd80d7e870fb459289aaaa6b1077bc8cd12836b4b751f/uhi-0.3.2-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyUhi(PythonPackage):
     version("0.1.2", sha256="543997ad2194a75cc69219e1fbaf16b341e16da392ae6e837d6d85d2d5cde8f1", url="https://pypi.org/packages/a8/2f/375c06d8844f1b149df8901b6b3581faa2fce4660c84d19ae810be356534/uhi-0.1.2-py3-none-any.whl")
     version("0.1.1", sha256="c1be1ed6d7f4f0f64fffc42239a7415cca21bedd888aa4835be7d2daee27c957", url="https://pypi.org/packages/2d/cb/a129ef52cd7ae64ba85b16b99adcee8d1597c32c6331cfd1f599e13a0c6e/uhi-0.1.1-py3-none-any.whl")
     version("0.1.0", sha256="3aa19f2362fc8daf79edc0259adafcdd6784ec5a7f8ca703e8bf152bca9e1ce1", url="https://pypi.org/packages/12/47/119a5f7213950195842c62cba41308662705adef356061bc580e995405be/uhi-0.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.13.3:", when="@0.2:")
+    # END DEPENDENCIES
 

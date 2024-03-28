@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDendropy(PythonPackage):
+    # BEGIN VERSIONS
     version("4.6.1", sha256="8527a208482302642e7e38229a2369d01a51d05011e9a68067d92be5fbbf6b58", url="https://pypi.org/packages/7c/3b/f880fd07cb79a46ca838e46ba021fcdaa464bb21e2a9264a7afe77046a88/DendroPy-4.6.1-py3-none-any.whl")
     version("4.6.0", sha256="c4361b8348ca7d787e827f544888bf5ed034d62a4ea4473e40f0a9ad67039964", url="https://pypi.org/packages/b0/c0/841e46da39a4dae07a5cd4e7a1c9472acbdd623f820b125b5995dd342c9a/DendroPy-4.6.0-py3-none-any.whl")
     version("4.5.2", sha256="3e5d2522170058ebc8d1ee63a7f2d25b915e34957dc02693ebfdc15f347a0101", url="https://pypi.org/packages/f9/10/125c181b1d97ffc4661a60ec897cfe058dc46cb53900d807819464c3510f/DendroPy-4.5.2.tar.gz")
@@ -18,7 +18,12 @@ class PyDendropy(PythonPackage):
     version("4.0.3", sha256="a2c074eb91e2866120521c076587983900c5b312879832c3559effb730bd4465", url="https://pypi.org/packages/66/0b/72ca62a6e87ddb9b70cac2cf1fc199ca00127fc168c52bcbcbf30cfb5947/DendroPy-4.0.3.tar.gz")
     version("4.0.2", sha256="b118c9e3e9408f2727e374032f6743a630e8a9239d84f898ed08cd5e68c5238d", url="https://pypi.org/packages/62/10/117c87b76f5f84d4559bd7ad25af04f11369ef8267f3c8e7d62769efc85d/DendroPy-4.0.2.tar.gz")
     version("3.12.0", sha256="38a0f36f2f7aae43ec5599408b0d0a4c80996b749589f025940d955a70fc82d4", url="https://pypi.org/packages/43/22/69b7713b094697f8a432abe96c44a155519ef67b3c31221de32f4c3d5fa5/DendroPy-3.12.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-setuptools", when="@4.6:")
+    # END DEPENDENCIES
 

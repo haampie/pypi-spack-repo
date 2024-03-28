@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHepunits(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.3.3", sha256="2edd3446bab7a853865e402eb14958ea6da6d728a7d9064cc3d8f3bb3a9a1281", url="https://pypi.org/packages/6c/f2/f1c70615308c08e07506d16f3976c57475c3555747482e2de81146eda2c7/hepunits-2.3.3-py3-none-any.whl")
     version("2.3.2", sha256="96267ca79908b8d3c44bd09c3ad98887a7394118d9495657c2471b8e2264d759", url="https://pypi.org/packages/77/18/b4365c940075b74a4d76269e334dc8a6d966346162491197f661043005f5/hepunits-2.3.2-py3-none-any.whl")
     version("2.3.1", sha256="e070c3145fb50526a9a5d2fb557faafdd8bb9b8cb0045a27d2d6ac489269b24d", url="https://pypi.org/packages/91/48/76b99f9cf2ec8fadea882f70ec7866d227644b857791f49892a86083ac82/hepunits-2.3.1-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyHepunits(PythonPackage):
     version("2.1.1", sha256="b3d69929003595a179e8496137082f63661a40deb718910b8317e1e59f101198", url="https://pypi.org/packages/3f/40/080cf95a028a6010a8ca0143fad67f6a0316d7eca0151cc274cbbe59817e/hepunits-2.1.1-py2.py3-none-any.whl")
     version("2.1.0", sha256="e85da92394feee9477ef951855f7ce521dc82c7b8907ad51728cc9060bf4d851", url="https://pypi.org/packages/35/92/96cb7336fcc0529c1abff3b80ebe00ce7a8f4a8a85d6d092202ede0b3c2f/hepunits-2.1.0-py2.py3-none-any.whl")
     version("1.2.1", sha256="03e788d6eca982a6588d5759ce326dc81b7366965bbe6066b50ae888a549999b", url="https://pypi.org/packages/3b/8d/55d81e46988179d6513f5915bf326ff5adbc5ee2647d952f7df6d097425e/hepunits-1.2.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

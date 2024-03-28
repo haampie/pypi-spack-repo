@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNotebook(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.1.2", sha256="fc6c24b9aef18d0cd57157c9c47e95833b9b0bdc599652639acf0bdb61dc7d5f", url="https://pypi.org/packages/61/06/b4f53cf193765140f0b27094683dfae1b656d9f7264831ace7699420c1c7/notebook-7.1.2-py3-none-any.whl")
     version("7.1.1", sha256="197d8e0595acabf4005851c8716e952a81b405f7aefb648067a761fbde267ce7", url="https://pypi.org/packages/09/ab/332eaee7872d3883cf3a2cc6a2b2b1e36a566f16fa432c89204a5bd486e6/notebook-7.1.1-py3-none-any.whl")
     version("7.1.0", sha256="a8fa4ccb5e5fe220f29d9900337efd7752bc6f2efe004d6f320db01f7743adc9", url="https://pypi.org/packages/5f/38/f5a11c1e68bf3dbd54c7c98f301bf9495e8735803b42ee2f740c5b7c1ca5/notebook-7.1.0-py3-none-any.whl")
@@ -45,10 +45,14 @@ class PyNotebook(PythonPackage):
     version("4.2.1", sha256="0d11cda9ce8ef9de189061054b095f1a20bc471c39534e6bb688153734f180f3", url="https://pypi.org/packages/ce/24/d0dd761aaddc2efd7a94b00f0e8d9c33660fed5f6f25553d9190a4ccb734/notebook-4.2.1-py2.py3-none-any.whl")
     version("4.2.0", sha256="23b0ccf12b7992b5328085d6a855dd944c9858efdbdea1e732dab5d77811eb69", url="https://pypi.org/packages/7f/d8/57a1e73cb8f81322e0b46c53c44d0eaa9202b722744ab741f112ba4835f9/notebook-4.2.0-py2.py3-none-any.whl")
     version("4.1.0", sha256="6b2828548b19c8f1bc9eeb91139d427053633363f1a6538d09a19eb24ca0fd94", url="https://pypi.org/packages/d4/08/0a91620361e99d1acd4540b0a3340ba669b06546dbfe56852c905ebe782d/notebook-4.1.0-py2.py3-none-any.whl")
-    version("4.0.6", sha256="77534b80528bbad575ac1ef80004dd0953d0721d43f7416f1a7f6125958f4035", url="https://pypi.org/packages/5f/f3/6a457cc37a0c521a2d16938c810260746617a1e575278bfca6fc706d26f7/notebook-4.0.6.zip")
-    version("4.0.4", sha256="ec9703b098735e8acdfafc2df3f82e9892757c2929509b6fcf8de52fe412d710", url="https://pypi.org/packages/c5/2c/ebdfd9cd048b7f4592d6a4fec8221c39bfd8f28f975b3b890d954a9af9fe/notebook-4.0.4.zip")
-    version("4.0.2", sha256="c39426ded4b9418b93ace04041fbeadf46dacfcfe98a6d4ab8825d2c5ac39c75", url="https://pypi.org/packages/a3/bd/8074a85e968d66c8836c55f8f7ecfa43978aa240184f708b440048ac5811/notebook-4.0.2.zip")
+    version("4.0.6", sha256="afd51c2bb108a90cac63fa2011de112786b1d3485b3fa71a3cd95a39434597df", url="https://pypi.org/packages/af/af/87fbc159182390c35d5c04faaf30c10e3f972bcc0567ea0a99cf1eaf2c9f/notebook-4.0.6-py2.py3-none-any.whl")
+    version("4.0.4", sha256="6e93d83a73ceec2d667ce4e1074be05b738d39012ae91fd9f53236fd47d9012f", url="https://pypi.org/packages/28/c0/ef3f8be98623e3632e324b100e3251cc2ed84aece818a26a3a9aa7c18391/notebook-4.0.4-py2.py3-none-any.whl")
+    version("4.0.2", sha256="e1a332b61b54153a640a4c040cd9afc19774c7fe7598f3014da04822622616ab", url="https://pypi.org/packages/eb/a6/16383171822e1bbda76e4871ea28340a1dff468e205f04ccbe7303bd19e4/notebook-4.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-argon2-cffi", when="@6.1.0:6")
         depends_on("py-importlib-resources@5:", when="@7.0.0-alpha10:7.0.2 ^python@:3.8")
@@ -95,4 +99,5 @@ class PyNotebook(PythonPackage):
         depends_on("py-tornado@4:", when="@4.1:5.7.4")
         depends_on("py-traitlets@4.2.1:", when="@5:6")
         depends_on("py-traitlets", when="@4.1:4")
+    # END DEPENDENCIES
 

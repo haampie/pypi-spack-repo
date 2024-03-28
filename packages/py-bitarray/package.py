@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBitarray(PythonPackage):
+    # BEGIN VERSIONS
     version("2.9.2", sha256="a8f286a51a32323715d77755ed959f94bef13972e9a2fe71b609e40e6d27957e", url="https://pypi.org/packages/c7/bf/25cf92a83e1fe4948d7935ae3c02f4c9ff9cb9c13e977fba8af11a5f642c/bitarray-2.9.2.tar.gz")
     version("2.9.1", sha256="912efbeed6d8b155c8e8c37464f79d75b1de58936c0f29ffb599ce95af5563f2", url="https://pypi.org/packages/ab/70/5a08324266a222ab9d8282b18a1cd07535c686531f29142b9f10f16a65f2/bitarray-2.9.1.tar.gz")
     version("2.9.0", sha256="41f6b46f01bc59abfc38653d203565113b6e7dd04d0ec688774ed28e6d9755db", url="https://pypi.org/packages/57/01/a05bf003c538e91f16bd17089389871e4a664c2f6dae32070bc2d4caede1/bitarray-2.9.0.tar.gz")
@@ -20,5 +20,10 @@ class PyBitarray(PythonPackage):
     version("2.7.4", sha256="143d4f65e1f45a533e13521be1dc557a782317ecf76520eabd5a903b26ecb187", url="https://pypi.org/packages/5d/58/5deb18b7ab2ac9b6d35ee62084d6965943d89b3635b12b7a3de4d2837639/bitarray-2.7.4.tar.gz")
     version("2.6.0", sha256="56d3f16dd807b1c56732a244ce071c135ee973d3edc9929418c1b24c5439a0fd", url="https://pypi.org/packages/80/b8/e81dda81f027e559728f6ee9bea7ec5e1fbf77120afbee4c440d3902d0a8/bitarray-2.6.0.tar.gz")
     version("0.8.1", sha256="7da501356e48a83c61f479393681c1bc4b94e5a34ace7e08cb29e7dd9290ab18", url="https://pypi.org/packages/0a/da/9f61d28a20c42b4963334efacfd257c85150ede96d0cd2509b37da69da47/bitarray-0.8.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

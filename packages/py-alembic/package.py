@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAlembic(PythonPackage):
+    # BEGIN VERSIONS
     version("1.13.1", sha256="2edcc97bed0bd3272611ce3a98d98279e9c209e7186e43e75bbb1b2bdfdbcc43", url="https://pypi.org/packages/7f/50/9fb3a5c80df6eb6516693270621676980acd6d5a9a7efdbfa273f8d616c7/alembic-1.13.1-py3-none-any.whl")
     version("1.13.0", sha256="a23974ea301c3ee52705db809c7413cecd165290c6679b9998dd6c74342ca23a", url="https://pypi.org/packages/d5/d8/fc331ad9aa5f2a551042582c3ededd70ee4e72b032089b1784150a5704ac/alembic-1.13.0-py3-none-any.whl")
     version("1.12.1", sha256="47d52e3dfb03666ed945becb723d6482e52190917fdb47071440cfdba05d92cb", url="https://pypi.org/packages/34/47/95d8f99c9f4a57079dfbcff5e023c5d81bde092d1c2354156340a56b3a1a/alembic-1.12.1-py3-none-any.whl")
@@ -29,7 +29,11 @@ class PyAlembic(PythonPackage):
     version("1.1.0", sha256="4a4811119efbdc5259d1f4c8f6de977b36ad3bcc919f59a29c2960c5ef9149e4", url="https://pypi.org/packages/9a/0f/a5e8997d58882da8ecd288360dddf133a83145de6480216774923b393422/alembic-1.1.0.tar.gz")
     version("1.0.11", sha256="cdb7d98bd5cbf65acd38d70b1c05573c432e6473a82f955cdea541b5c153b0cc", url="https://pypi.org/packages/7b/8b/0c98c378d93165d9809193f274c3c6e2151120d955b752419c7d43e4d857/alembic-1.0.11.tar.gz")
     version("1.0.7", sha256="16505782b229007ae905ef9e0ae6e880fddafa406f086ac7d442c1aaf712f8c2", url="https://pypi.org/packages/a4/06/f1ae8393463c26f3dafa21eebac611088da02a26e1f1e23bd75fee2dbffe/alembic-1.0.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-importlib-metadata", when="@1.7.4: ^python@:3.8")
         depends_on("py-importlib-resources", when="@1.7: ^python@:3.8")
@@ -38,4 +42,5 @@ class PyAlembic(PythonPackage):
         depends_on("py-python-editor@0.3:", when="@1:1.0.0,1.4.3:1.4,1.5.1:1.6.1,1.6.3:1.6")
         depends_on("py-sqlalchemy@1.3.0:", when="@1.5.1:1.6.1,1.6.3:")
         depends_on("py-typing-extensions@4:", when="@1.10:")
+    # END DEPENDENCIES
 

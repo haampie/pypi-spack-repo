@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,13 @@
 from spack.package import *
 
 class PyNbmake(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.5.3", sha256="6cfa2b926d335e9c6dce7e8543d01b2398b0a56c03131c5c0bce2b1722116212", url="https://pypi.org/packages/af/b2/fc53c6f8f2928e96c64e62204d2d2594eab713584efca85540421d8b5287/nbmake-1.5.3-py3-none-any.whl")
+    version("1.5.2", sha256="b8669c248177e2bc61139b7ce1bcbeb2ef2435e59e2308927737d6c84c53fc40", url="https://pypi.org/packages/2e/9f/f5bac5f2543fb0dd291f275a7132d6f79683e53214204634d66ff2ad50e6/nbmake-1.5.2-py3-none-any.whl")
+    version("1.5.1", sha256="4d33d8e3c39abd60be3d0ec748e315122173feb7902d28210e809115bce60997", url="https://pypi.org/packages/13/25/71d68e5b219c38e162a9bd01c5e78fd5eeb9203363b03a05590540cb5547/nbmake-1.5.1-py3-none-any.whl")
+    version("1.5.0", sha256="3dbe95a2e85019fd7ba6280ef19e0117a3190a9ea12c2fdf828250edbadf18ce", url="https://pypi.org/packages/d5/3c/567d0e7d2a138c76384a1d64a3aa745f1f0302e45d1cfe5ace3c0080510a/nbmake-1.5.0-py3-none-any.whl")
+    version("1.4.6", sha256="233603c9186c659cb42524de36b556197c352ede1f9daeaa1b1141dfad226218", url="https://pypi.org/packages/70/06/c4d83f6eeb9a3624902b9bb619beeed593a9eb304f5246b784d91bfe1623/nbmake-1.4.6-py3-none-any.whl")
+    version("1.4.5", sha256="043d210a71578a4ba1e2a3fe677ff8edbeaf88c58030e86b85fcd7944cbaa995", url="https://pypi.org/packages/99/37/50f7796be6bcfcbfc0f7fd1a7658110c4f834fe7f2495e00eb5eef85c7f1/nbmake-1.4.5-py3-none-any.whl")
     version("1.4.3", sha256="0318dd5dd30066e83717bf38888b2bec1b4744ad669a9801b41858e589493330", url="https://pypi.org/packages/96/50/5600dccaaed3de6faff6879b4236fcd56fc2ce3095662cd875bfc4288a47/nbmake-1.4.3-py3-none-any.whl")
     version("1.4.1", sha256="1c1619fc54a2fb64bfd84acbdf13b2ffba0e4a03bfea1684f4648f28ca850ada", url="https://pypi.org/packages/5d/40/6ef683d49d613fff75ee633a9b2cdfeafc6e02d59843e13f634a459c111c/nbmake-1.4.1-py3-none-any.whl")
     version("1.4", sha256="bc89fbc32484e761d95f26111e85237c6e9ed44b1cd26ba926e9502e5db4ace1", url="https://pypi.org/packages/c2/59/90766cd7b690ead86a3407bc68f1a5c044b0c3a907b286cb592400debc59/nbmake-1.4-py3-none-any.whl")
@@ -26,7 +32,13 @@ class PyNbmake(PythonPackage):
     version("0.7", sha256="dbde6ab506c0133a84cab6911dff0bc75ca814ba386f162a900f3b5e7b6c1b7f", url="https://pypi.org/packages/9a/aa/462be8e18d97e7b673e8e85a53a5a102d3e22ac02bc879742c625fadee2f/nbmake-0.7-py3-none-any.whl")
     version("0.6", sha256="f9febf7e8994b96da1b3afc8a0993484458f4ebb9ea8ef0758c17b0f8c8b4c4d", url="https://pypi.org/packages/91/3a/d2c30290736c1439865823830d9612b9444b988da1fe194dc94f9c134f5a/nbmake-0.6-py3-none-any.whl")
     version("0.5", sha256="8a0b3ce9ca26320165c6de532c3d36445da1dd53c2c8fac4870ed900b3cbe538", url="https://pypi.org/packages/00/79/f0d7bd40a3cfbdb5f05d4611c18fdfaec32efa02c5bde9fad3745d2773d7/nbmake-0.5-py3-none-any.whl")
+    version("0.4", sha256="a4e8ec4f0859d7546bed8efcc4970683d9eda5d52169e8398bb4f243a9b30589", url="https://pypi.org/packages/6e/35/685545c53df6b94c393bd13fec44f276755ee3ae4e0c77a15b30682e2126/nbmake-0.4-py3-none-any.whl")
+    version("0.3", sha256="05c79eb9459f5fe05fed3fc2d02590eba96204cf4c7cb3d2ed19caf0ea35a223", url="https://pypi.org/packages/f0/dd/d16a5c8a9bea09013dd593acc69d3f96065e4e7c606169c2906c4c758730/nbmake-0.3-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ipykernel@5.4:", when="@0.7:")
         depends_on("py-ipykernel@5.4:5", when="@0.1:0.5")
@@ -41,4 +53,5 @@ class PyNbmake(PythonPackage):
         depends_on("py-pytest@6.1:", when="@1.2.1:")
         depends_on("py-pytest@6.1:6", when="@0.10:1.2.0")
         depends_on("py-pytest@6.1.2:6", when="@0.1:0.9")
+    # END DEPENDENCIES
 

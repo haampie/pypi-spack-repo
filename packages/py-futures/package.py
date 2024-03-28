@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,15 +6,21 @@
 from spack.package import *
 
 class PyFutures(PythonPackage):
-    version("3.1.1", sha256="51ecb45f0add83c806c68e4b06106f90db260585b25ef2abfcda0bd95c0132fd", url="https://pypi.org/packages/cc/26/b61e3a4eb50653e8a7339d84eeaa46d1e93b92951978873c220ae64d0733/futures-3.1.1.tar.gz")
-    version("3.1.0", sha256="90a8c71762d53e4ebdb4f7893460761f4ce2f076df08bb4934f39e90464eb889", url="https://pypi.org/packages/25/83/113da7c7832a4efa80ec7fd5d25b2ea431d9a847cd78f1fa98ddd99d591a/futures-3.1.0.tar.gz")
-    version("3.0.5", sha256="0542525145d5afc984c88f914a0c85c77527f65946617edb5274f72406f981df", url="https://pypi.org/packages/55/db/97c1ca37edab586a1ae03d6892b6633d8eaa23b23ac40c7e5bbc55423c78/futures-3.0.5.tar.gz")
-    version("3.0.4", sha256="19485d83f7bd2151c0aeaf88fbba3ee50dadfb222ffc3b66a344ef4952b782a3", url="https://pypi.org/packages/8d/73/b5fff618482bc06c9711e7cdc0d5d7eb1904d35898f48f2d7f9696b08bef/futures-3.0.4.tar.gz")
-    version("3.0.3", sha256="2fe2342bb4fe8b8e217f0d21b5921cbe5408bf966d9f92025e707e881b198bed", url="https://pypi.org/packages/4c/dc/f9473006d4c9c52d4a4e977173fbcbfb1a8ef3a57e32e885edf994fd4a45/futures-3.0.3.tar.gz")
-    version("3.0.2", sha256="dc3fc91508e49e0fd2f8625f0132d16e49c80f882e7e1d565c56b0d5dfbae257", url="https://pypi.org/packages/f8/e7/fc0fcbeb9193ba2d4de00b065e7fd5aecd0679e93ce95a07322b2b1434f4/futures-3.0.2.tar.gz")
-    version("3.0.1", sha256="f78f2ef458639d72a625cf9c7643cf5442bb222ac11c12bcc445c6ad1cd862e2", url="https://pypi.org/packages/b2/2c/6b6a57379e47031c6f52e625e0e2b8f6702a8d1f61b6e0daee391e82c187/futures-3.0.1.tar.gz")
-    version("3.0.0", sha256="d9cd7bb09aa01f0e4940af64c31fbd7045098b7b4354420d7838ea39e8b86ee3", url="https://pypi.org/packages/ea/c9/35287369718fc05059e7a9d0d73c53745fe981010b4185b3858e7d46eff1/futures-3.0.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("3.1.1", sha256="3a44f286998ae64f0cc083682fcfec16c406134a81a589a5de445d7bb7c2751b", url="https://pypi.org/packages/05/80/f41cca0ea1ff69bce7e7a7d76182b47bb4e1a494380a532af3e8ee70b9ec/futures-3.1.1-py3-none-any.whl")
+    version("3.1.0", sha256="f72ad52afda986bb48ade45f3a8ce9bde53dd9d1e90b48fb6c17187013231013", url="https://pypi.org/packages/d5/ea/a77d7379219f717333c7726bcaafa7839f11f475a3d3691ec9ed5b4add0e/futures-3.1.0-py2-none-any.whl")
+    version("3.0.5", sha256="f7f16b6bf9653a918a03f1f2c2d62aac0cd64b1bc088e93ea279517f6b61120b", url="https://pypi.org/packages/9c/3f/1d818ea03fb2956a2bdfa8f8a3b1319590f0f151a5584a8a3ae45085066c/futures-3.0.5-py2-none-any.whl")
+    version("3.0.4", sha256="4e860d18d866ff6c5f2804ebcbb16415f4f29cf57efea919178b809cf99326b6", url="https://pypi.org/packages/9b/3a/da5dd42fb24e577d7cbb13b6f3a1bd466b7f11ff67facd670583d6bb6931/futures-3.0.4-py2-none-any.whl")
+    version("3.0.3", sha256="04afa2a06ab7dcca9d81717b420a7a14826061e9b2614a5c77dd24c75ccf97e4", url="https://pypi.org/packages/26/7d/a7e1130b63514cd7192f0ba0b53bdda7f96df88641ee0c97bfed8477f324/futures-3.0.3-py2-none-any.whl")
+    version("3.0.2", sha256="2269d0f0f7f187133378c6649da7bcea0fa33dd276910a39222d9243c0156351", url="https://pypi.org/packages/87/77/e02574de90ec2944113447106e3be417af2d4b3dd21a9a050c04b007cd29/futures-3.0.2-py2-none-any.whl")
+    version("3.0.1", sha256="c450cf293d635b3a8f7bb46690011fe16595a905b0d08cedf66af7f8986f7a4d", url="https://pypi.org/packages/5c/27/2f22e96c596b7cd83a3c1adceec4609eebd57ba3f8a061f993b4f84e592c/futures-3.0.1-py2-none-any.whl")
+    version("3.0.0", sha256="a264cafeeeb1e57e92d9118b75a432d3d364e30773783967e920d3392578dd92", url="https://pypi.org/packages/10/1c/182c9e959ca708ce611a7bf6b0ab6022d4a0e7edad79e5145c220431b028/futures-3.0.0-py2-none-any.whl")
     version("2.2.0", sha256="9fd22b354a4c4755ad8c7d161d93f5026aca4cfe999bd2e53168f14765c02cd6", url="https://pypi.org/packages/d7/1d/68874943aa37cf1c483fc61def813188473596043158faa6511c04a038b4/futures-2.2.0-py2.py3-none-any.whl")
     version("2.1.6", sha256="0de25b75a1a353f70ba3c17de148b7bae135fc6a3636a593910f9a1e4b4549c3", url="https://pypi.org/packages/59/a0/cf4cd997e1750f0c2d91c6ea5abea218251c43c3581bcc2f118b00baf5cf/futures-2.1.6-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

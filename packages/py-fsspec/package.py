@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFsspec(PythonPackage):
+    # BEGIN VERSIONS
     version("2024.3.1", sha256="918d18d41bf73f0e2b261824baeb1b124bcf771767e3a26425cd7dec3332f512", url="https://pypi.org/packages/93/6d/66d48b03460768f523da62a57a7e14e5e95fdf339d79e996ce3cecda2cdb/fsspec-2024.3.1-py3-none-any.whl")
     version("2024.3.0", sha256="779001bd0122c9c4975cf03827d5e86c3afb914a3ae27040f15d341ab506a693", url="https://pypi.org/packages/60/be/ba7cf9660a7f566fe6b63eab725e962d23ffc340324ba1eb837833e4b90a/fsspec-2024.3.0-py3-none-any.whl")
     version("2024.2.0", sha256="817f969556fa5916bc682e02ca2045f96ff7f586d45110fcb76022063ad2c7d8", url="https://pypi.org/packages/ad/30/2281c062222dc39328843bd1ddd30ff3005ef8e30b2fd09c4d2792766061/fsspec-2024.2.0-py3-none-any.whl")
@@ -30,11 +30,16 @@ class PyFsspec(PythonPackage):
     version("0.8.0", sha256="ce109f41ffe62853d5de84888f3e455c39f2a0796c05b558474c77156e19b570", url="https://pypi.org/packages/d3/66/974e01194980d9780cc09724315111f9cccba26b4351552fdb4d97eb842e/fsspec-0.8.0-py3-none-any.whl")
     version("0.7.3", sha256="9f0e3f4915b463b94c5788afa37b89d2c29c696f0d4da7d05f9cb5b17c8c84f7", url="https://pypi.org/packages/e9/fa/51b4b5630d6c8ce08aac7370989949d534052fb0e80a749fe8980b1d86d9/fsspec-0.7.3-py3-none-any.whl")
     version("0.4.4", sha256="97697a46e8bf8be34461c2520d6fc4bfca0ed749b22bb2b7c21939fd450a7d63", url="https://pypi.org/packages/44/99/39445aabe009d2327a369e74dea98178a5d757023e214ee478fdbec5844d/fsspec-0.4.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("http", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiohttp@:3", when="@2022.8:+http")
         depends_on("py-aiohttp", when="@0.8.1:2022.7+http")
         depends_on("py-requests", when="@0.8.1:2023+http")
+    # END DEPENDENCIES
 

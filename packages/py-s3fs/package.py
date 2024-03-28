@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyS3fs(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.3.1", sha256="f4566a5446c473740d272ec08e0b4aae8db1aa05f662c42ff0aa2c89bb5060ea", url="https://pypi.org/packages/a2/dc/b373f0cfdc67a6b23bc80d0e743b8adf125f4066b39172acb4bb2b90e6be/s3fs-2024.3.1-py3-none-any.whl")
     version("2024.3.0", sha256="def23c00eb89e3a49bbe7211eb617204c99959cadf9a796faa512bafa861c115", url="https://pypi.org/packages/72/45/02935f47f1a180982555a1c53e63444aa1c7d48db60a9880867bb64c1e2e/s3fs-2024.3.0-py3-none-any.whl")
     version("2024.2.0", sha256="c140de37175c157cb662aa6ad7423365df732ac5f10ef5bf7b76078c6333a942", url="https://pypi.org/packages/7c/76/efa5f84237620d5aa38e58285945b47449d8a94bf7037cae06f680b34c41/s3fs-2024.2.0-py3-none-any.whl")
@@ -20,7 +20,11 @@ class PyS3fs(PythonPackage):
     version("2022.11.0", sha256="42d57a3ceedb478b18ee53e34bbe3305a3f07f6381ca1ab76135efe076c6a07d", url="https://pypi.org/packages/04/5c/6a5696e6e0fc30cfab334ed47e7e04707a6efd0ac1fe24158f5969fb4ef8/s3fs-2022.11.0-py3-none-any.whl")
     version("2022.1.0", sha256="3d20584130a6bf4679e4d9fa9a859597bab6553b8f4bd439168629c825d8ef01", url="https://pypi.org/packages/f1/ff/76ed699715acec23c487f3bb59b6b8be01289d1fe9ff2a447d8c400b6ee8/s3fs-2022.1.0-py3-none-any.whl")
     version("0.5.2", sha256="0e7a3fdab0ff66af7c8afd9cdc69723643e10ba6ce37776332fdad9f41bec3dd", url="https://pypi.org/packages/d0/47/8f96b4a3af8bd54dda28df960307978679b3cc64bc8ec5460697c30bc783/s3fs-0.5.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiobotocore@2.5.4:", when="@2023.12:")
         depends_on("py-aiobotocore@2.7", when="@2023.10")
@@ -43,4 +47,5 @@ class PyS3fs(PythonPackage):
         depends_on("py-fsspec@2022.11:2022", when="@2022.11:2022")
         depends_on("py-fsspec@2022:2022.1", when="@2022:2022.1")
         depends_on("py-fsspec@0.8:", when="@0.5:0")
+    # END DEPENDENCIES
 

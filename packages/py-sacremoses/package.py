@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySacremoses(PythonPackage):
+    # BEGIN VERSIONS
     version("0.1.1", sha256="31e04c98b169bfd902144824d191825cd69220cdb4ae4bcf1ec58a7db5587b1a", url="https://pypi.org/packages/0b/f0/89ee2bc9da434bd78464f288fdb346bc2932f2ee80a90b2a4bbbac262c74/sacremoses-0.1.1-py3-none-any.whl")
     version("0.1.0", sha256="85354ae5cab89db73f748230c48f514a4feac8cc893654045be9247653135e70", url="https://pypi.org/packages/2e/18/7b4fedbc4e8fa02111b232d9728788e2e817a64b14760530df746514e25f/sacremoses-0.1.0-py3-none-any.whl")
     version("0.0.53", sha256="43715868766c643b35de4b8046cce236bfe59a7fa88b25eaf6ddf02bacf53a7a", url="https://pypi.org/packages/28/78/fef8d089db5b97546fd6d1ff2e813b8544e85670bf3a8c378c9d0250b98d/sacremoses-0.0.53.tar.gz")
@@ -18,11 +18,16 @@ class PySacremoses(PythonPackage):
     version("0.0.47", sha256="7622c6e9fe12d45b7acf4528451bd054c1557c1f6779398f9cd9f28332d92a0b", url="https://pypi.org/packages/ec/e5/407e634cbd3b96a9ce6960874c5b66829592ead9ac762bd50662244ce20b/sacremoses-0.0.47-py2.py3-none-any.whl")
     version("0.0.46", sha256="f95f80d09d3501fed5c1d3056d9212b40599b08cb27f185d38ff0063be8ddd09", url="https://pypi.org/packages/36/bf/15f8df78bce5eee8223553123173f010d426565980e457c559a71ecbecc3/sacremoses-0.0.46-py3-none-any.whl")
     version("0.0.39", sha256="53fad38b93dd5bf1657a68d52bcca5d681d4246477a764b7791a2abd5c7d1f4c", url="https://pypi.org/packages/e1/e9/fa2e0d101186844bfe35842715a6d9f0a44231838f92fc505c0eb00323fb/sacremoses-0.0.39.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click", when="@0.0.45:0.0.47,0.0.49,0.1:")
         depends_on("py-joblib", when="@0.0.45:0.0.47,0.0.49,0.1:")
         depends_on("py-regex", when="@0.0.45:0.0.47,0.0.49,0.1:")
         depends_on("py-six", when="@0.0.45:0.0.47,0.0.49")
         depends_on("py-tqdm", when="@0.0.45:0.0.47,0.0.49,0.1:")
+    # END DEPENDENCIES
 

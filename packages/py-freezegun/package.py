@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyFreezegun(PythonPackage):
-    version("0.3.12", sha256="2a4d9c8cd3c04a201e20c313caf8b6338f1cfa4cda43f46a94cc4a9fd13ea5e7", url="https://pypi.org/packages/da/df/029966dd13982a043df910996bd3c0d0221b3add47fcd44fd8c3f44f3152/freezegun-0.3.12.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.3.12", sha256="edfdf5bc6040969e6ed2e36eafe277963bdc8b7c01daeda96c5c8594576c9390", url="https://pypi.org/packages/81/98/801900ea24536928a99e40a815812c1bc7d7f833d53ec53f216d8330db7d/freezegun-0.3.12-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

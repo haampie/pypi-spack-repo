@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDatasets(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.18.0", sha256="f1bbf0e2896917a914de01cbd37075b14deea3837af87ad0d9f697388ccaeb50", url="https://pypi.org/packages/95/fc/661a7f06e8b7d48fcbd3f55423b7ff1ac3ce59526f146fda87a1e1788ee4/datasets-2.18.0-py3-none-any.whl")
     version("2.17.1", sha256="346974daf2fe9c14ddb35646896b2308b95e7dc27709d1a6e25273573b140cf8", url="https://pypi.org/packages/73/75/ead8e4489217835fd8004c9c89dad8217deacd7e2591340dbe249b58c29f/datasets-2.17.1-py3-none-any.whl")
     version("2.17.0", sha256="1479667383d002c2b4a4fc6ac0fb99a7f8e7e440f348991ae7343837f9fc84db", url="https://pypi.org/packages/74/4d/63b033169534f0742b7fe13957118cae08c83b04bfde46511f397872e2e7/datasets-2.17.0-py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyDatasets(PythonPackage):
     version("2.14.4", sha256="29336bd316a7d827ccd4da2236596279b20ca2ac78f64c04c9483da7cbc2459b", url="https://pypi.org/packages/66/f8/38298237d18d4b6a8ee5dfe390e97bed5adb8e01ec6f9680c0ddf3066728/datasets-2.14.4-py3-none-any.whl")
     version("2.8.0", sha256="f36cb362bb5587659bab18e594b6d25d9d28486d735a571319c82efeb5a4e5df", url="https://pypi.org/packages/24/57/6b07e4dc51479ae3e9bbc774af348b0307e2b66957ceae94d25e3f9d7dcf/datasets-2.8.0-py3-none-any.whl")
     version("1.8.0", sha256="9d449ff7dbb67e2af52f9658c19902890e9f3672053bdb56500717fd8888b3fd", url="https://pypi.org/packages/08/a2/d4e1024c891506e1cee8f9d719d20831bac31cb5b7416983c4d2f65a6287/datasets-1.8.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiohttp", when="@1.12:")
         depends_on("py-dill@0.3:", when="@2.17:")
@@ -77,4 +81,5 @@ class PyDatasets(PythonPackage):
 
         # marker: (sys_platform == "darwin" and platform_machine == "arm64") and extra == "tests"
         # depends_on("py-tensorflow-macos", when="@2.7:")
+    # END DEPENDENCIES
 

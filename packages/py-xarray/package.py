@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyXarray(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.2.0", sha256="a31a9b37e39bd5aeb098070a75d6dd4d59019eb339d735b86108b9e0cb391f94", url="https://pypi.org/packages/47/f6/f2d4a0a2a4eb6fc427f1e482987e24104c9710c4244c76ea75b55243ada0/xarray-2024.2.0-py3-none-any.whl")
     version("2024.1.1", sha256="0bec81303b088c8df4f075e1579c00cfd7e5069688e4434007f0b8d7df17fc1c", url="https://pypi.org/packages/d4/b5/2af411546a4c2be8d6315bc01be055fbad367bc9c57dbd773ad05db62b1c/xarray-2024.1.1-py3-none-any.whl")
     version("2024.1.0", sha256="df040f835441babf0a04c0bd6eacf7780f7dad6044a86603b16f6b4d204a99bd", url="https://pypi.org/packages/e9/c4/7f7ea950c721f002268d17e538c85108e5b09e4fe24e4b79e604bfb59660/xarray-2024.1.0-py3-none-any.whl")
@@ -26,9 +26,22 @@ class PyXarray(PythonPackage):
     version("0.12.0", sha256="00d9c465989a004e48a015d834275eb16e4266fa43f8f9689ae5db590f623e04", url="https://pypi.org/packages/48/9a/3634efd35aeaa98fb0f0bdc7318e383e4723774cb6fd6f693cca975d70ec/xarray-0.12.0-py2.py3-none-any.whl")
     version("0.11.0", sha256="51013a4fbdad6def83a49233490da6f15650a0d4a65966c26d8e2b6cf7992269", url="https://pypi.org/packages/ab/f3/c3b45f15a82d7c89cbb6f0726d047d5d2b0ec8d1933731c125ac45a38b3d/xarray-0.11.0-py2.py3-none-any.whl")
     version("0.9.1", sha256="7f100df6e98febb10dc4c0274ac57540ff6c6b2f28add518dc75422a647d82bd", url="https://pypi.org/packages/ba/b6/52cefb47d8775673a2cfcce3e30e8138b329a7731aba3921bcd1ebae49e1/xarray-0.9.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("io", default=False)
+    variant("parallel", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2023.2:")
+        depends_on("py-cfgrib", when="@0.16.2:2023.3+io")
+        depends_on("py-cftime", when="@0.16.2:+io")
+        depends_on("py-dask+complete", when="@0.16.2:+parallel")
+        depends_on("py-fsspec", when="@0.16.2:+io")
+        depends_on("py-h5netcdf", when="@0.16.2:+io")
+        depends_on("py-netcdf4", when="@0.16.2:+io")
         depends_on("py-numpy@1.23.0:", when="@2024:")
         depends_on("py-numpy@1.22.0:", when="@2023.10.1:2023")
         depends_on("py-numpy@1.21.0:", when="@2023.2:2023.10.0")
@@ -49,6 +62,13 @@ class PyXarray(PythonPackage):
         depends_on("py-pandas@0.24.0:", when="@0.14")
         depends_on("py-pandas@0.19.2:", when="@0.10.8:0.13")
         depends_on("py-pandas@0.15:", when="@0.8:0.9")
+        depends_on("py-pooch", when="@0.18.1:+io")
+        depends_on("py-pydap", when="@2022.9:+io ^python@:3.9")
+        depends_on("py-pydap", when="@0.16.2:2022.6+io")
+        depends_on("py-rasterio", when="@0.16.2:2023.3+io")
+        depends_on("py-scipy", when="@0.16.2:+io")
         depends_on("py-setuptools@40.4:", when="@0.17:0.19")
         depends_on("py-setuptools@38.4:", when="@0.16.1:0.16")
+        depends_on("py-zarr", when="@0.16.2:+io")
+    # END DEPENDENCIES
 

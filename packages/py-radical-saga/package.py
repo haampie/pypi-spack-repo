@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRadicalSaga(PythonPackage):
+    # BEGIN VERSIONS
     version("1.47.0", sha256="fc9a8fc060e708852ce6c40b08a65111f8d72b9ad5f8afef9ceaa866c1351233", url="https://pypi.org/packages/58/c7/5d86bdd3fbf96e1756853c2340c60de4fbf271793877f685d4ae4c34602f/radical.saga-1.47.0.tar.gz")
     version("1.39.0", sha256="0fea8103d3f96c821c977bcb55ff1c6a9844de727539b182dda4cbc2570df791", url="https://pypi.org/packages/2b/da/5cfad90794f000d12563822545035925f438da71a5acf3743bf58a93884e/radical.saga-1.39.0.tar.gz")
     version("1.20.0", sha256="d85f3ed564d9eaf3ead2aa349c854e944ca459492ebf88542404106fce4204ab", url="https://pypi.org/packages/2a/6c/27bfce784fdbb755990810e95b2fb8a3477899e9dc68e0cbd5da73c74e4b/radical.saga-1.20.0.tar.gz")
@@ -20,5 +20,10 @@ class PyRadicalSaga(PythonPackage):
     version("1.8.0", sha256="6edf94897102a08dcb994f7f107a0e25e7f546a0a9488af3f8b92ceeeaaf58a6", url="https://pypi.org/packages/4f/4b/15452082443a7cc86d52bcb6ff568b457eed3d787d65d867942840f1d52c/radical.saga-1.8.0.tar.gz")
     version("1.6.10", sha256="8fe7e281e9f81234f34f5c7c7986871761e9e37230d2a874c65d18daeccd976a", url="https://pypi.org/packages/26/80/74a11166e320484234105dd22c3a6b10bca3f5cc32d94d9b6f2b29bbc57b/radical.saga-1.6.10.tar.gz")
     version("1.6.8", sha256="d5e9f95a027087fb637cef065ff3af848e5902e403360189e36c9aa7c3f6f29b", url="https://pypi.org/packages/26/3c/450626a3ac27a6152347ab964732d315e1e8bc924b15f69f6482dbd84cf3/radical.saga-1.6.8.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

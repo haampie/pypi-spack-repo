@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyParamiko(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.4.0", sha256="43f0b51115a896f9c00f59618023484cb3a14b98bbceab43394a39c6739b7ee7", url="https://pypi.org/packages/ad/50/8792484502c8141c20c996b802fefa8435a9c018a2bb440a06b172782118/paramiko-3.4.0-py3-none-any.whl")
     version("3.3.1", sha256="b7bc5340a43de4287bbe22fe6de728aa2c22468b2a849615498dd944c2f275eb", url="https://pypi.org/packages/bb/8f/3cef65d3fe76e59f320405027d594a0332e44852fef722f0ee4e81e2e7e3/paramiko-3.3.1-py3-none-any.whl")
     version("3.3.0", sha256="81d879b40a2f30ebad4befb842cbbcd70ffed4c2413f53729861cdb86e8afd7f", url="https://pypi.org/packages/55/62/6cf369c3faaba30287871af7754977770aa77a402e9850de5d2bc2542ec6/paramiko-3.3.0-py3-none-any.whl")
@@ -26,15 +26,24 @@ class PyParamiko(PythonPackage):
     version("2.9.2", sha256="04097dbd96871691cdb34c13db1883066b8a13a0df2afd4cb0a92221f51c2603", url="https://pypi.org/packages/60/3e/84c52fb09db84548c5d366bac8863125c6db099b87495e04c8af5527e6f1/paramiko-2.9.2-py2.py3-none-any.whl")
     version("2.7.1", sha256="9c980875fa4d2cb751604664e9a2d0f69096643f5be4db1b99599fe114a97b2f", url="https://pypi.org/packages/06/1e/1e08baaaf6c3d3df1459fd85f0e7d2d6aa916f33958f151ee1ecc9800971/paramiko-2.7.1-py2.py3-none-any.whl")
     version("2.1.2", sha256="bdf239647e18b9b9ddbc2894fd1de9786b7a9144b1d19e32a5be3bb4bb63ae5d", url="https://pypi.org/packages/14/1e/2988f842e3194daf4d6e14e6e38e8d7085b2b45c669c3b635708c4a7618c/paramiko-2.1.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("invoke", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bcrypt@3.2:", when="@3:")
         depends_on("py-bcrypt@3.1.3:", when="@2.2.1:2")
         depends_on("py-cryptography@3.3:", when="@3:")
         depends_on("py-cryptography@2.5:", when="@2.5:2")
         depends_on("py-cryptography@1.1:", when="@2:2.2")
+        depends_on("py-invoke@2:", when="@3:+invoke")
+        depends_on("py-invoke@1.3:", when="@2.7:2+invoke")
         depends_on("py-pyasn1@0.1.7:", when="@2:2.4")
         depends_on("py-pynacl@1.5:", when="@3:")
         depends_on("py-pynacl@1.0.1:", when="@2.2:2")
         depends_on("py-six", when="@2.9.3:2")
+    # END DEPENDENCIES
 

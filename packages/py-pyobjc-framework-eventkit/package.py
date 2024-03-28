@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkEventkit(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="c9afa63fc2924281fdf1ef6c86cc2ba01b7b84a8545a826ddd89e4abd7077e81", url="https://pypi.org/packages/3f/44/91d97119ed7286cfbbfbb5918a28e6087abb1b9152a12bf8a230a9cf94b4/pyobjc_framework_EventKit-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="3265ef0bfab38508c50febfa922b4abf6ebc55a44f105d499e19231c225a027c", url="https://pypi.org/packages/32/f7/5fc7b983e03b68315e7150d5dab72ca0ac7a020e309561a780f5a8edda60/pyobjc_framework_EventKit-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="48d65edd47efd0864d93e5bbe3f05121c413d4006b7c0f0a3f0592b58d80a0db", url="https://pypi.org/packages/62/c4/1e6e78f4f554a85ef4c261315dd2e3a5551c28054da1cdd8868dd7bd5f04/pyobjc_framework_EventKit-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkEventkit(PythonPackage):
     version("9.0", sha256="64375d523a369453ab0120bbb7140790904c950ac05bf9bbed1ac62ffb8fd0ee", url="https://pypi.org/packages/2d/1c/7d03480804e177c7f2e482030632698d36f25c998fc8a4bbd0e7a17d3000/pyobjc_framework_EventKit-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="ab801ce0aed58e3a989539d540ea7af8474ca69e01b2abf69d7ed7dde54750b6", url="https://pypi.org/packages/fc/83/1f0cd7ddad6db11735b97fe440739a499162691130038ac7628aca6b0937/pyobjc_framework_EventKit-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="6c77880ec39c47a8c016735f60d830324df65ddcbbd63cb106fed82f4fed0522", url="https://pypi.org/packages/c0/ea/55905ee3a867adad2e25078ffbfd65ff8d922bc4b3a20ad70b25cd9fa262/pyobjc_framework_EventKit-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkEventkit(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

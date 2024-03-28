@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMeautility(PythonPackage):
+    # BEGIN VERSIONS
     version("1.5.1", sha256="93d0ed4fcd9f65fb10376b53c846ac0942332e06c6144e12e5c7a5b1f31accf6", url="https://pypi.org/packages/c6/20/de3443888225574e1e42675e8d740f6cecc5873a6da7640b2c798e22fc81/MEAutility-1.5.1-py3-none-any.whl")
     version("1.5.0", sha256="99977208ec465ed7b9789cdccbccb5a8d39c5e3612fd620fe5dcbe8b9dd39846", url="https://pypi.org/packages/fc/fd/5db599ce2694f187f914b02068c7c5df957edbd08b2caa3164f50064a11f/MEAutility-1.5.0-py3-none-any.whl")
     version("1.4.9", sha256="c44089ed35a0a09c65f6f6166c8641c4c8f29a694a5deb2f5a9f61b824b2c765", url="https://pypi.org/packages/3e/92/142b3fd660f141fbd1a0550dc3a367acfc8df39c15ee0e502ce5d74233e7/MEAutility-1.4.9.tar.gz")
@@ -17,9 +17,14 @@ class PyMeautility(PythonPackage):
     version("1.4.4", sha256="8dad04cfed6fdc8b993a41f8c847905331af7ed3a412d9eda3fca5bc4f88175d", url="https://pypi.org/packages/d7/53/8ebaea57510962928cdfca93e98421173a98d96bb2712328f107d224650a/MEAutility-1.4.4.tar.gz")
     version("1.4.3", sha256="7cd1f723992aa7366f1cbbf8f2843e1f61d8123b459435653860a3b544bc752f", url="https://pypi.org/packages/02/0c/8c5bdfaf8e61e195676d3ded6e6a9a2813609e4121d0b531010b205f56e9/MEAutility-1.4.3.tar.gz")
     version("1.4.2", sha256="3d646997e68b13a21f502242bd38dd3c6c502c04f233e84c6f5a438c2a1b2a0a", url="https://pypi.org/packages/5e/33/a3dc991654645155d0cb8778440fdf3fdd0547dc2af367bfdafd03f6ae1d/MEAutility-1.4.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-matplotlib", when="@1.5:")
         depends_on("py-numpy", when="@1.5:")
         depends_on("py-pyyaml", when="@1.5:")
+    # END DEPENDENCIES
 

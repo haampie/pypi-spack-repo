@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAiofiles(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("23.2.1", sha256="19297512c647d4b27a2cf7c34caa7e405c0d60b5560618a29a9fe027b18b0107", url="https://pypi.org/packages/c5/19/5af6804c4cc0fed83f47bff6e413a98a36618e7d40185cd36e69737f3b0e/aiofiles-23.2.1-py3-none-any.whl")
     version("23.2.0", sha256="d7adbeef4bada163e70bd3163866680332f622b4437d9d8246bd74b6d791d83a", url="https://pypi.org/packages/62/79/c19ab884013e5d49a70fa271331c510be2261530cbd1045b35273098ba9b/aiofiles-23.2.0-py3-none-any.whl")
     version("23.1.0", sha256="9312414ae06472eb6f1d163f555e466a23aed1c8f60c30cccf7121dba2e53eb2", url="https://pypi.org/packages/a8/76/635aa4f210d46ca105bfedd42d41f649b91d3e58422912726fc5e7965442/aiofiles-23.1.0-py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyAiofiles(PythonPackage):
     version("0.5.0", sha256="377fdf7815cc611870c59cbd07b68b180841d2a2b79812d8c218be02448c2acb", url="https://pypi.org/packages/f4/2b/078a9771ae4b67e36b0c2a973df845260833a4eb088b81c84b738509b4c4/aiofiles-0.5.0-py3-none-any.whl")
     version("0.4.0", sha256="1e644c2573f953664368de28d2aa4c89dfd64550429d0c27c4680ccd3aa4985d", url="https://pypi.org/packages/cf/f2/a67a23bc0bb61d88f82aa7fb84a2fb5f278becfbdc038c5cbb36c31feaf1/aiofiles-0.4.0-py3-none-any.whl")
     version("0.3.2", sha256="25c66ea3872d05d53292a6b3f7fa0f86691512076446d83a505d227b5e76f668", url="https://pypi.org/packages/0b/39/bb20653b60bab6ba036f13f7eae91a232b63394d4a04ae08efd45f434222/aiofiles-0.3.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

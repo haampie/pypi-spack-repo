@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyLinecache2(PythonPackage):
-    version("1.0.0", sha256="4b26ff4e7110db76eeb6f5a7b64a82623839d595c2038eeda662f2a2db78e97c", url="https://pypi.org/packages/44/b0/963c352372c242f9e40db02bbc6a39ae51bde15dddee8523fe4aca94a97e/linecache2-1.0.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.0.0", sha256="e78be9c0a0dfcbac712fe04fbf92b96cddae80b1b842f24248214c8496f006ef", url="https://pypi.org/packages/c7/a3/c5da2a44c85bfbb6eebcfc1dde24933f8704441b98fdde6528f4831757a6/linecache2-1.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

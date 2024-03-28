@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTldextract(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.1.2", sha256="4dfc4c277b6b97fa053899fcdb892d2dc27295851ab5fac4e07797b6a21b2e46", url="https://pypi.org/packages/fc/6d/8eaafb735b39c4ab3bb8fe4324ef8f0f0af27a7df9bb4cd503927bd5475d/tldextract-5.1.2-py3-none-any.whl")
     version("5.1.1", sha256="b9c4510a8766d377033b6bace7e9f1f17a891383ced3c5d50c150f181e9e1cc2", url="https://pypi.org/packages/d0/de/3f37b2568115c7ebeae39508dc1092f04f3dc286f22ef30171baca9c9cf2/tldextract-5.1.1-py3-none-any.whl")
     version("5.1.0", sha256="c8eecb15f556b43db6eebd21667640fb6fba9bc9539b48707432014913a78d13", url="https://pypi.org/packages/55/c8/43abd77a03143c7be1474df13d08118e1c37e7868e13d7bbc4a9a7d849eb/tldextract-5.1.0-py3-none-any.whl")
@@ -18,10 +18,15 @@ class PyTldextract(PythonPackage):
     version("3.4.4", sha256="581e7dbefc90e7bb857bb6f768d25c811a3c5f0892ed56a9a2999ddb7b1b70c2", url="https://pypi.org/packages/7e/83/8ab4b0505086a92bda25d81b39cfbfc4e90f432a3dd7b0d2725579e7998a/tldextract-3.4.4-py3-none-any.whl")
     version("3.4.3", sha256="5ed3fd01df4e78b8b378bdff94397cd8cdb130b54d2681c40d254beadd50f69f", url="https://pypi.org/packages/ce/d5/fd274ffb00ace49387b3de13eb8346f7003ee23b01c2bc8c2737a9e856f4/tldextract-3.4.3-py3-none-any.whl")
     version("3.4.1", sha256="26f646987b01ae2946e7491cce4aaf54129f3489a196a274e6c843ec72968313", url="https://pypi.org/packages/fb/21/dad9eaedad757362458f92f9345307cc847956ab9775ee9ab5a0fcb912cf/tldextract-3.4.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-filelock@3.0.8:", when="@3:")
         depends_on("py-idna", when="@2.2.1:")
         depends_on("py-requests@2.1:", when="@2.2.1:")
         depends_on("py-requests-file@1.4:", when="@2.2.1:")
+    # END DEPENDENCIES
 

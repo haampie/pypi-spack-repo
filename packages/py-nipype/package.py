@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNipype(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.8.6", sha256="e404ba7781d2418c107107436ec509348137651fca56e5b3c9f9cb5235af6bd4", url="https://pypi.org/packages/60/02/d4e8c990e14d7efcb35038a3d1743ff5068d66d92c1fcc298c9654bae55d/nipype-1.8.6-py3-none-any.whl")
     version("1.8.5", sha256="6474fd162c164f318a08b250b62ccefbaf9bb6fa80f173728c7d6fb1e8d3fd8d", url="https://pypi.org/packages/63/15/fb96e68d6becea5725a57bf220afd7d50ec04a2b9284341e9cbd6c05d5ec/nipype-1.8.5-py3-none-any.whl")
     version("1.8.4", sha256="dd1190110eacf89c0ebceba633652660f6b80ee0a1484efeddb574e2ceb6ccd6", url="https://pypi.org/packages/4f/68/1675a648c0540c4c6545d6e0f33c7f7b103537431349e166380faa01daf5/nipype-1.8.4-py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyNipype(PythonPackage):
     version("1.6.1", sha256="8d36685ff6ae7773e9e4f3b99fc95c94034d370d64afd83d4eb2caf0de6299f4", url="https://pypi.org/packages/a6/1b/5a47f6c7d3f5ebd64ebd72c454b4ff3deca96218a114f90ee47dc4e37bed/nipype-1.6.1-py3-none-any.whl")
     version("1.6.0", sha256="bb471aad456073fb994b51cc74894827e21bd61da2b1dfdba41fad9cd5d8bd77", url="https://pypi.org/packages/1f/0e/348956e47dfa73e359c55f9249d61fdd0526ab24d761a0b94299b1a9f88b/nipype-1.6.0-py3-none-any.whl")
     version("1.4.2", sha256="f3466496093d622436a2666de98562baf6b186b3eda12712f9cfb20c1f126ffd", url="https://pypi.org/packages/73/f2/e094bf653b5ec180f8227901056ff35ffd7edfc23f967b67dd4238d0f4c7/nipype-1.4.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click@6.6:", when="@0.13.0,0.14:")
         depends_on("py-etelemetry@0.2:", when="@1.5.0:")
@@ -44,4 +48,5 @@ class PyNipype(PythonPackage):
         depends_on("py-traits@4.6:4,5.1:6.3", when="@1.8.4:")
         depends_on("py-traits@4.6:4,5.1:", when="@1.2:1.8.3")
         depends_on("py-xvfbwrapper", when="@0.12:0.12.0-rc1")
+    # END DEPENDENCIES
 

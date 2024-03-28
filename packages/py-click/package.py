@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyClick(PythonPackage):
+    # BEGIN VERSIONS
     version("8.1.7", sha256="ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", url="https://pypi.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl")
     version("8.1.6", sha256="fa244bb30b3b5ee2cae3da8f55c9e5e0c0e86093306301fb418eb9dc40fbded5", url="https://pypi.org/packages/1a/70/e63223f8116931d365993d4a6b7ef653a4d920b41d03de7c59499962821f/click-8.1.6-py3-none-any.whl")
     version("8.1.5", sha256="e576aa487d679441d7d30abb87e1b43d24fc53bffb8758443b1a9e1cee504548", url="https://pypi.org/packages/22/b3/1da4ea0efa2e5ae410a347be614162ca08bd24a84059938aa5122d1e751b/click-8.1.5-py3-none-any.whl")
@@ -22,14 +22,19 @@ class PyClick(PythonPackage):
     version("7.1.1", sha256="e345d143d80bf5ee7534056164e5e112ea5e22716bbb1ce727941f4c8b471b9a", url="https://pypi.org/packages/dd/c0/4d8f43a9b16e289f36478422031b8a63b54b6ac3b1ba605d602f10dd54d6/click-7.1.1-py2.py3-none-any.whl")
     version("7.1", sha256="91eb2c43db0254aaf3b14a3c4e0db914a900aa09bbc33c6e87ede4a8f7c969dc", url="https://pypi.org/packages/cf/14/03d1edbed5fe8be89d0938f8bc015f97cc6ff47af55d1195ec0fab978e64/click-7.1-py2.py3-none-any.whl")
     version("7.0", sha256="2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", url="https://pypi.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl")
-    version("6.7", sha256="f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b", url="https://pypi.org/packages/95/d9/c3336b6b5711c3ab9d1d3a80f1a3e2afeb9d8c02a7166462f6cc96570897/click-6.7.tar.gz")
+    version("6.7", sha256="29f99fc6125fbc931b758dc053b3114e55c77a6e4c6c3a2674a2dc986016381d", url="https://pypi.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl")
     version("6.7.dev0", sha256="71c6adabc8afbcce77d9449cd447adecf3b9256cb213e8d593e4ff83880c8a4a", url="https://pypi.org/packages/7e/16/5a3cc0022ac505131fba3c9ea6ae5178fbb6de3d53580301b59d76b22ae3/click-6.7.dev0.tar.gz")
     version("6.6", sha256="fcf697e1fd4b567d817c69dab10a4035937fe6af175c05fd6806b69f74cbc6c4", url="https://pypi.org/packages/1c/7c/10b4132dd952b6a04e37626258825b8aa8c1eb99545f2eb26a77c21efb55/click-6.6-py2.py3-none-any.whl")
     version("6.5", sha256="596b81cda1d84d8cb57ceefd17a78d084c60b134819067b0721a3b0f53dc3ad2", url="https://pypi.org/packages/c5/69/cfba82517e863d6403560e7a6e0085ea67d7fa1fd618938b0bb28a34a870/click-6.5.tar.gz")
-    version("6.4", sha256="6eb86ac0e44e60b3085e7b87797fe2adf745dbea38b78d7db1f17ec96ca016ed", url="https://pypi.org/packages/50/b5/6e007052e13d7a38a15b527e5849a369cc70a772dc1ff088546c29261c26/click-6.4.tar.gz")
-    version("6.3", sha256="b720d9faabe193287b71e3c26082b0f249501288e153b7e7cfce3bb87ac8cc1c", url="https://pypi.org/packages/f7/52/59fef62b1927215be58b5a76c114a87883d5dbf2a600b47cb221a43d3c34/click-6.3.tar.gz")
-    version("6.2", sha256="fba0ff70f5ebb4cebbf64c40a8fbc222fb7cf825237241e548354dabe3da6a82", url="https://pypi.org/packages/bc/99/bdd231c8c5f411e1bfdef262085c34de7189fb35414b9db14ba94a97cc1c/click-6.2.tar.gz")
+    version("6.4", sha256="a5369d2fcd77dc47f2e4cf9eb7161ef526661de3e5dca88e629d6ec8d7103821", url="https://pypi.org/packages/3a/6a/e4602135faa87282dab2d432c7d2e8b0e7a2663e487b5b4a335bda9bc9d4/click-6.4-py2.py3-none-any.whl")
+    version("6.3", sha256="2edb68d966802dd1b28a5f3403bcd7d2e3cc4218c8a9ef6b8d152daa753bf6ca", url="https://pypi.org/packages/29/29/cc644d46601e331d025feb51f9c3ac6c2b6ad0b2e4403199514ea394ea82/click-6.3-py2.py3-none-any.whl")
+    version("6.2", sha256="bbb49b513a663b9d93139b1ddadfa866edb41982d8b1c7b79a81f47e279bdb72", url="https://pypi.org/packages/a0/90/0f5ea412a4d5b8e31cb514208e02824b45a8f4de52654733f0a862353fd9/click-6.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama", when="@8.0.0-rc1: platform=windows")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKeystoneauth1(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.6.0", sha256="d740843afcf9c159fb929004eee1eecf46573236901e9d8ca2dca5694733a379", url="https://pypi.org/packages/2f/14/dfc5af6ec3918aacaac8ce1bbdca034351538617e104ae7a5e38754e2e55/keystoneauth1-5.6.0-py3-none-any.whl")
     version("5.5.0", sha256="af944cecf3634fca3fffe5426ddf925e2b671653e03f54482876a9df25c03296", url="https://pypi.org/packages/fc/c7/a73d5581ef4655e35e24047396f4b378a0cb505a6aec3d9c5fb8524cfc44/keystoneauth1-5.5.0-py3-none-any.whl")
     version("5.4.0", sha256="125c70dc7a2a6d8906d436d0e853a75c022505007422b98970a1e693a2002c6e", url="https://pypi.org/packages/b1/69/822db60e8f93473faa486c52b376f33bad40d0fe705236fa61cd664e28b5/keystoneauth1-5.4.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyKeystoneauth1(PythonPackage):
     version("5.1.0", sha256="5f7a60efff415bd74ce57f3ceb21612deae940746bbb69e36b7b350390d7f5dc", url="https://pypi.org/packages/78/83/6437bcc3a46baf98b75d4afa024a9025842f32f7fb162f70106c90b238b4/keystoneauth1-5.1.0-py3-none-any.whl")
     version("5.0.1", sha256="a75fa94d38e2848ea300a3f64f48b74b435ca91e60f4c2b9eefe36f3fa3b53e1", url="https://pypi.org/packages/fe/e7/8298d6fe0017031244e28345a0dde4254b5ddad9c7f8b5e2c5bb03942a49/keystoneauth1-5.0.1-py3-none-any.whl")
     version("4.3.1", sha256="c4a80b79bc3e0412eb127fa761e80912614f8563646ca34b62bcd9d533f93077", url="https://pypi.org/packages/7a/1b/8c5d1fd19b9e08d3a3b64492d078039c7ddd166c3cf029154f1c5f0439f7/keystoneauth1-4.3.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-iso8601@0.1.11:", when="@2.7:")
         depends_on("py-os-service-types@1.2:", when="@3.6:")
@@ -26,4 +30,5 @@ class PyKeystoneauth1(PythonPackage):
         depends_on("py-requests@2.14.2:", when="@3:")
         depends_on("py-six@1.10:", when="@3.3:5.1")
         depends_on("py-stevedore@1.20:", when="@2.19:")
+    # END DEPENDENCIES
 

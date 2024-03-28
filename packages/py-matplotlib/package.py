@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMatplotlib(PythonPackage):
+    # BEGIN VERSIONS
     version("3.8.3", sha256="7b416239e9ae38be54b028abbf9048aff5054a9aba5416bef0bd17f9162ce161", url="https://pypi.org/packages/9a/aa/607a121331d5323b164f1c0696016ccc9d956a256771c4d91e311a302f13/matplotlib-3.8.3.tar.gz")
     version("3.8.2", sha256="01a978b871b881ee76017152f1f1a0cbf6bd5f7b8ff8c96df0df1bd57d8755a1", url="https://pypi.org/packages/fb/ab/38a0e94cb01dacb50f06957c2bed1c83b8f9dac6618988a37b2487862944/matplotlib-3.8.2.tar.gz")
     version("3.8.1", sha256="044df81c1f6f3a8e52d70c4cfcb44e77ea9632a10929932870dfaa90de94365d", url="https://pypi.org/packages/b4/1b/1b80fcc6b7f33a4c7fa025e944416f8b63fa8d278fad32470c82a2edf319/matplotlib-3.8.1.tar.gz")
@@ -49,7 +49,18 @@ class PyMatplotlib(PythonPackage):
     version("2.2.2", sha256="4dc7ef528aad21f22be85e95725234c5178c0f938e2228ca76640e5e84d8cde8", url="https://pypi.org/packages/ec/ed/46b835da53b7ed05bd4c6cae293f13ec26e877d2e490a53a709915a9dcb7/matplotlib-2.2.2.tar.gz")
     version("2.0.2", sha256="0ffbc44faa34a8b1704bc108c451ecf87988f900ef7ce757b8e2e84383121ff1", url="https://pypi.org/packages/f5/f0/9da3ef24ea7eb0ccd12430a261b66eca36b924aeef06e17147f9f9d7d310/matplotlib-2.0.2.tar.gz")
     version("2.0.0", sha256="36cf0985829c1ab2b8b1dae5e2272e53ae681bf33ab8bedceed4f0565af5f813", url="https://pypi.org/packages/79/a9/db688816150a6ef91fd9ce284c828467f7271c7dd5982753a73a8e1aaafa/matplotlib-2.0.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("animation", default=False)
+    variant("backend", default=False)
+    variant("fonts", default=False)
+    variant("image", default=False)
+    variant("latex", default=False)
+    variant("movies", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@3.8:")
         depends_on("py-contourpy@1.0.1:", when="@3.7.3:3.7,3.8.0:")
@@ -66,4 +77,5 @@ class PyMatplotlib(PythonPackage):
         depends_on("py-pyparsing@2.3.1:", when="@3.7.3:3.7,3.8.0:")
         depends_on("py-python-dateutil@2.7:", when="@3.7.3:3.7,3.8.0:")
         depends_on("py-setuptools-scm@7:", when="@3.7.3:3.7,3.8.0")
+    # END DEPENDENCIES
 

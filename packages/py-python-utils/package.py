@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPythonUtils(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.8.2", sha256="ad0ccdbd6f856d015cace07f74828b9840b5c4072d9e868a7f6a14fd195555a8", url="https://pypi.org/packages/26/45/98431ba6d17b99468bd3f4c53fdeefff402167f006a06773905296f6d489/python_utils-3.8.2-py2.py3-none-any.whl")
     version("3.8.1", sha256="efdf31c8154667d7dc0317547c8e6d3b506c5d4b6e360e0c89662306262fc0ab", url="https://pypi.org/packages/f0/7b/e83e7b184e53530abe064b237a3731c738d3cb59f4201f3ce1a4ec0efe6f/python_utils-3.8.1-py2.py3-none-any.whl")
     version("3.8.0", sha256="957295c68ee0ebc4b13e8b0f57fdf768b3e3c1fb8503cb0417a24f4aa88cd1b8", url="https://pypi.org/packages/ef/fc/692d11fe9bc8625f46064c1dd26445d0e0d87a4e0514d78b26163ab81f47/python_utils-3.8.0-py2.py3-none-any.whl")
@@ -18,12 +18,17 @@ class PyPythonUtils(PythonPackage):
     version("3.5.0", sha256="c6ef380fc3f9d8d425f6bf97323d17b060ff0722823264261a6d9055cdd7d879", url="https://pypi.org/packages/7e/64/049b9560156cc955bf436f7ed8c15d8279b4cb745328120f6a980d346e40/python_utils-3.5.0-py2.py3-none-any.whl")
     version("3.4.5", sha256="22990259324eae88faa3389d302861a825dbdd217ab40e3ec701851b3337d592", url="https://pypi.org/packages/45/8a/d5656afa0aac6cc7d34bbd0a9eb7730302e435e48441030009a240ab12a0/python_utils-3.4.5-py2.py3-none-any.whl")
     version("2.7.1", sha256="9d535eda3fd4c0cd51f459bb9cfddd983a50f5adfacb0995504d12bf0c2981cb", url="https://pypi.org/packages/0a/c2/962e0ec22173309d8914733dc78cf8a689fe2ae612938ec64c26d0f29ac6/python_utils-2.7.1-py2.py3-none-any.whl")
-    version("2.4.0", sha256="f21fc09ff58ea5ebd1fd2e8ef7f63e39d456336900f26bdc9334a03a3f7d8089", url="https://pypi.org/packages/f3/58/558356395acc737d2deeabf4ea5ad690ac2995a9215a4b270eb218997289/python-utils-2.4.0.tar.gz")
-    version("2.3.0", sha256="34aaf26b39b0b86628008f2ae0ac001b30e7986a8d303b61e1357dfcdad4f6d3", url="https://pypi.org/packages/30/95/d01fbd09ced38a16b7357a1d6cefe1327b9273885bffd6371cbec3e23af7/python-utils-2.3.0.tar.gz")
+    version("2.4.0", sha256="ebaadab29d0cb9dca0a82eab9c405f5be5125dbbff35b8f32cc433fa498dbaa7", url="https://pypi.org/packages/d9/ff/623dfa533f3277199957229f053fdb2c73a9c18048680e1899c9a5c95e6b/python_utils-2.4.0-py2.py3-none-any.whl")
+    version("2.3.0", sha256="e25f840564554eaded56eaa395bca507b0b9e9f0ae5ecb13a8cb785305c56d25", url="https://pypi.org/packages/eb/a0/19119d8b7c05be49baf6c593f11c432d571b70d805f2fe94c0585e55e4c8/python_utils-2.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.8.1:", when="@3.6:")
         depends_on("py-six", when="@2.6:2")
         depends_on("py-typing-extensions@4:", when="@3.6.1:")
         depends_on("py-typing-extensions", when="@3.6:3.6.0")
+    # END DEPENDENCIES
 

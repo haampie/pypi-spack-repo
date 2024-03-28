@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHorovod(PythonPackage):
+    # BEGIN VERSIONS
     version("0.28.1", sha256="92a43f5a94c43907a56805bad15f19700c62ffc83b7ca483f9e104e229f67ef0", url="https://pypi.org/packages/e4/86/da559fcc1620ac7831a16ccb2ad3acb477a8da8a631f75a83b6410507210/horovod-0.28.1.tar.gz")
     version("0.28.0", sha256="32bba0bdc9fc1bf0b2ba63950fbefce8d8be095a3a87d3977a3dc3f1eb12ffab", url="https://pypi.org/packages/23/6e/88a7a300fb389d83091234b7c89cdac8df69d6a1ae3a031ab63210f23348/horovod-0.28.0.tar.gz")
     version("0.27.0", sha256="8a76a98266579de46a1b1cde53d5ec115fc163ffdaa65a8f771aee936e804b33", url="https://pypi.org/packages/ff/40/4cdb91cb3e44990ca83ce80feb53e9b15519c174fdf545fd8b052abb5111/horovod-0.27.0.tar.gz")
@@ -40,5 +40,17 @@ class PyHorovod(PythonPackage):
     version("0.16.4", sha256="871de9f0dfef7ddda637ee78ce7d95494340f7f8eb9fbd0c3cf13df7e68c5812", url="https://pypi.org/packages/42/f8/0a2fedf45122d8a1b2dbd573e737ccb32cd0776aa4c4b157d3f18b9ff0ca/horovod-0.16.4.tar.gz")
     version("0.16.3", sha256="816a429693894439eabfae7377b3bf2959691a87edc633e0773d1b393c5a02c9", url="https://pypi.org/packages/ca/91/cf326c8504be35f09ef128ac62311ea373e9facc56f53cf9e9bf84594ab1/horovod-0.16.3.tar.gz")
     version("0.16.2", sha256="9a035dff619e52b5e1b20c170a556dc8ea0eafe12f9a6bcb0832ee5ffc84a7fd", url="https://pypi.org/packages/4b/89/d1a64d0a9c15abfa8a72eb8b20ebe8cd4b144579301a69fadec18ccc6232/horovod-0.16.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("controllers", default=False)
+    variant("cuda", default=False)
+    variant("cuda_arch", default=False)
+    variant("frameworks", default=False)
+    variant("rocm", default=False)
+    variant("tensor_ops", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRdflib(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("7.0.0", sha256="0438920912a642c866a513de6fe8a0001bd86ef975057d6962c79ce4771687cd", url="https://pypi.org/packages/d4/b0/7b7d8b5b0d01f1a0b12cc2e5038a868ef3a15825731b8a0d776cf47566c0/rdflib-7.0.0-py3-none-any.whl")
     version("6.3.2", sha256="36b4e74a32aa1e4fa7b8719876fb192f19ecd45ff932ea5ebbd2e417a0247e63", url="https://pypi.org/packages/af/92/d7fb1d7fb70c9f7003fa50b7a3880ebcb311cc3f8552b3595e7c8f75aeeb/rdflib-6.3.2-py3-none-any.whl")
     version("6.3.1", sha256="b9a01b4ab94abb2d1a80e7c4968621ff8db5bdb664b018b0cd76822e7e33f066", url="https://pypi.org/packages/b3/8a/056eeca5b003e321510001600699868a5237a4635de1617832fcb33bd1c3/rdflib-6.3.1-py3-none-any.whl")
@@ -21,7 +21,11 @@ class PyRdflib(PythonPackage):
     version("5.0.0", sha256="88208ea971a87886d60ae2b1a4b2cdc263527af0454c422118d43fe64b357877", url="https://pypi.org/packages/d0/6b/6454aa1db753c0f8bc265a5bd5c10b5721a4bb24160fb4faf758cf6be8a1/rdflib-5.0.0-py3-none-any.whl")
     version("5.0.0-rc1", sha256="d66a0346ab0e572e20746b67b071557b5ef6327a6f18596d2f4332f152c6a2e9", url="https://pypi.org/packages/9b/a9/49d72d650cf19c0b462dde7f1067fee8e3a04874f23e0ab54ddfb2f3d7d6/rdflib-5.0.0rc1-py3-none-any.whl")
     version("4.2.2", sha256="58d5994610105a457cff7fdfe3d683d87786c5028a45ae032982498a7e913d6f", url="https://pypi.org/packages/3c/fe/630bacb652680f6d481b9febbb3e2c3869194a1a5fc3401a4a41195a2f8f/rdflib-4.2.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.8.1:", when="@7:")
         depends_on("py-isodate@0.6:", when="@6.3:")
@@ -30,4 +34,5 @@ class PyRdflib(PythonPackage):
         depends_on("py-pyparsing", when="@4.2.2:6.2")
         depends_on("py-setuptools", when="@6:6.2")
         depends_on("py-six", when="@5")
+    # END DEPENDENCIES
 

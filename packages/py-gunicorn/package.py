@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGunicorn(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("21.2.0", sha256="3213aa5e8c24949e792bcacfc176fef362e7aac80b76c56f6b5122bf350722f0", url="https://pypi.org/packages/0e/2a/c3a878eccb100ccddf45c50b6b8db8cf3301a6adede6e31d48e8531cab13/gunicorn-21.2.0-py3-none-any.whl")
     version("21.1.0", sha256="11fc98ea214a5845f614891e8c90b0211fbe595e677d204d7cd7d80f6f348891", url="https://pypi.org/packages/ba/d6/5ec4f4cab2caf886b6b434d6aaa47d25a1bd69b8b7ef44a0d05d840a9e0e/gunicorn-21.1.0-py3-none-any.whl")
     version("21.0.1", sha256="949880781d74f55eda34eb1a552f9c83db6edb42f2bd4f87c09e2a66b13922ea", url="https://pypi.org/packages/a8/91/3f96a766e0c4d6fc55b522a6fab2ba6da13e4e22f1b2b3730b241bedc141/gunicorn-21.0.1-py3-none-any.whl")
@@ -20,9 +20,14 @@ class PyGunicorn(PythonPackage):
     version("19.9.0", sha256="aa8e0b40b4157b36a5df5e599f45c9c76d6af43845ba3b3b0efe2c70473c2471", url="https://pypi.org/packages/8c/da/b8dd8deb741bff556db53902d4706774c8e1e67265f69528c14c003644e6/gunicorn-19.9.0-py2.py3-none-any.whl")
     version("19.8.1", sha256="7ef2b828b335ed58e3b64ffa84caceb0a7dd7c5ca12f217241350dec36a1d5dc", url="https://pypi.org/packages/55/cb/09fe80bddf30be86abfc06ccb1154f97d6c64bb87111de066a5fc9ccb937/gunicorn-19.8.1-py2.py3-none-any.whl")
     version("19.8.0", sha256="f5ca088d029fe3cea166c59bb43b7ccc9c850fe25af3da61350fe712c5cc5aa2", url="https://pypi.org/packages/ba/a9/67db283e31084925e5b1943a724965f0320577bfdc5144175b64d4328df0/gunicorn-19.8.0-py2.py3-none-any.whl")
-    version("19.7.1", sha256="eee1169f0ca667be05db3351a0960765620dad53f53434262ff8901b68a1b622", url="https://pypi.org/packages/30/3a/10bb213cede0cc4d13ac2263316c872a64bf4c819000c8ccd801f1d5f822/gunicorn-19.7.1.tar.gz")
+    version("19.7.1", sha256="75af03c99389535f218cc596c7de74df4763803f7b63eb09d77e92b3956b36c6", url="https://pypi.org/packages/64/32/becbd4089a4c06f0f9f538a76e9fe0b19a08f010bcb47dcdbfbc640cdf7d/gunicorn-19.7.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-packaging", when="@21:")
         depends_on("py-setuptools@3:", when="@20")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytz(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.1", sha256="328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319", url="https://pypi.org/packages/9c/3d/a121f284241f08268b21359bd425f7d4825cffc5ac5cd0e1b3d82ffd2b10/pytz-2024.1-py2.py3-none-any.whl")
     version("2023.4", sha256="f90ef520d95e7c46951105338d918664ebfd6f1d995bd7d153127ce90efafa6a", url="https://pypi.org/packages/3b/dd/9b84302ba85ac6d3d3042d3e8698374838bde1c386b4adb1223d7a0efd4e/pytz-2023.4-py2.py3-none-any.whl")
     version("2023.3.post1", sha256="ce42d816b81b68506614c11e8937d3aa9e41007ceb50bfdcb0749b921bf646c7", url="https://pypi.org/packages/32/4d/aaf7eff5deb402fd9a24a1449a8119f00d74ae9c2efa79f8ef9994261fc2/pytz-2023.3.post1-py2.py3-none-any.whl")
@@ -39,5 +39,10 @@ class PyPytz(PythonPackage):
     version("2015.4", sha256="4d64ed1b9e0e73095f5cfa87f0e97ddb4c840049e8efeb7e63b46118ba1d623a", url="https://pypi.org/packages/2d/cb/c9b0c9e4cf54bc3517b2d52904c9f328be2e88cf07392fea51ee0c3c4b28/pytz-2015.4-py2.py3-none-any.whl")
     version("2014.10", sha256="5438d749e923c914741fe2a410b528abe27053000fbf878bc437428d08ae0ab1", url="https://pypi.org/packages/c5/bc/995a7472f9ca49980ce07ca7a68b0b7c01bc87fc7f9f09707cbfde282a8f/pytz-2014.10-py2.py3-none-any.whl")
     version("2014.9", sha256="431c78bcf827c92a19d7829cd9ae7902d52d6dfcb23d98904fc807ddea1ec076", url="https://pypi.org/packages/2a/de/7c55dffb7464509aee814047f50490886925226846bcb8c622677619f15e/pytz-2014.9-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

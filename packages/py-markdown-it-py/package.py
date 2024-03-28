@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMarkdownItPy(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.0", sha256="355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1", url="https://pypi.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl")
     version("2.2.0", sha256="5a35f8d1870171d9acc47b99612dc146129b631baf04970128b568f190d0cc30", url="https://pypi.org/packages/bf/25/2d88e8feee8e055d015343f9b86e370a1ccbec546f2865c98397aaef24af/markdown_it_py-2.2.0-py3-none-any.whl")
     version("2.1.0", sha256="93de681e5c021a432c63147656fe21790bc01231e0cd2da73626f1aa3ac0fe27", url="https://pypi.org/packages/f9/3f/ecd1b708973b9a3e4574b43cffc1ce8eb98696da34f1a1c44a68c3c0d737/markdown_it_py-2.1.0-py3-none-any.whl")
@@ -21,10 +21,14 @@ class PyMarkdownItPy(PythonPackage):
     version("0.6.1", sha256="f22808fed0fd5c006c5c1626ea4e6c68123d5af54eb54712af77a4c57ad34ebc", url="https://pypi.org/packages/36/54/4e983048843a5adb6baf58412ab5c4272a412b5fb837fad7e2093576564e/markdown_it_py-0.6.1-py3-none-any.whl")
     version("0.6.0", sha256="f90912a0ff1ac328627d1551bd5a17bce0ef1d483df222d460336e59213c6d29", url="https://pypi.org/packages/41/e2/bc095d382e451f72f2e2b18bbdbb1389975fbec98a1240a0cba3a9559d85/markdown_it_py-0.6.0-py3-none-any.whl")
     version("0.5.8", sha256="d71989a540588875bb60919feb4ce83989beb2d4dd018f7a6ed475d4cf0c76ff", url="https://pypi.org/packages/f8/1b/0e24960d9f6553f3ea170f5fe56bb0230943a968c2a6fbcca7ed49b9cd6e/markdown_it_py-0.5.8-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("linkify", default=False)
     variant("plugins", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@19:21", when="@1.1:2.0")
         depends_on("py-attrs@19:20", when="@0.5.1:1.0")
@@ -34,4 +38,5 @@ class PyMarkdownItPy(PythonPackage):
         depends_on("py-mdit-py-plugins@0.2.6:0.2", when="@1:1.0.0-beta1")
         depends_on("py-mdit-py-plugins@0.2.1:0.2", when="@0.6:0")
         depends_on("py-mdurl@0.1:", when="@2:")
+    # END DEPENDENCIES
 

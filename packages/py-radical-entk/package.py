@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRadicalEntk(PythonPackage):
+    # BEGIN VERSIONS
     version("1.47.0", sha256="a4338e3a87147c032fb3a16a03990155742cc64c6625cfb4e1588ae0e51aafda", url="https://pypi.org/packages/3f/ac/2a337ba509d37348614e85d62aad50735482ba3160d31c4194e9e463599b/radical.entk-1.47.0.tar.gz")
     version("1.39.0", sha256="72d64b25df9f3cb1dcbc32323a669d86d947cf07d15bed91cfedca2a99fb3ef1", url="https://pypi.org/packages/02/c6/02886125df51ffefbade83fe7d70e0699369d6d73157fd9f9b7833aca8b2/radical.entk-1.39.0.tar.gz")
     version("1.20.0", sha256="1b9fc470b926a93528fd2a898636bdcd1c565bd58ba47608f9bead811d8a46d7", url="https://pypi.org/packages/a0/ce/590a0d6086b2dd6a3a273f4d4f1a3cf97bf8d0697fdffb7f9a0f79f281db/radical.entk-1.20.0.tar.gz")
@@ -20,5 +20,10 @@ class PyRadicalEntk(PythonPackage):
     version("1.9.0", sha256="918c716ac5eecb012a57452f45f5a064af7ea72f70765c7b0c60be4322b23557", url="https://pypi.org/packages/d4/3b/7bac551fce4718ea1bf65083bb8a42bf6743a370057fd5dffa604a8c2364/radical.entk-1.9.0.tar.gz")
     version("1.8.0", sha256="47a3f7f1409612d015a3e6633853d31ec4e4b0681aecb7554be16ebf39c7f756", url="https://pypi.org/packages/f0/b7/2f841b0cf71c08e32f44c0bfe2d3ccaa9afc6aae30c7ea71a13f5d2ea88e/radical.entk-1.8.0.tar.gz")
     version("1.6.7", sha256="9384568279d29b9619a565c075f287a08bca8365e2af55e520af0c2f3595f8a2", url="https://pypi.org/packages/1a/5d/beb7248b6aec9c65dfc43dd0265425d56065dfd0f9b8266a0ce20e1fecc5/radical.entk-1.6.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

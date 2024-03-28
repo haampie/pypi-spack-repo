@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupytext(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.16.1", sha256="796ec4f68ada663569e5d38d4ef03738a01284bfe21c943c485bc36433898bd0", url="https://pypi.org/packages/19/d0/8cc6fb49c36794f15f8ce50f54b9327029a0d738097c085df95b0d1d108f/jupytext-1.16.1-py3-none-any.whl")
     version("1.16.0", sha256="c2b951ac72871f39cd6cd242b56bc43219b7ed8169598bae5359811fb1f54d28", url="https://pypi.org/packages/b4/35/1f396e6745cbaa1aec3624fb6656a77f2e001b324cb4a056aa6a4a436e46/jupytext-1.16.0-py3-none-any.whl")
     version("1.15.2", sha256="ef2a1a3eb8f63d84a3b3772014bdfbe238e4e12a30c4309b8c89e0a54adeb7d1", url="https://pypi.org/packages/9e/e3/3c5b6cce216d090ed6cf6cc258602f836d050738ac02f97cb71675f9cfe3/jupytext-1.15.2-py3-none-any.whl")
@@ -20,7 +20,11 @@ class PyJupytext(PythonPackage):
     version("1.14.1", sha256="216bddba8bbb9355831ba17fd8d45cfe5d1355e7152bc8980f39175fc2584875", url="https://pypi.org/packages/1e/b6/53edfeda6e8ac67a9fd31b510fe8c8e46c1b505805ae958d6fff82f9b2df/jupytext-1.14.1-py3-none-any.whl")
     version("1.13.6", sha256="2160774e30587fb427213231f0267ed070ba4ede41cf6121dbb2b14225eb83ba", url="https://pypi.org/packages/07/3f/18d7d371bd1d74b9ef8a7d14b91f28a609277d849c036d930436ed243b92/jupytext-1.13.6-py3-none-any.whl")
     version("1.13.0", sha256="c31f016c6fc000d88c5aed2cfc58f1acbfb3d9c58898aa0e4bdc3716f3860b09", url="https://pypi.org/packages/f9/c9/24d58379d6c6600aec4dc1ed5c893b6c963a73598bfcb9270d494c3c3896/jupytext-1.13.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-markdown-it-py@1.0.0:", when="@1.14.7:")
         depends_on("py-markdown-it-py@1.0.0:2", when="@1.13.8:1.14.6")
@@ -30,4 +34,5 @@ class PyJupytext(PythonPackage):
         depends_on("py-packaging", when="@1.16:")
         depends_on("py-pyyaml", when="@1.7.0-rc1:")
         depends_on("py-toml", when="@1.7.0-rc1:")
+    # END DEPENDENCIES
 

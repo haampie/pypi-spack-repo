@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIso8601(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.1.0", sha256="aac4145c4dcb66ad8b648a02830f5e2ff6c24af20f4f482689be402db2429242", url="https://pypi.org/packages/6c/0c/f37b6a241f0759b7653ffa7213889d89ad49a2b76eb2ddf3b57b2738c347/iso8601-2.1.0-py3-none-any.whl")
     version("2.0.0", sha256="ebe10061b932edb8a8e33cc635d661926c59b9c3bed7a4f4edca8c62d400af10", url="https://pypi.org/packages/12/e4/032a8569b75a79057f0c72b4f4a69434fd21922bce7bfe054e0e9f367861/iso8601-2.0.0-py3-none-any.whl")
     version("1.1.0", sha256="8400e90141bf792bce2634df533dc57e3bee19ea120a87bebcd3da89a58ad73f", url="https://pypi.org/packages/65/6c/9d72435c72adfa6e4ed1824b6df7fffbeaaf15c653881e9b041a318ba572/iso8601-1.1.0-py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyIso8601(PythonPackage):
     version("0.1.15", sha256="ef7d7f2fe42b69fd534c69dda814c5d2521f641635e636f1116241eae7964e6e", url="https://pypi.org/packages/ec/50/32686171a711e7cdb475086b8e40dab4452db9bf92b5aaed8adbe3a50d7b/iso8601-0.1.15-py2.py3-none-any.whl")
     version("0.1.14", sha256="e7e1122f064d626e17d47cd5106bed2c620cb38fe464999e0ddae2b6d2de6004", url="https://pypi.org/packages/c5/10/da48dc228b821a64407c2527e1e8ee98917b36e80a181f2ca06ea3cb676b/iso8601-0.1.14-py2.py3-none-any.whl")
     version("0.1.13", sha256="6f02f01dd13320a7f280e58516dc8d1950dfaf77527cc365a398cd9de4d3c692", url="https://pypi.org/packages/98/ad/5b6342bec1ce40b5f4783fa552f10109e159b734909d11a71513b240d7dd/iso8601-0.1.13-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

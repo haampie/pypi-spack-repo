@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPythonDateutil(PythonPackage):
+    # BEGIN VERSIONS
     version("2.9.0.post0", sha256="a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", url="https://pypi.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl")
     version("2.9.0", sha256="cbf2f1da5e6083ac2fbfd4da39a25f34312230110440f424a14c7558bb85d82e", url="https://pypi.org/packages/13/7f/98d6f9ca8b731506c85785bbb8806c01f5966a4df6d68c0d1cf3b16967e1/python_dateutil-2.9.0-py2.py3-none-any.whl")
     version("2.8.2", sha256="961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9", url="https://pypi.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl")
@@ -17,12 +17,17 @@ class PyPythonDateutil(PythonPackage):
     version("2.7.3", sha256="1adb80e7a782c12e52ef9a8182bebeb73f1d7e24e374397af06fb4956c8dc5c0", url="https://pypi.org/packages/cf/f5/af2b09c957ace60dcfac112b669c45c8c97e32f94aa8b56da4c6d1682825/python_dateutil-2.7.3-py2.py3-none-any.whl")
     version("2.7.2", sha256="3220490fb9741e2342e1cf29a503394fdac874bc39568288717ee67047ff29df", url="https://pypi.org/packages/0c/57/19f3a65bcf6d5be570ee8c35a5398496e10a0ddcbc95393b2d17f86aaaf8/python_dateutil-2.7.2-py2.py3-none-any.whl")
     version("2.7.1", sha256="6c0e72580272b561d8594362ab0e6b5b2191c703982150fc06ed45f7fae725be", url="https://pypi.org/packages/95/27/d6be8938e2cd9c956c2c6c0b3253e1c62d6db29a52b477943da3c3ec728c/python_dateutil-2.7.1-py2.py3-none-any.whl")
-    version("2.5.2", sha256="063907ef47f6e187b8fe0728952e4effb587a34f2dc356888646f9b71fbb2e4b", url="https://pypi.org/packages/22/b7/923674117d83465c0ccab5d5fa1b66caba59d6fa7428089fd2470a1e29cd/python-dateutil-2.5.2.tar.gz")
-    version("2.4.2", sha256="3e95445c1db500a344079a47b171c45ef18f57d188dffdb0e4165c71bea8eb3d", url="https://pypi.org/packages/b6/ff/5eaa688dd8ce78913f47438f9b40071a560126ac3e95f9b9be27dfe546a7/python-dateutil-2.4.2.tar.gz")
+    version("2.5.2", sha256="5187ca69bb0a9de482cc5e1d247460b8b62a82fdaf455a13749087094b87754c", url="https://pypi.org/packages/45/f8/88de2335cf6162be0b5c165b3e229267fe3c522ffa9464ffb424359ba682/python_dateutil-2.5.2-py2.py3-none-any.whl")
+    version("2.4.2", sha256="2ae63cf475f0bd049b722fac20813d62aedc14957dd5a3bf00d120d2b5404460", url="https://pypi.org/packages/22/75/666cd70de6a70cc7c6560429340ee7ef08196c93f552428983a808423755/python_dateutil-2.4.2-py2.py3-none-any.whl")
     version("2.4.0", sha256="b6f4f95d6ed922c947bf22b15f55ff29e7cf57281975ee01988450182bf6e20c", url="https://pypi.org/packages/a7/65/1d4e38ecca8f0b599748e11cea20ab1e011206d0ef1cce098b16e41e1857/python_dateutil-2.4.0-py2.py3-none-any.whl")
     version("2.2", sha256="eec865307ebe7f329a6a9945c15453265a449cdaaf3710340828a1934d53e468", url="https://pypi.org/packages/75/c5/85d027471fa665f8c8b8eb0b925f9d84b4eee745a257b16de4957de99e81/python-dateutil-2.2.tar.gz")
     version("1.5", sha256="6f197348b46fb8cdf9f3fcfc2a7d5a97da95db3e2e8667cf657216274fe1b009", url="https://pypi.org/packages/b4/7c/df59c89a753eb33c7c44e1dd42de0e9bc2ccdd5a4d576e0bfad97cc280cb/python-dateutil-1.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-six@1.5:", when="@2.4:2.4.0,2.6.1:")
+    # END DEPENDENCIES
 

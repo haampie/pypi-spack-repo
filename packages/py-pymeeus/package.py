@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPymeeus(PythonPackage):
+    # BEGIN VERSIONS
     version("0.5.12", sha256="548f7186bd8b96cbc069cf649a8e8e377dce49ac74486709849fe63a99cad684", url="https://pypi.org/packages/81/76/599896b37e60f43078afd8354b3802eb7ca257a7e7f6253cc21c4c672877/PyMeeus-0.5.12.tar.gz")
     version("0.5.11", sha256="bb9d670818d8b0594317b48a7dadea02a0594e5344263bf2054e1a011c8fed55", url="https://pypi.org/packages/c7/ff/0f0a0becf088281c6bc6c75b7d7c03a2481d486ef6cc7c8899bbcab0a88d/PyMeeus-0.5.11.tar.gz")
     version("0.5.10", sha256="279d47f163f859de98b0473d2458e36283c0b8c5e720b9ab79b8ee2d8f19227b", url="https://pypi.org/packages/1f/a3/1267b5f5db3c479aa2829a477510f65bcd42e0c995bdc38ffa975394298c/PyMeeus-0.5.10.tar.gz")
@@ -18,5 +18,10 @@ class PyPymeeus(PythonPackage):
     version("0.5.4", sha256="f1003b2ad268a5b932bdf85f5cc42cff68d3e7de24ffd17bd00ab6ccf045002c", url="https://pypi.org/packages/a5/9d/406eed2225516a5ba6a9dc1ed94cfcb03fb8f0384772e884d8d5b3d86167/PyMeeus-0.5.4.tar.gz")
     version("0.5.3", sha256="6b64d401d68e82a62dc57b94c9e88f730f5d6d8e8c44d2e896c7e772b14527a0", url="https://pypi.org/packages/90/36/7b64c985571f3dc8ed1d1dab54c5be679b5019d8abfe30ecd7c9fe020aaa/PyMeeus-0.5.3.tar.gz")
     version("0.3.6", sha256="1f1ba0682e1b5c6b0cd6432c966e8bc8acc31737ea6f0ae79917a2189a98bb87", url="https://pypi.org/packages/a3/78/6aef07082e4f4ebc9ce7b86ec0560e1b12f21d90f7a5706dc341b3538c49/PyMeeus-0.3.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

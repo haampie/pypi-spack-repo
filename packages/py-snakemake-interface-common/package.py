@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySnakemakeInterfaceCommon(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.17.1", sha256="2fdc4f2d778cad5284e83f35d1c2328b08cd6b8b9b29e522107f1a3c5ae771da", url="https://pypi.org/packages/6b/70/b6a53b63958dfa502ed498147d1e37a127d1be55ed2617a14047e79dcaf2/snakemake_interface_common-1.17.1-py3-none-any.whl")
     version("1.17.0", sha256="86657236175eb31e387dd3d85e248c2554d381f264e00ced2490b2d5525b0187", url="https://pypi.org/packages/59/44/e1117cf00e28a60bf97b696f333c6045c6c42a25b83f65241b965d513269/snakemake_interface_common-1.17.0-py3-none-any.whl")
     version("1.16.0", sha256="3226dd499445f6aa1ea1c2b6141adc0f65b236084f9815b16be23355b249bab7", url="https://pypi.org/packages/db/b8/e2f2654d91ccc1dd12d3a46aa63d45074057a2d797ef1655438fe64ec449/snakemake_interface_common-1.16.0-py3-none-any.whl")
@@ -17,8 +17,13 @@ class PySnakemakeInterfaceCommon(PythonPackage):
     version("1.15.0", sha256="76981f69787dc20b464363b293d2b54d5f5a2e7c32ec5ea7de9ebb94aa5a150e", url="https://pypi.org/packages/86/3f/031bd97846706f88b006776626e148231765a3a76da6ac019849b63737ad/snakemake_interface_common-1.15.0-py3-none-any.whl")
     version("1.14.5", sha256="cb13259f125ba0bfb9183f6f57ce132a7bfe26378c283ae862c499711eb17e21", url="https://pypi.org/packages/32/5f/8ce0a33e36066217c20f4b145c02cf2a72802db55d6b615860d2bceb4703/snakemake_interface_common-1.14.5-py3-none-any.whl")
     version("1.14.4", sha256="5b82010d5a6c03e0a839bfb5191d0e702d40d911f178c1484f6921351364d403", url="https://pypi.org/packages/bb/62/08723d54b0c73ba46dc78e833d3a4237264196a078e239f49f9a48e939fd/snakemake_interface_common-1.14.4-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-argparse-dataclass@2:", when="@1.4:")
         depends_on("py-configargparse@1.7:", when="@1.9.2:")
+    # END DEPENDENCIES
 

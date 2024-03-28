@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyParse(PythonPackage):
+    # BEGIN VERSIONS
     version("1.20.1", sha256="76ddd5214255ae711db4c512be636151fbabaa948c6f30115aecc440422ca82c", url="https://pypi.org/packages/ce/f0/30fe1494f1910ad3ea40639b13ac48cdb16a8600e8861cbfc2c560661ddf/parse-1.20.1-py2.py3-none-any.whl")
     version("1.20.0", sha256="5e171b001452fa9f004c5a58a93525175468daf69b493e9fa915347ed7ff6968", url="https://pypi.org/packages/27/da/2c9c45c3cca6ef6ebf8b4974bf211b523ad8064a315448372f3088a2193e/parse-1.20.0-py2.py3-none-any.whl")
     version("1.19.1", sha256="371ed3800dc63983832159cc9373156613947707bc448b5215473a219dbd4362", url="https://pypi.org/packages/9c/57/6c51ccd70de3ebcfb0bb5b0eea2ac0ab13c51ab55043a7243faef9eb58ef/parse-1.19.1-py2.py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyParse(PythonPackage):
     version("1.14.0", sha256="95a4f4469e37c57b5e924629ac99926f28bee7da59515dc5b8078c4c3e779249", url="https://pypi.org/packages/4a/ea/9a16ff916752241aa80f1a5ec56dc6c6defc5d0e70af2d16904a9573367f/parse-1.14.0.tar.gz")
     version("1.12.1", sha256="a5fca7000c6588d77bc65c28f3f21bfce03b5e44daa8f9f07c17fe364990d717", url="https://pypi.org/packages/84/4d/5578a484f4a3ec5d4440a95731a104a96a12a6fb57385292d3e7b74d8f6d/parse-1.12.1.tar.gz")
     version("1.11.1", sha256="870dd675c1ee8951db3e29b81ebe44fd131e3eb8c03a79483a58ea574f3145c2", url="https://pypi.org/packages/60/1c/065a39ceaf2f2e1ed74130bda8c87b71e01a2315d78ab612af86c0914abb/parse-1.11.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

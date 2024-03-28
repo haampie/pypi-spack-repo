@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPygithub(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.2.0", sha256="41042ea53e4c372219db708c38d2ca1fd4fadab75475bac27d89d339596cfad1", url="https://pypi.org/packages/37/56/6e038f8cd6b76984005cd5cf90926caa6898b4220984a32dbbdc044a3f18/PyGithub-2.2.0-py3-none-any.whl")
     version("2.1.1", sha256="4b528d5d6f35e991ea5fd3f942f58748f24938805cb7fcf24486546637917337", url="https://pypi.org/packages/be/04/810d131be173cba445d3658a45512b2b2b3d0960d52c4a300d6ec5e00f52/PyGithub-2.1.1-py3-none-any.whl")
     version("2.1.0.post0", sha256="ff71016073f124ecb3fc2a756f0365180f88f40ff1c753107b0e115e94bd0493", url="https://pypi.org/packages/d1/fe/fef8795433b3d0752b3fb764a833574b49aa49fce0ed1cd3e10150c5ac25/PyGithub-2.1.0.post0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyPygithub(PythonPackage):
     version("1.57", sha256="5822febeac2391f1306c55a99af2bc8f86c8bf82ded000030cd02c18f31b731f", url="https://pypi.org/packages/5a/9e/71e48e5557e3d1bf9c904f3f8bddea29d253d3565c85229cbd2004dcd143/PyGithub-1.57-py3-none-any.whl")
     version("1.56", sha256="d15f13d82165306da8a68aefc0f848a6f6432d5febbff13b60a94758ce3ef8b5", url="https://pypi.org/packages/86/b4/31d769a7f078324670d0a101da7dc210ea335b9bf266382fb446455810c4/PyGithub-1.56-py3-none-any.whl")
     version("1.55", sha256="2caf0054ea079b71e539741ae56c5a95e073b81fa472ce222e81667381b9601b", url="https://pypi.org/packages/c1/1f/9dc4ba315eeea222473cf4c15d3e665f32d52f859d9d6e73219d0a408969/PyGithub-1.55-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-deprecated", when="@1.46:")
         depends_on("py-pyjwt@2.4:+crypto", when="@1.58.1:")
@@ -30,4 +34,5 @@ class PyPygithub(PythonPackage):
         depends_on("py-typing-extensions@4:", when="@2.1:")
         depends_on("py-urllib3@1.26:", when="@2.1.1:")
         depends_on("py-urllib3", when="@2.1:2.1.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNbformat(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.10.3", sha256="d9476ca28676799af85385f409b49d95e199951477a159a576ef2a675151e5e8", url="https://pypi.org/packages/b0/4c/20b6c8b6d7cc17b0481eb49c18f23b76f913ab3e6580a57515cd9727ca43/nbformat-5.10.3-py3-none-any.whl")
     version("5.10.2", sha256="7381189a0d537586b3f18bae5dbad347d7dd0a7cf0276b09cdcd5c24d38edd99", url="https://pypi.org/packages/2f/5c/982c01957e937007fb86f452af5409800bd9b725a0d43c5a4898a6657a10/nbformat-5.10.2-py3-none-any.whl")
     version("5.10.1", sha256="32667779ed07f5f141b8b72d785fbc84c9b9f4f0cc75377d6da81762ad27cfaf", url="https://pypi.org/packages/c1/2f/f65380687035a25dbfa9b76a6630c58986fb5e022e39377ab7dddd25e022/nbformat-5.10.1-py3-none-any.whl")
@@ -23,9 +23,13 @@ class PyNbformat(PythonPackage):
     version("5.0.7", sha256="ea55c9b817855e2dfcd3f66d74857342612a60b1f09653440f4a5845e6e3523f", url="https://pypi.org/packages/4d/d1/b568bd35f95321f152f594b3647cd080e96d3347843ff2fa34dce871b8bf/nbformat-5.0.7-py3-none-any.whl")
     version("4.4.0", sha256="b9a0dbdbd45bb034f4f8893cafd6f652ea08c8c1674ba83f2dc55d3955743b0b", url="https://pypi.org/packages/da/27/9a654d2b6cc1eaa517d1c5a4405166c7f6d72f04f6e7eea41855fe808a46/nbformat-4.4.0-py2.py3-none-any.whl")
     version("4.1.0", sha256="02f3474203248214f7a34ad0955d75490462dc0e328f9920d1ea8aa795ae3399", url="https://pypi.org/packages/d6/4c/8058f1170dbdbe5a66e9431489f85d2d3e5a8e6314dd7ed1f7b10d864a70/nbformat-4.1.0-py2.py3-none-any.whl")
-    version("4.0.1", sha256="dc875e80f2a170b3691907e0485047027dd17d76aac95050673eca6655809ceb", url="https://pypi.org/packages/c5/9d/7cc4a5e291ac24cfa5f02612f43c056f62575357fcf381ec70adcc7ebd02/nbformat-4.0.1.zip")
-    version("4.0.0", sha256="e16eac24ad493244dee77a8f4f2dca8fe203a4c74c1382b134858b2e1f438435", url="https://pypi.org/packages/0a/38/5c2b242f2d7b047261c795d960be804abb91866b4e4eee71ba105241eecb/nbformat-4.0.0.zip")
+    version("4.0.1", sha256="d304387f78d651edf3a3285052601aa8b7fe6d52dcd57e4ffd2869b2b65fda1c", url="https://pypi.org/packages/11/2d/83180bdaa7c8aa1ff2308b928607d66ae907fb7061cbe59dc1e6243b69db/nbformat-4.0.1-py2.py3-none-any.whl")
+    version("4.0.0", sha256="a4543847ce9b6676000812996757d816cb8cecc02ecc1a413c29c303a30bd208", url="https://pypi.org/packages/03/ac/befb692b03d880f9d66b9f09bf3277634480d7acad743511e83b88649085/nbformat-4.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-fastjsonschema", when="@5.3:")
         depends_on("py-ipython-genutils", when="@4.1:5.1")
@@ -36,4 +40,5 @@ class PyNbformat(PythonPackage):
         depends_on("py-traitlets@5.1:", when="@5.4:")
         depends_on("py-traitlets@4.1.0:", when="@4.2:5.3")
         depends_on("py-traitlets", when="@4.1")
+    # END DEPENDENCIES
 

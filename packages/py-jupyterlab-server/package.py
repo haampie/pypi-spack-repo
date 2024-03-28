@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterlabServer(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.25.4", sha256="eb645ecc8f9b24bac5decc7803b6d5363250e16ec5af814e516bc2c54dd88081", url="https://pypi.org/packages/6a/2c/ea4fdd7d4bb72106419fff1fcda7c111bd905b00afed3d8efc1a6d6e4538/jupyterlab_server-2.25.4-py3-none-any.whl")
     version("2.25.3", sha256="c48862519fded9b418c71645d85a49b2f0ec50d032ba8316738e9276046088c1", url="https://pypi.org/packages/ab/ac/a19c579bb8ab2a2aefcf47cd3787683e6e136378d7ab2602be3b8e628030/jupyterlab_server-2.25.3-py3-none-any.whl")
     version("2.25.2", sha256="5b1798c9cc6a44f65c757de9f97fc06fc3d42535afbf47d2ace5e964ab447aaf", url="https://pypi.org/packages/a2/97/abbbe35fc67b6f9423309988f2e411f7cb117b08321866d3d8b720f4c0d4/jupyterlab_server-2.25.2-py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyJupyterlabServer(PythonPackage):
     version("1.2.0", sha256="55d256077bf13e5bc9e8fbd5aac51bef82f6315111cec6b712b9a5ededbba924", url="https://pypi.org/packages/b4/eb/560043dcd8376328f8b98869efed66ef68307278406ab99c7f63a34d4ae2/jupyterlab_server-1.2.0-py3-none-any.whl")
     version("1.1.5", sha256="ee62690778c90b07a62a9bc5e6f530eebe8cd7550a0ef0bd1363b1f2380e1797", url="https://pypi.org/packages/e9/7b/08d35a18a6aa02203b9c58a370fdc82619d312039394cbc5ccd1434dff3f/jupyterlab_server-1.1.5-py3-none-any.whl")
     version("1.1.0", sha256="6aeaa1133069ec8d109f474b628059da2ec2e73f4e448c89e56821e6cfc26c0f", url="https://pypi.org/packages/74/bc/e87bb9dc5d20b6af9efa9551e5cb4e02bbd5bd100484e35acfa60a9bbba0/jupyterlab_server-1.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-babel@2.10:", when="@2.16.4:")
         depends_on("py-babel", when="@1.3:2.16.3")
@@ -44,4 +48,5 @@ class PyJupyterlabServer(PythonPackage):
         depends_on("py-requests@2.31:", when="@2.25:")
         depends_on("py-requests@2.28:", when="@2.16.4:2.24")
         depends_on("py-requests", when="@1.1:2.16.3")
+    # END DEPENDENCIES
 

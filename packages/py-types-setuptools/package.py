@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTypesSetuptools(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("69.2.0.20240317", sha256="cf91ff7c87ab7bf0625c3f0d4d90427c9da68561f3b0feab77977aaf0bbf7531", url="https://pypi.org/packages/1f/22/904934a3344fa5f332ecab887003f3f033c1272432a4af877007b75b0bd3/types_setuptools-69.2.0.20240317-py3-none-any.whl")
     version("69.2.0.20240316", sha256="ec5c8db0af0207aabbea93f9c25b859103e1ce4303f0dc70b0c7f4f927417310", url="https://pypi.org/packages/62/b0/9493d0429c293eb2d8a1318d739fd18608dfcdc9e69257c4e1161248ee34/types_setuptools-69.2.0.20240316-py3-none-any.whl")
     version("69.1.0.20240310", sha256="7801245ecaf371d24f1154924c8f1f0efdc53977339bf79886b5b10890af6478", url="https://pypi.org/packages/a6/bf/2c0de809f83077f4095b89e3dad36807d466c6bd951d2e24bf8a08c968dc/types_setuptools-69.1.0.20240310-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyTypesSetuptools(PythonPackage):
     version("69.1.0.20240217", sha256="8b60e14a652b48bda292801c5a0c1251c190ad587c295f7839e901634913bb96", url="https://pypi.org/packages/b0/9f/ea652206f791959f7f743a06ce491b10675c5f542d4bde7c415e8644b83a/types_setuptools-69.1.0.20240217-py3-none-any.whl")
     version("68.2.0.0", sha256="77edcc843e53f8fc83bb1a840684841f3dc804ec94562623bfa2ea70d5a2ba1b", url="https://pypi.org/packages/5c/5a/fbfbe3d1db90c59fb0240cf13a84953677b15874d00e80e773425447633c/types_setuptools-68.2.0.0-py3-none-any.whl")
     version("65.5.0.3", sha256="9254c32b0cc91c486548e7d7561243b5bd185402a383e93c6691e1b9bc8d86e2", url="https://pypi.org/packages/1e/07/77f506c72429f68756abc363b5f9e7fd4203a21f896c19a5c370cc274012/types_setuptools-65.5.0.3-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

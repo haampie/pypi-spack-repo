@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTensorstore(PythonPackage):
+    # BEGIN VERSIONS
     version("0.1.56", sha256="5f8f7bc056cb15bc0d45fedfe1ec38029d6f361aa2fb155a218a577a6d953013", url="https://pypi.org/packages/1a/73/d87c71fac5a85d2499256f509a6bbd3a0dfd5c31f5a3495190bb54c17aa2/tensorstore-0.1.56.tar.gz")
     version("0.1.55", sha256="ccdcceb507223d25b121d4cb15e94339948cfb9bbe08be77e972db0d74fc5485", url="https://pypi.org/packages/0d/9b/0207bcebe9b2887ed466d1e41f5dc6d95a27b8427a4955f0d05b4f2efb37/tensorstore-0.1.55.tar.gz")
     version("0.1.54", sha256="e1a9dcb0be7c828f752375409537d4b39c658dd6c6a0873fe21a24a556ec0e2a", url="https://pypi.org/packages/9b/83/39928c1569007a734006b5ac2eaba26d8751cd292cff9d06887c0de97003/tensorstore-0.1.54.tar.gz")
@@ -17,7 +17,12 @@ class PyTensorstore(PythonPackage):
     version("0.1.49", sha256="b0dc120ca4c4bcbb3ec28d826f56d3995fd47e375908f936662f0f7653859515", url="https://pypi.org/packages/97/36/d0aef0bdc54eeae6d1045fb2655120d32c3a06abd076186c464c3db39bd5/tensorstore-0.1.49.tar.gz")
     version("0.1.48", sha256="cf07a75aaa84098cf7b4d673485a326cde1695101225a04bc7b557fcc3c2cbb7", url="https://pypi.org/packages/8d/11/e503f2c903b37985ae5ed45b3c4aebe2d159c6484153bcca8dc0d9666956/tensorstore-0.1.48.tar.gz")
     version("0.1.47", sha256="734c8bdf63ced1d0d45ef008da4f4b54cebcedcac1a20cf255d5cf7679abd3ee", url="https://pypi.org/packages/5b/28/9cefca3712eff158bc81559f08baaff369bec1f2e761da77bf8606adcb26/tensorstore-0.1.47.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.1.46:")
+    # END DEPENDENCIES
 

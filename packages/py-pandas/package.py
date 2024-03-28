@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPandas(PythonPackage):
+    # BEGIN VERSIONS
     version("2.2.1", sha256="0ab90f87093c13f3e8fa45b48ba9f39181046e8f3317d3aadb2fffbb1b978572", url="https://pypi.org/packages/3d/59/2afa81b9fb300c90531803c0fd43ff4548074fa3e8d0f747ef63b3b5e77a/pandas-2.2.1.tar.gz")
     version("2.2.0", sha256="30b83f7c3eb217fb4d1b494a57a2fda5444f17834f5df2de6b2ffff68dc3c8e2", url="https://pypi.org/packages/03/d2/6fb05f20ee1b3961c7b283c1f8bafc6de752155d075c5db61c173de0de62/pandas-2.2.0.tar.gz")
     version("2.2.0-rc0", sha256="f864d8a5080e3f284b46eb26c7cb102a39b9bd6ac9a4d97d7a24d86fd3c0e656", url="https://pypi.org/packages/27/23/fef34c4746e5a228441c614174614714dc8aaec3646ccd53566d97a77fb8/pandas-2.2.0rc0.tar.gz")
@@ -55,21 +55,44 @@ class PyPandas(PythonPackage):
     version("1.0.0", sha256="3ea6cc86931f57f18b1240572216f09922d91b19ab8a01cf24734394a3db3bec", url="https://pypi.org/packages/26/c4/b3cd1c8928a496e27a8604160a4b6c672bda76cc215130848f68f01e0213/pandas-1.0.0.tar.gz")
     version("0.25.3", sha256="52da74df8a9c9a103af0a72c9d5fdc8e0183a90884278db7f386b5692a2220a4", url="https://pypi.org/packages/b7/93/b544dd08092b457d88e10fc1e0989d9397fd32ca936fdfcbb2584178dd2b/pandas-0.25.3.tar.gz")
     version("0.25.2", sha256="ca91a19d1f0a280874a24dca44aadce42da7f3a7edb7e9ab7c7baad8febee2be", url="https://pypi.org/packages/42/cb/e3b69df7d3e6095a5e86fbe930e57f3f0a440fb73f350ab253efe2c7b924/pandas-0.25.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("excel", default=False)
+    variant("performance", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.1:")
+        depends_on("py-bottleneck@1.3.6:", when="@2.2:+performance")
+        depends_on("py-bottleneck@1.3.4:", when="@2.1+performance")
+        depends_on("py-numba@0.56.4:", when="@2.2:+performance")
+        depends_on("py-numba@0.55.2:", when="@2.1+performance")
+        depends_on("py-numexpr@2.8.4:", when="@2.2:+performance")
+        depends_on("py-numexpr@2.8:", when="@2.1+performance")
         depends_on("py-numpy@1.26.0:1", when="@2.1.2:2.1,2.2.0: ^python@3.12:")
-        depends_on("py-numpy@1.23.2:1", when="@2.1.2:2.1,2.2.0: ^python@3.11:3.11.0")
         depends_on("py-numpy@1.22.4:1", when="@2.1.2:2.1,2.2.0: ^python@:3.10")
+        depends_on("py-numpy@1.23.2:1", when="@2.1.2:2.1,2.2.0: ^python@3.11:3.11.0")
         depends_on("py-numpy@1.26.0:", when="@2.1.1,2.2:2.2.0-rc0 ^python@3.12:")
         depends_on("py-numpy@1.23.2:", when="@2.1.1,2.2:2.2.0-rc0 ^python@3.11:3.11.0")
         depends_on("py-numpy@1.22.4:", when="@2.1:2.1.1,2.2:2.2.0-rc0 ^python@:3.10")
         depends_on("py-numpy@1.23.2:", when="@2.1:2.1.0 ^python@3.11:")
         depends_on("py-numpy@1.13.3:", when="@0.25:1.0")
+        depends_on("py-odfpy@1.4.1:", when="@2.1:+excel")
+        depends_on("py-openpyxl@3.1:", when="@2.2:+excel")
+        depends_on("py-openpyxl@3.0.10:", when="@2.1+excel")
+        depends_on("py-python-calamine@0.1.7:", when="@2.2:+excel")
         depends_on("py-python-dateutil@2.8.2:", when="@2.1:")
         depends_on("py-python-dateutil@2.6.1:", when="@0.25:1.0")
         depends_on("py-pytz@2020:", when="@2.1:")
         depends_on("py-pytz@2017:", when="@0.25:1.1.0-rc0")
+        depends_on("py-pyxlsb@1.0.10:", when="@2.2:+excel")
+        depends_on("py-pyxlsb@1.0.9:", when="@2.1+excel")
         depends_on("py-tzdata@2022.7:", when="@2.2:")
         depends_on("py-tzdata@2022:", when="@2.1")
+        depends_on("py-xlrd@2.0.1:", when="@2.1:+excel")
+        depends_on("py-xlsxwriter@3.0.5:", when="@2.2:+excel")
+        depends_on("py-xlsxwriter@3.0.3:", when="@2.1+excel")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCftime(PythonPackage):
+    # BEGIN VERSIONS
     version("1.6.3", sha256="d0a6b29f72a13f08e008b9becff247cc75c84acb213332ede18879c5b6aa4dfd", url="https://pypi.org/packages/ee/cb/2dcae27c58d3dc773848d273eb4036513eca06ae92733dc2ba4b7a59878f/cftime-1.6.3.tar.gz")
     version("1.6.2", sha256="8614c00fb8a5046de304fdd86dbd224f99408185d7b245ac6628d0276596e6d2", url="https://pypi.org/packages/cd/db/c528f26ee2dbac1dc348189386c2df745770bb22c02542e281d60212cb13/cftime-1.6.2.tar.gz")
     version("1.6.1", sha256="511215f45ed7cc79ead84020e88e1fc476b8aba71b47d2fcdef8e65242406927", url="https://pypi.org/packages/5b/31/9536027132f9fe8d01ab6b4a7ff6a42136f3a26208825231f5785e6a50d6/cftime-1.6.1.tar.gz")
@@ -18,7 +18,12 @@ class PyCftime(PythonPackage):
     version("1.4.1", sha256="7c55540bc164746c3c4f86a07c9c7b9ed4dfb0b0d988348ec63cec065c58766d", url="https://pypi.org/packages/9d/c3/80dd52e4cadb4ae60ea957fa5aa3f45b6678294d96d66f7759f745573f8e/cftime-1.4.1.tar.gz")
     version("1.4.0", sha256="2c6fe0279b1913ea7c67fbe020a736d5740cd21e4f81a10f91260267681795d7", url="https://pypi.org/packages/b5/23/74ae9be7d1b985b0f0783a0c105a70a9f53622cabb532b45e3842c381fda/cftime-1.4.0.tar.gz")
     version("1.0.3.4", sha256="dd74d0d470baf1c50e31335215793a5e78436903e34b4f151fa9ccbf3a6cc20c", url="https://pypi.org/packages/7a/83/a61141ec141ceb0617468e04cc163dbdb9007b958191043618d1dc950b8f/cftime-1.0.3.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy", when="@:1.0.1,1.0.3.3:1.2")
+    # END DEPENDENCIES
 

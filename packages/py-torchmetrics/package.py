@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTorchmetrics(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.3.2", sha256="44ca3a9f86dc050cb3f554836ef291698ea797778457195b4f685fce8e2e64a3", url="https://pypi.org/packages/f3/0e/cedcb9c8aeb2d1f655f8d05f841b14d84b0a68d9f31afae4af55c7c6d0a9/torchmetrics-1.3.2-py3-none-any.whl")
     version("1.3.1", sha256="a44bd1edee629bbf463eb81bfba8300b3785d8b3b8d758bdcafa862b80955b4f", url="https://pypi.org/packages/cd/23/4bb4c1b78b57682a1309974a29bfdcbfa6fcf5476e698a4f0f22affa3799/torchmetrics-1.3.1-py3-none-any.whl")
     version("1.3.0.post0", sha256="9e691ff8e8b752ad191c896f98e4a6dea81fe91dda5b6916e5b7aeaed4c7e1ad", url="https://pypi.org/packages/db/c5/0b2ba92269328e58c9e33a70daa46d1f68212bda129c54343575780de752/torchmetrics-1.3.0.post0-py3-none-any.whl")
@@ -42,7 +42,11 @@ class PyTorchmetrics(PythonPackage):
     version("0.4.1", sha256="70c83f0fc804a4fe00a9e72dbd2960ff76e39ef62570a19bbdce0c15a1ee0d71", url="https://pypi.org/packages/4d/8b/de8df9044ca2ac5dfc6b13b9ad3b3ebe6b3a45807311102b569d680e811f/torchmetrics-0.4.1-py3-none-any.whl")
     version("0.3.1", sha256="bf6162b56c9466fdfa8f185e8bbd48c7740c4f46d1335bc4db87ac1efcdad0e2", url="https://pypi.org/packages/14/99/dc59248df9a50349d537ffb3403c1bdc1fa69077109d46feaa0843488001/torchmetrics-0.3.1-py3-none-any.whl")
     version("0.2.0", sha256="16a8ceac8e579828aa8a5a4f8830fc207a18e0fbc8774257fbb1cbfb95248faf", url="https://pypi.org/packages/3a/42/d984612cabf005a265aa99c8d4ab2958e37b753aafb12f31c81df38751c8/torchmetrics-0.2.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-lightning-utilities@0.8:", when="@1.1:")
         depends_on("py-lightning-utilities@0.7:", when="@1:1.0")
@@ -83,4 +87,5 @@ class PyTorchmetrics(PythonPackage):
         # depends_on("py-sewar@0.4.4:", when="@1.2.1:1.3.0.0")
         # depends_on("py-statsmodels@0.14:", when="@1.2.1:1.3.0.0")
         # depends_on("py-torch-complex", when="@1.2.1:1.3.0.0")
+    # END DEPENDENCIES
 

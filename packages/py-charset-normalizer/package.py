@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCharsetNormalizer(PythonPackage):
+    # BEGIN VERSIONS
     version("3.3.2", sha256="f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5", url="https://pypi.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz")
     version("3.3.1", sha256="d9137a876020661972ca6eec0766d81aef8a5627df628b664b234b73396e727e", url="https://pypi.org/packages/6d/b3/aa417b4e3ace24067f243e45cceaffc12dba6b8bd50c229b43b3b163768b/charset-normalizer-3.3.1.tar.gz")
     version("3.3.0", sha256="63563193aec44bce707e0c5ca64ff69fa72ed7cf34ce6e11d5127555756fd2f6", url="https://pypi.org/packages/cf/ac/e89b2f2f75f51e9859979b56d2ec162f7f893221975d244d8d5277aa9489/charset-normalizer-3.3.0.tar.gz")
@@ -26,5 +26,10 @@ class PyCharsetNormalizer(PythonPackage):
     version("2.0.5", sha256="fa471a601dfea0f492e4f4fca035cd82155e65dc45c9b83bf4322dfab63755dd", url="https://pypi.org/packages/48/84/aa70b1e0d9d5a76d3d8a4c3d495f8f0524831571f65efe51bb8db8df0eed/charset_normalizer-2.0.5-py3-none-any.whl")
     version("2.0.4", sha256="0c8911edd15d19223366a194a513099a302055a962bca2cec0f54b8b63175d8b", url="https://pypi.org/packages/33/53/b7f6126a2b9fd878b025fe3c40266cfaad696f312165008ce045bffa3fe7/charset_normalizer-2.0.4-py3-none-any.whl")
     version("2.0.3", sha256="88fce3fa5b1a84fdcb3f603d889f723d1dd89b26059d0123ca435570e848d5e1", url="https://pypi.org/packages/c4/1d/e6ce112f7237fc746e632e1cbdc24890cad95505c6cd4b711f4fd17f4735/charset_normalizer-2.0.3-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

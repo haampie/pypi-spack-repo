@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAzureCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.30.1", sha256="7c5ee397e48f281ec4dd773d67a0a47a0962ed6fa833036057f9ea067f688e74", url="https://pypi.org/packages/d7/70/180df3b43ebc7a1ec957d9e5c2c76e6c54398ec61a67dff88d3e0131be80/azure_core-1.30.1-py3-none-any.whl")
     version("1.30.0", sha256="3dae7962aad109610e68c9a7abb31d79720e1d982ddf61363038d175a5025e89", url="https://pypi.org/packages/be/4f/a747b2537fea6302ff3a307b1f9701853e65e215afc1a62fa931d031c57a/azure_core-1.30.0-py3-none-any.whl")
     version("1.29.7", sha256="95a7b41b4af102e5fcdfac9500fcc82ff86e936c7145a099b7848b9ac0501250", url="https://pypi.org/packages/ff/29/dbc7182bc207530c7b5858d59f429158465f878845d64a038afc1aa61e35/azure_core-1.29.7-py3-none-any.whl")
@@ -25,7 +25,11 @@ class PyAzureCore(PythonPackage):
     version("1.15.0-beta1", sha256="eb9f5fea76f578e769f85e5c54636770f3427ae3186510d88b546949dff75ce1", url="https://pypi.org/packages/5b/f4/35ec076058f98e1415b9034e92c1d989b57d6f491757307d5395cf703fea/azure_core-1.15.0b1-py2.py3-none-any.whl")
     version("1.7.0", sha256="2d1aade2795ea0ac2a903af940c3e0dfe75d25351ec4fc44edf747e97d703dfb", url="https://pypi.org/packages/8b/00/efb68e2dda82139d732090fc3b7ff47fe6f34724ea7ba31e518a854b15c1/azure_core-1.7.0-py2.py3-none-any.whl")
     version("1.6.0", sha256="7bf695b017acea3da28e0390a2dea5b7e15a9fa3ef1af50ff020bcfe7dacb6a4", url="https://pypi.org/packages/a4/ed/ff9f4669e5b9a78a62fe43b83cc01e9007bbf6e99ec7ab6f73557135099f/azure_core-1.6.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anyio@3.0.0:", when="@1.29.6")
         depends_on("py-requests@2.21:", when="@1.29.6:")
@@ -35,4 +39,5 @@ class PyAzureCore(PythonPackage):
         depends_on("py-typing-extensions@4.6:", when="@1.29.2:")
         depends_on("py-typing-extensions@4.3:", when="@1.26.4:1.29.1")
         depends_on("py-typing-extensions@4.0.1:", when="@1.23:1.26.3")
+    # END DEPENDENCIES
 

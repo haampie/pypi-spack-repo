@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNestAsyncio(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.6.0", sha256="87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c", url="https://pypi.org/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl")
     version("1.5.9", sha256="61ec07ef052e72e3de22045b81b2cc7d71fceb04c568ba0b2e4b2f9f5231bec2", url="https://pypi.org/packages/0d/d0/ffa604feb4992d5ecb3a0581df1afa6f5a05027c29c49db867acd7e4e10e/nest_asyncio-1.5.9-py3-none-any.whl")
     version("1.5.8", sha256="accda7a339a70599cb08f9dd09a67e0c2ef8d8d6f4c07f96ab203f2ae254e48d", url="https://pypi.org/packages/ab/d3/48c01d1944e0ee49fdc005bf518a68b0582d3bd201e5401664890b62a647/nest_asyncio-1.5.8-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyNestAsyncio(PythonPackage):
     version("1.5.2", sha256="21b4e6b9ee3fe9108a048e6f6f2f1bdc5d9926022c6c4592d668ea3493784d46", url="https://pypi.org/packages/6c/2b/21d0ee1c44f80ef3293ae9a6a8a54a1f1e43bdb39e1f5e4a82f22d0f21f5/nest_asyncio-1.5.2-py3-none-any.whl")
     version("1.5.1", sha256="76d6e972265063fe92a90b9cc4fb82616e07d586b346ed9d2c89a4187acea39c", url="https://pypi.org/packages/52/e2/9b37da54e6e9094d2f558ae643d1954a0fa8215dfee4fa261f31c5439796/nest_asyncio-1.5.1-py3-none-any.whl")
     version("1.4.0", sha256="ea51120725212ef02e5870dd77fc67ba7343fc945e3b9a7ff93384436e043b6a", url="https://pypi.org/packages/a0/44/f2983c5be9803b08f89380229997e92c4bdd7a4a510ccee565b599d1bdc8/nest_asyncio-1.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkImagecapturecore(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="68f1f96982282e786c9c387c177c3b14202d560d68000136562eba1ed3f45a6e", url="https://pypi.org/packages/38/ac/b779c127c35f8f8888cf3636eb853777158d22166e937746040f5d35c252/pyobjc-framework-ImageCaptureCore-10.2.tar.gz")
     version("10.1", sha256="29b85ee9af77bba7e1ea9191bf84edad39d07681b9bd267c8f5057db3b0cdd64", url="https://pypi.org/packages/5e/06/4e9b52e020cceab0f0b0762af8d046d01d9e72a5d9b5b7b62449b7681ccc/pyobjc-framework-ImageCaptureCore-10.1.tar.gz")
     version("10.0", sha256="9660faa140806dd0f2c50c39062863c23188c6b9596e2946234dd3c35882d3c7", url="https://pypi.org/packages/ba/ef/89e90d78c9a9e04cb36c391c5eafab16a9202147327d3c33d68fb16ab1cd/pyobjc-framework-ImageCaptureCore-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkImagecapturecore(PythonPackage):
     version("9.0", sha256="124e2475f57426efe7c439eb964c01b5f90d6458ab9438a723a3d3ceffa59502", url="https://pypi.org/packages/ac/4b/3f3e68af101b60dd534229e7ffa405b56061069207d930f52b34bbd512c6/pyobjc-framework-ImageCaptureCore-9.0.tar.gz")
     version("8.5.1", sha256="19b53735c73a3f1c32cf288422d318280214e7988d0eb027acdbc56e4953834f", url="https://pypi.org/packages/c4/7e/90fdb455ef30393a50b3709a01a087817ea702898106797339cc2185efee/pyobjc-framework-ImageCaptureCore-8.5.1.tar.gz")
     version("8.5", sha256="b7bd515affee27737d0292bc6aab49c0248077454dbcf01beda8e3f231791d38", url="https://pypi.org/packages/44/eb/da192dfaaff26856291dbcfa7a6295010de5a0e472ae52199bb86e1dedf4/pyobjc-framework-ImageCaptureCore-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkImagecapturecore(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

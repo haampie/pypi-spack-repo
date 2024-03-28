@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleCloudCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.4.1", sha256="a9e6a4422b9ac5c29f79a0ede9485473338e2ce78d91f2370c01e730eab22e61", url="https://pypi.org/packages/5e/0f/2e2061e3fbcb9d535d5da3f58cc8de4947df1786fe6a1355960feb05a681/google_cloud_core-2.4.1-py2.py3-none-any.whl")
     version("2.4.0", sha256="f8af1b71002b685345ffcac2c96e0207b3782c358c3d4f9bafe601f470481a34", url="https://pypi.org/packages/06/97/7cba235a8e762f28c85af41a42893c1a63dfe797a8abe35d89040661b1b5/google_cloud_core-2.4.0-py2.py3-none-any.whl")
     version("2.4.0-rc1", sha256="23a5bcad078376448961e35dcd093932eea1d717160ce332f06fcaebfece0682", url="https://pypi.org/packages/8f/5f/7cd1cf1b838f220fb3567301d3802208f3c4a64ecb1ca2fbb61f10352492/google_cloud_core-2.4.0rc1-py2.py3-none-any.whl")
@@ -29,7 +29,11 @@ class PyGoogleCloudCore(PythonPackage):
     version("1.4.2", sha256="64c35fc379e51cadac7fc9cdef0777369ca1370c2eb2d51823fd0cd4c2d16082", url="https://pypi.org/packages/f3/bc/e1778d923df12b9f10a587f09f98acdc6e603ceb27c16fd0f73e97c4f905/google_cloud_core-1.4.2-py2.py3-none-any.whl")
     version("1.4.1", sha256="4c9e457fcfc026fdde2e492228f04417d4c717fb0f29f070122fb0ab89e34ebd", url="https://pypi.org/packages/a8/c8/9be9810356f62daea7e417164db6eb4b5f5edf087a9516fa4602de8b1924/google_cloud_core-1.4.1-py2.py3-none-any.whl")
     version("1.0.3", sha256="0ee17abc74ff02176bee221d4896a00a3c202f3fb07125a7d814ccabd20d7eb5", url="https://pypi.org/packages/ee/f0/084f598629db8e6ec3627688723875cdb03637acb6d86999bb105a71df64/google_cloud_core-1.0.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-google-api-core@1.31.6:1,2.3.1:", when="@2.3.2:")
         depends_on("py-google-api-core@1.31.5:1,2.3.1:", when="@2.2.3:2.3.1")
@@ -41,4 +45,5 @@ class PyGoogleCloudCore(PythonPackage):
         depends_on("py-google-auth@1.24:", when="@2:2.2.2")
         depends_on("py-google-auth@1.24:1", when="@1.6:1")
         depends_on("py-six@1.12:", when="@1.4.4:1")
+    # END DEPENDENCIES
 

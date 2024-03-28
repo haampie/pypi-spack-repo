@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPythran(PythonPackage):
+    # BEGIN VERSIONS
     version("0.12.2", sha256="06ce86851b17384bced121beacae3a99705d2477e6ca67ae243b73912b9287f1", url="https://pypi.org/packages/21/5b/0ac28c9cdddbd262a5a14e3d6bcff662b967ea678a3638cb79e153b93843/pythran-0.12.2-py3-none-any.whl")
     version("0.12.0", sha256="f06c23e1045030a29cabe07161b61c511edf662cd0cd0b439ecde24a50e28eb5", url="https://pypi.org/packages/f4/1a/71f510d40adfefa5369388c0fe186981821cfb34bc4de2e6729b03363ea9/pythran-0.12.0-py3-none-any.whl")
     version("0.11.0", sha256="8fea162e6096c6a3d45613a9a5389db739bf78805e713f853c9fcc7113ab9369", url="https://pypi.org/packages/ae/5a/2fc283c873b9d3f5a612238165756b9e75ac345250f6c1511e0c60c181b5/pythran-0.11.0-py3-none-any.whl")
@@ -21,7 +21,11 @@ class PyPythran(PythonPackage):
     version("0.9.5", sha256="815a778d6889593c0b8ddf08052cff36a504ce4cc8bd8d7bfb856a212f91486e", url="https://pypi.org/packages/6f/df/d4f805e04d1b26900e284de27c900867ff9acefe67c452aa8ae9bedeb405/pythran-0.9.5.tar.gz")
     version("0.9.4", sha256="ec9c91f5331454263b064027292556a184a9f55a50f8615e09b08f57a4909855", url="https://pypi.org/packages/89/66/610a3cdd0ca916e2e82098d4f8b6a9ffb320c7bbf39b872c15910ea95f28/pythran-0.9.4.tar.gz")
     version("0.9.3", sha256="217427a8225a331fdc8f3efe57871aed775cdf2c6e847a0a83df0aaae4b02493", url="https://pypi.org/packages/01/4d/6af15b6deeff16cbde453a08137c87dee6290a2cca8fd73c534400314224/pythran-0.9.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-beniget@0.4:", when="@0.9.12:")
         depends_on("py-beniget@0.3", when="@0.9.7:0.9.11")
@@ -35,4 +39,5 @@ class PyPythran(PythonPackage):
         depends_on("py-numpy", when="@0.9.6:")
         depends_on("py-ply", when="@0.9.6:")
         depends_on("py-six", when="@0.9.6:0.9.11")
+    # END DEPENDENCIES
 

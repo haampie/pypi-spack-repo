@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRx(PythonPackage):
+    # BEGIN VERSIONS
     version("3.2.0", sha256="922c5f4edb3aa1beaa47bf61d65d5380011ff6adcd527f26377d05cb73ed8ec8", url="https://pypi.org/packages/e2/a9/efeaeca4928a9a56d04d609b5730994d610c82cf4d9dd7aa173e6ef4233e/Rx-3.2.0-py3-none-any.whl")
     version("3.1.1", sha256="0e0f2715a3452e95dcb5d6ea28ffe5742e832592bbcc67a48f394ef8ba871e6f", url="https://pypi.org/packages/90/6c/5f1839d9ae2a8c85d119c51acaff1f1382f68691cb0f1cb3d0c9fdd32a93/Rx-3.1.1-py3-none-any.whl")
     version("3.1.0", sha256="aaf409848e24dd514926eb8467e2764762bfd258325717fca4628d32d8721252", url="https://pypi.org/packages/28/0e/50160479e1afba49e2c860f8fbd022f115acd2c64da9b6460c949adb0b01/Rx-3.1.0.tar.gz")
@@ -24,5 +24,10 @@ class PyRx(PythonPackage):
     version("1.5.5", sha256="ae34ffb0a3df2d596e651349d817b10ee978ff5ff62975467317483c849be33f", url="https://pypi.org/packages/ea/45/f9d5f695bc2cb02f429909049c080f04ca2bc54edbe0b35d4b471c5fe582/Rx-1.5.5-py2.py3-none-any.whl")
     version("1.5.4", sha256="fb0cbb21b67eedbd0428df504dc8fe501b2bbac35a5243a0c3723bba13340315", url="https://pypi.org/packages/cd/ef/bcc494857c17dcb02b2d7a4a5b87e54db48c71bc40c2f7fedcd15e7633b1/Rx-1.5.4-py2.py3-none-any.whl")
     version("1.5.3", sha256="ef1889716eeec6daec581c6ad4a2b11aa1e5af33fac1846fd982603102d9bb03", url="https://pypi.org/packages/ce/ed/1938211aec2fe7fdd48ee3ab8d6bd00a2940c72888ac83eb13be08cfbbe9/Rx-1.5.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

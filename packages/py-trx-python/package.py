@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,11 +6,17 @@
 from spack.package import *
 
 class PyTrxPython(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.2.9", sha256="234438b7f103c49768ab98e5f46e7b2624327065cd23fbfce5e681c32e8b4a3f", url="https://pypi.org/packages/23/55/1a0953ffa30078aac893bff6b4e5ac2942eb34201f7c4375433f3337540b/trx_python-0.2.9-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-deepdiff")
         depends_on("py-nibabel@5:", when="@0.2:")
         depends_on("py-numpy@1.22.0:", when="@0.2:")
         depends_on("py-setuptools-scm")
+    # END DEPENDENCIES
 

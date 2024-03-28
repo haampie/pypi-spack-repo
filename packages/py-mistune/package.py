@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMistune(PythonPackage):
+    # BEGIN VERSIONS
     version("3.0.2", sha256="71481854c30fdbc938963d3605b72501f5c10a9320ecd412c121c163a1c7d205", url="https://pypi.org/packages/f0/74/c95adcdf032956d9ef6c89a9b8a5152bf73915f8c633f3e3d88d06bd699c/mistune-3.0.2-py3-none-any.whl")
     version("3.0.1", sha256="b9b3e438efbb57c62b5beb5e134dab664800bdf1284a7ee09e8b12b13eb1aac6", url="https://pypi.org/packages/cc/c0/ac9587149e37cde62ae338e9db8241ae2fdc79a84bde8c8ba7caea2c22d8/mistune-3.0.1-py3-none-any.whl")
     version("3.0.0", sha256="32eaf3c092715730f754903698c99cba8474606f66c72c393ebb7f1dfa5c8c48", url="https://pypi.org/packages/55/97/adcde5767133f2f49023caa8312bf8202e9f1f410b6ef73c185ea3abb6d8/mistune-3.0.0-py3-none-any.whl")
@@ -26,12 +26,17 @@ class PyMistune(PythonPackage):
     version("0.8.1", sha256="511f11b307b061136b2aaa99854fa078d688c79426ee9c5857ba784f7a2fad40", url="https://pypi.org/packages/95/bd/a16b8dd4b8a2921e006fd81ca764f748ea5a7e31974095392de970b17228/mistune-0.8.1-py2.py3-none-any.whl")
     version("0.8", sha256="78f5d7f4850c0df94aeec64f994bb8390ca0bc717034bff8d63452815695f02f", url="https://pypi.org/packages/55/7d/06fa3e6d908360866e5f2d731ef5e11a5c001167229fa6e43b9adf7791dd/mistune-0.8-py2.py3-none-any.whl")
     version("0.7.4", sha256="8517af9f5cd1857bb83f9a23da75aa516d7538c32a2c5d5c56f3789a9e4cd22f", url="https://pypi.org/packages/25/a4/12a584c0c59c9fed529f8b3c47ca8217c0cf8bcc5e1089d3256410cfbdbc/mistune-0.7.4.tar.gz")
-    version("0.7.3", sha256="21d0e869df3b9189f248e022f1c9763cf9069e1a2f00676f1f1852bd7f98b713", url="https://pypi.org/packages/88/1e/be99791262b3a794332fda598a07c2749a433b9378586361ba9d8e824607/mistune-0.7.3.tar.gz")
-    version("0.7.2", sha256="626f2516adcde4af608eaf83635ff20ff7e577c1898ad4d0f0fcd8c094399840", url="https://pypi.org/packages/66/6f/82b0e3a24df3006e98ae5df50295a092eebf98af513182d7a7e6c0c803ac/mistune-0.7.2.tar.gz")
+    version("0.7.3", sha256="ee7447aadcf1962b5af767ff0443dcb0499c16bf73ad36dc99d230e7574571e5", url="https://pypi.org/packages/78/56/cda1a8b9cc613d79ac812c7f51ae6d3f0574a4d6642fbcf964ebe79bbe7c/mistune-0.7.3-py2.py3-none-any.whl")
+    version("0.7.2", sha256="84ca34642f46a06a5abcc3981f1d89281abc6aa589f145f93f3f8a0b2388fc98", url="https://pypi.org/packages/ee/18/bf9abc9ad14abe4e0eadd6f007ee838dd4c47473ec46540843ca6c43e7d3/mistune-0.7.2-py2.py3-none-any.whl")
     version("0.7.1", sha256="6076dedf768348927d991f4371e5a799c6a0158b16091df08ee85ee231d929a7", url="https://pypi.org/packages/47/c6/77dbbbfec1288a6cd1eeeeff3861019443b323a38a759fa26625309f6cf7/mistune-0.7.1.tar.gz")
     version("0.7", sha256="1daa2e55f5de63ecde7c446c4677c0447006752f78ad2c9c1c3c3452d395f89f", url="https://pypi.org/packages/42/b7/2847eccf4e93d8962de4763d6d08dd6b6d41b8f85416f6194a7f50f3b45a/mistune-0.7.tar.gz")
     version("0.6", sha256="d54a69365d01bc97412a39c11674a8aae3f333586e91f38895cc1ad818e13dc5", url="https://pypi.org/packages/c7/52/67cc5e5657e8e7eaf54a583d9c47f078517d702d3bbe3d6f3a04cace8dfb/mistune-0.6.tar.gz")
     version("0.5.1", sha256="cc66489a28845c0e1848ae290af5b555074eb76185136ca058e8eed1faa89692", url="https://pypi.org/packages/dc/65/7c54f73e18b85364dd956d47bed3f331bd2bcf67861fdc2d4890d10a7a6c/mistune-0.5.1.tar.gz")
     version("0.5", sha256="d53d868cfd10cf757160e88adb5760fce95f7026a243f15a02b7c604238e5869", url="https://pypi.org/packages/7f/54/056588bc6885df533dabb3bb7e65d082a4de6dda2bee408278112809c0ec/mistune-0.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

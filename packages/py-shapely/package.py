@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyShapely(PythonPackage):
+    # BEGIN VERSIONS
     version("2.0.3", sha256="4d65d0aa7910af71efa72fd6447e02a8e5dd44da81a983de9d736d6e6ccbe674", url="https://pypi.org/packages/36/8f/03929218f8d7003c3eafa5ffad1fb3f185459d336fa9cc31d3e67f442f97/shapely-2.0.3.tar.gz")
     version("2.0.2", sha256="1713cc04c171baffc5b259ba8531c58acc2a301707b7f021d88a15ed090649e7", url="https://pypi.org/packages/01/c0/ef2c5eff1e8381710e211a063d0aa3e7215cea9e6fd8c31e75bf5f93df85/shapely-2.0.2.tar.gz")
     version("2.0.1", sha256="66a6b1a3e72ece97fc85536a281476f9b7794de2e646ca8a4517e2e3c1446893", url="https://pypi.org/packages/10/a7/de139da3ce303101c357a9ba801328cba85cf6ace157da31a4007bca85e4/shapely-2.0.1.tar.gz")
@@ -22,8 +22,13 @@ class PyShapely(PythonPackage):
     version("1.7.1", sha256="1641724c1055459a7e2b8bbe47ba25bdc89554582e62aec23cb3f3ca25f9b129", url="https://pypi.org/packages/42/f3/0e1bc2c4f15e05e30c6b99322b9ddaa2babb3f43bc7df2698efdc1553439/Shapely-1.7.1.tar.gz")
     version("1.7.0", sha256="e21a9fe1a416463ff11ae037766fe410526c95700b9e545372475d2361cc951e", url="https://pypi.org/packages/44/ec/4eddbf9d17a917c51fb4ad159aa7137f506681e91ab559cf87d120e1d78d/Shapely-1.7.0.tar.gz")
     version("1.6.4", sha256="b10bc4199cfefcf1c0e5d932eac89369550320ca4bdf40559328d85f1ca4f655", url="https://pypi.org/packages/55/60/d04f6cf9834125f1d205cd43d14ebcf58d2cbc74d6e702d1ea59b0bbe2dd/Shapely-1.6.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.14.0:1", when="@2.0.3:")
         depends_on("py-numpy@1.14.0:", when="@2.0.2")
+    # END DEPENDENCIES
 

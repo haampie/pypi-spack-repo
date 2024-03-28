@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCssutils(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.9.0", sha256="f8b013169e281c0c6083207366c5005f5dd4549055f7aba840384fb06a78745c", url="https://pypi.org/packages/c6/6e/a8ba19fe8e7a7dfaadd4597bf47f3d75a9239dd0d85870e07edeb5e803bf/cssutils-2.9.0-py3-none-any.whl")
     version("2.8.0", sha256="96335b3a2e66cde970e1b7a3c8ba022dfe2c52de04ccecbe2e81ee2492083d08", url="https://pypi.org/packages/42/0c/9ad54cf215378b417cbf8be995eda327affb7de22e25d2d2263ed20aed9a/cssutils-2.8.0-py3-none-any.whl")
     version("2.7.1", sha256="1e92e0d9dab2ec8af9f38d715393964ba533dc3beacab9b072511dfc241db775", url="https://pypi.org/packages/7a/4a/acc05aba9edb75bf016d9f57928f0bea5a33de2079fd09ca61baec79a6f2/cssutils-2.7.1-py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyCssutils(PythonPackage):
     version("2.4.2", sha256="17e5ba0de70a672cd1cd2de47fd756bd6bce12585acd91447bde7be1d7a6c5c2", url="https://pypi.org/packages/2b/df/f39545c0b6e0cddb6ca91164d4486cf3f7f6e729c13768d73366b183d2da/cssutils-2.4.2-py3-none-any.whl")
     version("2.4.1", sha256="cfbc80ea9146a2a166864b7cfcf29816c81ca67b86bfdb5b0cce96a26b5e79c9", url="https://pypi.org/packages/e4/a6/17ed15cccebc7a696228e30b40972bf7724cee9149840c81c541ba0fae0a/cssutils-2.4.1-py3-none-any.whl")
     version("2.4.0", sha256="6c7ab239b432c157cd55303993935b92be07272e694d66c75b95eb56928936f6", url="https://pypi.org/packages/cc/ee/0f8a57df120e1003e461f014b2412278e94b1ce488b9c88464dd012ee1e7/cssutils-2.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

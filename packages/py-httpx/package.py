@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHttpx(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.0.0-beta0", sha256="2f57e72cee80879eaccde550fd1192d827d26662c6f3a65b89acdaaba03a4c89", url="https://pypi.org/packages/96/ef/4d9878e3fa50d0f439fe9ed3f26c5bb7d8298a4293d0499e1476b8b8d038/httpx-1.0.0b0-py3-none-any.whl")
     version("0.27.0", sha256="71d5465162c13681bff01ad59b2cc68dd838ea1f10e51574bac27103f00c91a5", url="https://pypi.org/packages/41/7b/ddacf6dcebb42466abd03f368782142baa82e08fc0c1f8eaa05b4bae87d5/httpx-0.27.0-py3-none-any.whl")
     version("0.26.0", sha256="8915f5a3627c4d47b73e8202457cb28f1266982d1159bd5779d86a80c0eab1cd", url="https://pypi.org/packages/39/9b/4937d841aee9c2c8102d9a4eeb800c7dad25386caabb4a1bf5010df81a57/httpx-0.26.0-py3-none-any.whl")
@@ -21,13 +21,21 @@ class PyHttpx(PythonPackage):
     version("0.22.0", sha256="e35e83d1d2b9b2a609ef367cc4c1e66fd80b750348b20cc9e19d1952fc2ca3f6", url="https://pypi.org/packages/2f/d3/6a990516a43a522a72da356c4a91c03e09c0cddce8106e7e1215c120011f/httpx-0.22.0-py3-none-any.whl")
     version("0.15.2", sha256="a2bd6eb6d52f0fbd3b082fc8a37b1f50d6112352a83aa04a60f4107f723b018e", url="https://pypi.org/packages/fc/2c/edea45026079eb4c790aed3d40eea7f0bca199f5f82358d2407cc467efe7/httpx-0.15.2-py3-none-any.whl")
     version("0.11.1", sha256="1d3893d3e4244c569764a6bae5c5a9fbbc4a6ec3825450b5696602af7a275576", url="https://pypi.org/packages/46/a9/36b9e193567d879e2da3dd57c755bdf12aa4c2485b1a4610c5799f387ae5/httpx-0.11.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("http2", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anyio", when="@0.25.1:0")
         depends_on("py-certifi", when="@0.7.5:")
         depends_on("py-chardet@3", when="@0.7.5:0.14")
         depends_on("py-charset-normalizer", when="@0.19:0.22,1:")
         depends_on("py-h11@0.8:0.9", when="@0.10:0.12")
+        depends_on("py-h2@3:", when="@0.19:+http2")
+        depends_on("py-h2@3", when="@0.14:0.18+http2")
         depends_on("py-h2@3", when="@0.7.5:0.12")
         depends_on("py-hstspreload", when="@0.9:0.13")
         depends_on("py-httpcore@1:", when="@0.25.2:0")
@@ -45,4 +53,5 @@ class PyHttpx(PythonPackage):
         depends_on("py-sniffio", when="@0.13.0:")
         depends_on("py-sniffio@1:", when="@0.9:0.12")
         depends_on("py-urllib3@1", when="@0.11:0.12")
+    # END DEPENDENCIES
 

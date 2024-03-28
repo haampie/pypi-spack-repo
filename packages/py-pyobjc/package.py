@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjc(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="976c8f8af49a91195307b3efbc2d63517be63aae2b4b3689dcff4f317669c23a", url="https://pypi.org/packages/b3/6e/e66efbbc291c5272d1241c7943da2fe55471a6c95687082124dab537433a/pyobjc-10.2-py3-none-any.whl")
     version("10.1", sha256="2687ff02217e7b2aba52c6b948bccea864a8f034af6c90528564d496b343c418", url="https://pypi.org/packages/9e/38/ef2250f1d7bf3f50ba1c877aba6ee56eff09797a88952a32b1283d485933/pyobjc-10.1-py3-none-any.whl")
     version("10.0", sha256="0f30bd3f25425a6c435f37713bc062382c85022d07ddb1f199a9211d859846db", url="https://pypi.org/packages/ae/bd/ef8be926a12e7689cf9033cba3db94215f54f543b71ec7e7567179e06ce0/pyobjc-10.0-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjc(PythonPackage):
     version("9.0", sha256="d39acc126edb35929a5a84ef7b8559c87c95379355968e9042eb7dfeb5c4e163", url="https://pypi.org/packages/30/38/6957b0e0d3de922d734f4d5c59551431cd76b7705c4e3e745d4862a2cee1/pyobjc-9.0-py3-none-any.whl")
     version("8.5.1", sha256="b708e115e7eb952d266c1648a0a38575a77a6dbfe4ad2442d3cfb56ef4a6c529", url="https://pypi.org/packages/c0/8a/ff375b29a7bf90c00901d443e7b0f5e9acf60326c45c845dceecbbf7c0dd/pyobjc-8.5.1-py3-none-any.whl")
     version("8.5", sha256="72917dfb2cf138c06464c25ccf0b528877b997bbf0fd9854ce0523e7e739d955", url="https://pypi.org/packages/69/3d/786f379dd669a078cf0c4a686e242c9b643071c23367bfbd3d9a7eb589ec/pyobjc-8.5-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1", when="@10.1")
@@ -1546,4 +1550,5 @@ class PyPyobjc(PythonPackage):
         # depends_on("py-pyobjc-framework-pubsub@9:9.0.0", when="@9:9.0.0")
         # depends_on("py-pyobjc-framework-pubsub@8.5.1:8", when="@8.5.1:8")
         # depends_on("py-pyobjc-framework-pubsub@8.5:8.5.0", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

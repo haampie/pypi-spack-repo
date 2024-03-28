@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPager(PythonPackage):
+    # BEGIN VERSIONS
     version("3.3", sha256="18aa45ec877dca732e599531c7b3b0b22ed6a4445febdf1bdf7da2761cca340d", url="https://pypi.org/packages/5f/a1/95f8605e50c0ccc85ae53f63f5c4cb83b72f71fbd049a0e8259913e2cc22/pager-3.3.tar.gz")
     version("3.2", sha256="ac33365ad06208246b7410ee7fe2b7277527617f6b27c91ce9dbcf2420d31c07", url="https://pypi.org/packages/fc/00/84d679270ab295c9bd770bac819e0e41837175626b6fd00377ac7a9afaa9/pager-3.2.zip")
     version("3.1", sha256="23ee81715c3028ec4b796ab65251e70ad85e99c82d2aff3b104245da47568fdb", url="https://pypi.org/packages/b4/0e/65f11fe35ee74d8214c37dfcfb492b9be093d1f8749c97570d4e7d1c5d88/pager-3.1.zip")
@@ -17,5 +17,10 @@ class PyPager(PythonPackage):
     version("1.4", sha256="2d2894ee61e6f7c0e733605ae21aee20aee4f9c8142bef984086d220a74f8b69", url="https://pypi.org/packages/ca/d8/e9aa7652a0ef5fe30eff13aa4d2aa9d4b87243962fe364f563505e3487cd/pager-1.4.tar.gz")
     version("1.3", sha256="d9e28352ad83041f4dbb7bcde38087c57083b994c7ceee2836b33958ea6ce35c", url="https://pypi.org/packages/dd/6a/ca7678630ff7fae2be951306eb931048b24fc66f33c36eacd6827ceb8a36/pager-1.3.zip")
     version("1.2", sha256="5b9455c8852e8c753bcb26fc5b5de24fa7a5fa4c0b417a524202a05c48bcab26", url="https://pypi.org/packages/ba/d3/5c29c4dfc10ba7984caf08528e5a828828b0f76496c79792ea923606e698/pager-1.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

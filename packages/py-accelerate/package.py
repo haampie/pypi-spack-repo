@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAccelerate(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.28.0", sha256="8ae25f8a8dc4cf12283842c469113836300545fb0dfa46fef331fb0a2ac8b421", url="https://pypi.org/packages/a0/11/9bfcf765e71a2c84bbf715719ba520aeacb2ad84113f14803ff1947ddf69/accelerate-0.28.0-py3-none-any.whl")
     version("0.27.2", sha256="a818dd27b9ba24e9eb5030d1b285cf4cdd1b41bbfa675fb4eb2477ddfc097074", url="https://pypi.org/packages/1b/da/24a54b9205fce3bdbaad521c35944d0b0a2d292ac5ae921e484b76312b43/accelerate-0.27.2-py3-none-any.whl")
     version("0.27.1", sha256="7d138f6c00ead40c3a8de88f44d467b1f658ef687aac83cbeb475b39d1804300", url="https://pypi.org/packages/e0/e5/20373eaee15adeb12872bc03355636c283cf3092fd7eb290bb974174b14e/accelerate-0.27.1-py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyAccelerate(PythonPackage):
     version("0.23.0", sha256="fba5065ff4e7c8f0a39df50785023703cd9bf8388073aa13c6457920f3bc5225", url="https://pypi.org/packages/d9/92/2d3aecf9f4a192968035880be3e2fc8b48d541c7128f7c936f430d6f96da/accelerate-0.23.0-py3-none-any.whl")
     version("0.21.0", sha256="e2609d37f2c6a56e36a0612feae6ff6d9daac9759f4899432b86b1dc97024ebb", url="https://pypi.org/packages/70/f9/c381bcdd0c3829d723aa14eec8e75c6c377b4ca61ec68b8093d9f35fc7a7/accelerate-0.21.0-py3-none-any.whl")
     version("0.16.0", sha256="27aa39b2076560b3ee674b9650c237c58520b3fd7907e5da1f922cf6868c1576", url="https://pypi.org/packages/dc/0c/f95215bc5f65e0a5fb97d4febce7c18420002a4c3ea5182294dc576f17fb/accelerate-0.16.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-huggingface-hub", when="@0.23:")
         depends_on("py-numpy@1.17.0:", when="@0.5:")
@@ -29,4 +33,5 @@ class PyAccelerate(PythonPackage):
         depends_on("py-safetensors@0.3.1:", when="@0.25:")
         depends_on("py-torch@1.10:", when="@0.21:")
         depends_on("py-torch@1.4:", when="@0.1:0.18")
+    # END DEPENDENCIES
 

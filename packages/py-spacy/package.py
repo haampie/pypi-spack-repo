@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySpacy(PythonPackage):
+    # BEGIN VERSIONS
     version("3.7.4", sha256="525f2ced2e40761562c8cace93ef6a1e6e8c483f27bd564bc1b15f608efbe85b", url="https://pypi.org/packages/b8/42/2b2062b1ad8d13915ed9365b342cdd8c9dd32926d31ed4524def0584e225/spacy-3.7.4.tar.gz")
     version("3.7.3", sha256="99265028fbdc6e12249c53305e461f79a103637b0e6866c28af0e46365f751e1", url="https://pypi.org/packages/ef/b9/8b098779dd888076220498da27890f9017691b6ff1e1edf76fc0fc2e2929/spacy-3.7.3.tar.gz")
     version("3.7.2", sha256="cedf4927bf0d3fec773a6ce48d5d2c91bdb02fed3c7d5ec07bdb873f1126f1a0", url="https://pypi.org/packages/ef/9f/0afee264faa799e7300e2261680c518b2ec32bc2c1e5646684b51ec8b677/spacy-3.7.2.tar.gz")
@@ -20,7 +20,11 @@ class PySpacy(PythonPackage):
     version("2.3.7", sha256="c0f2315fea23497662e28212f89af3a03667f97c867c597b599c37ab84092e22", url="https://pypi.org/packages/79/1c/7c5f7541eb883181b564a8c8ba15d21b2d7b8a38ae32f31763575cf8857d/spacy-2.3.7.tar.gz")
     version("2.3.2", sha256="818de26e0e383f64ccbe3db185574920de05923d8deac8bbb12113b9e33cee1f", url="https://pypi.org/packages/18/db/499f374339b522b6618234b93f25d2990692795ccce3152519ccc508586c/spacy-2.3.2.tar.gz")
     version("2.2.4", sha256="f0f3a67c5841e6e35d62c98f40ebb3d132587d3aba4f4dccac5056c4e90ff5b9", url="https://pypi.org/packages/92/1b/a982be17aa65d61121718f0309a2d8a56a04d6babee4c1a6882965f0d56d/spacy-2.2.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-blis@0.4:0.4.0.0,0.4.1:0.4", when="@2.2.4:2.3.2,3:3.0.0-alpha0,3.0.0.dev:3.0.0")
         depends_on("py-catalogue@2.0.6:2.0", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
@@ -29,8 +33,8 @@ class PySpacy(PythonPackage):
         depends_on("py-jinja2", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
         depends_on("py-langcodes@3.2:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
         depends_on("py-murmurhash@0.28:1.0", when="@2.1.3,2.1.8,2.2.4:2.3.2,3:3.0.0-alpha0,3.0.0.dev:3.0.0,3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
-        depends_on("py-numpy@1.15.0:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2: ^python@:3.8")
         depends_on("py-numpy@1.19.0:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2: ^python@3.9:")
+        depends_on("py-numpy@1.15.0:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2: ^python@:3.8")
         depends_on("py-numpy@1.15.0:", when="@2.1.3,2.1.8,2.2.4:2.3.2,3:3.0.0-alpha0,3.0.0.dev:3.0.0")
         depends_on("py-packaging@20:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
         depends_on("py-pathy@0.10:", when="@3.7:3.7.0.0,3.7.1")
@@ -53,4 +57,5 @@ class PySpacy(PythonPackage):
         depends_on("py-wasabi@0.9.1:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
         depends_on("py-wasabi@0.4:0", when="@2.2.4:2.3.2,3.0.0.dev:3.0.0.dev8")
         depends_on("py-weasel@0.1.0:", when="@3.7:3.7.0.0,3.7.1:3,4.0.0.dev2:")
+    # END DEPENDENCIES
 

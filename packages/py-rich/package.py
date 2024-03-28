@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRich(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("13.7.1", sha256="4edbae314f59eb482f54e9e30bf00d33350aaa94f4bfcd4e9e3110e64d0d7222", url="https://pypi.org/packages/87/67/a37f6214d0e9fe57f6ae54b2956d550ca8365857f42a1ce0392bb21d9410/rich-13.7.1-py3-none-any.whl")
     version("13.7.0", sha256="6da14c108c4866ee9520bbffa71f6fe3962e193b7da68720583850cd4548e235", url="https://pypi.org/packages/be/be/1520178fa01eabe014b16e72a952b9f900631142ccd03dc36cf93e30c1ce/rich-13.7.0-py3-none-any.whl")
     version("13.6.0", sha256="2b38e2fe9ca72c9a00170a1a2d20c63c790d0e10ef1fe35eba76e1e7b1d7d245", url="https://pypi.org/packages/be/2a/4e62ff633612f746f88618852a626bbe24226eba5e7ac90e91dcfd6a414e/rich-13.6.0-py3-none-any.whl")
@@ -32,7 +32,11 @@ class PyRich(PythonPackage):
     version("9.5.1", sha256="0f4359df97670c1981599690458c4c9ede02c56f59ae3a648b7154cdba21b0cc", url="https://pypi.org/packages/e4/65/2376e6510efc51a3e7ead4012c6ade4742634cd89127bd5368a380d23454/rich-9.5.1-py3-none-any.whl")
     version("9.5.0", sha256="7a768215cc1175218223079fbfaa452b080529cac6439079bb70684e698281ce", url="https://pypi.org/packages/76/8a/00f666183508da511f7f03dde9f05d708dd4a43ba1d2b6d96adc96f021c2/rich-9.5.0-py3-none-any.whl")
     version("9.4.0", sha256="dfc1d6a394f97674163b2b2c24d12e15f85752ce5451043c4d3ce77dad16a07d", url="https://pypi.org/packages/f9/a0/875fd1285885fd491540380a10f22834f3648ff5a3c3a0ed3c2013888e72/rich-9.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama@0.4:", when="@1.0.1:11")
         depends_on("py-commonmark@0.9:", when="@0.4:13.1")
@@ -42,4 +46,5 @@ class PyRich(PythonPackage):
         depends_on("py-pygments@2.6:", when="@1.0.1:13.2")
         depends_on("py-typing-extensions@4:", when="@12.2: ^python@:3.8")
         depends_on("py-typing-extensions@3.7.4:3", when="@0.2:10.1")
+    # END DEPENDENCIES
 

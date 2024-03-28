@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNtlmAuth(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.5.0", sha256="f1527c581dbf149349134fc2d789d50af2a400e193206956fa0ab456ccc5a8ba", url="https://pypi.org/packages/ff/84/97c550164b54942b0e908c31ef09d9469f3ba4cd7332a671e2125732f63b/ntlm_auth-1.5.0-py2.py3-none-any.whl")
     version("1.4.0", sha256="11f7a3cec38155b7cecdd9bbc8c37cd738d8012f0523b3f98d8caefe394feb97", url="https://pypi.org/packages/50/09/5e397eb18685b14fd8b209e26cdb4fa6451c82c1bcc651fef05fa73e7b27/ntlm_auth-1.4.0-py2.py3-none-any.whl")
     version("1.3.0", sha256="ce5b4483ed761f341a538a426a71a52e5a9cf5fd834ebef1d2090f9eef14b3f8", url="https://pypi.org/packages/d5/3d/1c54e92f62bbc747a638da94adb439f99dc2d2f3041fe41a06b0da4f2808/ntlm_auth-1.3.0-py2.py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyNtlmAuth(PythonPackage):
     version("1.0.4", sha256="fbc8c916c6b0ef66ae631307f1d41a6d2fd8aa380d4b7a659dc0beaf4a440f2d", url="https://pypi.org/packages/47/a8/93ad0f75f2e9e8e55eacea9190595dd548eed4f7ac84c13581572af2c10a/ntlm_auth-1.0.4-py2.py3-none-any.whl")
     version("1.0.3", sha256="314d289bcf4ee6f2bb2fbb5fc9f9a3edd9c191b6e1c5046e32ce8097ba172489", url="https://pypi.org/packages/9b/38/bd3697b538d8a4fc7638335e9b737fc2da4f5b446c594df1687b5a594011/ntlm_auth-1.0.3-py2.py3-none-any.whl")
     version("1.0.2", sha256="98e85fe982ed34c109759cccf32a4773a48fb8713d84e6898daeb8d905d17379", url="https://pypi.org/packages/55/b7/639bd6d15f4db06f815566c5521c3b72c23e7de15a8025547fcf42c16449/ntlm_auth-1.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ordereddict", when="@1.0.2,1.0.4:1.0.5")
         depends_on("py-six", when="@:1.0")
+    # END DEPENDENCIES
 

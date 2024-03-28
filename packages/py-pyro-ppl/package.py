@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyroPpl(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.9.0", sha256="33e63fcd4df7a81aa295b6d9ce572751921b5ad2803f5c2b30692c824d2cc90d", url="https://pypi.org/packages/23/2c/8e5a735ac4e6ea43af20d90d18668674831cabec25d5109f569bafb062e2/pyro_ppl-1.9.0-py3-none-any.whl")
     version("1.8.6", sha256="18a28febe1be9c42af94a684c2971a798f2acb51f77b07e8430f146eafe11fed", url="https://pypi.org/packages/f2/93/59bced321ede6eeb60061f156df8aae3f4832127fe97f4e86c567ad3b9cc/pyro_ppl-1.8.6-py3-none-any.whl")
     version("1.8.5", sha256="09616269053f45b9c230ed6bcfbde199b9c308780d972b863ef7bdb707a1c346", url="https://pypi.org/packages/1e/59/cbfb15b4d9b3b04fe05e33d3b9b9662ef3e324225d528a538cc1bc1db28b/pyro_ppl-1.8.5-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyroPpl(PythonPackage):
     version("1.8.0", sha256="69e234faf37b9752eef7f780cb6e2b2489e88abc34dfa4706eb92c8f6b811cf6", url="https://pypi.org/packages/aa/a0/c94b31968713f1bbb8978094cb65ef992ac09e6637f905d7062467bceba8/pyro_ppl-1.8.0-py3-none-any.whl")
     version("1.7.0", sha256="de5fb8cd4691c260f8dd9fb36e666b23b926b460552c09c2860f1d26c8bd280a", url="https://pypi.org/packages/df/fa/19121468eacf215d15192305a31c40633d4c83231ef9a87b5ef78e992984/pyro_ppl-1.7.0-py3-none-any.whl")
     version("1.6.0", sha256="0cc15c4bae3b25d6b3b3b674de6721e5572db6f0805bb2cdb766a53aa2ab3221", url="https://pypi.org/packages/aa/7a/fbab572fd385154a0c07b0fa138683aa52e14603bb83d37b198e5f9269b1/pyro_ppl-1.6.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-graphviz@0.8:", when="@0.5.1:1.0")
         depends_on("py-numpy@1.7:", when="@0.5.1:")
@@ -29,4 +33,5 @@ class PyPyroPpl(PythonPackage):
         depends_on("py-torch@1.9:", when="@1.7:1.8.0")
         depends_on("py-torch@1.8:", when="@1.6")
         depends_on("py-tqdm@4.36:", when="@0.5.1:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyvizComms(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.2", sha256="31541b976a21b7738557c3ea23bd8e44e94e736b9ed269570dcc28db4449d7e3", url="https://pypi.org/packages/6b/09/9163cfdd2b2440bb283f48e2e6f2bdacdbd3afeedcb48b06fa24a78d3b1f/pyviz_comms-3.0.2-py3-none-any.whl")
     version("3.0.1", sha256="0130e952b942906a0eb5fcbcc750262a8e4f565a9b06b3c0d8d631f33b61b78e", url="https://pypi.org/packages/88/e1/a877ce6f15fcf51da1ef0a253266c3f321bec7ed6f93cc82e8a8296c8618/pyviz_comms-3.0.1-py3-none-any.whl")
     version("3.0.0", sha256="91c967151b1e4d436c458c147a31991a42fbe7567e49176e4eb5b8dc8e20f1ff", url="https://pypi.org/packages/67/bc/f698554d2a179c3ae40adba328db1bc552c0ea5832101503200ab1904dd8/pyviz_comms-3.0.0-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyPyvizComms(PythonPackage):
     version("2.2.0", sha256="c11837635ae47d7001d001d87cf8bf3ae417b4bbf6f493c376114207b7efcd77", url="https://pypi.org/packages/be/65/84b7520204dcbd9aae2d6e173ffc86a70743953e37722beb6bcf5f1d7927/pyviz_comms-2.2.0-py2.py3-none-any.whl")
     version("2.1.0", sha256="6ff14e4180107782088be17d565415dcb02375aa34e4626f481e52adb7324676", url="https://pypi.org/packages/7c/cb/513487e3f724d30dc58d654c32db3ee9c2bbe4aad49954830b724a43ab70/pyviz_comms-2.1.0-py2.py3-none-any.whl")
     version("2.0.2", sha256="0ed42ffd0dd2182edc7a331100c72d9923a027120f4225dbbc33663eadddba8e", url="https://pypi.org/packages/0f/e6/45913dbdd90dbb3ebb408721e2f0dc22150868182ac70627be4dcf8bbdf2/pyviz_comms-2.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-param", when="@0.7.2:")
+    # END DEPENDENCIES
 

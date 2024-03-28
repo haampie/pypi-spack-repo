@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCramjam(PythonPackage):
+    # BEGIN VERSIONS
     version("2.8.3-rc1", sha256="49502262a3ac02ea14adbdef0fb151448080fe37be0819c7794fa8cd5351668f", url="https://pypi.org/packages/22/e0/a00f6c8e9ca06f2adb35b7a03225f7f172570812ed44b96aa2e0f71ceed7/cramjam-2.8.3rc1.tar.gz")
     version("2.8.2", sha256="ec9c8997edef2d74d9190be8195eaf983c705066f4c6ea1d4a96a807b54b8a91", url="https://pypi.org/packages/10/96/7a4e9e21b97aaab9872fb156ebd91b37a3b1f9ada9684042ab13da842703/cramjam-2.8.2.tar.gz")
     version("2.8.1", sha256="f7e233791761b61e3d85598b25db75868d9f1cd35b2bd10eb34ec4755ff2add1", url="https://pypi.org/packages/6d/37/69fc31f8bb047b7980c2c49d9abe19249d087c93dfd0991ffcadb3d115a7/cramjam-2.8.1.tar.gz")
@@ -17,5 +17,10 @@ class PyCramjam(PythonPackage):
     version("2.6.1", sha256="ca8d757dbc12fbfefafc62b19e784a957ef07991edb2416d228c5b86b74fba0c", url="https://pypi.org/packages/5b/8a/ff9539882abe261a017659459450fc5193492ec4f9f9261e572c3b2dfb16/cramjam-2.6.1.tar.gz")
     version("2.6.0", sha256="e4e4755185a2f59721a769335fd492a953a91adc23b9c5bf1e143540d1f2d55c", url="https://pypi.org/packages/4b/68/bd2142bc9362503ca977ca00e99f03dc247b489de2b617ed3357b7cb8f44/cramjam-2.6.0.tar.gz")
     version("2.5.0", sha256="a92c0c2db4c6a3804eaffa253c7ca49f849e7a893a31c902a8123d7c36b2b487", url="https://pypi.org/packages/c0/f1/f27568273b6e49ba06faf20519fd2f0d03cff7428146b7489f6b176f2708/cramjam-2.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

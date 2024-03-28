@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTerminado(PythonPackage):
+    # BEGIN VERSIONS
     version("0.18.1", sha256="a4468e1b37bb318f8a86514f65814e1afc977cf29b3992a4500d9dd305dcceb0", url="https://pypi.org/packages/6a/9e/2064975477fdc887e47ad42157e214526dcad8f317a948dee17e1659a62f/terminado-0.18.1-py3-none-any.whl")
     version("0.18.0", sha256="87b0d96642d0fe5f5abd7783857b9cab167f221a39ff98e3b9619a788a3c0f2e", url="https://pypi.org/packages/69/df/deebc9fb14a49062a3330f673e80b100e665b54d998163b3f62620b6240c/terminado-0.18.0-py3-none-any.whl")
     version("0.17.1", sha256="8650d44334eba354dd591129ca3124a6ba42c3d5b70df5051b6921d506fdaeae", url="https://pypi.org/packages/84/a7/c7628d79651b8c8c775d27b374315a825141b5783512e82026fb210dd639/terminado-0.17.1-py3-none-any.whl")
@@ -22,7 +22,11 @@ class PyTerminado(PythonPackage):
     version("0.8.2", sha256="d9d012de63acb8223ac969c17c3043337c2fcfd28f3aea1ee429b345d01ef460", url="https://pypi.org/packages/a7/56/80ea7fa66565fa75ae21ce0c16bc90067530e5d15e48854afcc86585a391/terminado-0.8.2-py2.py3-none-any.whl")
     version("0.8.1", sha256="65011551baff97f5414c67018e908110693143cfbaeb16831b743fe7cad8b927", url="https://pypi.org/packages/2e/20/a26211a24425923d46e1213b376a6ee60dc30bcdf1b0c345e2c3769deb1c/terminado-0.8.1-py2.py3-none-any.whl")
     version("0.6", sha256="2c0ba1f624067dccaaead7d2247cfe029806355cef124dc2ccb53c83229f0126", url="https://pypi.org/packages/58/59/aabe84fce2f45da10165435cec204d982863e176f6849a4a4fe2652a20a8/terminado-0.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ptyprocess", when="@0.7")
         depends_on("py-tornado@6.1:", when="@0.15:")
@@ -34,4 +38,5 @@ class PyTerminado(PythonPackage):
         # marker: os_name == "nt"
         # depends_on("py-pywinpty@1.1:", when="@0.10:")
         # depends_on("py-pywinpty@0.5:", when="@0.8.1:0.9.4")
+    # END DEPENDENCIES
 

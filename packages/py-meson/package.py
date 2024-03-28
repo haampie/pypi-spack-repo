@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMeson(PythonPackage):
+    # BEGIN VERSIONS
     version("1.4.0", sha256="476a458d51fcfa322a6bdc64da5138997c542d08e6b2e49b9fa68c46fd7c4475", url="https://pypi.org/packages/33/75/b1a37fa7b2dbca8c0dbb04d5cdd7e2720c8ef6febe41b4a74866350e041c/meson-1.4.0-py3-none-any.whl")
     version("1.4.0-rc2", sha256="204444cc4a2d86606d028215ae2e9b2087874f3f64a147ec92a4d2564635447e", url="https://pypi.org/packages/70/fa/69564edd377b7a855820eaf4081e3fada8462bf372ca41e9b5e6a1f83cfa/meson-1.4.0rc2-py3-none-any.whl")
     version("1.4.0-rc1", sha256="bcae6bc400c3add0530110da09c49dfd27a3a48087ecb5aa4ba1f75e3339daa9", url="https://pypi.org/packages/60/63/9c7856d213b34af92b375c46e67a498d167d39982160417ec7b92483da98/meson-1.4.0rc1-py3-none-any.whl")
@@ -62,5 +62,10 @@ class PyMeson(PythonPackage):
     version("0.42.0", sha256="4ef46250beea2af272a2ab5bdf835dd06e8c8d341c18529d502b5f7be0ac73fe", url="https://pypi.org/packages/10/44/0899bf05d79a90a345252c38172d5359672119bc6125fe491a8263f173d1/meson-0.42.0.tar.gz")
     version("0.41.2", sha256="ad1707717987fe8b7b65392b8327580105fcbdd5f2032bf3b7232b647284c95c", url="https://pypi.org/packages/6d/32/a474702fcba1144aef89e7ec5d8a33d49be8389a0f983d11aab486c8392b/meson-0.41.2.tar.gz")
     version("0.41.1", sha256="df57b79494a310d02791e3b24527536c0bcfcf8df32b30a6e4b4e071ec94ddb4", url="https://pypi.org/packages/2f/71/67c0ef454aa958cac484b1a0b9eba4c976083acbe5fdd281676eb79fc8ce/meson-0.41.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

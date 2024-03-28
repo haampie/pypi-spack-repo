@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkAudiovideobridging(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="94d77284aae3a151124aa170074c2902537f540debb076376d49f5ee54fb9ce1", url="https://pypi.org/packages/35/d9/12788ed1536442af93b252d5ad2cce6dbfe888256fb4bebc69f0c215539b/pyobjc-framework-AudioVideoBridging-10.2.tar.gz")
     version("10.1", sha256="73d049a9d203541c12a672af37676c8dddf68217a3e9212510544cb457e77db0", url="https://pypi.org/packages/76/fd/8a7a1d8437395514007c41dee1d64aa4999f090f519202c35020bb3d5a28/pyobjc-framework-AudioVideoBridging-10.1.tar.gz")
     version("10.0", sha256="979081558ec3a8cd875515120027448fbe24fa0605b96cf13c7541bffab281bc", url="https://pypi.org/packages/83/a6/9b57e2f0375278fbbd274f02521dc241089ee7b6da843cbc7608f17c7382/pyobjc_framework_AudioVideoBridging-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkAudiovideobridging(PythonPackage):
     version("9.0", sha256="af442713b8c7042c46e665d416de05574e68530c87b238215de2e1dc2682b622", url="https://pypi.org/packages/ea/35/4d0b525a9875014013c0da989793d05515ab77f4ab641b8235bdbb6bde6e/pyobjc_framework_AudioVideoBridging-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="2ae8e4ad8852bb39638af656d183216282fa448a1b6c81c7109b7909247b1847", url="https://pypi.org/packages/b3/55/198d567d3cb890081529d692dbf965f115bd8759a31fe66227dc46cdd7a0/pyobjc_framework_AudioVideoBridging-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="d2a0cf6bb696a385722cfb7d33afa5bd08c79e231fba22879cb743236e63b63d", url="https://pypi.org/packages/b5/7c/2460156aa0656cfe39af4ea9d26357e611f8b46e5f2e9e6ffccf7cbbb23a/pyobjc_framework_AudioVideoBridging-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkAudiovideobridging(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPywinpty(PythonPackage):
+    # BEGIN VERSIONS
     version("2.0.13", sha256="c34e32351a3313ddd0d7da23d27f835c860d32fe4ac814d372a3ea9594f41dde", url="https://pypi.org/packages/33/d9/93956af389ab7d4ef2f558b1cc6c5cb48885d254ac882f212964c30a1e4f/pywinpty-2.0.13.tar.gz")
     version("2.0.12", sha256="8197de460ae8ebb7f5d1701dfa1b5df45b157bb832e92acba316305e18ca00dd", url="https://pypi.org/packages/7d/d3/f10b259284324bdad0bf38c1c8041344620b3f2ea603f2d59e63ca83ed5d/pywinpty-2.0.12.tar.gz")
     version("2.0.11", sha256="e244cffe29a894876e2cd251306efd0d8d64abd5ada0a46150a4a71c0b9ad5c5", url="https://pypi.org/packages/86/ab/4b8c722b772fd5edb5f50434a565ca892c8b4b0d24f13beec05fa3ac3900/pywinpty-2.0.11.tar.gz")
@@ -27,5 +27,10 @@ class PyPywinpty(PythonPackage):
     version("1.0.1", sha256="b3512d4a964a0abae1b77b6908917c62ea0ad7d8178696e4e973877fe9e820f9", url="https://pypi.org/packages/b0/2c/11676105f51a7718316cd74186630f4a4cb0efa3530ebf3cfbe0b72e35cb/pywinpty-1.0.1.tar.gz")
     version("1.0.0", sha256="76a8c1794eb9fe46081d78133960d72fd938fe1c86f78849173be6e52ce05bd9", url="https://pypi.org/packages/98/c1/e0881333c3ef6394f969842676a953ecbb83e41d9a83c2f240b043023665/pywinpty-1.0.0.tar.gz")
     version("0.5.7", sha256="2d7e9c881638a72ffdca3f5417dd1563b60f603e1b43e5895674c2a1b01f95a0", url="https://pypi.org/packages/5d/97/8e43c2152a638cdb83d45644eb125c752abe67249f94bb3e3e29b0709685/pywinpty-0.5.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

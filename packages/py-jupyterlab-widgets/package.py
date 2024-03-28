@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterlabWidgets(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.10", sha256="dd61f3ae7a5a7f80299e14585ce6cf3d6925a96c9103c978eda293197730cb64", url="https://pypi.org/packages/24/da/db1cb0387a7e4086780aff137987ee924e953d7f91b2a870f994b9b1eeb8/jupyterlab_widgets-3.0.10-py3-none-any.whl")
     version("3.0.9", sha256="3cf5bdf5b897bf3bccf1c11873aa4afd776d7430200f765e0686bd352487b58d", url="https://pypi.org/packages/e8/05/0ebab152288693b5ec7b339aab857362947031143b282853b4c2dd4b5b40/jupyterlab_widgets-3.0.9-py3-none-any.whl")
     version("3.0.8", sha256="4715912d6ceab839c9db35953c764b3214ebbc9161c809f6e0510168845dfdf5", url="https://pypi.org/packages/74/5e/2475ac62faf2e342b2bf20b8d8e375f49400ecb38f52e4e0a7557eb1cedb/jupyterlab_widgets-3.0.8-py3-none-any.whl")
@@ -27,5 +27,10 @@ class PyJupyterlabWidgets(PythonPackage):
     version("1.1.0", sha256="c2a9bd3789f120f64d73268c066ed3b000c56bc1dda217be5cdc43e7b4ebad3f", url="https://pypi.org/packages/5f/2c/7331aa9c5041e8b107d712d853268e137f55014b858407816b5487289d11/jupyterlab_widgets-1.1.0-py3-none-any.whl")
     version("1.0.2", sha256="f5d9efface8ec62941173ba1cffb2edd0ecddc801c11ae2931e30b50492eb8f7", url="https://pypi.org/packages/18/4d/22a93473bca99c80f2d23f867ebbfee2f6c8e186bf678864eec641500910/jupyterlab_widgets-1.0.2-py3-none-any.whl")
     version("1.0.1", sha256="841925a349bd9a9197c5506bd5461a321b09e6659a9b179a0096b561a92898c3", url="https://pypi.org/packages/a6/c8/84e487bd89d8f444299adf2656bcfe4cee0223ccd69b1206a83fe7c45427/jupyterlab_widgets-1.0.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

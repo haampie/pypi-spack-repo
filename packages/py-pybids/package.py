@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPybids(PythonPackage):
+    # BEGIN VERSIONS
     version("0.16.4", sha256="44618312c000eae70f21f0f25443b0b122b7109d2b071331d63654ec7dd70f22", url="https://pypi.org/packages/f1/75/85f7957e9cab3aa60793665b1c8650d3786f5b9388e6687558902264700f/pybids-0.16.4-py3-none-any.whl")
     version("0.16.3", sha256="b9f47cd964c046a03cac607e771e96a92c63d9a3f0ac2e193a9561cda39f5c68", url="https://pypi.org/packages/87/b0/bf389f857ed3397d1698ae8828808ddf06caa86310951e383aed21765ee2/pybids-0.16.3-py3-none-any.whl")
     version("0.16.2", sha256="9754429d8137f50a84037667940af4af761db06c1c889f1b87f955ce28826f02", url="https://pypi.org/packages/10/4f/0117f9b5fa3bc2a34ae58dbe67d76dfb41d75fa8e3a8a659f1558636663e/pybids-0.16.2-py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyPybids(PythonPackage):
     version("0.13.1", sha256="4ca3de27013befd899f1004b32fab6257f820e94cceb61ec5dca65893b406d36", url="https://pypi.org/packages/ab/84/4e24488d0ad14a1f614500a613c5d62802f732d22ab62d98aa1295ba5f38/pybids-0.13.1-py3-none-any.whl")
     version("0.9.5", sha256="9f3c4470746adca6b07620c420d0db7d5c7666b5cf9c891590518f697924e2a5", url="https://pypi.org/packages/f0/53/1b022516c02a91b844a88f8174503c427e1ddbd8550141f201f5251d33e5/pybids-0.9.5-py2.py3-none-any.whl")
     version("0.8.0", sha256="fe60fa7d1e171e75a38a04220ed992f1b062531a7452fcb7ce5ba81bb6abfdbc", url="https://pypi.org/packages/b3/98/f64bc00977eb27680d1b973998b281f8976037a64ee6e07c0232f09f60fa/pybids-0.8.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bids-validator@1.11:", when="@0.16:")
         depends_on("py-bids-validator", when="@0.9.4:0.15")
@@ -47,4 +51,5 @@ class PyPybids(PythonPackage):
         depends_on("py-sqlalchemy@1.3.16:", when="@0.16:")
         depends_on("py-sqlalchemy@:1.3", when="@0.12.4:0.15")
         depends_on("py-sqlalchemy", when="@0.9.4:0.12.3")
+    # END DEPENDENCIES
 

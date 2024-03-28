@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRuamelYaml(PythonPackage):
+    # BEGIN VERSIONS
     version("0.18.6", sha256="57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636", url="https://pypi.org/packages/73/67/8ece580cc363331d9a53055130f86b096bf16e38156e33b1d3014fffda6b/ruamel.yaml-0.18.6-py3-none-any.whl")
     version("0.18.5", sha256="a013ac02f99a69cdd6277d9664689eb1acba07069f912823177c5eced21a6ada", url="https://pypi.org/packages/57/db/4b74a29f5fd175aea3ff0d95f8230d9bb8a54e38d963c6f96065b9e2eef3/ruamel.yaml-0.18.5-py3-none-any.whl")
     version("0.18.4", sha256="ca864776af7b0cbcbb223c38707a440bfabea926ba5b4163b2ef4991aae8f8c1", url="https://pypi.org/packages/cc/8b/11eb402856052429aab4e8d4a3866dd9c84dfeedacd8ae6e78bf8307d095/ruamel.yaml-0.18.4-py3-none-any.whl")
@@ -46,11 +46,16 @@ class PyRuamelYaml(PythonPackage):
     version("0.16.10", sha256="0962fd7999e064c4865f96fb1e23079075f4a2a14849bcdc5cdba53a24f9759b", url="https://pypi.org/packages/a6/92/59af3e38227b9cc14520bf1e59516d99ceca53e3b8448094248171e9432b/ruamel.yaml-0.16.10-py2.py3-none-any.whl")
     version("0.16.5", sha256="0db639b1b2742dae666c6fc009b8d1931ef15c9276ef31c0673cc6dcf766cf40", url="https://pypi.org/packages/fa/90/ecff85a2e9c497e2fa7142496e10233556b5137db5bd46f3f3b006935ca8/ruamel.yaml-0.16.5-py2.py3-none-any.whl")
     version("0.11.7", sha256="c89363e16c9eafb9354e55d757723efeff8682d05e56b0881450002ffb00a344", url="https://pypi.org/packages/f0/85/36931437a58010067837946bd31823072c827657e1a3c50ba5f4848163d4/ruamel.yaml-0.11.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ruamel-yaml-clib@0.2.7:", when="@0.17.34: ^python@:3.12")
         depends_on("py-ruamel-yaml-clib@0.2.7:", when="@0.17.23:0.17.33 ^python@:3.11")
         depends_on("py-ruamel-yaml-clib@0.2.6:", when="@0.17.18:0.17.22 ^python@:3.10")
         depends_on("py-ruamel-yaml-clib@0.1.2:", when="@0.16.13:0.17.17 ^python@:3.9")
         depends_on("py-ruamel-yaml-clib@0.1.2:", when="@0.16.11:0.16.12 ^python@:3.8")
+    # END DEPENDENCIES
 

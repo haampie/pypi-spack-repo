@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySlepc4py(PythonPackage):
+    # BEGIN VERSIONS
     version("3.20.2", sha256="89ebd1964edd0eb63d4dbfa977d6f35408f4e19a3da290696fd1197901544bd8", url="https://pypi.org/packages/3a/e4/0bea7dbb95359dcacaea61fe821f3c1a3427141803d2ec376ae5361705a6/slepc4py-3.20.2.tar.gz")
     version("3.20.1", sha256="7e6d156f7b0891bfa0616b38a502460c62797f16ca146b321e16cce4cf139d07", url="https://pypi.org/packages/1f/c2/6ada11c80bae84902323128a87b7f52aa474dc0e2199adae8b943cebc50e/slepc4py-3.20.1.tar.gz")
     version("3.20.0", sha256="56cbea1f56746136e5a934bf4a481e566f35e475cb950c0a5bce7d5c3cc7690a", url="https://pypi.org/packages/a9/8c/aaaf0841b558179c47130c78bd9475ed52bc6535560053b9fff603586b43/slepc4py-3.20.0.tar.gz")
@@ -28,5 +28,10 @@ class PySlepc4py(PythonPackage):
     version("3.13.0", sha256="ce05d8a1990771141689517a42682a27b1ac3f145fd3f1d12d820a15445e3549", url="https://pypi.org/packages/d6/13/4d30f65091b6292b736b0fa321f7a845cf0fd16755ada1256fe3c996267b/slepc4py-3.13.0.tar.gz")
     version("3.12.0", sha256="6310a641ebe4b02a547a9f8a9a3c72d44c9fb05b7a5c0c3a9bf6e6a3f1ff07ce", url="https://pypi.org/packages/47/b4/bf00aae9f0861958b9a68c8020296be50be4a145c13cb5926a9e7e41c895/slepc4py-3.12.0.tar.gz")
     version("3.11.0", sha256="9812d8b398fd6f30e872993421e420c64387c74fc3dab410208f13d7270257cf", url="https://pypi.org/packages/90/56/3d2b6c7b272b82c4a7ba49544978eceee3492e749e93bc2f7f1225b7d3b1/slepc4py-3.11.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

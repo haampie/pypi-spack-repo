@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNatsort(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("8.4.0", sha256="4732914fb471f56b5cce04d7bae6f164a592c7712e1c85f9ef585e197299521c", url="https://pypi.org/packages/ef/82/7a9d0550484a62c6da82858ee9419f3dd1ccc9aa1c26a1e43da3ecd20b0d/natsort-8.4.0-py3-none-any.whl")
     version("8.3.1", sha256="d583bc9050dd10538de36297c960b93f873f0cd01671a3c50df5bd86dd391dcb", url="https://pypi.org/packages/5f/e1/70d203ba3ae5476f25fb8a2015d6a7ff156a4ce4795e36955c144ea5a826/natsort-8.3.1-py3-none-any.whl")
     version("8.3.0", sha256="6c15c663d3fc57dd2af52a56ffa06e9fdf2edfcf8d2e129bf115941a7aeec61e", url="https://pypi.org/packages/c9/86/f2e6cff92686b72068fcf87f7f5fc27bc87fe198814e1bfbb6e69a8ed8bf/natsort-8.3.0-py3-none-any.whl")
@@ -33,8 +33,13 @@ class PyNatsort(PythonPackage):
     version("5.0.2", sha256="b6b018412a7f6ccd80c2d892947c93eae9c1c4c6948382dbcc21a69939c5a408", url="https://pypi.org/packages/09/6c/1ec71a9cd37d334d7f50c59a9d9de02370bd22b49f59534a136d2080f6da/natsort-5.0.2-py2.py3-none-any.whl")
     version("5.0.1", sha256="ad35be68ef6db20a9b0ae6c81df8ea1c6166f924e92de967b9adca97912acec6", url="https://pypi.org/packages/21/47/0a52ba175b01206493f1ad7f09a13c27f33e898739340fb500180c53b43e/natsort-5.0.1-py2.py3-none-any.whl")
     version("5.0.0", sha256="076546e61864d4a095cad453d301db5c8fdd1e5d340a3f92e3eef5caebdb7c8c", url="https://pypi.org/packages/98/c8/9fdc4c9122bb0c7da63b28f165d323188597e795d2d52f884c5e0a33bec0/natsort-5.0.0-py2.py3-none-any.whl")
-    version("4.0.4", sha256="c76ba3e85fba78f276ac06e4d47f2230d1070f9c19413b2a0bfe7de6af311839", url="https://pypi.org/packages/12/8e/e08d741b9ddedddc6c3f26542abab356ced37946a3b507cab780e1b23e63/natsort-4.0.4.tar.gz")
-    version("4.0.3", sha256="283bfc8ce4c4d03f0a04b8d1908c747eff858d3774161074eb5b052972263b9f", url="https://pypi.org/packages/a9/00/bad8a81b6cabab6fc8014e46ffe9b1b15ccf7f6ad57fd4bf82d0ec70416b/natsort-4.0.3.tar.gz")
-    version("4.0.1", sha256="48fde822e66a7f08de8ecf29367f4007c625f6d6260c9ce17f41d0f0c6aac687", url="https://pypi.org/packages/ce/5c/4e59c4506161e8c13b1606b9e394592a998723bbb332ecd05650472596d8/natsort-4.0.1.tar.gz")
+    version("4.0.4", sha256="fbb31f9807c6b356a7f127a592bd62445aaac3ae2b41db32cc2b7a52f4684ff5", url="https://pypi.org/packages/8e/63/92a8efe593e991da44afbd9a3e50c719aa4cede001cdcd39ae162a9720a6/natsort-4.0.4-py2.py3-none-any.whl")
+    version("4.0.3", sha256="025a002e74af7b25af22d03c21427cf4911e404a1b6ef65c52a73f9fa1e51007", url="https://pypi.org/packages/53/de/32729d48426eb7196e0f066e11d8f4f739dea6a64d175d286acea3980d37/natsort-4.0.3-py2.py3-none-any.whl")
+    version("4.0.1", sha256="fd18f797cecc0267c24fcaa9c06b386abf54452d0f20b88f312c9591b5a76443", url="https://pypi.org/packages/c5/69/c2e5d9f982f5564cb4f99ae25fff486c62819fecc7226efdb88642e2c7a7/natsort-4.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

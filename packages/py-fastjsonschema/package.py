@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,16 +6,22 @@
 from spack.package import *
 
 class PyFastjsonschema(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.19.1", sha256="3672b47bc94178c9f23dbb654bf47440155d4db9df5f7bc47643315f9c405cd0", url="https://pypi.org/packages/9c/b9/79691036d4a8f9857e74d1728b23f34f583b81350a27492edda58d5604e1/fastjsonschema-2.19.1-py3-none-any.whl")
-    version("2.19.0", sha256="e25df6647e1bc4a26070b700897b07b542ec898dd4f1f6ea013e7f6a88417225", url="https://pypi.org/packages/7a/61/5fc12c3a9b206e2d85399253ecbe602a753bfb54ae891bc74819ab594312/fastjsonschema-2.19.0.tar.gz")
-    version("2.18.1", sha256="06dc8680d937628e993fa0cd278f196d20449a1adc087640710846b324d422ea", url="https://pypi.org/packages/82/d1/0e54b17b6ebae7a347602bb07bb2f5c4cff9bdbbd354f202b3af48f22f75/fastjsonschema-2.18.1.tar.gz")
-    version("2.18.0", sha256="e820349dd16f806e4bd1467a138dced9def4bc7d6213a34295272a6cac95b5bd", url="https://pypi.org/packages/e5/23/cd3d068a28f030efa05169a9f3fcfb091532614ae9abd3f047d50373bed7/fastjsonschema-2.18.0.tar.gz")
-    version("2.17.1", sha256="f4eeb8a77cef54861dbf7424ac8ce71306f12cbb086c45131bcba2c6a4f726e3", url="https://pypi.org/packages/a4/e1/cda97fa4447e138f1f0ccfdaf678fa247415f7e9f4942d856fd63c7d863c/fastjsonschema-2.17.1.tar.gz")
-    version("2.17.0", sha256="1a68234b7a20ab35ce6600a35ce76a18bac630fc0c6443b3ae22e89fa21d8987", url="https://pypi.org/packages/bc/b6/4c1f5811aceadee3d28307e95a14e0ad11f688e858c66450dc483f0c1529/fastjsonschema-2.17.0.tar.gz")
-    version("2.16.3", sha256="4a30d6315a68c253cfa8f963b9697246315aa3db89f98b97235e345dedfb0b8e", url="https://pypi.org/packages/62/70/0b49eee4a6aef4b67699e65fe8b8f4a3a25d39971bcd6f1c930a91141f3b/fastjsonschema-2.16.3.tar.gz")
-    version("2.16.2", sha256="01e366f25d9047816fe3d288cbfc3e10541daf0af2044763f3d0ade42476da18", url="https://pypi.org/packages/7a/62/6df03bacda3544b5872d0b30f79c599ab84fc598858c77a77e1587d61ba3/fastjsonschema-2.16.2.tar.gz")
-    version("2.16.1", sha256="d6fa3ffbe719768d70e298b9fb847484e2bdfdb7241ed052b8d57a9294a8c334", url="https://pypi.org/packages/2f/ca/b8cd48dde1f4f1811c7ffd49253af87c1cb6523d2aaa5402a83d9fecc197/fastjsonschema-2.16.1.tar.gz")
-    version("2.16.0", sha256="feb24c2dc565a46e66e2b595d6480dbf884b9f39038b1f617664491b8d6a040c", url="https://pypi.org/packages/06/26/bb801fb2c02a4839f7d2afaf376d1fee12f48c65e1a5d7ca0480e85cb4da/fastjsonschema-2.16.0.tar.gz")
-    version("2.15.1", sha256="671f36d225b3493629b5e789428660109528f373cf4b8a22bac6fa2f8191c2d2", url="https://pypi.org/packages/c6/b1/01e6c2fee5a423e7ae8ce3cb66a119e1ec987add3a21b5c3ca25628f025c/fastjsonschema-2.15.1.tar.gz")
+    version("2.19.0", sha256="b9fd1a2dd6971dbc7fee280a95bd199ae0dd9ce22beb91cc75e9c1c528a5170e", url="https://pypi.org/packages/63/e9/d3dca06ea6b8e58e65716973bc7d9bee9bc39ce233595aa04d04e89a1089/fastjsonschema-2.19.0-py3-none-any.whl")
+    version("2.18.1", sha256="aec6a19e9f66e9810ab371cc913ad5f4e9e479b63a7072a2cd060a9369e329a8", url="https://pypi.org/packages/7f/1a/8aad366cf1779351741e5c791ae76dc8b293f72e9448c689cc2e730f06cb/fastjsonschema-2.18.1-py3-none-any.whl")
+    version("2.18.0", sha256="128039912a11a807068a7c87d0da36660afbfd7202780db26c4aa7153cfdc799", url="https://pypi.org/packages/9d/93/a3ca3cdeb84065d7d8f8df4cb09ab44405f109183c1d2b915ec17574e6b1/fastjsonschema-2.18.0-py3-none-any.whl")
+    version("2.17.1", sha256="4b90b252628ca695280924d863fe37234eebadc29c5360d322571233dc9746e0", url="https://pypi.org/packages/d4/a1/b3816c7945742ee95e2fb68dd59aaa205c9ce53ffd90704f70c2207a7b4d/fastjsonschema-2.17.1-py3-none-any.whl")
+    version("2.17.0", sha256="5fc1c88a11ad4c0a02cf4bda41a5aef17848460061734a02f51fc11cd6340e13", url="https://pypi.org/packages/97/1c/7a6850edc5b112bc1312989fbe3bbd01e4038a44ea12f532cddae51c9817/fastjsonschema-2.17.0-py3-none-any.whl")
+    version("2.16.3", sha256="04fbecc94300436f628517b05741b7ea009506ce8f946d40996567c669318490", url="https://pypi.org/packages/eb/e7/84b1571b866b8abd604f8b72234d16f01bd5944014ef9929b5cb0da198c1/fastjsonschema-2.16.3-py3-none-any.whl")
+    version("2.16.2", sha256="21f918e8d9a1a4ba9c22e09574ba72267a6762d47822db9add95f6454e51cc1c", url="https://pypi.org/packages/e4/be/cf1b876348070a23cb0c3ebfee7a452ad3a91b07b456dade3bd514656009/fastjsonschema-2.16.2-py3-none-any.whl")
+    version("2.16.1", sha256="2f7158c4de792555753d6c2277d6a2af2d406dfd97aeca21d17173561ede4fe6", url="https://pypi.org/packages/10/b9/953fc1e008d9f9b4a4220e7a43c543c904e45b63f7b9508a8ee7561ce582/fastjsonschema-2.16.1-py3-none-any.whl")
+    version("2.16.0", sha256="fc98d42c0504bd6cd3c43ece14b9c3f1f6893b05ebf576d606c16293412996f3", url="https://pypi.org/packages/6a/1e/e23d9abe27b6b1dc6e4c71e854dba899e15fbeb2e18d5f7fdafc06ee87c1/fastjsonschema-2.16.0-py3-none-any.whl")
+    version("2.15.1", sha256="fa2f4bb1e31419c5eb1150f2e0545921712c10c34165b86d33f08f5562ad4b85", url="https://pypi.org/packages/d1/fb/ea090e917b18320f79be31d754bbe496b715175e865603cfce1eaed2e774/fastjsonschema-2.15.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

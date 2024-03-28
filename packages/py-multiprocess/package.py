@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMultiprocess(PythonPackage):
+    # BEGIN VERSIONS
     version("0.70.16", sha256="161af703d4652a0e1410be6abccecde4a7ddffd19341be0a7011b94aeb171ac1", url="https://pypi.org/packages/b5/ae/04f39c5d0d0def03247c2893d6f2b83c136bf3320a2154d7b8858f2ba72d/multiprocess-0.70.16.tar.gz")
     version("0.70.15", sha256="f20eed3036c0ef477b07a4177cf7c1ba520d9a2677870a4f47fe026f0cd6787e", url="https://pypi.org/packages/68/e0/a77ca96e772e13c828fa52f3ad370d413bef194aeaf78b7c6611870ad815/multiprocess-0.70.15.tar.gz")
     version("0.70.14", sha256="3eddafc12f2260d27ae03fe6069b12570ab4764ab59a75e81624fac453fbf46a", url="https://pypi.org/packages/e3/ab/9aafc121c6a3d2470ccdf28f99897e88d324c948893b30e46cb359f595e3/multiprocess-0.70.14.tar.gz")
@@ -21,9 +21,14 @@ class PyMultiprocess(PythonPackage):
     version("0.70.7", sha256="46479a327388df8e77ad268892f2e73eac06d6271189b868ce9d4f95474e58e3", url="https://pypi.org/packages/31/60/6d74caa02b54ca43092e745640c7d98f367f07160441682a01602ce00bc5/multiprocess-0.70.7.tar.gz")
     version("0.70.5", sha256="c4c196f3c4561dc1d78139c3e73709906a222d2fc166ef3eef895d8623df7267", url="https://pypi.org/packages/65/03/bd8ac79948049b5a0f7ee5f2642f76dbb2d9cb83cc5433dfb2112f89d69a/multiprocess-0.70.5.zip")
     version("0.70.4", sha256="a692c6dc8392c25b29391abb58a9fbdc1ac38bca73c6f27d787774201e68e12c", url="https://pypi.org/packages/fb/44/308000ee233ce789e139978b15c1da4a8cdb0126522f2cb8a4ba560f4fb3/multiprocess-0.70.4.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-dill@0.3.8:", when="@0.70.16:")
         depends_on("py-dill@0.3.2:", when="@0.70.10")
         depends_on("py-dill@0.2.9:", when="@0.70.7")
+    # END DEPENDENCIES
 

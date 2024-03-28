@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyXskillscore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.0.24", sha256="39c3ffa75e2cbbde87470ad957d667e729025ac6a6077ca8efce0ca5f69bfafa", url="https://pypi.org/packages/29/6a/3a977c2fc6e57201cda9c85fd5ee1ee72712ea046f884f566f958e38239a/xskillscore-0.0.24-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.0.25:")
         depends_on("py-bottleneck", when="@0.0.7:0.0.24")
@@ -22,4 +26,5 @@ class PyXskillscore(PythonPackage):
         depends_on("py-toolz", when="@0.0.19:0.0.24")
         depends_on("py-xarray@0.16.1:", when="@0.0.18:")
         depends_on("py-xhistogram@0.3:", when="@0.0.22:")
+    # END DEPENDENCIES
 

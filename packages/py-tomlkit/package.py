@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTomlkit(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.12.4", sha256="5cd82d48a3dd89dee1f9d64420aa20ae65cfbd00668d6f094d7578a78efbb77b", url="https://pypi.org/packages/07/fa/c96545d741f2fd47f565e4e06bfef0962add790cb9c2289d900102b55eca/tomlkit-0.12.4-py3-none-any.whl")
     version("0.12.3", sha256="b0a645a9156dc7cb5d3a1f0d4bab66db287fcb8e0430bdd4664a095ea16414ba", url="https://pypi.org/packages/6e/43/159750d32481f16e34cc60090b53bc0a14314ad0c1f67a9bb64f3f3a0551/tomlkit-0.12.3-py3-none-any.whl")
     version("0.12.2", sha256="eeea7ac7563faeab0a1ed8fe12c2e5a51c61f933f2502f7e9db0241a65163ad0", url="https://pypi.org/packages/15/27/c53c6505ae6c94b7e11521e19855d7838396b9da09a519cf5f107df359a4/tomlkit-0.12.2-py3-none-any.whl")
@@ -27,5 +27,10 @@ class PyTomlkit(PythonPackage):
     version("0.5.7", sha256="6c1c8af5d98468e9d2b07db2060ae2bc6fe204bda7f32f46a6255b50fe78a71c", url="https://pypi.org/packages/7a/16/0d282673450911053452f3166c79580f0280ac82fe85f44e0c3bb7af427d/tomlkit-0.5.7-py2.py3-none-any.whl")
     version("0.5.6", sha256="18f488e4d65db8159e09f0eabe27b039bbaa2e3b55195e47ad9e8dd8d3ebb27a", url="https://pypi.org/packages/97/c2/533e295eb072098b48886b6f4dca640c72b04abf3d8eaa201417bc37a933/tomlkit-0.5.6-py2.py3-none-any.whl")
     version("0.5.5", sha256="c6b0c11b85e888c12330c7605d43c1446aa148cd421163f90ca46ea813f2c336", url="https://pypi.org/packages/29/22/716eb55bb154d2519752a2d91cf7e91d58dd24e8150c47aaaa67aae75aa6/tomlkit-0.5.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

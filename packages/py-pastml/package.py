@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,9 +6,14 @@
 from spack.package import *
 
 class PyPastml(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.9.40", sha256="312949473573929302b722add46a65fe0b129a4908184434cb03eb3e85ea53fe", url="https://pypi.org/packages/ef/6c/fff82ffaf0606381cb6524f65116e8ae82183963e5e758b755fc63a40621/pastml-1.9.40-py3-none-any.whl")
     version("1.9.38", sha256="7f6715544d2a04918ab81731ab225cc97b9fa2a0a664fbc7fa54ca26e12c698d", url="https://pypi.org/packages/81/ca/d12c447feb6f433fad3be915ceba50053b824e8b191a7328b4f4c70e93e8/pastml-1.9.38-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.9.41:")
         depends_on("py-biopython@1.70:", when="@1.9.36:")
@@ -20,4 +24,5 @@ class PyPastml(PythonPackage):
         depends_on("py-numpy@1.19.0:", when="@1.9.36:1.9.38")
         depends_on("py-pandas@1.0.0:", when="@1.9.36:")
         depends_on("py-scipy@1.5.0:", when="@1.9.36:")
+    # END DEPENDENCIES
 

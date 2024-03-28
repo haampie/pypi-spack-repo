@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNetcdf4(PythonPackage):
+    # BEGIN VERSIONS
     version("1.6.5", sha256="824881d0aacfde5bd982d6adedd8574259c85553781e7b83e0ce82b890bfa0ef", url="https://pypi.org/packages/da/f2/b7307966bf174559c80c0bdaaccebe1538efa3aef8e996d18229b01e9760/netCDF4-1.6.5.tar.gz")
     version("1.6.4", sha256="66da6542cbc7a6045cd1d979397dfd5a3f6c880c76d52b8f98bb108c82ee8c6e", url="https://pypi.org/packages/8f/39/f8c4b2f3a4d78164e9850bb0924e1fd490e0bf8a8366b9b42cd295d7bbee/netCDF4-1.6.4.tar.gz")
     version("1.6.3", sha256="8c98a3a8cda06920ee8bd24a71226ddf0328c22bd838b0afca9cb45fb4580d99", url="https://pypi.org/packages/8b/92/ff3b18a2f5fe03ffc2807c2ac8b55bee2c8ee730d1100b79bc8a7ab96134/netCDF4-1.6.3.tar.gz")
@@ -19,8 +19,15 @@ class PyNetcdf4(PythonPackage):
     version("1.5.5.1", sha256="d957e55a667d1fc651ddef22fea10ded0f142b7d9dbbf4d08c0012d32f445abd", url="https://pypi.org/packages/9f/e2/686d0d937f979e7ee0eb6bb4821448da6d2910789f4928c12b070f424b6a/netCDF4-1.5.5.1.tar.gz")
     version("1.5.3", sha256="2a3ca855848f4bbf07fac366da77a681fcead18c0a8813d91d46302f562dc3be", url="https://pypi.org/packages/cd/ee/b7734f8fb94c9671b6966f158903cd3b67cb60d245c6f2196bcf1f8b13b5/netCDF4-1.5.3.tar.gz")
     version("1.4.2", sha256="b934af350459cf9041bcdf5472e2aa56ed7321c018d918e9f325ec9a1f9d1a30", url="https://pypi.org/packages/eb/aa/b067f3b1a2561f29f5c282d8a0f0f4bba5b13e9bdaa5fcd29005d226c448/netCDF4-1.4.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("mpi", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cftime", when="@1.4:1.5.3")
         depends_on("py-numpy@1.7:", when="@1.3:1.5.3")
+    # END DEPENDENCIES
 

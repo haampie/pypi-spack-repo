@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyConfigparser(PythonPackage):
+    # BEGIN VERSIONS
     version("6.0.1", sha256="5a0da275bea56f871abaa9e0806331791e9d8ae2938e8b8797b99ab3e8e192c4", url="https://pypi.org/packages/bf/c1/c9d33f208bf25164ec315a571a9c0a6b71a5d38f364426db987cec12a152/configparser-6.0.1-py3-none-any.whl")
     version("6.0.0", sha256="900ea2bb01b2540b1a644ad3d5351e9b961a4a012d4732f619375fb8f641ee19", url="https://pypi.org/packages/81/a3/0e5ed11da4b7770c15f6f319abf053f46b5a06c7d4273c48469b7899bd89/configparser-6.0.0-py3-none-any.whl")
     version("5.3.0", sha256="b065779fd93c6bf4cee42202fa4351b4bb842e96a3fb469440e484517a49b9fa", url="https://pypi.org/packages/e0/7a/9d0f52bf4923b2e410c7d6fda472c32d9b728284e89ec99074820226102f/configparser-5.3.0-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyConfigparser(PythonPackage):
     version("5.0.0", sha256="cffc044844040c7ce04e9acd1838b5f2e5fa3170182f6fda4d2ea8b0099dbadd", url="https://pypi.org/packages/4b/6b/01baa293090240cf0562cc5eccb69c6f5006282127f2b846fad011305c79/configparser-5.0.0-py3-none-any.whl")
     version("4.0.2", sha256="254c1d9c79f60c45dfde850850883d5aaa7f19a23f13561243a050d5a7c3fe4c", url="https://pypi.org/packages/7a/2a/95ed0501cf5d8709490b1d3a3f9b5cf340da6c433f896bbe9ce08dbe6785/configparser-4.0.2-py2.py3-none-any.whl")
     version("3.8.1", sha256="45d1272aad6cfd7a8a06cf5c73f2ceb6a190f6acc1fa707e7f82a4c053b28b18", url="https://pypi.org/packages/ab/1a/ec151e5e703ac80041eaccef923611bbcec2b667c20383655a06962732e9/configparser-3.8.1-py2.py3-none-any.whl")
-    version("3.5.1", sha256="f41e19cb29bebfccb1a78627b3f328ec198cc8f39510c7c55e7dfc0ab58c8c62", url="https://pypi.org/packages/20/59/fc5d08966bbd13c5f5d647c8fdc9af5c62b998420652c3349584c0f80676/configparser-3.5.1.tar.gz")
+    version("3.5.1", sha256="3663a8704c16460715b52b69caeb206bcb396c309973fc0689dc40b55a4a7256", url="https://pypi.org/packages/e8/b7/f8e30014591098fe748ef4a9cfba4b835ab61dc35c8136d23f91d147cf0d/configparser-3.5.1-py3-none-any.whl")
     version("3.5.0", sha256="5308b47021bc2340965c371f0f058cc6971a04502638d4244225c49d80db273a", url="https://pypi.org/packages/7c/69/c2ce7e91c89dc073eb1aa74c0621c3eefbffe8216b3f9af9d3885265c01c/configparser-3.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

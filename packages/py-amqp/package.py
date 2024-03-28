@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAmqp(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.2.0", sha256="827cb12fb0baa892aad844fd95258143bce4027fdac4fccddbc43330fd281637", url="https://pypi.org/packages/b3/f0/8e5be5d5e0653d9e1d02b1144efa33ff7d2963dfad07049e02c0fa9b2e8d/amqp-5.2.0-py3-none-any.whl")
     version("5.1.1", sha256="6f0956d2c23d8fa6e7691934d8c3930eadb44972cbbd1a7ae3a520f735d43359", url="https://pypi.org/packages/de/a3/e7b3b9d34239bae066df135060e225929d639731050c920fdc740d6b7897/amqp-5.1.1-py3-none-any.whl")
     version("5.1.0", sha256="a575f4fa659a2290dc369b000cff5fea5c6be05fe3f2d5e511bcf56c7881c3ef", url="https://pypi.org/packages/bd/66/1b1031d30607fdd2a24a7b6106676ecc4e3ea8cbfeaf63a9d111b475459c/amqp-5.1.0-py3-none-any.whl")
@@ -26,10 +26,15 @@ class PyAmqp(PythonPackage):
     version("2.4.2", sha256="35a3b5006ca00b21aaeec8ceea07130f07b902dd61bfe42815039835f962f5f1", url="https://pypi.org/packages/42/ec/cbbaa8f75be8cbd019afb9d63258e2bdc95242f8c46a54bb90db5fef03bd/amqp-2.4.2-py2.py3-none-any.whl")
     version("2.4.1", sha256="16056c952e8029ce8db097edf0d7c2fe2ba9de15d30ba08aee2c5221273d8e23", url="https://pypi.org/packages/27/32/5c8a0d355b247446eb73f89c0fa4a22c1832764c0cc9d2bc43b9256d9366/amqp-2.4.1-py2.py3-none-any.whl")
     version("2.4.0", sha256="c3d7126bfbc640d076a01f1f4f6e609c0e4348508150c1f61336b0d83c738d2b", url="https://pypi.org/packages/e3/c3/a3b303cab73a9c3ee699f7229b33e262536204cfa9fe5df5274b1cf3dd4e/amqp-2.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-vine@5.0.0:", when="@5.1:")
         depends_on("py-vine@5.0.0:5.0", when="@5.0.1:5.0")
         depends_on("py-vine@1.1.3:1", when="@2.5:2")
         depends_on("py-vine@1.1.3:", when="@2.2:2.4")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTrio(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.25.0", sha256="e6458efe29cc543e557a91e614e2b51710eba2961669329ce9c862d50c6e8e81", url="https://pypi.org/packages/17/c9/f86f89f14d52f9f2f652ce24cb2f60141a51d087db1563f3fba94ba07346/trio-0.25.0-py3-none-any.whl")
     version("0.24.0", sha256="c3bd3a4e3e3025cd9a2241eae75637c43fe0b9e88b4c97b9161a55b9e54cd72c", url="https://pypi.org/packages/14/fb/9299cf74953f473a15accfdbe2c15218e766bae8c796f2567c83bae03e98/trio-0.24.0-py3-none-any.whl")
     version("0.23.2", sha256="5a0b566fa5d50cf231cfd6b08f3b03aa4179ff004b8f3144059587039e2b26d3", url="https://pypi.org/packages/3e/14/746bb2b403af4be680ca0ae240d62473c4ec3b836024c2e85f27856d7991/trio-0.23.2-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyTrio(PythonPackage):
     version("0.22.0", sha256="f1dd0780a89bfc880c7c7994519cb53f62aacb2c25ff487001c0052bd721cdf0", url="https://pypi.org/packages/f1/ed/3623a910f9bb7a31b067d6baef476ed6e294e92a245f94ab992988e4a666/trio-0.22.0-py3-none-any.whl")
     version("0.21.0", sha256="4dc0bf9d5cc78767fc4516325b6d80cc0968705a31d0eec2ecd7cdda466265b0", url="https://pypi.org/packages/a9/bc/aef5a15725e95df49d41838dd816b95aad7df07de9f87e4ff453a3326615/trio-0.21.0-py3-none-any.whl")
     version("0.20.0", sha256="fb2d48e4eab0dfb786a472cd514aaadc71e3445b203bc300bad93daa75d77c1a", url="https://pypi.org/packages/39/b3/c6fc163c9343e95432d60a2b681bc14d78fda70dff50210687314d94143d/trio-0.20.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-async-generator@1.9:", when="@0.11:0.22.0")
         depends_on("py-attrs@23.2:", when="@0.25:")
@@ -36,4 +40,5 @@ class PyTrio(PythonPackage):
 
         # marker: os_name == "nt" and implementation_name != "pypy"
         # depends_on("py-cffi@1.14:", when="@0.15:")
+    # END DEPENDENCIES
 

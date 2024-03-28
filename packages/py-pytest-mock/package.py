@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytestMock(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.12.0", sha256="0972719a7263072da3a21c7f4773069bcc7486027d7e8e1f81d98a47e701bc4f", url="https://pypi.org/packages/b9/25/b29fd10dd062cf41e66787a7951b3842881a2a2d7e3a41fcbb58a8466046/pytest_mock-3.12.0-py3-none-any.whl")
     version("3.11.1", sha256="21c279fff83d70763b05f8874cc9cfb3fcacd6d354247a976f9529d19f9acf39", url="https://pypi.org/packages/da/85/80ae98e019a429445bfb74e153d4cb47c3695e3e908515e95e95c18237e5/pytest_mock-3.11.1-py3-none-any.whl")
     version("3.11.0", sha256="9f732204aff799161cea6f818366bd254b41dbdfb6fd8fee4e04d332aba011d4", url="https://pypi.org/packages/a6/cf/9e166752dc2ed70ee865eb6f6eeb1cbe02d4ff3d9aafc2ce9c328d994fbb/pytest_mock-3.11.0-py3-none-any.whl")
@@ -18,9 +18,14 @@ class PyPytestMock(PythonPackage):
     version("3.7.0", sha256="6cff27cec936bf81dc5ee87f07132b807bcda51106b5ec4b90a04331cba76231", url="https://pypi.org/packages/11/40/8fcb3c0f72e11dc44e1102b2adf5f160b8a00e84d915798c60aabcd9257a/pytest_mock-3.7.0-py3-none-any.whl")
     version("3.6.1", sha256="30c2f2cc9759e76eee674b81ea28c9f0b94f8f0445a1b87762cadf774f0df7e3", url="https://pypi.org/packages/fd/be/ce7e79a7bf68ff6630f662f58a8dc68e2a602d8649a1c0e05c8e6b9a2177/pytest_mock-3.6.1-py3-none-any.whl")
     version("1.11.1", sha256="34520283d459cdf1d0dbb58a132df804697f1b966ecedf808bbf3d255af8f659", url="https://pypi.org/packages/ca/04/c530b2e4d61f99c524dcac0a9002563955370622f70fe4771cd4e56e217b/pytest_mock-1.11.1-py2.py3-none-any.whl")
-    version("1.2", sha256="f78971ed376fcb265255d1e4bb313731b3a1be92d7f3ecb19ea7fedc4a56fd0f", url="https://pypi.org/packages/30/11/a5a8009eff04bc15c37e2f8e33d8ed99adf828ec8f551fb31d99f6c73b5b/pytest-mock-1.2.zip")
+    version("1.2", sha256="2911668c5ea518a07e2da53a170e2f86eaccf1245ec9605c37eadf6578dec468", url="https://pypi.org/packages/6a/40/d5f2fbef42f85b8c53ddb2bb1db847ef46c86e6204abfeaa605b3ed07307/pytest_mock-1.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pytest@5:", when="@3.3:")
         depends_on("py-pytest@2.7:", when="@1.6.1,1.6.3:3.2")
+    # END DEPENDENCIES
 

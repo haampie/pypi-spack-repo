@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGreenlet(PythonPackage):
+    # BEGIN VERSIONS
     version("3.0.3", sha256="43374442353259554ce33599da8b692d5aa96f8976d567d4badf263371fbe491", url="https://pypi.org/packages/17/14/3bddb1298b9a6786539ac609ba4b7c9c0842e12aa73aaa4d8d73ec8f8185/greenlet-3.0.3.tar.gz")
     version("3.0.2", sha256="1c1129bc47266d83444c85a8e990ae22688cf05fb20d7951fd2866007c2ba9bc", url="https://pypi.org/packages/d2/62/c657462190d198a45f37e613f910d27cfe8fed6faaeddec004d75dba6811/greenlet-3.0.2.tar.gz")
     version("3.0.1", sha256="816bd9488a94cba78d93e1abb58000e8266fa9cc2aa9ccdd6eb0696acb24005b", url="https://pypi.org/packages/54/df/718c9b3e90edba70fa919bb3aaa5c3c8dabf3a8252ad1e93d33c348e5ca4/greenlet-3.0.1.tar.gz")
@@ -24,5 +24,10 @@ class PyGreenlet(PythonPackage):
     version("1.1.0", sha256="c87df8ae3f01ffb4483c796fe1b15232ce2b219f0b18126948616224d3f658ee", url="https://pypi.org/packages/47/6d/be10df2b141fcb1020c9605f7758881b5af706fb09a05b737e8eb7540387/greenlet-1.1.0.tar.gz")
     version("0.4.17", sha256="41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b", url="https://pypi.org/packages/72/0c/fd07c7674ad6eded937194b84d8453425c36c6ef118536907b0185624d82/greenlet-0.4.17.tar.gz")
     version("0.4.13", sha256="0fef83d43bf87a5196c91e73cb9772f945a4caaff91242766c5916d1dd1381e4", url="https://pypi.org/packages/13/de/ba92335e9e76040ca7274224942282a80d54f85e342a5e33c5277c7f87eb/greenlet-0.4.13.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

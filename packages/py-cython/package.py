@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCython(PythonPackage):
+    # BEGIN VERSIONS
     version("3.0.9", sha256="a2d354f059d1f055d34cfaa62c5b68bc78ac2ceab6407148d47fb508cf3ba4f3", url="https://pypi.org/packages/0e/17/c5b026cea7a634ee3b8950a7be16aaa49deeb3b9824ba5e81c13ac26f3c4/Cython-3.0.9.tar.gz")
     version("3.0.8", sha256="8333423d8fd5765e7cceea3a9985dd1e0a5dfeb2734629e1a2ed2d6233d39de6", url="https://pypi.org/packages/68/09/ffb61f29b8e3d207c444032b21328327d753e274ea081bc74e009827cc81/Cython-3.0.8.tar.gz")
     version("3.0.7", sha256="fb299acf3a578573c190c858d49e0cf9d75f4bc49c3f24c5a63804997ef09213", url="https://pypi.org/packages/23/e9/ef8607abfbbbaeb93cb1381c8538a22d38d64524df39759dc2787d4909b0/Cython-3.0.7.tar.gz")
@@ -42,5 +42,10 @@ class PyCython(PythonPackage):
     version("0.25.2", sha256="f141d1f9c27a07b5a93f7dc5339472067e2d7140d1c5a9e20112a5665ca60306", url="https://pypi.org/packages/b7/67/7e2a817f9e9c773ee3995c1e15204f5d01c8da71882016cac10342ef031b/Cython-0.25.2.tar.gz")
     version("0.23.5", sha256="1f08f307508c6c128f183d45c562dc11b8b984a00d253989b5644cc623299569", url="https://pypi.org/packages/05/4f/045e2a3ba0c6509378b4390961b6a72b0ebcd5fc812fe25ec3c71a82217a/Cython-0.23.5.zip")
     version("0.23.4", sha256="44444591133c92a30d78a6ec52ea4afd902ee4548ca5e83d94388f6a99f6c9ae", url="https://pypi.org/packages/0a/b6/fd142319fd0fe83dc266cfe83bfd095bc200fae5190fce0a2482560acb55/Cython-0.23.4.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGoogleapisCommonProtos(PythonPackage):
+    # BEGIN VERSIONS
     version("1.63.0", sha256="ae45f75702f7c08b541f750854a678bd8f534a1a6bace6afe975f1d0a82d6632", url="https://pypi.org/packages/dc/a6/12a0c976140511d8bc8a16ad15793b2aef29ac927baa0786ccb7ddbb6e1c/googleapis_common_protos-1.63.0-py2.py3-none-any.whl")
     version("1.62.0", sha256="4750113612205514f9f6aa4cb00d523a94f3e8c06c5ad2fee466387dc4875f07", url="https://pypi.org/packages/f0/43/c9d8f75ddf08e2a0a27db243c13a700c3cc7ec615b545b697cf6f715ad92/googleapis_common_protos-1.62.0-py2.py3-none-any.whl")
     version("1.61.0", sha256="22f1915393bb3245343f6efe87f6fe868532efc12aa26b391b15132e1279f1c0", url="https://pypi.org/packages/21/49/12996dc0238e017504dceea1d121a48bd49fb3f4416f40d59fc3e924b4f3/googleapis_common_protos-1.61.0-py2.py3-none-any.whl")
@@ -19,13 +19,18 @@ class PyGoogleapisCommonProtos(PythonPackage):
     version("1.56.4", sha256="8eb2cbc91b69feaf23e32452a7ae60e791e09967d81d4fcc7fc388182d1bd394", url="https://pypi.org/packages/e2/fd/d9efa2085bd762fba3a637eb3e36d76d72eb6e083d170aeaca65a75f1f9c/googleapis_common_protos-1.56.4-py2.py3-none-any.whl")
     version("1.55.0", sha256="183bb0356bd614c4330ad5158bc1c1bcf9bcf7f5e7f911317559fe209496eeee", url="https://pypi.org/packages/50/a9/6c76954ad5ee88c749407b282e5dfa724e3bd3065a069bcbe6a3da08a3e3/googleapis_common_protos-1.55.0-py2.py3-none-any.whl")
     version("1.6.0", sha256="e61b8ed5e36b976b487c6e7b15f31bb10c7a0ca7bd5c0e837f4afab64b53a0c6", url="https://pypi.org/packages/eb/ee/e59e74ecac678a14d6abefb9054f0bbcb318a6452a30df3776f133886d7d/googleapis-common-protos-1.6.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("grpc", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-grpcio@1.44.0:", when="@1.57:1.61,1.62.0-rc2:+grpc")
         depends_on("py-grpcio@1.0.0:", when="@1.52:1.56+grpc")
         depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0,4.21.6:4", when="@1.57:")
         depends_on("py-protobuf@3.15.0:4", when="@1.56.2-beta1,1.56.3-beta1:1.56")
         depends_on("py-protobuf@3.12.0:", when="@1.53:1.56.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySqlalchemy(PythonPackage):
+    # BEGIN VERSIONS
     version("2.0.29", sha256="bd9566b8e58cabd700bc367b60e90d9349cd16f0984973f98a9a09f9c64e86f0", url="https://pypi.org/packages/99/04/59971bfc2f192e3b52376ca8d1e134c78d04bc044ef7e04cf10c42d2ce17/SQLAlchemy-2.0.29.tar.gz")
     version("2.0.28", sha256="dd53b6c4e6d960600fd6532b79ee28e2da489322fcf6648738134587faf767b6", url="https://pypi.org/packages/3a/23/cc8844d4873ec0485f961c047ca831040c3ba7ecf9d88ec6f9249e1d1cbe/SQLAlchemy-2.0.28.tar.gz")
     version("2.0.27", sha256="86a6ed69a71fe6b88bf9331594fa390a2adda4a49b5c06f98e47bf0d392534f8", url="https://pypi.org/packages/b9/fc/327f0072d1f5231d61c715ad52cb7819ec60f0ac80dc1e507bc338919caa/SQLAlchemy-2.0.27.tar.gz")
@@ -55,7 +55,13 @@ class PySqlalchemy(PythonPackage):
     version("1.2.10", sha256="72325e67fb85f6e9ad304c603d83626d1df684fdf0c7ab1f0352e71feeab69d8", url="https://pypi.org/packages/8a/c2/29491103fd971f3988e90ee3a77bb58bad2ae2acd6e8ea30a6d1432c33a3/SQLAlchemy-1.2.10.tar.gz")
     version("1.1.18", sha256="8b0ec71af9291191ba83a91c03d157b19ab3e7119e27da97932a4773a3f664a9", url="https://pypi.org/packages/cc/4d/96d93ff77cd67aca7618e402191eee3490d8f5f245d6ab7622d35fe504f4/SQLAlchemy-1.1.18.tar.gz")
     version("1.0.12", sha256="6679e20eae780b67ba136a4a76f83bb264debaac2542beefe02069d0206518d1", url="https://pypi.org/packages/5c/52/9b48cd58eac58cae2a27923ff34c783f390b95413ff65669a86e98f80829/SQLAlchemy-1.0.12.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("backend", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-typing-extensions@4.6:", when="@2.0.25:")
         depends_on("py-typing-extensions@4.2:", when="@2.0.5:2.0.5.0,2.0.24")
@@ -65,4 +71,5 @@ class PySqlalchemy(PythonPackage):
 
         # marker: python_version >= "3" and (platform_machine == "aarch64" or (platform_machine == "ppc64le" or (platform_machine == "x86_64" or (platform_machine == "amd64" or (platform_machine == "AMD64" or (platform_machine == "win32" or platform_machine == "WIN32"))))))
         # depends_on("py-greenlet@:0.4.16,1:", when="@1.4.51:1")
+    # END DEPENDENCIES
 

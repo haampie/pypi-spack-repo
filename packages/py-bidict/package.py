@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBidict(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.23.1", sha256="5dae8d4d79b552a71cbabc7deb25dfe8ce710b17ff41711e13010ead2abfc3e5", url="https://pypi.org/packages/99/37/e8730c3587a65eb5645d4aba2d27aae48e8003614d6aaf15dda67f702f1f/bidict-0.23.1-py3-none-any.whl")
     version("0.23.0", sha256="f5154a0e42926b122f9b2cb06aeeb9af317f626eb864bd34c1b9cdc5eca8b040", url="https://pypi.org/packages/53/34/4ef69a52e91b204efd6d1dd6e4b11504a309f7b83bcc5c39b55d8cb4b577/bidict-0.23.0-py3-none-any.whl")
     version("0.22.1", sha256="6ef212238eb884b664f28da76f33f1d28b260f665fc737b413b287d5487d1e7b", url="https://pypi.org/packages/b5/82/ce0b6380f35f49d3fe687979a324c342cfa3588380232f3801db9dd62f9e/bidict-0.22.1-py3-none-any.whl")
@@ -16,5 +16,10 @@ class PyBidict(PythonPackage):
     version("0.21.2", sha256="929d056e8d0d9b17ceda20ba5b24ac388e2a4d39802b87f9f4d3f45ecba070bf", url="https://pypi.org/packages/67/d4/eaf9242722bf991e0955380dd6168020cb15a71cc0d3cc2373f4911b1f1d/bidict-0.21.2-py2.py3-none-any.whl")
     version("0.21.1", sha256="b03164ff3ef830ac405811de38557cb769f44b81d00332b7603e8407085463f5", url="https://pypi.org/packages/44/a9/e8c2d75091dcbb8555c912af50b3f565566cc99694a91e1e727ced2f2309/bidict-0.21.1-py2.py3-none-any.whl")
     version("0.21.0", sha256="2ad89fc808433eee99039c15ec426651bef6fcf06cbf6f1ef1f38bc6eb13e6da", url="https://pypi.org/packages/7a/7a/1fcfc397e61b22091267aa767266d8ab200a00b7dbf3aadead7fd41a74b9/bidict-0.21.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

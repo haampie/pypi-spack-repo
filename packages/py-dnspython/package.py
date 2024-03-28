@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDnspython(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.6.1", sha256="5ef3b9680161f6fa89daf8ad451b5f1a33b18ae8a1c6778cdf4b43f08c0a6e50", url="https://pypi.org/packages/87/a1/8c5287991ddb8d3e4662f71356d9656d91ab3a36618c3dd11b280df0d255/dnspython-2.6.1-py3-none-any.whl")
     version("2.6.0", sha256="44c40af3bffed66e3307cea9ab667fd583e138ecc0777b18f262a9dae034e5fa", url="https://pypi.org/packages/d2/e6/d44f13fcd60ea2533bd391a262cb79743ab4c1e11d9c6100067782e4f4ff/dnspython-2.6.0-py3-none-any.whl")
     version("2.5.0", sha256="6facdf76b73c742ccf2d07add296f178e629da60be23ce4b0a9c927b1e02c3a6", url="https://pypi.org/packages/b6/83/4a684a63d395007670bc95c1947c07045fe66141574e2f7e9e347df8499a/dnspython-2.5.0-py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyDnspython(PythonPackage):
     version("2.2.1", sha256="a851e51367fb93e9e1361732c1d60dab63eff98712e503ea7d92e6eccb109b4f", url="https://pypi.org/packages/9b/ed/28fb14146c7033ba0e89decd92a4fa16b0b69b84471e2deab3cc4337cc35/dnspython-2.2.1-py3-none-any.whl")
     version("2.2.0", sha256="081649da27ced5e75709a1ee542136eaba9842a0fe4c03da4fb0a3d3ed1f3c44", url="https://pypi.org/packages/90/ad/013786c1a6ffa9de70bcd852c8a40e8798e25d823ce8497d907e6cd450da/dnspython-2.2.0-py3-none-any.whl")
     version("2.1.0", sha256="95d12f6ef0317118d2a1a6fc49aac65ffec7eb8087474158f42f26a639135216", url="https://pypi.org/packages/f5/2d/ae9e172b4e5e72fa4b3cfc2517f38b602cc9ba31355f9669c502b4e9c458/dnspython-2.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-httpcore@0.17.3:", when="@2.4.0")
         depends_on("py-sniffio@1.1:", when="@2.4:2.4.0")
+    # END DEPENDENCIES
 

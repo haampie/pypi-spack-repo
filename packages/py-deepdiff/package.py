@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyDeepdiff(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.7.1", sha256="58396bb7a863cbb4ed5193f548c56f18218060362311aa1dc36397b2f25108bd", url="https://pypi.org/packages/5a/8f/a9d39ec15f40e8169cb134317824ee4618b864b2e4b91a9b310d3ef94729/deepdiff-6.7.1-py3-none-any.whl")
     version("6.7.0", sha256="d64dd64be5b2e3917c7cc557d69e68d008d798a5cd4981d1508707037504d50a", url="https://pypi.org/packages/11/a5/fb28e5b442af0db9e293932ce35f20805493116bec2eee38acfea9c48716/deepdiff-6.7.0-py3-none-any.whl")
     version("6.6.1", sha256="891b3cb12837e5d376ac0b58f4c8a2764e3a8bbceabb7108ff82235f1f2c4460", url="https://pypi.org/packages/d7/4f/e39f73757101ae9c191dbc911ffb2e97e4898e4feda6f78546238d44a59d/deepdiff-6.6.1-py3-none-any.whl")
@@ -18,9 +18,14 @@ class PyDeepdiff(PythonPackage):
     version("6.3.0", sha256="15838bd1cbd046ce15ed0c41e837cd04aff6b3e169c5e06fca69d7aa11615ceb", url="https://pypi.org/packages/33/4f/8feec2f9ef4515fc63566ec95a4775afd3ab1f08b563240469aa6afabd41/deepdiff-6.3.0-py3-none-any.whl")
     version("6.2.3", sha256="d83b06e043447d6770860a635abecb46e849b0494c43ced2ecafda7628c7ce72", url="https://pypi.org/packages/a7/dd/85c0fa878b5cd8e5c128500729874c8622337490130d86e1d40e0ad04187/deepdiff-6.2.3-py3-none-any.whl")
     version("5.6.0", sha256="ef3410ca31e059a9d10edfdff552245829835b3ecd03212dc5b533d45a6c3f57", url="https://pypi.org/packages/18/d1/25134e24783076814071e51b5417407947398dd4c99e607ec3c9feca5c90/deepdiff-5.6.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ordered-set@4.0.2:", when="@6:")
         depends_on("py-ordered-set@4.0.2:4.0", when="@5.2:5.7")
         depends_on("py-orjson", when="@6.2.3:6.2")
+    # END DEPENDENCIES
 

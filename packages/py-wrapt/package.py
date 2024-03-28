@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWrapt(PythonPackage):
+    # BEGIN VERSIONS
     version("1.16.0", sha256="5f370f952971e7d17c7d1ead40e49f32345a7f7a5373571ef44d800d06b1899d", url="https://pypi.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff3e4b603ce84c481d6d7346be0a/wrapt-1.16.0.tar.gz")
     version("1.16.0-rc2", sha256="fbf2264e29f4834eda24438377ba42d7e9571c81e9ff4dd54976a14e3c05dc8e", url="https://pypi.org/packages/cb/97/40c7e8bea26f5a65bc3fef52b304ba62ba1e8260b22832caca03a9dd88c9/wrapt-1.16.0rc2.tar.gz")
     version("1.16.0-rc1", sha256="228533d82158a4d25de8b3703195d5c69bae5860010c75bd01f6ab393561ea22", url="https://pypi.org/packages/40/f8/837a2e44e40b27219eb42245a5c705195393cbb167073d4f8fe0a105f297/wrapt-1.16.0rc1.tar.gz")
@@ -25,5 +25,10 @@ class PyWrapt(PythonPackage):
     version("1.11.1", sha256="4aea003270831cceb8a90ff27c4031da6ead7ec1886023b80ce0dfe0adf61533", url="https://pypi.org/packages/67/b2/0f71ca90b0ade7fad27e3d20327c996c6252a2ffe88f50a95bba7434eda9/wrapt-1.11.1.tar.gz")
     version("1.11.0", sha256="e03f19f64d81d0a3099518ca26b04550026f131eced2e76ced7b85c6b8d32128", url="https://pypi.org/packages/78/4d/c3f9bd791683bd61b7799e465872bf5f4495fe3abb6c4f119419b9f606eb/wrapt-1.11.0.tar.gz")
     version("1.10.10", sha256="42160c91b77f1bc64a955890038e02f2f72986c01d462d53cb6cb039b995cdd9", url="https://pypi.org/packages/a3/bb/525e9de0a220060394f4aa34fdf6200853581803d92714ae41fc3556e7d7/wrapt-1.10.10.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySeaborn(PythonPackage):
+    # BEGIN VERSIONS
     version("0.13.2", sha256="636f8336facf092165e27924f223d3c62ca560b1f2bb5dff7ab7fad265361987", url="https://pypi.org/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl")
     version("0.13.1", sha256="6baa69b6d1169ae59037971491c450c0b73332b42bd4b23570b62a546bc61cb8", url="https://pypi.org/packages/2d/46/cf3fce41ffc543b6e94dadbe6b647559d591df446ec716e72c3b4ce71b34/seaborn-0.13.1-py3-none-any.whl")
     version("0.13.0", sha256="70d740828c48de0f402bb17234e475eda687e3c65f4383ea25d0cc4728f7772e", url="https://pypi.org/packages/7b/e5/83fcd7e9db036c179e0352bfcd20f81d728197a16f883e7b90307a88e65e/seaborn-0.13.0-py3-none-any.whl")
@@ -24,7 +24,13 @@ class PySeaborn(PythonPackage):
     version("0.8.1", sha256="6702978b903d0284446e935916b980dfebae4063c18ad8eb6e8f9e76d0257eae", url="https://pypi.org/packages/10/01/dd1c7838cde3b69b247aaeb61016e238cafd8188a276e366d36aa6bcdab4/seaborn-0.8.1.tar.gz")
     version("0.8", sha256="732d08306449e3f041ed9f0c3cfadaf5480c8d352c2321b58f71e26607e34dfc", url="https://pypi.org/packages/d6/13/dd3da2cd6e03e522bbd389735d3adcb47d7a4470a968ebc3348fbac8eddd/seaborn-0.8.tar.gz")
     version("0.7.1", sha256="fa274344b1ee72f723bab751c40a5c671801d47a29ee9b5e69fcf63a18ce5c5d", url="https://pypi.org/packages/ed/dc/f168ff9db34f8c03c568987b4f81603cd3df40dd8043722d526026381a91/seaborn-0.7.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("stats", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-matplotlib@3.4.0:3.6.0,3.6.2:", when="@0.13.1:")
         depends_on("py-matplotlib@3.3.0:3.6.0,3.6.2:", when="@0.13:0.13.0")
@@ -47,8 +53,13 @@ class PySeaborn(PythonPackage):
         depends_on("py-pandas@0.22:", when="@0.10")
         depends_on("py-pandas@0.17.1:", when="@0.9.1-rc0:0.9")
         depends_on("py-pandas@0.15.2:", when="@0.9:0.9.0")
+        depends_on("py-scipy@1.7.0:", when="@0.13:+stats")
+        depends_on("py-scipy@1.3.0:", when="@0.12.0-rc0:0.12+stats")
         depends_on("py-scipy@1.0.0:", when="@0.11")
         depends_on("py-scipy@1.0.1:", when="@0.10")
         depends_on("py-scipy@0.17.1:", when="@0.9.1-rc0:0.9")
         depends_on("py-scipy@0.14:", when="@0.9:0.9.0")
+        depends_on("py-statsmodels@0.12.0:", when="@0.13:+stats")
+        depends_on("py-statsmodels@0.10.0:", when="@0.12.0-rc0:0.12+stats")
+    # END DEPENDENCIES
 

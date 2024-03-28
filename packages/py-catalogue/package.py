@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCatalogue(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.10", sha256="58c2de0020aa90f4a2da7dfad161bf7b3b054c86a5f09fcedc0b2b740c109a9f", url="https://pypi.org/packages/9e/96/d32b941a501ab566a16358d68b6eb4e4acc373fab3c3c4d7d9e649f7b4bb/catalogue-2.0.10-py3-none-any.whl")
     version("2.0.9", sha256="5817ce97de17ace366a15eadd4987ac022b28f262006147549cdb3467265dc4d", url="https://pypi.org/packages/45/8f/5b73efc14e0373d9bb0de6ce1ab04a8f77420dc473f1f3ef270caf085cff/catalogue-2.0.9-py3-none-any.whl")
     version("2.0.8", sha256="2d786e229d8d202b4f8a2a059858e45a2331201d831e39746732daa704b99f69", url="https://pypi.org/packages/dc/28/a2b0cc4bfa7916ef9caf08475be5810fc564411c5a801f225a1f40a458c5/catalogue-2.0.8-py3-none-any.whl")
@@ -23,5 +23,10 @@ class PyCatalogue(PythonPackage):
     version("0.2.0", sha256="998329046e952f2e07d606b96e7b2505b40aca1962345398385863781449a69d", url="https://pypi.org/packages/4b/4c/0e0fa8b1e193c1e09a6b72807ff4ca17c78f68f0c0f4459bc8043c66d649/catalogue-0.2.0-py2.py3-none-any.whl")
     version("0.0.8", sha256="98a71a99cc65eb26914fd8a3cc3027354337b870c80e9d3dc32e2c95a34e7df0", url="https://pypi.org/packages/4f/d5/46ff975f0d7d055cf95557b944fd5d29d9dfb37a4341038e070f212b24fe/catalogue-0.0.8-py2.py3-none-any.whl")
     version("0.0.7", sha256="a84b6f86ede2a427561f58f6a26d509149a8ac9763cf5d1703e99c776e7ed72d", url="https://pypi.org/packages/b5/89/69a392cf6901e41319a13293cb21a7020225cb29bb04c55366817fe000ac/catalogue-0.0.7-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

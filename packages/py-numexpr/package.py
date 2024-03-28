@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNumexpr(PythonPackage):
+    # BEGIN VERSIONS
     version("2.9.0", sha256="f21d12f6c432ce349089eb95342babf6629aebb3fddf187a4492d3aadaadaaf0", url="https://pypi.org/packages/fe/d0/b8e7a2865109630775db4ce981f635bface8909eec4ecd8a2b8b16af1b4d/numexpr-2.9.0.tar.gz")
     version("2.8.8", sha256="e76ce4d25372f46170cf7eb1ff14ed5d9c69a0b162a405063cbe481bafe3af34", url="https://pypi.org/packages/f3/b4/367399eeda5a889e0225c175d4ac560167be90653cfb46a448854f09d31a/numexpr-2.8.8.tar.gz")
     version("2.8.7", sha256="596eeb3bbfebc912f4b6eaaf842b61ba722cebdb8bc42dfefa657d3a74953849", url="https://pypi.org/packages/93/1d/b9e273d1509790e2add861895c872e797058fa408860f81716b11a09287f/numexpr-2.8.7.tar.gz")
@@ -25,9 +25,14 @@ class PyNumexpr(PythonPackage):
     version("2.6.1", sha256="db2ee72f277b23c82d204189290ea4b792f9bd5b9d67744b045f8c2a8e929a06", url="https://pypi.org/packages/c6/f0/11628fa4d332d8fe9ab0ba8e9bfe0e065fb6b5324859171ee72d84e079c0/numexpr-2.6.1.tar.gz")
     version("2.5", sha256="319cdf4e402177a1c8ed4972cffd09f523446f186d347b7c1974787cdabf0294", url="https://pypi.org/packages/7b/a4/e4fb495692ba8b2a6798b2b93c2ee090c1addaf0f6c16395ef3bad72e0ce/numexpr-2.5.tar.gz")
     version("2.4.6", sha256="052397670dc56d7845ff894cd7d858e4f115491ecd93bcc0eda5cb83990c5da3", url="https://pypi.org/packages/5a/d5/14b87de25ea857a321e0729a2b2ec3a4a98a993801427938209380a3fc82/numexpr-2.4.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.8.7:")
         depends_on("py-numpy@1.13.3:", when="@2.8.6:")
         depends_on("py-numpy@1.7:", when="@2.6.4:2.6.6.0,2.6.7,2.6.9:2.7.1")
+    # END DEPENDENCIES
 

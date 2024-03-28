@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPkginfo(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.10.0", sha256="889a6da2ed7ffc58ab5b900d888ddce90bce912f2d2de1dc1c26f4cb9fe65097", url="https://pypi.org/packages/56/09/054aea9b7534a15ad38a363a2bd974c20646ab1582a387a95b8df1bfea1c/pkginfo-1.10.0-py3-none-any.whl")
     version("1.9.6", sha256="4b7a555a6d5a22169fcc9cf7bfd78d296b0361adad412a346c1226849af5e546", url="https://pypi.org/packages/b3/f2/6e95c86a23a30fa205ea6303a524b20cbae27fbee69216377e3d95266406/pkginfo-1.9.6-py3-none-any.whl")
     version("1.9.5", sha256="911a99a7dbcd52d0726b32e9f0df84d09081f4faf98deff1e3835b7880d14223", url="https://pypi.org/packages/d0/58/12ae74157a52065b8bc13b94541322a87beec9ecc1efc22cb7ce01079011/pkginfo-1.9.5-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyPkginfo(PythonPackage):
     version("1.8.2", sha256="c24c487c6a7f72c66e816ab1796b96ac6c3d14d49338293d2141664330b55ffc", url="https://pypi.org/packages/cd/00/49f59cdd2c6a52e6665fda4de671dac5614366dc827e050c55428241b929/pkginfo-1.8.2-py2.py3-none-any.whl")
     version("1.7.1", sha256="37ecd857b47e5f55949c41ed061eb51a0bee97a87c969219d144c0e023982779", url="https://pypi.org/packages/77/83/1ef010f7c4563e218854809c0dff9548de65ebec930921dedf6ee5981f27/pkginfo-1.7.1-py2.py3-none-any.whl")
     version("1.5.0.1", sha256="a6d9e40ca61ad3ebd0b72fbadd4fba16e4c0e4df0428c041e01e06eb6ee71f32", url="https://pypi.org/packages/e6/d5/451b913307b478c49eb29084916639dc53a88489b993530fed0a66bab8b9/pkginfo-1.5.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

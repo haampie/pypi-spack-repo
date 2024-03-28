@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPydicom(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.4.4", sha256="f9f8e19b78525be57aa6384484298833e4d06ac1d6226c79459131ddb0bd7c42", url="https://pypi.org/packages/35/2a/8c0f6fe243e6b6793868c6834203a44cc8f3f25abad780e1c7b21e15594d/pydicom-2.4.4-py3-none-any.whl")
     version("2.4.3", sha256="797e84f7b22e5f8bce403da505935b0787dca33550891f06495d14b3f6c70504", url="https://pypi.org/packages/24/fe/d74445ca70ca30328a0c07ba50d9558741882a524ae92a7b482cce7ec6bf/pydicom-2.4.3-py3-none-any.whl")
     version("2.4.2", sha256="d2801c234a2f99ac97c6c0b5e50a908ed16d2fef905a2fda49fecd311cd88802", url="https://pypi.org/packages/a7/77/bbe5dc1b3c23854cbab5db1e1106d82896e1315acfc2d1acdca2f881ebef/pydicom-2.4.2-py3-none-any.whl")
@@ -18,5 +18,12 @@ class PyPydicom(PythonPackage):
     version("2.2.1", sha256="444b5b7289135ff5ea76dfc69d3597dcfde1cd050ca387f709d777f35701242d", url="https://pypi.org/packages/f5/05/6228a7ecb8bbd4b6c334dde2cc6e61d21db918ce5288e2d113dca8a46776/pydicom-2.2.1-py3-none-any.whl")
     version("2.2.0", sha256="f55f236069d7f0445b5d0dcca7e8733ef17c39e87d6e06e0fac7b9a91442e8a9", url="https://pypi.org/packages/a3/4f/a96cd1bf529854b67e05f77f41b8600164ad5bc76e47bf7f37e9fd1c0f46/pydicom-2.2.0-py3-none-any.whl")
     version("2.1.2", sha256="d97f53a7b269dbd7414d18342f1b70f80d7d35dc4e479316bab146daac0e0c15", url="https://pypi.org/packages/f4/15/df16546bc59bfca390cf072d473fb2c8acd4231636f64356593a63137e55/pydicom-2.1.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("numpy", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

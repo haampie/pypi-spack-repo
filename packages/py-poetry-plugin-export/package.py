@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPoetryPluginExport(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.7.1", sha256="b2258e53ae0d369a73806f957ed0e726eb95c571a0ce8b1f273da686528cc1da", url="https://pypi.org/packages/a5/1e/106eb732a21b809b17366666d97a2b797d30f125efa4202a142d8485dd59/poetry_plugin_export-1.7.1-py3-none-any.whl")
     version("1.7.0", sha256="2283b28e0209f9f9598c6fe44f30586ec91329ea1558f908708261e0516bf427", url="https://pypi.org/packages/6f/a4/e45a9ee0de134af25b9b5c6958f88f00938a3f77b513f66e940483bdc11b/poetry_plugin_export-1.7.0-py3-none-any.whl")
     version("1.6.0", sha256="2dce6204c9318f1f6509a11a03921fb3f461b201840b59f1c237b6ab454dabcf", url="https://pypi.org/packages/17/bb/78d7d920bb463e4bee64f44d8b0d4a286a80af7e76ff8326e5169103f44b/poetry_plugin_export-1.6.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyPoetryPluginExport(PythonPackage):
     version("1.1.2", sha256="946e3313b3d00c18fb9a50522e9d5e6a7e111beaba8d6ae33297662fc2070ac1", url="https://pypi.org/packages/44/28/0e86f03be17db993dce6b81825687ab7587fc54ff0659d20f7bffc03d72c/poetry_plugin_export-1.1.2-py3-none-any.whl")
     version("1.1.1", sha256="170fa367794d2385975d75298fe5509f772d35216ee36b8fa50c0350a064b761", url="https://pypi.org/packages/32/75/afe03322cff9f4753ad549eab2429109207dc10efd74cbc1de8b6944b9d9/poetry_plugin_export-1.1.1-py3-none-any.whl")
     version("1.0.7", sha256="dd9d4552e7113a86c97908c13b9a439cb46830f247c7e4969e46a0d8d70e4d3f", url="https://pypi.org/packages/07/79/6875ad552af0f2bb98b60fcd281d17620f5ee49f652e34c54969596f780a/poetry_plugin_export-1.0.7-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-poetry@1.8:", when="@1.7:")
         depends_on("py-poetry@1.6:", when="@1.6")
@@ -30,4 +34,5 @@ class PyPoetryPluginExport(PythonPackage):
         depends_on("py-poetry-core@1.6:", when="@1.4:1.5")
         depends_on("py-poetry-core@1.3:", when="@1.2:1.3")
         depends_on("py-poetry-core@1.1.0:", when="@1.0.7:1.1")
+    # END DEPENDENCIES
 

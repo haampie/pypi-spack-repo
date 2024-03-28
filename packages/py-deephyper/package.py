@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyDeephyper(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.4.2", sha256="a677202e0ed32d928541035b1ffce485ad0d701f5ecc9e9a4ae3350f7b8d3d6c", url="https://pypi.org/packages/4d/ce/600ba9d8be4eb6c2896e98b858f12c07d829afb37f192455ac766b8e0a18/deephyper-0.4.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.9", when="@0.3.3:0.4")
         depends_on("python@:3.8", when="@0.2:0.3.2")
@@ -27,4 +31,5 @@ class PyDeephyper(PythonPackage):
         depends_on("py-tinydb", when="@0.4")
         depends_on("py-tqdm@4.64:", when="@0.4:")
         depends_on("py-xgboost", when="@0.1.4:0.3")
+    # END DEPENDENCIES
 

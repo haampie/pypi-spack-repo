@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkExceptionhandling(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="fd7dfc197c29ccf187718dbb0b1dcd966a8c04ee6549ee9472959912e76a0609", url="https://pypi.org/packages/b6/54/56f374b63da234f2ed1985bddcbd81a3a6acf3bc729c46814fe49d56ecba/pyobjc_framework_ExceptionHandling-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="b8eb9142f141361982e498610bfd33803acb4f471f80b5cd9df8d382142449e9", url="https://pypi.org/packages/8b/f8/da96001c29a8fab94d3cacb3ec9a3b29098ec2e6e75ec928514c76589aed/pyobjc_framework_ExceptionHandling-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="3c7669d6e93d4f4d472de8c7b8e3b5ecd42dda16161e24b3bf796713fc20eb1a", url="https://pypi.org/packages/51/f6/823e603746840452794d4edc16d106866d1cd14dff211a68d39831a9c337/pyobjc_framework_ExceptionHandling-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkExceptionhandling(PythonPackage):
     version("9.0", sha256="860981a40642a3cc64c8035c6c9d55e09a3055b0deb1c8ae309f8e7d1c850d5d", url="https://pypi.org/packages/a0/99/f674eae6a5802714f06c31aab7d7a8bc89135061e763ef27e68221932771/pyobjc_framework_ExceptionHandling-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="cf33e421eb789010e88f641cbb0d93b2b6a4b89a024c5941eb71941f401a4f6a", url="https://pypi.org/packages/e5/da/25d5361808395bfc863ec21765d7b7208a5126a2288b4461c847244eaf54/pyobjc_framework_ExceptionHandling-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="c2014ccd1c78c4b4a8aeae7ba62cb86d1c9d46f523b1e8efd1d47bb4da99cc2d", url="https://pypi.org/packages/63/fa/c6c9bae0e68a9543516ce2490659327d4d15176c125110d15c3b74aaca90/pyobjc_framework_ExceptionHandling-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkExceptionhandling(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

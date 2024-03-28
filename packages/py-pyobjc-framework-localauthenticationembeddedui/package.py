@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkLocalauthenticationembeddedui(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="eafbbc321082ff012cdb14e38abae7ced94c6d962cb64af43d6d515da976e175", url="https://pypi.org/packages/19/16/b0f47c5ee7e4fc102fcfc58679a2f156982682b431af5f8d22657c4f90ea/pyobjc_framework_LocalAuthenticationEmbeddedUI-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="a8e8101ca74441a862ffb8e2309fe382789c759d0951fb7b7b4e46652b4cb068", url="https://pypi.org/packages/37/c4/9e92c02bb511255158209f6367c403a5dde20e4763414726b186c3ba2319/pyobjc_framework_LocalAuthenticationEmbeddedUI-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="136725e321929fd840905751adf158b4bba561951984ec75a4e534ef0be76c30", url="https://pypi.org/packages/85/e7/936eebeead13b07f84a9c10eae70d8c953286bdbd03f2841acdef53c1a88/pyobjc_framework_LocalAuthenticationEmbeddedUI-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkLocalauthenticationembeddedui(PythonPackage):
     version("9.0", sha256="9d1ea04cb4a22eacb98713a517f5db760b1b7ea82fcbfa13f10140f751ca9d46", url="https://pypi.org/packages/a8/f2/8752ff1b125f312b13f607fb3d26b5e07d58a793a8a7c9b37d526ef76ed0/pyobjc_framework_LocalAuthenticationEmbeddedUI-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="4a829f05f2c089cfb4e6435548d700dc2fdabbd5fd71d2daff83f4e8cda1b870", url="https://pypi.org/packages/f5/de/7fe5df187df2277db357602241f0f5ce0bd0b8ced38391c3667814bd4124/pyobjc_framework_LocalAuthenticationEmbeddedUI-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="168ea2e0c0871393734459169f289103c608d137140e7a24637745d47aca6b73", url="https://pypi.org/packages/30/38/d1e38bfea6a05f0fd089401a32a94960fe18d5fe6c312cec48d2369d837a/pyobjc_framework_LocalAuthenticationEmbeddedUI-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -49,4 +53,5 @@ class PyPyobjcFrameworkLocalauthenticationembeddedui(PythonPackage):
         depends_on("py-pyobjc-framework-localauthentication@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-localauthentication@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-localauthentication@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

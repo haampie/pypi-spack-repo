@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLz4(PythonPackage):
+    # BEGIN VERSIONS
     version("4.3.3", sha256="01fe674ef2889dbb9899d8a67361e0c4a2c833af5aeb37dd505727cf5d2a131e", url="https://pypi.org/packages/a4/31/ec1259ca8ad11568abaf090a7da719616ca96b60d097ccc5799cd0ff599c/lz4-4.3.3.tar.gz")
     version("4.3.2", sha256="e1431d84a9cfb23e6773e72078ce8e65cad6745816d4cbf9ae67da5ea419acda", url="https://pypi.org/packages/9f/54/32b2d68d25b80ae4037cd1c68b8a6a28c6753cba3632cbf6d64bebd2b200/lz4-4.3.2.tar.gz")
     version("4.3.1", sha256="bb7d4508394b8161a9fc854473b0631ab246618487f802f852905d954ee3088e", url="https://pypi.org/packages/5e/f0/d7740ac7c99f459534ec49fbc7214bf88db4bcfbdc0492b68cb1b3894221/lz4-4.3.1.tar.gz")
@@ -19,5 +19,10 @@ class PyLz4(PythonPackage):
     version("3.1.10", sha256="439e575ecfa9ecffcbd63cfed99baefbe422ab9645b1e82278024d8a21d9720b", url="https://pypi.org/packages/53/31/df54b869e4a3a97eb6735c7d0853758124dfbd61dd9e9e1c7b5e72fd55b4/lz4-3.1.10.tar.gz")
     version("3.1.3", sha256="081ef0a3b5941cb03127f314229a1c78bd70c9c220bb3f4dd80033e707feaa18", url="https://pypi.org/packages/d9/c5/080234f5b6b698f56339edf7715d9256eca4eb3d35b36893227c399e69f9/lz4-3.1.3.tar.gz")
     version("3.1.0", sha256="debe75513db3eb9e5cdcd82a329ff38374b6316ab65b848b571e0404746c1e05", url="https://pypi.org/packages/4c/c3/97c5aaeb8c70eafb0cba7dcbcb7709c2697d8a92bdef90d36b018dc502f6/lz4-3.1.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

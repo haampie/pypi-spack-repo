@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTypeguard(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.2.1", sha256="7da3bd46e61f03e0852f8d251dcbdc2a336aa495d7daff01e092b55327796eb8", url="https://pypi.org/packages/d9/59/e02336eb478ccdfc9bb0d4c27ce04a4260cd8b45aa04f6b00bcfdbb66a2a/typeguard-4.2.1-py3-none-any.whl")
     version("4.2.0", sha256="24bb8f05ccaee423309daf980ba19e978b18766334ee01994503b853fc44efde", url="https://pypi.org/packages/38/51/055758e85029bf0dec2fd80cc314863e997429eedc5d5ff7b65c5c2e7108/typeguard-4.2.0-py3-none-any.whl")
     version("4.1.5", sha256="8923e55f8873caec136c892c3bed1f676eae7be57cdb94819281b3d3bc9c0953", url="https://pypi.org/packages/18/01/5fc45558268ced46d86292763477996a3cdd505567cd590a688e8cdc386e/typeguard-4.1.5-py3-none-any.whl")
@@ -27,10 +27,15 @@ class PyTypeguard(PythonPackage):
     version("2.11.1", sha256="c62706201ec6c14962162fa67d70bd2762753247533d70ff2442e5ac08f94fa2", url="https://pypi.org/packages/50/0f/788beaef5b73aacaae1eea11b1165fd4dec0a4c600fb2cb1611f55caf4ce/typeguard-2.11.1-py3-none-any.whl")
     version("2.11.0", sha256="5d12bbf114a975fd0fe02d9a035ec2b29cf753db8eb62d7288f6fe80f3e1739c", url="https://pypi.org/packages/d6/bf/f00c9b67afaf6ca8d3a26f6158490aba286bb465b9e9fba039dc0c23062d/typeguard-2.11.0-py3-none-any.whl")
     version("2.10.0", sha256="a75c6d86ac9d1faf85c5ae952de473e5d26824dda6d4394ff6bc676849cfb939", url="https://pypi.org/packages/f3/28/cc6df4c26d14c338c9744dc510a8c7f1a9115f8233e7602cca140a61430c/typeguard-2.10.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-importlib-metadata@3.6:", when="@3: ^python@:3.9")
         depends_on("py-typing-extensions@4.10.0:", when="@4.2.1: ^python@:3.12")
         depends_on("py-typing-extensions@4.7.0:", when="@4.0.1:4.2.0 ^python@:3.11")
         depends_on("py-typing-extensions@4.4:", when="@3.0.0-rc1:4.0.0 ^python@:3.10")
+    # END DEPENDENCIES
 

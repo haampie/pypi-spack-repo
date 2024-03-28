@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,14 @@
 from spack.package import *
 
 class PyPyquaternion(PythonPackage):
-    version("0.9.5", sha256="2d89d19259d62a8fbd25219eee7dacc1f6bb570becb70e1e883f622597c7d81d", url="https://pypi.org/packages/ae/c8/02b30c4a86744d2e15f7f16ab353f7231bd0241117713e5d60f466044994/pyquaternion-0.9.5.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.9.5", sha256="bac5945d08b9a2f4106dc76206e40f353c7240fdf37a370e13b03113c135f59b", url="https://pypi.org/packages/83/e3/339e1135d94c2db689fbf33603cbc8f2861ca15a1dce79963f796b3cc910/pyquaternion-0.9.5-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy", when="@0.9.5")
+        depends_on("py-numpy", when="@0.9.5:")
+    # END DEPENDENCIES
 

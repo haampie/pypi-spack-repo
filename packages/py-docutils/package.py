@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PyDocutils(PythonPackage):
+    # BEGIN VERSIONS
+    version("0.21-rc1", sha256="064f19e5655f338f24e120d0c70fcecf786a2703438328a5e98b224451abaa93", url="https://pypi.org/packages/ad/2e/395a01a33b539f81ad636a0ef91846cc390d1660b759c0b535209fe3166e/docutils-0.21rc1-py3-none-any.whl")
     version("0.20.1", sha256="96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6", url="https://pypi.org/packages/26/87/f238c0670b94533ac0353a4e2a1a771a0cc73277b88bff23d3ae35a256c1/docutils-0.20.1-py3-none-any.whl")
     version("0.20", sha256="a428f10de4de4774389734c986a01b4af2d802d26717108b0f1b9356862937c5", url="https://pypi.org/packages/41/3b/11740ed0f36e408ff3d5bd259af0c3330d899c17562f9964b7fbc90756f9/docutils-0.20-py3-none-any.whl")
     version("0.20-rc1", sha256="f9cd313159e9611199127c59b63c4890e808cb8cb6c2fe5f9a271cfd6df32676", url="https://pypi.org/packages/73/f1/455c0f5f29e853956947745299e65c494fe7ed49bce41fd05a738d931da3/docutils-0.20rc1-py3-none-any.whl")
@@ -23,15 +24,22 @@ class PyDocutils(PythonPackage):
     version("0.16", sha256="0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af", url="https://pypi.org/packages/81/44/8a15e45ffa96e6cf82956dd8d7af9e666357e16b0d93b253903475ee947f/docutils-0.16-py2.py3-none-any.whl")
     version("0.16-rc1", sha256="6dd0078bcfecbef00123531c6b0ca38460b291334ef8dd05c00e060e90ead6ce", url="https://pypi.org/packages/4d/a7/84b1d4a627bafcb2d9f5a5d896d03234122cc44b630ffbe9ec60cb346480/docutils-0.16rc1-py2.py3-none-any.whl")
     version("0.16-beta0", sha256="f1bad547016f945f7b35b28d8bead307821822ca3f8d4f87a1bd2ad1a8faab51", url="https://pypi.org/packages/74/40/0c46153ca7f9af1c0ccd001f9d774a831ef5f5ca687ce8fc1a83bc7e98d6/docutils-0.16b0.dev0-py2.py3-none-any.whl")
-    version("0.15.2", sha256="a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99", url="https://pypi.org/packages/93/22/953e071b589b0b1fee420ab06a0d15e5aa0c7470eb9966d60393ce58ad61/docutils-0.15.2.tar.gz")
-    version("0.15.1", sha256="f33ddb723332c6d6b6d99731ee1fc0c35eb4044a2df5cca1c64c8aa78eaf22cb", url="https://pypi.org/packages/d4/12/6c3fd74a590c7327c98cae008c11d536029fa9cd7924de477e8cb8804186/docutils-0.15.1-post1.tar.gz")
-    version("0.15", sha256="54a349c622ff31c91cbec43b0b512f113b5b24daf00e2ea530bb1bd9aac14849", url="https://pypi.org/packages/72/0b/d728058694261c99fd5980419d77e1c4d63a390b26a6a0ea7f0993cd5c57/docutils-0.15.tar.gz")
-    version("0.14", sha256="51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274", url="https://pypi.org/packages/84/f4/5771e41fdf52aabebbadecc9381d11dea0fa34e4759b4071244fa094804c/docutils-0.14.tar.gz")
+    version("0.15.2", sha256="6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0", url="https://pypi.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl")
+    version("0.15.1", sha256="554158db07870b514e8df93800e95ee8fbf2a2388eb453c7f69206532a8a6fa5", url="https://pypi.org/packages/6d/a3/cff8153acdac3af2349b3dfe4ea2fda8889aac7990d8fe16c1c5f1a6b7a7/docutils-0.15.1-py2-none-any.whl")
+    version("0.15", sha256="ba4584f9107571ced0d2c7f56a5499c696215ba90797849c92d395979da68521", url="https://pypi.org/packages/d2/d8/06e83efbfafab5d342df8835f3aa81c1dbfadedbea39cc2d2f93742938a4/docutils-0.15.post1-py2-none-any.whl")
+    version("0.14", sha256="02aec4bd92ab067f6ff27a38a38a41173bf01bed8f89157768c1573f53e474a6", url="https://pypi.org/packages/36/fa/08e9e6e0e3cbd1d362c3bbee8d01d0aedb2155c4ac112b19ef3cae8eed8d/docutils-0.14-py3-none-any.whl")
     version("0.14-rc2", sha256="3caee0bcb2a49fdf24fcfa70849a60abb7a181aa68b030f7cb7494096181830c", url="https://pypi.org/packages/6b/57/6e68a5457ea9579f970d7854c090a6c991c8ab481df12e6be25ff505a4b0/docutils-0.14rc2.tar.gz")
-    version("0.13.1", sha256="718c0f5fb677be0f34b781e04241c4067cbd9327b66bdd8e763201130f5175be", url="https://pypi.org/packages/05/25/7b5484aca5d46915493f1fd4ecb63c38c333bd32aa9ad6e19da8d08895ae/docutils-0.13.1.tar.gz")
-    version("0.12", sha256="c7db717810ab6965f66c8cf0398a98c9d8df982da39b4cd7f162911eb89596fa", url="https://pypi.org/packages/37/38/ceda70135b9144d84884ae2fc5886c6baac4edea39550f28bcd144c1234d/docutils-0.12.tar.gz")
+    version("0.13.1", sha256="cb3ebcb09242804f84bdbf0b26504077a054da6772c6f4d625f335cc53ebf94d", url="https://pypi.org/packages/7c/30/8fb30d820c012a6f701a66618ce065b6d61d08ac0a77e47fc7808dbaee47/docutils-0.13.1-py3-none-any.whl")
+    version("0.12", sha256="dcebd4928112631626f4c4d0df59787c748404e66dda952110030ea883d3b8cd", url="https://pypi.org/packages/c7/16/29d8de2404c5b90243b51f91315b3ce375169ceb48a68aeec0862e0143c4/docutils-0.12-py3-none-any.whl")
     version("0.11", sha256="9af4166adf364447289c5c697bb83c52f1d6f57e77849abcccd6a4a18a5e7ec9", url="https://pypi.org/packages/7f/49/3ff69dcb212900199462a291886e2f30f57ab3a69dc88e31eda6404a17c0/docutils-0.11.tar.gz")
     version("0.10", sha256="370624e61b6773da2f2fb17cc2a4eaea4bb596c3585d13f75ff193c1c738603e", url="https://pypi.org/packages/66/40/2b11ec2ec96d527ef933332a5847cc90860fd8bbee46da2cc468794ea25b/docutils-0.10.tar.gz")
     version("0.9.1", sha256="e89f187dbbc6674f839239c89fec44af9f18809b66a8a55a41b57b9ee2356994", url="https://pypi.org/packages/d1/fd/e569a6139d5bfda5574b3a4bd840dd1b23d03fc7fcbb193bd1f450f98cc4/docutils-0.9.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.9:", when="@0.21-rc1:")
+    # END DEPENDENCIES
 

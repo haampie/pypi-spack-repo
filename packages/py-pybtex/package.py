@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPybtex(PythonPackage):
+    # BEGIN VERSIONS
     version("0.24.0", sha256="e1e0c8c69998452fea90e9179aa2a98ab103f3eed894405b7264e517cc2fcc0f", url="https://pypi.org/packages/ad/5f/40d8e90f985a05133a8895fc454c6127ecec3de8b095dd35bba91382f803/pybtex-0.24.0-py2.py3-none-any.whl")
     version("0.23.0", sha256="4d0dd7a45641976b318a413368e4ae07dc942dd8e3ab81e389b1df4f598944f7", url="https://pypi.org/packages/15/ef/9f93c1084aef4dcd190c86a9e405e97b065a96514c74ce34b2fd5c02fe73/pybtex-0.23.0-py2.py3-none-any.whl")
     version("0.22.2", sha256="9ce2ce13d8d4f5a8d3848463f58167dbbbe75a53511f1088eaa6197637cdf8cf", url="https://pypi.org/packages/94/2a/11039970561f1bbc74fbaca89b59c26b398a0a70bba8caad553ac779b4f7/pybtex-0.22.2-py2.py3-none-any.whl")
@@ -17,9 +17,14 @@ class PyPybtex(PythonPackage):
     version("0.20", sha256="c624bb858e63965d0486c1d133ef98c722f097777cd73231c00653123f0c2a19", url="https://pypi.org/packages/88/1e/583892b59ee7a31c0b5cb652b68c9bd60587c1aa769dbc7a81ebbdbead54/pybtex-0.20.tar.bz2")
     version("0.19", sha256="7f9b18149e4686643605338486d8a9fd523a0398d70296755d62d131648f5648", url="https://pypi.org/packages/b7/41/761702c0f1be329e8ec4fd1bb90a0e8e5cdaf9080ad5116bde8ecf8d3caf/pybtex-0.19.tar.bz2")
     version("0.18", sha256="fa152603ed30393bae43c9ef2eb410f98d0866d0f655b5c2fcdfbe6e9ca99e93", url="https://pypi.org/packages/d8/7d/b96bede652938c7ec8185357e0c2bdf241f8c5606bd72182b78718926346/pybtex-0.18.tar.bz2")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-latexcodec@1.0.4:", when="@0.22:")
         depends_on("py-pyyaml", when="@0.22:")
         depends_on("py-six", when="@0.22:")
+    # END DEPENDENCIES
 

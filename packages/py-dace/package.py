@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,15 @@
 from spack.package import *
 
 class PyDace(PythonPackage):
+    # BEGIN VERSIONS
     version("0.15.1", sha256="69bfdbbd5c7177f2926a874f5fa82fcdef61fc532c022b4bc12e1e9218724093", url="https://pypi.org/packages/33/8d/35a67fbc5c92751498d017bc7229ecfe6b595167c09989a85b404a4c4eda/dace-0.15.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("counters", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.12", when="@0.15:")
         depends_on("python@:3.11", when="@0.14.4:0.14")
@@ -31,4 +37,5 @@ class PyDace(PythonPackage):
         depends_on("py-scipy", when="@:0.9")
         depends_on("py-sympy@:1.9", when="@0.15:")
         depends_on("py-websockets", when="@:0.10,0.15:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,8 @@
 from spack.package import *
 
 class PyMatminer(PythonPackage):
+    # BEGIN VERSIONS
+    version("0.9.2", sha256="df9a170cf957529438f5f5bb5c841477c7c1cd58f06193a9c6a859a8b82f268a", url="https://pypi.org/packages/91/cc/21b4791dc767a4fd4db5c835059df0fb890b285b8480c60d1eb8940e0449/matminer-0.9.2-py3-none-any.whl")
     version("0.9.1", sha256="feb1cd08c247dd90eb7d42a94edf081f49668d0af6fe5ec2181cbc7996b8a42c", url="https://pypi.org/packages/bd/dd/583836f341b092b31130034cb6e2454fc69c04b0d70629407b4d474755a2/matminer-0.9.1-py3-none-any.whl")
     version("0.9.0", sha256="ffd5a6336d80a5a665487d489ec0e5e08eccb1f25f67699fa82e52ed4087f37c", url="https://pypi.org/packages/21/46/f70a778ddb5ea4e265aedb429865d8e7787e41207da054f04682ad5aaec4/matminer-0.9.0-py3-none-any.whl")
     version("0.8.0", sha256="7d57939c69a8b1d113c85cb5031e94d8d9f68b4a185b34ba17b22c1418abcad3", url="https://pypi.org/packages/bf/2c/4843a1de00ede81d7542baee6887d0ca9118a36ef1e9a5e124b42f5ae4cc/matminer-0.8.0-py3-none-any.whl")
@@ -16,8 +17,11 @@ class PyMatminer(PythonPackage):
     version("0.7.5", sha256="8d34678628ea3ab3ecd629d94c3b2e91cbe939825adaa371918e83945dc31027", url="https://pypi.org/packages/a7/f6/a65c6db07381763f470c13ee04cc7135b066309092289597ff0ffcc699f7/matminer-0.7.5-py3-none-any.whl")
     version("0.7.4", sha256="9b27797b8c409518fd682fa38957313998c703a52c964f7ce8a71015e2c08355", url="https://pypi.org/packages/09/ee/36d4f4923ac5508be8f4d4215b1374d123580e163ada61cbfc4ae9020521/matminer-0.7.4-py3-none-any.whl")
     version("0.7.3", sha256="1df75bc49c22a86e745131ebb2dadf02962b155358aa51680f7940ace980dd27", url="https://pypi.org/packages/8f/41/71d39a1f4de2f09e68bf1b17d8be5f53374b3bc4a5ade2938bfcb944fa11/matminer-0.7.3-py3-none-any.whl")
-    version("0.7.2", sha256="ffdb67d668597d9d0dd94005fd13f71fe40436d772aa8cedc8321e528cd35fba", url="https://pypi.org/packages/86/d5/a630fbab248b8005205c178c2c0c030d32cf34fc38bec33bf569f57f9c42/matminer-0.7.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.9.1:")
         depends_on("py-future", when="@0.8:0.9.0")
@@ -37,7 +41,8 @@ class PyMatminer(PythonPackage):
         depends_on("py-numpy@1.22.0:", when="@0.7.5:0.7.6")
         depends_on("py-numpy@1.21.1:", when="@0.7.4")
         depends_on("py-numpy@1.21.0:", when="@0.7.3")
-        depends_on("py-pandas@1.5.0:1", when="@0.9:")
+        depends_on("py-pandas@1.5.0:", when="@0.9.2:")
+        depends_on("py-pandas@1.5.0:1", when="@0.9:0.9.1")
         depends_on("py-pandas", when="@0.8")
         depends_on("py-pandas@1.4.2:", when="@0.7.8:0.7")
         depends_on("py-pandas@1.3.5:", when="@0.7.5:0.7.6")
@@ -78,4 +83,5 @@ class PyMatminer(PythonPackage):
         depends_on("py-tqdm@4.62.3:", when="@0.7.5:0.7.6")
         depends_on("py-tqdm@4.62:", when="@0.7.4")
         depends_on("py-tqdm@4.61.1:", when="@0.7.3")
+    # END DEPENDENCIES
 

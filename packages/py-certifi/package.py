@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCertifi(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2024.2.2", sha256="dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", url="https://pypi.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl")
     version("2023.11.17", sha256="e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474", url="https://pypi.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl")
     version("2023.7.22", sha256="92d6037539857d8206b8f6ae472e8b77db8058fec5937a1ef3f54304089edbb9", url="https://pypi.org/packages/4c/dd/2234eab22353ffc7d94e8d13177aaa050113286e93e7b40eae01fbf7c3d9/certifi-2023.7.22-py3-none-any.whl")
@@ -25,5 +25,10 @@ class PyCertifi(PythonPackage):
     version("2019.3.9", sha256="59b7658e26ca9c7339e00f8f4636cdfe59d34fa37b9b04f6f9e9926b3cece1a5", url="https://pypi.org/packages/60/75/f692a584e85b7eaba0e03827b3d51f45f571c2e793dd731e598828d380aa/certifi-2019.3.9-py2.py3-none-any.whl")
     version("2017.4.17", sha256="f4318671072f030a33c7ca6acaef720ddd50ff124d1388e50c1bda4cbd6d7010", url="https://pypi.org/packages/eb/01/c1f58987b777d6c4ec535b4e004a4a07bfc9db06f0c7533367ca6da8f2a6/certifi-2017.4.17-py2.py3-none-any.whl")
     version("2017.1.23", sha256="f74a224a9860fd5a2e9757230a7ea3eba82d6d46914780abc18e70c8b58d4bf8", url="https://pypi.org/packages/21/f7/7bb6b1c5ba1db21515950bc16b22cd7ef7d27024100f326a19921efd2ce0/certifi-2017.1.23-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPybigwig(PythonPackage):
+    # BEGIN VERSIONS
     version("0.3.22", sha256="5d4426f754bd7b7f6dc21d6c3f93b58a96a65b6eb2e578ae03b31a71272d2243", url="https://pypi.org/packages/f0/57/334db9a75d6941876ef282cc7eb1885a24fe71d3c6522c19f717db4f8b73/pyBigWig-0.3.22.tar.gz")
     version("0.3.21", sha256="5bff713fe3f8840e0fbe48cf8c8fe9d92c8af8ba107da0b845076164445d076e", url="https://pypi.org/packages/61/36/fdd88e5f84c2c0abe7b69470061766418112954cc7eae2a0d42921e65daa/pyBigWig-0.3.21.tar.gz")
     version("0.3.20", sha256="ba63ffb302647a6bcda75187a9d8576bb249e37ae6e83379ddb31e22cd7a8c0b", url="https://pypi.org/packages/e2/18/eb175e8a15ae2822ffdab1e666dc8d081b1245e1064f2b36033af0076f3e/pyBigWig-0.3.20.tar.gz")
@@ -19,5 +19,12 @@ class PyPybigwig(PythonPackage):
     version("0.3.13", sha256="c65cb9ccd78a4ede00c3209579173e4f7e67598daf6dc079676a0e8982163f5b", url="https://pypi.org/packages/5c/9c/2e01d04b6fd31c1e09537c8f51410123c087da4974bdb0fcdb7ec25dab62/pyBigWig-0.3.13.tar.gz")
     version("0.3.12", sha256="e01991790ece496bf6d3f00778dcfb136dd9ca0fd28acc1b3fb43051ad9b8403", url="https://pypi.org/packages/d5/0d/8e2a1edb9524790c6a4d0b70bc800a8e4afee1bc7bdd048c54b8d9cf1c32/pyBigWig-0.3.12.tar.gz")
     version("0.3.4", sha256="8c97a19218023190041c0e426f1544f7a4944a7bb4568faca1d85f1975af9ee2", url="https://pypi.org/packages/4d/7c/911e92392cf2d70d1a0da8fbb95be1e203f3cf9f858e030e98d4882c9ec7/pyBigWig-0.3.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("numpy", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

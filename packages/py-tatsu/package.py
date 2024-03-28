@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTatsu(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.12.0", sha256="a7a13bea264b749963695a3c42ef5631811330887882cb0de2c2ad6e2348f986", url="https://pypi.org/packages/cf/44/f2c21d888cb57e6b0b8db0026dd32f9b3532993e16b78518513d9b6369a7/TatSu-5.12.0-py3-none-any.whl")
     version("5.11.3", sha256="97954dfad6a3f73c7179f88d706eab6be92e6753e1c09e9e28cd726aa2f8e22b", url="https://pypi.org/packages/f9/aa/abc4313688d431ba690de10bc94cf3d690cd2cbbc44f1101add7471ab1de/TatSu-5.11.3-py3-none-any.whl")
     version("5.11.2", sha256="fef2a34f21d9180fdca251177390c1c53df5898de143070615c13ff6bd268e56", url="https://pypi.org/packages/52/68/bd7f90df3d22f915b4d6198b806d362721a0e4270a48b21180e2161e1373/TatSu-5.11.2-py3-none-any.whl")
@@ -18,8 +18,15 @@ class PyTatsu(PythonPackage):
     version("5.10.3", sha256="d3d90d0f73c9b6ab2a18a92ce0723f9528bacd90b0f85ef6f6cdf52c9ea09294", url="https://pypi.org/packages/e6/c6/a886d06a39e7dcb08c5b613a0526c386ab530b85b729358f05ebfccc7254/TatSu-5.10.3-py3-none-any.whl")
     version("5.10.2", sha256="24f85671c71936226989b468661fc95b288fe96c68549536f5791f0311eb8dcd", url="https://pypi.org/packages/0a/7c/f384c61de69468ffeecdeee30f3eb3375b46183dfe968fd89eeb4829d924/TatSu-5.10.2-py3-none-any.whl")
     version("4.4.0", sha256="c9211eeee9a2d4c90f69879ec0b518b1aa0d9450249cb0dd181f5f5b18be0a92", url="https://pypi.org/packages/1b/36/00664e684e4bba5730db661847447bbcfe789008a154755013e5f457b648/TatSu-4.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("future_regex", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.11:", when="@5.9:")
         depends_on("python@3.10:", when="@5.7.1:5.7.3,5.8:5.8.2")
+    # END DEPENDENCIES
 

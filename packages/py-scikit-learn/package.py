@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyScikitLearn(PythonPackage):
+    # BEGIN VERSIONS
     version("1.4.1.post1", sha256="93d3d496ff1965470f9977d05e5ec3376fb1e63b10e4fda5e39d23c2d8969a30", url="https://pypi.org/packages/da/b4/5d7b9f64d2c3795ac37da3d8bc303be7950e575ec21ac7d0eb9de34fe0d5/scikit-learn-1.4.1.post1.tar.gz")
     version("1.4.0", sha256="d4373c984eba20e393216edd51a3e3eede56cbe93d4247516d205643c3b93121", url="https://pypi.org/packages/a0/25/f95b39549240d07c7fefa2ab0f81ac418f0ea192c53334f655bbed5015f9/scikit-learn-1.4.0.tar.gz")
     version("1.4.0-rc1", sha256="a2deae0895ea5e3fa02415e45264dd3182f53b54c1fea523756e665f1d2ca0ea", url="https://pypi.org/packages/eb/a6/f9c1bb67e18a7d00ce94926e1a2fbe6275f14920f113e16aae450ca4c207/scikit-learn-1.4.0rc1.tar.gz")
@@ -33,7 +33,13 @@ class PyScikitLearn(PythonPackage):
     version("0.22.2.post1", sha256="57538d138ba54407d21e27c306735cbd42a6aae0df6a5a30c7a6edde46b0017d", url="https://pypi.org/packages/e4/40/8bc77d8f536be0a892b37fff19fd81f15935e24724303480f85238ec7f22/scikit-learn-0.22.2.post1.tar.gz")
     version("0.22.1", sha256="51ee25330fc244107588545c70e2f3570cfc4017cff09eed69d6e1d82a212b7d", url="https://pypi.org/packages/18/28/5a48b00599b476875415b97bdfdb3849bafb31183c1d785501dbc8a77aa2/scikit-learn-0.22.1.tar.gz")
     version("0.22", sha256="314abf60c073c48a1e95feaae9f3ca47a2139bd77cebb5b877c23a45c9e03012", url="https://pypi.org/packages/4f/2c/04e10167991ed6209fb251a212ca7c3148006f335f4aadf1808db2cbeda8/scikit-learn-0.22.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("openmp", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.4:")
         depends_on("py-joblib@0.11:", when="@0.21-rc2:0.23.1")
@@ -42,4 +48,5 @@ class PyScikitLearn(PythonPackage):
         depends_on("py-scipy@0.19.1:", when="@0.23:0.23.1")
         depends_on("py-scipy@0.17:", when="@0.21-rc2:0.22")
         depends_on("py-threadpoolctl@2:", when="@0.23:0.23.1")
+    # END DEPENDENCIES
 

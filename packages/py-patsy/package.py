@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPatsy(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.5.6", sha256="19056886fd8fa71863fa32f0eb090267f21fb74be00f19f5c70b2e9d76c883c6", url="https://pypi.org/packages/43/f3/1d311a09c34f14f5973bb0bb0dc3a6e007e1eda90b5492d082689936ca51/patsy-0.5.6-py2.py3-none-any.whl")
     version("0.5.5", sha256="6067516e97c1d5da5d24603853834e3555e943ffb419ea32020f7ba561fa6d0d", url="https://pypi.org/packages/32/0e/0039df17094e8d9d26b69bd8e976e179b1f6cc772f9ffb597640d5016772/patsy-0.5.5-py2.py3-none-any.whl")
     version("0.5.4", sha256="0486413077a527db51ddea8fa94a5234d0feb17a4f4dc01b59b6086c58a70f80", url="https://pypi.org/packages/29/ab/373449d6f741732f94e2d15d116a90f050b2857cb727b26d2f7bead50815/patsy-0.5.4-py2.py3-none-any.whl")
@@ -17,9 +17,16 @@ class PyPatsy(PythonPackage):
     version("0.4.1", sha256="63102f77df5c6b0c3fe3bf9d57bcea112d1e06d00a41823662b5044ce681f22c", url="https://pypi.org/packages/02/8a/255f80a7f939006ec479275fde6301feedf3fdd9ecee782bb64987b84de8/patsy-0.4.1-py2.py3-none-any.whl")
     version("0.4.0", sha256="57bd83b876064562d54c61a6082dd57be9801a02d34a071e918117a4b7919f23", url="https://pypi.org/packages/76/0a/17046bb24666b5503809415b879ed7820ea53a9e3269ef77a85edb9d3074/patsy-0.4.0-py2.py3-none-any.whl")
     version("0.3.0", sha256="01dd39f43e0ed2f819c12ae6314a2bfb8ae5823769dd5aa2497c40c1f0ea78c4", url="https://pypi.org/packages/07/13/2b5dadce7da41de7c8adc39e3dd5ab7d5f9852761606e62b72f008844b5c/patsy-0.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("splines", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.4:", when="@0.5:")
         depends_on("py-numpy", when="@0.4.1:0.4")
         depends_on("py-six", when="@0.4.1:")
+    # END DEPENDENCIES
 

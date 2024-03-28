@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWebsockets(PythonPackage):
+    # BEGIN VERSIONS
     version("12.0", sha256="81df9cbcbb6c260de1e007e58c011bfebe2dafc8435107b0537f393dd38c8b1b", url="https://pypi.org/packages/2e/62/7a7874b7285413c954a4cca3c11fd851f11b2fe5b4ae2d9bee4f6d9bdb10/websockets-12.0.tar.gz")
     version("11.0.3", sha256="88fc51d9a26b10fc331be344f1781224a375b78488fc343620184e95a4b27016", url="https://pypi.org/packages/d8/3b/2ed38e52eed4cf277f9df5f0463a99199a04d9e29c9e227cfafa57bd3993/websockets-11.0.3.tar.gz")
     version("11.0.2", sha256="b1a69701eb98ed83dd099de4a686dc892c413d974fa31602bc00aca7cb988ac9", url="https://pypi.org/packages/9d/67/68e568bb4a0617529db2723c75958223b70b95921cd114b5fd13567db4d8/websockets-11.0.2.tar.gz")
@@ -19,5 +19,10 @@ class PyWebsockets(PythonPackage):
     version("10.0", sha256="c4fc9a1d242317892590abe5b61a9127f1a61740477bfb121743f290b8054002", url="https://pypi.org/packages/1c/f4/61aee1eb4baadf8477fb7f3bc6b04a50fe683ef8ad2f60282806821e4b3b/websockets-10.0.tar.gz")
     version("9.1", sha256="276d2339ebf0df4f45df453923ebd2270b87900eda5dfd4a6b0cfa15f82111c3", url="https://pypi.org/packages/0d/bd/5262054455ab2067e51de331bfbc53a1dfa9071af7c424cf7c0793c4349a/websockets-9.1.tar.gz")
     version("8.1", sha256="5c65d2da8c6bce0fca2528f69f44b2f977e06954c8512a952222cea50dad430f", url="https://pypi.org/packages/e9/2b/cf738670bb96eb25cb2caf5294e38a9dc3891a6bcd8e3a51770dbc517c65/websockets-8.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

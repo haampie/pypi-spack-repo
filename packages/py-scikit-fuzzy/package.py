@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyScikitFuzzy(PythonPackage):
+    # BEGIN VERSIONS
     version("0.4.2", sha256="1ab12424d847ede1bc79670d8058167be7c8dd660b00756e9b844817ceb1e12e", url="https://pypi.org/packages/6c/f0/5eb5dbe0fd8dfe7d4651a8f4e591a196623a22b9e5339101e559695b4f6c/scikit-fuzzy-0.4.2.tar.gz")
     version("0.4.1", sha256="249840a58de98b734149ffcf12aee98091d6ecf41b1fb96012cff0c6b91357a8", url="https://pypi.org/packages/e5/30/aaf5bfdcc6b7362d753ae811ca131ecbc434c4ba665a581a7ad7b2288d45/scikit-fuzzy-0.4.1.tar.gz")
     version("0.4.0", sha256="2f87eea799b2f3d57b288463a205a69f4de5dfbe04e8b02681fdd8b1b0128bb6", url="https://pypi.org/packages/09/36/4938f22f99ea415ef6b9f831b36057e1cb6bac3783f35a54a99da97eb5ff/scikit-fuzzy-0.4.0.tar.gz")
@@ -17,5 +17,10 @@ class PyScikitFuzzy(PythonPackage):
     version("0.1.8", sha256="95a308e37ff67bd44e0c8fc3573cc5f00f8ea583a02cdf0dbe7d3781192c8053", url="https://pypi.org/packages/16/be/d876e7a4c031c2f7f12ab3a9cbb0ad5b96b7a5f300f38ed94a917faba583/scikit-fuzzy-0.1.8.zip")
     version("0.1.7", sha256="aa497192aa2cd905311958552649f129f373a4d4dc3b808805e6efb1458af8c6", url="https://pypi.org/packages/bc/ab/f9640d970cfcc930c2661ecd89b198af6bdf02c7a460fc9476e42e0c37f5/scikit-fuzzy-0.1.7.zip")
     version("0.1.6", sha256="6ff69d37fe4fd576e0ac874bbfd2b2b4ee454ba2fce34e165c7fd160aeae36ae", url="https://pypi.org/packages/1b/55/eb8fc8927eb11965d0128ddf4f8686ca9745e369177674e90b3b55310409/scikit-fuzzy-0.1.6.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

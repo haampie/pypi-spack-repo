@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPeppy(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.40.1", sha256="33cfa369e26cb785d3a7e6d6a6036fe7d1d29b53073f2d497cd269c6fa7945fb", url="https://pypi.org/packages/00/4f/1f284acbe44d319d9c79dfd862ea01ee25f31f6fd3568ec89a83176d3c8b/peppy-0.40.1-py3-none-any.whl")
     version("0.40.0", sha256="965d86a0c38d231527ad419424c4375471722f05c06b9c99823b397f85a36a66", url="https://pypi.org/packages/2e/a9/c5c7e5b39e776cf0fe0140f9157498acab5d174f0152a76a61e884119573/peppy-0.40.0-py3-none-any.whl")
     version("0.40.0-alpha5", sha256="af53570649f18236cc2d760ba299f4ae1e340efd48fb5bde1eb3605c585ac90d", url="https://pypi.org/packages/21/d6/19311ef5fbfa80f88a8744fdb38a6ed39008925fd261cae5455f5d92de4a/peppy-0.40.0a5-py3-none-any.whl")
@@ -22,7 +22,11 @@ class PyPeppy(PythonPackage):
     version("0.35.2", sha256="b1f993358eb4c4b4e317cf41142f0db24a8743afcf48e8294acfec739d925687", url="https://pypi.org/packages/52/fe/79c3fc6608227e37e0cb01ac5cf62b5931a37910a5c42f8aa61c58d7d85f/peppy-0.35.2-py3-none-any.whl")
     version("0.35.1", sha256="dd9e99930773f5c7c6ddbc3de7f1a7f9387627be8bd80e255d6158fb63781f1a", url="https://pypi.org/packages/80/af/47beaf531e269e1be1ab4bc1d52c3cc1f009822f26fd54452768334ee951/peppy-0.35.1-py3-none-any.whl")
     version("0.35.0", sha256="13efe8df44606256819a6190c7fa6398bca9c32c966c7ddf49bf792c8a364deb", url="https://pypi.org/packages/1b/9b/81e31c2d1c72e3107acd50702ff5389ff47740ac9e32a08724dea4137651/peppy-0.35.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attmap@0.13.2:", when="@0.31.2:0.35")
         depends_on("py-logmuse@0.2:", when="@0.30.2:0.35.4")
@@ -32,4 +36,5 @@ class PyPeppy(PythonPackage):
         depends_on("py-rich@10.3:", when="@0.32:")
         depends_on("py-ubiquerg@0.6.2:", when="@0.31.2:")
         depends_on("py-yacman@0.9:", when="@0.40:0.40.0-alpha5")
+    # END DEPENDENCIES
 

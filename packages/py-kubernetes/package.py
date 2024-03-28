@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKubernetes(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("29.0.0", sha256="ab8cb0e0576ccdfb71886366efb102c6a20f268d817be065ce7f9909c631e43e", url="https://pypi.org/packages/6f/34/164e57fec8a9693d7e6ae2d1a345482020ea9e9b32eab95a90bb3eaea83d/kubernetes-29.0.0-py2.py3-none-any.whl")
     version("28.1.0", sha256="10f56f8160dcb73647f15fafda268e7f60cf7dbc9f8e46d52fcd46d3beb0c18d", url="https://pypi.org/packages/f5/6a/1f69c2d8b1ff03f8d8e10d801f4ac3016ed4c1b00aa9795732c6ec900bba/kubernetes-28.1.0-py2.py3-none-any.whl")
     version("27.2.0", sha256="0f9376329c85cf07615ed6886bf9bf21eb1cbfc05e14ec7b0f74ed8153cd2815", url="https://pypi.org/packages/99/89/3ab0cb3069f49ae2eaf73f884c82164f18f70fcc598e0312edea71614ad7/kubernetes-27.2.0-py2.py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyKubernetes(PythonPackage):
     version("10.1.0", sha256="9aa4f34431a442dda856bafc959bcf296cb5802f370361604c440093c702b17c", url="https://pypi.org/packages/15/60/57bcecea1472e1b2038197bd4adccdf90ccb845fd34f33b9a19a7feb7c20/kubernetes-10.1.0-py3-none-any.whl")
     version("10.0.1", sha256="a6dee02a1b39ea4bb9c4c2cc415ea0ada33d8ea0a920f7d4fb6d166989dcac01", url="https://pypi.org/packages/6e/fc/2cab119f679648b348b8940de0dd744a1f0ee99c690aa2ef6072f050816c/kubernetes-10.0.1-py2.py3-none-any.whl")
     version("9.0.0", sha256="f56137a298cb1453dd908b49dd4169347287c971e8cabd11b32f27570fec314c", url="https://pypi.org/packages/00/f7/4f196c55f1c2713d3edc8252c4b45326306eef4dc10048f13916fe446e2b/kubernetes-9.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-adal@1.0.2:", when="@7.0.0-beta1:9.0.0-alpha1")
         depends_on("py-certifi@14:", when="@:0,3:")
@@ -41,4 +45,5 @@ class PyKubernetes(PythonPackage):
         depends_on("py-urllib3@1.23:", when="@7.0.1:7,8.0.1,9:9.0.0,10:10.0.0")
         depends_on("py-urllib3@1.24.2:", when="@:0,8.0.2:8,9.0.1:9,10.0.1:27,29:")
         depends_on("py-websocket-client@0.32:0.39,0.43:", when="@:0,5:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNbclient(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.10.0", sha256="f13e3529332a1f1f81d82a53210322476a168bb7090a0289c795fe9cc11c9d3f", url="https://pypi.org/packages/66/e8/00517a23d3eeaed0513e718fbc94aab26eaa1758f5690fc8578839791c79/nbclient-0.10.0-py3-none-any.whl")
     version("0.9.1", sha256="2c50a866e8dd6c5f655de47d2e252c82d2ebe978574e760ac229f5950593a434", url="https://pypi.org/packages/ad/41/c3bdff990ded5607321af31e284223eb5fa702e375332fd805f2a9163522/nbclient-0.9.1-py3-none-any.whl")
     version("0.9.0", sha256="a3a1ddfb34d4a9d17fc744d655962714a866639acd30130e9be84191cd97cd15", url="https://pypi.org/packages/6b/3a/607149974149f847125c38a62b9ea2b8267eb74823bbf8d8c54ae0212a00/nbclient-0.9.0-py3-none-any.whl")
@@ -29,7 +29,11 @@ class PyNbclient(PythonPackage):
     version("0.5.4", sha256="95a300c6fbe73721736cf13972a46d8d666f78794b832866ed7197a504269e11", url="https://pypi.org/packages/a7/ed/b764fa931614cb7ed9bebbc42532daecef405d6bef660eeda882f6c23b98/nbclient-0.5.4-py3-none-any.whl")
     version("0.5.3", sha256="e79437364a2376892b3f46bedbf9b444e5396cfb1bc366a472c37b48e9551500", url="https://pypi.org/packages/22/a6/f3a01a5c1a0e72d1d064f33d4cd9c3a782010f48f48f47f256d0b438994a/nbclient-0.5.3-py3-none-any.whl")
     version("0.5.0", sha256="8a6e27ff581cee50895f44c41936ce02369674e85e2ad58643d8d4a6c36771b0", url="https://pypi.org/packages/c3/c0/b8802a7cd2bb7a81a64a580eb65047d2931fd9fea8c038ff3ada2a6bd0ae/nbclient-0.5.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-async-generator", when="@0.2:0.5.3")
         depends_on("py-jupyter-client@6.1.12:", when="@0.7.2:")
@@ -43,4 +47,5 @@ class PyNbclient(PythonPackage):
         depends_on("py-traitlets@5.2.2:", when="@0.6.4:0.7.0")
         depends_on("py-traitlets@5.0.0:", when="@0.5.12:0.6.3")
         depends_on("py-traitlets@4.2:", when="@:0.5.11")
+    # END DEPENDENCIES
 

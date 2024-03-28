@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkOslog(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="2377637a0de7dd60f610caab4bcd7efa165d23dba4ac896fd542f1fab2fc588a", url="https://pypi.org/packages/ef/76/f808e7ca93f38a2552329e3eca85b2047910e61d12f1b3ceb7b7a752fd5e/pyobjc-framework-OSLog-10.2.tar.gz")
     version("10.1", sha256="bfce0067351115ae273489768f93692dcda88bd5b54f28bb741c08855c114dfe", url="https://pypi.org/packages/ee/fc/512f87b289a4c905eda08210345e590d0e6ebefd215dbbace9cef0deac67/pyobjc-framework-OSLog-10.1.tar.gz")
     version("10.0", sha256="3a169df2fe5fdbd6ca8db28e5c51d89f8759b369636ea7cc2672cde11f4a09fb", url="https://pypi.org/packages/f8/c3/3c2f53709b3e36c5b8d5acad109b8fea6d52a69f758c40a8129444907318/pyobjc-framework-OSLog-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkOslog(PythonPackage):
     version("9.0", sha256="47f99ebd1160451c6586182c45ae7a8bf6e26131b5c39ca4140f2dfa0e3f713e", url="https://pypi.org/packages/f7/1d/7b3f4219c297944725b7f63637d1102f0a72f6afdba8a056f5c7e88aafa2/pyobjc-framework-OSLog-9.0.tar.gz")
     version("8.5.1", sha256="a770e6bea5464e42e91e361f56fbd5ebcad9bcde0a06d0d63328409bfc2fa3a1", url="https://pypi.org/packages/06/f6/f43833f1a78654e3844f97c9febd50aa3b05fe0b5bdd9a5a87ea59295f40/pyobjc-framework-OSLog-8.5.1.tar.gz")
     version("8.5", sha256="63551865ca3554f0f85cb3a7799b2471c0f89146b23cb12e939dad7d11c9e08a", url="https://pypi.org/packages/d9/a3/2eeb5ab645bd3f8b3b1be4bbfddd5003b4ce1c7e99e6aa5e0be7d64f6d4b/pyobjc-framework-OSLog-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -31,4 +35,5 @@ class PyPyobjcFrameworkOslog(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-quartz@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-quartz@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

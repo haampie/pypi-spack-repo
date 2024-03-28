@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkSecurity(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="20ec8ebb41506037d54b40606590b90f66a89adceeddd9a40674b0c7ea7c8c82", url="https://pypi.org/packages/8f/3c/f251e7143a44b62f4e87f0cb7b42d30c8dbef1be0de4db45a4bdcfb4ac71/pyobjc-framework-Security-10.2.tar.gz")
     version("10.1", sha256="33becccea5488a4044792034d8cf4faf1913f8ca9ba912dceeaa54db311bd284", url="https://pypi.org/packages/04/f9/d105561be4172da0026ae5b1e85815efc3111f0e5e1be157a052218091bf/pyobjc-framework-Security-10.1.tar.gz")
     version("10.0", sha256="89837b93aaae053d80430da6a3dbd6430ca9d889aa43c3d53ed4ce81afa99462", url="https://pypi.org/packages/8a/65/236ae685e6e367ee396c526e39e14a72e19b2ac20a799527941be9c3add9/pyobjc-framework-Security-10.0.tar.gz")
@@ -18,7 +18,11 @@ class PyPyobjcFrameworkSecurity(PythonPackage):
     version("9.0", sha256="d441eeda097a428b7f72a0175d7d57f9eecc20711cb73acdcb5d21bc198dd230", url="https://pypi.org/packages/4f/1c/2c44c2afa960c2cd0edff3c6947ec531232426f28e858bc5ffd7f0aa842a/pyobjc-framework-Security-9.0.tar.gz")
     version("8.5.1", sha256="a2fad1a735248aeae019ff06dff2416d77c29f1331f7c27989209e1d6d3d27db", url="https://pypi.org/packages/00/3a/d9909a0a5ce79e76624391325079bc71f90151a5034d028ac6d696a026f1/pyobjc-framework-Security-8.5.1.tar.gz")
     version("8.5", sha256="6e9c26f37f73c3d697f815a868828a1010661711cde2dd04d31dab6d4429cce5", url="https://pypi.org/packages/93/46/2d6ec141b323d9322c3006d95015abbfb079e97ffbfcc18dce3e7f864f7b/pyobjc-framework-Security-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -26,4 +30,5 @@ class PyPyobjcFrameworkSecurity(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

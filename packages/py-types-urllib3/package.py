@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTypesUrllib3(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.26.25.14", sha256="9683bbb7fb72e32bfe9d2be6e04875fbe1b3eeec3cbb4ea231435aa7fd6b4f0e", url="https://pypi.org/packages/11/7b/3fc711b2efea5e85a7a0bbfe269ea944aa767bbba5ec52f9ee45d362ccf3/types_urllib3-1.26.25.14-py3-none-any.whl")
     version("1.26.25.13", sha256="5dbd1d2bef14efee43f5318b5d36d805a489f6600252bb53626d4bfafd95e27c", url="https://pypi.org/packages/08/6d/98b51f9776747e1e270919aa02298ce6a7d2d4d78a3349b47666deb61c4c/types_urllib3-1.26.25.13-py3-none-any.whl")
     version("1.26.25.12", sha256="3ba3d3a8ee46e0d5512c6bd0594da4f10b2584b47a470f8422044a2ab462f1df", url="https://pypi.org/packages/18/1a/a69209af0bbc268613e103597fd6559d1d1804f1a8a4d97004434c0608f4/types_urllib3-1.26.25.12-py3-none-any.whl")
@@ -18,5 +18,10 @@ class PyTypesUrllib3(PythonPackage):
     version("1.26.25.6", sha256="a6c23c41bd03e542eaee5423a018f833077b51c4bf9ceb5aa544e12b812d5604", url="https://pypi.org/packages/c9/1f/e770463356b6402227fe011de182b93d7b29e2247838699dddddd5ec5ac2/types_urllib3-1.26.25.6-py3-none-any.whl")
     version("1.26.25.5", sha256="e8f25c8bb85cde658c72ee931e56e7abd28803c26032441eea9ff4a4df2b0c31", url="https://pypi.org/packages/81/c3/53da44dfcda48826139526cf9c71c6f0ea88b02c1eb66adcecfd2e488170/types_urllib3-1.26.25.5-py3-none-any.whl")
     version("1.26.24", sha256="cf7918503d02d3576e503bbfb419b0e047c4617653bba09624756ab7175e15c9", url="https://pypi.org/packages/34/ed/9c4981c4d86bbd255a664fd19fe83a287766001300f5b8384cc2a5e61cb8/types_urllib3-1.26.24-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

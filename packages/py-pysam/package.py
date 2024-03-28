@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPysam(PythonPackage):
+    # BEGIN VERSIONS
     version("0.22.0", sha256="ab7a46973cf0ab8c6ac327f4c3fb67698d7ccbeef8631a716898c6ba01ef3e45", url="https://pypi.org/packages/35/22/3d01778c13f1103401313f1232c1c0596d97aaee21c1d60564640f3049bd/pysam-0.22.0.tar.gz")
     version("0.21.0", sha256="5c9645ddd87668e36ff0a1966391e26f9c403bf85b1bc06c53fe2fcd592da2ce", url="https://pypi.org/packages/16/1c/a4999d93d6fd7791349f0822e1674b39971fe30d3b99638209ae6de3dfc7/pysam-0.21.0.tar.gz")
     version("0.20.0", sha256="7cc250148ba0ffc9bdc38db6988b91e13b75db0d11c18cf1336467d1c97dd312", url="https://pypi.org/packages/e3/ad/b300abaf0de2834104b671db5aebe71616d7a36fa09a2b8a03068eb7e932/pysam-0.20.0.tar.gz")
@@ -22,5 +22,10 @@ class PyPysam(PythonPackage):
     version("0.15.1", sha256="658421124c2f3de1b7445e03ca8413df0077f67ea9980abdaab0d1b5f7a8936f", url="https://pypi.org/packages/73/59/c319f1bde3019bbce4583cecb12b9e3e52ffcfbe2c96d8b1fb131c0d4fb7/pysam-0.15.1.tar.gz")
     version("0.14.1", sha256="2e86f5228429d08975c8adb9030296699012a8deba8ba26cbfc09b374f792c97", url="https://pypi.org/packages/fc/9b/4bb8d016406dcff47e2866e14d3dcb10741ec3920649e8c521996830944f/pysam-0.14.1.tar.gz")
     version("0.7.7", sha256="c9f3018482eec99ee199dda3fdef2aa7424dde6574672a4c0d209a10985755cc", url="https://pypi.org/packages/46/b5/877f40fbb84f588b69b4afcb1409b8bdeed7ef980113d3e8ef69bab26e09/pysam-0.7.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

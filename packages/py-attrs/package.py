@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAttrs(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("23.2.0", sha256="99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", url="https://pypi.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl")
     version("23.1.0", sha256="1f28b4522cdc2fb4256ac1a020c78acf9cba2c6b461ccd2c126f3aa8e8335d04", url="https://pypi.org/packages/f0/eb/fcb708c7bf5056045e9e98f62b93bd7467eb718b0202e7698eb11d66416c/attrs-23.1.0-py3-none-any.whl")
     version("22.2.0", sha256="29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836", url="https://pypi.org/packages/fb/6e/6f83bf616d2becdf333a1640f1d463fef3150e2e926b7010cb0f81c95e88/attrs-22.2.0-py3-none-any.whl")
@@ -23,5 +23,10 @@ class PyAttrs(PythonPackage):
     version("19.1.0", sha256="69c0dbf2ed392de1cb5ec704444b08a5ef81680a61cb899dc08127123af36a79", url="https://pypi.org/packages/23/96/d828354fa2dbdf216eaa7b7de0db692f12c234f7ef888cc14980ef40d1d2/attrs-19.1.0-py2.py3-none-any.whl")
     version("18.1.0", sha256="4b90b09eeeb9b88c35bc642cbac057e45a5fd85367b985bd2809c62b7b939265", url="https://pypi.org/packages/41/59/cedf87e91ed541be7957c501a92102f9cc6363c623a7666d69d51c78ac5b/attrs-18.1.0-py2.py3-none-any.whl")
     version("16.3.0", sha256="c59426b15b45e39a7bc408eb6ba7e7188d9532764f873cc691199ddd975c97ef", url="https://pypi.org/packages/bb/6c/730710c765ab6d4493f460196ab003671d27b38568412a780fc67532b47c/attrs-16.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

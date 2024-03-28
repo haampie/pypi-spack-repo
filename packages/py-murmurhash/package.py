@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMurmurhash(PythonPackage):
+    # BEGIN VERSIONS
     version("1.0.10", sha256="5282aab1317804c6ebd6dd7f69f15ba9075aee671c44a34be2bde0f1b11ef88a", url="https://pypi.org/packages/6e/07/56f98a57698e6abf80e58d6c93a0422fd3f443f5b4dad06e83e8a3729ab1/murmurhash-1.0.10.tar.gz")
     version("1.0.9", sha256="fe7a38cb0d3d87c14ec9dddc4932ffe2dbc77d75469ab80fd5014689b0e07b58", url="https://pypi.org/packages/f6/24/30e74dc5970f357a897b3ec0fd44e1330c3f5fabefcfa0bc54c80b7ee0a5/murmurhash-1.0.9.tar.gz")
     version("1.0.8", sha256="8bb03aad842837a64b0c1d2ed22b50eba85f9fa51476c8bc0a77c366a979f1f3", url="https://pypi.org/packages/d0/ec/e42c4df7fd7fa9bcd6c29b6de8d0f11e42db37f9c8ebfef2a2b1d8adf669/murmurhash-1.0.8.tar.gz")
@@ -18,5 +18,10 @@ class PyMurmurhash(PythonPackage):
     version("1.0.3", sha256="0b5f0373ec0d8c86fb8f46c549c71f4ab4227b69464f8b64b973bd3531e49962", url="https://pypi.org/packages/39/ab/4e3c27d6b75f4fe28acdf4af5e901318db851f8f20639b634af4204efda9/murmurhash-1.0.3.tar.gz")
     version("1.0.2", sha256="c7a646f6b07b033642b4f52ae2e45efd8b80780b3b90e8092a0cec935fbf81e2", url="https://pypi.org/packages/22/e9/411be1845f1ac07ae3bc40a4b19ba401819baed4fa63b4f5ef28b2300eb4/murmurhash-1.0.2.tar.gz")
     version("1.0.1", sha256="38e91cd5ae5192b8f63cfe756cc784bf0cd44f64a15e496ba0a6fddda3f48b0b", url="https://pypi.org/packages/e3/9d/70bcac78cf411af9e07d5e62b8fd9998c8b42519fbb8b08973bed35c982c/murmurhash-1.0.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

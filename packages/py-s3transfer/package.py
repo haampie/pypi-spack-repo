@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyS3transfer(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.10.1", sha256="ceb252b11bcf87080fb7850a224fb6e05c8a776bab8f2b64b7f25b969464839d", url="https://pypi.org/packages/83/37/395cdb6ee92925fa211e55d8f07b9f93cf93f60d7d4ce5e66fd73f1ea986/s3transfer-0.10.1-py3-none-any.whl")
     version("0.10.0", sha256="3cdb40f5cfa6966e812209d0994f2a4709b561c88e90cf00c2696d2df4e56b2e", url="https://pypi.org/packages/12/bb/7e7912e18cd558e7880d9b58ffc57300b2c28ffba9882b3a54ba5ce3ebc4/s3transfer-0.10.0-py3-none-any.whl")
     version("0.9.0", sha256="01d4d2c35a016db8cb14f9a4d5e84c1f8c96e7ffc211422555eed45c11fa7eb1", url="https://pypi.org/packages/fd/fb/46eda754e80fa2efd82981e37cd75cabbecef71df63843e6e94e12fae9db/s3transfer-0.9.0-py3-none-any.whl")
@@ -30,9 +30,14 @@ class PyS3transfer(PythonPackage):
     version("0.3.1", sha256="80ed96731b3bd77395cd6197246069092015e1124164b2c152c8f741a823dd04", url="https://pypi.org/packages/de/6d/27abf73e66a05726dd52fb3a6645417b5dc86d90488b59589296dafbf054/s3transfer-0.3.1-py2.py3-none-any.whl")
     version("0.3.0", sha256="2157640a47c8b8fa2071bdd7b0d57378ec8957eede3bd083949c2dcc4d9b0dd4", url="https://pypi.org/packages/d5/29/2a79d0223617d255eccac5fd9c147d65ee32f9aabe0e47ab75fd7568af24/s3transfer-0.3.0-py2.py3-none-any.whl")
     version("0.2.1", sha256="b780f2411b824cb541dbcd2c713d0cb61c7d1bcadae204cdddda2b35cef493ba", url="https://pypi.org/packages/16/8a/1fc3dba0c4923c2a76e1ff0d52b305c44606da63f718d14d3231e21c51b0/s3transfer-0.2.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-botocore@1.33.2:", when="@0.8.1:")
         depends_on("py-botocore@1.12.36:", when="@0.3.4:0.7")
         depends_on("py-futures@2.2:", when="@0.3.5")
+    # END DEPENDENCIES
 

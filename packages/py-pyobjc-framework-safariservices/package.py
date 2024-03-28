@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkSafariservices(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="723de09afb718b05d03cbbed42f90d36356294b038ca6422c88d50240047b067", url="https://pypi.org/packages/19/dd/df3b26cd620ec9dcb7ce58c6ceb67831fb1f430e36e9c4f5b582ffe9b62a/pyobjc-framework-SafariServices-10.2.tar.gz")
     version("10.1", sha256="5a9105d3aea43cd214583acd06609f56ed704ce816cb103916324e8ed8388fce", url="https://pypi.org/packages/e7/67/ec37c91435ae7e1f86522cf3d0e536522ce96dac85f2a5d5f74470b12f87/pyobjc-framework-SafariServices-10.1.tar.gz")
     version("10.0", sha256="7f7a477b77b17161e22bdddc8a16fb3000eeccc430a730cb144e1a84a5f6e4e3", url="https://pypi.org/packages/f0/7a/f30aa5a29d37caa63d62a1560cbe2255921a3d59f69e4b90650517e65060/pyobjc-framework-SafariServices-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkSafariservices(PythonPackage):
     version("9.0", sha256="be32f4d4a010fb68b71782f1ee1787de9c7507171ccccb5937c63cfb3cc3fe01", url="https://pypi.org/packages/e8/11/5c57a61af4e4b0f75b2f6af44a179d6919bbd3952e38d0adf98f655ad6b1/pyobjc-framework-SafariServices-9.0.tar.gz")
     version("8.5.1", sha256="551a8ec407d455288efa8b31a5f50b4607399e53a0f41283d958709c87fee20d", url="https://pypi.org/packages/3d/ef/d2608316c502269b1a343ca905b4f318a66359db78074f3c545f4861e6ab/pyobjc-framework-SafariServices-8.5.1.tar.gz")
     version("8.5", sha256="eb802ef43ad8c39aebcd2ff4a03db4d6d6ba3a2cbf65a377c0a5676003dd8da2", url="https://pypi.org/packages/54/3b/4d28911c26fe3c39e41a09d9647ef55b32353fac6586a084eb092dcbf35c/pyobjc-framework-SafariServices-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkSafariservices(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

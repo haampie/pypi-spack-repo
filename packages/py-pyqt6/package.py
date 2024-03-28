@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyqt6(PythonPackage):
+    # BEGIN VERSIONS
     version("6.6.1", sha256="9f158aa29d205142c56f0f35d07784b8df0be28378d20a97bcda8bd64ffd0379", url="https://pypi.org/packages/8c/2b/6fe0409501798abc780a70cab48c39599742ab5a8168e682107eaab78fca/PyQt6-6.6.1.tar.gz")
     version("6.6.0", sha256="d41512d66044c2df9c5f515a56a922170d68a37b3406ffddc8b4adc57181b576", url="https://pypi.org/packages/17/dc/969e2da415597b328e6a73dc233f9bb4f2b312889180e9bbe48470c957e7/PyQt6-6.6.0.tar.gz")
     version("6.5.3", sha256="bcbbf9511b038b4924298ca10999aa36eb37a0a38d0638f895f9bba6025c0a77", url="https://pypi.org/packages/18/b8/74667c8108d8481b87f8d87e6d962b64eb53ea21432cdbfbfeee4d2b4430/PyQt6-6.5.3.tar.gz")
@@ -17,8 +17,15 @@ class PyPyqt6(PythonPackage):
     version("6.4.1", sha256="0c1dcadf161331cfdbde0906c05f7f8048dc4907d717647c33bbc4404146f59f", url="https://pypi.org/packages/8a/a6/12565a8b14faaeb3ecf3edb5bc1e6bcb622dab776c23ea4eb4c369176c75/PyQt6-6.4.1.tar.gz")
     version("6.4.0", sha256="91392469be1f491905fa9e78fa4e4059a89ab616ddf2ecfd525bc1d65c26bb93", url="https://pypi.org/packages/b2/c9/266b12a9826452e387f0ff4f0b4bbd29e11d2de81a5f60c0975933b34e7f/PyQt6-6.4.0.tar.gz")
     version("6.3.1", sha256="8cc6e21dbaf7047d1fc897e396ccd9710a12f2ef976563dad65f06017d2c9757", url="https://pypi.org/packages/a3/ab/c5989de70eceed91abf5f828d99817462ff75f41558e9f5a6f5213f0932c/PyQt6-6.3.1.tar.gz")
+    version("6.3.0", sha256="4fd85dcb15ea4e734b6e4e216fe9a6246779761edaf2cf7c0cce1a2303a8d31b", url="https://pypi.org/packages/1a/54/793f2a2408fd7774361faf99ecf1e276e787e0cbc3062161e2c54d94df33/PyQt6-6.3.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyqt6-sip@13.6:", when="@6.5.3:")
         depends_on("py-pyqt6-sip@13.4:", when="@6.3.1:6.5.2")
+        depends_on("py-pyqt6-sip@13.2:", when="@6.2.2:6.3.0")
+    # END DEPENDENCIES
 

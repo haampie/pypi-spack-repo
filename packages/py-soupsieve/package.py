@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySoupsieve(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.5", sha256="eaa337ff55a1579b6549dc679565eac1e3d000563bcb1c8ab0d0fefbc0c2cdc7", url="https://pypi.org/packages/4c/f3/038b302fdfbe3be7da016777069f26ceefe11a681055ea1f7817546508e3/soupsieve-2.5-py3-none-any.whl")
     version("2.4.1", sha256="1c1bfee6819544a3447586c889157365a27e10d88cde3ad3da0cf0ddf646feb8", url="https://pypi.org/packages/49/37/673d6490efc51ec46d198c75903d99de59baffdd47aea3d071b80a9e4e89/soupsieve-2.4.1-py3-none-any.whl")
     version("2.4", sha256="49e5368c2cda80ee7e84da9dbe3e110b70a4575f196efb74e51b94549d921955", url="https://pypi.org/packages/d2/70/2c92d7bc961ba43b7b21032b7622144de5f97dec14b62226533f6940798e/soupsieve-2.4-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PySoupsieve(PythonPackage):
     version("2.1", sha256="4bb21a6ee4707bf43b61230e80740e71bfe56e55d1f1f50924b087bb2975c851", url="https://pypi.org/packages/02/fb/1c65691a9aeb7bd6ac2aa505b84cb8b49ac29c976411c6ab3659425e045f/soupsieve-2.1-py3-none-any.whl")
     version("1.9.6", sha256="feb1e937fa26a69e08436aad4a9037cd7e1d4c7212909502ba30701247ff8abd", url="https://pypi.org/packages/39/36/f35056eb9978a622bbcedc554993d10777e3c6ff1ca24cde53f4be9c5fc4/soupsieve-1.9.6-py2.py3-none-any.whl")
     version("1.9.3", sha256="a5a6166b4767725fd52ae55fee8c8b6137d9a51e9f1edea461a062a759160118", url="https://pypi.org/packages/0b/44/0474f2207fdd601bb25787671c81076333d2c80e6f97e92790f8887cf682/soupsieve-1.9.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTimm(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.9.16", sha256="bf5704014476ab011589d3c14172ee4c901fd18f9110a928019cac5be2945914", url="https://pypi.org/packages/68/99/2018622d268f6017ddfa5ee71f070bad5d07590374793166baa102849d17/timm-0.9.16-py3-none-any.whl")
     version("0.9.12", sha256="2a828afac5b710a80ec66d0f85807e171e342faf5c0703b33102d8aa206f19dc", url="https://pypi.org/packages/01/a5/eeb717242343d9ca34e7de554a6c08d96a0cfc7005ece4f847b1753581a6/timm-0.9.12-py3-none-any.whl")
     version("0.9.11", sha256="02bba56786633ff46b55ee0ce3b991fa85375556844e500ad18e6b12921dc3da", url="https://pypi.org/packages/76/aa/4b54f6047c442883243f68f6f9e3a0ab77aaae4b3e6e51a98b371e73dd77/timm-0.9.11-py3-none-any.whl")
@@ -27,7 +27,11 @@ class PyTimm(PythonPackage):
     version("0.6.2.dev0", sha256="438f5891752c9ecb96b9c6d5f6963323c052f6d4b4ed8c9da4475bca2c340010", url="https://pypi.org/packages/d4/69/c5b24d2cd9e5171b4d93eda1bc42b4bf5c2bd52010d32b8c53fe78710775/timm-0.6.2.dev0-py3-none-any.whl")
     version("0.5.4", sha256="0592c8fd2d46d0769c0b7e954b3dacea93769eee40dabb4bd7f2acb85243b588", url="https://pypi.org/packages/49/65/a83208746dc9c0d70feff7874b49780ff110810feb528df4b0ecadcbee60/timm-0.5.4-py3-none-any.whl")
     version("0.4.12", sha256="dba6b1702b7d24bf9f0f1c2fc394b4ee28f93cde5404f1dc732d63ccd00533b6", url="https://pypi.org/packages/90/fc/606bc5cf46acac3aa9bd179b3954433c026aaf88ea98d6b19f5d14c336da/timm-0.4.12-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-huggingface-hub", when="@0.6.11:")
         depends_on("py-pyyaml", when="@0.6.11:")
@@ -36,4 +40,5 @@ class PyTimm(PythonPackage):
         depends_on("py-torch@1.7:", when="@0.6.11:0.9.12")
         depends_on("py-torch@1.4:", when="@0.2,0.3.4:0.6.7")
         depends_on("py-torchvision")
+    # END DEPENDENCIES
 

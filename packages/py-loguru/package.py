@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLoguru(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.2", sha256="003d71e3d3ed35f0f8984898359d65b79e5b21943f78af86aa5491210429b8eb", url="https://pypi.org/packages/03/0a/4f6fed21aa246c6b49b561ca55facacc2a44b87d65b8b92362a8e99ba202/loguru-0.7.2-py3-none-any.whl")
     version("0.7.1", sha256="046bf970cb3cad77a28d607cbf042ac25a407db987a1e801c7f7e692469982f9", url="https://pypi.org/packages/19/a9/4e91197b121a41c640367641a510fd9a05bb7a3259fc9678ee2976c8fd00/loguru-0.7.1-py3-none-any.whl")
     version("0.7.0", sha256="b93aa30099fa6860d4727f1b81f8718e965bb96253fa190fab2077aaad6d15d3", url="https://pypi.org/packages/71/bd/337f7a0cd2628c4c77512d78e26f93b13c327a2ddf2132001dd78c000bf4/loguru-0.7.0-py3-none-any.whl")
@@ -19,11 +19,16 @@ class PyLoguru(PythonPackage):
     version("0.4.0", sha256="6e3e8d865201f5a301a4eb7563f4c9e979d80fbe6f6fa919b3e3a7e095106c7b", url="https://pypi.org/packages/57/dd/be19f64691d250bbd98906254307abd626dbbd674b019a313f57d6338bc7/loguru-0.4.0-py3-none-any.whl")
     version("0.3.0", sha256="85408b9552adb9a795af102221c7517f35c8b56ffe7b43d98d37e883283854de", url="https://pypi.org/packages/4a/59/9deeeba62ecfcb771c0e76d63fab565e2c229e1e418d0c410d9313fa7a4c/loguru-0.3.0-py3-none-any.whl")
     version("0.2.5", sha256="ebac59630946721fd6207264679b267a8bdc290b086226067d6aad86830e3123", url="https://pypi.org/packages/c4/2d/2861600f1abed3c85e157c78308d3b1de974ad64d67de852a79da9ae7205/loguru-0.2.5-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ansimarkup@1.4:", when="@:0.2")
         depends_on("py-better-exceptions-fork@0.2.1.post6:", when="@:0.2")
         depends_on("py-colorama@0.3.4:", when="@0.3: platform=windows")
         depends_on("py-colorama@0.3.4:", when="@0.2.3:0.2")
         depends_on("py-win32-setctime", when="@0.3: platform=windows")
+    # END DEPENDENCIES
 

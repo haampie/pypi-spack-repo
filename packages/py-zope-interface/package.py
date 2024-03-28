@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyZopeInterface(PythonPackage):
+    # BEGIN VERSIONS
     version("6.2", sha256="3b6c62813c63c543a06394a636978b22dffa8c5410affc9331ce6cdb5bfa8565", url="https://pypi.org/packages/cd/37/1b003190ba7148226a8212d98ff8074e212fef30c82e616bdb818ae1f838/zope.interface-6.2.tar.gz")
     version("6.1", sha256="2fdc7ccbd6eb6b7df5353012fbed6c3c5d04ceaca0038f75e601060e95345309", url="https://pypi.org/packages/87/03/6b85c1df2dca1b9acca38b423d1e226d8ffdf30ebd78bcb398c511de8b54/zope.interface-6.1.tar.gz")
     version("6.0", sha256="aab584725afd10c710b8f1e6e208dbee2d0ad009f57d674cb9d1b3964037275d", url="https://pypi.org/packages/7a/62/f0d012151af1e8cc0a6c97db74b78141143425dcdf81bc7960c498e28960/zope.interface-6.0.tar.gz")
@@ -19,7 +19,12 @@ class PyZopeInterface(PythonPackage):
     version("5.1.2", sha256="c9c8e53a5472b77f6a391b515c771105011f4b40740ce53af8428d1c8ca20004", url="https://pypi.org/packages/e5/4f/86e90a34419df9c32a6e88b06f18233cffe93a236f7d2690f707c816fbe6/zope.interface-5.1.2.tar.gz")
     version("5.1.0", sha256="40e4c42bd27ed3c11b2c983fecfb03356fae1209de10686d03c02c8696a1d90e", url="https://pypi.org/packages/af/d2/9675302d7ced7ec721481f4bbecd28a390a8db4ff753d28c64057b975396/zope.interface-5.1.0.tar.gz")
     version("4.5.0", sha256="57c38470d9f57e37afb460c399eb254e7193ac7fb8042bd09bdc001981a9c74c", url="https://pypi.org/packages/ac/8a/657532df378c2cd2a1fe6b12be3b4097521570769d4852ec02c24bd3594e/zope.interface-4.5.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-setuptools", when="@4.4.2,4.6,6.1:")
+    # END DEPENDENCIES
 

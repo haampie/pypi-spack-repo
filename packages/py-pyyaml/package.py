@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyyaml(PythonPackage):
+    # BEGIN VERSIONS
     version("6.0.1", sha256="bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43", url="https://pypi.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz")
     version("6.0", sha256="68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2", url="https://pypi.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz")
     version("6.0-beta1", sha256="40f637ea3333c0969c3f4127393a5f908f40f7e85605f9e6f568cff2c66849ef", url="https://pypi.org/packages/ac/2b/f872e3b78e6b2471c00e559bef89a89715888538dd3fa87528afa669ae08/PyYAML-6.0b1.tar.gz")
@@ -27,5 +27,12 @@ class PyPyyaml(PythonPackage):
     version("3.13-beta1", sha256="8a3dd5b3cfae5240925b66884d22cf6a80d1c5991863ef0b836fda2e2bcccc49", url="https://pypi.org/packages/d2/44/f2f50916afc03f48bd2bea7ff87fc73bb3d6454544b6c1267535ed87ad9b/PyYAML-3.13b1.tar.gz")
     version("3.12", sha256="5ac82e411044fb129bae5cfbeb3ba626acb2af31a8d17d175004b70862a741a7", url="https://pypi.org/packages/6b/f0/a0250248ea260d55748fff586d89a32afbb22656f4498b08d2636a48d4ec/PyYAML-3.12.zip")
     version("3.11", sha256="19bb3ac350ef878dda84a62d37c7d5c17a137386dde9c2ce7249c7a21d7f6ac9", url="https://pypi.org/packages/04/60/abfb3a665ee0569b60c89148b7187ddd8a36cb65e254fba945ae1315645d/PyYAML-3.11.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("libyaml", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

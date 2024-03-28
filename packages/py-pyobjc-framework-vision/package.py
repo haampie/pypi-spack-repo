@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkVision(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="722e0a6da64738b5fc3c763a102445cad5892c0af94597637e89455099da397e", url="https://pypi.org/packages/9e/ed/5a3de32f0f4d3695ce56de84670c2e02df2f148202874cb70447c8151fbd/pyobjc-framework-Vision-10.2.tar.gz")
     version("10.1", sha256="ff50fb7577be8d8862a076a6cde5ebdc9ef07d9045e2158faaf0f04b5b051208", url="https://pypi.org/packages/48/25/aeedf7fa5aae3082c0667ee1272b631a43b6e67c92445da80e696f53c6ed/pyobjc-framework-Vision-10.1.tar.gz")
     version("10.0", sha256="c78244e68b7601682f0940b3d205ca087db4177e3fcc17ee29ae6f0fa811f492", url="https://pypi.org/packages/72/e4/70263373da55492fa16d707080765baaaa628e62d402346907534885b11f/pyobjc-framework-Vision-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkVision(PythonPackage):
     version("9.0", sha256="f9a9e4433d06336fad3849faefb9ef5b5d25dd4e45ef9e49e93bbbb4ddbcc7ae", url="https://pypi.org/packages/7e/58/0d434adde75f9d274cedd5391c2dc5fc88efd798ed958e9498223a864030/pyobjc-framework-Vision-9.0.tar.gz")
     version("8.5.1", sha256="a8e33ea8fd693d4ebdc484e70e92d416607d15af2004ee19dd7b8372a1eecf45", url="https://pypi.org/packages/cc/4d/c7345694003a7643b8de83dff048fff832cbeed5c22649a1f9e92802d9d2/pyobjc-framework-Vision-8.5.1.tar.gz")
     version("8.5", sha256="0c05ffd6195a7ed0329f55feca2956fbeb60b4369b384f246c8673539abbebdc", url="https://pypi.org/packages/6b/9d/ddce5297177c99b3ff21d8f7f67252325a797841e4f23009e1a504e5a7e7/pyobjc-framework-Vision-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -31,4 +35,5 @@ class PyPyobjcFrameworkVision(PythonPackage):
         depends_on("py-pyobjc-framework-quartz@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-quartz@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-quartz@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

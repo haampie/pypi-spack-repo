@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRadiantMlhub(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.5.5", sha256="f5d1785da5357db55261f593c097fbd5a93c6be5f7167c1388ff5eb6d04db539", url="https://pypi.org/packages/98/99/00a8ebc4784a9237bf058f723fbe9ffca60f9b457cc58bb289cf076175b1/radiant_mlhub-0.5.5-py3-none-any.whl")
     version("0.5.3", sha256="846c3b9b9409059699be2420478c1ba251c5f2e626a470e78c89de7d73832442", url="https://pypi.org/packages/95/d9/4b76f01acfe0b363d5f8285c054ee044b0d28965b6032d8689ddc4012a87/radiant_mlhub-0.5.3-py3-none-any.whl")
     version("0.5.2", sha256="5f875e3e377122c1607ce70e1fb5c30ad04537b9c68f66ad71f1113b66c1ebdd", url="https://pypi.org/packages/91/7d/d73ef337836e1d515c5c49cc1efb3b5c3091e7eaca4906a7218262bf7ae3/radiant_mlhub-0.5.2-py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyRadiantMlhub(PythonPackage):
     version("0.2.2", sha256="fe3bf4d66e26b8b7071f9fa1d2196a8b894312b4244f16389f02d027fd0cac99", url="https://pypi.org/packages/da/7b/6f515a5a114e0732acf008f185b6ffe1f895ede0eb674de134f35a5a2dc0/radiant_mlhub-0.2.2-py3-none-any.whl")
     version("0.2.1", sha256="02d9b56cdddee25665fc650abead516789709ebbc1837d77c69edfd2493b093f", url="https://pypi.org/packages/d0/9d/7e226b0bd483260fa309d10bc6cb68ffbd965825d795055e3a4dd002635b/radiant_mlhub-0.2.1-py3-none-any.whl")
     version("0.2.0", sha256="cbb68a0d0ea56bd0999c4112627448dc3543c0ffeda035e6743c4f1439d2531a", url="https://pypi.org/packages/75/d4/7e7fadd4a519c43977fb6d4026fc0d130db3fc05fbbc4a7167105aa75636/radiant_mlhub-0.2.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click@7.1.2:", when="@0.3:")
         depends_on("py-click@7.1.2:7", when="@0.1:0.2")
@@ -41,4 +45,5 @@ class PyRadiantMlhub(PythonPackage):
         depends_on("py-tqdm@4.56:", when="@0.3:0.4")
         depends_on("py-tqdm@4.56", when="@0.1:0.2")
         depends_on("py-urllib3@1.26.11:1", when="@0.5.5:")
+    # END DEPENDENCIES
 

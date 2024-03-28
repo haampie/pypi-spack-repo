@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPlotly(PythonPackage):
+    # BEGIN VERSIONS
     version("5.20.0", sha256="837a9c8aa90f2c0a2f0d747b82544d014dc2a2bdde967b5bb1da25b53932d1a9", url="https://pypi.org/packages/00/4e/6258fc3b26f1f7abd1b2e75b1e9e4f12f13584136e2e1549f995ff4c6b7b/plotly-5.20.0-py3-none-any.whl")
     version("5.19.0", sha256="906abcc5f15945765328c5d47edaa884bc99f5985fbc61e8cd4dc361f4ff8f5a", url="https://pypi.org/packages/27/ae/c9fb759b36bc55ccc382b647d1afc23c2a860be8e835f96249996d0aa4df/plotly-5.19.0-py3-none-any.whl")
     version("5.18.0", sha256="23aa8ea2f4fb364a20d34ad38235524bd9d691bf5299e800bca608c31e8db8de", url="https://pypi.org/packages/a8/07/72953cf70e3bd3a24cbc3e743e6f8539abe6e3e6d83c3c0c83426eaffd39/plotly-5.18.0-py3-none-any.whl")
@@ -19,9 +19,14 @@ class PyPlotly(PythonPackage):
     version("5.13.1", sha256="f776a5c664908450c6c1727f61e8e2e22798d9c6c69d37a9057735365084a2fa", url="https://pypi.org/packages/f7/f5/c5b30c0a6639f076615d56f628f507ae20388e8f8769aef99ce5ea2033c8/plotly-5.13.1-py2.py3-none-any.whl")
     version("5.2.2", sha256="25ad75f8944c950b01811b4521f39104ce0ede92ebf7821aef74ba6530a63fab", url="https://pypi.org/packages/79/d2/2e1fecbfe211edd0ad188e895a01f03e6ffd636639d7344b316ed7606d68/plotly-5.2.2-py2.py3-none-any.whl")
     version("2.2.0", sha256="ca668911ffb4d11fed6d7fbb12236f8ecc6a7209db192326bcb64bdb41451a58", url="https://pypi.org/packages/55/ec/470525656ec15dc6907bf70d9b9630bd518364eef21b3c73bf7a40ca0474/plotly-2.2.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-packaging", when="@5.14:")
         depends_on("py-six", when="@3.1.1-rc1:3.1,3.2.0-alpha2:3.6.0-rc1,3.6.1:5.7")
         depends_on("py-tenacity@6.2:", when="@5:")
+    # END DEPENDENCIES
 

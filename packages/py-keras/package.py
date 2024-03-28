@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKeras(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.1.1", sha256="b5d45f0b5116b11db502da00bd501592364325d01724e6cb2032711e3e32677e", url="https://pypi.org/packages/59/a8/d94e8acb59d678d908fe1db0c7ad89dfa2c2e2e529eeb3c2b3cc218a758d/keras-3.1.1-py3-none-any.whl")
     version("3.1.0", sha256="7a7c35cc3a3292a4a0e2170bc36b6439240bd9e2ae21d8f0c3eb7068e8160908", url="https://pypi.org/packages/38/28/63b0e7851c36dcb1a10757d598c68cc1e48a669bdb63bfdd9a1b9b1c643f/keras-3.1.0-py3-none-any.whl")
     version("3.0.5", sha256="4a022f2e97ea5a3db12ed809ffcb7ce1ef8d34feaeac52315ec8553ded2dcf97", url="https://pypi.org/packages/b0/b2/104733bb67fde86f3d10010f0b5c93cfa1d5bf552f904584cf9e5b3ba719/keras-3.0.5-py3-none-any.whl")
@@ -37,7 +37,13 @@ class PyKeras(PythonPackage):
     version("2.2.2", sha256="253cce021d73fa6d6e69e740bd985d6e2419dcb9fca96b2c8dbdd1736e3ec68d", url="https://pypi.org/packages/34/7d/b1dedde8af99bd82f20ed7e9697aac0597de3049b1f786aa2aac3b9bd4da/Keras-2.2.2-py2.py3-none-any.whl")
     version("2.2.1", sha256="64633419cb4ca46402b1da1ae76b19e23913131a0e43b2fa0afa276f187c14be", url="https://pypi.org/packages/62/51/0192489a2614e8c6a22de860e43221e566f4bbd44a047ff48c2fdbc59373/Keras-2.2.1-py2.py3-none-any.whl")
     version("2.2.0", sha256="fa71a1f576dbd643532b872b8952afb65cc3ff7ed20d172e6b49657b710b43d0", url="https://pypi.org/packages/68/12/4cabc5c01451eb3b413d19ea151f36e33026fc0efb932bf51bcaf54acbf5/Keras-2.2.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("backend", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.14,3:")
         depends_on("py-absl-py", when="@3:")
@@ -62,4 +68,5 @@ class PyKeras(PythonPackage):
         depends_on("py-six@1.9:", when="@2.0.8:2.3")
         depends_on("py-tensorflow", when="@2.4.1")
         depends_on("py-tensorflow@2.2.0:", when="@2.4:2.4.0")
+    # END DEPENDENCIES
 

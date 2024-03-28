@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPycryptodome(PythonPackage):
+    # BEGIN VERSIONS
     version("3.20.0", sha256="09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7", url="https://pypi.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz")
     version("3.19.1", sha256="8ae0dd1bcfada451c35f9e29a3e5db385caabc190f98e4a80ad02a61098fb776", url="https://pypi.org/packages/b1/38/42a8855ff1bf568c61ca6557e2203f318fb7afeadaf2eb8ecfdbde107151/pycryptodome-3.19.1.tar.gz")
     version("3.19.0", sha256="bc35d463222cdb4dbebd35e0784155c81e161b9284e567e7e933d722e533331e", url="https://pypi.org/packages/1a/72/acc37a491b95849b51a2cced64df62aaff6a5c82d26aca10bc99dbda025b/pycryptodome-3.19.0.tar.gz")
@@ -17,5 +17,10 @@ class PyPycryptodome(PythonPackage):
     version("3.14.1", sha256="e04e40a7f8c1669195536a37979dd87da2c32dbdc73d6fe35f0077b0c17c803b", url="https://pypi.org/packages/32/09/41ea2633fea5b973dac9829de871b417ff3ce2963d07fd92e3f2d2a9ee9b/pycryptodome-3.14.1.tar.gz")
     version("3.14.0", sha256="ceea92a4b8ba6c50d8d70f2efbb4ea14b002dac4160ce4dda33f1b7442f8158a", url="https://pypi.org/packages/7e/1a/0dd70814ba29f7f6511a32d168d7fe9a175166ee92459869e03c6daeacd4/pycryptodome-3.14.0.tar.gz")
     version("3.13.0", sha256="95bacf9ff7d1b90bba537d3f5f6c834efe6bfbb1a0195cb3573f29e6716ef08d", url="https://pypi.org/packages/72/8e/9249abf44e184905b2f610ddb5dc8eccec7ab5e91109fc6df2be8647ae46/pycryptodome-3.13.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

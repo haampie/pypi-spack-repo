@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPath(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("16.10.0", sha256="902afa16e63943c1d6f14d9f74a6603beaa56980807e0234098256fd0ac33fed", url="https://pypi.org/packages/0e/a8/68e6d2f261bc606d944fec81cbbb42d622d2d677359868ef4e9bdb7a6243/path-16.10.0-py3-none-any.whl")
     version("16.9.0", sha256="d78c59194bce7362aae4798540f10bafa3eede0153a477556b23e915428f707d", url="https://pypi.org/packages/9c/b1/bd656b3187552080182d3d30f2ac4dd5a239fd0ae3ef773602b8882d4644/path-16.9.0-py3-none-any.whl")
     version("16.8.0", sha256="163e079e69700f638b41745f5e069e5e50810b263b36e87e5ac7cbeee5ab18d1", url="https://pypi.org/packages/bc/d6/937ec5455b88e1810ccf4c632692969e7e5bc5116d7bac5b6a5aa494112a/path-16.8.0-py3-none-any.whl")
@@ -19,5 +19,10 @@ class PyPath(PythonPackage):
     version("16.2.0", sha256="340054c5bb459fc9fd40e7eb6768c5989f3e599d18224238465b5333bc8faa7d", url="https://pypi.org/packages/3a/33/cf93f8875e7b79f2bd5fe3c490952f4a53a8952967533e4f6af16c30455e/path-16.2.0-py3-none-any.whl")
     version("13.1.0", sha256="41f0db0b6e32b3fc33c0bede630f6b58c7790af3a27c899e0c7ff69143d8696d", url="https://pypi.org/packages/4d/24/5827e075036b5bb6b538f71bf39574d4a8024c5df51206cb9d6739e24d94/path-13.1.0-py3-none-any.whl")
     version("13.0.0", sha256="917af40877eb18f814e657e2626731128c831536b2c7562ed8078b8a2e5fe2e9", url="https://pypi.org/packages/7c/d3/19effb6328caed6cd54faa0a56c80346a8bdb5fa207c6ff18ff803ddc883/path-13.0.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

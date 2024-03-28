@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHatchling(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.22.3", sha256="f6602529d17f4c91123b4ffbcd4e0f143d92ba9603716edab4a83785f66e2942", url="https://pypi.org/packages/2d/31/b4ffda996d1e21bb7096fd377b0437f4925351c2f60dbe9563e83705744c/hatchling-1.22.3-py3-none-any.whl")
     version("1.22.2", sha256="5fdf7b689c1e76cf280bfe002e5e3d7efe99f63e559d2dc3e5d5f49de489d57d", url="https://pypi.org/packages/7d/a4/c69d252d72d61591c2f9354f30fe39927256ec0615f77d16d419a7b98d28/hatchling-1.22.2-py3-none-any.whl")
     version("1.22.1", sha256="4715939b657441c050e1b11fd8f13359dcd650eb36d7d5bfcbb305604408af3a", url="https://pypi.org/packages/42/d4/7efdf54bdf0005a1da0359753123a45a7f3b8a03df3135ece52f8d2600e9/hatchling-1.22.1-py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyHatchling(PythonPackage):
     version("1.10.0", sha256="fb28c3106247022da0e794899502e3164d4a3ccf8f55b1826ff72ee1af087046", url="https://pypi.org/packages/26/d3/fca2fb066cd41967b6f0041bc57c34d02aeef43f23590875618635afbc0c/hatchling-1.10.0-py3-none-any.whl")
     version("1.8.1", sha256="09171ed1404e636ef572b370d34c5cb36a8029825c0a7859ac93989080ba2630", url="https://pypi.org/packages/19/93/bd81c789331a317351b2887a508843804de1414d9455a37bce78f6722c25/hatchling-1.8.1-py3-none-any.whl")
     version("1.4.1", sha256="c26200c9ec13f58ffb48bfb067ffd6bb90ba4d9c24f1d7e932ef58aa9621477d", url="https://pypi.org/packages/5e/fc/8265418d0605309e7458a1dd63c7071920763a40578be50a0aa9800d7b28/hatchling-1.4.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-editables@0.3:", when="@0.23:1.21")
         depends_on("py-packaging@21.3:", when="@0.20:")
@@ -33,4 +37,5 @@ class PyHatchling(PythonPackage):
         depends_on("py-tomli@1.2.2:", when="@0.23: ^python@:3.10")
         depends_on("py-tomli@1.2.2:", when="@0.20:0.22")
         depends_on("py-trove-classifiers", when="@1.14:")
+    # END DEPENDENCIES
 

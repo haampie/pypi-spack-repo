@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySemanticVersion(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.10.0", sha256="de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177", url="https://pypi.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl")
     version("2.9.0", sha256="db2504ab37902dd2c9876ece53567aa43a5b2a417fbe188097b2048fff46da3d", url="https://pypi.org/packages/64/ac/df31047966c4d0293e7bd16276ebc9f6654de36ad8e19061a09369380c0a/semantic_version-2.9.0-py2.py3-none-any.whl")
     version("2.8.5", sha256="45e4b32ee9d6d70ba5f440ec8cc5221074c7f4b0e8918bdab748cc37912440a9", url="https://pypi.org/packages/a5/15/00ef3b7888a10363b7c402350eda3acf395ff05bebae312d1296e528516a/semantic_version-2.8.5-py2.py3-none-any.whl")
@@ -17,6 +17,11 @@ class PySemanticVersion(PythonPackage):
     version("2.8.0", sha256="35f8b1f37e8a1d0b6e476b3b55546d0de572bb345b4ff8e82faddb799d614888", url="https://pypi.org/packages/7b/3d/13cd8dd752fd172caa57e6428dff3014643301dc9b5b30752d7b86fe952f/semantic_version-2.8.0-py2.py3-none-any.whl")
     version("2.7.1", sha256="f146691ecc623183beeda656ff9d17d230a5bba1ea2a0b8d96f893ca1dc065d4", url="https://pypi.org/packages/0b/2b/70c96d5272f42d5cfb66dff02b67fa0c8db39182cc907e346b69094d9550/semantic_version-2.7.1-py2.py3-none-any.whl")
     version("2.7.0", sha256="9c3adab45d44311b72b7c341708714877abaa3f088deb15a336ffa4d7b31f53a", url="https://pypi.org/packages/99/9c/5e52d556a497ab35fae7ff408a485f1cf1fafa1650990b6c6085b4eba045/semantic_version-2.7.0-py2.py3-none-any.whl")
-    version("2.6.0", sha256="2a4328680073e9b243667b201119772aefc5fc63ae32398d6afafff07c4f54c0", url="https://pypi.org/packages/72/83/f76958017f3094b072d8e3a72d25c3ed65f754cc607fdb6a7b33d84ab1d5/semantic_version-2.6.0.tar.gz")
+    version("2.6.0", sha256="2d06ab7372034bcb8b54f2205370f4aa0643c133b7e6dbd129c5200b83ab394b", url="https://pypi.org/packages/28/be/3a7241d731ba89063780279a5433f5971c1cf41735b64a9f874b7c3ff995/semantic_version-2.6.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

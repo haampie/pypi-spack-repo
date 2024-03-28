@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,14 @@
 from spack.package import *
 
 class PyAiosqlite(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.17.0", sha256="6c49dc6d3405929b1d08eeccc72306d3677503cc5e5e43771efc1e00232e8231", url="https://pypi.org/packages/a0/48/77c0092f716c4bf9460dca44f5120f70b8f71f14a12f40d22551a7152719/aiosqlite-0.17.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-typing-extensions@3.7:", when="@0.16:0.17")
+    # END DEPENDENCIES
 

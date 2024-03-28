@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkPasskit(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="0c879d632f0f0bf586161a7abbbba3dad9ba9894a3edbce06f4160491c2c134c", url="https://pypi.org/packages/49/2a/29810f864770d8e1430f5f982fa8094c31c45907249eef1a80b4244d39fa/pyobjc-framework-PassKit-10.2.tar.gz")
     version("10.1", sha256="bc19a46fad004137f207a5a9643d3f9a3602ea3f1d75c57841de986019a3c805", url="https://pypi.org/packages/8d/65/2455458940a565daeedd017dd1ab1ab941c7ee626dfe35bf60e3f11156f9/pyobjc-framework-PassKit-10.1.tar.gz")
     version("10.0", sha256="da2c5b12c341e2e826b5345798854219966c7bef4bfdb8df306816877df22abb", url="https://pypi.org/packages/ba/c7/89a0688efd86cd03ecb1e76c09486f1c729fe20bd0eff036d9cbc8b7361a/pyobjc-framework-PassKit-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkPasskit(PythonPackage):
     version("9.0", sha256="4a26b96d471a6002a2f628e652bea308013afc34e6b20adc24d85dbf43c9d02e", url="https://pypi.org/packages/88/63/8a5b27706d944a6cb15caacf59e144287700f126aca77910d9d19d81d675/pyobjc-framework-PassKit-9.0.tar.gz")
     version("8.5.1", sha256="fe4b7ecdb49b4a9b78729d6df23de862997ce62a7d60f74a29060165d721a874", url="https://pypi.org/packages/d3/14/941ed8986bc114ce3c135b7e158e71ad6341a69dabdd6e58abe2446aa368/pyobjc-framework-PassKit-8.5.1.tar.gz")
     version("8.5", sha256="ec3bc9daf0a8289630df95fe78bc3c6b985f6711fca12d2f4289e5c6932aea86", url="https://pypi.org/packages/40/b2/f91947f593330ac71fc0b31a3f8488f4557c1fbef9d7f924b6a8b55dc100/pyobjc-framework-PassKit-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkPasskit(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

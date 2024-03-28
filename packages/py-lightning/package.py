@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLightning(PythonPackage):
+    # BEGIN VERSIONS
     version("20220717", sha256="b4e26a32830e18f56a66b2fd266ad1ae2ee911347d8a75c66d69e43f68c27bed", url="https://pypi.org/packages/bc/ea/da20d559d0b3af9a8e5e7e7cbc9a93d083778116211b9f4cbbe2831b8139/lightning-20220717-py3-none-any.whl")
     version("2022.10.20", sha256="835c217185514387b405259b847bd89bc6f65aa4897601d4784c746b71b62f2e", url="https://pypi.org/packages/29/d0/40d09cc276d86ebc4067b539df0df66a686a1cb86a545e8156299c945ed5/lightning-2022.10.20-py3-none-any.whl")
     version("2022.10.7", sha256="abb93f4869b8d6333d150f99447b741abcdeb350da0608c7d9bed73c0d9b8e67", url="https://pypi.org/packages/f3/40/ce88a5d42835310cab7d54377ad0327141ef8cdb989fa69cde7bba7314f0/lightning-2022.10.7-py3-none-any.whl")
@@ -44,9 +44,13 @@ class PyLightning(PythonPackage):
     version("1.8.5.post0", sha256="16a2ba391a1cb65c89b3fe1e50d78013b5a525ecff51d9a182aca53a9e01c71b", url="https://pypi.org/packages/a6/5a/ad51ad28bde81457b8e08d42198ca3acc84566ca5b7d674b86812b287e5a/lightning-1.8.5.post0-py3-none-any.whl")
     version("1.8.5", sha256="d39e47eecd56dfc0df78eaa466191b975732884c9148339cc007d95a42a1fda1", url="https://pypi.org/packages/88/7d/6f6449c856ebfb5f921fbeb5bfa83da0c518bab1336e60a72dd7eaa64cdf/lightning-1.8.5-py3-none-any.whl")
     version("1.8.4.post0", sha256="0d43a581f1bfb1421c46ef3898aecbd0464e42e05ba8b1a0681c6850a06e6c3d", url="https://pypi.org/packages/6a/ce/a80a20a551b48593d42469c77b1629b35b077f9c7b58416c50118edede0a/lightning-1.8.4.post0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("pytorch-extra", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiohttp@3.8.0:", when="@:1.8")
         depends_on("py-arrow@1.2:", when="@:2.1.0-rc0")
@@ -139,4 +143,5 @@ class PyLightning(PythonPackage):
         depends_on("py-websocket-client", when="@1.9.0:2.1.0-rc0")
         depends_on("py-websockets", when="@2.0.5:2.1.0-rc0")
         depends_on("py-websockets@:11", when="@1.9.0:2.0.4")
+    # END DEPENDENCIES
 

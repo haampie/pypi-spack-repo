@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIminuit(PythonPackage):
+    # BEGIN VERSIONS
     version("2.25.2", sha256="3bf8a1b96865a60cedf29135f4feae09fa7c66237d29f68ded64e97a823a9b3e", url="https://pypi.org/packages/78/f1/416e559122a3872878853429a87143b4b4f5d33e23c1317be8a270e875aa/iminuit-2.25.2.tar.gz")
     version("2.25.1", sha256="b829ffc1db5ed671dcd1a49e04593776e6575cf3a66cc7ce7477fc66423f863e", url="https://pypi.org/packages/75/d5/3f6fab636a6406bf960477b26d81302bf7414d2ecef87e8b4c5bcfdf99fe/iminuit-2.25.1.tar.gz")
     version("2.25.0", sha256="7bdf59460d390f2d03ce755c0151b2ec3d203300bc51541bf8287b43c1204c66", url="https://pypi.org/packages/a6/e3/9172082f134a68e79339534dcc87fee02397ece8222e2661c6d08a521eb3/iminuit-2.25.0.tar.gz")
@@ -22,9 +22,14 @@ class PyIminuit(PythonPackage):
     version("1.3.7", sha256="9173e52cc4a0c0bda13ebfb862f9b074dc5de345b23cb15c1150863aafd8a26c", url="https://pypi.org/packages/47/1a/650dbc6312faa367c47cf393a028c0c65656369f776ae6cbcb44b4a7773d/iminuit-1.3.7.tar.gz")
     version("1.3.6", sha256="d79a197f305d4708a0e3e52b0a6748c1a6997360d2fbdfd09c022995a6963b5e", url="https://pypi.org/packages/01/82/cea3e9db377ba7db6454c1de93c83a39f83e66157dc0d9738c54aaba3d1f/iminuit-1.3.6.tar.gz")
     version("1.2", sha256="7651105fc3f186cfb5742f075ffebcc5088bf7797d8ed124c00977eebe0d1c64", url="https://pypi.org/packages/c9/fd/87931ec898e16557b8f6ae6e576743d00ca085c1cb4eb4673d8f4b02ac20/iminuit-1.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.21.0:", when="@2.22:")
         depends_on("py-numpy@1.11.3:", when="@1.3.7:1.4")
         depends_on("py-typing-extensions", when="@2.22: ^python@:3.8")
+    # END DEPENDENCIES
 

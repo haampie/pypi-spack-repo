@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytestCov(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.1.0", sha256="6ba70b9e97e69fcc3fb45bfeab2d0a138fb65c4d0d6a41ef33983ad114be8c3a", url="https://pypi.org/packages/a7/4b/8b78d126e275efa2379b1c2e09dc52cf70df16fc3b90613ef82531499d73/pytest_cov-4.1.0-py3-none-any.whl")
     version("4.0.0", sha256="2feb1b751d66a8bd934e5edfa2e961d11309dc37b73b0eabe73b5945fee20f6b", url="https://pypi.org/packages/fe/1f/9ec0ddd33bd2b37d6ec50bb39155bca4fe7085fa78b3b434c05459a860e3/pytest_cov-4.0.0-py3-none-any.whl")
     version("3.0.0", sha256="578d5d15ac4a25e5f961c938b85a05b09fdaae9deef3bb6de9a6e766622ca7a6", url="https://pypi.org/packages/20/49/b3e0edec68d81846f519c602ac38af9db86e1e71275528b3e814ae236063/pytest_cov-3.0.0-py3-none-any.whl")
@@ -18,8 +18,13 @@ class PyPytestCov(PythonPackage):
     version("2.10.0", sha256="6e6d18092dce6fad667cd7020deed816f858ad3b49d5b5e2b1cc1c97a4dba65c", url="https://pypi.org/packages/3d/13/ae3dec587b1cc07fb9f294e52ea9ad140266aea55adb9e12eade3625bd27/pytest_cov-2.10.0-py2.py3-none-any.whl")
     version("2.9.0", sha256="c87dfd8465d865655a8213859f1b4749b43448b5fae465cb981e16d52a811424", url="https://pypi.org/packages/b4/4d/56896f913ea61f0ba504c912bdd748f11e45ef14d5d40975bc8322dccfa0/pytest_cov-2.9.0-py2.py3-none-any.whl")
     version("2.8.1", sha256="cdbdef4f870408ebdbfeb44e63e07eb18bb4619fae852f6e760645fa36172626", url="https://pypi.org/packages/b9/54/3673ee8be482f81527678ac894276223b9814bb7262e4f730469bb7bf70e/pytest_cov-2.8.1-py2.py3-none-any.whl")
+    version("2.8.0", sha256="a42cb9af7a429b6cd7c97be307cbb4cefca1d50c5b3018711558341979946851", url="https://pypi.org/packages/45/d7/1d0c77172b033301558fac9a82def90d75cbb4bb99d9095532d492af1b89/pytest_cov-2.8.0-py2.py3-none-any.whl")
     version("2.3.1", sha256="09f34ed04d5ea1a6dc7e5bc08435eaca9a2b55086c50f5cc0a3229b4001bc5f0", url="https://pypi.org/packages/67/94/93dd3288f9a6accfc25e4c636aa912824a2e66d08a464d6f62421da8742f/pytest_cov-2.3.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-coverage@5.2.1:+toml", when="@2.12:2.12.0,3:")
         depends_on("py-coverage@5.2.1:", when="@2.11,2.12.1:2")
@@ -29,4 +34,5 @@ class PyPytestCov(PythonPackage):
         depends_on("py-pytest@3.6:", when="@2.6.1:2.9")
         depends_on("py-pytest@2.6:", when="@2.1:2.5")
         depends_on("py-toml", when="@2.12.1:2")
+    # END DEPENDENCIES
 

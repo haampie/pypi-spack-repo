@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyMystParser(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.18.1", sha256="61b275b85d9f58aa327f370913ae1bec26ebad372cc99f3ab85c8ec3ee8d9fb8", url="https://pypi.org/packages/72/fd/594c936c65e707deda5670e8fff5ca2c948a12e922813eab5d316694e9ca/myst_parser-0.18.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-docutils@0.15:0.19", when="@0.18.1:1")
         depends_on("py-jinja2", when="@0.13:")
@@ -17,4 +21,5 @@ class PyMystParser(PythonPackage):
         depends_on("py-pyyaml", when="@0.9:")
         depends_on("py-sphinx@4.0.0:5", when="@0.18")
         depends_on("py-typing-extensions", when="@0.17:0.18")
+    # END DEPENDENCIES
 

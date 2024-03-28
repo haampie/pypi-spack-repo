@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFormulaic(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.6.1", sha256="3eebbee86bfde23f66c7b86f727b52e4f2af1b08be9ea752d2ea3fe2ff951fe8", url="https://pypi.org/packages/ad/79/1ce60c6368cfbfbc186f8ccd45edaa945e0a8dba77469c7f3f0cc44db40e/formulaic-0.6.1-py3-none-any.whl")
     version("0.5.2", sha256="65d04b1249584504912eb64f83b47fc1e7e95b0ff3e24fb0859148e2f2f033c2", url="https://pypi.org/packages/15/3c/5853059034a58de0b79de67584a22d6fa8f732a1cb7a388942c735584c3e/formulaic-0.5.2-py3-none-any.whl")
     version("0.5.1", sha256="5b079477790b3aedc3760439ba53278da778c90da4a90cfedb4e8f1693ccbb02", url="https://pypi.org/packages/69/f7/924c6760cd9494403dae54ab85126c7f911cf6248e68801f721267358bff/formulaic-0.5.1-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyFormulaic(PythonPackage):
     version("0.3.1", sha256="f53b92095df9e3874033c92c8bb735e00d90d34789e60cb4afc428be942754d8", url="https://pypi.org/packages/e0/d1/f02ed1e34389ace0da9c03ec6375bd96cf2da0b32f8a684bd936a9238ee8/formulaic-0.3.1-py3-none-any.whl")
     version("0.3.0", sha256="a84384b8bd84c4381fca6364fb5f6d99a401f1b7ea0cc64a84e3297e1a717f9a", url="https://pypi.org/packages/9c/24/eee2b038a75af0fe47e37afc07da5a89552d60e840e396b79b8442e270bb/formulaic-0.3.0-py3-none-any.whl")
     version("0.2.4", sha256="775620d93f24f01b33a17aa2cf65a04112003c5112f12015368e4e4605a5013b", url="https://pypi.org/packages/45/40/3c337ed87b8ffeb129f21db97bce3d4f1e9125ed4697969348bb6f871931/formulaic-0.2.4-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-astor@0.8:", when="@1: ^python@:3.8")
         depends_on("py-astor@0.8:", when="@0.3.4:0")
@@ -37,4 +41,5 @@ class PyFormulaic(PythonPackage):
         depends_on("py-scipy", when="@0.1:0.2")
         depends_on("py-typing-extensions@4.2:", when="@0.4:")
         depends_on("py-wrapt", when="@0.1:")
+    # END DEPENDENCIES
 

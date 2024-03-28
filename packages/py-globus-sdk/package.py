@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGlobusSdk(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.39.0", sha256="5c9ed926c6b5195850ef631152454915b2e8f84c49a4241d90f7f0fa1e92c176", url="https://pypi.org/packages/25/d4/2e3be9304f7d73de4a21a7b73ebe1ed0f44701a0ecff07c0ae2ff54265fa/globus_sdk-3.39.0-py3-none-any.whl")
     version("3.38.0", sha256="00a7a9492614cdfe67258d3c81af26b31807f6910df54ccad6afad9a5ceb2bb2", url="https://pypi.org/packages/d5/3c/7b8e3aff2b982406b77f69ab619ad47ac8e383a45bd76f6c19e40fd29a24/globus_sdk-3.38.0-py3-none-any.whl")
     version("3.37.0", sha256="01c6a27ad4bb012181a714eb8abc29cb5e27875a753aa94c893259a0fe4a5edf", url="https://pypi.org/packages/7e/e9/3be8425b5ca91e43e93042bbb8e353750ab3f647602ede317bf197d9df83/globus_sdk-3.37.0-py3-none-any.whl")
@@ -23,7 +23,11 @@ class PyGlobusSdk(PythonPackage):
     version("3.8.0", sha256="8ede91296c793eb2a1a9ec56c3660d257b31afb28bf49e402f3589df28f17afb", url="https://pypi.org/packages/af/18/8cbd7b20e660c29b79b86afaf282592ee382e3df5acaa25e588aa74bf2f5/globus_sdk-3.8.0-py3-none-any.whl")
     version("3.7.0", sha256="ba2d85b61374394a096814cbddee510b89883b68803e47e6cf4247324ea57fa6", url="https://pypi.org/packages/29/40/9041132e1b12577a79a13811f5f1da5de5c3728bf0f23c6c2ade21150894/globus_sdk-3.7.0-py3-none-any.whl")
     version("3.0.2", sha256="03b1a24fc0f9080163999bb651c8ce2a35a6c9fcdf7f57fe913978d2eed31557", url="https://pypi.org/packages/b2/bd/078c44638ae236c56c8a942de7743d0c44074933fe7426dff88f803777b0/globus_sdk-3.0.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cryptography@3.3.1:3.3,3.4.1:", when="@3.1:")
         depends_on("py-cryptography@2:3.3,3.4.1:3", when="@3.0.2:3.0")
@@ -34,4 +38,5 @@ class PyGlobusSdk(PythonPackage):
 
         # marker: python_version < "3,8" and extra == "dev"
         # depends_on("py-typing-extensions", when="@3.0.0-beta3:3.0.0")
+    # END DEPENDENCIES
 

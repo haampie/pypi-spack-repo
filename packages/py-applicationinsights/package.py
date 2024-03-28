@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyApplicationinsights(PythonPackage):
+    # BEGIN VERSIONS
     version("0.11.10", sha256="e89a890db1c6906b6a7d0bcfd617dac83974773c64573147c8d6654f9cf2a6ea", url="https://pypi.org/packages/f4/0d/cb6b23164eb55eebaa5f9f302dfe557cfa751bd7b2779863f1abd0343b6b/applicationinsights-0.11.10-py2.py3-none-any.whl")
     version("0.11.9", sha256="b88bc5a41385d8e516489128d5e63f8c52efe597a3579b1718d1ab2f7cf150a2", url="https://pypi.org/packages/a1/53/234c53004f71f0717d8acd37876e0b65c121181167057b9ce1b1795f96a0/applicationinsights-0.11.9-py2.py3-none-any.whl")
     version("0.11.8", sha256="f2b71aa872c13d314332121473792bae491cb054fb5658daf7175bf50a80d172", url="https://pypi.org/packages/de/bc/8e738cc3b74551c1a63889ff32c4456c22246ec89cfae3bf6a0a126a29c8/applicationinsights-0.11.8-py2.py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyApplicationinsights(PythonPackage):
     version("0.11.3", sha256="9093ee9f16219731453a8bd7a7db622cfb16b57edbf0ebe75aaee63ec5dde2da", url="https://pypi.org/packages/7d/ce/2950ffac9097729c5abf0c035ece4a03bb24bcfebad42bc03915c4bfb6e0/applicationinsights-0.11.3.tar.gz")
     version("0.11.2", sha256="6ea98c2953d8f71a2a26e3a3f008ae49982d4f384844141a0a7231a2ca7a5f1f", url="https://pypi.org/packages/a9/16/21804047b808f55d41e4c86593fb9642a1ba9a1f1ec570f78cc0d66a5edf/applicationinsights-0.11.2.tar.gz")
     version("0.11.1", sha256="a580794a66da1cd3b66ee5f3293b2d644c279e61ef60f2f38a5cc3af51354945", url="https://pypi.org/packages/85/8e/0a35471fc38b9127df372f4e442ab4c90cf42e0dbc13bbe0944c30f34da8/applicationinsights-0.11.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKeyring(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("25.0.0", sha256="9a15cd280338920388e8c1787cb8792b9755dabb3e7c61af5ac1f8cd437cefde", url="https://pypi.org/packages/97/d2/6b63129abee0b6f61c9216dfe918eccc5067fcf67a68e3418ff0935f416a/keyring-25.0.0-py3-none-any.whl")
     version("24.3.1", sha256="df38a4d7419a6a60fea5cef1e45a948a3e8430dd12ad88b0f423c5c143906218", url="https://pypi.org/packages/7c/23/d557507915181687e4a613e1c8a01583fd6d7cb7590e1f039e357fe3b304/keyring-24.3.1-py3-none-any.whl")
     version("24.3.0", sha256="4446d35d636e6a10b8bce7caa66913dd9eca5fd222ca03a3d42c38608ac30836", url="https://pypi.org/packages/e3/e9/c51071308adc273ed612cd308a4b4360ffd291da40b7de2f47c9d6e3a978/keyring-24.3.0-py3-none-any.whl")
@@ -41,7 +41,11 @@ class PyKeyring(PythonPackage):
     version("21.2.0", sha256="8179b1cdcdcbc221456b5b74e6b7cfa06f8dd9f239eb81892166d9223d82c5ba", url="https://pypi.org/packages/04/21/42d92822959a37ccc390742c2706c8b06cc6a29c10a5ef2e8d22cf0e2e33/keyring-21.2.0-py3-none-any.whl")
     version("20.0.1", sha256="c674f032424b4bffc62abeac5523ec49cc84aed07a480c3233e0baf618efc15c", url="https://pypi.org/packages/f1/07/0afb82d449d210a332d126978634470abdd0c754128a9ead8bbe78eb1b43/keyring-20.0.1-py2.py3-none-any.whl")
     version("18.0.1", sha256="7b29ebfcf8678c4da531b2478a912eea01e80007e5ddca9ee0c7038cb3489ec6", url="https://pypi.org/packages/cb/97/351c4839d78c518d8784822ec6f48f601de5cf47ab21242c0a6e5da888cc/keyring-18.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-entrypoints", when="@11.1:19.2")
         depends_on("py-importlib-metadata@4.11.4:", when="@23.10: ^python@:3.11")
@@ -57,4 +61,5 @@ class PyKeyring(PythonPackage):
         depends_on("py-secretstorage@3.2:", when="@21.5: platform=linux")
         depends_on("py-secretstorage@3:", when="@21.1:21.4 platform=linux")
         depends_on("py-secretstorage", when="@10:12.0.1,12.1:21.0 platform=linux")
+    # END DEPENDENCIES
 

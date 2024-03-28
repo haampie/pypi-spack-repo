@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPetsc4py(PythonPackage):
+    # BEGIN VERSIONS
     version("3.20.2", sha256="d3f24aa6612ded3e9b9ae11d5533f319d1df1705bea6d81385fea023d01175c9", url="https://pypi.org/packages/e0/8e/ada0ae6078531c72ff440ee20a6282df21b09d3cbbfecb7e51e357108398/petsc4py-3.20.2.tar.gz")
     version("3.20.1", sha256="dcc9092040d13130496f1961b79c36468f383b6ede398080e004f1966c06ad38", url="https://pypi.org/packages/83/88/ea3e1f6d5c29b54d7a521183c78d025c7f417887e33cfab0fd2d4b1ce3ce/petsc4py-3.20.1.tar.gz")
     version("3.20.0", sha256="c2461eef3977ae5c214ad252520adbb92ec3a31d00e79391dd92535077bbf03e", url="https://pypi.org/packages/ba/03/65402ad69b02e455952745672f92b35ae33ca5d248adfe12c529c7c07ae9/petsc4py-3.20.0.tar.gz")
@@ -41,5 +41,12 @@ class PyPetsc4py(PythonPackage):
     version("3.13.0", sha256="ace21f71102e752fefac6c81b65207edba89a6974b3c58c71599c6c358640f39", url="https://pypi.org/packages/7c/e7/5b089013c5188ee5f619ad64749fc3e6355943950dfcf421c327d66ee2ac/petsc4py-3.13.0.tar.gz")
     version("3.12.0", sha256="1a02fa0336c27583aabf399124ac0610ef20452cf6b837a1082f7788f17fadad", url="https://pypi.org/packages/e4/51/7eaa24a5797f0728007acfbfafed026ff2b0602f9ddd07564829423663df/petsc4py-3.12.0.tar.gz")
     version("3.11.0", sha256="58f4f57ac96ec39273906859cdc388b1ae372045c726bfd2a01d4eca8bc4a1e6", url="https://pypi.org/packages/71/5e/8494910160bc5d97132994c9699a3678ab08e8b484ed3950fe88044b8838/petsc4py-3.11.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("mpi", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyDownhill(PythonPackage):
-    version("0.4.0", sha256="074ad91deb06c05108c67d982ef71ffffb6ede2c77201abc69e332649f823b42", url="https://pypi.org/packages/d5/0d/7f07a67ee0f4890d8a924ee6e12a6eb8a445b4b55fc40fff48d8d9857dfa/downhill-0.4.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.4.0", sha256="29e3dbf4db13021734c5bbef0eef230a17c49dfd4155a41016b712f909868f1b", url="https://pypi.org/packages/32/07/fb2b465371d80d5686328640f31ad403193fe91d527cca538ff1834880b1/downhill-0.4.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

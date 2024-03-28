@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,15 +6,21 @@
 from spack.package import *
 
 class PyRuff(PythonPackage):
-    version("0.3.0", sha256="e3a4a6d46aef0a84b74fcd201a4401ea9a6cd85614f6a9435f2d33dd8cefbf83", url="https://pypi.org/packages/6c/c6/31b49f2be455ae38205f70a6c48a69f04953d50351d62eb0e51a07b9b6f4/ruff-0.3.0-py3-none-win_arm64.whl")
-    version("0.1.15", sha256="9a933dfb1c14ec7a33cceb1e49ec4a16b51ce3c20fd42663198746efc0427360", url="https://pypi.org/packages/c9/bd/c196493563d6bf8fe960f10b83926a3fae3a43a96eac6b263aecb96c61d7/ruff-0.1.15-py3-none-win_arm64.whl")
-    version("0.1.14", sha256="269302b31ade4cde6cf6f9dd58ea593773a37ed3f7b97e793c8594b262466b67", url="https://pypi.org/packages/22/e5/ca6754d8a32a5a9e061d78d7c1491ec0c01f64b36125a6a27e2c5bf4f109/ruff-0.1.14-py3-none-win_arm64.whl")
-    version("0.1.13", sha256="6bbbc3042075871ec17f28864808540a26f0f79a4478c357d3e3d2284e832998", url="https://pypi.org/packages/9a/54/6ef6d55555bfffecb1870a46fa62c74ee900e22e505b24a8a08f7a5b812b/ruff-0.1.13-py3-none-win_arm64.whl")
-    version("0.1.12", sha256="bb29f8e3e6c95024902eaec5a9ce1fd5ac4e77f4594f4554e67fbb0f6d9a2f37", url="https://pypi.org/packages/e7/6e/ffa9601da27d0d0ae83ef254f732d8a8aa039012c5f71d9b9ce41f9879f6/ruff-0.1.12-py3-none-win_arm64.whl")
-    version("0.1.11", sha256="97ce4d752f964ba559c7023a86e5f8e97f026d511e48013987623915431c7ea9", url="https://pypi.org/packages/a9/9b/770da4f22ea69fdd19ac6cb183f02abf8fc6f8d16a9dc00dfaf667649ee7/ruff-0.1.11-py3-none-win_arm64.whl")
-    version("0.1.10", sha256="6671c90894e9ba2c85372557a588baa44f1abe9ffc95791c0c3071cb904dab43", url="https://pypi.org/packages/9a/56/c902ba190c574e8b6dedfa1a003afa66de1025622f0b6c04d88646f2347e/ruff-0.1.10-py3-none-win_arm64.whl")
-    version("0.1.9", sha256="0e17f53bcbb4fff8292dfd84cf72d767b5e146f009cccd40c2fad27641f8a7a9", url="https://pypi.org/packages/56/43/8cb73e3d8206461cf07978239779890a9240abfe325cfc2206439bea906a/ruff-0.1.9-py3-none-win_arm64.whl")
-    version("0.1.6", sha256="03910e81df0d8db0e30050725a5802441c2022ea3ae4fe0609b76081731accbc", url="https://pypi.org/packages/21/f7/fdce733e594e1b274fc9232256be6a4e03e8d2cb9e354c783801191e2f4d/ruff-0.1.6-py3-none-win_arm64.whl")
-    version("0.0.276", sha256="a6bd5b53ac689a43c7afc45bd574a7b3efe0ceb192e26e95a055c770ef2045b9", url="https://pypi.org/packages/57/d7/05c02355d86749a60d4ef48076d8bc44caaa986e15f9d9ab7e5f28382f4c/ruff-0.0.276-py3-none-win_arm64.whl")
+    # BEGIN VERSIONS
+    version("0.3.0", sha256="0886184ba2618d815067cf43e005388967b67ab9c80df52b32ec1152ab49f53a", url="https://pypi.org/packages/61/b0/5fb64bc79464823ca94e566c9000143ddc11f9396c6e20202315059dd64f/ruff-0.3.0.tar.gz")
+    version("0.1.15", sha256="f6dfa8c1b21c913c326919056c390966648b680966febcb796cc9d1aaab8564e", url="https://pypi.org/packages/42/33/7165f88a156be1c2fd13a18b3af6e75bbf82da5b6978cd2128d666accc18/ruff-0.1.15.tar.gz")
+    version("0.1.14", sha256="ad3f8088b2dfd884820289a06ab718cde7d38b94972212cc4ba90d5fbc9955f3", url="https://pypi.org/packages/5c/76/f1fbd0a6625d1f3044854b540642171acd02bd91c592001aac9f9606474c/ruff-0.1.14.tar.gz")
+    version("0.1.13", sha256="e261f1baed6291f434ffb1d5c6bd8051d1c2a26958072d38dfbec39b3dda7352", url="https://pypi.org/packages/b2/ab/e178659aa6ab71b230f1a9d134b94b137e57db5512822150afb6dea1b557/ruff-0.1.13.tar.gz")
+    version("0.1.12", sha256="97189f38c655e573f6bea0d12e9f18aad5539fd08ab50651449450999f45383a", url="https://pypi.org/packages/01/a4/7197a36e008c382f779affdd73f9d08f25d874c0fa2dc2235230fa8a6b71/ruff-0.1.12.tar.gz")
+    version("0.1.11", sha256="f9d4d88cb6eeb4dfe20f9f0519bd2eaba8119bde87c3d5065c541dbae2b5a2cb", url="https://pypi.org/packages/b3/a3/a9a504171d286bbe10c7e5cd09110250c01ebca7acede4352211d5372a0e/ruff-0.1.11.tar.gz")
+    version("0.1.10", sha256="2d74594bbdc4abe6b523e1998183dcdea17e0d3f22082abde8074a8c9b1a94d9", url="https://pypi.org/packages/af/b6/d8d166066978ca5f376054bec8027a74e6603ffe18fa532cf23ba2ab92ba/ruff-0.1.10.tar.gz")
+    version("0.1.9", sha256="b041dee2734719ddbb4518f762c982f2e912e7f28b8ee4fe1dee0b15d1b6e800", url="https://pypi.org/packages/6d/50/a3b468c0aa5da0ba0485e250398252848cf44a1bcc930f0365e80ca1ae7a/ruff-0.1.9.tar.gz")
+    version("0.1.6", sha256="1b09f29b16c6ead5ea6b097ef2764b42372aebe363722f1605ecbcd2b9207184", url="https://pypi.org/packages/25/4c/2f786388acd82c295eedc4afeede7ef4b29cf27277151d8d13be906bac70/ruff-0.1.6.tar.gz")
+    version("0.0.276", sha256="d456c86eb6ce9225507f24fcc7bf72fa031bb7cc750023310e62889bf4ad4b6a", url="https://pypi.org/packages/f7/9b/e8c42f8e0bb21a2d82b8f414c55fbf498cdfe72922bf73c973267477fd46/ruff-0.0.276.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

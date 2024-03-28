@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkInputmethodkit(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="294cf2c50cdbb4cdc8f06946924a01faf45a7356ef86652d73c1f310fc1ce99f", url="https://pypi.org/packages/9d/3c/377c35aab6ae237d95b345f533191c43fdb4c7a4d9daca364bbeb23d4072/pyobjc-framework-InputMethodKit-10.2.tar.gz")
     version("10.1", sha256="b995f43a8859016474098c894c966718afe9fbcc18996ce3c6bebfc6a64cfad7", url="https://pypi.org/packages/1a/b1/f3d42ad9f5b4e91ec8130319849da53e0e6bee7e47a7d0aee6d890a1a0cf/pyobjc-framework-InputMethodKit-10.1.tar.gz")
     version("10.0", sha256="dc2f10752ab62e4c7b2306938d617d83bef6d52752862a0998ed57db472e36ae", url="https://pypi.org/packages/0c/fe/3792b6a27b10786153cbe773f96ba09530beafa1f5b4916ffa0e7f240a1e/pyobjc-framework-InputMethodKit-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkInputmethodkit(PythonPackage):
     version("9.0", sha256="98c3ffc397edb5e4947deef05cae89ba277c4ffa896b0831b6c9c6a5a521ea10", url="https://pypi.org/packages/36/39/a1f0d2f029bc6b93d7f69d5db393e232bd7821ee2f30965e3999898c3630/pyobjc-framework-InputMethodKit-9.0.tar.gz")
     version("8.5.1", sha256="3b55569c2b70a941a3e125c2533dc724a7a8cc31f248d1e9acfc42b0b85fde81", url="https://pypi.org/packages/bf/95/60bcbc9f005eb13ed14fec7c98c6c759fc8e9248cce5c8bb4111ffe0fcb3/pyobjc-framework-InputMethodKit-8.5.1.tar.gz")
     version("8.5", sha256="dfe85508af982fca673803404fec623c4aa0bc3a77488cf29b9bc83d31a36ed1", url="https://pypi.org/packages/85/e9/0f3a6bd92276cd8d97488f27adf300ae996a13796c908874bf93423e45b5/pyobjc-framework-InputMethodKit-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkInputmethodkit(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

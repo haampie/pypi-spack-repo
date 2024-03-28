@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGevent(PythonPackage):
+    # BEGIN VERSIONS
     version("24.2.1", sha256="432fc76f680acf7cf188c2ee0f5d3ab73b63c1f03114c7cd8a34cebbe5aa2056", url="https://pypi.org/packages/27/24/a3a7b713acfcf1177207f49ec25c665123f8972f42bee641bcc9f32961f4/gevent-24.2.1.tar.gz")
     version("23.9.1", sha256="72c002235390d46f94938a96920d8856d4ffd9ddf62a303a0d7c118894097e34", url="https://pypi.org/packages/8e/ce/d2b9a376ee010f6d548bf1b6b6eddc372a175e6e100896e607c57e37f7cf/gevent-23.9.1.tar.gz")
     version("23.9.0.post1", sha256="943f26edada39dfd5f50551157bb9011191c7367be36e341d0f1cdecfe07a229", url="https://pypi.org/packages/a0/06/7727ae8e3a065078327386b1c611995efb1a50a455fbab8af612d3b2d9ce/gevent-23.9.0.post1.tar.gz")
@@ -27,14 +27,19 @@ class PyGevent(PythonPackage):
     version("1.3.2.post0", sha256="5eeec334778cbad059b54fc468b0690db6794fe12a1dada7b70924d1c9ffbeac", url="https://pypi.org/packages/a4/5b/12d4fb2e48634b34537ae250e958de426811f876fbacb2a2041f2af147d8/gevent-1.3.2.post0.tar.gz")
     version("1.3.2", sha256="390d820f375626cd0406fdf9b2657f796818fa53c7cff34a9af0e34a4d6bc4ea", url="https://pypi.org/packages/62/85/3a75fa15a5375506a6617c1ce706ea800f016ca2be1a87165f1ab5aff3a2/gevent-1.3.2.tar.gz")
     version("1.3.1", sha256="600d02a31c08936fe4a5181756009a4a3663403b41bc122df039dae0aa3e3831", url="https://pypi.org/packages/cf/c6/aa3ac939ec1028b7e0998c4ed88d9cd18782ca458e834f0faaad2823af3a/gevent-1.3.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cffi@1.12.2:", when="@1.5-alpha1:1.5-alpha3,1.5.0:1,23.9.1: platform=windows")
         depends_on("py-cffi@1.11.5:", when="@1.3-beta2:1.3.5,1.3.7:1.4 platform=windows")
-        depends_on("py-greenlet@3.0.0-rc3:", when="@23.9.1: ^python@3.11:")
         depends_on("py-greenlet@2.0.0:", when="@23.9.1: ^python@:3.10")
+        depends_on("py-greenlet@3.0.0-rc3:", when="@23.9.1: ^python@3.11:")
         depends_on("py-greenlet@0.4.14:", when="@1.3.7:1.5-alpha3,1.5.0:1")
         depends_on("py-greenlet@0.4.13:", when="@1.3-alpha2:1.3.5")
         depends_on("py-zope-event", when="@23.9.1:")
         depends_on("py-zope-interface", when="@23.9.1:")
+    # END DEPENDENCIES
 

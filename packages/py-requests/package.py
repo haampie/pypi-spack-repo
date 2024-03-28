@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRequests(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.31.0", sha256="58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", url="https://pypi.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl")
     version("2.30.0", sha256="10e94cc4f3121ee6da529d358cdaeaff2f1c409cd377dbc72b825852f2f7e294", url="https://pypi.org/packages/96/80/034ffeca15c0f4e01b7b9c6ad0fb704b44e190cde4e757edbd60be404c41/requests-2.30.0-py3-none-any.whl")
     version("2.29.0", sha256="e8f3c9be120d3333921d213eef078af392fba3933ab7ed2d1cba3b56f2568c3b", url="https://pypi.org/packages/cf/e1/2aa539876d9ed0ddc95882451deb57cfd7aa8dbf0b8dbce68e045549ba56/requests-2.29.0-py3-none-any.whl")
@@ -24,11 +24,15 @@ class PyRequests(PythonPackage):
     version("2.18.4", sha256="6a1b267aa90cac58ac3a765d067950e7dbbf75b1da07e895d1f594193a40a38b", url="https://pypi.org/packages/49/df/50aa1999ab9bde74656c2919d9c0c085fd2b3775fd3eca826012bef76d8c/requests-2.18.4-py2.py3-none-any.whl")
     version("2.14.2", sha256="3b39cde35be51762885631cf586f4dc2284951b44d479a4454020758d767cc2f", url="https://pypi.org/packages/e4/b0/286e8a936158e5cc5791d5fa3bc4b1d5a7e1ff4e5b3f3766b63d8e97708a/requests-2.14.2-py2.py3-none-any.whl")
     version("2.13.0", sha256="1a720e8862a41aa22e339373b526f508ef0c8988baf48b84d3fc891a8e237efb", url="https://pypi.org/packages/7e/ac/a80ed043485a3764053f59ca92f809cc8a18344692817152b0e8bd3ca891/requests-2.13.0-py2.py3-none-any.whl")
-    version("2.11.1", sha256="5acf980358283faba0b897c73959cecf8b841205bb4b2ad3ef545f46eae1a133", url="https://pypi.org/packages/2e/ad/e627446492cc374c284e82381215dcd9a0a87c4f6e90e9789afefe6da0ad/requests-2.11.1.tar.gz")
-    version("2.3.0", sha256="1c1473875d846fe563d70868acf05b1953a4472f4695b7b3566d1d978957b8fc", url="https://pypi.org/packages/ab/f9/4425c8410faf7c7d420dbd64e127f2cfb68cfef869a374b332610b6abc09/requests-2.3.0.tar.gz")
+    version("2.11.1", sha256="545c4855cd9d7c12671444326337013766f4eea6068c3f0307fb2dc2696d580e", url="https://pypi.org/packages/ea/03/92d3278bf8287c5caa07dbd9ea139027d5a3592b0f4d14abf072f890fab2/requests-2.11.1-py2.py3-none-any.whl")
+    version("2.3.0", sha256="3648802492e955ffeb28f6dab864ad714059f5438bf6798d82f9d477c666aca3", url="https://pypi.org/packages/f7/51/7aa1e337862118bee783c0249debd64cb07b8fbdfef154b1e185754b02d5/requests-2.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("socks", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-certifi@2017.4:", when="@2.16:")
         depends_on("py-chardet@3.0.2:4", when="@2.25.1:2.25")
@@ -46,4 +50,5 @@ class PyRequests(PythonPackage):
         depends_on("py-urllib3@1.21.1:1.24,1.25.2:1.25", when="@2.22:2.24")
         depends_on("py-urllib3@1.21.1:1.24", when="@2.20:2.21")
         depends_on("py-urllib3@1.21.1:1.22", when="@2.18.2:2.18")
+    # END DEPENDENCIES
 

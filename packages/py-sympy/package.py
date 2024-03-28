@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySympy(PythonPackage):
+    # BEGIN VERSIONS
     version("1.12", sha256="c3588cd4295d0c0f603d0f2ae780587e64e2efeedb3521e46b9bb1d08d184fa5", url="https://pypi.org/packages/d2/05/e6600db80270777c4a64238a98d442f0fd07cc8915be2a1c16da7f2b9e74/sympy-1.12-py3-none-any.whl")
     version("1.12-rc1", sha256="5faae0c0f5bb83ea2e07a7f72c9881eb451c5da7ccf6f71bd01891c129ae80d7", url="https://pypi.org/packages/48/c8/01feab160a64edcc0741c0c912010728bf4368be4e69c427ac5273e30a70/sympy-1.12rc1-py3-none-any.whl")
     version("1.11.1", sha256="938f984ee2b1e8eae8a07b884c8b7a1146010040fccddc6539c54f401c8f6fcf", url="https://pypi.org/packages/2d/49/a2d03101e2d28ad528968144831d506344418ef1cc04839acdbe185889c2/sympy-1.11.1-py3-none-any.whl")
@@ -31,7 +31,12 @@ class PySympy(PythonPackage):
     version("1.1.1", sha256="ac5b57691bc43919dcc21167660a57cc51797c28a4301a6144eff07b751216a4", url="https://pypi.org/packages/91/26/4e477dbd1f9260eb743d9f221af3044648a8fb2fcf3f2f23daee4dc831a4/sympy-1.1.1.tar.gz")
     version("1.0", sha256="3eacd210d839e4db911d216a9258a3ac6f936992f66db211e22767983297ffae", url="https://pypi.org/packages/f3/ae/585ca7545c7e8d3a8130cc3d0cf53cfa489c137f8257e743fd3e18d7c401/sympy-1.0.tar.gz")
     version("0.7.6", sha256="dfa3927e9befdfa7da7a18783ccbc2fe489ce4c46aa335a879e49e48fc03d7a7", url="https://pypi.org/packages/09/0d/fcd9536a3640a6399edac53cda5b4efc71bae953161623f59607305efbfc/sympy-0.7.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-mpmath@0.19:", when="@1.4:1.5-beta1,1.5:")
+    # END DEPENDENCIES
 

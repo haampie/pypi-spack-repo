@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPot(PythonPackage):
+    # BEGIN VERSIONS
     version("0.9.3", sha256="eecf2394390a73472e727ef75f7c801fc47509039f00c40f8fc64fdeea617c86", url="https://pypi.org/packages/02/5a/10886cb742919dc83ebd55486b6c1c1455a1ff268a8ef1bfca9424aae70d/POT-0.9.3.tar.gz")
     version("0.9.2", sha256="8b1ac1fca71dee525b62fd3407f296aa3cdb2b825ad751e00eb945845538084e", url="https://pypi.org/packages/e0/40/4ba3b77183b6dc017bda3d0ddf16900810c41ad25a5247087c920fb69f3c/POT-0.9.2.tar.gz")
     version("0.9.1", sha256="81c25327a00197ff11c1fe5221cf181ad1dffe615644152e2e115ddddf5e591b", url="https://pypi.org/packages/b2/ce/e26a1bd731c089249d32af1f422f0d420e0f0ff6856575fce3b98403da04/POT-0.9.1.tar.gz")
@@ -17,7 +17,11 @@ class PyPot(PythonPackage):
     version("0.7.0.post1", sha256="5dc9aa40a75af8dfd3dc24772ce3349e204a2e1ceefc4d99ea2f06994bc976a2", url="https://pypi.org/packages/87/e1/958578fbbdf734dcfb21cd2c7386fff6bb63839fb2a00a980dad3f929de4/POT-0.7.0.post1.tar.gz")
     version("0.7.0", sha256="d4ac2bc8791f049a3166820d51e218d6c299885449b735eafef8d18c76d4ad06", url="https://pypi.org/packages/a8/5d/e7525ff865040845bfacbca4416610761a07db67ba77f6be4e26dd2583bf/POT-0.7.0.tar.gz")
     version("0.6.0", sha256="a0c254825b65bdfb2b9a4594d1876bdb3bd2564caf0bd86401b440e64c0806c0", url="https://pypi.org/packages/4e/23/8aba82a55d40ac8c5f4313c1c51804dcb239ee3761b9789db1b621e43c87/POT-0.6.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cython@0.23:", when="@0.7:0.7.0.0")
         depends_on("py-cython", when="@0.6")
@@ -25,4 +29,5 @@ class PyPot(PythonPackage):
         depends_on("py-numpy", when="@0.6")
         depends_on("py-scipy@1.0.0:", when="@0.7:0.7.0.0")
         depends_on("py-scipy", when="@0.6")
+    # END DEPENDENCIES
 

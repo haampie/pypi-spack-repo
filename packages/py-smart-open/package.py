@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySmartOpen(PythonPackage):
+    # BEGIN VERSIONS
     version("7.0.1", sha256="9507e38b43d1fd515c2085b9db2e41b592bb754b0e31395a085eb0d61d2410e5", url="https://pypi.org/packages/ad/08/dcd19850b79f72e3717c98b2088f8a24b549b29ce66849cd6b7f44679683/smart_open-7.0.1-py3-none-any.whl")
     version("7.0.0", sha256="ea2b7a8fc7d766689cacba3b425ef5cea6038180e4878142657baa86ed6b6264", url="https://pypi.org/packages/c8/f5/039b836c58f9b2739c3ee7856dbcad67dc7e32037b303e95a37e783c72a6/smart_open-7.0.0-py3-none-any.whl")
     version("6.4.0", sha256="8d3ef7e6997e8e42dd55c74166ed21e6ac70664caa32dd940b26d54a8f6b4142", url="https://pypi.org/packages/fc/d9/d97f1db64b09278aba64e8c81b5d322d436132df5741c518f3823824fae0/smart_open-6.4.0-py3-none-any.whl")
@@ -19,7 +19,25 @@ class PySmartOpen(PythonPackage):
     version("1.11.1", sha256="221cc08ae926af6ad72d141f208d228e1e801b1ee9b15f3e466eecf89d931002", url="https://pypi.org/packages/5d/13/a2db017db801d0157fdc41814658396e6ae398d06adf69d73df1c8175b5d/smart_open-1.11.1.tar.gz")
     version("1.10.0", sha256="bea5624c0c2e49987c227bdf3596573157eccd96fd1d53198856c8d53948fa2c", url="https://pypi.org/packages/6e/14/47cf88d290e4681be35f3b6e8889ba26ed809a0ba14336dc8ae46ffcfda8/smart_open-1.10.0.tar.gz")
     version("1.8.4", sha256="788e07f035defcbb62e3c1e313329a70b0976f4f65406ee767db73ad5d2d04f9", url="https://pypi.org/packages/37/c0/25d19badc495428dec6a4bf7782de617ee0246a9211af75b302a2681dea7/smart_open-1.8.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("azure", default=False)
+    variant("gcs", default=False)
+    variant("http", default=False)
+    variant("s3", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-azure-common", when="@5:+azure")
+        depends_on("py-azure-core", when="@5:+azure")
+        depends_on("py-azure-storage-blob", when="@5:+azure")
+        depends_on("py-boto3", when="@5:+s3")
+        depends_on("py-google-cloud-storage@2.6:", when="@6.3:+gcs")
+        depends_on("py-google-cloud-storage@1.31:", when="@6:6.2+gcs")
+        depends_on("py-google-cloud-storage", when="@5+gcs")
+        depends_on("py-requests", when="@5:+http")
         depends_on("py-wrapt", when="@7:")
+    # END DEPENDENCIES
 

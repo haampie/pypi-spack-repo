@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGraphviz(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.20.2", sha256="63d1ae75f1ca60f980e1cd3a61a678eef8de645ef8427736b2bb9bdd035ca44b", url="https://pypi.org/packages/18/79/12d3f468cc67a04d0db640bdd54913e60cd9828e3eada107d330d760d61a/graphviz-0.20.2-py3-none-any.whl")
     version("0.20.1", sha256="587c58a223b51611c0cf461132da386edd896a029524ca61a1462b880bf97977", url="https://pypi.org/packages/de/5e/fcbb22c68208d39edff467809d06c9d81d7d27426460ebc598e55130c1aa/graphviz-0.20.1-py3-none-any.whl")
     version("0.20", sha256="62c5f48bcc534a45b4588c548ff75e419c1f1f3a33d31a91796ae80a7f581e4a", url="https://pypi.org/packages/4d/ea/81a8018c234ad6219c27155fe3dce349f2ba83e6ebed582c9f8aca46091f/graphviz-0.20-py3-none-any.whl")
@@ -23,5 +23,27 @@ class PyGraphviz(PythonPackage):
     version("0.11.1", sha256="6d0f69c107cfdc9bd1df3763fad99569bbcba29d0c52ffcbc6f266621d8bf709", url="https://pypi.org/packages/5c/b1/016e657586843f40b4daa66127ce1ee9e3285ff15baf5d80946644a98aeb/graphviz-0.11.1-py2.py3-none-any.whl")
     version("0.10.1", sha256="0e1744a45b0d707bc44f99c7b8e5f25dc22cf96b6aaf2432ac308ed9822a9cb6", url="https://pypi.org/packages/1f/e2/ef2581b5b86625657afd32030f90cf2717456c1d2b711ba074bf007c0f1a/graphviz-0.10.1-py2.py3-none-any.whl")
     version("0.8.4", sha256="7caa53f0b0be42c5f2eaa3f3d71dcc863b15bacceb5d531c2ad7519e1980ff82", url="https://pypi.org/packages/53/39/4ab213673844e0c004bed8a0781a0721a3f6bb23eb8854ee75c236428892/graphviz-0.8.4-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("dev", default=False)
+    variant("docs", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-flake8", when="@0.8.2:+dev")
+        depends_on("py-pep8-naming", when="@0.8.2:+dev")
+        depends_on("py-sphinx@5.0.0:6", when="@0.20.2:+docs")
+        depends_on("py-sphinx@5.0.0:", when="@0.20.1+docs")
+        depends_on("py-sphinx@4.0.0:", when="@0.20:0.20.0+docs")
+        depends_on("py-sphinx@1.8.0:", when="@0.14.1:0.19+docs")
+        depends_on("py-sphinx@1.7.0:", when="@0.10:0.14.0+docs")
+        depends_on("py-sphinx@1.3:", when="@0.8.3:0.9+docs")
+        depends_on("py-sphinx-autodoc-typehints", when="@0.17:+docs")
+        depends_on("py-sphinx-rtd-theme", when="@0.8.3:+docs")
+        depends_on("py-tox@3.0.0:", when="@0.8.3:+dev")
+        depends_on("py-twine", when="@0.8.2:+dev")
+        depends_on("py-wheel", when="@0.8.2:+dev")
+    # END DEPENDENCIES
 

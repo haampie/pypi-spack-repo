@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTzlocal(PythonPackage):
+    # BEGIN VERSIONS
     version("5.2", sha256="49816ef2fe65ea8ac19d19aa7a1ae0551c834303d5014c6d5a62e4cbda8047b8", url="https://pypi.org/packages/97/3f/c4c51c55ff8487f2e6d0e618dba917e3c3ee2caae6cf0fbb59c9b1876f2e/tzlocal-5.2-py3-none-any.whl")
     version("5.1", sha256="2938498395d5f6a898ab8009555cb37a4d360913ad375d4747ef16826b03ef23", url="https://pypi.org/packages/1c/af/343114b3ed9500b46108b56569b31a3108d3669d4fd063d9640e2c36cd57/tzlocal-5.1-py3-none-any.whl")
     version("5.0.1", sha256="f3596e180296aaf2dbd97d124fe76ae3a0e3d32b258447de7b939b3fd4be992f", url="https://pypi.org/packages/84/d2/730a87f0dbf184760394a85088d0d2366a5a8a32bc32ffd869a83f1de854/tzlocal-5.0.1-py3-none-any.whl")
@@ -20,10 +20,15 @@ class PyTzlocal(PythonPackage):
     version("2.1", sha256="e2cb6c6b5b604af38597403e9852872d7f534962ae2954c7f35efcb1ccacf4a4", url="https://pypi.org/packages/5d/94/d47b0fd5988e6b7059de05720a646a2930920fff247a826f61674d436ba4/tzlocal-2.1-py2.py3-none-any.whl")
     version("2.0.0", sha256="11c9f16e0a633b4b60e1eede97d8a46340d042e67b670b290ca526576e039048", url="https://pypi.org/packages/ef/99/53bd1ac9349262f59c1c421d8fcc2559ae8a5eeffed9202684756b648d33/tzlocal-2.0.0-py2.py3-none-any.whl")
     version("1.3", sha256="d160c2ce4f8b1831dabfe766bd844cf9012f766539cf84139c2faac5201882ce", url="https://pypi.org/packages/d3/64/e4b18738496213f82b88b31c431a0e4ece143801fb6771dddd1c2bf0101b/tzlocal-1.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-backports-zoneinfo", when="@3.0: ^python@:3.8")
         depends_on("py-pytz", when="@2")
         depends_on("py-pytz-deprecation-shim", when="@4.0-beta3:4")
         depends_on("py-tzdata", when="@3.0: platform=windows")
+    # END DEPENDENCIES
 

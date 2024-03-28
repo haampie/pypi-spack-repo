@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLfpykit(PythonPackage):
+    # BEGIN VERSIONS
     version("0.5.1", sha256="25509ac8d3692c31231551d30c88720b49141fe6b8ed217efc54b0c59c68a076", url="https://pypi.org/packages/6b/be/5a72ee4deb4f1410e3266874447a38adde6f56cddf3e958506647f2e3ecc/LFPykit-0.5.1-py3-none-any.whl")
     version("0.5", sha256="3f87f12466ec905890ea854eb1444d9709a72218aefe683cb762f10c9df51ea2", url="https://pypi.org/packages/79/c2/3d26ea734e2195e6320fec4a6e50ffa2c3ac3e14b923376ead8c4f62257f/LFPykit-0.5-py3-none-any.whl")
     version("0.5-rc0", sha256="91f6248fb333d5c341a61acb56b4ed6810ff6c0fc6d95eb17a99e7cee9e77b7d", url="https://pypi.org/packages/03/c5/a3e776f46c61b4183cdae8d18751788203ec60b6dafc31403b496442a6cd/LFPykit-0.5rc0-py3-none-any.whl")
@@ -17,9 +17,14 @@ class PyLfpykit(PythonPackage):
     version("0.2", sha256="b17d28bf57309f2239388fb0c63558530fda63da31688e9e2d667057c34377e6", url="https://pypi.org/packages/e6/12/d0e5930586104b42e80b676fe1a0b08e5c5ace88faddec595462f6ad6508/LFPykit-0.2-py3-none-any.whl")
     version("0.2-rc3", sha256="4cc277928fc6ade089e70ad1d49f9b1583220729885fae45da087ee6422dcf40", url="https://pypi.org/packages/21/17/54f638ccea264d48eb4e27ef1ef4798cdcb4c7b3d079d13ddee180cf2f57/LFPykit-0.2rc3-py3-none-any.whl")
     version("0.1", sha256="4d8af999ec51838122a2ea1459aae112d77e64d5147b94a66260f16ccc6affe5", url="https://pypi.org/packages/af/66/e7c272580c262b160e1ae72679b82f1ad94a1bfbd74c17cd6dbb8034f42e/LFPykit-0.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-meautility", when="@0.2-rc2:")
         depends_on("py-numpy@1.15.2:", when="@0.2-rc2:")
         depends_on("py-scipy", when="@0.2-rc2:")
+    # END DEPENDENCIES
 

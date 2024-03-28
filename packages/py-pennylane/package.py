@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPennylane(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.35.1", sha256="d1fbeada4f2e8561bbba6a8a19ee84e129665c396b880ae66ab076ce5acb3ad0", url="https://pypi.org/packages/81/b7/399790269de8c3473f3ee150262202f7c7af6281160f59d9888bc0f7094e/PennyLane-0.35.1-py3-none-any.whl")
     version("0.35.0", sha256="da9173dd9b61a65e9f6e771ecdab3380df9cc49118343a5128306aa713b28fc2", url="https://pypi.org/packages/94/43/d2ee9127b735e0549e8d91de6966e920cabc5e28882010e1268e1f52dde0/PennyLane-0.35.0-py3-none-any.whl")
     version("0.34.0", sha256="d1e6016ad13af76f880e9b1c787dcf4e8fd73b781c2e004c970b0f7c4928d77f", url="https://pypi.org/packages/75/46/28e20e5fbbdcb821e58fcc1e8550dd6c11a70240fa81250ccd41d670cc7d/PennyLane-0.34.0-py3-none-any.whl")
@@ -16,7 +16,11 @@ class PyPennylane(PythonPackage):
     version("0.31.0", sha256="a62a30760f6d4b4c3b88449eb8a98e9a03860ae61ec6d5178d83d3140c5c9ae0", url="https://pypi.org/packages/ef/07/34c305ba50e4ea662143e10d8f566078df5e4d71b8d8b376c532e30147de/PennyLane-0.31.0-py3-none-any.whl")
     version("0.30.0", sha256="6b8189bf34d84d39dbdda343c1bb1402117545443f57c6a6dd2480e6ab6c538c", url="https://pypi.org/packages/f1/10/c84ea151654cc4f754ba362eb99db2321edbd5c96b08bdd30bfe1e6bc4a3/PennyLane-0.30.0-py3-none-any.whl")
     version("0.29.1", sha256="d6feac06958a8a324745e8094c4535a30a97f64e9befca039edb559d7e78e036", url="https://pypi.org/packages/31/5d/1b645e719900f59c8f4c654f95e5ce62d040153f2f36562de9793dfea10c/PennyLane-0.29.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-appdirs", when="@:0.3,0.5:0.14.0,0.15:")
         depends_on("py-autograd@:1.5", when="@0.31:0.32")
@@ -42,4 +46,5 @@ class PyPennylane(PythonPackage):
         depends_on("py-semantic-version@2.7:", when="@0.25:")
         depends_on("py-toml", when="@:0.3,0.5:0.14.0,0.15:")
         depends_on("py-typing-extensions", when="@0.31.1:")
+    # END DEPENDENCIES
 

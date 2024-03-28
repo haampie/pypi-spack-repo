@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyColabtools(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.0.1", sha256="b80a6be1e4e5193af6c2d2b16f436fec6c67f1a77fabb222b82dcc3befcd516c", url="https://pypi.org/packages/bb/29/9088b67e938f38885c1035b36624ed6176c73845152c5ddd603facfa3e24/colabtools-0.0.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

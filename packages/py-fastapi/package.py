@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFastapi(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.110.0", sha256="87a1f6fb632a218222c5984be540055346a8f5d8a68e8f6fb647b1dc9934de4b", url="https://pypi.org/packages/f0/f7/ea860cb8aa18e326f411e32ab537424690a53db20de6bad73d70da611fae/fastapi-0.110.0-py3-none-any.whl")
     version("0.109.2", sha256="2c9bab24667293b501cad8dd388c05240c850b58ec5876ee3283c47d6e1e3a4d", url="https://pypi.org/packages/bf/97/60351307ab4502908d29f64f2801a36709a3f1888447bb328bc373d6ca0e/fastapi-0.109.2-py3-none-any.whl")
     version("0.109.1", sha256="510042044906b17b6d9149135d90886ade170bf615efcfb5533f568ae6d88534", url="https://pypi.org/packages/e3/cb/fa5122eec49e6bca91d3a332a3bc1dff3c12d093228e9e524cad3a7f1039/fastapi-0.109.1-py3-none-any.whl")
@@ -28,9 +28,13 @@ class PyFastapi(PythonPackage):
     version("0.83.0", sha256="694a2b6c2607a61029a4be1c6613f84d74019cb9f7a41c7a475dca8e715f9368", url="https://pypi.org/packages/bc/34/6746797c8b5275649f99ed57e5a6dd60f912649c0f8ac985b362efd9e8c7/fastapi-0.83.0-py3-none-any.whl")
     version("0.82.0", sha256="a4269329a7374c78f6e92c195d14cc4ce3a525e25b79e62edf2df8196469743f", url="https://pypi.org/packages/56/c7/e36aa8a7a04a2536b559abd7ced3a69fbabb324b27911b7a4c50276167cf/fastapi-0.82.0-py3-none-any.whl")
     version("0.81.0", sha256="9ac5f5d252b4b394df29accb1ed4bedf30e0e87fc6eb7ec75e1449fa040bfc17", url="https://pypi.org/packages/d0/64/63e77ebc5c641dd3d021acd658de8b8710060c742b3557c02f8b4df272a2/fastapi-0.81.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("all", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anyio@3.7.1:3", when="@0.103.1:0.107")
         depends_on("py-email-validator@2:", when="@0.100:+all")
@@ -64,4 +68,5 @@ class PyFastapi(PythonPackage):
         depends_on("py-uvicorn@0.12:+standard", when="@0.87:+all")
         depends_on("py-uvicorn@0.12:0.18+standard", when="@0.85:0.86+all")
         depends_on("py-uvicorn@0.12:0.17+standard", when="@0.75.2:0.84+all")
+    # END DEPENDENCIES
 

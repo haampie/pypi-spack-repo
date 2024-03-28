@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyCryptography(PythonPackage):
+    # BEGIN VERSIONS
     version("42.0.5", sha256="6fe07eec95dfd477eb9530aef5bead34fec819b3aaf6c5bd6d20565da607bfe1", url="https://pypi.org/packages/13/9e/a55763a32d340d7b06d045753c186b690e7d88780cafce5f88cb931536be/cryptography-42.0.5.tar.gz")
     version("42.0.4", sha256="831a4b37accef30cccd34fcb916a5d7b5be3cbbe27268a02832c3e450aea39cb", url="https://pypi.org/packages/81/d8/214d25515bf6034dce99aba22eeb47443b14c82160114e3d3f33067c6d3b/cryptography-42.0.4.tar.gz")
     version("42.0.3", sha256="069d2ce9be5526a44093a0991c450fe9906cdf069e0e7cd67d9dee49a62b9ebe", url="https://pypi.org/packages/b3/cc/988dee9e00be594cb1e20fd0eb83facda0c229fdef4cd7746742ecd44371/cryptography-42.0.3.tar.gz")
@@ -63,7 +63,14 @@ class PyCryptography(PythonPackage):
     version("2.4.1", sha256="e85b410885addaeb31a867eabcefc9ef4a7e904ad45eac9e60a763a54b244626", url="https://pypi.org/packages/d2/5f/6ed3135eb1e775187f7ecd4e7713f1415516725365e51f9786143f36e024/cryptography-2.4.1.tar.gz")
     version("2.3.1", sha256="8d10113ca826a4c29d5b85b2c4e045ffa8bad74fb525ee0eceb1d38d4c70dfd6", url="https://pypi.org/packages/22/21/233e38f74188db94e8451ef6385754a98f3cad9b59bedf3a8e8b14988be4/cryptography-2.3.1.tar.gz")
     version("1.8.1", sha256="323524312bb467565ebca7e50c8ae5e9674e544951d28a2904a50012a8828190", url="https://pypi.org/packages/ec/5f/d5bc241d06665eed93cd8d3aa7198024ce7833af7a67f6dc92df94e00588/cryptography-1.8.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("idna", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cffi@1.12:", when="@41.0.4:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySchemaSalad(PythonPackage):
+    # BEGIN VERSIONS
     version("8.5.20240311110950", sha256="76bd1d0792622c12c5882cc8448bb9ce9a6083ca7d0c02e7884f746dd011fedc", url="https://pypi.org/packages/4b/c6/6f1d5cc35f0fb69efcf2729eb6da6a1198bfea4456aaf4a4cab2e4537dae/schema-salad-8.5.20240311110950.tar.gz")
     version("8.5.20240102191335", sha256="7d32704f50e3fc6c096dc162084bf00bebce70aa762cb4a897239a64ae00a20c", url="https://pypi.org/packages/8d/09/655a633dc905ac97f654845f5b8f900f06bf38113ca972b4fb0f85162373/schema-salad-8.5.20240102191335.tar.gz")
     version("8.5.20231201181309", sha256="ab8763701b7ef0f1147a458d2a58af2a70d7ac904050a199d76e76ca6fc4e1b2", url="https://pypi.org/packages/70/65/fa4b7f6b09dfecdea54f6802da7fa8065bcd6a2d1c0caa0e00ad8764193e/schema-salad-8.5.20231201181309.tar.gz")
@@ -18,7 +18,11 @@ class PySchemaSalad(PythonPackage):
     version("8.4.20230606143604", sha256="f19a3d6614b4afecec93b9c7121d31ee01d8c1aa169b272d41844ca61d3d9af6", url="https://pypi.org/packages/34/a0/245b852857d738cb771d7f7baf9abbd91942317fd9776f82d8b7ea1487c0/schema-salad-8.4.20230606143604.tar.gz")
     version("8.4.20230601112322", sha256="8d2c8ac3caf2eb404bdd94a4c2a0e31345c5cc0884801d1c5dc5ca86d18040b4", url="https://pypi.org/packages/c8/eb/1c9310b0fc0677951f75a475ccd4d11599f8181738c246189b4727273bc7/schema-salad-8.4.20230601112322.tar.gz")
     version("8.3.20221209165047", sha256="d97cc9a4d7c4255eb8000bcebaa8ac0d1d31801c921fd4113ab3051c1e326c7c", url="https://pypi.org/packages/22/10/b4519f55e08badba227829586f110e77798f7ab19bb60b349e67423ad8c5/schema-salad-8.3.20221209165047.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.12", when="@8.4.20230808163024:")
         depends_on("python@:3.11", when="@8.3.20221115203138:8.4.20230606143604")
@@ -35,4 +39,5 @@ class PySchemaSalad(PythonPackage):
         depends_on("py-requests@1:", when="@2.6.20170806163416,2.6.20171031091636:2.6.20171102064032,2.6.20180214144209:7.1.20210309094900,7.1.20210611090601:8.0.20210624094941,8.2.20211014142459,8.2.20211222191353,8.3:8.3.20220717021618,8.4.20230927144413:")
         depends_on("py-ruamel-yaml@0.17.6:", when="@8.4.20231024070348:")
         depends_on("py-ruamel-yaml@0.17.6:0.17", when="@8.4.20230927144413")
+    # END DEPENDENCIES
 

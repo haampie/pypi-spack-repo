@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMsgpack(PythonPackage):
+    # BEGIN VERSIONS
     version("1.0.8", sha256="95c02b0e27e706e48d0e5426d1710ca78e0f0628d6e89d5b5a5b91a5f12274f3", url="https://pypi.org/packages/08/4c/17adf86a8fbb02c144c7569dc4919483c01a2ac270307e2d59e1ce394087/msgpack-1.0.8.tar.gz")
     version("1.0.7", sha256="572efc93db7a4d27e404501975ca6d2d9775705c2d922390d878fcf768d92c87", url="https://pypi.org/packages/c2/d5/5662032db1571110b5b51647aed4b56dfbd01bfae789fa566a2be1f385d1/msgpack-1.0.7.tar.gz")
     version("1.0.6", sha256="25d3746da40f3c8c59c3b1d001e49fd2aa17904438f980d9a391370366df001e", url="https://pypi.org/packages/ea/bf/47afb03ba397adced887ccc4adf2e7b7e8c59b220f5a25d6c99bdd03565e/msgpack-1.0.6.tar.gz")
@@ -20,5 +20,10 @@ class PyMsgpack(PythonPackage):
     version("0.6.2", sha256="ea3c2f859346fcd55fc46e96885301d9c2f7a36d453f5d8f2967840efa1e1830", url="https://pypi.org/packages/74/0a/de673c1c987f5779b65ef69052331ec0b0ebd22958bda77a8284be831964/msgpack-0.6.2.tar.gz")
     version("0.6.1", sha256="4008c72f5ef2b7936447dcb83db41d97e9791c83221be13d5e19db0796df1972", url="https://pypi.org/packages/81/9c/0036c66234482044070836cc622266839e2412f8108849ab0bfdeaab8578/msgpack-0.6.1.tar.gz")
     version("0.6.0", sha256="64abc6bf3a2ac301702f5760f4e6e227d0fd4d84d9014ef9a40faa9d43365259", url="https://pypi.org/packages/3a/bb/dc3f9fc608a6c1c7a471c2bebc761d9c8dbb2f7179a4283a89b9451765b5/msgpack-0.6.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

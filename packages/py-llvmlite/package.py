@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLlvmlite(PythonPackage):
+    # BEGIN VERSIONS
     version("0.42.0", sha256="f92b09243c0cc3f457da8b983f67bd8e1295d0f5b3746c7a1861d7a99403854a", url="https://pypi.org/packages/3b/ff/ad02ffee7d519615726fc46c99a37e697f2b4b1fb7e5d3cd6fb465d4f49f/llvmlite-0.42.0.tar.gz")
     version("0.42.0-rc1", sha256="01a057fc242bbd875cb44b373538c50172e09bf6cf559da12eb48197a7f4b116", url="https://pypi.org/packages/fa/82/52d7d0ed04bf20736e475a88b40f89037c911aa9b61082007976b8dd7739/llvmlite-0.42.0rc1.tar.gz")
     version("0.41.1", sha256="f19f767a018e6ec89608e1f6b13348fa2fcde657151137cb64e56d48598a92db", url="https://pypi.org/packages/01/c6/bc6634da9f58edf91a1a002280c6380f404715245a49a46234b1d9d9585a/llvmlite-0.41.1.tar.gz")
@@ -24,9 +24,14 @@ class PyLlvmlite(PythonPackage):
     version("0.32.1", sha256="41262a47b8cbba5a09203b15b65fbdf11192f92aa226c81e99115acdee8f3b8d", url="https://pypi.org/packages/50/cc/04526507e80d546be5688ce0246e40277b61e7949c3347c6609b6a4154cf/llvmlite-0.32.1.tar.gz")
     version("0.32.0", sha256="d65c645c32fae7b50852e80597eaef8369f826b75017d5c8d07c800e37eaed89", url="https://pypi.org/packages/dc/8f/5c6d0e8be1585247c4fd33b84dc66d1fa6449b77d27f42a51d45242307c9/llvmlite-0.32.0.tar.gz")
     version("0.31.0", sha256="22ab2b9d7ec79fab66ac8b3d2133347de86addc2e2df1b3793e523ac84baa3c8", url="https://pypi.org/packages/17/fc/da81203725cb22d53e4f819374043bbfe3327831f3cb4388a3c020d7a497/llvmlite-0.31.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.42:")
         depends_on("python@:3.10", when="@0.38")
         depends_on("python@:3.9", when="@0.36.0-rc2:0.37")
+    # END DEPENDENCIES
 

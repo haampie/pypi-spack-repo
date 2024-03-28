@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMarkdown(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.6", sha256="48f276f4d8cfb8ce6527c8f79e2ee29708508bf4d40aa410fbc3b4ee832c850f", url="https://pypi.org/packages/fc/b3/0c0c994fe49cd661084f8d5dc06562af53818cc0abefaca35bdc894577c3/Markdown-3.6-py3-none-any.whl")
     version("3.5.2", sha256="d43323865d89fc0cb9b20c75fc8ad313af307cc087e84b657d9eec768eddeadd", url="https://pypi.org/packages/42/f4/f0031854de10a0bc7821ef9fca0b92ca0d7aa6fbfbf504c5473ba825e49c/Markdown-3.5.2-py3-none-any.whl")
     version("3.5.1", sha256="5874b47d4ee3f0b14d764324d2c94c03ea66bee56f2d929da9f2508d65e722dc", url="https://pypi.org/packages/70/58/2c5a654173937d9f540a4971c569b44dcd55e5424a484d954cdaeebcf79c/Markdown-3.5.1-py3-none-any.whl")
@@ -26,8 +26,13 @@ class PyMarkdown(PythonPackage):
     version("3.2.2", sha256="c467cd6233885534bf0fe96e62e3cf46cfc1605112356c4f9981512b8174de59", url="https://pypi.org/packages/a4/63/eaec2bd025ab48c754b55e8819af0f6a69e2b1e187611dd40cbbe101ee7f/Markdown-3.2.2-py3-none-any.whl")
     version("3.2.1", sha256="e4795399163109457d4c5af2183fbe6b60326c17cfdf25ce6e7474c6624f725d", url="https://pypi.org/packages/ab/c4/ba46d44855e6eb1770a12edace5a165a0c6de13349f592b9036257f3c3d3/Markdown-3.2.1-py2.py3-none-any.whl")
     version("3.1.1", sha256="56a46ac655704b91e5b7e6326ce43d5ef72411376588afa1dd90e881b83c7e8c", url="https://pypi.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-importlib-metadata@4.4:", when="@3.3.6: ^python@:3.9")
         depends_on("py-setuptools@36:", when="@3.1:3.2.1")
+    # END DEPENDENCIES
 

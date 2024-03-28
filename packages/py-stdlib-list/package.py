@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyStdlibList(PythonPackage):
+    # BEGIN VERSIONS
     version("0.10.0", sha256="b3a911bc441d03e0332dd1a9e7d0870ba3bb0a542a74d7524f54fb431256e214", url="https://pypi.org/packages/13/d9/9085375f0d23a4896b307bf14dcc61b49ec8cc67cb33e06cf95bf3af3966/stdlib_list-0.10.0-py3-none-any.whl")
     version("0.9.0", sha256="f79957d59e41930d44afcd81e465f740b9a7a9828707a40e24ab1092b12bd423", url="https://pypi.org/packages/be/f4/08daf83c6414031b46e883cb5e06286077e52e8e2f1ae4b3662819a211aa/stdlib_list-0.9.0-py3-none-any.whl")
     version("0.8.0", sha256="2ae0712a55b68f3fbbc9e58d6fa1b646a062188f49745b495f94d3310a9fdd3e", url="https://pypi.org/packages/7a/b1/52f59dcf31ead2f0ceff8976288449608d912972b911f55dff712cef5719/stdlib_list-0.8.0-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyStdlibList(PythonPackage):
     version("0.3.4", sha256="f23a24827ff1220be5352fa8ecb27f72223cd6d8e2c59fa2e2d27541c2f1a6a8", url="https://pypi.org/packages/39/57/57968c714f6d993fe7360580af19b1e2a48715f41bde75c20f15e84e69d2/stdlib_list-0.3.4-py2.py3-none-any.whl")
     version("0.3.3", sha256="e0ea0ead3a63193a4efc4cf02b5f3ccd3bcad8455bfe9de0464d7787ee03d0d5", url="https://pypi.org/packages/52/76/a2e16778b3c9c9bc733e4995f9c4ec342410ef396c3e5d72cea969ae3575/stdlib_list-0.3.3-py2.py3-none-any.whl")
     version("0.3.2", sha256="fd173144671b5beebcaaf68341533fafc038b09fdbfee67ce2b222dd7a70c9b3", url="https://pypi.org/packages/68/c1/e3840a0c608bb98d418a9a2b909823e24b0c1e256ebb076c8672ed51b87a/stdlib_list-0.3.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-sphinx", when="@0.3.2")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGalaxyUtil(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("23.2.1", sha256="ae9c090da74f66c09e8d65f002b614ed314b6517478f77c476f84e3a3006cd92", url="https://pypi.org/packages/ff/b3/a099d984ffce5e026e6471f96d74d89f532cefa8fcf2b386e154b06582d0/galaxy_util-23.2.1-py3-none-any.whl")
     version("23.1.4", sha256="5dcf1e99f7f53e953a6f163393dfd0fe78439e34835006ad1c6efd75440ca6ee", url="https://pypi.org/packages/14/6b/062b766cd8d7fdfeb36af63bb3287ccae34efa5b489bdbf4956df82a838a/galaxy_util-23.1.4-py3-none-any.whl")
     version("23.1.3", sha256="43581a8f1c2a6616f74250fbbd28d251dc586492b15fc245578028bb833c4a73", url="https://pypi.org/packages/c4/29/9dab086a735ba31e563d9eff32a51b614cc925936dc21737ad4471cb55e2/galaxy_util-23.1.3-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyGalaxyUtil(PythonPackage):
     version("23.0.3", sha256="329dd9094b990fddec3d54c5aaa73b908a5b0be922f6e9dd941d30fe67b2856d", url="https://pypi.org/packages/d2/bd/3304a7cf3535da8ece3daaa27e892f955c5b8a50d7751226f79866288ccd/galaxy_util-23.0.3-py3-none-any.whl")
     version("23.0.2", sha256="0217868c87e3492837b56d270239f081a36ab33c05a327672a1a5590c067295d", url="https://pypi.org/packages/7a/88/aeaa4a1d4bf0dbc5cb4c4f563cdb94d9f6f77ab09bc594a41114f2876374/galaxy_util-23.0.2-py3-none-any.whl")
     version("22.1.2", sha256="23c9ea814244dfb020e30ea3284d6dacfd9ba4119fb76c1cc2b3ab379463f43c", url="https://pypi.org/packages/c6/6b/ca93c7a73a1d9c2153592007fd8264a357cb277de8d980ab6aa91c9cc8d1/galaxy_util-22.1.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bleach")
         depends_on("py-boltons")
@@ -35,4 +39,5 @@ class PyGalaxyUtil(PythonPackage):
         depends_on("py-routes")
         depends_on("py-typing-extensions", when="@22:")
         depends_on("py-zipstream-new", when="@21:")
+    # END DEPENDENCIES
 

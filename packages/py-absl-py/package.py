@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAbslPy(PythonPackage):
+    # BEGIN VERSIONS
     version("2.1.0", sha256="526a04eadab8b4ee719ce68f204172ead1027549089702d99b9059f129ff1308", url="https://pypi.org/packages/a2/ad/e0d3c824784ff121c03cc031f944bc7e139a8f1870ffd2845cc2dd76f6c4/absl_py-2.1.0-py3-none-any.whl")
     version("2.0.0", sha256="9a28abb62774ae4e8edbe2dd4c49ffcd45a6a848952a5eccc6a49f3f0fc1e2f3", url="https://pypi.org/packages/01/e4/dc0a1dcc4e74e08d7abedab278c795eef54a224363bb18f5692f416d834f/absl_py-2.0.0-py3-none-any.whl")
     version("1.4.0", sha256="0d3fe606adfa4f7db64792dd4c7aee4ee0c38ab75dfd353b7a83ed3e957fcb47", url="https://pypi.org/packages/dd/87/de5c32fa1b1c6c3305d576e299801d8655c175ca9557019906247b994331/absl_py-1.4.0-py3-none-any.whl")
@@ -25,7 +25,12 @@ class PyAbslPy(PythonPackage):
     version("0.7.1", sha256="b943d1c567743ed0455878fcd60bc28ac9fae38d129d1ccfad58079da00b8951", url="https://pypi.org/packages/da/3f/9b0355080b81b15ba6a9ffcf1f5ea39e307a2778b2f2dc8694724e8abd5b/absl-py-0.7.1.tar.gz")
     version("0.7.0", sha256="8718189e4bd6013bf79910b9d1cb0a76aecad8ce664f78e1144980fabdd2cd23", url="https://pypi.org/packages/31/bc/ab68120d1d89ae23b694a55fe2aece2f91194313b71f9b05a80b32d3c24b/absl-py-0.7.0.tar.gz")
     version("0.1.6", sha256="02c577d618a8bc0a2a5d1a51f160d3649745d7a2516d87025322f46ac1391a22", url="https://pypi.org/packages/23/83/a8339834609941af26206d99ca19d499538f5ee28447e40889ca25241b56/absl-py-0.1.6.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-six", when="@0.10:1.0")
+    # END DEPENDENCIES
 

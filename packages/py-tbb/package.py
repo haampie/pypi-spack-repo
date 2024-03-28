@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTbb(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2021.11.0", sha256="3d93cb61a90c45e9ed7a2396c34ecec98e8c399daa2182a613686e1e043e1008", url="https://pypi.org/packages/6d/d5/4e8bc403dceebc543be74c0dfd171fc831c87a67a6fb4115757b5083480b/tbb-2021.11.0-py3-none-win32.whl")
     version("2021.10.0", sha256="787745460f79dc92883ef237330db20f57382a3e9bcb088a1fa49abd6a96b1d6", url="https://pypi.org/packages/c7/7b/b6c8236c5fa4f2a3b5cfc27520178fec7cc00679fa040405d911db717310/tbb-2021.10.0-py3-none-win_amd64.whl")
     version("2021.9.0", sha256="fc240cc6cf1ce780d15feeafc37a3867285e96bfdc542bafcc685169ee8155ea", url="https://pypi.org/packages/d0/2c/4f9801079d887ec72362556fd3adb43cf840a02a180d224e36dc9651cc91/tbb-2021.9.0-py3-none-win32.whl")
@@ -17,5 +17,10 @@ class PyTbb(PythonPackage):
     version("2021.5.2", sha256="0e1e8e02c322b46b373cbc06fcfa88790d00e438115d0b9f2bfc6fc3d87badd4", url="https://pypi.org/packages/a6/2f/29a111bffa1695d24eb0e689ed15846390c7c5c415e30eb249e5e2d07b52/tbb-2021.5.2-py3-none-win_amd64.whl")
     version("2021.5.1", sha256="949fade8d1542ab0bb42bf2d84b674e9de14978ef7dc5dcf87d9c4c70be2a05a", url="https://pypi.org/packages/8d/37/1460fa2d3103455936ee611ea6ebaa4b95562450fac562083da5f9c3eafc/tbb-2021.5.1-py3-none-win_amd64.whl")
     version("2021.5.0", sha256="9408418267f45c2ddb3000a3bba479b9614bc3644c8d8065846d5f13f5b20a29", url="https://pypi.org/packages/7b/8d/b70ec6d0bcbeac5e74d3bf1ddf537907d91d11f66ab9e36b53d7fccfd555/tbb-2021.5.0-py3-none-win_amd64.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

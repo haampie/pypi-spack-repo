@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkAutomaticassessmentconfiguration(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="ead3f75200ad74dd013b4a6372054b84b2adeacdac656ca31e763e42fb76cf7b", url="https://pypi.org/packages/f2/f4/1690886940bd04ca5a2ca16a48f52494d13f522a90d17802d726172df26d/pyobjc-framework-AutomaticAssessmentConfiguration-10.2.tar.gz")
     version("10.1", sha256="c8f32f5586f7d7f9fd12343714c7439a1dfad5b5393f403aee440b5f91ef9f7d", url="https://pypi.org/packages/86/73/85ddd9e506536a10bf97487d0e8529045d29b63f12311bd8fec8dcec080c/pyobjc-framework-AutomaticAssessmentConfiguration-10.1.tar.gz")
     version("10.0", sha256="008599dc2b2af1175e574ebce2be950c5bb67a2c9eb7391535dac4f514e158a2", url="https://pypi.org/packages/90/54/20b9e31239c834bfd7d86391c89728c68aa6dc0a04806f41fbe962a9c71c/pyobjc-framework-AutomaticAssessmentConfiguration-10.0.tar.gz")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkAutomaticassessmentconfiguration(PythonPackage):
     version("9.0", sha256="1f86891b529a198544865fa393836cf898dc770e98e5e4eb8ec9dbe8f0aaf91c", url="https://pypi.org/packages/69/75/9720bf90f88b71212dae7edb6b60f804ea2c77e4898f37e4172d24a2ef1d/pyobjc-framework-AutomaticAssessmentConfiguration-9.0.tar.gz")
     version("8.5.1", sha256="a777b6fca1ce8953195ec68adfed8103646f72a1be32c4e6cd740f06280346aa", url="https://pypi.org/packages/74/f5/c291f614acc784a00e2347afb76ee8083817b03b8c66d8b5ec875f9d0b72/pyobjc-framework-AutomaticAssessmentConfiguration-8.5.1.tar.gz")
     version("8.5", sha256="ce67b419fa5adf994f6fc4d2a3dacf48e8b433ba09ce22af9b617d4bd97e4ebd", url="https://pypi.org/packages/dc/9f/1a599ba49c05e952022330f7a8f041a92f1ab6880d9e6ebe96a545e270f4/pyobjc-framework-AutomaticAssessmentConfiguration-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -25,4 +29,5 @@ class PyPyobjcFrameworkAutomaticassessmentconfiguration(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyReadmeRenderer(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("43.0", sha256="19db308d86ecd60e5affa3b2a98f017af384678c63c88e5d4556a380e674f3f9", url="https://pypi.org/packages/45/be/3ea20dc38b9db08387cf97997a85a7d51527ea2057d71118feb0aa8afa55/readme_renderer-43.0-py3-none-any.whl")
     version("42.0", sha256="13d039515c1f24de668e2c93f2e877b9dbe6c6c32328b90a40a49d8b2b85f36d", url="https://pypi.org/packages/b5/7e/992e0e21b37cadd668226f75fef0aa81bf21c2426c98bc06a55e514cb323/readme_renderer-42.0-py3-none-any.whl")
     version("41.0", sha256="a38243d5b6741b700a850026e62da4bd739edc7422071e95fd5c4bb60171df86", url="https://pypi.org/packages/b5/a2/99fbffc358c2d19700d3a4a038fa451e7ac6a4067a16df4588d068f841e2/readme_renderer-41.0-py3-none-any.whl")
@@ -19,7 +19,11 @@ class PyReadmeRenderer(PythonPackage):
     version("35.0", sha256="73b84905d091c31f36e50b4ae05ae2acead661f6a09a9abb4df7d2ddcdb6a698", url="https://pypi.org/packages/b0/c3/63b1bb5f406a7b223c254a5b34079f205b4f4b365143620fbc1415c98367/readme_renderer-35.0-py3-none-any.whl")
     version("24.0", sha256="c8532b79afc0375a85f10433eca157d6b50f7d6990f337fa498c96cd4bfc203d", url="https://pypi.org/packages/c3/7e/d1aae793900f36b097cbfcc5e70eef82b5b56423a6c52a36dce51fedd8f0/readme_renderer-24.0-py2.py3-none-any.whl")
     version("16.0", sha256="7f807259fc9b2ababfc1335d106fbc90254cf940f4b4e40d94aebd5a39fcab5d", url="https://pypi.org/packages/d2/c0/f16aa42d72aac3ca90aa3b4d0f80e30161b01b2873324a30772c26d43556/readme_renderer-16.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bleach@2.1:", when="@17.3:41")
         depends_on("py-bleach", when="@:16")
@@ -29,4 +33,5 @@ class PyReadmeRenderer(PythonPackage):
         depends_on("py-pygments@2.5:", when="@25:")
         depends_on("py-pygments", when="@:24")
         depends_on("py-six", when="@:29")
+    # END DEPENDENCIES
 

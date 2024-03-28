@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyMetomiRose(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.1.0", sha256="ffabd2f48e328debbc6421f4eba80a36b61c70b41a2bd6388b7892eef5cd6cb0", url="https://pypi.org/packages/a0/39/c688c5a81624032df8f0a36b083e06be85b80a1abf8587967af902c91c74/metomi_rose-2.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiofiles")
         depends_on("py-jinja2@2.10.1:", when="@2.0-beta1:")
@@ -18,4 +22,5 @@ class PyMetomiRose(PythonPackage):
         depends_on("py-psutil@5.6:", when="@2.0-beta1:")
         depends_on("py-requests")
         depends_on("py-sqlalchemy@1", when="@2.0.3:")
+    # END DEPENDENCIES
 

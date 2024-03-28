@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGraphqlCore(PythonPackage):
+    # BEGIN VERSIONS
     version("3.2.3", sha256="5766780452bd5ec8ba133f8bf287dc92713e3868ddd83aee4faab9fc3e303dc3", url="https://pypi.org/packages/f8/39/e5143e7ec70939d2076c1165ae9d4a3815597019c4d797b7f959cf778600/graphql_core-3.2.3-py3-none-any.whl")
     version("3.2.2", sha256="4672711cb0f10013df464e450bda006fc449eca90d17a54a7c1103322e246c49", url="https://pypi.org/packages/57/30/17c1be4e38e7a2253c56f5821162f37055b559accae4135c62c3a12a269b/graphql_core-3.2.2-py3-none-any.whl")
     version("3.2.1", sha256="f83c658e4968998eed1923a2e3e3eddd347e005ac0315fbb7ca4d70ea9156323", url="https://pypi.org/packages/14/28/c308fc9a5914b9a2333a546f4976d96e0d95230f16593223d727cbc19d52/graphql_core-3.2.1-py3-none-any.whl")
@@ -40,11 +40,16 @@ class PyGraphqlCore(PythonPackage):
     version("0.5.2", sha256="63c6144a8679e192a58a17dce51034840bae0d32cfef83ce2d45f8b807910f2c", url="https://pypi.org/packages/a7/e6/eaa04f65492bfdc5ee73dfed85f09ddaed39392db1db7021d3c4bd17ad23/graphql-core-0.5.2.tar.gz")
     version("0.5.1", sha256="b70561013b9a3dd8a301c95720da71e6cd951258e6393ca4f78c11f99a0a12a4", url="https://pypi.org/packages/1b/91/1517cdcb47d0e658f013d105acfbccd1801d7709e36770a30899c06c914c/graphql-core-0.5.1.tar.gz")
     version("0.5", sha256="d7bcd19f56d26982cb87b95875fb7f46d805a276acef312dc64782e08159cd34", url="https://pypi.org/packages/98/13/c8e9404eab2a601bd11f14f1847a6a79aab5191fef494fa00db99284b80e/graphql-core-0.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-promise@2.3:", when="@2.3:2")
         depends_on("py-promise@2.1:2.1.0,2.2-rc1:", when="@2:2.0.0,2.1-rc0:2.2")
         depends_on("py-rx@1.6:1", when="@2.2.1:2")
         depends_on("py-rx@1.6:", when="@2:2.0.0,2.1-rc0:2.2.0")
         depends_on("py-six@1.10:", when="@2:2.0.0,2.1-rc0:2")
+    # END DEPENDENCIES
 

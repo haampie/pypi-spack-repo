@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyImportlibResources(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.4.0", sha256="50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c", url="https://pypi.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl")
     version("6.3.2", sha256="f41f4098b16cd140a97d256137cfd943d958219007990b2afb00439fc623f580", url="https://pypi.org/packages/6e/f0/0632f7ae2d23aa34f1c5b09caf775376b9372e685c3841947dceef39919f/importlib_resources-6.3.2-py3-none-any.whl")
     version("6.3.1", sha256="4811639ca7fa830abdb8e9ca0a104dc6ad13de691d9fe0d3173a71304f068159", url="https://pypi.org/packages/18/4f/726c9cd8ca3327af96a8f808df3ac3327bf1452d68b06f96e1e3717f4b15/importlib_resources-6.3.1-py3-none-any.whl")
@@ -31,7 +31,12 @@ class PyImportlibResources(PythonPackage):
     version("5.1.0", sha256="885b8eae589179f661c909d699a546cf10d83692553e34dca1bf5eb06f7f6217", url="https://pypi.org/packages/82/70/7bf5f275a738629a7252c30c8461502d3658a75363db9f4f88ddbeb9eeac/importlib_resources-5.1.0-py3-none-any.whl")
     version("5.0.7", sha256="2238159eb743bd85304a16e0536048b3e991c531d1cd51c4a834d1ccf2829057", url="https://pypi.org/packages/46/10/7cc167fe072037c3cd2a15a92bb963b86f2bab8ac0995fab95fb7a152b80/importlib_resources-5.0.7-py3-none-any.whl")
     version("1.0.2", sha256="6e2783b2538bd5a14678284a3962b0660c715e5a0f10243fd5e00a4b5974f50b", url="https://pypi.org/packages/2f/f7/b4aa02cdd3ee7ebba375969d77c00826aa15c5db84247d23c89522dccbfa/importlib_resources-1.0.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-zipp@3.1:", when="@5.1.4: ^python@:3.9")
+    # END DEPENDENCIES
 

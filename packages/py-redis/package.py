@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRedis(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.1.0-beta4", sha256="8a74fae7cbd25493142c8cc2f79c21b2e3c03bf85dd3525a1db9f33ff47a3f2d", url="https://pypi.org/packages/43/47/5b0c2ccdb0d6b727550f51a79eb1e6d13ab2ec5019ddb3ae364e6e1bde3e/redis-5.1.0b4-py3-none-any.whl")
     version("5.1.0-beta3", sha256="8e83465ce69eb7b86b96d4e793ad1a8888d368815e47f1f6081d2d65d655a89c", url="https://pypi.org/packages/6b/13/72a07ba11d68b7d0c036b8bc7f9c39edc7651a739f5145477a7b694a8841/redis-5.1.0b3-py3-none-any.whl")
     version("5.0.3", sha256="5da9b8fe9e1254293756c16c008e8620b3d15fcc6dde6babde9541850e72a32d", url="https://pypi.org/packages/bb/f1/a384c5582d9a28e4a02eb1a2c279668053dd09aafeb08d2bd4dd323fc466/redis-5.0.3-py3-none-any.whl")
@@ -22,11 +22,20 @@ class PyRedis(PythonPackage):
     version("3.5.3", sha256="432b788c4530cfe16d8d943a09d40ca6c16149727e4afe8c2c9d5580c59d9f24", url="https://pypi.org/packages/a7/7c/24fb0511df653cf1a5d938d8f5d19802a88cef255706fdda242ff97e91b7/redis-3.5.3-py2.py3-none-any.whl")
     version("3.5.0", sha256="174101a3ce04560d716616290bb40e0a2af45d5844c8bd474c23fc5c52e7a46a", url="https://pypi.org/packages/d2/07/20cb8df2ded4b5db176a65da48b7c8d4295d868776296580b11071218a2b/redis-3.5.0-py2.py3-none-any.whl")
     version("3.3.8", sha256="c504251769031b0dd7dd5cf786050a6050197c6de0d37778c80c08cb04ae8275", url="https://pypi.org/packages/bd/64/b1e90af9bf0c7f6ef55e46b81ab527b33b785824d65300bb65636534b530/redis-3.3.8-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("hiredis", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-async-timeout@4.0.3:", when="@5.0.3:5.0 ^python@:3.11.2")
         depends_on("py-async-timeout@4.0.3:", when="@5.0.2,5.1.0-beta3:")
         depends_on("py-async-timeout@4.0.2:", when="@4.5.4:4,5.0.0-rc2:5.0.1,5.1:5.1.0-beta2 ^python@:3.11.2")
         depends_on("py-async-timeout@4.0.2:", when="@4.5.2:4.5.3,5:5.0.0-rc1 ^python@:3.10")
         depends_on("py-async-timeout@4.0.2:", when="@4.2:4.5.1")
+        depends_on("py-hiredis@1:", when="@4.0.0-rc1:+hiredis")
+        depends_on("py-hiredis@0.1.3:", when="@3+hiredis")
+    # END DEPENDENCIES
 

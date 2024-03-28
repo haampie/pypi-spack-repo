@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyXmod(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.8.1", sha256="a24e9458a4853489042522bdca9e50ee2eac5ab75c809a91150a8a7f40670d48", url="https://pypi.org/packages/33/6b/0dc75b64a764ea1cb8e4c32d1fb273c147304d4e5483cd58be482dc62e45/xmod-1.8.1-py3-none-any.whl")
     version("1.8.0", sha256="11ae15c4e14d4cd7f62131d269053ad0e16199fc2aeda9431a375038c06f11ac", url="https://pypi.org/packages/4f/29/01688fc41f2497fc97976de71c788a540f8521cb4747fdf436f0814d228e/xmod-1.8.0-py3-none-any.whl")
     version("1.7.2", sha256="2b092cbf34ace5eee9cb7c67570c5788f73efd15d008a72c2730cf6494a1257a", url="https://pypi.org/packages/61/11/0393be48e73a51cc8b4e1c62133b44ca9dd4e4221fd1b74bf861df0e7cee/xmod-1.7.2-py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyXmod(PythonPackage):
     version("1.5.0", sha256="1ef43b78282e1593938e948f428c343d071ce3dba87450c2849fa710010f9f14", url="https://pypi.org/packages/c1/dc/912a36d36a101f1cdc46726f4e21a5752aa67ac3093f1bba40a83a121d04/xmod-1.5.0-py3-none-any.whl")
     version("1.4.0", sha256="dce91e65c5e645628d90ce0c366c387ccd039146592da3a5d6aa76d24a35a13f", url="https://pypi.org/packages/69/93/e69f1de61c1c2e11a6a54bd58fbd4dd3e13ea2e27634ebe8a304ea70e841/xmod-1.4.0-py3-none-any.whl")
     version("1.3.2", sha256="a95b0b3d3d67481d33dc1bb53abb88775d26e967e5a2280033030fe25a147f3f", url="https://pypi.org/packages/79/6a/4125aa282f6971b69ab3c2e8673f1cc2c04c410747140998f975012a6f9a/xmod-1.3.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-black@23.12.1:23", when="@1.7:1.7.0")
         depends_on("py-dek@1.0.2:", when="@1.4")
@@ -26,4 +30,5 @@ class PyXmod(PythonPackage):
         depends_on("py-mypy@1.8:", when="@1.7:1.7.0")
         depends_on("py-pyright@1.1.343:", when="@1.7:1.7.0")
         depends_on("py-ruff@0.1.9:0.1", when="@1.7:1.7.0")
+    # END DEPENDENCIES
 

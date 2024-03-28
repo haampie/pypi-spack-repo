@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBleach(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.1.0", sha256="3225f354cfc436b9789c66c4ee030194bee0568fbf9cbdad3bc8b5c26c5f12b6", url="https://pypi.org/packages/ea/63/da7237f805089ecc28a3f36bca6a21c31fcbc2eb380f3b8f1be3312abd14/bleach-6.1.0-py3-none-any.whl")
     version("6.0.0", sha256="33c16e3353dbd13028ab4799a0f89a83f113405c766e9c122df8a06f5b85b3f4", url="https://pypi.org/packages/ac/e2/dfcab68c9b2e7800c8f06b85c76e5f978d05b195a958daa9b1dda54a1db6/bleach-6.0.0-py3-none-any.whl")
     version("5.0.1", sha256="085f7f33c15bd408dd9b17a4ad77c577db66d76203e5984b1bd59baeee948b2a", url="https://pypi.org/packages/d4/87/508104336a2bc0c4cfdbdceedc0f44dc72da3abc0460c57e323ddd1b3257/bleach-5.0.1-py3-none-any.whl")
@@ -19,11 +19,16 @@ class PyBleach(PythonPackage):
     version("3.2.1", sha256="9f8ccbeb6183c6e6cddea37592dfb0167485c1e3b13b3363bc325aa8bda3adbd", url="https://pypi.org/packages/03/c8/b7ed0dfea5cb287907bd22c5ff7c3ed0a65b346f2a4cf916eb9e83be66b3/bleach-3.2.1-py2.py3-none-any.whl")
     version("3.1.0", sha256="213336e49e102af26d9cde77dd2d0397afabc5a6bf2fed985dc35b5d1e285a16", url="https://pypi.org/packages/ab/05/27e1466475e816d3001efb6e0a85a819be17411420494a1e602c36f8299d/bleach-3.1.0-py2.py3-none-any.whl")
     version("1.5.0", sha256="e67f46adcec78dbc3c04462f3aba3213a673d5652eba2609ed1ef15492a44b8d", url="https://pypi.org/packages/33/70/86c5fec937ea4964184d4d6c4f0b9551564f821e1c3575907639036d9b90/bleach-1.5.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-html5lib@0.999,0.999999:0.9999999", when="@1.5:1")
         depends_on("py-packaging", when="@3.1.5:4")
         depends_on("py-six@1.9:", when="@3.1:3.1.0,3.1.2:")
         depends_on("py-six", when="@1.4.3:3.0")
         depends_on("py-webencodings", when="@3:3.1.0,3.1.2:")
+    # END DEPENDENCIES
 

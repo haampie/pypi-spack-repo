@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyopenssl(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("24.1.0", sha256="17ed5be5936449c5418d1cd269a1a9e9081bc54c17aed272b45856a3d3dc86ad", url="https://pypi.org/packages/54/a7/2104f674a5a6845b04c8ff01659becc6b8978ca410b82b94287e0b1e018b/pyOpenSSL-24.1.0-py3-none-any.whl")
     version("24.0.0", sha256="ba07553fb6fd6a7a2259adb9b84e12302a9a8a75c44046e8bb5d3e5ee887e3c3", url="https://pypi.org/packages/3f/0e/c6656e62d9424d9c9f14b27be27220602f4af1e64b77f2c86340b671d439/pyOpenSSL-24.0.0-py3-none-any.whl")
     version("23.3.0", sha256="6756834481d9ed5470f4a9393455154bc92fe7a64b7bc6ee2c804e78c52099b2", url="https://pypi.org/packages/db/de/007b832ad7a95e6a73745609bbe123c407aa2c46bb0b8f765c8718294e7f/pyOpenSSL-23.3.0-py3-none-any.whl")
@@ -27,7 +27,11 @@ class PyPyopenssl(PythonPackage):
     version("17.3.0", sha256="aade9985b93eaec51b0c0a2a60d14bb8dcff1ff8e36fe542e3c22812ec07315e", url="https://pypi.org/packages/24/37/89bf12e53f1d27e8b2c8e5f8f9c7a958a3905f6916a9294a57a9d83fa165/pyOpenSSL-17.3.0-py2.py3-none-any.whl")
     version("17.2.0", sha256="c8959e441c2d85d646f3d6e9024ec02b2fc8dda92596e44ce3460b3a476bc694", url="https://pypi.org/packages/41/bd/751560b317222ba6b6d2e7663a990ac36465aaa026621c6057db130e2faf/pyOpenSSL-17.2.0-py2.py3-none-any.whl")
     version("17.1.0", sha256="cc21d1dcc5c4413281c59f912975209999ffb8b091b03872d2516e60be512290", url="https://pypi.org/packages/d0/39/7730559b75b565fd6983d857776fcb4982afb0e8faddb06170e59b62b41c/pyOpenSSL-17.1.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cryptography@41.0.5:42", when="@24:")
         depends_on("py-cryptography@41.0.5:41", when="@23.3:23")
@@ -44,4 +48,5 @@ class PyPyopenssl(PythonPackage):
         depends_on("py-cryptography@2.1.4:", when="@17.5:17")
         depends_on("py-cryptography@1.9:", when="@17.1:17.4")
         depends_on("py-six@1.5.2:", when="@0.15:21")
+    # END DEPENDENCIES
 

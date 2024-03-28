@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJson5(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.9.24", sha256="4ca101fd5c7cb47960c055ef8f4d0e31e15a7c6c48c3b6f1473fc83b6c462a13", url="https://pypi.org/packages/26/2f/f93ccd68858c0005445fbdad053417b7eaab87aaf31bd2b506a9005d0dfd/json5-0.9.24-py3-none-any.whl")
     version("0.9.23", sha256="4ff0795cfd93126334cb8c040456851a77ce1bdda702171b32c82110055e8911", url="https://pypi.org/packages/76/6a/311e31b3747e025f3951c950d44634169a7a39355c0dda35b11ace370f73/json5-0.9.23-py3-none-any.whl")
     version("0.9.22", sha256="6621007c70897652f8b5d03885f732771c48d1925591ad989aa80c7e0e5ad32f", url="https://pypi.org/packages/ca/fd/1cffc32cb1c4db0c0aed6c70b4d4cb43c08242bcbf2ac7ff00ba130ac6a5/json5-0.9.22-py3-none-any.whl")
@@ -21,5 +21,10 @@ class PyJson5(PythonPackage):
     version("0.9.10", sha256="993189671e7412e9cdd8be8dc61cf402e8e579b35f1d1bb20ae6b09baa78bbce", url="https://pypi.org/packages/75/8c/c6f242154ee057e8f5b9491ee2a095646e489fcbad18dd73b99ed88cc5b2/json5-0.9.10-py2.py3-none-any.whl")
     version("0.9.6", sha256="823e510eb355949bed817e1f3e2d682455dc6af9daf6066d5698d6a2ca4481c2", url="https://pypi.org/packages/7e/8e/ebde0a31c71e7098b3014faf46c80bdbcadb3c23b0ac7c7646b2af7d302e/json5-0.9.6-py2.py3-none-any.whl")
     version("0.9.4", sha256="4e0fc461b5508196a3ddb3b981dc677805923b86d6eb603c7f58f2459ab1458f", url="https://pypi.org/packages/e4/4b/c0b4c7e238a98165a0281d6ad52ee4a8401318580d2fc9d3844dda2ef5f7/json5-0.9.4-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

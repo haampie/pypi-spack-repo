@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyEmoji(PythonPackage):
+    # BEGIN VERSIONS
     version("2.10.1", sha256="11fb369ea79d20c14efa4362c732d67126df294a7959a2c98bfd7447c12a218e", url="https://pypi.org/packages/98/00/00d56e704d69cee4a92b1d517676579b4af5f2f8bc72946c464a504705b2/emoji-2.10.1-py2.py3-none-any.whl")
     version("2.10.0", sha256="aed4332caa23553a7218f032c08b0a325ae53b010f7fb98ad272c0f7841bc1d3", url="https://pypi.org/packages/8d/97/fbe537350214b0489e6c7052b9e8928a85ed5febb621a82cc5437dbf17e7/emoji-2.10.0-py2.py3-none-any.whl")
     version("2.9.0", sha256="17b0d53e1d9f787307a4c65aa19badb0a1ffdbc89b3a3cd851fc77821cdaced2", url="https://pypi.org/packages/03/40/91d0c9fe5a0b494c0fdbcacda4d203aea39f8293e69c70129389308ca928/emoji-2.9.0-py2.py3-none-any.whl")
@@ -27,5 +27,10 @@ class PyEmoji(PythonPackage):
     version("1.4.0", sha256="272d38308a949d8d8ca4ee7d033469201496465495b07d91a3ee32e8fe99dd65", url="https://pypi.org/packages/08/8f/c6cad83e6261114a612870a21832e4700f05fcacff8bd7e362a0af3c5acf/emoji-1.4.0.tar.gz")
     version("1.2.0", sha256="6b19b65da8d6f30551eead1705539cc0eadcd9e33a6ecbc421a29b87f96287eb", url="https://pypi.org/packages/24/fa/b3368f41b95a286f8d300e323449ab4e86b85334c2e0b477e94422b8ed0f/emoji-1.2.0-py3-none-any.whl")
     version("1.1.0", sha256="153fbf06eb5a111ca2b0c04f6f14ec3be434946a302f7892bf4c30446e050381", url="https://pypi.org/packages/79/0d/c06a34f306a219fd32b9d0297d999e3551d0ecee8190dce921602db4094c/emoji-1.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

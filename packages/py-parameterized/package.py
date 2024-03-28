@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyParameterized(PythonPackage):
-    version("0.7.1", sha256="6a94dbea30c6abde99fd4c2f2042c1bf7f980e48908bf92ead62394f93cf57ed", url="https://pypi.org/packages/a8/22/966615469f8e72ee5840f3dc272781736998187cefd3a4679d3872051c4f/parameterized-0.7.1.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.7.1", sha256="ea0326ba5bbbe7c427329a27b75003410df07d1173ca254976f8f5a64922c322", url="https://pypi.org/packages/a3/bf/6ef8239028beae8298e0806b4f79c2466b1b16ca5b85dc13d631c5ea92c4/parameterized-0.7.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

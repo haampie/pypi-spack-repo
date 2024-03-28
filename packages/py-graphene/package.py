@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGraphene(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.3", sha256="bb3810be33b54cb3e6969506671eb72319e8d7ba0d5ca9c8066472f75bf35a38", url="https://pypi.org/packages/24/70/96f6027cdfc9bb89fc07627b615cb43fb1c443c93498412beaeaf157e9f1/graphene-3.3-py2.py3-none-any.whl")
     version("3.2.2", sha256="753de13948cbf42e32cc87fb533167c88907066eb984251fdbb006c0aab8da00", url="https://pypi.org/packages/38/3d/41d439ed01fccb02f9489df2b8a7a7eb81dd93a4bb060997892b7221b9ed/graphene-3.2.2-py2.py3-none-any.whl")
     version("3.2.1", sha256="2ef689f514ba9e65e88961798cf4c637ca580e541168f9aee2ffbe21fd46f388", url="https://pypi.org/packages/b3/a2/40727944d4587b4d945799a92965f58eb51b1ef8b5bf4d45ce937fade347/graphene-3.2.1-py2.py3-none-any.whl")
@@ -22,7 +22,11 @@ class PyGraphene(PythonPackage):
     version("2.1.2", sha256="8fd8e6195c56c15b2936e7dee2e156692eba4752ee1978f65e10925eafe8d014", url="https://pypi.org/packages/17/c8/d326bb2bb207af057d9cd8b986bdc09afa56c54ccf642e0a864e6e9e3970/graphene-2.1.2-py2.py3-none-any.whl")
     version("2.1.1", sha256="66d4918763e6addc818161212e65f329bae9d67b59805e38ca890c28ef2cb887", url="https://pypi.org/packages/63/0a/0a5eb042c7891c23c80480144f490b1b9a08c4aa91041a1b25bd02649f45/graphene-2.1.1-py2.py3-none-any.whl")
     version("2.1", sha256="dc95daa3f808fa1c1b26b780d103216a3d562eb95f72744a054b5bf6609d5c5c", url="https://pypi.org/packages/37/92/b8b543b7a0eeaed5d499c1e4569c646f59ddcf01f59a8f00f7714219422a/graphene-2.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aniso8601@8:", when="@3.0-beta8:3.0.0,3.1:")
         depends_on("py-aniso8601@3:7", when="@2.1.8:2")
@@ -38,4 +42,5 @@ class PyGraphene(PythonPackage):
         depends_on("py-graphql-relay@0.4.5:0", when="@2.0.1:2.1.6")
         depends_on("py-promise@2.1:2.1.0,2.2-rc1:", when="@2.0.1:2.1.3")
         depends_on("py-six@1.10:", when="@2.0.1:2")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,9 @@
 from spack.package import *
 
 class PyBoto3(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("1.34.72", sha256="a33585ef0d811ee0dffd92a96108344997a3059262c57349be0761d7885f6ae7", url="https://pypi.org/packages/12/88/86ae378d3db210eb91a6d02c31f52690bf11510665dd9519d960024c0359/boto3-1.34.72-py3-none-any.whl")
+    version("1.34.71", sha256="7ce8c9a50af2f8a159a0dd86b40011d8dfdaba35005a118e51cd3ac72dc630f1", url="https://pypi.org/packages/b1/f1/657850c7ac20e3b6566ede060a2db967b1f29f245e2cbb3cf16de889852e/boto3-1.34.71-py3-none-any.whl")
     version("1.34.70", sha256="8d7902e2c0c62837457ba18146e3feaf1dec62018617edc5c0336b65b305b682", url="https://pypi.org/packages/2a/2c/4b87fe046ad059c7ede17fa402a0658d131e31413d12942c6d3c72d60805/boto3-1.34.70-py3-none-any.whl")
     version("1.34.69", sha256="2e25ef6bd325217c2da329829478be063155897d8d3b29f31f7f23ab548519b1", url="https://pypi.org/packages/a1/f3/a6626ed248468ab33b2f68cc98f9cb0f40beab0803af382e6c52c5545a45/boto3-1.34.69-py3-none-any.whl")
     version("1.34.68", sha256="14f1e23b3f83ec365628a6ef849f1038b4c7338c4fabff159007c711b8147efc", url="https://pypi.org/packages/f0/4c/3e89092c83de6ccf94b6f74088f8ba54acaa701ff78b31855daab9d9ffbc/boto3-1.34.68-py3-none-any.whl")
@@ -15,8 +17,6 @@ class PyBoto3(PythonPackage):
     version("1.34.65", sha256="b611de58ab28940a36c77d7ef9823427ebf25d5ee8277b802f9979b14e780534", url="https://pypi.org/packages/c8/a6/04b1cd7f38cbe781ef0d55f7459ee3ebb44771982cde3575ba4963bb24bf/boto3-1.34.65-py3-none-any.whl")
     version("1.34.64", sha256="8c6fbd3d45399a4e4685010117fb2dc52fc6afdab5a9460957d463ae0c2cc55d", url="https://pypi.org/packages/26/fb/b89de0e5e585e6fdecbf93fe1e05df8582d558cd92f8e3162fa88277fd78/boto3-1.34.64-py3-none-any.whl")
     version("1.34.63", sha256="617174f9051b564a57fb1079186ad15db6519ab3bb0d1fb22cb54767b0c4f46e", url="https://pypi.org/packages/a3/09/225d978bbe08b3c7b916732dbd7c65c03d4d89d47ea04df7fc0d149738fd/boto3-1.34.63-py3-none-any.whl")
-    version("1.34.62", sha256="a464a2fd519a9939357822f0538e7b56023dab26742bcae5131b9aa89603ba91", url="https://pypi.org/packages/6d/e8/1fa8ab8511f91b2a893d4f0876d8979b07dd7d44ede97f69d748faa7b7ad/boto3-1.34.62-py3-none-any.whl")
-    version("1.34.61", sha256="992e994c7e481a5d3259c699574882b79d631a46f7c369bea350b7ccb0651317", url="https://pypi.org/packages/60/15/9aac35742c47578eb9a1aee4519fecebba5faec51eeb09f093eca9938567/boto3-1.34.61-py3-none-any.whl")
     version("1.34.44", sha256="40f89fb2acee0a0879effe81badffcd801a348e715483227223241ae311c48fc", url="https://pypi.org/packages/15/1e/cbec55e05c0577429945d785cce8e16eebf2a8bd9c5ccda2b9c6e2a51ab4/boto3-1.34.44-py3-none-any.whl")
     version("1.26.26", sha256="b1d2521bd2239c4d2d8ee2a79d932bc64bf4779521ecc60c1074ae8a5d88adaa", url="https://pypi.org/packages/dc/cb/11560a590526f6049389bdfb5a993c4abc11eb20c12448d922909ac641fb/boto3-1.26.26-py3-none-any.whl")
     version("1.25.5", sha256="17ce7b6b702f9e844a33ce3ce9612f09d9d73eb7d34aaeffc77353ec036a9615", url="https://pypi.org/packages/29/17/8dd2d2c231cdfed1b24e31e49c628b8490c2846fe3116ced9d2fa73de0aa/boto3-1.25.5-py3-none-any.whl")
@@ -35,9 +35,15 @@ class PyBoto3(PythonPackage):
     version("1.10.38", sha256="d64ec82b5125d8f8cae00f92d33a338c6c55cb5984967cfc7f4c52cf138126c4", url="https://pypi.org/packages/2e/b4/e8fb59efd68d4889528cb0d4227484b5aa511b765d81e05d2cd7d9bb3ca5/boto3-1.10.38-py2.py3-none-any.whl")
     version("1.9.253", sha256="839285fbd6f3ab16170af449ae9e33d0eccf97ca22de17d9ff68b8da2310ea06", url="https://pypi.org/packages/f6/fa/6397049020b312f71c397fff8d10247c2e49da760e2807af7d21e3c23695/boto3-1.9.253-py2.py3-none-any.whl")
     version("1.9.169", sha256="58ae308e4539264754e4e2a21bfec71b2fbffe02e86a77e680077e10b7c0ed54", url="https://pypi.org/packages/a6/1f/b272ead5ccc5370717f3c65ebd5092feab90e748db041bd96c565e7d1a72/boto3-1.9.169-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-botocore@1.34.70:", when="@1.34.70:")
+        depends_on("py-botocore@1.34.72:", when="@1.34.72:")
+        depends_on("py-botocore@1.34.71:", when="@1.34.71")
+        depends_on("py-botocore@1.34.70:", when="@1.34.70")
         depends_on("py-botocore@1.34.69:", when="@1.34.69")
         depends_on("py-botocore@1.34.68:", when="@1.34.68")
         depends_on("py-botocore@1.34.67:", when="@1.34.67")
@@ -45,8 +51,6 @@ class PyBoto3(PythonPackage):
         depends_on("py-botocore@1.34.65:", when="@1.34.65")
         depends_on("py-botocore@1.34.64:", when="@1.34.64")
         depends_on("py-botocore@1.34.63:", when="@1.34.63")
-        depends_on("py-botocore@1.34.62:", when="@1.34.62")
-        depends_on("py-botocore@1.34.61:", when="@1.34.61")
         depends_on("py-botocore@1.34.44:", when="@1.34.44")
         depends_on("py-botocore@1.29.26:1.29", when="@1.26.26")
         depends_on("py-botocore@1.28.5:1.28", when="@1.25.5:1.25")
@@ -67,4 +71,5 @@ class PyBoto3(PythonPackage):
         depends_on("py-s3transfer@0.5", when="@1.18:1.23")
         depends_on("py-s3transfer@0.4", when="@1.17.54:1.17")
         depends_on("py-s3transfer@0.3", when="@1.14.25:1.17.53")
+    # END DEPENDENCIES
 

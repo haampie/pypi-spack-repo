@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PySphinxRtdTheme(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.0", sha256="ec93d0856dc280cf3aee9a4c9807c60e027c7f7b461b77aeffed682e68f0e586", url="https://pypi.org/packages/ea/46/00fda84467815c29951a9c91e3ae7503c409ddad04373e7cfc78daad4300/sphinx_rtd_theme-2.0.0-py2.py3-none-any.whl")
     version("1.3.0", sha256="46ddef89cc2416a81ecfbeaceab1881948c014b1b6e4450b815311a89fb977b0", url="https://pypi.org/packages/18/01/76f40a18e9209bb098c1c1313c823dbbd001b23a2db71e7fd4eb5a48559c/sphinx_rtd_theme-1.3.0-py2.py3-none-any.whl")
     version("1.2.2", sha256="6a7e7d8af34eb8fc57d52a09c6b6b9c46ff44aea5951bc831eeb9245378f3689", url="https://pypi.org/packages/85/32/9ccebf3a82c085e8fc12b67cc3dbf840789fb6c7835ed0d61686d6509aa9/sphinx_rtd_theme-1.2.2-py2.py3-none-any.whl")
@@ -19,7 +19,11 @@ class PySphinxRtdTheme(PythonPackage):
     version("0.5.1", sha256="fa6bebd5ab9a73da8e102509a86f3fcc36dec04a0b52ea80e5a033b2aba00113", url="https://pypi.org/packages/76/81/d5af3a50a45ee4311ac2dac5b599d69f68388401c7a4ca902e0e450a9f94/sphinx_rtd_theme-0.5.1-py2.py3-none-any.whl")
     version("0.5.0", sha256="373413d0f82425aaa28fb288009bf0d0964711d347763af2f1b65cafcb028c82", url="https://pypi.org/packages/c3/86/1addf25a238bbd8466bb099f23d9a9f13494b22b37b44f6c41a778b8730f/sphinx_rtd_theme-0.5.0-py2.py3-none-any.whl")
     version("0.4.3", sha256="00cf895504a7895ee433807c62094cf1e95f065843bf3acd17037c3e9a2becd4", url="https://pypi.org/packages/60/b4/4df37087a1d36755e3a3bfd2a30263f358d2dea21938240fa02313d45f51/sphinx_rtd_theme-0.4.3-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-docutils@:0.20", when="@2.0.0-rc2:")
         depends_on("py-docutils@:0.18", when="@1.2:2.0.0-rc1")
@@ -32,4 +36,5 @@ class PySphinxRtdTheme(PythonPackage):
         depends_on("py-sphinx", when="@0.4.1:0")
         depends_on("py-sphinxcontrib-jquery@4:", when="@1.2.2-rc1:")
         depends_on("py-sphinxcontrib-jquery@2,4:", when="@1.2.0-rc4:1.2.1")
+    # END DEPENDENCIES
 

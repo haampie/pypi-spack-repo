@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyQutip(PythonPackage):
+    # BEGIN VERSIONS
     version("4.7.5", sha256="a0cc9883281ec89e38ac635adc4bb602d85ec49071628ee17d3bf2c14b5c11ac", url="https://pypi.org/packages/36/78/b7bca6d1f6623b03138c048e9a31b50ed5dff9937de036eb85dbefd2362b/qutip-4.7.5.tar.gz")
     version("4.7.4", sha256="4739510d707cf6a02465ebc37d9273dc63dfdfa210ff128f6211f7ff9438a4f1", url="https://pypi.org/packages/14/73/a7016aa60dace8d101740dce5c11e6c832129cd15a0450935aa35746ecfa/qutip-4.7.4.tar.gz")
     version("4.7.3", sha256="abaf8281cacdb31b822456b4732d591939781ab94561f42bc081a64e3fda713d", url="https://pypi.org/packages/fe/1e/fcef4a656d3b5824132e93d94b9ccde3bc7384c70385e0bf3245dfa59ee6/qutip-4.7.3.tar.gz")
@@ -17,5 +17,10 @@ class PyQutip(PythonPackage):
     version("4.6.2", sha256="9614e8e8270dd28728150c00f74ec750b9a2a23fb3b4fe629006f86dd02011df", url="https://pypi.org/packages/4c/72/42569d71f1643e581c8ad53073c0773cfadaa8f8cf12ac7599b9de01a9ec/qutip-4.6.2.tar.gz")
     version("4.6.1", sha256="01f9564a5f87dbee783add707d546b646932a6edad946bfe09787727f52211e9", url="https://pypi.org/packages/21/e7/6e75baa97647d4e5fdfe7fe1fc5ac1710ae041fa0ff44217122485ed3682/qutip-4.6.1.tar.gz")
     version("4.6.0", sha256="021d2d058cd9d91795157274686b3a7c323c87ed3f11ca382573f52a96e79af5", url="https://pypi.org/packages/ff/b0/f60b777c39a1212683368f15f53a8c63e8e4a48d108214a7fcd4ab15c2d4/qutip-4.6.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

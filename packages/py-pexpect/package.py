@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPexpect(PythonPackage):
+    # BEGIN VERSIONS
     version("4.9.0", sha256="7236d1e080e4936be2dc3e326cec0af72acf9212a7e1d060210e70a47e253523", url="https://pypi.org/packages/9e/c3/059298687310d527a58bb01f3b1965787ee3b40dce76752eda8b44e9a2c5/pexpect-4.9.0-py2.py3-none-any.whl")
     version("4.8.0", sha256="0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937", url="https://pypi.org/packages/39/7b/88dbb785881c28a102619d46423cb853b46dbccc70d3ac362d99773a78ce/pexpect-4.8.0-py2.py3-none-any.whl")
     version("4.7.0", sha256="2094eefdfcf37a1fdbfb9aa090862c1a4878e5c7e0e7e7088bdb511c558e5cd1", url="https://pypi.org/packages/0e/3e/377007e3f36ec42f1b84ec322ee12141a9e10d808312e5738f52f80a232c/pexpect-4.7.0-py2.py3-none-any.whl")
@@ -16,9 +16,14 @@ class PyPexpect(PythonPackage):
     version("4.3.1", sha256="144939a072a46d32f6e5ecc866509e1d613276781f7182148a08df52eaa7b022", url="https://pypi.org/packages/49/d1/1503ce5e3c41690333949cb887cf569933ef8835aa30af7e3b1b07fbd867/pexpect-4.3.1-py2.py3-none-any.whl")
     version("4.3.0", sha256="2b50dd8caa5007b10b0afcf075095814780b104b4a5cf9d8fbdc8bbc754e5ca4", url="https://pypi.org/packages/7d/51/883102f3f288deda0c29e5177d7bdef5b9f6d60098c0d37a1f5c8f765a93/pexpect-4.3.0-py2.py3-none-any.whl")
     version("4.2.1", sha256="f853b52afaf3b064d29854771e2db509ef80392509bde2dd7a6ecf2dfc3f0018", url="https://pypi.org/packages/5b/16/4859a0376be8b87bf3920b1f6e63b8a3c0ee42488babee07c87ca9316e03/pexpect-4.2.1-py2.py3-none-any.whl")
-    version("4.2.0", sha256="bf6816b8cc8d301a499e7adf338828b39bc7548eb64dbed4dd410ed93d95f853", url="https://pypi.org/packages/b3/7b/7b3659b9d7059d6d21e23b2464c5c84bffd4a34450cbf0ed19c9a8a4a52f/pexpect-4.2.0.tar.gz")
+    version("4.2.0", sha256="4028556aa07ba31912041513124ecd4a094a15da9328feea1c35d9084f9f6ca8", url="https://pypi.org/packages/67/5a/acfc2cae5ccc457aa49ef0cdbae33a16b81986f3384186be171a8c0a5db3/pexpect-4.2.0-py2.py3-none-any.whl")
     version("3.3", sha256="dfea618d43e83cfff21504f18f98019ba520f330e4142e5185ef7c73527de5ba", url="https://pypi.org/packages/52/97/13924c85a4b7544a4174781360e0530a7fff23e62d76da0e211369dd61f5/pexpect-3.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ptyprocess@0.5:", when="@4.1,4.2.1:")
+    # END DEPENDENCIES
 

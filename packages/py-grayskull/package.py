@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyGrayskull(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.5.0", sha256="81477d18cb1c96de06173337a5fe46eb2e04a793dd1773ec990d3efa2c9f8949", url="https://pypi.org/packages/68/3e/bc10142d64e27d66144cd462e1c11325bd1beccdce6dda1810cf86f8dc37/grayskull-2.5.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-beautifulsoup4", when="@2:")
         depends_on("py-colorama")
@@ -26,4 +30,5 @@ class PyGrayskull(PythonPackage):
         depends_on("py-stdlib-list")
         depends_on("py-tomli", when="@1.4.1:")
         depends_on("py-tomli-w", when="@1.4.1:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyGrpcio(PythonPackage):
+    # BEGIN VERSIONS
     version("1.62.1", sha256="6c455e008fa86d9e9a9d85bb76da4277c0d7d9668a3bfa70dbe86e9f3c759947", url="https://pypi.org/packages/c7/bb/d01494037edee2d8e024cac8049b169b2723186b01cebb495ccf677bbba9/grpcio-1.62.1.tar.gz")
     version("1.62.0", sha256="748496af9238ac78dcd98cce65421f1adce28c3979393e3609683fcd7f3880d7", url="https://pypi.org/packages/50/4e/7ed8c24c93c8d000b9ea2927f555ae3b03cfabe035d65eda0db848cb20b6/grpcio-1.62.0.tar.gz")
     version("1.62.0-rc1", sha256="6114254bd724749cb2a189eabfcec37c7a975cd9db796e8ce503311a17c24404", url="https://pypi.org/packages/a8/04/28ec8bfc70025692d56eafe0294fda5c88502280f139ad72e43d5a6d96a6/grpcio-1.62.0rc1.tar.gz")
@@ -41,9 +41,14 @@ class PyGrpcio(PythonPackage):
     version("1.27.2", sha256="5ae532b93cf9ce5a2a549b74a2c35e3b690b171ece9358519b3039c7b84c887e", url="https://pypi.org/packages/74/52/9204d08bf37ac2505ebab2fa93b808fac87564580d7cc839db2fe11c3bdd/grpcio-1.27.2.tar.gz")
     version("1.25.0", sha256="c948c034d8997526011960db54f512756fb0b4be1b81140a15b4ef094c6594a4", url="https://pypi.org/packages/e4/60/40c4d2b61d9e4349bc89445deb8d04cc000b10a63446c42d311e0d21d127/grpcio-1.25.0.tar.gz")
     version("1.16.0", sha256="0cc5f2d3ee21c642d8982f197c83053fd3a8cbcd6a60240d8c87c6c256b10d57", url="https://pypi.org/packages/be/84/9afa550ae7bfc65a7150f66ecdbf267617a2d584d9f845b4ef7d026a24ad/grpcio-1.16.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-enum34@1.0.4:", when="@0.13:0.14,1.0.0-rc2,1.0.1-rc1:1.0.2-rc0,1.0.3:1.0,1.2:1.19")
         depends_on("py-futures@2.2:", when="@0.13:0.14,1.0.0-rc2,1.0.1-rc1:1.0.2-rc0,1.0.3:1.0,1.2:1.19")
         depends_on("py-six@1.5.2:", when="@1.0.0-rc2,1.0.1-rc1:1.0.2-rc0,1.0.3:1.0,1.2:1.30")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkApptrackingtransparency(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="de140b6b6ca1df928d13d986b093f19b8be0c9ab7c42f4121bdbf58f5c69df48", url="https://pypi.org/packages/cb/09/697d7f0e3f123359b946bd91031bf1ab58a4c7766a9723ff2b9453b9342b/pyobjc_framework_AppTrackingTransparency-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="5dee7e163a6b325315410ca4929f1e07162403fc0f62d7d6a8dd504b544e1626", url="https://pypi.org/packages/fc/42/256808ce61f8824681b52d06d48bd9ad0557cc221082440bdd70f1fc991e/pyobjc_framework_AppTrackingTransparency-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="20d1c8516c2ac568b90f3daf7d93b91a37ea61aa874b4a541d276c7fdac623e4", url="https://pypi.org/packages/9e/d9/ed0b3c22882ac07ae59074cbf4d041a82f05cbb51b129d986482b7362a56/pyobjc_framework_AppTrackingTransparency-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkApptrackingtransparency(PythonPackage):
     version("9.0", sha256="53c7b8565ee276f4828f44d04e9b3d78b275fe8713debf4e992c3c8e74125c07", url="https://pypi.org/packages/62/bc/15864621694cd0e8038d31c0a3676b816739967909a99d2a5e7a188cf18b/pyobjc_framework_AppTrackingTransparency-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="e5efdb749dead08d498b5b0737e37c69212e330e6502173e0d927977a4e94cb9", url="https://pypi.org/packages/71/9c/6536dea8180efa174c678448c01227da1475c75be260fb33a5ab828c2058/pyobjc_framework_AppTrackingTransparency-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="0aed6d40245aae09bcb3bb2616b80b6c6debcbb2c4efc875b60fe6c35f77eaa0", url="https://pypi.org/packages/75/54/e73c2da4017a25834b98875c7f3eb4b19041acccc7d83eaba1f837960fd6/pyobjc_framework_AppTrackingTransparency-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkApptrackingtransparency(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

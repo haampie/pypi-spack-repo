@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJsonpickle(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.3", sha256="e8d6dcc58f6722bea0321cd328fbda81c582461185688a535df02be0f699afb4", url="https://pypi.org/packages/d6/be/c11f919e02622f15b942c0f2867dff6c3836ce32cd617627dda73bc9e5b7/jsonpickle-3.0.3-py3-none-any.whl")
     version("3.0.2", sha256="4a8442d97ca3f77978afa58068768dba7bff2dbabe79a9647bc3cdafd4ef019f", url="https://pypi.org/packages/d3/25/6e0a450430b7aa194b0f515f64820fc619314faa289458b7dfca4a026114/jsonpickle-3.0.2-py3-none-any.whl")
     version("3.0.1", sha256="130d8b293ea0add3845de311aaba55e6d706d0bb17bc123bd2c8baf8a39ac77c", url="https://pypi.org/packages/4c/2f/75afdf7c9688eba3575072034abf4572833c4ef291177d2510a103c5f251/jsonpickle-3.0.1-py2.py3-none-any.whl")
@@ -18,8 +18,13 @@ class PyJsonpickle(PythonPackage):
     version("1.5.1", sha256="8eb8323f0e12cb40687f0445e2115d8165901e20ac670add55bb53a95c68c0e5", url="https://pypi.org/packages/77/a7/c2f527ddce3155ae9e008385963c2325cbfd52969f8b38efa2723e2af4af/jsonpickle-1.5.1-py2.py3-none-any.whl")
     version("1.5.0", sha256="423d7b5e6c606d4c0efd93819913191e375f3a23c0874f39df94d2e20dd21c93", url="https://pypi.org/packages/7d/09/600132ea6cd4f816cc8ae6a8cfe4f85d9f898f169756dbfc176037a3a2f2/jsonpickle-1.5.0-py2.py3-none-any.whl")
     version("1.4.1", sha256="8919c166bac0574e3d74425c7559434062002d9dfc0ac2afa6dc746ba4a19439", url="https://pypi.org/packages/af/ca/4fee219cc4113a5635e348ad951cf8a2e47fed2e3342312493f5b73d0007/jsonpickle-1.4.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-importlib-metadata", when="@1.4:1.4.1")
         depends_on("py-setuptools@:58", when="@3:3.0.0 ^python@3.10.1:")
+    # END DEPENDENCIES
 

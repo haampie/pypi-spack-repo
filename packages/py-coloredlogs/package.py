@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyColoredlogs(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("15.0.1", sha256="612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934", url="https://pypi.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl")
     version("15.0", sha256="b7f630a8297a66984b6bae0f6a1b0e0afb9f2f6838ea3bfa58f50d3d13e133d6", url="https://pypi.org/packages/84/a6/837dbf6eac344cb74f0ba86b79e8180855570af3e26bcb1ea5f650cf944c/coloredlogs-15.0-py2.py3-none-any.whl")
     version("14.3", sha256="e244a892f9d97ffd2c60f15bf1d2582ef7f9ac0f848d132249004184785702b3", url="https://pypi.org/packages/f3/56/c11e7ef34316b22db4e6d1b9de6e54f332243b72ce63eab676f87744d5ad/coloredlogs-14.3-py2.py3-none-any.whl")
@@ -18,11 +18,16 @@ class PyColoredlogs(PythonPackage):
     version("11.2", sha256="252f6282a029b90984a703504306d461e497875355201843abec77b5fcde97be", url="https://pypi.org/packages/9f/68/65862ffcb9e60ae9d7094775572b0826b10dee13a99771eb42bd6db10411/coloredlogs-11.2-py2.py3-none-any.whl")
     version("11.1", sha256="6590fea9bc0e47c543508e5bcc7231da8ba0b97a7cef1be5e99d74a4db11c063", url="https://pypi.org/packages/f9/98/be07b0e2a66b785c1f1e360654a4c1c4e35df31cc95475a3421647a86d2b/coloredlogs-11.1-py2.py3-none-any.whl")
     version("10.0", sha256="34fad2e342d5a559c31b6c889e8d14f97cb62c47d9a2ae7b5ed14ea10a79eff8", url="https://pypi.org/packages/08/0f/7877fc42fff0b9d70b6442df62d53b3868d3a6ad1b876bdb54335b30ff23/coloredlogs-10.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama", when="@5.1.1:12 platform=windows")
         depends_on("py-humanfriendly@9.1:", when="@15:")
         depends_on("py-humanfriendly@7.1:", when="@14")
         depends_on("py-humanfriendly@6.1:", when="@11:12")
         depends_on("py-humanfriendly@4.7:", when="@9:10")
+    # END DEPENDENCIES
 

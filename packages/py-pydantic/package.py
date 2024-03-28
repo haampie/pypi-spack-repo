@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPydantic(PythonPackage):
+    # BEGIN VERSIONS
     version("2.6.4", sha256="cc46fce86607580867bdc3361ad462bab9c222ef042d3da86f2fb333e1d916c5", url="https://pypi.org/packages/e5/f3/8296f550276194a58c5500d55b19a27ae0a5a3a51ffef66710c58544b32d/pydantic-2.6.4-py3-none-any.whl")
     version("2.6.3", sha256="72c6034df47f46ccdf81869fddb81aade68056003900a8724a4f160700016a2a", url="https://pypi.org/packages/ac/86/c98520827f58c8753783be4bf2286b4f73a18ac71c93ab597ae1aeb26fc8/pydantic-2.6.3-py3-none-any.whl")
     version("2.6.2", sha256="37a5432e54b12fecaa1049c5195f3d860a10e01bdfd24f1840ef14bd0d3aeab3", url="https://pypi.org/packages/42/28/f19be8d493c59a8ddf32c15d69765c6423ad712da1c6255b418df2fc1443/pydantic-2.6.2-py3-none-any.whl")
@@ -39,9 +39,13 @@ class PyPydantic(PythonPackage):
     version("1.9.0-alpha1", sha256="c51156e35b35dcaeb964cad89e0914d9468f2612bd2455898ac11b038aced03d", url="https://pypi.org/packages/6b/a2/f088f5018b88b4ba83679040115aa2a931ab92527f32192ff4444b3bf833/pydantic-1.9.0a1.tar.gz")
     version("1.8.2", sha256="26464e57ccaafe72b7ad156fdaa4e9b9ef051f69e175dbbb463283000c05ab7b", url="https://pypi.org/packages/b9/d2/12a808613937a6b98cd50d6467352f01322dc0d8ca9fb5b94441625d6684/pydantic-1.8.2.tar.gz")
     version("1.7.4", sha256="0a1abcbd525fbb52da58c813d54c2ec706c31a91afdb75411a73dd1dec036595", url="https://pypi.org/packages/2f/91/c0829599e8281492e40ff69a0d88340713a37fb0facd187fabfab53d6915/pydantic-1.7.4.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("dotenv", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-annotated-types@0.4:", when="@2:")
         depends_on("py-pydantic-core@2.16.3:2.16", when="@2.6.2:")
@@ -58,4 +62,5 @@ class PyPydantic(PythonPackage):
         depends_on("py-pydantic-core@0.25", when="@2.0-alpha3")
         depends_on("py-typing-extensions@4.6.1:", when="@2.0-beta1:")
         depends_on("py-typing-extensions@4.2:", when="@2:2.0-alpha3")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMistletoe(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.3.0", sha256="a0710d0cdb7d2458cef91cf6b9b897db442927f8778dae890cbbfb1853a51700", url="https://pypi.org/packages/32/bc/4289f4875c3414525a273d4a072a403c99a820c74be446eb85d47a1b27ce/mistletoe-1.3.0-py3-none-any.whl")
     version("1.2.1", sha256="620563ac06380ce0629b4a2afa2f2ab797ffac3efdcccaf2362a7266600e6dcc", url="https://pypi.org/packages/2a/98/399f57478bd84f5bc568f92b630a0e6b7bd9b7d0e7a86e98614a5abab8bc/mistletoe-1.2.1-py3-none-any.whl")
     version("1.2.0", sha256="637a87afacb5eb033b4e47faa059f6c45386e911c7f3defff4e854e061759294", url="https://pypi.org/packages/25/7b/7157aa5d1cdfc88200b58e83a95b72cacb8b4b8c1cdb6f581b7ad8d51a88/mistletoe-1.2.0-py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyMistletoe(PythonPackage):
     version("0.8.2", sha256="3c82cbcf01ed0a79944ba7ba2b715e6da633d1eef24812904e9008160a74e93e", url="https://pypi.org/packages/71/0f/20f78ab0b9e75f566e438137dda328d589792d66efa59c78c806a003aed3/mistletoe-0.8.2-py3-none-any.whl")
     version("0.8.1", sha256="b85d7004cd634e225cea65ea7928d08d775c23ffccd1c8e7aafa2faf02de056d", url="https://pypi.org/packages/48/ca/5cd56ba6163591c95fe524b70b3656dfe4426695421dda743c35451ee93c/mistletoe-0.8.1-py3-none-any.whl")
     version("0.7.2", sha256="3e2d31b2fa6231ea2ee46981274ebac8d5e5736e3aad2d1cd449e2c053b7023b", url="https://pypi.org/packages/84/23/0c9c856ef73b58d8d2e40b2d028cc39cdb3a3f0b91775d4d4b7451e41f94/mistletoe-0.7.2-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

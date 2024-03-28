@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyNltk(PythonPackage):
+    # BEGIN VERSIONS
     version("3.8.1", sha256="fd5c9109f976fa86bcadba8f91e47f5e9293bd034474752e92a520f81c93dda5", url="https://pypi.org/packages/a6/0a/0d20d2c0f16be91b9fa32a77b76c60f9baf6eba419e5ef5deca17af9c582/nltk-3.8.1-py3-none-any.whl")
     version("3.8", sha256="3306502f487aa9fb0566e23443fa287a85a8d8d0821e2ef1655b4e3f0ea4aeee", url="https://pypi.org/packages/35/45/64f4abaa5b36b698aaeb556ae6dc533e57a6b9e72ac6fc7f0d7f9cb15bb4/nltk-3.8-py3-none-any.whl")
     version("3.7", sha256="ba3de02490308b248f9b94c8bc1ac0683e9aa2ec49ee78536d8667afb5e3eec8", url="https://pypi.org/packages/43/0b/8298798bc5a9a007b7cae3f846a3d9a325953e0f9c238affa478b4d59324/nltk-3.7-py3-none-any.whl")
@@ -17,11 +17,18 @@ class PyNltk(PythonPackage):
     version("3.6.3", sha256="665225d585367f64a73ff1cb436964b425304dc772406653412e19dfe0157688", url="https://pypi.org/packages/5e/a0/04763ddc4bf3bac6f3bd38934c36a0f3ac30e48c39a51b3ec5649ed17374/nltk-3.6.3-py3-none-any.whl")
     version("3.5", sha256="845365449cd8c5f9731f7cb9f8bd6fd0767553b9d53af9eb1b3abf7700936b35", url="https://pypi.org/packages/92/75/ce35194d8e3022203cca0d2f896dbb88689f9b3fce8e9f9cff942913519d/nltk-3.5.zip")
     version("3.4.5", sha256="bed45551259aa2101381bbdd5df37d44ca2669c5c3dad72439fa459b29137d94", url="https://pypi.org/packages/f6/1d/d925cfb4f324ede997f6d47bea4d9babba51b49e87a767c170b77005889d/nltk-3.4.5.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("data", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click", when="@3.6:")
         depends_on("py-joblib", when="@3.6:")
         depends_on("py-regex@2021.8:", when="@3.6.5:")
         depends_on("py-regex", when="@3.6:3.6.4")
         depends_on("py-tqdm", when="@3.6:")
+    # END DEPENDENCIES
 

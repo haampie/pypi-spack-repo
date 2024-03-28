@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAioitertools(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.11.0", sha256="04b95e3dab25b449def24d7df809411c10e62aab0cbe31a50ca4e68748c43394", url="https://pypi.org/packages/45/66/d1a9fd8e6ff88f2157cb145dd054defb0fd7fe2507fe5a01347e7c690eab/aioitertools-0.11.0-py3-none-any.whl")
     version("0.10.0", sha256="a2ea2a39ebf272a2fbb58bfdb73e1daeeb6686edbbc8082215dfc8b8ffffa6e8", url="https://pypi.org/packages/b4/20/8af729fab3df6827407b060211ffffe79e0d220fba0c4f768de599f3cbe3/aioitertools-0.10.0-py3-none-any.whl")
     version("0.10.0-beta1", sha256="8bb2ebaf5712af397cdd21c8ce1320b1f76b385c3caeb40858b7a5543b96f454", url="https://pypi.org/packages/25/84/c4503c8ce72e5171c98ebb238cdbd4a71122173e5fa42d32d4fc4045bb77/aioitertools-0.10.0b1-py3-none-any.whl")
@@ -17,8 +17,13 @@ class PyAioitertools(PythonPackage):
     version("0.6.1", sha256="34155556df490ae1afb63b6393f80111cd3afdd32a5e6fe7c6fb897ace3277d3", url="https://pypi.org/packages/a6/90/f8ce07b77a17f4140f55b066fee76a650ded3ed382293181fe492bd22c1d/aioitertools-0.6.1-py3-none-any.whl")
     version("0.6.0", sha256="dd7232299dccb0650b1b5489aa9a7a7c40824bd40daec5afd47260c3b943790a", url="https://pypi.org/packages/05/81/313cd5e430cbba00279167fbe13b581b43821e4ea937b063ec477ea80310/aioitertools-0.6.0-py3-none-any.whl")
     version("0.5.1", sha256="4906089fceeab0c4e3e9784de36eae253012ed9d5a8da1a1c376bbcf1b5f9a69", url="https://pypi.org/packages/d5/72/5f2c75e34b10bdb53baaae1929331699bdd4505c4887d5a6e84aa4aeb460/aioitertools-0.5.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-typing-extensions@4:", when="@0.9: ^python@:3.9")
         depends_on("py-typing-extensions@3.7:", when="@0.7")
+    # END DEPENDENCIES
 

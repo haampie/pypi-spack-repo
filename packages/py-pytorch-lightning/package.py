@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPytorchLightning(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.2.1", sha256="b7efdd46a7ede4d66814a6afc28d0dfadd8eea1bb8bddab4fd2ea36c099af685", url="https://pypi.org/packages/56/ed/192d7518b15a06452f480346eeebe1d1d4595af80687e142b2e6f18539fd/pytorch_lightning-2.2.1-py3-none-any.whl")
     version("2.2.0.post0", sha256="abb44202482da7ee07c6afc33873a5a55aebecde2b6ec5a09af62158b49ef0eb", url="https://pypi.org/packages/8b/1a/bf51e48e9c60e892ea97dc8198d8a32cba94d014c52baca1c93599bfe30c/pytorch_lightning-2.2.0.post0-py3-none-any.whl")
     version("2.2.0", sha256="9b7f17f34b5acd6b10702251c5fdf237c4db577b24006938bb0ab817b8737b77", url="https://pypi.org/packages/01/6d/c639b76d417d9188283fb234917f2300d6e71c9483f2d7c7b5f42c6df03c/pytorch_lightning-2.2.0-py3-none-any.whl")
@@ -34,9 +34,13 @@ class PyPytorchLightning(PythonPackage):
     version("1.4.0", sha256="41fb26e649b830019ecdffb6dc6558266e1317963f7bf2cddb1f1ed862245928", url="https://pypi.org/packages/a2/6b/09d5a5ab8ff20aab86516020751323db6cef8df88c310acad0b9a705a80b/pytorch_lightning-1.4.0-py3-none-any.whl")
     version("1.3.8", sha256="f3ccd987d6df628e0339925239dcf20a787e2ce01310f3cab49a58218fe0357b", url="https://pypi.org/packages/48/5e/19c817ad2670c1d822642ed7bfc4d9d4c30c2f8eaefebcd575a3188d7319/pytorch_lightning-1.3.8-py3-none-any.whl")
     version("1.2.10", sha256="52d05dda39e6ddd7ab6775c4ca8943e7881000acd9c9218c7e3c9feae43489b2", url="https://pypi.org/packages/07/0c/e2d52147ac12a77ee4e7fd7deb4b5f334cfb335af9133a0f2780c8bb9a2c/pytorch_lightning-1.2.10-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
     variant("extra", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bitsandbytes@0.41:0.41.0", when="@2.2:+extra")
         depends_on("py-bitsandbytes@:0.41.1", when="@2.1.1:2.1+extra")
@@ -111,4 +115,5 @@ class PyPytorchLightning(PythonPackage):
         depends_on("py-typing-extensions@4:", when="@1.8:2.1")
         depends_on("py-typing-extensions", when="@1.4:1.5")
         depends_on("py-wandb@0.8.21:", when="@0.9.0-rc11:0.9.1-rc3+extra")
+    # END DEPENDENCIES
 

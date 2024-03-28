@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAnyio(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.3.0", sha256="048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", url="https://pypi.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl")
     version("4.2.0", sha256="745843b39e829e108e518c489b31dc757de7d2131d53fac32bd8df268227bfee", url="https://pypi.org/packages/bf/cd/d6d9bb1dadf73e7af02d18225cbd2c93f8552e13130484f1c8dcfece292b/anyio-4.2.0-py3-none-any.whl")
     version("4.1.0", sha256="56a415fbc462291813a94528a779597226619c8e78af7de0507333f700011e5f", url="https://pypi.org/packages/85/4f/d010eca6914703d8e6be222165d02c3e708ed909cdb2b7af3743667f302e/anyio-4.1.0-py3-none-any.whl")
@@ -22,11 +22,16 @@ class PyAnyio(PythonPackage):
     version("3.3.3", sha256="56ceaeed2877723578b1341f4f68c29081db189cfb40a97d1922b9513f6d7db6", url="https://pypi.org/packages/a9/9a/36fca955726d572827b0f8b039a544311c362b55868fbc265bac7455e166/anyio-3.3.3-py3-none-any.whl")
     version("3.3.2", sha256="c32da314c510b34a862f5afeaf8a446ffed2c2fde21583e654bd71ecfb5b744b", url="https://pypi.org/packages/89/c7/76b61d971bd463ed32d093c61a70d757a8edd7f7baaec0bdabc64ed9f376/anyio-3.3.2-py3-none-any.whl")
     version("3.2.1", sha256="442678a3c7e1cdcdbc37dcfe4527aa851b1b0c9162653b516e9f509821691d50", url="https://pypi.org/packages/5a/8c/6712b0aebe9b250736ec5dde99883b143290b49ecc2310eb583577e316aa/anyio-3.2.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-exceptiongroup@1.0.2:", when="@4: ^python@:3.10")
         depends_on("py-exceptiongroup", when="@3.7:3 ^python@:3.10")
         depends_on("py-idna@2.8:", when="@1.4:")
         depends_on("py-sniffio@1.1:", when="@1.0.0-rc2:")
         depends_on("py-typing-extensions@4.1:", when="@4.2: ^python@:3.10")
+    # END DEPENDENCIES
 

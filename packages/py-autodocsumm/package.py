@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAutodocsumm(PythonPackage):
+    # BEGIN VERSIONS
     version("0.2.12", sha256="b842b53c686c07a4f174721ca4e729b027367703dbf42e2508863a3c6d6c049c", url="https://pypi.org/packages/3c/51/69ddabcb5b61e75b4b5e0135ab03e01a9c7851290dbab55eb7402a1a0359/autodocsumm-0.2.12-py3-none-any.whl")
     version("0.2.11", sha256="f1d0a623bf1ad64d979a9e23fd360d1fb1b8f869beaf3197f711552cddc174e2", url="https://pypi.org/packages/c6/37/0a08e3e1d8b78185837c0c483267b87660ae74cdee0c91dc56ae83093965/autodocsumm-0.2.11-py3-none-any.whl")
     version("0.2.10", sha256="cac15a879e7cf2ebac00fe05ec691ae48d7c5b8e75eceae2f61f98905ac0c2d8", url="https://pypi.org/packages/30/a2/745e121bb48e492d1e8e630bb083951506a5754cbc6d9d196a67df40d6db/autodocsumm-0.2.10-py3-none-any.whl")
@@ -17,10 +17,15 @@ class PyAutodocsumm(PythonPackage):
     version("0.2.5", sha256="384f9b3cca08bb8b4e01517766b0a87425ebaade931e1bca938880790ff7fca6", url="https://pypi.org/packages/af/05/9af2d565b3e2dca3e924f437b0d270ea0181ee6a62a7a7507a7d4a8eeadc/autodocsumm-0.2.5.tar.gz")
     version("0.2.4", sha256="6abf09273885a8247cf0f553ad2d243bcf94a1cb3b02e87f67bde3490cbbf7a0", url="https://pypi.org/packages/07/52/6f914e88da979ec26ce698828cdbb9615c2aeafb40a73d6314b6cfb7fc00/autodocsumm-0.2.4.tar.gz")
     version("0.2.3", sha256="92aac24efb39c9912d383683e401165ff9fa20ff87b78e41658b9731e35a055b", url="https://pypi.org/packages/20/19/ac440aa3b6a8bd32e53f60dccc19a245993029e8c81251b87a562de07242/autodocsumm-0.2.3.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-sphinx@2.2:", when="@0.2.11:")
         depends_on("py-sphinx@2.2:6", when="@0.2.10")
         depends_on("py-sphinx@2.2:5", when="@0.2.9")
         depends_on("py-sphinx@2.2:4", when="@0.2.8")
+    # END DEPENDENCIES
 

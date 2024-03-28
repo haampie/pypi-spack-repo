@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyStarlette(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.37.2", sha256="6fe59f29268538e5d0d182f2791a479a0c64638e6935d1c6989e63fb2699c6ee", url="https://pypi.org/packages/fd/18/31fa32ed6c68ba66220204ef0be798c349d0a20c1901f9d4a794e08c76d8/starlette-0.37.2-py3-none-any.whl")
     version("0.37.1", sha256="92a816002d4e8c552477b089520e3085bb632e854eb32cef99acb6f6f7830b69", url="https://pypi.org/packages/5b/d2/0faf92a81a25e08930feee166488873f8b8ceab1f6f9df8697cb29965347/starlette-0.37.1-py3-none-any.whl")
     version("0.37.0", sha256="53a95037cf6a563fca942ea16ba0260edce10258c213cbd554adc263fad22dfc", url="https://pypi.org/packages/4b/ec/7adae4eef578e3792fb01e4d4fd0b7f5f6956cb8aa5c9441eb4962155d06/starlette-0.37.0-py3-none-any.whl")
@@ -30,8 +30,13 @@ class PyStarlette(PythonPackage):
     version("0.21.0", sha256="0efc058261bbcddeca93cad577efd36d0c8a317e44376bcfc0e097a2b3dc24a7", url="https://pypi.org/packages/94/a3/777d1749aa0db3f9da12a8cc5f89fe01c95548909d012f0e419299c6d8a3/starlette-0.21.0-py3-none-any.whl")
     version("0.20.4", sha256="c0414d5a56297d37f3db96a84034d61ce29889b9eaccf65eb98a0b39441fcaa3", url="https://pypi.org/packages/51/37/8ac52116984d6a0d8502ec2c7e4a4a78f862b76410cdb1a4bcb384c91cb3/starlette-0.20.4-py3-none-any.whl")
     version("0.19.1", sha256="5a60c5c2d051f3a8eb546136aa0c9399773a689595e099e0877704d5888279bf", url="https://pypi.org/packages/f1/9d/1fa96008b302dd3e398f89f3fc5afb19fb0b0f341fefa05c65b3a38d64cf/starlette-0.19.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-anyio@3.4:", when="@0.19:")
         depends_on("py-typing-extensions@3.10:", when="@0.19: ^python@:3.9")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPoetryCore(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.9.0", sha256="4e0c9c6ad8cf89956f03b308736d84ea6ddb44089d16f2adc94050108ec1f5a1", url="https://pypi.org/packages/a1/8d/85fcf9bcbfefcc53a1402450f28e5acf39dcfde3aabb996a1d98481ac829/poetry_core-1.9.0-py3-none-any.whl")
     version("1.8.1", sha256="194832b24f3283e01c5402eae71a6aae850ecdfe53f50a979c76bf7aa5010ffa", url="https://pypi.org/packages/99/bc/058b8ff87871fce6615ad032d62c773272f243266b110f7b86d146cf78d8/poetry_core-1.8.1-py3-none-any.whl")
     version("1.8.0", sha256="55914c323ec618db81e066ec0096510043853c1cc1e8e30ffa4ddd8cf9621681", url="https://pypi.org/packages/7b/93/1c2ee6fd3230cdcc0bfdda7b0c536d75b8f6698d1f09207276bca37bca10/poetry_core-1.8.0-py3-none-any.whl")
@@ -21,5 +21,10 @@ class PyPoetryCore(PythonPackage):
     version("1.1.0", sha256="da16a12054bf3f1ff8656d4c289f99c3d6b7704d272fb174004c4dc82e045954", url="https://pypi.org/packages/fa/1a/928afa4256942608bd4a4d4ed4452ce12de1b4e6e4a36b7e67c73cb1b82c/poetry_core-1.1.0-py3-none-any.whl")
     version("1.0.8", sha256="54b0fab6f7b313886e547a52f8bf52b8cf43e65b2633c65117f8755289061924", url="https://pypi.org/packages/d2/04/08841501db81bceb7a86a98dea7c12b0185fcc69bfdf1aea266f727d1d7e/poetry_core-1.0.8-py2.py3-none-any.whl")
     version("1.0.7", sha256="4f8a7f5390d772f42c4c4c3f188e6424b802cb4b57466c6633a1b9ac36f18a43", url="https://pypi.org/packages/09/79/5ab16fbf2d9354c242e9f9e784d604dd06842405f7797e71238f3c053200/poetry_core-1.0.7-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

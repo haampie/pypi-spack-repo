@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPox(PythonPackage):
+    # BEGIN VERSIONS
     version("0.3.4", sha256="651b8ae8a7b341b7bfd267f67f63106daeb9805f1ac11f323d5280d2da93fdb6", url="https://pypi.org/packages/e1/d7/9e73c32f73da71e8224b4cb861b5db50ebdebcdff14d3e3fb47a63c578b2/pox-0.3.4-py3-none-any.whl")
     version("0.3.3", sha256="e95febf7401918478a3c1441a3630656d9a2049803889b4f589821372889d0ce", url="https://pypi.org/packages/17/c7/ef7e37e5a895f5de068b408a52bee0710b1092574b6b4ab247a767e9fbd5/pox-0.3.3-py3-none-any.whl")
     version("0.3.2", sha256="56fe2f099ecd8a557b8948082504492de90e8598c34733c9b1fdeca8f7b6de61", url="https://pypi.org/packages/7d/ee/93fb2380de1458a50c44b8aa65c6f111df1103c3d4fbd74b70f51745e081/pox-0.3.2-py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyPox(PythonPackage):
     version("0.2.3", sha256="d3e8167a1ebe08ae56262a0b9359118d90bc4648cd284b5d10ae240343100a75", url="https://pypi.org/packages/1e/27/effa6e207856eb60dd86bfe0a1954460b911cd88978450ee8a37a4b7826f/pox-0.2.3.zip")
     version("0.2.2", sha256="22e97ac6d2918c754e65a9581dbe02e9d00ae4a54ca48d05118f87c1ea92aa19", url="https://pypi.org/packages/6d/ae/40f02d47cdb88363ec7eb3d0851805053dbee95a2710532f7e4955babc3b/pox-0.2.2.tgz")
     version("0.2.1", sha256="c94f2ea4d6ad15ef06d3ade03499bf819d587344ac1dab6f4b7194d12c41d83d", url="https://pypi.org/packages/75/42/d7a3e9595d1b046c57c687e7260eeb962cbd1bbda563a3a3f30f13aea6f4/pox-0.2.1.tgz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

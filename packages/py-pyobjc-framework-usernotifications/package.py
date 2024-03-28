@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkUsernotifications(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="3a1b7d77c95dff109f904451525752ece3c38f38cfa0825fd01735388c2b0264", url="https://pypi.org/packages/be/a5/9fc721a019096bf5caad76e0a288ed9b08d123166e04e5477154ec90930a/pyobjc-framework-UserNotifications-10.2.tar.gz")
     version("10.1", sha256="eca638b04b60d5d8f5efecafc1fd021a1b55d4a6d1ebd22e65771eddb3dd478f", url="https://pypi.org/packages/d0/39/7b98a78c7a373fe1cda0bb42bd6875ebe3c918845de1a5b84653df4d9a9b/pyobjc-framework-UserNotifications-10.1.tar.gz")
     version("10.0", sha256="d2646747d4ddbf9abb8e41937364ae074742449e2fd9d33b3138049ad686d555", url="https://pypi.org/packages/03/c4/3a0b6c374dfc7769b301c14dec06e8843947f743722fa9860053b5266200/pyobjc-framework-UserNotifications-10.0.tar.gz")
@@ -18,7 +18,11 @@ class PyPyobjcFrameworkUsernotifications(PythonPackage):
     version("9.0", sha256="8b51ee6b75456b4c9a767002c5482b3d034e4442e5b9ce079cf4bba5ac5883ee", url="https://pypi.org/packages/b7/3a/976a0cdf5437bb8952c58fb70c871e29f4f9c100abf1ec1f53eaa317a0ee/pyobjc-framework-UserNotifications-9.0.tar.gz")
     version("8.5.1", sha256="63af8bde4d3d57eb3b40fea2512f812487919d05dd30aabe3ca086e200d87bb3", url="https://pypi.org/packages/19/dd/c1051d4d2a154484aec111aa7b0baf53cacd451cb808d98e77ae3e2daa6c/pyobjc-framework-UserNotifications-8.5.1.tar.gz")
     version("8.5", sha256="718116e7a4fe590eedf2fd083c78c616e8d4f866c59e46c3ebc1de6a00ad0f88", url="https://pypi.org/packages/fb/62/5f2800caada0f6a898016a4afdf3b39e38e6107c9d70de2fcf4b15458f78/pyobjc-framework-UserNotifications-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -26,4 +30,5 @@ class PyPyobjcFrameworkUsernotifications(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
         depends_on("py-pyobjc-framework-cocoa@10:", when="@10:10.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkLibdispatch(PythonPackage):
+    # BEGIN VERSIONS
     version("10.2", sha256="ae17602efbe628fa0432bcf436ee8137d2239a70669faefad420cd527e3ad567", url="https://pypi.org/packages/25/c5/731a26daec598dbcb4a281a85364e98ebd10c3d00ceb21b7fec0fd8c884e/pyobjc-framework-libdispatch-10.2.tar.gz")
     version("10.1", sha256="444ca20e348cbdd2963523b89661d67743a6c87a57caf9e5d546665baf384a5b", url="https://pypi.org/packages/37/c1/a216d6bbb5b315c81e542cd4be8de9c34ce641cde8228b3c12d72233c062/pyobjc-framework-libdispatch-10.1.tar.gz")
     version("10.0", sha256="228adf364c895d2a0e8b08bd06f7a23cfbd8e82e9ea6cfdba73bdee0651a4e1f", url="https://pypi.org/packages/fc/62/2bb9fe9f9e8bcef80180f5928eb55644728044633380c006878f62ddea9b/pyobjc-framework-libdispatch-10.0.tar.gz")
@@ -17,11 +17,16 @@ class PyPyobjcFrameworkLibdispatch(PythonPackage):
     version("9.0", sha256="1a2cc42c08d52ca1459c85b049673091ee20dbf3b6387473cd2bbdc390aa2a35", url="https://pypi.org/packages/ad/ea/cf8bcbb48ea036e72c02b5c816f37cd78904712983638b4a0c755b8ca304/pyobjc-framework-libdispatch-9.0.tar.gz")
     version("8.5.1", sha256="066fb34fceb326307559104d45532ec2c7b55426f9910b70dbefd5d1b8fd530f", url="https://pypi.org/packages/21/8a/de3161c5b08c48031adfb40919549f748aecabe11cb402661e691b819be9/pyobjc-framework-libdispatch-8.5.1.tar.gz")
     version("8.5", sha256="f610a0e57e9bb31878776db0a1c1cfd279f4e43e26e3195c6647786b4522b1c4", url="https://pypi.org/packages/62/f5/06d5d9f9545aca7241144bc1475b21ecd2690e1a9d0ccd7366d08c810536/pyobjc-framework-libdispatch-8.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
         depends_on("py-pyobjc-core@10:", when="@10:10.0")
         depends_on("py-pyobjc-framework-cocoa@10.2:", when="@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.1:", when="@10.1")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyUrllib3(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.2.1", sha256="450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", url="https://pypi.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl")
     version("2.2.0", sha256="ce3711610ddce217e6d113a2732fafad960a03fd0318c91faa79481e35c11224", url="https://pypi.org/packages/88/75/311454fd3317aefe18415f04568edc20218453b709c63c58b9292c71be17/urllib3-2.2.0-py3-none-any.whl")
     version("2.1.0", sha256="55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3", url="https://pypi.org/packages/96/94/c31f58c7a7f470d5665935262ebd7455c7e4c7782eb525658d3dbf4b9403/urllib3-2.1.0-py3-none-any.whl")
@@ -48,11 +48,18 @@ class PyUrllib3(PythonPackage):
     version("1.21.1", sha256="8ed6d5c1ff9d6ba84677310060d6a3a78ca3072ce0684cb3c645023009c114b1", url="https://pypi.org/packages/24/53/f397db567de0aa0e81b211d81c13c41a779f14893e42189cf5bdb97611b2/urllib3-1.21.1-py2.py3-none-any.whl")
     version("1.20", sha256="b64c0faa183e9e9e76193146c4147e82a734982c6b6719dca851d6cc4ec90c01", url="https://pypi.org/packages/67/87/67be08389f8df83c9ba4c12e618a4ad93546e234a1e9530618735cd9b73d/urllib3-1.20-py2.py3-none-any.whl")
     version("1.14", sha256="ffe8859ca4fdfb021c2e8e0d3033f6c5eb372f8d4c3fd5455523055a2806a437", url="https://pypi.org/packages/73/55/63deba73d82dfa39974ca3903110c3e3557ff8758a3a79482810915b385d/urllib3-1.14-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("brotli", default=False)
     variant("secure", default=False)
     variant("socks", default=False)
+    # END VARIANTS
 
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-brotli@1.0.9:", when="@1.26.9:+brotli")
+        depends_on("py-brotlipy@0.6:", when="@1.25:1.26.8+brotli")
         depends_on("py-certifi", when="@1.13:2.0+secure")
         depends_on("py-cryptography@1.9:", when="@2.0.0-alpha2:2.0+secure")
         depends_on("py-cryptography@1.3.4:", when="@1.24:1.24.1,1.24.3:2.0.0-alpha1+secure")
@@ -68,4 +75,5 @@ class PyUrllib3(PythonPackage):
 
         # marker: extra == "secure;python-version>"2-7""
         # depends_on("py-certifi", when="@1.11:1.12")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyKeyringsAlt(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.0.0", sha256="4b3fd67bbcdd5aa137e1537cc47b694dda134e290740918750a6a73bcf665b87", url="https://pypi.org/packages/af/20/046671abb06ec38e37fbf1d5e068456d1ba215a1913337723b22f7df803e/keyrings.alt-5.0.0-py3-none-any.whl")
     version("4.2.0", sha256="3d25912ed71d6deec85d7e6e867963e1357cd56186a41c9295b86939a5ebf85c", url="https://pypi.org/packages/71/0c/32cf193861389487e062dc91683146f696d11ce0d4bc3fb6539f68aa0ada/keyrings.alt-4.2.0-py3-none-any.whl")
     version("4.1.2", sha256="f69dc2ce71568fc982872cd591cfaf3d8d002ed34f1673fee35ddb718e975d99", url="https://pypi.org/packages/3d/8d/8e3c078ccde08a36c1dfa1e193282fda1f1d7ebc1e683699d6da4b2c26a8/keyrings.alt-4.1.2-py3-none-any.whl")
@@ -17,7 +17,12 @@ class PyKeyringsAlt(PythonPackage):
     version("4.0.0", sha256="7119a9938c4132ac92f24d4ee41d57aef27a447c713d05f1fcccc556a5394aa8", url="https://pypi.org/packages/79/f4/597ffdd0a9f5066b970fef86fd0dae7e861ea508b5d5b1829d21cca4d5fa/keyrings.alt-4.0.0-py3-none-any.whl")
     version("3.5.2", sha256="a845da5feebdb009d6b683ec27e55ff71bc679ac3b4761bae97c2e635b98e575", url="https://pypi.org/packages/e5/68/215631100a970940532fbc4e49af4091aa14b0a090509bd88b20c685e959/keyrings.alt-3.5.2-py3-none-any.whl")
     version("3.5.1", sha256="860732a49b4a066af39bbde904e8e06f9ad8579145e618fe4fe70778620ffd3a", url="https://pypi.org/packages/2a/fe/5536953df41df63fd6685cb1bd236c95a0567caf9b92a9551bc44c70e8f6/keyrings.alt-3.5.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-jaraco-classes", when="@4.1.2:")
+    # END DEPENDENCIES
 

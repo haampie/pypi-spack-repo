@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,11 +6,14 @@
 from spack.package import *
 
 class PyProtobuf(PythonPackage):
+    # BEGIN VERSIONS
+    version("5.26.1", sha256="8ca2a1d97c290ec7b16e4e5dff2e5ae150cc1582f55b5ab300d45cb0dfa90e51", url="https://pypi.org/packages/d2/e5/7e22ca7201a6b1040aae7787d0fe6cd970311da376a86fdafa5182be1d1b/protobuf-5.26.1.tar.gz")
     version("5.26.0", sha256="82f5870d74c99addfe4152777bdf8168244b9cf0ac65f8eccf045ddfa9d80d9b", url="https://pypi.org/packages/ea/ab/ae590cd71f5a50cd9e0979593e217529b532a001e46c2dd0811c8697f4ad/protobuf-5.26.0.tar.gz")
     version("4.25.3", sha256="25b5d0b42fd000320bd7830b349e3b696435f3b329810427a6bcce6a5492cc5c", url="https://pypi.org/packages/5e/d8/65adb47d921ce828ba319d6587aa8758da022de509c3862a70177a958844/protobuf-4.25.3.tar.gz")
     version("4.25.2", sha256="fe599e175cb347efc8ee524bcd4b902d11f7262c0e569ececcb89995c15f0a5e", url="https://pypi.org/packages/db/a5/05ea470f4e793c9408bc975ce1c6957447e3134ce7f7a58c13be8b2c216f/protobuf-4.25.2.tar.gz")
     version("4.25.1", sha256="57d65074b4f5baa4ab5da1605c02be90ac20c8b40fb137d6a8df9f416b0d0ce2", url="https://pypi.org/packages/59/5f/b2d00e6a08d97656a27832d4d146e03ffc46ae74b4699740674bea13a905/protobuf-4.25.1.tar.gz")
     version("4.25.0", sha256="68f7caf0d4f012fd194a301420cf6aa258366144d814f358c5b32558228afa7c", url="https://pypi.org/packages/84/75/a4641e4795ee3f95b71e6f2bf1ebf395ee7eddd717a10a813f69b25d2b1d/protobuf-4.25.0.tar.gz")
+    version("4.25.0-rc2", sha256="f2b101cd374b0ce97b2871e1fb0f207022c3efea074cce85b060966eef4a6be0", url="https://pypi.org/packages/56/e3/22ba8512f8594e535a568c2b00ae6675fbf9a13e9f93b0d99a24303226f8/protobuf-4.25.0rc2.tar.gz")
     version("4.24.4", sha256="5a70731910cd9104762161719c3d883c960151eea077134458503723b60e3667", url="https://pypi.org/packages/52/5c/f2c0778278259089952f94b0884ca27a001a17ffbd992ebe30c841085f4c/protobuf-4.24.4.tar.gz")
     version("4.24.3", sha256="12e9ad2ec079b833176d2921be2cb24281fa591f0b119b208b788adc48c2561d", url="https://pypi.org/packages/79/30/98dc7297ce8c3f0182800d2879703f0196e76d6a28e53ecaafc3901f8118/protobuf-4.24.3.tar.gz")
     version("4.24.2", sha256="7fda70797ddec31ddfa3576cbdcc3ddbb6b3078b737a1a87ab9136af0570cd6e", url="https://pypi.org/packages/68/0d/92a4aab9456fa6b9e1ad1248deaa8975231a7236900098e876bdec5b7964/protobuf-4.24.2.tar.gz")
@@ -83,8 +85,15 @@ class PyProtobuf(PythonPackage):
     version("3.4.0", sha256="ef02609ef445987976a3a26bff77119c518e0915c96661c3a3b17856d0ef6374", url="https://pypi.org/packages/89/45/3214bb758646a1a30459ca0f5b8f8164d6893f24725c58b632e663565f44/protobuf-3.4.0.tar.gz")
     version("3.3.0", sha256="1cbcee2c45773f57cb6de7ee0eceb97f92b9b69c0178305509b162c0160c1f04", url="https://pypi.org/packages/56/28/6263d846f60dad93939fd3a22d712d6bae3bf3484332d22bd5933dec8c99/protobuf-3.3.0.tar.gz")
     version("3.0.0", sha256="ecc40bc30f1183b418fe0ec0c90bc3b53fa1707c4205ee278c6b90479e5b6ff5", url="https://pypi.org/packages/14/3e/56da1ecfa58f6da0053a523444dff9dfb8a18928c186ad529a24b0e82dec/protobuf-3.0.0.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("cpp", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-setuptools", when="@3.5.2.post:3.6.0,3.8.0:3.12.2,4:4.0.0-rc1")
         depends_on("py-six@1.9:", when="@3.5.2.post:3.6.0,3.8.0:3.12.2,4:4.0.0-rc1")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPrettytable(PythonPackage):
+    # BEGIN VERSIONS
     version("3.10.0", sha256="6536efaf0757fdaa7d22e78b3aac3b69ea1b7200538c2c6995d649365bddab92", url="https://pypi.org/packages/3d/c4/a32f4bf44faf95accbbd5d7864ddef9e289749a8efbc3adaad4a4671779a/prettytable-3.10.0-py3-none-any.whl")
     version("3.9.0", sha256="a71292ab7769a5de274b146b276ce938786f56c31cf7cea88b6f3775d82fe8c8", url="https://pypi.org/packages/4d/81/316b6a55a0d1f327d04cc7b0ba9d04058cb62de6c3a4d4b0df280cbe3b0b/prettytable-3.9.0-py3-none-any.whl")
     version("3.8.0", sha256="03481bca25ae0c28958c8cd6ac5165c159ce89f7ccde04d5c899b24b68bb13b7", url="https://pypi.org/packages/25/1e/4c284713b092ec384fad4399452f43f6446ad9aabc9c0b3c3c0920cc53b6/prettytable-3.8.0-py3-none-any.whl")
@@ -22,7 +22,12 @@ class PyPrettytable(PythonPackage):
     version("2.3.0", sha256="74ba6d10555c93e2d4697751744207f6baadf77010914b2bcd8d5b3b546f84de", url="https://pypi.org/packages/c2/98/3372c23c561cbaaa05bb60b2c3d30bfdad9ab504bf1ddefc7368b4545958/prettytable-2.3.0-py3-none-any.whl")
     version("2.2.1", sha256="09fb2c7f93e4f93e0235f05ae199ac3f16da3a251b2cfa1c7108b34ede298fa3", url="https://pypi.org/packages/e1/77/821a93d77111aee2525841b6116287f99eeefc482f4f28765fd8d7ef1c64/prettytable-2.2.1-py3-none-any.whl")
     version("0.7.2", sha256="a53da3b43d7a5c229b5e3ca2892ef982c46b7923b51e98f0db49956531211c4f", url="https://pypi.org/packages/23/4a/9785a37ed6425918af69909af715ced0fa261e518601a0c70309a708fd08/prettytable-0.7.2.zip")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-wcwidth", when="@1:")
+    # END DEPENDENCIES
 

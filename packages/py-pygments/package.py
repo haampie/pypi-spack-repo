@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPygments(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.17.2", sha256="b27c2826c47d0f3219f29554824c30c5e8945175d888647acd804ddd04af846c", url="https://pypi.org/packages/97/9c/372fef8377a6e340b1704768d20daaded98bf13282b5327beb2e2fe2c7ef/pygments-2.17.2-py3-none-any.whl")
     version("2.17.1", sha256="1b37f1b1e1bff2af52ecaf28cc601e2ef7077000b227a0675da25aef85784bc4", url="https://pypi.org/packages/4f/34/6a8073bd275d7034476b4af94a5f3ca206b86e4c206a61eeb4e3d73b4a06/pygments-2.17.1-py3-none-any.whl")
     version("2.17.0", sha256="cd0c46944b2551af02ecc15961050182ea120d3895000e2676160820f3421527", url="https://pypi.org/packages/5b/66/a48025f51da4dec44c7a3de9b643fdc34ffb92ad1f2b3e90ebc6305d2c0f/pygments-2.17.0-py3-none-any.whl")
@@ -22,8 +22,13 @@ class PyPygments(PythonPackage):
     version("2.4.2", sha256="71e430bc85c88a430f000ac1d9b331d2407f681d6f6aec95e8bcfbc3df5b0127", url="https://pypi.org/packages/5c/73/1dfa428150e3ccb0fa3e68db406e5be48698f2a979ccbcec795f28f44048/Pygments-2.4.2-py2.py3-none-any.whl")
     version("2.3.1", sha256="e8218dd399a61674745138520d0d4cf2621d7e032439341bc3f647bff125818d", url="https://pypi.org/packages/13/e5/6d710c9cf96c31ac82657bcfb441df328b22df8564d58d0c4cd62612674c/Pygments-2.3.1-py2.py3-none-any.whl")
     version("2.2.0", sha256="78f3f434bcc5d6ee09020f92ba487f95ba50f1e3ef83ae96b9d5ffa1bab25c5d", url="https://pypi.org/packages/02/ee/b6e02dc6529e82b75bb06823ff7d005b141037cb1416b10c6f00fc419dca/Pygments-2.2.0-py2.py3-none-any.whl")
-    version("2.1.3", sha256="88e4c8a91b2af5962bfa5ea2447ec6dd357018e86e94c7d14bd8cacbc5b55d81", url="https://pypi.org/packages/b8/67/ab177979be1c81bc99c8d0592ef22d547e70bb4c6815c383286ed5dec504/Pygments-2.1.3.tar.gz")
-    version("2.0.2", sha256="7320919084e6dac8f4540638a46447a3bd730fca172afc17d2c03eed22cf4f51", url="https://pypi.org/packages/f4/c6/bdbc5a8a112256b2b6136af304dbae93d8b1ef8738ff2d12a51018800e46/Pygments-2.0.2.tar.gz")
-    version("2.0.1", sha256="5e039e1d40d232981ed58914b6d1ac2e453a7e83ddea22ef9f3eeadd01de45cb", url="https://pypi.org/packages/91/ee/7b36fa4ef73009d896af9d505305871427ee753b19efce40b797ae8942dc/Pygments-2.0.1.tar.gz")
+    version("2.1.3", sha256="485602129949b14247e8b124d28af4654dffbd076537c4a9c44a538a2c1755b7", url="https://pypi.org/packages/9e/d0/d692085518c6a2dc875fe421c866fb6a08e0d9796ca507803c1e545fa116/Pygments-2.1.3-py2.py3-none-any.whl")
+    version("2.0.2", sha256="5ded2fa9094fd7dfeb3da92636409fd702a0d07d606283504d7ee04401cee5cb", url="https://pypi.org/packages/87/e3/cadb43a197476ec0adef73292ea7ea188f2b0531188eebc150905d3ed78c/Pygments-2.0.2-py3-none-any.whl")
+    version("2.0.1", sha256="668c8e665b935f623859c13213e1bc9b33fd19feec4db7c2f8e855c1c8c559d7", url="https://pypi.org/packages/19/2f/a5ff1b61ee66ebf0cffc69137b1c9dc021fc85c338f7da56fc43b21479d7/Pygments-2.0.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

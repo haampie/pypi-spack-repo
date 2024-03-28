@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRadicalUtils(PythonPackage):
+    # BEGIN VERSIONS
     version("1.47.0", sha256="f85a4a452561dd018217f1ed38d97c9be96fa448437cfeb1b879121174fd5311", url="https://pypi.org/packages/c5/5d/badff6d55dd76bb1422774e82a6158e5689ff34d428e1eedbaacf13aa35b/radical.utils-1.47.0.tar.gz")
     version("1.39.0", sha256="fade87ee4c6ccf335d5e26d5158ce22ee891e4d4c576464274999ddf36dc4977", url="https://pypi.org/packages/54/13/7d511cc8bf4ec7b067d297f8f360abc01d89d8e0679be623678d9b02c68d/radical.utils-1.39.0.tar.gz")
     version("1.20.0", sha256="9b39dd616d70c387fb3f97d3510a506bac92c159b6482c3aebd3d11eeaeebcc9", url="https://pypi.org/packages/0a/51/75bfc1a839b350110f44dd3220b1b088ad93531b9c6bc2be38eb442efe1b/radical.utils-1.20.0.tar.gz")
@@ -23,5 +23,10 @@ class PyRadicalUtils(PythonPackage):
     version("1.8.4", sha256="4777ba20e9f881bf3e73ad917638fdeca5a4b253d57ed7b321a07f670e3f737b", url="https://pypi.org/packages/6b/5c/1115616aff632d3f413930dea070d9d5a70e9b2572fc852f2f8d50388495/radical.utils-1.8.4.tar.gz")
     version("1.8.0", sha256="8582c65593f51d394fc263c6354ec5ad9cc7173369dcedfb2eef4f5e8146cf03", url="https://pypi.org/packages/54/e5/403618e2f92bcc93fb8c843f4ae43b4197e7aa2d9d7c89070c5225987ce8/radical.utils-1.8.0.tar.gz")
     version("1.6.7", sha256="552f6c282f960ccd9d2401d686b0b3bfab35dfa94a26baeb2d3b4e45211f05a9", url="https://pypi.org/packages/c3/e9/6bb6044cd03242d142a080c1dc3b2b53568a08dbe8691556a16d8ccb6144/radical.utils-1.6.7.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

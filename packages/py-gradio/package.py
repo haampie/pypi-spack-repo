@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyGradio(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.36.1", sha256="69f60c29d79fb93b2545466d367e5998d6db57379469a4067c8717ccd34015e1", url="https://pypi.org/packages/98/ad/be1bdac5810d3b8497a8a1361e922180f43ec8634cca28cc6b5de68cb18d/gradio-3.36.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-aiofiles", when="@3.16.2:3.36")
         depends_on("py-aiohttp", when="@2.3.0-beta99:2.3.0-beta102,2.6.1-alpha0,2.6.4-beta3,2.7:2.7.0-beta70,2.7.1:3.36")
@@ -36,4 +40,5 @@ class PyGradio(PythonPackage):
         depends_on("py-semantic-version", when="@3.22.1-beta1,3.23:3.36")
         depends_on("py-uvicorn@0.14:", when="@3.28.4-beta0:")
         depends_on("py-websockets@10:", when="@3.0.1-beta300,3.9.1:3.36")
+    # END DEPENDENCIES
 

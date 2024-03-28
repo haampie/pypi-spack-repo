@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIpykernel(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("6.29.3", sha256="5aa086a4175b0229d4eca211e181fb473ea78ffd9869af36ba7694c947302a21", url="https://pypi.org/packages/4b/45/00ceed1948457b6e469e4d44e5ecadc5b0f24fd4f610dd9e7b89f1993128/ipykernel-6.29.3-py3-none-any.whl")
     version("6.29.2", sha256="50384f5c577a260a1d53f1f59a828c7266d321c9b7d00d345693783f66616055", url="https://pypi.org/packages/16/9a/0c7b514c73b42cf4ce516ee26c8940a0b23a9754dafaa459a939220240fd/ipykernel-6.29.2-py3-none-any.whl")
     version("6.29.1", sha256="e5dfba210fc9da74a5dae8fa6c41f816e11bd18d10381b2517d9a0d57cc987c4", url="https://pypi.org/packages/81/21/2481dd1a12396ef64d6cca3e2fc68d57d242411fa00bbea44287cd72eac7/ipykernel-6.29.1-py3-none-any.whl")
@@ -38,18 +38,22 @@ class PyIpykernel(PythonPackage):
     version("5.3.4", sha256="d6fbba26dba3cebd411382bc484f7bc2caa98427ae0ddb4ab37fe8bfeb5c7dd3", url="https://pypi.org/packages/52/19/c2812690d8b340987eecd2cbc18549b1d130b94c5d97fcbe49f5f8710edf/ipykernel-5.3.4-py3-none-any.whl")
     version("5.1.1", sha256="346189536b88859937b5f4848a6fd85d1ad0729f01724a411de5cae9b618819c", url="https://pypi.org/packages/a0/35/dd97fbb48d4e6b5ae97307497e31e46691adc2feedb6279d29fc1c8ad9c1/ipykernel-5.1.1-py3-none-any.whl")
     version("5.1.0", sha256="0aeb7ec277ac42cc2b59ae3d08b10909b2ec161dc6908096210527162b53675d", url="https://pypi.org/packages/d8/b0/f0be5c5ab335196f5cce96e5b889a4fcf5bfe462eb0acc05cd7e2caf65eb/ipykernel-5.1.0-py3-none-any.whl")
-    version("4.10.0", sha256="699103c8e64886e3ec7053f2a6aa83bb90426063526f63a818732ff385202bad", url="https://pypi.org/packages/d4/a5/d12a432170d780490e4fd81ea222340221598c44eb613f1bbaed534da3e6/ipykernel-4.10.0.tar.gz")
+    version("4.10.0", sha256="56d82987472f4b14ab0214e4aef55def006671885d285cd8821f2600861215a6", url="https://pypi.org/packages/22/5e/69b0ae84e0cd7c8d4467e0a7b390c560d8c7642493329b15461b41e20fcc/ipykernel-4.10.0-py3-none-any.whl")
     version("4.5.0", sha256="c18a6b4f227647ca8a04fc19f9d0acb668aecec612c0db87690fd450b705b474", url="https://pypi.org/packages/ab/3b/3ff53396b59d27173147ccb03579ed960e9cc3a95ffe72997131239894fb/ipykernel-4.5.0-py2.py3-none-any.whl")
     version("4.4.1", sha256="a6747bd23dc13d958058eb9294b4c491f51b2101b4ae67b8660836ba06495642", url="https://pypi.org/packages/a5/69/9dba173a7dde8b381194b9f2ef3bf7abdf0f2cf7aeef34d75d910c5e62ee/ipykernel-4.4.1-py2.py3-none-any.whl")
     version("4.4.0", sha256="7a575cab0c2b61a5fc55a3cb8cb53277bbc43ae895845d28845533f1d72b9afa", url="https://pypi.org/packages/10/df/26b3894402f3ada9c139d7dc9e575e372951730a04a9030486a421ea3b83/ipykernel-4.4.0-py2.py3-none-any.whl")
     version("4.3.1", sha256="90ab4474c56570104d1eeb4df3fd3ec80a1ae6c4dff4f66757ebe19e5634e099", url="https://pypi.org/packages/b9/2c/29b5721a469dae5c7417e52684d56f38c09e3c76703bf0b3904f7466eeca/ipykernel-4.3.1-py2.py3-none-any.whl")
     version("4.3.0", sha256="03566ba3b93a620c7ec538d471a56f6b39862c61215ee9012d2029477bba2172", url="https://pypi.org/packages/3a/7a/39d628e4c3f0c46036ec663da8a84287ebd251260c59e4961a35d4cd46d6/ipykernel-4.3.0-py2.py3-none-any.whl")
     version("4.2.2", sha256="3b9e92d78559eeee191d07aab88211c73c0f7eae8d9dddf7d2faa23d61b8361d", url="https://pypi.org/packages/d2/87/8800c72ff09e6c8792f33217f3dbedee393fd08c8aaa4a0f04dcac4bf47a/ipykernel-4.2.2-py2.py3-none-any.whl")
-    version("4.2.1", sha256="081a5d4db33db58697be2d682b92f79b2c239493445f13dd457c15bc3e52c874", url="https://pypi.org/packages/aa/19/b6b0d6976a54f603748c65ff4dd723e99ce74ef84205f9f9e844c6ae201a/ipykernel-4.2.1.tar.gz")
-    version("4.2.0", sha256="723b3d4baac20f0c9cd91fc75c3e813636ecb6c6e303fb34d628c3df078985a7", url="https://pypi.org/packages/39/11/36edc56a1dfed9262e82b9c4d2301e292904ee522f3d28920f9bde59f841/ipykernel-4.2.0.tar.gz")
-    version("4.1.1", sha256="6af290f95c8fa1594d5cc38e4fa901a9aecceb30e6d51d9f41495c2581a263fa", url="https://pypi.org/packages/f8/95/f8e4e9391581a27db4f8f17304701e9afaf279561a709dc5fe6f9237fe02/ipykernel-4.1.1.zip")
-    version("4.1.0", sha256="f7832a0ee50ba0c26d8face559385ca29765a4ce8cc535a31b09ed6ad97d7ba4", url="https://pypi.org/packages/ae/8c/f5d548d0928d15a800eb97476409dd75a1cf3de5814d198c255f4f99c511/ipykernel-4.1.0.zip")
+    version("4.2.1", sha256="9d04a948006e2b713130b0f077eedd3cadc263ec6fa533ac57258f752ee7daa9", url="https://pypi.org/packages/fa/50/c73db49e9764e050233af5f903169ae7ae0889520dc7d3b5f646ff62d5e3/ipykernel-4.2.1-py2.py3-none-any.whl")
+    version("4.2.0", sha256="0a17b355446aeb04ef617ebdbbb5a59513aa26dbe684d99f67b69de8038c5fff", url="https://pypi.org/packages/61/12/40c5953757324bd440faabed26fc3036af98cb7b8559fe34f7e2532e0c93/ipykernel-4.2.0-py2.py3-none-any.whl")
+    version("4.1.1", sha256="48b5eb74f9ce1abd0177624b86929a1565f702d27c4323286e06f98bcccadd8a", url="https://pypi.org/packages/a6/f1/58a60bacb0e675d9e97a9a6cb1187979cb1b71fb45f0bd3531ef8a55b0d1/ipykernel-4.1.1-py2.py3-none-any.whl")
+    version("4.1.0", sha256="5775d2d6008a667e1e7c646991517403121023948ddc165b1546ea3950b0fc72", url="https://pypi.org/packages/38/df/c12d430c4db02ea266788ebf78a8a4377dfd94af5934ae4f037e29d48186/ipykernel-4.1.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-appnope", when="@5.1.3:5.3.1,5.3.3: platform=darwin")
         depends_on("py-comm@0.1.1:", when="@6.19:")
@@ -79,4 +83,5 @@ class PyIpykernel(PythonPackage):
         depends_on("py-traitlets@5.1:", when="@6.5:6.18")
         depends_on("py-traitlets@4.1.0:", when="@4.4:5.3.1,5.3.3:6.4")
         depends_on("py-traitlets", when="@4.2.2:4.3")
+    # END DEPENDENCIES
 

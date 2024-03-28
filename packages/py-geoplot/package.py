@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyGeoplot(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.4.1", sha256="3b7e6deefc397f5f9025f2cb625c57ad7826d7bc6a68270a853914a733e5cee2", url="https://pypi.org/packages/e1/8f/46133752e1f02e70501939e739b81cbc85c79d7398c963b8a25a3178bffe/geoplot-0.4.1-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cartopy", when="@0.2.1:0.2.2,0.3:")
         depends_on("py-contextily@1.0.0:", when="@0.4.1:")
@@ -18,4 +22,5 @@ class PyGeoplot(PythonPackage):
         depends_on("py-matplotlib", when="@0.2.1:0.2.2,0.3:0.4")
         depends_on("py-pandas", when="@0.2.1:0.2.2,0.3:")
         depends_on("py-seaborn", when="@0.2.1:0.2.2,0.3:")
+    # END DEPENDENCIES
 

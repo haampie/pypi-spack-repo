@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJoblib(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.3.2", sha256="ef4331c65f239985f3f2220ecc87db222f08fd22097a3dd5698f693875f8cbb9", url="https://pypi.org/packages/10/40/d551139c85db202f1f384ba8bcf96aca2f329440a844f924c8a0040b6d02/joblib-1.3.2-py3-none-any.whl")
     version("1.3.1", sha256="89cf0529520e01b3de7ac7b74a8102c90d16d54c64b5dd98cafcd14307fdf915", url="https://pypi.org/packages/28/08/9dcdaa5aac4634e4c23af26d92121f7ce445c630efa0d3037881ae2407fb/joblib-1.3.1-py3-none-any.whl")
     version("1.3.0", sha256="172d56d4c43dd6bcd953bea213018c4084cf754963bbf54b8dae40faea716b98", url="https://pypi.org/packages/1e/f2/6ec7eb9e48c88c750da04050a5ba8250ca9949dfcf6e624ccee12d2fc653/joblib-1.3.0-py3-none-any.whl")
@@ -24,8 +24,13 @@ class PyJoblib(PythonPackage):
     version("0.14.0", sha256="006108c7576b3eb6c5b27761ddbf188eb6e6347696325ab2027ea1ee9a4b922d", url="https://pypi.org/packages/8f/42/155696f85f344c066e17af287359c9786b436b1bf86029bb3411283274f3/joblib-0.14.0-py2.py3-none-any.whl")
     version("0.13.2", sha256="21e0c34a69ad7fde4f2b1f3402290e9ec46f545f15f1541c582edfe05d87b63a", url="https://pypi.org/packages/cd/c1/50a758e8247561e58cb87305b1e90b171b8c767b15b12a1734001f41d356/joblib-0.13.2-py2.py3-none-any.whl")
     version("0.11", sha256="cf3420e27048c66916754472bc3a2d4717271103a4806f31f11707a3d82a991f", url="https://pypi.org/packages/4f/51/870b2ec270fc29c5d89f85353da420606a9cb39fba4747127e7c7d7eb25d/joblib-0.11-py2.py3-none-any.whl")
-    version("0.10.3", sha256="29b2965a9efbc90a5fe66a389ae35ac5b5b0c1feabfc7cab7fd5d19f429a071d", url="https://pypi.org/packages/5a/42/9adc0c9addcdbf1877c715cc3cf10ddf885ca987602c709a62218f1c674c/joblib-0.10.3.tar.gz")
-    version("0.10.2", sha256="3123553bdad83b143428033537c9e1939caf4a4d8813dade6a2246948c94494b", url="https://pypi.org/packages/8b/56/a88961d764bf0145107b13f8c59c2d9aadad5b4d7e4588cf8374c6389f6d/joblib-0.10.2.tar.gz")
-    version("0.10.0", sha256="49b3a0ba956eaa2f077e1ebd230b3c8d7b98afc67520207ada20a4d8b8efd071", url="https://pypi.org/packages/34/61/aaedf9449f6c13b36724e2dad0772b76de41e28ec742f62a9d066aedaf12/joblib-0.10.0.tar.gz")
+    version("0.10.3", sha256="90cda39dcef85cb6f64bff51cb812ce6eed9df7217d8e78b8c693ab1c370653e", url="https://pypi.org/packages/23/ad/17c2e3f1e1f58f1a3efb5d6eb4478ea61b5a782c0361bb4e0e65b93cf013/joblib-0.10.3-py2.py3-none-any.whl")
+    version("0.10.2", sha256="9e3b22d672c960dff76c152fb68f153ea4e61527c36e552a01eadaeb73384fe1", url="https://pypi.org/packages/f1/56/321f33c8cf1b6ec4e3d3002d71454a266d6a45b05eca6d728bf030a9b155/joblib-0.10.2-py2.py3-none-any.whl")
+    version("0.10.0", sha256="e626f35a344a457e4a32d0e66ecb6b7d3a81bf662882e88db0e796d65ef85e4a", url="https://pypi.org/packages/fd/b1/8481d7cea05c6ca8d417497f2106def4c26b80d5d32e19fb45bc18b11195/joblib-0.10.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

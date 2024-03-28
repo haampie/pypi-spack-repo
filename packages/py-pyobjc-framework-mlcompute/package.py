@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkMlcompute(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="a191abf1c6aef061b4eab1aa8d4cf886fd6c98e53f6fedcd738ddd904571b933", url="https://pypi.org/packages/65/f3/06c02e1955a9068d5a43920ffe49a1016f3037cfce0aba1fc559cc7822fb/pyobjc_framework_MLCompute-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="25ed4d3002bd33c039f4ad9bf05b4830d53f67282a8399df7c65bd1430a01183", url="https://pypi.org/packages/00/e5/00450d67931fc87aa7bcdc2a9abc65de200ac14ac9e09ed27d1b3ca263c2/pyobjc_framework_MLCompute-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="8ba3eba33549a22acfdf589818ede36f65031425c6968eb193a9dad143d3cc64", url="https://pypi.org/packages/99/c0/550cb28761bf213eea52164c858f1d03e434eed62b5dd0d0fb53c82933d3/pyobjc_framework_MLCompute-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkMlcompute(PythonPackage):
     version("9.0", sha256="f6fa1821c6c44515f9ec7fbcdfb7320e0c03666a052e8ea65f2d758530e1dc05", url="https://pypi.org/packages/e3/4a/7ab300d8ba2b38f395478922244db33c81489aa9d8bc26ec8c7ad2b8b411/pyobjc_framework_MLCompute-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="897539d254811b4f9d3ba614b2dc9213c5da86f2bc52dbd932ad2ae86f1388a9", url="https://pypi.org/packages/e3/f2/df2022265ecc58511fe7030c6bf56426735d9b3dc5e9d714beb7d3ed8278/pyobjc_framework_MLCompute-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="0b7d365f1a36913a1a1b02a5bae34bc4ace0d2adc950d3e0f0c0d07e21d9bb20", url="https://pypi.org/packages/57/ee/ef5665053327466688eb900ce66813f5d598dc887454d2657e958b60c45c/pyobjc_framework_MLCompute-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkMlcompute(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

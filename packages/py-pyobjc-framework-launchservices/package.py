@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkLaunchservices(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="15b7c96e3059550c218ed5cb5de11dddc7aae21c67c0808b130a5d49b8f4cc0f", url="https://pypi.org/packages/a3/e8/9323d5032ada2465e2dbdd06ea40db8ac5a52bdb1c8735caaec0810c6b3d/pyobjc_framework_LaunchServices-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="b792a863427a2c59c884952737041e25ef05bdb541471ce94fb26a05b48abbbc", url="https://pypi.org/packages/e9/0b/e837529b81b847e1342943b39714448b9fe8150531827094890f5b166bda/pyobjc_framework_LaunchServices-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="f86c70574c7d7c9586fd1908e15fff9df297ab285d7067759337c8e03955427c", url="https://pypi.org/packages/9f/de/e6a3d660da1382458a7c53f3304c78598de780bd048648036b445e1924b9/pyobjc_framework_LaunchServices-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkLaunchservices(PythonPackage):
     version("9.0", sha256="e946fe2dabdcd007049c2dd30b7b37379da1805446c7db3b9fcb5bc7244f6a70", url="https://pypi.org/packages/c7/d1/eae3c4e9e55f58b4f9c4ae2715dea10a5bdd90b295336cffee7218b8dec7/pyobjc_framework_LaunchServices-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="8a22a3e730383f7ba5d51d065ab273f1a8671f610638359854d3a749ba8ab4da", url="https://pypi.org/packages/90/9e/7dc1968a2a14c9a4c11a9cdb42960b21a0bb54133aa4519e9ffc23f110ce/pyobjc_framework_LaunchServices-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="f8d0c8577db3f4a7223a4c18e6453d3431d97c3041462a234492a08da1cde010", url="https://pypi.org/packages/61/4e/d76fb692139870b33c3c07a7205c32061521f292e4a8dae8faf8736d7332/pyobjc_framework_LaunchServices-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkLaunchservices(PythonPackage):
         depends_on("py-pyobjc-framework-coreservices@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-coreservices@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-coreservices@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

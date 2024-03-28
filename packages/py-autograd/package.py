@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAutograd(PythonPackage):
+    # BEGIN VERSIONS
     version("1.6.2", sha256="208dde2a938e63b4f8f5049b1985505139e529068b0d26f8cd7771fd3eb145d5", url="https://pypi.org/packages/81/70/d5c7c2a458b8be96495c8b1634c2155beab58cbe864b7a9a5c06c2e52520/autograd-1.6.2-py3-none-any.whl")
     version("1.6.1", sha256="0d6ca0b2c6c156e10679f2d4a0f8c029a78fde2443ea184b4b683e992e0a0577", url="https://pypi.org/packages/a8/5a/35ae16c02940fba457fa3c929f9c4406aebde41c850f2abafd3feb228a3f/autograd-1.6.1-py3-none-any.whl")
     version("1.6", sha256="86f5d5262e6f366965a1281e6285c6a528e4af4208a5e3e89a6d6cb587e4542d", url="https://pypi.org/packages/3c/1e/96cae89e9984077196823884cc02d9ec2427f013698bb24d44b349793ada/autograd-1.6-py3-none-any.whl")
@@ -20,8 +20,13 @@ class PyAutograd(PythonPackage):
     version("1.1.10", sha256="bdf5fdfb3074494791e10b06b6959e41b82765c9c8cd3b12ca3734ddd0c5743a", url="https://pypi.org/packages/c1/ba/9c09c920643131904af74671e4e4070d46749d0c028a83e245279cd5e656/autograd-1.1.10.tar.gz")
     version("1.1.9", sha256="746aed6d825655fdb1e96d187362fe3ce096814fd2b561ebb792ae359c6d5535", url="https://pypi.org/packages/54/9c/d5d6abd14c4c5dee1489b530da238004fed4ea76cf48a196ba8fe40baa17/autograd-1.1.9.tar.gz")
     version("1.1.8", sha256="c4026aae9fb1f691044a89024e66f02c1711fbf6acb9cdfded68e8e2df4abe87", url="https://pypi.org/packages/9b/30/eb49e35e5fd7c963186a4db460ada70cb43f6c8b6f99bfb70979ffd73544/autograd-1.1.8.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-future@0.15.2:", when="@1.4:")
         depends_on("py-numpy@1.12.0:", when="@1.4:")
+    # END DEPENDENCIES
 

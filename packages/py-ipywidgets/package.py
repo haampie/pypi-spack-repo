@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyIpywidgets(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("8.1.2", sha256="bbe43850d79fb5e906b14801d6c01402857996864d1e5b6fa62dd2ee35559f60", url="https://pypi.org/packages/70/1a/7edeedb1c089d63ccd8bd5c0612334774e90cf9337de9fe6c82d90081791/ipywidgets-8.1.2-py3-none-any.whl")
     version("8.1.1", sha256="2b88d728656aea3bbfd05d32c747cfd0078f9d7e159cf982433b58ad717eed7f", url="https://pypi.org/packages/4a/0e/57ed498fafbc60419a9332d872e929879ceba2d73cb11d284d7112472b3e/ipywidgets-8.1.1-py3-none-any.whl")
     version("8.1.0", sha256="6c8396cc7b8c95dfb4e9ab0054f48c002f045e7e5d7ae523f559d64e525a98ab", url="https://pypi.org/packages/b8/d4/ce436660098b2f456e2b8fdf76d4f33cbc3766c874c4aa2f772c7a5e943f/ipywidgets-8.1.0-py3-none-any.whl")
@@ -30,8 +30,12 @@ class PyIpywidgets(PythonPackage):
     version("7.6.3", sha256="e6513cfdaf5878de30f32d57f6dc2474da395a2a2991b94d487406c0ab7f55ca", url="https://pypi.org/packages/11/53/084940a83a8158364e630a664a30b03068c25ab75243224d6b488800d43a/ipywidgets-7.6.3-py2.py3-none-any.whl")
     version("7.5.1", sha256="13ffeca438e0c0f91ae583dc22f50379b9d6b28390ac7be8b757140e9a771516", url="https://pypi.org/packages/56/a0/dbcf5881bb2f51e8db678211907f16ea0a182b232c591a6d6f276985ca95/ipywidgets-7.5.1-py2.py3-none-any.whl")
     version("7.4.2", sha256="0f2b5cde9f272cb49d52f3f0889fdd1a7ae1e74f37b48dac35a83152780d2b7b", url="https://pypi.org/packages/30/9a/a008c7b1183fac9e52066d80a379b3c64eab535bd9d86cdc29a0b766fd82/ipywidgets-7.4.2-py2.py3-none-any.whl")
-    version("5.2.2", sha256="baf6098f054dd5eacc2934b8ea3bef908b81ca8660d839f1f940255a72c660d2", url="https://pypi.org/packages/51/b1/81b0f4ad11922a8180ce20496af28d67ecd1232fb5ad472088542bea0fae/ipywidgets-5.2.2.tar.gz")
+    version("5.2.2", sha256="44d5ae2c1a86cf9841c125532010e56c69a18727634fffabc1b3846d108029ce", url="https://pypi.org/packages/d2/0c/56a7ed25c07b845bd3a9c1843e346ae5874308187b47f4b76ff2eb94d862/ipywidgets-5.2.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-comm@0.1.3:", when="@7.8:7,8.1:")
         depends_on("py-ipykernel@4.5.1:", when="@6.0.0:7.7.3,7.7.5:7.7,8:8.0.4,8.0.6:8.0")
@@ -56,4 +60,5 @@ class PyIpywidgets(PythonPackage):
         depends_on("py-widgetsnbextension@3.6.0:3", when="@7.7.0:7.7.4")
         depends_on("py-widgetsnbextension@3.5.0:3.5", when="@7.5.0:7.7.0-alpha0")
         depends_on("py-widgetsnbextension@3.4", when="@7.4")
+    # END DEPENDENCIES
 

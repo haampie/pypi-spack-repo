@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PyDeepecho(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.3.0.post1", sha256="a0fc284e330fd65acdba49c46399a2d3019ed9caaf85eb1d05bb44abae3d618f", url="https://pypi.org/packages/a8/68/ef5ff2f4767003ce9999d2400904b81d842d7b155168a80c767507a384e8/deepecho-0.3.0.post1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.11", when="@0.4.2:")
         depends_on("python@:3.10", when="@0.4:0.4.1")
@@ -21,4 +25,5 @@ class PyDeepecho(PythonPackage):
         depends_on("py-torch@1.8:1", when="@0.4:0.4.0 ^python@:3.9")
         depends_on("py-torch@1.8:1", when="@0.3")
         depends_on("py-tqdm@4.15:", when="@0.3:")
+    # END DEPENDENCIES
 

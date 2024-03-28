@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyZipp(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.18.1", sha256="206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b", url="https://pypi.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl")
     version("3.18.0", sha256="c1bb803ed69d2cce2373152797064f7e79bc43f0a3748eb494096a867e0ebf79", url="https://pypi.org/packages/39/ab/b6f4d44df331bf15f1bdae6a839563eeaad6c006a6c4e289acdd7db1ebe3/zipp-3.18.0-py3-none-any.whl")
     version("3.17.0", sha256="0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31", url="https://pypi.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl")
@@ -21,7 +21,12 @@ class PyZipp(PythonPackage):
     version("3.6.0", sha256="9fe5ea21568a0a70e50f273397638d39b03353731e6cbbb3fd8502a33fec40bc", url="https://pypi.org/packages/bd/df/d4a4974a3e3957fd1c1fa3082366d7fff6e428ddb55f074bf64876f8e8ad/zipp-3.6.0-py3-none-any.whl")
     version("0.6.0", sha256="f06903e9f1f43b12d371004b4ac7b06ab39a44adc747266928ae6debfa7b3335", url="https://pypi.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl")
     version("0.5.1", sha256="8c1019c6aad13642199fbe458275ad6a84907634cc9f0989877ccc4a2840139d", url="https://pypi.org/packages/a0/0f/9bf71d438d2e9d5fd0e4569ea4d1a2b6f5a524c234c6d221b494298bb4d1/zipp-0.5.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-more-itertools", when="@0.6:1.0,2:2.0")
+    # END DEPENDENCIES
 

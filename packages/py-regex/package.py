@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRegex(PythonPackage):
+    # BEGIN VERSIONS
     version("2023.12.25", sha256="29171aa128da69afdf4bde412d5bedc335f2ca8fcfe4489038577d05f16181e5", url="https://pypi.org/packages/b5/39/31626e7e75b187fae7f121af3c538a991e725c744ac893cc2cfd70ce2853/regex-2023.12.25.tar.gz")
     version("2023.10.3", sha256="3fef4f844d2290ee0ba57addcec17eec9e3df73f10a2748485dfd6a3a188cc0f", url="https://pypi.org/packages/6b/38/49d968981b5ec35dbc0f742f8219acab179fc1567d9c22444152f950cf0d/regex-2023.10.3.tar.gz")
     version("2023.8.8", sha256="fcbdc5f2b0f1cd0f6a56cdb46fe41d2cce1e644e3b68832f3eeebc5fb0f7712e", url="https://pypi.org/packages/4f/1d/6998ba539616a4c8f58b07fd7c9b90c6b0f0c0ecbe8db69095a6079537a7/regex-2023.8.8.tar.gz")
@@ -23,5 +23,10 @@ class PyRegex(PythonPackage):
     version("2019.2.7", sha256="4a1a1d963f462c13722b34ef1f82c4707091b0a3fb9b5fd79b6670c38b734095", url="https://pypi.org/packages/8e/2d/812284cdc6376ce49f6a434ca70229c285ffca672040434d2221654c62ce/regex-2019.02.07.tar.gz")
     version("2018.1.10", sha256="139678fc013b75e486e580c39b4c52d085ed7362e400960f8be1711a414f16b5", url="https://pypi.org/packages/76/f4/7146c3812f96fcaaf2d06ff6862582302626a59011ccb6f2833bb38d80f7/regex-2018.01.10.tar.gz")
     version("2017.7.11", sha256="dbda8bdc31a1c85445f1a1b29d04abda46e5c690f8f933a9cc3a85a358969616", url="https://pypi.org/packages/f9/a4/61ed334988d3c693fa0e27cd6e0b9f425048206ebff97693a341671cae18/regex-2017.07.11.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

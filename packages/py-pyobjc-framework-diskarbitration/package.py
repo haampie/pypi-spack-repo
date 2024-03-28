@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkDiskarbitration(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="dd14eb448865ca4c49e15a543f748f1ef6501ea0044eaa2cf04860547205c84f", url="https://pypi.org/packages/cc/f8/87aa1bcc317badb20e4e17a2acc42a3f5b14963fe4b34ebaae29672c9b64/pyobjc_framework_DiskArbitration-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="a3bd1883b60aa1d8cff3bc18957f81ed14e5d0406d18a4a9095539ddf51dd72e", url="https://pypi.org/packages/3f/33/1dc6abda38fc2c9a5e05b286cfc2a6ea117379513020b619cce42cad9ef9/pyobjc_framework_DiskArbitration-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="cf7dadef895980e08dc7dd646c6d819ea3b4b8321abd2af512d9bde5de389895", url="https://pypi.org/packages/4c/2b/6342aa47636f25d6ac17898ee9e4e05c9b127a11f778ee33b74461e83bb3/pyobjc_framework_DiskArbitration-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkDiskarbitration(PythonPackage):
     version("9.0", sha256="a4ec3cf8646f5ab24c938dbac0b9f246bbc8541e9700b5a31092bf1285208ea3", url="https://pypi.org/packages/a6/85/c5ab21e94aa0be04e354ba09947f4dfc129004521cf3eb1095d64d69c0b5/pyobjc_framework_DiskArbitration-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="fedcd31bf261790d029035fc3f0652782ae6885010354a51a6d17dd36986213a", url="https://pypi.org/packages/2a/2e/b9262d2a763e5ab1684d3d3437ccd1b8520c107e6472e6bd645136cb4d78/pyobjc_framework_DiskArbitration-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="506ac6b88be5f828d6c2d5d4f49a093eead8151384433b97834d066c3b4be0a1", url="https://pypi.org/packages/d7/0b/40710261ee9100a6c654082197c8fba9b604d2b7f21295cd22ae264c1992/pyobjc_framework_DiskArbitration-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -39,4 +43,5 @@ class PyPyobjcFrameworkDiskarbitration(PythonPackage):
         depends_on("py-pyobjc-framework-cocoa@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-cocoa@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-cocoa@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

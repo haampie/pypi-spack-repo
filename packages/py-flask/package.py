@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyFlask(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.0.2", sha256="3232e0e9c850d781933cf0207523d1ece087eb8d87b23777ae38456e2fbe7c6e", url="https://pypi.org/packages/93/a6/aa98bfe0eb9b8b15d36cdfd03c8ca86a03968a87f27ce224fb4f766acb23/flask-3.0.2-py3-none-any.whl")
     version("3.0.1", sha256="ca631a507f6dfe6c278ae20112cea3ff54ff2216390bf8880f6b035a5354af13", url="https://pypi.org/packages/bd/0e/63738e88e981ae57c23bad6c499898314a1110a4141f77d7bd929b552fb4/flask-3.0.1-py3-none-any.whl")
     version("3.0.0", sha256="21128f47e4e3b9d597a3e8521a329bf56909b690fcc3fa3e477725aa81367638", url="https://pypi.org/packages/36/42/015c23096649b908c809c69388a805a571a3bea44362fe87e33fc3afa01f/flask-3.0.0-py3-none-any.whl")
@@ -26,10 +26,14 @@ class PyFlask(PythonPackage):
     version("0.12.5", sha256="2c710d1d42317c802c43000daa16de9de6026146b344ab3376cbc6d18846b863", url="https://pypi.org/packages/a4/36/756c34af4523bb0dfa77d3c83455bc4d5d01d6f03b20d8414f3e4deb8669/Flask-0.12.5-py2.py3-none-any.whl")
     version("0.12.4", sha256="6c02dbaa5a9ef790d8219bdced392e2d549c10cd5a5ba4b6aa65126b2271af29", url="https://pypi.org/packages/2e/48/f1936dadac2326b3d73f2fe0a964a87d16be16eb9d7fc56f09c1bea3d17c/Flask-0.12.4-py2.py3-none-any.whl")
     version("0.12.3", sha256="74bb782687731332b86aa8ab0817be14c9e63e5fa837934de8be4f9236d6d0d2", url="https://pypi.org/packages/24/3e/1b6aa496fa9bb119f6b22263ca5ca9e826aaa132431fd78f413c8bcc18e3/Flask-0.12.3-py2.py3-none-any.whl")
-    version("0.12.2", sha256="49f44461237b69ecd901cc7ce66feea0319b9158743dd27a2899962ab214dac1", url="https://pypi.org/packages/eb/12/1c7bd06fcbd08ba544f25bf2c6612e305a70ea51ca0eda8007344ec3f123/Flask-0.12.2.tar.gz")
-    version("0.12.1", sha256="9dce4b6bfbb5b062181d3f7da8f727ff70c1156cbb4024351eafd426deb5fb88", url="https://pypi.org/packages/24/6e/11b9c57e46f276a8a8dfda85a2fa7ada62b0463b68693616c7ab5df356fa/Flask-0.12.1.tar.gz")
-    version("0.11.1", sha256="b4713f2bfb9ebc2966b8a49903ae0d3984781d5c878591cf2f7b484d28756b0e", url="https://pypi.org/packages/55/8a/78e165d30f0c8bb5d57c429a30ee5749825ed461ad6c959688872643ffb3/Flask-0.11.1.tar.gz")
+    version("0.12.2", sha256="0749df235e3ff61ac108f69ac178c9770caeaccad2509cb762ce1f65570a8856", url="https://pypi.org/packages/77/32/e3597cb19ffffe724ad4bf0beca4153419918e7fa4ba6a34b04ee4da3371/Flask-0.12.2-py2.py3-none-any.whl")
+    version("0.12.1", sha256="6c3130c8927109a08225993e4e503de4ac4f2678678ae211b33b519c622a7242", url="https://pypi.org/packages/f4/43/fb2d5fb1d10e1d0402dd57836cf9a78b7f69c8b5f76a04b6e6113d0d7c5a/Flask-0.12.1-py2.py3-none-any.whl")
+    version("0.11.1", sha256="a4f97abd30d289e548434ef42317a793f58087be1989eab96f2c647470e77000", url="https://pypi.org/packages/63/2b/01f5ed23a78391f6e3e73075973da0ecb467c831376a0b09c0ec5afd7977/Flask-0.11.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-blinker@1.6.2:", when="@2.3:")
         depends_on("py-click@8.1.3:", when="@2.3:")
@@ -56,4 +60,5 @@ class PyFlask(PythonPackage):
         depends_on("py-werkzeug@0.15:", when="@1.1:1.1.2")
         depends_on("py-werkzeug@0.7:0", when="@0.12.5:0")
         depends_on("py-werkzeug@0.7:", when="@0.12.3:0.12.4")
+    # END DEPENDENCIES
 

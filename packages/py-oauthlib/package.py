@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOauthlib(PythonPackage):
+    # BEGIN VERSIONS
     version("3.2.2", sha256="8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca", url="https://pypi.org/packages/7e/80/cab10959dc1faead58dc8384a781dfbf93cb4d33d50988f7a69f1b7c9bbe/oauthlib-3.2.2-py3-none-any.whl")
     version("3.2.1", sha256="88e912ca1ad915e1dcc1c06fc9259d19de8deacd6fd17cc2df266decc2e49066", url="https://pypi.org/packages/92/bb/d669baf53d4ffe081dab80aad93c5c79f84eeac885dd31507c8c055a98d5/oauthlib-3.2.1-py3-none-any.whl")
     version("3.2.0", sha256="6db33440354787f9b7f3a6dbd4febf5d0f93758354060e802f6c06cb493022fe", url="https://pypi.org/packages/1d/46/5ee2475e1b46a26ca0fa10d3c1d479577fde6ee289f8c6aa6d7ec33e31fd/oauthlib-3.2.0-py3-none-any.whl")
@@ -18,5 +18,26 @@ class PyOauthlib(PythonPackage):
     version("2.1.0", sha256="d883b36b21a6ad813953803edfa563b1b579d79ca758fe950d1bc9e8b326025b", url="https://pypi.org/packages/e6/d1/ddd9cfea3e736399b97ded5c2dd62d1322adef4a72d816f1ed1049d6a179/oauthlib-2.1.0-py2.py3-none-any.whl")
     version("2.0.7", sha256="09d438bcac8f004ae348e721e9d8a7792a9e23cd574634e973173344046287f5", url="https://pypi.org/packages/e0/ac/c6a0c98788aa0d61915190d089e9ebe680905a94261effe3936eb8fe356f/oauthlib-2.0.7-py2.py3-none-any.whl")
     version("2.0.2", sha256="b3b9b47f2a263fe249b5b48c4e25a5bce882ff20a0ac34d553ce43cff55b53ac", url="https://pypi.org/packages/fa/2e/25f25e6c69d97cf921f0a8f7d520e0ef336dd3deca0142c0b634b0236a90/oauthlib-2.0.2.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("extras", default=False)
+    variant("rsa", default=False)
+    variant("signals", default=False)
+    variant("signedtoken", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-blinker@1.4:", when="@3.1.1:+signals")
+        depends_on("py-blinker", when="@2.0.7:3.1.0+signals")
+        depends_on("py-cryptography@3:", when="@3.2:+signedtoken")
+        depends_on("py-cryptography@3:", when="@3.2:+rsa")
+        depends_on("py-cryptography@3", when="@3.1.1:3.1+signedtoken")
+        depends_on("py-cryptography@3", when="@3.1.1:3.1+rsa")
+        depends_on("py-cryptography", when="@2.0.7:3.1.0+signedtoken")
+        depends_on("py-cryptography", when="@2.0.7:3.1.0+rsa")
+        depends_on("py-pyjwt@2.0.0:", when="@3.1.1:+signedtoken")
+        depends_on("py-pyjwt@1:", when="@2.0.7:3.1.0+signedtoken")
+    # END DEPENDENCIES
 

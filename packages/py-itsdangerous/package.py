@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyItsdangerous(PythonPackage):
+    # BEGIN VERSIONS
     version("2.1.2", sha256="2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44", url="https://pypi.org/packages/68/5f/447e04e828f47465eeab35b5d408b7ebaaaee207f48b7136c5a7267a30ae/itsdangerous-2.1.2-py3-none-any.whl")
     version("2.1.1", sha256="935642cd4b987cdbee7210080004033af76306757ff8b4c0a506a4b6e06f02cf", url="https://pypi.org/packages/76/9b/88ac47681ba6af8ee994c9e83ecdfc0048df59f8f6df5c2f766998fe87e7/itsdangerous-2.1.1-py3-none-any.whl")
     version("2.1.0", sha256="29285842166554469a56d427addc0843914172343784cb909695fdbe90a3e129", url="https://pypi.org/packages/53/f8/64d2488f48332f33a6dbfe2f19d7bde7d750d9cb182b4b37c02eadec33d3/itsdangerous-2.1.0-py3-none-any.whl")
@@ -20,5 +20,10 @@ class PyItsdangerous(PythonPackage):
     version("0.23", sha256="71c0bf6bde4dcc93d838415e728a961a7b16f324b8ae182525fbdadde9f55d62", url="https://pypi.org/packages/c1/6c/ceefb52b2a5d7d1f2b1b407a96892182161904478b9ef86049e7b8162cb6/itsdangerous-0.23.tar.gz")
     version("0.22", sha256="9e63500ef4c2f30be66a69cd0def95966db889c32e7b4fe4dd8fc9c7ebe3f3fc", url="https://pypi.org/packages/56/60/c4fd79a1855af1392257a423097c9cbfc69f66935dfed8a0bf959530f6c5/itsdangerous-0.22.tar.gz")
     version("0.21", sha256="c760381fc09dc120e4b459f5ba39ed55ea21fd77ac9f4d4101c0c237d8fc9d9e", url="https://pypi.org/packages/a3/f7/06b178102fac036b804d804907c28120ac0a6d9cafaeffc4b6f0e176a4e2/itsdangerous-0.21.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

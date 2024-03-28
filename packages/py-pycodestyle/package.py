@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPycodestyle(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.11.1", sha256="44fe31000b2d866f2e41841b18528a505fbd7fef9017b04eff4e2648a0fadc67", url="https://pypi.org/packages/b1/90/a998c550d0ddd07e38605bb5c455d00fcc177a800ff9cc3dafdcb3dd7b56/pycodestyle-2.11.1-py2.py3-none-any.whl")
     version("2.11.0", sha256="5d1013ba8dc7895b548be5afb05740ca82454fd899971563d2ef625d090326f8", url="https://pypi.org/packages/31/c2/e1508ed4395793f69e40fd8c6b5a690e1d568e649aae9492076a7b6befb4/pycodestyle-2.11.0-py2.py3-none-any.whl")
     version("2.10.0", sha256="8a4eaf0d0495c7395bdab3589ac2db602797d76207242c17d470186815706610", url="https://pypi.org/packages/a2/54/001fdc0d69e8d0bb86c3423a6fa6dfada8cc26317c2635ab543e9ac411bd/pycodestyle-2.10.0-py2.py3-none-any.whl")
@@ -23,5 +23,10 @@ class PyPycodestyle(PythonPackage):
     version("2.2.0", sha256="60c4e1c36f301ac539a550a29e9d16862069ec240472d86e5e71c4fc645829cb", url="https://pypi.org/packages/46/95/0b74196cb512cbf5127c27636115d63126c0f1a10383d828b9ad7295f381/pycodestyle-2.2.0-py2.py3-none-any.whl")
     version("2.1.0", sha256="14588a4a51f464b784eb199ade0a04103e93f9ed7d69551f29f295a9e9668030", url="https://pypi.org/packages/49/16/455af11e9afef9a38804c516910ba8093f673981a55dbfd4688974b45f40/pycodestyle-2.1.0-py2.py3-none-any.whl")
     version("2.0.0", sha256="2ce83f2046f5ab85c652ceceddfbde7a64a909900989b4b43e92b10b743d0ce5", url="https://pypi.org/packages/73/31/136a79364c1681a3c276796d1f5090833bd03461b78a1b037638d1a2c484/pycodestyle-2.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

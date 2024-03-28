@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAzureMgmtStorage(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("21.1.0", sha256="593f2544fc4f05750c4fe7ca4d83c32ea1e9d266e57899bbf79ce5940124e8cc", url="https://pypi.org/packages/58/31/4d37f8a85c37933961f8547f1df53018baef4e66d47f752ffd151f78af8a/azure_mgmt_storage-21.1.0-py3-none-any.whl")
     version("21.0.0", sha256="89d644c6192118b0b097deaa9c4925832d8f7ea4693d38d5fce3f0125b43a1c5", url="https://pypi.org/packages/6a/53/dd7f37c78faf77f15ec0acfea3094b317e7183014414ffe737c2e32e6fa7/azure_mgmt_storage-21.0.0-py3-none-any.whl")
     version("20.1.0", sha256="afdc830329c674d96a91c963fa03ac81a4e387dfbf9f5a4e823950dc1fe95659", url="https://pypi.org/packages/8c/24/33da34950a637df9bca4bac4b99be81e060613edf22a54589d17e2b7b51a/azure_mgmt_storage-20.1.0-py3-none-any.whl")
@@ -27,7 +27,11 @@ class PyAzureMgmtStorage(PythonPackage):
     version("7.1.0", sha256="9926a4118e1c27af7bef54ec2d70a9ad26566015c11c63897f84ee657173e331", url="https://pypi.org/packages/ea/5a/a179c75e31a1bd8bc2f919638fe7b716062a6e59b39d0bb637e3d7051f6e/azure_mgmt_storage-7.1.0-py2.py3-none-any.whl")
     version("7.0.0", sha256="a74454fe0ed66081971a66a0a97b3db91968f3e68618e3a7220b1707fe5b4179", url="https://pypi.org/packages/5b/ee/1415439cbbbffce8c9cc9a55b4c0313a2f2a995f9655acfa5aa7344e6d8f/azure_mgmt_storage-7.0.0-py2.py3-none-any.whl")
     version("6.0.0", sha256="95220e51eca421707b704e59f023d7fe367382b1ec0dd5f7e279f8d221417a4d", url="https://pypi.org/packages/8a/d9/117216e5f671f6c3238c50cba583924252c5ee08091a7d10fa1d3113faa3/azure_mgmt_storage-6.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azure-common@1.1:", when="@1.2.1:2.0.0-rc2,3:")
         depends_on("py-azure-mgmt-core@1.3.2:", when="@21:")
@@ -39,4 +43,5 @@ class PyAzureMgmtStorage(PythonPackage):
         depends_on("py-msrest@0.6.21:", when="@17.1:20")
         depends_on("py-msrest@0.5:", when="@3:17.0")
         depends_on("py-msrestazure@0.4.32:", when="@2.0.0:11")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyWebsocketClient(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.7.0", sha256="f4c3d22fec12a2461427a29957ff07d35098ee2d976d3ba244e688b8b4057588", url="https://pypi.org/packages/1e/70/1e88138a9afbed1d37093b85f0bebc3011623c4f47c166431599fe9d6c93/websocket_client-1.7.0-py3-none-any.whl")
     version("1.6.4", sha256="084072e0a7f5f347ef2ac3d8698a5e0b4ffbfcab607628cadabc650fc9a83a24", url="https://pypi.org/packages/c4/3c/1892ce394828c43d4f65248ebdee3854114266b75d1f5915cb211155ad7b/websocket_client-1.6.4-py3-none-any.whl")
     version("1.6.3", sha256="6cfc30d051ebabb73a5fa246efdcc14c8fbebbd0330f8984ac3bb6d9edd2ad03", url="https://pypi.org/packages/0b/50/49e0d7342e5d441d43b525d6c84656ea40aea3e58d530004d07b22bc9b04/websocket_client-1.6.3-py3-none-any.whl")
@@ -19,8 +19,13 @@ class PyWebsocketClient(PythonPackage):
     version("1.5.0", sha256="fb5d81b95d350f3a54838ebcb4c68a5353bbd1412ae8f068b1e5280faeb13074", url="https://pypi.org/packages/62/38/62b0f0bc9bfde55f0a5611ee0a6136ed965513bbae62a74b670e54469171/websocket_client-1.5.0-py3-none-any.whl")
     version("1.4.1", sha256="398909eb7e261f44b8f4bd474785b6ec5f5b499d4953342fe9755e01ef624090", url="https://pypi.org/packages/83/b8/95c2512818d6ddb9b97f4163e915b2afe2db42b620270aa59c5ee0b47245/websocket_client-1.4.1-py3-none-any.whl")
     version("1.2.1", sha256="0133d2f784858e59959ce82ddac316634229da55b498aac311f1620567a710ec", url="https://pypi.org/packages/55/44/030ea47390896c8d6dc9995c8e9a4c5df3a161cd45416d88119036c73eda/websocket_client-1.2.1-py2.py3-none-any.whl")
-    version("0.57.0", sha256="d735b91d6d1692a6a181f2a8c9e0238e5f6373356f561bb9dc4c7af36f452010", url="https://pypi.org/packages/8b/0f/52de51b9b450ed52694208ab952d5af6ebbcbce7f166a48784095d930d8c/websocket_client-0.57.0.tar.gz")
-    version("0.56.0", sha256="1fd5520878b68b84b5748bb30e592b10d0a91529d5383f74f4964e72b297fd3a", url="https://pypi.org/packages/c5/01/8c9c7de6c46f88e70b5a3276c791a2be82ae83d8e0d0cc030525ee2866fd/websocket_client-0.56.0.tar.gz")
-    version("0.48.0", sha256="18f1170e6a1b5463986739d9fd45c4308b0d025c1b2f9b88788d8f69e8a5eb4a", url="https://pypi.org/packages/28/85/df04ec21c622728316b591c2852fd20a0e74324eeb6ca26f351844ba815f/websocket_client-0.48.0.tar.gz")
+    version("0.57.0", sha256="0fc45c961324d79c781bab301359d5a1b00b13ad1b10415a4780229ef71a5549", url="https://pypi.org/packages/4c/5f/f61b420143ed1c8dc69f9eaec5ff1ac36109d52c80de49d66e0c36c3dfdf/websocket_client-0.57.0-py2.py3-none-any.whl")
+    version("0.56.0", sha256="1151d5fb3a62dc129164292e1227655e4bbc5dd5340a5165dfae61128ec50aa9", url="https://pypi.org/packages/29/19/44753eab1fdb50770ac69605527e8859468f3c0fd7dc5a76dd9c4dbd7906/websocket_client-0.56.0-py2.py3-none-any.whl")
+    version("0.48.0", sha256="db70953ae4a064698b27ae56dcad84d0ee68b7b43cb40940f537738f38f510c1", url="https://pypi.org/packages/8a/a1/72ef9aa26cfe1a75cee09fc1957e4723add9de098c15719416a1ee89386b/websocket_client-0.48.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

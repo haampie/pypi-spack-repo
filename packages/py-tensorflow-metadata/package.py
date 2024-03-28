@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTensorflowMetadata(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.14.0", sha256="5ff79bf96f98c800fc08270b852663afe7e74d7e1f92b50ba1487bfc63894cdb", url="https://pypi.org/packages/41/23/3705c7139886c079ef4c0e3be56a5a1fb90e9ee413a4b7caaee0ee0ea6fe/tensorflow_metadata-1.14.0-py3-none-any.whl")
     version("1.13.1", sha256="8abdead4cae3d7258f815d9f63a146ae1e31853ac07ba271db0ea9dfb0a6b317", url="https://pypi.org/packages/6e/b7/41ed520712c659dee0653dbd1ae71ed991bc51c7622e3e4dafbbf208faaa/tensorflow_metadata-1.13.1-py3-none-any.whl")
     version("1.13.0", sha256="d79ef85bcb5cfc8a7b860573f5f81618fba11a43f04c56d608ec1fb86a3452c2", url="https://pypi.org/packages/1d/7a/29b68133e47b46c960d3bcdfdc3bc9e479303d0ce827867006908c2320c1/tensorflow_metadata-1.13.0-py3-none-any.whl")
@@ -18,7 +18,11 @@ class PyTensorflowMetadata(PythonPackage):
     version("1.7.0", sha256="d05600bf0f42371d3ebf12e4a431a16836c039918d24c4b9634235c9b8fc686a", url="https://pypi.org/packages/ed/c4/e4fa9d2725eff8eeed00f2c959d1cbb0a7f027f46ea36b9987b99d4e0d8c/tensorflow_metadata-1.7.0-py3-none-any.whl")
     version("1.6.0", sha256="44ef4279a83d13ff59557edb477edb4abc2a32b3c33188f5aa8061494d28594c", url="https://pypi.org/packages/c7/4d/c1a509ea79857e5f4da30acbe6bf55294a24ad7388ab2842ba68192ca69c/tensorflow_metadata-1.6.0-py3-none-any.whl")
     version("1.5.0", sha256="982aa5715a306c5fcce0817da49ad0892f5d977db37e1811c34013ba4da06207", url="https://pypi.org/packages/81/e6/193d9637b844f88797199fced0e3baa893dd110bdca34b5708b49120ae30/tensorflow_metadata-1.5.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-absl-py@0.9:1", when="@1.6:")
         depends_on("py-absl-py@0.9:0.12", when="@0.29:1.5")
@@ -26,4 +30,5 @@ class PyTensorflowMetadata(PythonPackage):
         depends_on("py-protobuf@3.20.3:4.0", when="@1.14:")
         depends_on("py-protobuf@3.20.3:4", when="@1.13.1:1.13")
         depends_on("py-protobuf@3.13.0:3", when="@1.1:1.13.0")
+    # END DEPENDENCIES
 

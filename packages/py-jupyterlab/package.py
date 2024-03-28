@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyJupyterlab(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("4.1.5", sha256="3bc843382a25e1ab7bc31d9e39295a9f0463626692b7995597709c0ab236ab2c", url="https://pypi.org/packages/b4/bb/1f9f7ddf04cfe26b21aab739ec905bbafa401642614ac9c9d26cf13cb7a3/jupyterlab-4.1.5-py3-none-any.whl")
     version("4.1.4", sha256="f92c3f2b12b88efcf767205f49be9b2f86b85544f9c4f342bb5e9904a16cf931", url="https://pypi.org/packages/0a/16/8477e15aeca6bd93ff0ae15570bf829605952c71fdd252b9975229d0913d/jupyterlab-4.1.4-py3-none-any.whl")
     version("4.1.3", sha256="67dbec7057c6ad46f08a3667a80bdb890df9453822c93b5ddfd5e8313a718ef9", url="https://pypi.org/packages/2e/23/66990c58d0f205841fa1b76c2f80cb564fc4d0347ada63980bcd4a9b3471/jupyterlab-4.1.3-py3-none-any.whl")
@@ -35,7 +35,11 @@ class PyJupyterlab(PythonPackage):
     version("3.0.16", sha256="88f6e7580c15cf731d96495fda362e786753e18d1e3e7e735915862efb602a92", url="https://pypi.org/packages/f7/5a/e9a52aea224ae01a3c34732c886389745fbbc14f0374a96d555add1f5034/jupyterlab-3.0.16-py3-none-any.whl")
     version("2.2.7", sha256="a0a1882456098d2fab4c241a0b16a1df96c36de1c45bddbf5fc40867e3d9340e", url="https://pypi.org/packages/82/bc/8ca618d6a18d49675ad39f544bcd6ad8a9f31a5784d059d7053c8ec3197b/jupyterlab-2.2.7-py3-none-any.whl")
     version("2.1.0", sha256="6663eed77b10d567499ab998eb71dabb510572f7337ec8efc48ed56cd37f9c5f", url="https://pypi.org/packages/2f/4a/b25d71392bb6982b7afa05eba1be22556f7e2d852bd5af9a1682da93916f/jupyterlab-2.1.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-async-lru@1:", when="@4.0.0-alpha29:")
         depends_on("py-httpx@0.25:", when="@4.1.0-alpha3:")
@@ -68,4 +72,5 @@ class PyJupyterlab(PythonPackage):
         depends_on("py-tornado@6.1:", when="@3.0.0-rc14:4.0.0-alpha32")
         depends_on("py-tornado@:6.0-beta1,6.0.3:", when="@1.0.0-rc1:3.0.0-rc13")
         depends_on("py-traitlets", when="@4.0.0-alpha29:")
+    # END DEPENDENCIES
 

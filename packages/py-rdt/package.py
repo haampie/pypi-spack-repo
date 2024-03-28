@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRdt(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.10.0", sha256="071c5525e2125f56dd2a01dce72c2adaa4f2465cbb86183b8815e540d38c83fb", url="https://pypi.org/packages/3b/c0/4c1c771a2f839b564cd6cac4d66e44655548bba22cbe73089257e5f4c2bb/rdt-1.10.0-py3-none-any.whl")
     version("1.9.2", sha256="b53418cba74f7ff879a49ffd0729313b085c846c3d52e9cc65736fa68be29273", url="https://pypi.org/packages/52/88/2dc16e2515357629bfa3b7f8744e2a4fe572ef1d1cfe6a7968f60e471f79/rdt-1.9.2-py2.py3-none-any.whl")
     version("1.9.1", sha256="afc896faae67a979e1d73ea0b16d63847731db0ea38c4a851006814bbb130748", url="https://pypi.org/packages/b8/53/68577bde368d48346dc0fd50f4764c24690897598e03f81dc6d65cc4b631/rdt-1.9.1-py2.py3-none-any.whl")
@@ -27,7 +27,11 @@ class PyRdt(PythonPackage):
     version("0.6.2", sha256="97b8adb4a9bca87bc1be2dec4b7e7e9e0b328bd695ee1d51e767c8867562b53e", url="https://pypi.org/packages/09/c8/aeaa46aeaa01a255e50413e48c0364330972c4f39d9a0d40330a33eef465/rdt-0.6.2-py2.py3-none-any.whl")
     version("0.6.2.dev0", sha256="b774c665df6de175daebdd17d6f418294e9e1cff1ad1f26111842fcfdd8a7b0c", url="https://pypi.org/packages/f6/b1/0775d1e99b750ae233ae8407516f0237ce53e7d08e3d5fbaa5a2e90a6625/rdt-0.6.2.dev0-py2.py3-none-any.whl")
     version("0.6.1", sha256="e1c9d4c2733deb95ae1fd97848661f963ef57b79f3d1ed9fabc6bc0715029965", url="https://pypi.org/packages/0b/0e/1b3a505ada571f07a9c4ead7eb2f2130722056e968e5fb2c8bcb370c9f88/rdt-0.6.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.11", when="@1.3:")
         depends_on("python@:3.9", when="@0.6.1:1.2,1.3.0.dev:1.3.0.dev0")
@@ -55,4 +59,5 @@ class PyRdt(PythonPackage):
         depends_on("py-scipy@1.5.4:", when="@1.3: ^python@:3.9")
         depends_on("py-scipy@1.5.4:1.7", when="@0.6.4:1.2,1.3.0.dev:1.3.0.dev0")
         depends_on("py-scipy@1.5.4:", when="@0.6.1:0.6.3")
+    # END DEPENDENCIES
 

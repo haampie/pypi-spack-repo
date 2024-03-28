@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyHttptools(PythonPackage):
+    # BEGIN VERSIONS
     version("0.6.1", sha256="c6e26c30455600b95d94b1b836085138e82f177351454ee841c148f93a9bad5a", url="https://pypi.org/packages/67/1d/d77686502fced061b3ead1c35a2d70f6b281b5f723c4eff7a2277c04e4a2/httptools-0.6.1.tar.gz")
     version("0.6.0", sha256="9fc6e409ad38cbd68b177cd5158fc4042c796b82ca88d99ec78f07bed6c6b796", url="https://pypi.org/packages/e3/3f/e976f6cf3da5e9dbda0096a0e65c1b109036a562658e020971ec54d007fb/httptools-0.6.0.tar.gz")
     version("0.5.0", sha256="295874861c173f9101960bba332429bb77ed4dcd8cdf5cee9922eb00e4f6bc09", url="https://pypi.org/packages/04/4a/4b1d0f839a3911352632998305c78af09f2df980c728eb365ca09c800524/httptools-0.5.0.tar.gz")
@@ -17,5 +17,10 @@ class PyHttptools(PythonPackage):
     version("0.1.1", sha256="41b573cf33f64a8f8f3400d0a7faf48e1888582b6f6e02b82b9bd4f0bf7497ce", url="https://pypi.org/packages/d9/6f/aad92c3f090e2f74dd728d58d3bba4c832d35199814af99673ee7300b582/httptools-0.1.1.tar.gz")
     version("0.1.0", sha256="0680acab83b0699b770380b88a30e6da9a67aae56cece8559b5f7c6f26268f86", url="https://pypi.org/packages/a9/d9/63f5738b400dd8c2f7196608fdb6acb981353625b61d43221bf0353c74a4/httptools-0.1.0.tar.gz")
     version("0.0.13", sha256="e00cbd7ba01ff748e494248183abc6e153f49181169d8a3d41bb49132ca01dfc", url="https://pypi.org/packages/1b/03/215969db11abe8741e9c266a4cbe803a372bd86dd35fa0084c4df6d4bd00/httptools-0.0.13.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

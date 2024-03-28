@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PySierrapy(PythonPackage):
-    version("0.3.0", sha256="82474b3815d79d16a480b0cc70b9f7075430ff4990f33306c880b240a3141b6e", url="https://pypi.org/packages/2c/c4/4ed4a790e7943bac2756a689a5080bcbc892e269cea4b628646b81bec412/sierrapy-0.3.0.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.3.0", sha256="1c4d51a8c82384b68535735a4dfd5c847366f666ec9b76cea4be05763d2b03e4", url="https://pypi.org/packages/64/5c/87a5421a2d64b0f38dbcf404ad83a7602f153cbcd24fec3d863d41fe1a56/sierrapy-0.3.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

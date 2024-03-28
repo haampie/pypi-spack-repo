@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyQtpy(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.4.1", sha256="1c1d8c4fa2c884ae742b069151b0abe15b3f70491f3972698c683b8e38de839b", url="https://pypi.org/packages/7e/a9/2146d5117ad8a81185331e0809a6b48933c10171f5bac253c6df9fce991c/QtPy-2.4.1-py3-none-any.whl")
     version("2.4.0", sha256="4d4f045a41e09ac9fa57fcb47ef05781aa5af294a0a646acc1b729d14225e741", url="https://pypi.org/packages/be/a1/13bdd2f6237379744c52cec33d417a5819a07455d880e3c5f517c13a0f21/QtPy-2.4.0-py3-none-any.whl")
     version("2.3.1", sha256="5193d20e0b16e4d9d3bc2c642d04d9f4e2c892590bd1b9c92bfe38a95d5a2e12", url="https://pypi.org/packages/51/9f/495736f9bbebc56b9f2ba3d95df1045fd367378254f799e86463b0037ab0/QtPy-2.3.1-py3-none-any.whl")
@@ -19,8 +19,15 @@ class PyQtpy(PythonPackage):
     version("1.11.3", sha256="e121fbee8e95645af29c5a4aceba8d657991551fc1aa3b6b6012faf4725a1d20", url="https://pypi.org/packages/cf/a2/562edbf7be613bd6584543b27f67b30a2fcc39a2e0d5e5f4b9284dbb823e/QtPy-1.11.3-py2.py3-none-any.whl")
     version("1.11.2", sha256="83c502973e9fdd7b648d8267a421229ea3d9a0651c22e4c65a4d9228479c39b6", url="https://pypi.org/packages/73/47/cc42c2b4fe4ddb7e289ef8f098c7249903ad09cd3f6ee8ec17c63de2b728/QtPy-1.11.2-py2.py3-none-any.whl")
     version("1.7.1", sha256="166766ec89365e43b9a7c733f2362b66325ea039dc4806cfa7aec4199f43662c", url="https://pypi.org/packages/14/a8/6145994bd4eb03f2bfe54a87665588891dacf2dd5e96ca6546cf16d76f45/QtPy-1.7.1-py2.py3-none-any.whl")
-    version("1.2.1", sha256="5803ce31f50b24295e8e600b76cc91d7f2a3140a5a0d526d40226f9ec5e9097d", url="https://pypi.org/packages/0a/a8/31632a1c7cab273ac801da8b610d8659195853c099e1a26bfc08e78ddbe6/QtPy-1.2.1.tar.gz")
+    version("1.2.1", sha256="fdeceddd7933906b96785c752e5be6705f890929df5d42e0985b6ef4206a41ad", url="https://pypi.org/packages/ed/38/17a3d96166824662d162d886f263905dbf3a0a66fec74989a3ac9a88afb6/QtPy-1.2.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("api", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-packaging", when="@2:")
+    # END DEPENDENCIES
 

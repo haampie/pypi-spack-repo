@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLightningCloud(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("0.5.65", sha256="cd0024e48c5e6807c0015052a1ece1ac6b25fb165c430fbd682f9e94b31fbe5d", url="https://pypi.org/packages/56/60/7e2bccbb19a25592cd32619be6d26b012ef9a46db1d7f3d62ef282aefc77/lightning_cloud-0.5.65-py3-none-any.whl")
     version("0.5.64", sha256="c8de8b3b17b46809e71c77c5b5a254c267a7c5235f07918b81ce9a39fa5f5ffa", url="https://pypi.org/packages/69/34/30a4fe68d41a72cb85454e2c3c7379eb3bb78cf159e4447f99fadb914465/lightning_cloud-0.5.64-py3-none-any.whl")
     version("0.5.63", sha256="153ddb474f99ea10a49e2e3adf6d92be21b1dc97a212c93618f68de4bf640cf5", url="https://pypi.org/packages/d7/a4/cc61de8c0f22052c9923cd62cd3e9eee0c753d0f78677ff602cccc9b7f94/lightning_cloud-0.5.63-py3-none-any.whl")
@@ -24,7 +24,11 @@ class PyLightningCloud(PythonPackage):
     version("0.5.7", sha256="185b1b6bcb4bc4b4d408d5c1c79b12b93de35dbfd088bc0e75e824a18a3e8d9d", url="https://pypi.org/packages/28/ee/05bb6133e1898c5c0e9060c0a387d3c64cc03e042a70a531c96655bdf0de/lightning_cloud-0.5.7-py3-none-any.whl")
     version("0.5.3", sha256="e92f6a2a592b5d12857cd92e1f1ded6b52b401fa9d2e90189824413430c7989f", url="https://pypi.org/packages/3a/b7/7ccb23b742fc7d7dba61ceebd56fcced48ca9d753c0acc449b31f20b7d3f/lightning_cloud-0.5.3-py3-none-any.whl")
     version("0.5.0", sha256="00a6d111867542372f77b100813c67ae15935b5e46e98ce30f0099b4c5ccc176", url="https://pypi.org/packages/ba/ae/df58ffeb53de399ae4559360158124f13356adf45bae1543a3ff972bb932/lightning_cloud-0.5.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-boto3", when="@0.5.41:")
         depends_on("py-click", when="@0.0.4:")
@@ -38,4 +42,5 @@ class PyLightningCloud(PythonPackage):
         depends_on("py-urllib3", when="@0.5:")
         depends_on("py-uvicorn", when="@0.5.33:")
         depends_on("py-websocket-client", when="@0.5:")
+    # END DEPENDENCIES
 

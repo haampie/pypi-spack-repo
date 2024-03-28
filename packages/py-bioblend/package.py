@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBioblend(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.2.0", sha256="14d2d932ddabba47b88a0e030a0972a1287a1a051a9e555c1966964ef0a15cd5", url="https://pypi.org/packages/9c/2a/ba19ec668afe51b44072b6a5dbb2a2ea09cd25cb79add92ee0b8cb3dd9a2/bioblend-1.2.0-py2.py3-none-any.whl")
     version("1.1.1", sha256="bad2c1eebfeef4fb83e92af91de5de9e1d9098a006d8dd6112d453a9dcdd0a0c", url="https://pypi.org/packages/18/99/e77ea37ab78d0e4e48193892fb9360b93bb43aad29305354e1315c020c89/bioblend-1.1.1-py2.py3-none-any.whl")
     version("1.0.1", sha256="74626486efae2b4fd737c21f18a6868b2618d26ae91f87c735f3cb81fc25f649", url="https://pypi.org/packages/c5/b6/fcb0439af30cf0fd488b64f84a6ab2921ca220cd34f3178cec8e3f6a8ec6/bioblend-1.0.1-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyBioblend(PythonPackage):
     version("0.15.0", sha256="a362a251a9429f17713bda51b29ccd3f4616a7613eedeb23e828307afb93eb34", url="https://pypi.org/packages/a2/93/dd391a268dc1a819750867e5b29723fe350aa259ebc675268b4536755614/bioblend-0.15.0-py2.py3-none-any.whl")
     version("0.14.0", sha256="b63505ddbecdebcc30406bc3186247d7d205ec6ba0fa4bfd220518c96ff92dd7", url="https://pypi.org/packages/d8/64/d1c3ab0ae9ec3c4e927cbe87620e0cb233d8cbd5e62e3f67a3a0a099648e/bioblend-0.14.0-py2.py3-none-any.whl")
     version("0.13.0", sha256="bcdb9f0dea1683bc61be8c4fd129ba8538b62f0499e6a07f86839cbc485944a4", url="https://pypi.org/packages/31/fb/5a6541f0e3faeddf31d3106bca85416a1e611c7f358b3a7c0b70a92a9b6a/bioblend-0.13.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-boto@2.9.7:", when="@0.9:0")
         depends_on("py-pyyaml", when="@0.9:0")
@@ -26,4 +30,5 @@ class PyBioblend(PythonPackage):
         depends_on("py-six", when="@0.9:0.13")
         depends_on("py-tuspy", when="@0.18:")
         depends_on("py-typing-extensions", when="@1:")
+    # END DEPENDENCIES
 

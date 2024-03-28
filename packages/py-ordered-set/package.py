@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyOrderedSet(PythonPackage):
+    # BEGIN VERSIONS
     version("4.1.0", sha256="046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562", url="https://pypi.org/packages/33/55/af02708f230eb77084a299d7b08175cff006dea4f2721074b92cdb0296c0/ordered_set-4.1.0-py3-none-any.whl")
     version("4.0.2", sha256="ba93b2df055bca202116ec44b9bead3df33ea63a7d5827ff8e16738b97f33a95", url="https://pypi.org/packages/f5/ab/8252360bfe965bba31ec05112b3067bd129ce4800d89e0b85613bc6044f6/ordered-set-4.0.2.tar.gz")
     version("4.0.1", sha256="a31008c57f9c9776b12eb8841b1f61d1e4d70dfbbe8875ccfa2403c54af3d51b", url="https://pypi.org/packages/89/5d/60db38c980730fc91a0a9cf4c2b932037eecfbd6926aa2ebf450247c0096/ordered-set-4.0.1.tar.gz")
@@ -17,5 +17,10 @@ class PyOrderedSet(PythonPackage):
     version("3.0.0", sha256="a34399fe6aa78358aaa00129d67c65b4aa099adfc023731b1d756c85776a89bb", url="https://pypi.org/packages/df/77/db7c91893e3c17587ea15f64e63f660fd27e0abd7811ae809ff2a8e0591a/ordered-set-3.0.0.tar.gz")
     version("2.0.2", sha256="942cad5d7d5b0760d5cbe93dfb385ac2ed402ca1d48c9f4e102d7d5cce3a90eb", url="https://pypi.org/packages/c3/1c/4ddba479a75369b31655e295463bc37e5f84acb4fa7f34548946ff0160e3/ordered-set-2.0.2.tar.gz")
     version("2.0.1", sha256="55567f094481ba204ffede0117ab563e19af050c7cbf33a9a23292b8cb2b0a0e", url="https://pypi.org/packages/80/8c/7405f2f1a5b4a95fbc87b1e43df9a630aa30d93c0cfb06a9ea64fd436399/ordered-set-2.0.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

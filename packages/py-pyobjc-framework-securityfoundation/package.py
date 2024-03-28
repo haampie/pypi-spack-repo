@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPyobjcFrameworkSecurityfoundation(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("10.2", sha256="296f7f9ff96a35c19e4aef7621a567c0efe584aafd20ac25a2839dd96bf46a04", url="https://pypi.org/packages/9d/3e/fc6f4c09ffc57816b642ac246de563366508ed888e4e1bc50cd3d24151d3/pyobjc_framework_SecurityFoundation-10.2-py2.py3-none-any.whl")
     version("10.1", sha256="bbd67737afec25f2e3d41c8c2e7b4a6f9aae4231242e215b82a950eef6432ce0", url="https://pypi.org/packages/31/46/2002e1c71bc18312720ba71132464ec9d79c9b8e1033c8cbddb5f3dea8cc/pyobjc_framework_SecurityFoundation-10.1-py2.py3-none-any.whl")
     version("10.0", sha256="c7c8bc25d3297eb6c4684ef0c9680b619a1966ddc0cfd33a2122a46cd7963f57", url="https://pypi.org/packages/c2/91/4498d0c3c5879a732f2f0e45cf00977c74fa0f50929e3de82cc66fc78b5e/pyobjc_framework_SecurityFoundation-10.0-py2.py3-none-any.whl")
@@ -17,7 +17,11 @@ class PyPyobjcFrameworkSecurityfoundation(PythonPackage):
     version("9.0", sha256="c38024ab0e59d702424e8259a12f9bdc40d3b1926887a67634c16ee9d5cb4cc1", url="https://pypi.org/packages/d8/d4/09260eb0ffbd9cd4b434e27124d0825563ad46b2011218c44c21fd53ce80/pyobjc_framework_SecurityFoundation-9.0-py2.py3-none-any.whl")
     version("8.5.1", sha256="9b790d87d49f3e927a6916e7d42e9aa56493bded4b0d7fd59a4bd7c6ab106479", url="https://pypi.org/packages/e3/71/6497d242a979b56af812a83a8ab61489de7342b476a57d4271f3e3662906/pyobjc_framework_SecurityFoundation-8.5.1-py2.py3-none-any.whl")
     version("8.5", sha256="0d913e7ccc7db7e6adf3a7ed8db296dd28ec865e785f90b4b078eb14bdaeb152", url="https://pypi.org/packages/21/01/1e8cff4f5fcc749e4e180952de7a18ad4b56ef02054e7df6af98fc69e9cf/pyobjc_framework_SecurityFoundation-8.5-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc-core@10.2:", when="@10.2:")
         depends_on("py-pyobjc-core@10.1:", when="@10.1")
@@ -49,4 +53,5 @@ class PyPyobjcFrameworkSecurityfoundation(PythonPackage):
         depends_on("py-pyobjc-framework-security@9:", when="@9:9.0.0")
         depends_on("py-pyobjc-framework-security@8.5.1:", when="@8.5.1:8")
         depends_on("py-pyobjc-framework-security@8.5:", when="@8.5:8.5.0")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyTraitlets(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("5.14.2", sha256="fcdf85684a772ddeba87db2f398ce00b40ff550d1528c03c14dbf6a02003cd80", url="https://pypi.org/packages/7c/c4/366a09036c07f46eb8c9b2af39c97f502ef24f11f2a6e4d763655d9f2708/traitlets-5.14.2-py3-none-any.whl")
     version("5.14.1", sha256="2e5a030e6eff91737c643231bfcf04a65b0132078dad75e4936700b213652e74", url="https://pypi.org/packages/45/34/5dc77fdc7bb4bd198317eea5679edf9cc0a186438b5b19dbb9062fb0f4d5/traitlets-5.14.1-py3-none-any.whl")
     version("5.14.0", sha256="f14949d23829023013c47df20b4a76ccd1a85effb786dc060f34de7948361b33", url="https://pypi.org/packages/a7/1d/7d07e1b152b419a8a9c7f812eeefd408a0610d869489ee2e86973486713f/traitlets-5.14.0-py3-none-any.whl")
@@ -30,10 +30,15 @@ class PyTraitlets(PythonPackage):
     version("4.2.1", sha256="05a66843c96a320eec09df674c16ff330a43cb07f731cf2bd88aa3645a180541", url="https://pypi.org/packages/db/f3/a24062437f01ceae74edf622ac3f8c55b555a2ed1967e5e3d945efe54c3d/traitlets-4.2.1-py2.py3-none-any.whl")
     version("4.2.0", sha256="b920f170255dda49415f3ebf3caf666d3dadd08e38d490c84009792bd16d338f", url="https://pypi.org/packages/10/ed/37ca0815e846baea11d2cc65d7eeb127aef9c22f886847f151c372fc0d66/traitlets-4.2.0-py2.py3-none-any.whl")
     version("4.1.0", sha256="0fdac5614e5cb3329a39d48bbbc4b95813920af7565c1488b5d787ef2863be26", url="https://pypi.org/packages/c7/ac/7bb361161e9b37d00a0b81f0e360fe0be8e2b9156e4da74aabf7f167b237/traitlets-4.1.0-py2.py3-none-any.whl")
-    version("4.0.0", sha256="0b140b4a94a4f1951887d9bce4650da211f79600fc9fdb422acc90c5bbe0233b", url="https://pypi.org/packages/29/23/df9b27cc2e327260458f6f5b6a23f59f61f5b3857645fdbf8930e8544a2c/traitlets-4.0.0.tar.gz")
+    version("4.0.0", sha256="5461707171e0f3c500c90eedef87d41e72a682da4894686d71825e16c824909d", url="https://pypi.org/packages/3a/9b/4a47994434b0f9f044c0cb44ebd5402a7cef4e02ff0662f7f5a2eeb6d484/traitlets-4.0.0-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-decorator", when="@4.1.0:4")
         depends_on("py-ipython-genutils", when="@4.1.0:5.0")
         depends_on("py-six", when="@4.3:4")
+    # END DEPENDENCIES
 

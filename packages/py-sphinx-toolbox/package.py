@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,8 +6,13 @@
 from spack.package import *
 
 class PySphinxToolbox(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("3.4.0", sha256="cdf70facee515a2d9406d568a253fa3e89f930fde23c4e8095ba0c675f7c0a48", url="https://pypi.org/packages/63/ba/7eb6695cf42038545be89f839de5ffd06d1de7197f0f5a58544facdb87eb/sphinx_toolbox-3.4.0-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-apeye@0.4:", when="@2.15.3:")
         depends_on("py-autodocsumm@0.2:", when="@0.7:2.10,2.15:")
@@ -27,4 +31,5 @@ class PySphinxToolbox(PythonPackage):
         depends_on("py-sphinx-tabs@1.2.1:", when="@3.1.2:")
         depends_on("py-tabulate@0.8.7:", when="@1.6:")
         depends_on("py-typing-extensions@3.7.4.3:3.10.0.0,3.10.0.2:", when="@2.14:")
+    # END DEPENDENCIES
 

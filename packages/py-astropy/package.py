@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyAstropy(PythonPackage):
+    # BEGIN VERSIONS
     version("6.0.0", sha256="03cd801a55305da523cd8d780d76359f57255dcdc59fe0bdd71fd5154fc777d9", url="https://pypi.org/packages/29/32/43996ea21f8d5579639721bf2f2a0133cd39b20693e679b859ffdb3971a3/astropy-6.0.0.tar.gz")
     version("5.3.4", sha256="d490f7e2faac2ccc01c9244202d629154259af8a979104ced89dc4ace4e6f1d8", url="https://pypi.org/packages/98/bd/9bf004a1b3f10f9c8e82e3aed87297aa79914bef8619182f8bcf414c9c69/astropy-5.3.4.tar.gz")
     version("5.3.3", sha256="0330df9f5d7a2254367e9b8cf44255ba1070b06123188c6a72edc180493f93bb", url="https://pypi.org/packages/79/36/c19ad378cf7a3e6d645b756c3ec2830fb8f2dde7307201a0fb859a0ff05a/astropy-5.3.3.tar.gz")
@@ -23,13 +23,49 @@ class PyAstropy(PythonPackage):
     version("2.0.14", sha256="618807068609a4d8aeb403a07624e9984f566adc0dc0f5d6b477c3658f31aeb6", url="https://pypi.org/packages/66/55/9b608ddf1f65ff4faf54fa9194863e27856e35233609f44f5e9479952550/astropy-2.0.14.tar.gz")
     version("1.1.2", sha256="6f0d84cd7dfb304bb437dda666406a1d42208c16204043bc920308ff8ffdfad1", url="https://pypi.org/packages/42/47/f633262b6e30d1c0c08e697361a94760841b1a30d5c8e63dc20d097167e4/astropy-1.1.2.tar.gz")
     version("1.1.post1", sha256="64427ec132620aeb038e4d8df94d6c30df4cc8b1c42a6d8c5b09907a31566a21", url="https://pypi.org/packages/5d/02/98e6f6b6385349cc4c94bae0933d4b1dcf4b856691387149883fe10113c0/astropy-1.1.post1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    variant("all", default=False)
+    # END VARIANTS
+
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@5.3-rc1:")
+        depends_on("py-asdf@2.10:", when="@5.3.3:5+all")
+        depends_on("py-asdf-astropy@0.3:", when="@6:+all")
         depends_on("py-astropy-iers-data@0.2023.10.30:", when="@6:")
+        depends_on("py-beautifulsoup4", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-bleach", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-bottleneck", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-certifi", when="@5.0.8:5.0,5.3.3:+all")
+        depends_on("py-dask+array", when="@4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-fsspec@2023.4:+http", when="@6:+all")
+        depends_on("py-fsspec@2022.8.2:+http", when="@5.3.3:5+all")
+        depends_on("py-h5py", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-html5lib", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-ipython@4.2:", when="@5.0.8:5.0,5.3.3:+all")
+        depends_on("py-jplephem", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-matplotlib@3.3.0:3.4.0-rc3,3.4.1:3.5.1,3.5.3:", when="@5.3.3:5+all")
+        depends_on("py-mpmath", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
         depends_on("py-numpy@1.22.0:1", when="@6.0.0:")
         depends_on("py-numpy@1.21.0:1", when="@5.3.3:5")
         depends_on("py-packaging@19:", when="@5.0.8:5.0,5.3.3:")
+        depends_on("py-pandas", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-pre-commit", when="@5.3.3:+all")
+        depends_on("py-pyarrow@5:", when="@5.0.8:5.0,5.3.3:+all")
         depends_on("py-pyerfa@2:", when="@5.0.8:5.0,5.3.3:")
+        depends_on("py-pytest@7.0.0:", when="@6:+all")
+        depends_on("py-pytest@7.0.0:7", when="@5.0.8:5.0,5.3.3:5+all")
+        depends_on("py-pytz", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
         depends_on("py-pyyaml@3.13:", when="@5.0.8:5.0,5.3.3:")
+        depends_on("py-s3fs@2023.4:", when="@6:+all")
+        depends_on("py-s3fs@2022.8.2:", when="@5.3.3:5+all")
+        depends_on("py-scipy@1.5.0:", when="@5.3.3:5+all")
+        depends_on("py-sortedcontainers", when="@3.2-rc1:3.2.0,3.2.2:4.0.1.0,4.1-rc1,5.0.8:5.0,5.3.3:+all")
+        depends_on("py-typing-extensions@3.10.0.1:", when="@5.0.8:5.0,5.3.3:+all")
+
+        # self-dependency
+        # depends_on("py-astropy+recommended", when="@6:+all")
+    # END DEPENDENCIES
 

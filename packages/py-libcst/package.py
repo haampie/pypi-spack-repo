@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyLibcst(PythonPackage):
+    # BEGIN VERSIONS
     version("1.2.0", sha256="71dd69fff76e7edaf8fae0f63ffcdbf5016e8cd83165b1d0688d6856aa48186a", url="https://pypi.org/packages/48/af/b243be2e6aaddd2b9e8f78817fc8f2ef5874753b01c2e07e75c109b102e8/libcst-1.2.0.tar.gz")
     version("1.1.0", sha256="0acbacb9a170455701845b7e940e2d7b9519db35a86768d86330a0b0deae1086", url="https://pypi.org/packages/81/ef/610498b5e982d9dd64f2af8422ece1be44a946a8dbda15d08087e0e1ff08/libcst-1.1.0.tar.gz")
     version("1.0.1", sha256="37187337f979ba426d8bfefc08008c3c1b09b9e9f9387050804ed2da88107570", url="https://pypi.org/packages/f4/b2/dd6fcf70dc59281e6de7c4b2f6150d07c26db127262dd5cba16fde1464ed/libcst-1.0.1.tar.gz")
@@ -17,10 +17,15 @@ class PyLibcst(PythonPackage):
     version("0.4.7", sha256="95c52c2130531f6e726a3b077442cfd486975435fecf3db8224d43fba7b85099", url="https://pypi.org/packages/90/6b/ef2d7c86a61c6b6ae4eb48b832ba96897d4ba9743e9ece40f66625b11d60/libcst-0.4.7.tar.gz")
     version("0.4.6", sha256="80f6982db27907f07d47575c50fc878923646437160fb2680c685b8565590446", url="https://pypi.org/packages/3c/30/1a5d11ba4366218e3b1d2d84789643ec063f1c64c50641181d2881bf29d1/libcst-0.4.6.tar.gz")
     version("0.4.5", sha256="a17442b62a22bef6ce0734ff33801378575ab8a9f9a33dbafe236270cdbcdb3c", url="https://pypi.org/packages/12/87/453d2d6f24050d3734be02b4bec1e18e9d059ffdb7c5ff89096d8b26781c/libcst-0.4.5.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.2:")
         depends_on("py-pyyaml@5.2:", when="@0.3.1:0.3,1.1:")
         depends_on("py-typing-extensions@3.7.4.2:", when="@0.3.7:0.3,1.1:")
         depends_on("py-typing-inspect@0.4:", when="@0.3.1:0.3,1.1:")
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyPint(PythonPackage):
+    # BEGIN VERSIONS
     version("0.23", sha256="df79b6b5f1beb7ed0cd55d91a0766fc55f972f757a9364e844958c05e8eb66f9", url="https://pypi.org/packages/76/1a/096c91c2006648fe28564e5884d59978962afe98de74b1c01bb5913d033f/Pint-0.23-py3-none-any.whl")
     version("0.22", sha256="6e2b3c5c2b4d9b516608bc860a417a39d66eb99c958f36540cf931d2c2e9f80f", url="https://pypi.org/packages/ba/70/f3fa88f899cdf17535ddb75c4d4f1d540199524d9dd7479e66aac777de47/Pint-0.22-py3-none-any.whl")
     version("0.21.1", sha256="230ebccc312693117ee925c6492b3631c772ae9f7851a4e86080a15e7be692d8", url="https://pypi.org/packages/49/bc/7ef2a654754cc3179af8df837485931f0874d96e111005a6246c1ed695f2/Pint-0.21.1-py3-none-any.whl")
@@ -23,10 +23,15 @@ class PyPint(PythonPackage):
     version("0.10", sha256="b13b3e7c2fcbcb7662010cc4550d7e5372735ace0b7abf00dc26d0a400f56545", url="https://pypi.org/packages/59/2d/f6454ed8f89ab7b8ebb56c5e11ff0a8c519899fb2182751d42b157148580/Pint-0.10-py2.py3-none-any.whl")
     version("0.9", sha256="7ece3f639ad58073ce49982b022d464014e6d91d0b3eaa89c8e8ea9c38e32659", url="https://pypi.org/packages/15/9d/bf177ebbc57d25e9e296addc14a1303d1e34d7964af5df428a8332349c42/Pint-0.9-py2.py3-none-any.whl")
     version("0.8.1", sha256="afcf31443a478c32bbac4b00337ee9026a13d0e2ac83d30c79151462513bb0d4", url="https://pypi.org/packages/1e/40/6938f7d544eef208a8183c2c80624289e8a4f4e0aea43f4658b9527077de/Pint-0.8.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.22-rc1:")
         depends_on("py-packaging", when="@0.13:0.18")
         depends_on("py-setuptools", when="@0.10:0.15")
         depends_on("py-typing-extensions", when="@0.22-rc1:")
+    # END DEPENDENCIES
 

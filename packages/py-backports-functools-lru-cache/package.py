@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBackportsFunctoolsLruCache(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("2.0.0", sha256="0a754323a46847735a112677fb8807b45f6d824d02a5795a50905218ac56a0d6", url="https://pypi.org/packages/c6/c6/4761a2ccb03d650ca803b11a7cdd69ff0696926d3fea218c8ca22c808448/backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl")
     version("1.6.6", sha256="77e27d0ffbb463904bdd5ef8b44363f6cd5ef503e664b3f599a3bf5843ed37cf", url="https://pypi.org/packages/08/e3/1387bd1c9aa95e354064ee29b8a1dfd3e795b066cc869af8f8d6b70ae4aa/backports.functools_lru_cache-1.6.6-py2.py3-none-any.whl")
     version("1.6.5", sha256="3b8f1c6537651f130706488e61f3275b010002676432e9e7638a9e0fc1b40668", url="https://pypi.org/packages/22/5e/3a1b7ee2726c5c3b50e1bbafb5f2963b9bff3279b4423428c2b8063a1600/backports.functools_lru_cache-1.6.5-py2.py3-none-any.whl")
@@ -17,5 +17,10 @@ class PyBackportsFunctoolsLruCache(PythonPackage):
     version("1.6.0", sha256="7e2f901b3c149fdea05f4ef376b278f412bb97ef98a2c7bdf1df9eb4aa71ec72", url="https://pypi.org/packages/ee/9a/ee3fa278a9402ece52aa02e22bf730047f5a034844f794fe5afc30aeead3/backports.functools_lru_cache-1.6.0-py2.py3-none-any.whl")
     version("1.5", sha256="f0b0e4eba956de51238e17573b7087e852dfe9854afd2e9c873f73fc0ca0a6dd", url="https://pypi.org/packages/03/8e/2424c0e65c4a066e28f539364deee49b6451f8fcd4f718fefa50cc3dcf48/backports.functools_lru_cache-1.5-py2.py3-none-any.whl")
     version("1.4", sha256="4ba998e881f285c1d1b73f5b6e3766539b4e162320f9589334400c5ddc35198c", url="https://pypi.org/packages/02/0b/91573feec859f794689fa46a62240526f4f1db829271ac2d98cf04a8efa2/backports.functools_lru_cache-1.4-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyRospkg(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.5.0", sha256="420f2f23a4751ecbd6ab6ab02f1f7ce692f1f9f897b87210cdb59e2a3a00f0f7", url="https://pypi.org/packages/62/15/91e07b85c6aa7feec86257c3e9966de1d6bb61844d133d2b939294bc2ccf/rospkg-1.5.0-py3-none-any.whl")
     version("1.4.0", sha256="582388a583df05cbe6252a69d02d0fbc313f4ce65ee2dc96582baa96b0811f61", url="https://pypi.org/packages/9b/be/70454d42c1a8f670385d6b679ca672102a4e3b9ecfb4ed922ea9ba19b9ab/rospkg-1.4.0-py3-none-any.whl")
     version("1.3.0", sha256="dc8fab3ed3f163bc301f94ec65ed39a2c40ded6757615a0fb9f2cb2c82470fbe", url="https://pypi.org/packages/89/00/2e239dfe86120c9721f4570a0fc8233186331cdf89a517549b7be6ac4220/rospkg-1.3.0-py3-none-any.whl")
@@ -17,10 +17,15 @@ class PyRospkg(PythonPackage):
     version("1.2.6", sha256="357632bd6a477fee4d5bf4f55eeef46d4dd5ddc714211d4298923994de356cc3", url="https://pypi.org/packages/f5/f0/342a15a23fd5dc6ad2c45c0dd87878501f1c6ddb2bd5a8a35850453d3f43/rospkg-1.2.6-py3-none-any.whl")
     version("1.2.5", sha256="8989f0c413f0a6d5c02751635bdb8de7de9be04a28238218842da1ff8383fe04", url="https://pypi.org/packages/c7/2f/a6ebe198c131541ce0b0a82e23bded0f64b3fbbfafa7f061bb46005fba2f/rospkg-1.2.5-py3-none-any.whl")
     version("1.2.4", sha256="03ce13e780ac475f8592e2eddd5d59bb3ca652b92ae1cac1787927a59f3c2d37", url="https://pypi.org/packages/0c/94/c7a7024e31cb51a5f00e1210f9983ece89d0e17ac8af5805a6cc18f79452/rospkg-1.2.4-py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-catkin-pkg", when="@1.1.5:")
         depends_on("py-distro@1.4:", when="@1.4:")
         depends_on("py-distro", when="@1.2.1:1.2.4,1.2.6:1.3")
         depends_on("py-pyyaml", when="@1.1.5:")
+    # END DEPENDENCIES
 

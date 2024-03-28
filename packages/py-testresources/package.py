@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,12 @@
 from spack.package import *
 
 class PyTestresources(PythonPackage):
-    version("2.0.1", sha256="ee9d1982154a1e212d4e4bac6b610800bfb558e4fb853572a827bc14a96e4417", url="https://pypi.org/packages/9d/57/8e3986cd95a80dd23195f599befa023eb85d031d2d870c47124fa5ccbf06/testresources-2.0.1.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("2.0.1", sha256="67a361c3a2412231963b91ab04192209aa91a1aa052f0ab87245dbea889d1282", url="https://pypi.org/packages/45/4d/79a9a1f71de22fbc6c6433ac135f68d005de72fbe73e2137d2e77da9252c/testresources-2.0.1-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

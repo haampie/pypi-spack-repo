@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyBidsValidator(PythonPackage):
+    # BEGIN VERSIONS [WHEEL ONLY]
     version("1.14.5.dev0", sha256="8657fe39fc885aba852b9316f1ff7e25627fd180083e3af03dd03b3fe3c7f01d", url="https://pypi.org/packages/13/ec/1872ad05c88992f1626e414f3fe8fffad1e9a5e783ecd753222781414055/bids_validator-1.14.5.dev0-py3-none-any.whl")
     version("1.14.4", sha256="162da51e10567ee18c38f56ff46b065ca03b38a4603e98f3aa47310b2e8009dc", url="https://pypi.org/packages/2b/a4/190b9948491bd7cfdc99ea4da07a9ca1f24bc2881321600159f7decdbe84/bids_validator-1.14.4-py3-none-any.whl")
     version("1.14.4.dev0", sha256="a712bf1766ab9d5156602e87637f0d0fbee4324d9f62752ad8aeff8259798d79", url="https://pypi.org/packages/31/3d/acba1e541643f6fb47c20855a8f5893c230fa5bf79498d8a23d6ae09e50f/bids_validator-1.14.4.dev0-py3-none-any.whl")
@@ -24,5 +24,10 @@ class PyBidsValidator(PythonPackage):
     version("1.8.9", sha256="b2def483d9d88b9240e44e340687159d7561d6a0eb6ca52afed47becc49582bb", url="https://pypi.org/packages/ab/7e/ac413b12f659c714118b7132ac760fb8e951a55133e42d140def278a9b5f/bids_validator-1.8.9-py2.py3-none-any.whl")
     version("1.8.4", sha256="ce6de214e48051300a738aaf7226b5585c4268646ee890c491ee011e7415fbbf", url="https://pypi.org/packages/89/3b/cdb1ba8648636a897c9108c36ebb4c2d5dab01443693dea27d06a6cefe19/bids_validator-1.8.4-py2.py3-none-any.whl")
     version("1.7.2", sha256="854f56177a4b93cbf2202947b0821646a5af629bbefe796d8114bcad6de9559e", url="https://pypi.org/packages/26/d3/49a2c0ed2af7560baac349befde5f80df61b415cc7c0d577a85ab3142e3f/bids_validator-1.7.2-py2.py3-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

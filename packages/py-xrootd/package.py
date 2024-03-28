@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyXrootd(PythonPackage):
+    # BEGIN VERSIONS
     version("4.12.7", sha256="a8afa82467b1a0cfa137588642f248cf90a971a1d914ae9cd90cc7adf32b9551", url="https://pypi.org/packages/ab/26/e9e90930cccf5b7c364754afe7aaf068a62a1b11cd2f058ed608a2d461e8/xrootd-4.12.7.tar.gz")
     version("4.12.6", sha256="556f89c19c24c3ca1c0a0f9031cc575f093fd48a4538fc5e3fa9d2853e3a2a01", url="https://pypi.org/packages/26/19/d2b60f26fb539467fcbc4e4a34835d75f8c232515ba87d1c887cb0f103c5/xrootd-4.12.6.tar.gz")
     version("4.12.5", sha256="af8dd0026500718d98b465882a37286b17a172e98943be4a716e08119eeffe95", url="https://pypi.org/packages/ed/72/c9d18889a90c3f7c42b148139c66f193a13963028339104d7ad68bc14775/xrootd-4.12.5.tar.gz")
@@ -17,5 +17,10 @@ class PyXrootd(PythonPackage):
     version("4.11.3", sha256="031fc93bc1b466d8fb2ef7c6ae4a0e72006deafa3cc832e21dc48fba24ad8ff5", url="https://pypi.org/packages/c2/41/4f0bcb9d5ac52691b63e66510595bffe07c2bf56945662b6328c05d37f32/xrootd-4.11.3.tar.gz")
     version("4.11.2", sha256="d2b38892f54a78ee852c3597e7ae16d68ce2e655790be43d32e2218f0c6e77ff", url="https://pypi.org/packages/4e/5b/7b2c166a94fd8269cab1aefd9f5eb4f0ada7741f7eb8a32129c40bbf1538/xrootd-4.11.2.tar.gz")
     version("4.11.1", sha256="a7cc03fcfba11e9d0cf379ccbc66ed5db935309e609087b63f74b5b86f6f3262", url="https://pypi.org/packages/35/37/5e49b5b682f535105e1532cf8860624b8aa6d04846fdbee99bf974a31728/xrootd-4.11.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 

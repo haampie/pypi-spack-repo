@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,6 +6,7 @@
 from spack.package import *
 
 class PyMako(PythonPackage):
+    # BEGIN VERSIONS
     version("1.3.2", sha256="32a99d70754dfce237019d17ffe4a282d2d3351b9c476e90d8a60e63f133b80c", url="https://pypi.org/packages/2b/8d/9f11d0b9ac521febb806e7f30dc5982d0f4f5821217712c59005fbc5c1e3/Mako-1.3.2-py3-none-any.whl")
     version("1.3.1", sha256="463f03e04559689adaee25e0967778d6ad41285ed607dc1e7df0dd4e4df81f9e", url="https://pypi.org/packages/56/fc/a229b64f439c142142f584f78f63beb6b4514668e7e076e7d09b35fb18a0/Mako-1.3.1-py3-none-any.whl")
     version("1.3.0", sha256="57d4e997349f1a92035aa25c17ace371a4213f2ca42f99bee9a602500cfd54d9", url="https://pypi.org/packages/24/3b/11fe92d68c6a42468ddab0cf03f454419b0788fff4e91ba46b8bebafeffd/Mako-1.3.0-py3-none-any.whl")
@@ -20,7 +20,12 @@ class PyMako(PythonPackage):
     version("1.1.4", sha256="aea166356da44b9b830c8023cd9b557fa856bd8b4035d6de771ca027dfc5cc6e", url="https://pypi.org/packages/f3/54/dbc07fbb20865d3b78fdb7cf7fa713e2cba4f87f71100074ef2dc9f9d1f7/Mako-1.1.4-py2.py3-none-any.whl")
     version("1.0.4", sha256="fed99dbe4d0ddb27a33ee4910d8708aca9ef1fe854e668387a9ab9a90cbf9059", url="https://pypi.org/packages/7a/ae/925434246ee90b42e8ef57d3b30a0ab7caf9a2de3e449b876c56dcb48155/Mako-1.0.4.tar.gz")
     version("1.0.1", sha256="45f0869febea59dab7efd256fb451c377cbb7947bef386ff0bb44627c31a8d1c", url="https://pypi.org/packages/8e/a4/aa56533ecaa5f22ca92428f74e074d0c9337282933c722391902c8f9e0f8/Mako-1.0.1.tar.gz")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-markupsafe@0.9.2:", when="@1.1.4:")
+    # END DEPENDENCIES
 

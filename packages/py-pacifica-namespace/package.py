@@ -1,4 +1,3 @@
-##############################################################################
 # Copyright 2013-2024 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
@@ -7,7 +6,13 @@
 from spack.package import *
 
 class PyPacificaNamespace(PythonPackage):
-    version("0.0.2", sha256="a8f59aea1203a1557f7f57887b61e92f8450c74a8522798c5ddecf8fffb0b224", url="https://pypi.org/packages/2e/5f/ca965ff3ba687e4a8e2dc4275cfda26a578dcce1a739ee9389b7f9c3dcdd/pacifica-namespace-0.0.2.tar.gz")
-    version("0.0.1", sha256="7e9ad4afe9381daab4473995fbbc14b7f029e7e55e2f5b982f3b44fc75d6279d", url="https://pypi.org/packages/29/e3/1241b71a56b50faae6ff163092b7979d601736ba48388f54c344b655cd2f/pacifica-namespace-0.0.1.tar.gz")
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.0.2", sha256="6b1d9992a839cf84ef8f5568cd323d16dc420aed7a61257e76717980ecea3b1b", url="https://pypi.org/packages/28/3b/2282a452b35cdbc21796de63d7dd7bdf63bb8e878e2835989e8cf23b6a42/pacifica_namespace-0.0.2-py3-none-any.whl")
+    version("0.0.1", sha256="a50801f03ea5b23165947a2e7249768f3b5d03fee62b952558112aa451edbc2c", url="https://pypi.org/packages/79/b6/a36d799c9b63d0a94c3af87ba20d0b03e080899308173b136257b0497310/pacifica_namespace-0.0.1-py2-none-any.whl")
+    # END VERSIONS
 
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    # END DEPENDENCIES
 
