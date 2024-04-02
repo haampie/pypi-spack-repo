@@ -11,9 +11,9 @@ class PyHyperopt(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("atpe", default=False)
-    variant("mongo", default=False)
-    variant("spark", default=False)
+    variant("atpe", default=False, description="atpe")
+    variant("mongo", default=False, description="mongo")
+    variant("spark", default=False, description="spark")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -23,7 +23,6 @@ class PyHyperopt(PythonPackage):
         depends_on("py-lightgbm", when="@0.2:+atpe")
         depends_on("py-networkx@2.2:", when="@0.2.4:")
         depends_on("py-numpy", when="@0.1.1:")
-        depends_on("py-pymongo", when="@0.1.1:0.1")
         depends_on("py-scikit-learn", when="@0.2:+atpe")
         depends_on("py-scipy", when="@0.1.1:")
         depends_on("py-six", when="@0.1.1:")

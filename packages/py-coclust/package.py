@@ -11,7 +11,7 @@ class PyCoclust(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("alldeps", default=False)
+    variant("alldeps", default=False, description="alldeps")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

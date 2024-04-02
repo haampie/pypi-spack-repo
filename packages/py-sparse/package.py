@@ -14,8 +14,9 @@ class PySparse(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@:0.13")
         depends_on("py-numba@0.49:", when="@0.10:")
-        depends_on("py-numpy", when="@:0.2,0.8:0.11")
-        depends_on("py-scipy@0.19:", when="@0.2:")
+        depends_on("py-numpy", when="@0.8:0.11")
+        depends_on("py-scipy@0.19:")
     # END DEPENDENCIES
 

@@ -14,15 +14,14 @@ class PyMkdocs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@3.3:", when="@0.15.1:1.3")
+        depends_on("py-click@3.3:", when="@:1.3")
         depends_on("py-ghp-import@1:", when="@1.2:")
-        depends_on("py-importlib-metadata@4.3:", when="@1.4: ^python@:3.9")
         depends_on("py-importlib-metadata@4.3:", when="@1.3")
         depends_on("py-jinja2@2.10.2:", when="@1.3")
         depends_on("py-markdown@3.2.1:3.3", when="@1.3.1:1.4")
         depends_on("py-mergedeep@1.3.4:", when="@1.2:")
         depends_on("py-packaging@20.5:", when="@1.2:")
-        depends_on("py-pyyaml", when="@0.14:1.3")
+        depends_on("py-pyyaml", when="@:1.3")
         depends_on("py-pyyaml-env-tag", when="@1.2:")
         depends_on("py-watchdog@2:", when="@1.2:")
     # END DEPENDENCIES

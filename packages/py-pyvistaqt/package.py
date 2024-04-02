@@ -6,5 +6,16 @@
 from spack.package import *
 
 class PyPyvistaqt(PythonPackage):
-    # No versions available.
-    pass
+    # BEGIN VERSIONS [WHEEL ONLY]
+    version("0.11.0", sha256="21f88d7e6fb6cf11767807bf13684975759e61d642582a16ff5fcf8e12aa6a60", url="https://pypi.org/packages/ac/92/043070db56638897574ad7cdf3de08dce2170e0a1779c26b25c0de4ca5f6/pyvistaqt-0.11.0-py3-none-any.whl")
+    # END VERSIONS
+
+    # BEGIN VARIANTS
+    # END VARIANTS
+    # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:")
+        depends_on("py-pyvista@0.32.0:")
+        depends_on("py-qtpy@1.9:")
+    # END DEPENDENCIES
+

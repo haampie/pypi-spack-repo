@@ -15,6 +15,6 @@ class PyReacton(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ipywidgets")
-        depends_on("py-typing-extensions@4.1.1:", when="@0.15:")
+        depends_on("py-typing-extensions@4.1.1:")
     # END DEPENDENCIES
 

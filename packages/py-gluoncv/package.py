@@ -16,18 +16,15 @@ class PyGluoncv(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-autocfg", when="@0.9.0-beta20201105:")
-        depends_on("py-autogluon-core", when="@0.9.0-beta20201105:0.10.1,0.11:0.11.0-beta20210605")
-        depends_on("py-decord", when="@0.9.0-beta20201105:0.10.1,0.11:0.11.0-beta20210605")
         depends_on("py-matplotlib")
         depends_on("py-numpy")
         depends_on("py-opencv-python", when="@0.9.0-beta20201105:")
         depends_on("py-pandas", when="@0.9.0-beta20201105:")
         depends_on("py-pillow")
-        depends_on("py-portalocker", when="@0.6.0-beta20191207:")
+        depends_on("py-portalocker")
         depends_on("py-pyyaml", when="@0.9.0-beta20201105:")
         depends_on("py-requests")
-        depends_on("py-scipy", when="@0.2:")
-        depends_on("py-tensorboardx", when="@0.9.0-beta20201105:0.10.1,0.11:0.11.0-beta20210605")
+        depends_on("py-scipy")
         depends_on("py-tqdm")
         depends_on("py-yacs", when="@0.9.0-beta20201105:")
     # END DEPENDENCIES

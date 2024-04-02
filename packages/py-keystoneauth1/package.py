@@ -14,11 +14,11 @@ class PyKeystoneauth1(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-iso8601@0.1.11:", when="@2.7:")
-        depends_on("py-os-service-types@1.2:", when="@3.6:")
-        depends_on("py-pbr@2:2.0,3:", when="@2.20:")
-        depends_on("py-requests@2.14.2:", when="@3:")
-        depends_on("py-six@1.10:", when="@3.3:5.1")
-        depends_on("py-stevedore@1.20:", when="@2.19:")
+        depends_on("py-iso8601@0.1.11:")
+        depends_on("py-os-service-types@1.2:")
+        depends_on("py-pbr@2:2.0,3:")
+        depends_on("py-requests@2.14.2:")
+        depends_on("py-six@1.10:", when="@:5.1")
+        depends_on("py-stevedore@1.20:")
     # END DEPENDENCIES
 

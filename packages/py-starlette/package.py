@@ -16,6 +16,7 @@ class PyStarlette(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.20:0.29")
         depends_on("py-anyio@3.4:", when="@0.19:")
         depends_on("py-typing-extensions@3.10:", when="@0.19: ^python@:3.9")
     # END DEPENDENCIES

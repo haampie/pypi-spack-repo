@@ -14,8 +14,8 @@ class PyNeovimRemote(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-psutil", when="@1.6:1.7.1,2.1.4:")
-        depends_on("py-pynvim", when="@2.1.4:2.2,2.4:")
-        depends_on("py-setuptools", when="@2.1.4:")
+        depends_on("py-psutil")
+        depends_on("py-pynvim", when="@:2.2,2.4:")
+        depends_on("py-setuptools")
     # END DEPENDENCIES
 

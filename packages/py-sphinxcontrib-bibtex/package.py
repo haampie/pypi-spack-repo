@@ -21,6 +21,7 @@ class PySphinxcontribBibtex(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-dataclasses", when="@2.2: ^python@:3.6")
         depends_on("py-docutils@0.8:", when="@2.1:2.5")
         depends_on("py-importlib-metadata@3.6:", when="@2.5: ^python@:3.9")
         depends_on("py-oset@0.1.3:", when="@0.4:2.0")

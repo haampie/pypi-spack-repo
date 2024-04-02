@@ -18,6 +18,8 @@ class PyPyfftw(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.13.1:")
+        depends_on("python@3.7:", when="@0.13:0.13.0")
         depends_on("py-numpy@1.10:1", when="@0.12")
     # END DEPENDENCIES
 

@@ -14,7 +14,7 @@ class PySnakemakeExecutorPluginGooglebatch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-google-api-core@2.12.0:2.12.0.0,2.13:")
         depends_on("py-google-cloud-batch@0.17.1:")
         depends_on("py-google-cloud-logging@3.8:")

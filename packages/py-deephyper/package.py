@@ -14,22 +14,17 @@ class PyDeephyper(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.9", when="@0.3.3:0.4")
-        depends_on("python@:3.8", when="@0.2:0.3.2")
+        depends_on("python@3.7:3.9", when="@0.3.3:0.4")
         depends_on("py-configspace@0.4.20:", when="@0.4:")
         depends_on("py-dm-tree", when="@0.4:")
         depends_on("py-jinja2@:3.0", when="@0.4:")
-        depends_on("py-mpi4py@3:", when="@:0.1")
-        depends_on("py-networkx", when="@:0.3")
-        depends_on("py-numpy", when="@:0.1,0.2.5:0.5")
+        depends_on("py-numpy", when="@0.2.5:0.5")
         depends_on("py-packaging", when="@0.4:")
-        depends_on("py-pandas@0.24.2:", when="@0.1.4:")
-        depends_on("py-pydot", when="@0.1:0.3")
+        depends_on("py-pandas@0.24.2:")
         depends_on("py-pyyaml", when="@0.4:")
-        depends_on("py-scikit-learn@0.23.1:", when="@0.2:")
+        depends_on("py-scikit-learn@0.23.1:")
         depends_on("py-scipy@0.19.1:", when="@0.4")
         depends_on("py-tinydb", when="@0.4")
         depends_on("py-tqdm@4.64:", when="@0.4:")
-        depends_on("py-xgboost", when="@0.1.4:0.3")
     # END DEPENDENCIES
 

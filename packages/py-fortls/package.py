@@ -14,7 +14,10 @@ class PyFortls(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
+        depends_on("py-importlib-metadata", when="^python@:3.7")
         depends_on("py-json5", when="@2.8:")
-        depends_on("py-packaging", when="@2.2.7:")
+        depends_on("py-packaging")
+        depends_on("py-typing-extensions", when="^python@:3.7")
     # END DEPENDENCIES
 

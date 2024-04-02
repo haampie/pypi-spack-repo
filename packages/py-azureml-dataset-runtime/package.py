@@ -11,15 +11,15 @@ class PyAzuremlDatasetRuntime(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("fuse", default=False)
+    variant("fuse", default=False, description="fuse")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azureml-dataprep@2.10", when="@1.23")
-        depends_on("py-fusepy@3:", when="@1.11:+fuse")
+        depends_on("py-fusepy@3:", when="+fuse")
         depends_on("py-numpy@:1.19.2,1.19.4:", when="@1.19.0.post:1.48 platform=linux")
         depends_on("py-numpy@:1.19.3", when="@1.19.0.post:1.31 platform=windows")
-        depends_on("py-pyarrow@0.17:1", when="@1.12:1.27")
+        depends_on("py-pyarrow@0.17:1", when="@:1.27")
     # END DEPENDENCIES
 

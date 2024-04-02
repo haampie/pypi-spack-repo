@@ -12,12 +12,12 @@ class PyAsdf(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("lz4", default=False)
+    variant("lz4", default=False, description="lz4")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.15.1:")
+        depends_on("python@3.8:", when="@2.12.1:2.15.0")
         depends_on("py-asdf-standard@1.0.1:", when="@2.10.1:")
         depends_on("py-asdf-transform-schemas@0.3:", when="@2.14.3:")
         depends_on("py-asdf-unit-schemas@0.1:", when="@2.14:")

@@ -14,7 +14,6 @@ class PyDynaconf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-python-dotenv", when="@0.5.4:2.2.1,2.2.3:3.0.0-rc1")
-        depends_on("py-toml", when="@1:2.2.1,2.2.3:3.0.0-rc1")
+        depends_on("python@3.8:", when="@3.1.12:")
     # END DEPENDENCIES
 

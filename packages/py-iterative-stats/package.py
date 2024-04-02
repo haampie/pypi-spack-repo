@@ -15,7 +15,7 @@ class PyIterativeStats(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10", when="@0.0.2:")
+        depends_on("python@3.8:3.10", when="@0.0.2:")
         depends_on("py-numpy@1.19.0:1")
         depends_on("py-pyyaml@6.0:6.0.0")
     # END DEPENDENCIES

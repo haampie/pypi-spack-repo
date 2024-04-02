@@ -7,6 +7,9 @@ from spack.package import *
 
 class PyPetsc4py(PythonPackage):
     # BEGIN VERSIONS
+    version("3.20.5", sha256="2f40a6a7bfdaa2bca7c1f3e739ab7c74aba8d95db05aa1d120826eec904bbc16", url="https://pypi.org/packages/a7/6c/0e54f6f60e86a9d9b52d4d68c224afe701534a26b922c7967dffecb195f1/petsc4py-3.20.5.tar.gz")
+    version("3.20.4", sha256="3ebdb4c605ad59d71b7b7adc5f06b6d2a7ce9225c9b56e672923cb5bd6e43440", url="https://pypi.org/packages/c9/fa/f721e880f72e7297ff299e63bb40b9eba0ece7e0dbec79a7ab63bb0e1400/petsc4py-3.20.4.tar.gz")
+    version("3.20.3", sha256="8e10884df5ca38191b71294dc7e89f7479b18cca83fedfe27f89105e57c40785", url="https://pypi.org/packages/fc/09/b438cd515b2099dff771f900b6fd811570f59f290fe05947a749b4d45203/petsc4py-3.20.3.tar.gz")
     version("3.20.2", sha256="d3f24aa6612ded3e9b9ae11d5533f319d1df1705bea6d81385fea023d01175c9", url="https://pypi.org/packages/e0/8e/ada0ae6078531c72ff440ee20a6282df21b09d3cbbfecb7e51e357108398/petsc4py-3.20.2.tar.gz")
     version("3.20.1", sha256="dcc9092040d13130496f1961b79c36468f383b6ede398080e004f1966c06ad38", url="https://pypi.org/packages/83/88/ea3e1f6d5c29b54d7a521183c78d025c7f417887e33cfab0fd2d4b1ce3ce/petsc4py-3.20.1.tar.gz")
     version("3.20.0", sha256="c2461eef3977ae5c214ad252520adbb92ec3a31d00e79391dd92535077bbf03e", url="https://pypi.org/packages/ba/03/65402ad69b02e455952745672f92b35ae33ca5d248adfe12c529c7c07ae9/petsc4py-3.20.0.tar.gz")
@@ -44,7 +47,7 @@ class PyPetsc4py(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("mpi", default=False)
+    variant("mpi", default=False, description="mpi")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

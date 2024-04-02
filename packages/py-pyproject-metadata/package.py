@@ -15,6 +15,7 @@ class PyPyprojectMetadata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.5:")
         depends_on("py-packaging@19:", when="@0.5:0.6,0.7.1:")
     # END DEPENDENCIES
 

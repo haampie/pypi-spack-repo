@@ -14,7 +14,7 @@ class PySnakemakeStoragePluginGcs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-google-cloud-storage@2.12:")
         depends_on("py-google-crc32c@1.1.2:", when="@0.1.2:")
     # END DEPENDENCIES

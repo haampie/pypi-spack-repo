@@ -14,12 +14,13 @@ class PyOpendatalab(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@7:", when="@0.0.1-beta54:")
-        depends_on("py-colorama", when="@0.0.1-beta71:")
+        depends_on("python@3.7:", when="@0.0.6:")
+        depends_on("py-click@7:")
+        depends_on("py-colorama")
         depends_on("py-pycryptodome", when="@0.0.6:")
-        depends_on("py-pywin32", when="@0.0.1-beta92: platform=windows")
-        depends_on("py-requests@2.4.2:", when="@0.0.1-beta54:")
-        depends_on("py-rich", when="@0.0.1-beta75:")
-        depends_on("py-tqdm", when="@:0.0.1-beta53,0.0.6:")
+        depends_on("py-pywin32", when="platform=windows")
+        depends_on("py-requests@2.4.2:")
+        depends_on("py-rich")
+        depends_on("py-tqdm", when="@0.0.6:")
     # END DEPENDENCIES
 

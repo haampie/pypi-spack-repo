@@ -17,15 +17,16 @@ class PyCupy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("all", default=False)
-    variant("amdgpu_target", default=False)
-    variant("cuda", default=False)
-    variant("cuda_arch", default=False)
-    variant("rocm", default=False)
+    variant("all", default=False, description="all")
+    variant("amdgpu_target", default=False, description="amdgpu_target")
+    variant("cuda", default=False, description="cuda")
+    variant("cuda_arch", default=False, description="cuda_arch")
+    variant("rocm", default=False, description="rocm")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@13.0.0-beta1:")
+        depends_on("python@3.8:", when="@12.0.0-rc1:13.0.0-alpha1")
+        depends_on("python@3.7:", when="@:12.0.0-beta3")
     # END DEPENDENCIES
 

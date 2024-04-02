@@ -17,5 +17,7 @@ class PyTraits(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@6.4.2:")
     # END DEPENDENCIES
 

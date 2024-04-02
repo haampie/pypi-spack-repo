@@ -14,10 +14,10 @@ class PyBakta(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10", when="@1.8.2:")
+        depends_on("python@3.8:", when="@:1.8.1")
         depends_on("py-alive-progress@1.6.2:1", when="@1.3.3:1.6")
-        depends_on("py-biopython@1.78:", when="@1:1.6,1.8.2:")
-        depends_on("py-requests@2.25.1:", when="@1:")
-        depends_on("py-xopen@1.1:", when="@1:1.8.1")
+        depends_on("py-biopython@1.78:", when="@:1.6,1.8.2:")
+        depends_on("py-requests@2.25.1:")
+        depends_on("py-xopen@1.1:", when="@:1.8.1")
     # END DEPENDENCIES
 

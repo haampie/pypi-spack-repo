@@ -15,6 +15,7 @@ class PyRst2pdf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.100:")
         depends_on("py-docutils", when="@0.99:")
         depends_on("py-importlib-metadata", when="@0.99:")
         depends_on("py-jinja2", when="@0.99:")

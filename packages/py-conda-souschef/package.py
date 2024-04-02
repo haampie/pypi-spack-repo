@@ -14,7 +14,8 @@ class PyCondaSouschef(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ruamel-yaml@0.15.3:", when="@0.1:")
-        depends_on("py-ruamel-yaml-jinja2", when="@0.1:")
+        depends_on("python@3.8:")
+        depends_on("py-ruamel-yaml@0.15.3:")
+        depends_on("py-ruamel-yaml-jinja2")
     # END DEPENDENCIES
 

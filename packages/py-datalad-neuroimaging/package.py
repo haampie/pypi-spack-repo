@@ -15,6 +15,7 @@ class PyDataladNeuroimaging(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.2:0.3.4")
         depends_on("py-datalad@0.16.7:", when="@0.3.2:")
         depends_on("py-datalad@0.12.0:", when="@0.3.1")
         depends_on("py-datalad-deprecated@0.2.7:", when="@0.3.3:")

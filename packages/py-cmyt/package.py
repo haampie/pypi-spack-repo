@@ -14,8 +14,8 @@ class PyCmyt(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.4:")
-        depends_on("py-colorspacious@1.1.2:", when="@0.2:1.2")
+        depends_on("python@3.8:", when="@1.1:1.3")
+        depends_on("py-colorspacious@1.1.2:", when="@:1.2")
         depends_on("py-matplotlib@3.2.0:", when="@1.1:1.2")
         depends_on("py-more-itertools@8.4:", when="@:1.2")
         depends_on("py-numpy@1.17.4:", when="@1.1:1.3")

@@ -14,15 +14,14 @@ class PyOsloUtils(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-debtcollector@1.2:", when="@3.5:")
-        depends_on("py-iso8601@0.1.11:", when="@3.10:")
-        depends_on("py-netaddr@0.7.18:", when="@3.30:")
-        depends_on("py-netifaces@0.10.4:", when="@1.1.1:1.4.0,1.4.2:3.0,3.2:")
-        depends_on("py-oslo-i18n@3.15.3:", when="@3.30:")
-        depends_on("py-packaging@20.4:", when="@4.3:")
-        depends_on("py-pbr@2:2.0,3:", when="@3.25.1:5")
-        depends_on("py-pyparsing@2.1:", when="@3.22.1:")
-        depends_on("py-pytz@2013.6:", when="@7.1: ^python@:3.8")
-        depends_on("py-pytz@2013.6:", when="@1.6:7.0")
+        depends_on("py-debtcollector@1.2:")
+        depends_on("py-iso8601@0.1.11:")
+        depends_on("py-netaddr@0.7.18:")
+        depends_on("py-netifaces@0.10.4:")
+        depends_on("py-oslo-i18n@3.15.3:")
+        depends_on("py-packaging@20.4:")
+        depends_on("py-pbr@2:2.0,3:", when="@:5")
+        depends_on("py-pyparsing@2.1:")
+        depends_on("py-pytz@2013.6:", when="@:7.0")
     # END DEPENDENCIES
 

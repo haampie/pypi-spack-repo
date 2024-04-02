@@ -14,6 +14,7 @@ class PyDataladDeprecated(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2:")
         depends_on("py-datalad@0.18:", when="@0.3:")
         depends_on("py-exifread", when="@0.2.3:")
         depends_on("py-jsmin")

@@ -14,7 +14,6 @@ class PyNumpyGroupies(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.10:")
         depends_on("py-numpy", when="@0.9.19:0.9.20,0.10:")
     # END DEPENDENCIES
 

@@ -29,12 +29,17 @@ class PyRich(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-colorama@0.4:", when="@1.0.1:11")
-        depends_on("py-commonmark@0.9:", when="@0.4:13.1")
+        depends_on("python@3.7:", when="@13:")
+        depends_on("python@:3", when="@:12")
+        depends_on("py-colorama@0.4:", when="@:11")
+        depends_on("py-commonmark@0.9:", when="@:13.1")
+        depends_on("py-dataclasses@0.7:", when="@9.3:12 ^python@:3.6")
         depends_on("py-markdown-it-py@2.2:", when="@13.4.2:")
         depends_on("py-pygments@2.13:", when="@13.3.2:")
-        depends_on("py-pygments@2.6:", when="@1.0.1:13.2")
+        depends_on("py-pygments@2.6:", when="@:13.2")
         depends_on("py-typing-extensions@4:", when="@12.2: ^python@:3.8")
-        depends_on("py-typing-extensions@3.7.4:3", when="@0.2:10.1")
+        depends_on("py-typing-extensions@3.7.4:", when="@10.14:12.0 ^python@:3.7")
+        depends_on("py-typing-extensions@3.7.4:3", when="@10.2:10.13 ^python@:3.7")
+        depends_on("py-typing-extensions@3.7.4:3", when="@:10.1")
     # END DEPENDENCIES
 

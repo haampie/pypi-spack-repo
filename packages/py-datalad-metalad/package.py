@@ -16,6 +16,7 @@ class PyDataladMetalad(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.4.9:")
         depends_on("py-datalad@0.18:", when="@0.4.11:")
         depends_on("py-datalad@0.15.6:", when="@0.3:0.4.5")
         depends_on("py-datalad@0.12.3:", when="@0.2.1:0.2")

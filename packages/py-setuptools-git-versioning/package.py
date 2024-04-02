@@ -14,9 +14,9 @@ class PySetuptoolsGitVersioning(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-packaging", when="@1.8:")
-        depends_on("py-setuptools", when="@:1.1.7,1.1.10:")
+        depends_on("python@3.7:")
+        depends_on("py-packaging")
+        depends_on("py-setuptools")
         depends_on("py-toml@0.10.2:", when="@1.13: ^python@:3.10")
-        depends_on("py-toml@0.10.2:", when="@1.8:1.12")
     # END DEPENDENCIES
 

@@ -13,5 +13,7 @@ class PyPymbolic(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:3", when="@2022.2:")
     # END DEPENDENCIES
 

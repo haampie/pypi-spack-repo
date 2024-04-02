@@ -16,19 +16,18 @@ class PyPyshacl(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@0.25:")
-        depends_on("python@:3.9", when="@0.17.3:0.17")
+        depends_on("python@3.8:3", when="@0.25:")
+        depends_on("python@3.7:3", when="@0.17:0.17.2,0.18:0.24")
         depends_on("py-html5lib@1.1:", when="@0.20:")
         depends_on("py-importlib-metadata@6.0.1:", when="@0.25: ^python@:3.11")
         depends_on("py-owlrl@6:", when="@0.18:")
         depends_on("py-owlrl@5.2.3:5", when="@0.16.2.post:0.17.2")
         depends_on("py-packaging@21.3:", when="@0.19.1:")
-        depends_on("py-prettytable@3.5:", when="@0.24: ^python@:3.11")
         depends_on("py-prettytable@3.7:", when="@0.24: ^python@3.12:")
+        depends_on("py-prettytable@3.5:", when="@0.24: ^python@3.8:3.11")
         depends_on("py-prettytable@2.2.1:2", when="@0.17.2:0.23")
-        depends_on("py-rdflib@6.3.2:", when="@0.24: ^python@3.8.1:")
+        depends_on("py-rdflib@6.3.2:", when="@0.24: ^python@3.8:")
         depends_on("py-rdflib@6.2:6", when="@0.20:0.22")
         depends_on("py-rdflib@6", when="@0.17")
-        depends_on("py-rdflib-jsonld@0.4:0.5", when="@0.16.2:0.16.2.post1,0.17:0.17.0.post1")
     # END DEPENDENCIES
 

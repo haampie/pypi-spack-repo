@@ -14,6 +14,7 @@ class PyMkdocstrings(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.18:0.22")
         depends_on("py-jinja2@2.11.1:", when="@0.17:")
         depends_on("py-markdown@3.3:", when="@0.17:")
         depends_on("py-markupsafe@1.1:", when="@0.17:")

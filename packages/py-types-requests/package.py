@@ -15,6 +15,6 @@ class PyTypesRequests(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-types-urllib3", when="@2.27.3:2.31.0.6")
+        depends_on("py-types-urllib3", when="@:2.31.0.6")
     # END DEPENDENCIES
 

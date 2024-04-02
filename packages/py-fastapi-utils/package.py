@@ -14,6 +14,7 @@ class PyFastapiUtils(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3")
         depends_on("py-fastapi")
         depends_on("py-pydantic@1.0:1")
         depends_on("py-sqlalchemy@1.3.12:1")

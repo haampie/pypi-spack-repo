@@ -15,6 +15,6 @@ class PyCfXarray(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.8.7:")
-        depends_on("py-xarray", when="@0.6.3:")
+        depends_on("py-xarray")
     # END DEPENDENCIES
 

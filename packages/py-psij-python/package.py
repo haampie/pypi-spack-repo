@@ -14,6 +14,7 @@ class PyPsijPython(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-filelock", when="@:0.1")
         depends_on("py-psutil", when="@:0.1")
         depends_on("py-pystache@0.6:")

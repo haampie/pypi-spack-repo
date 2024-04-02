@@ -13,14 +13,15 @@ class PySmartOpen(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("azure", default=False)
-    variant("gcs", default=False)
-    variant("http", default=False)
-    variant("s3", default=False)
+    variant("azure", default=False, description="azure")
+    variant("gcs", default=False, description="gcs")
+    variant("http", default=False, description="http")
+    variant("s3", default=False, description="s3")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@5:")
         depends_on("py-azure-common", when="@5:+azure")
         depends_on("py-azure-core", when="@5:+azure")
         depends_on("py-azure-storage-blob", when="@5:+azure")

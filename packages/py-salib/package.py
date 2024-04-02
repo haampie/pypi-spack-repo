@@ -15,12 +15,13 @@ class PySalib(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-matplotlib", when="@:0.0,1.4.1:1.4.6-beta1")
-        depends_on("py-numpy", when="@:0.0,1.4.1:1.4.6-beta1")
-        depends_on("py-pandas", when="@:0.0,1.4.1:1.4.6-beta1")
-        depends_on("py-pathos", when="@:0.0,1.4.1:1.4.6-beta1")
-        depends_on("py-scipy", when="@:0.0,1.4.1:1.4.6-beta1")
-        depends_on("py-setuptools", when="@:0.0,1.4.1:1.4.6-beta1")
-        depends_on("py-wheel", when="@:0.0,1.4.1:1.4.6-beta1")
+        depends_on("py-importlib-metadata", when="@1.4.1:1.4.6-beta1 ^python@:3.7")
+        depends_on("py-matplotlib", when="@1.4.1:1.4.6-beta1")
+        depends_on("py-numpy", when="@1.4.1:1.4.6-beta1")
+        depends_on("py-pandas", when="@1.4.1:1.4.6-beta1")
+        depends_on("py-pathos", when="@1.4.1:1.4.6-beta1")
+        depends_on("py-scipy", when="@1.4.1:1.4.6-beta1")
+        depends_on("py-setuptools", when="@1.4.1:1.4.6-beta1")
+        depends_on("py-wheel", when="@1.4.1:1.4.6-beta1")
     # END DEPENDENCIES
 

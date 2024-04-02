@@ -14,7 +14,7 @@ class PyXesmf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@0.8.3")
+        depends_on("python@3.8:", when="@0.7:0.8.2,0.8.4:")
         depends_on("py-cf-xarray@0.5.1:", when="@0.7:")
         depends_on("py-numba@0.55.2:", when="@0.7:")
         depends_on("py-numpy@1.16.0:", when="@0.7:")

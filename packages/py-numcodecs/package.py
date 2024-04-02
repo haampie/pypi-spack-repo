@@ -13,9 +13,12 @@ class PyNumcodecs(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("msgpack", default=False)
+    variant("msgpack", default=False, description="msgpack")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.11:")
+        depends_on("python@:3", when="@0.7.3:0.10.0-alpha3")
     # END DEPENDENCIES
 

@@ -14,7 +14,7 @@ class PyMinio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-certifi", when="@2.2.4:")
-        depends_on("py-urllib3", when="@2.2.4:7.2.1,7.2.3:")
+        depends_on("py-certifi")
+        depends_on("py-urllib3", when="@:7.2.1,7.2.3:")
     # END DEPENDENCIES
 

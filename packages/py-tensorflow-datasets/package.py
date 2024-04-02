@@ -14,20 +14,20 @@ class PyTensorflowDatasets(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@4.9.4:")
-        depends_on("python@3.9:", when="@4.9.3")
         depends_on("py-absl-py")
-        depends_on("py-attrs@18:", when="@2:4.4")
-        depends_on("py-dill", when="@1.0.2:4.8.2")
+        depends_on("py-attrs@18:", when="@:4.4")
+        depends_on("py-dataclasses", when="@4:4.8.2 ^python@:3.6")
+        depends_on("py-dill", when="@:4.8.2")
         depends_on("py-future", when="@:4.4")
         depends_on("py-importlib-resources", when="@4: ^python@:3.8")
-        depends_on("py-numpy", when="@1.0.2:")
+        depends_on("py-numpy")
         depends_on("py-promise")
         depends_on("py-protobuf@3.12.2:", when="@4.2:4.8")
-        depends_on("py-requests@2.19:", when="@1.1:")
+        depends_on("py-requests@2.19:")
         depends_on("py-six", when="@:4.8.1")
         depends_on("py-tensorflow-metadata")
         depends_on("py-termcolor")
         depends_on("py-tqdm")
+        depends_on("py-typing-extensions", when="@4.1:4.8.2 ^python@:3.7")
     # END DEPENDENCIES
 

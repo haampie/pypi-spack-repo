@@ -14,7 +14,7 @@ class PySnakemakeStoragePluginAzure(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-azure-core@1.29.5:")
         depends_on("py-azure-identity@1.15.0:")
         depends_on("py-azure-storage-blob@12.19.0:")

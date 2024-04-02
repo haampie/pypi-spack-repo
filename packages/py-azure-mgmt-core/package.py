@@ -18,6 +18,7 @@ class PyAzureMgmtCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.4:")
         depends_on("py-azure-core@1.26.2:", when="@1.4:")
         depends_on("py-azure-core@1.24:", when="@1.3.2:1.3")
         depends_on("py-azure-core@1.9:", when="@1.2.2:1.2")

@@ -32,6 +32,8 @@ class PyNbmake(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@1.3:1.4")
+        depends_on("python@:3", when="@:0.0.1.0,0.1:1.2")
         depends_on("py-ipykernel@5.4:", when="@0.7:")
         depends_on("py-ipykernel@5.4:5", when="@0.1:0.5")
         depends_on("py-nbclient@0.6.6:0.6", when="@1.3.1:")

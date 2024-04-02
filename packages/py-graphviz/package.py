@@ -16,8 +16,8 @@ class PyGraphviz(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("dev", default=False)
-    variant("docs", default=False)
+    variant("dev", default=False, description="dev")
+    variant("docs", default=False, description="docs")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

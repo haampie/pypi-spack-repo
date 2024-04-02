@@ -14,6 +14,7 @@ class PyWebargs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@8.1:8.3")
         depends_on("py-marshmallow@3.0.0:", when="@7:")
         depends_on("py-packaging", when="@8.1:")
     # END DEPENDENCIES

@@ -19,7 +19,7 @@ class PyAzureKeyvault(PythonPackage):
         depends_on("py-azure-keyvault-certificates@4.1:", when="@4.1")
         depends_on("py-azure-keyvault-keys@4.1:", when="@4.1")
         depends_on("py-azure-keyvault-secrets@4.1:", when="@4.1")
-        depends_on("py-azure-nspkg@2:", when="@0.2:0,1.0.0:1")
+        depends_on("py-azure-nspkg@2:", when="@:0,1.0.0:1")
         depends_on("py-cryptography@2.1.4:", when="@1")
         depends_on("py-msrest@0.5:", when="@1.1:1")
         depends_on("py-msrestazure@0.4.32:", when="@1.1:1")

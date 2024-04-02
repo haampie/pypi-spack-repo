@@ -15,9 +15,10 @@ class PyTensorflowMetadata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@1.4:1.12")
         depends_on("py-absl-py@0.9:1", when="@1.6:")
         depends_on("py-absl-py@0.9:0.12", when="@0.29:1.5")
-        depends_on("py-googleapis-common-protos@1.52:", when="@0.24:")
+        depends_on("py-googleapis-common-protos@1.52:")
         depends_on("py-protobuf@3.13.0:3", when="@1.1:1.13.0")
     # END DEPENDENCIES
 

@@ -17,7 +17,7 @@ class PyPythonUtils(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@3.6:")
         depends_on("py-six", when="@2.6:2")
+        depends_on("py-typing-extensions", when="@3.5 ^python@:3.7")
     # END DEPENDENCIES
 

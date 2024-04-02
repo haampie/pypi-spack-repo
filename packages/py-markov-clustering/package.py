@@ -11,11 +11,12 @@ class PyMarkovClustering(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("drawing", default=False)
+    variant("drawing", default=False, description="drawing")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3")
         depends_on("py-matplotlib", when="@:0.0.3,0.0.6:+drawing")
         depends_on("py-networkx", when="@:0.0.3,0.0.6:+drawing")
         depends_on("py-numpy", when="@:0.0.3,0.0.6:")

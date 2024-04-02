@@ -14,7 +14,7 @@ class PyPyqtgraph(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.13.4:")
+        depends_on("python@3.8:", when="@0.13:0.13.3")
         depends_on("py-numpy@1.20.0:", when="@0.13:0.13.3")
     # END DEPENDENCIES
 

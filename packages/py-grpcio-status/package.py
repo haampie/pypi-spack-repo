@@ -14,8 +14,8 @@ class PyGrpcioStatus(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-googleapis-common-protos@1.5.5:", when="@1.38:")
+        depends_on("py-googleapis-common-protos@1.5.5:")
         depends_on("py-grpcio@1.60.1:", when="@1.60.1:1.60")
-        depends_on("py-protobuf@4.21.6:", when="@1.50:")
+        depends_on("py-protobuf@4.21.6:")
     # END DEPENDENCIES
 

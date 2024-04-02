@@ -24,6 +24,7 @@ class PyAwkwardCpp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1:19")
         depends_on("py-numpy@1.17.0:", when="@12:19")
         depends_on("py-numpy@1.14.5:", when="@3:11")
         depends_on("py-numpy@1.13.1:", when="@1:2")

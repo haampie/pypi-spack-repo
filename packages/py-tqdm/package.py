@@ -22,13 +22,15 @@ class PyTqdm(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("notebook", default=False)
-    variant("telegram", default=False)
+    variant("notebook", default=False, description="notebook")
+    variant("telegram", default=False, description="telegram")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.65:")
         depends_on("py-colorama", when="@4.61.2: platform=windows")
+        depends_on("py-importlib-resources", when="@4.63:4.64 ^python@:3.6")
         depends_on("py-ipywidgets@6.0.0:", when="@4.59:+notebook")
         depends_on("py-requests", when="@4.55:+telegram")
     # END DEPENDENCIES

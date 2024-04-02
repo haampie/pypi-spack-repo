@@ -14,6 +14,6 @@ class PyMercantile(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@3:", when="@0.8.3:")
+        depends_on("py-click@3:")
     # END DEPENDENCIES
 

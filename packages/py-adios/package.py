@@ -11,7 +11,7 @@ class PyAdios(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("mpi", default=False)
+    variant("mpi", default=False, description="mpi")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

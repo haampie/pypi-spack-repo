@@ -16,7 +16,7 @@ class PyLangsmith(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:")
+        depends_on("python@3.8:3")
         depends_on("py-pydantic@1.0:1", when="@:0.0.21")
         depends_on("py-requests@2:")
     # END DEPENDENCIES

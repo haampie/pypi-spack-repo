@@ -17,5 +17,8 @@ class PyH11(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-dataclasses", when="@0.13 ^python@:3.6")
+        depends_on("py-typing-extensions", when="@0.13: ^python@:3.7")
     # END DEPENDENCIES
 

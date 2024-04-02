@@ -16,7 +16,7 @@ class PyDhScikitOptimize(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("plots", default=False)
+    variant("plots", default=False, description="plots")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

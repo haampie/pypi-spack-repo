@@ -11,12 +11,11 @@ class PySmartsim(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("torch", default=False)
+    variant("torch", default=False, description="torch")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@0.6.1:")
-        depends_on("python@:3.10", when="@0.4.2:0.6.0")
+        depends_on("python@3.8:3.10", when="@0.4.2:0.6.0")
     # END DEPENDENCIES
 

@@ -14,6 +14,6 @@ class PyZcBuildout(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-setuptools@8:", when="@2.4.4:2.5,2.7:2.9.2,2.9.4:2.13.1,2.13.3,3:")
+        depends_on("py-setuptools@8:", when="@:2.13.1,2.13.3,3:")
     # END DEPENDENCIES
 

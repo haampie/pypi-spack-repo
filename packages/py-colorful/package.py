@@ -14,7 +14,6 @@ class PyColorful(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-colorama", when="@0.4.1: platform=windows")
-        depends_on("py-colorama", when="@0.3.2:0.4.0")
+        depends_on("py-colorama", when="platform=windows")
     # END DEPENDENCIES
 

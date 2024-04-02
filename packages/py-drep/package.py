@@ -12,10 +12,10 @@ class PyDrep(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("anicalculator", default=False)
-    variant("fastani", default=False)
-    variant("prodigal", default=False)
-    variant("py-checkm-genome", default=False)
+    variant("anicalculator", default=False, description="anicalculator")
+    variant("fastani", default=False, description="fastani")
+    variant("prodigal", default=False, description="prodigal")
+    variant("py-checkm-genome", default=False, description="py-checkm-genome")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

@@ -14,6 +14,6 @@ class PyPockets(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-six@1.5.2:", when="@0.3.1:")
+        depends_on("py-six@1.5.2:")
     # END DEPENDENCIES
 

@@ -16,7 +16,7 @@ class PyH5netcdf(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.2:")
-        depends_on("py-h5py", when="@0.3:")
+        depends_on("py-h5py")
         depends_on("py-packaging", when="@0.13.1:")
     # END DEPENDENCIES
 

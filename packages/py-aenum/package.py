@@ -7,8 +7,8 @@ from spack.package import *
 
 class PyAenum(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("3.1.12", sha256="8d79c9e3ec997220e355b96b322e672fb56a53e61744138ed838407e3a07b610", url="https://pypi.org/packages/63/5f/5b280c3d3ce897b3616bef3a44004e1fbfd4f2fe757e12b4d0e71de2900f/aenum-3.1.12-py2-none-any.whl")
-    version("2.1.2", sha256="7a77c205c4bc9d7fe9bd73b3193002d724aebf5909fa0d297534208953891ec8", url="https://pypi.org/packages/44/c4/7cda7e7e71e18ad999cb9d23f9969f818af1ed6be71d18db7963680b8320/aenum-2.1.2-py2-none-any.whl")
+    version("3.1.12", sha256="2d544ef7323c088d68abf9a84b9f3f6db0d516fec685e15678b5f84fdb7b8ba0", url="https://pypi.org/packages/57/32/18862210ce170908bc19de5cbb3844b165679123b32fe119d4116e46c2c8/aenum-3.1.12-py3-none-any.whl")
+    version("2.1.2", sha256="3df9b84cce5dc9ed77c337079f97b66c44c0053eb87d6f4d46b888dc45801e38", url="https://pypi.org/packages/0d/46/5b6a6c13fee40f9dfaba84de1394bfe082c0c7d95952ba0ffbd56ce3a3f7/aenum-2.1.2-py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS

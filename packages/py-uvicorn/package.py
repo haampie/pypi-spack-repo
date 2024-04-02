@@ -11,21 +11,23 @@ class PyUvicorn(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("standard", default=False)
+    variant("standard", default=False, description="standard")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@7:", when="@0.15:")
-        depends_on("py-colorama@0.4:", when="@0.13:+standard platform=windows")
-        depends_on("py-h11@0.8:", when="@0.13:")
+        depends_on("python@3.7:", when="@:0.22")
+        depends_on("py-click@7:")
+        depends_on("py-colorama@0.4:", when="+standard platform=windows")
+        depends_on("py-h11@0.8:")
         depends_on("py-httptools@0.5:", when="@0.19:+standard")
-        depends_on("py-python-dotenv@0.13:", when="@0.13:+standard")
-        depends_on("py-pyyaml@5.1:", when="@0.13:+standard")
-        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="@0.13.4:+standard platform=linux")
-        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="@0.13.4:+standard platform=freebsd")
-        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="@0.13.4:+standard platform=darwin")
-        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="@0.13.4:+standard platform=cray")
+        depends_on("py-python-dotenv@0.13:", when="+standard")
+        depends_on("py-pyyaml@5.1:", when="+standard")
+        depends_on("py-typing-extensions", when="@:0.22 ^python@:3.7")
+        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="+standard platform=linux")
+        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="+standard platform=freebsd")
+        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="+standard platform=darwin")
+        depends_on("py-uvloop@0.14.0:0.14,0.15.2:", when="+standard platform=cray")
         depends_on("py-watchfiles@0.13:", when="@0.18:+standard")
         depends_on("py-websockets@10.4:", when="@0.20:+standard")
     # END DEPENDENCIES

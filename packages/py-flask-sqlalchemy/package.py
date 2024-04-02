@@ -14,6 +14,7 @@ class PyFlaskSqlalchemy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3:3.0")
         depends_on("py-flask@2.2:", when="@3.0.0:3.0.3")
         depends_on("py-sqlalchemy@1.4.18:", when="@3.0.0:3.0")
     # END DEPENDENCIES

@@ -15,7 +15,7 @@ class PyEcos(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy@1.6:", when="@1.1:2.0.4,2.0.7.post:2.0.7")
-        depends_on("py-scipy@0.9:", when="@1.1:2.0.4,2.0.7.post:2.0.7")
+        depends_on("py-numpy@1.6:", when="@:2.0.4,2.0.7.post:2.0.7")
+        depends_on("py-scipy@0.9:", when="@:2.0.4,2.0.7.post:2.0.7")
     # END DEPENDENCIES
 

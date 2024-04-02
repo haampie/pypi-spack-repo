@@ -14,6 +14,7 @@ class PyIsoduration(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-arrow@0.15:")
     # END DEPENDENCIES
 

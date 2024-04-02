@@ -21,5 +21,8 @@ class PyStatsmodels(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.14:")
+        depends_on("python@3.7:", when="@0.13")
     # END DEPENDENCIES
 

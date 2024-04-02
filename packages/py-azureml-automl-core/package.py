@@ -14,8 +14,6 @@ class PyAzuremlAutomlCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10", when="@1.49:")
-        depends_on("python@:3.9", when="@1.45:1.48")
         depends_on("python@:3.8", when="@1.19:1.44")
         depends_on("py-azureml-dataset-runtime@1.23", when="@1.23")
         depends_on("py-azureml-telemetry@1.23", when="@1.23")

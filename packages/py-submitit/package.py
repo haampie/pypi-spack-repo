@@ -15,7 +15,7 @@ class PySubmitit(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-cloudpickle@1.2.1:", when="@1:1.1.0,1.4:")
-        depends_on("py-typing-extensions@3.7.4.2:", when="@1:1.1.0,1.4:")
+        depends_on("py-cloudpickle@1.2.1:", when="@1.4:")
+        depends_on("py-typing-extensions@3.7.4.2:", when="@1.4:")
     # END DEPENDENCIES
 

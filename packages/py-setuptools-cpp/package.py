@@ -14,6 +14,7 @@ class PySetuptoolsCpp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3")
         depends_on("py-pybind11")
         depends_on("py-setuptools")
     # END DEPENDENCIES

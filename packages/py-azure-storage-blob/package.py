@@ -24,13 +24,14 @@ class PyAzureStorageBlob(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@12.14:")
         depends_on("py-azure-core@1.28:", when="@12.17.0:")
         depends_on("py-azure-core@1.26:", when="@12.15:12.17.0-beta1")
         depends_on("py-azure-core@1.24.2:", when="@12.14")
         depends_on("py-azure-core@1.23.1:", when="@12.12:12.13")
         depends_on("py-azure-core@1.15.0:", when="@12.10.0-beta4:12.11")
         depends_on("py-azure-core@1.10:", when="@12.7.0:12.10.0-beta2")
-        depends_on("py-cryptography@2.1.4:", when="@12:")
+        depends_on("py-cryptography@2.1.4:")
         depends_on("py-isodate@0.6.1:", when="@12.15:")
         depends_on("py-msrest@0.7.1:", when="@12.14.0-beta2:12.14")
         depends_on("py-msrest@0.6.21:", when="@12.9:12.14.0-beta1")

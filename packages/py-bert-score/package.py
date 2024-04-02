@@ -17,10 +17,10 @@ class PyBertScore(PythonPackage):
         depends_on("py-matplotlib")
         depends_on("py-numpy")
         depends_on("py-packaging@20.9:", when="@0.3.12:")
-        depends_on("py-pandas@1.0.1:", when="@0.3.1:")
+        depends_on("py-pandas@1.0.1:")
         depends_on("py-requests")
-        depends_on("py-torch@1:", when="@0.2:")
-        depends_on("py-tqdm@4.31.1:", when="@0.1.2:")
+        depends_on("py-torch@1:")
+        depends_on("py-tqdm@4.31.1:")
         depends_on("py-transformers@3:", when="@0.3.5:")
     # END DEPENDENCIES
 

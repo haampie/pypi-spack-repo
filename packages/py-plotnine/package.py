@@ -18,7 +18,7 @@ class PyPlotnine(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.13:")
+        depends_on("python@3.8:", when="@0.9:0.12")
         depends_on("py-descartes@1.1:", when="@0.4:0.8")
         depends_on("py-matplotlib@3.5.0:", when="@0.9:0.10")
         depends_on("py-matplotlib@3.1.1:", when="@0.6:0.8")

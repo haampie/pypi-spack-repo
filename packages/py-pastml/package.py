@@ -15,7 +15,7 @@ class PyPastml(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.9.41:")
+        depends_on("python@3.8:", when="@1.9.39:1.9.40")
         depends_on("py-biopython@1.70:", when="@1.9.36:")
         depends_on("py-ete3@3.1:", when="@1.9.36:")
         depends_on("py-itolapi@4:", when="@1.9.36:")

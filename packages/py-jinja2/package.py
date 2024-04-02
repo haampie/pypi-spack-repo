@@ -23,11 +23,12 @@ class PyJinja2(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("i18n", default=False)
+    variant("i18n", default=False, description="i18n")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.1:")
         depends_on("py-babel@2.7:", when="@3.0.0-rc1:+i18n")
         depends_on("py-babel", when="@2.10:2+i18n")
         depends_on("py-markupsafe@2.0.0:", when="@3.0.1:")

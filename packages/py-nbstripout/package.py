@@ -14,6 +14,6 @@ class PyNbstripout(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-nbformat", when="@0.3.2:")
+        depends_on("py-nbformat")
     # END DEPENDENCIES
 

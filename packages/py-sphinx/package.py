@@ -64,6 +64,7 @@ class PySphinx(PythonPackage):
     version("1.6.1", sha256="50974b1405f0d2a452013283b7d3ff20305b4bd8ecb65566c6f9f6192b7625a0", url="https://pypi.org/packages/57/61/991b604fe8e928a94afc3fd20d515f473b6969670233c92c0ad81cf931fc/Sphinx-1.6.1-py2.py3-none-any.whl")
     version("1.5.5", sha256="11f271e7a9398385ed730e90f0bb41dc3815294bdcd395b46ed2d033bc2e7d87", url="https://pypi.org/packages/5e/66/760dc216df24dc890dc87741631af02f81659105d970a30e5a80c6c8cf75/Sphinx-1.5.5-py2.py3-none-any.whl")
     version("1.4.5", sha256="a1901af3d437473662daca2ee8f03c232d84af08a0b119d6bc55020661b12ab8", url="https://pypi.org/packages/d1/ad/9fe56e099e0bd288f1fdc037c2146b0698e2cba1d9a48636660f39a0e791/Sphinx-1.4.5-py2.py3-none-any.whl")
+    version("1.4", sha256="d4eda728fa077373f48468693376850016b11959fd23d5abef6b693ac6e0ef6b", url="https://pypi.org/packages/f1/01/6e6f29c3dbc57dddfd82710128f23c1be10a814c9fd4e77525fb3e6157d1/Sphinx-1.4-py2.py3-none-any.whl")
     version("1.3.1", sha256="2ddf18da3b0621fa43fee4b7290da0ae789b46fb899278a8acccda195c4979a7", url="https://pypi.org/packages/63/2c/0a30c391708f827039be5569164ed039b1e46906a4bff5a348b0abe2945e/Sphinx-1.3.1-py2.py3-none-any.whl")
     # END VERSIONS
 
@@ -72,6 +73,7 @@ class PySphinx(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@7.2:")
+        depends_on("python@3.8:", when="@6:7.1")
         depends_on("py-alabaster@0.7:", when="@1.7.5:")
         depends_on("py-babel@2.9:", when="@5.2:")
         depends_on("py-babel@1.3:", when="@3:5.1")

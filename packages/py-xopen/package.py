@@ -21,9 +21,11 @@ class PyXopen(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.5:1.7")
+        depends_on("python@:3", when="@0.4:0.8")
         depends_on("py-isal@0.3:", when="@1.1 platform=linux")
+    # END DEPENDENCIES
+
 
         # marker: platform_python_implementation == "CPython" and (platform_machine == "x86_64" or platform_machine == "AMD64")
         # depends_on("py-isal@1:", when="@1.6:1.7")
-    # END DEPENDENCIES
-

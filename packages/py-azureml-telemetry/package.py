@@ -16,6 +16,7 @@ class PyAzuremlTelemetry(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@1.2:1.47")
         depends_on("py-applicationinsights")
         depends_on("py-azureml-core@1.23", when="@1.23")
         depends_on("py-azureml-core@1.11", when="@1.11")

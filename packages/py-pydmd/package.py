@@ -11,7 +11,7 @@ class PyPydmd(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("docs", default=False)
+    variant("docs", default=False, description="docs")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -21,8 +21,6 @@ class PyPydmd(PythonPackage):
         depends_on("py-numpy", when="@:0.0.2,0.3:0.4.1.post2308")
         depends_on("py-scipy", when="@:0.0.2,0.3:")
         depends_on("py-sphinx@1.4:1.4.0", when="@0.3:0.4.0+docs")
-        depends_on("py-sphinx@1.4:1.4.0", when="@:0.0.2")
         depends_on("py-sphinx-rtd-theme", when="@0.3:+docs")
-        depends_on("py-sphinx-rtd-theme", when="@:0.0.2")
     # END DEPENDENCIES
 

@@ -14,5 +14,7 @@ class PyUvloop(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.15.2:0.18")
     # END DEPENDENCIES
 

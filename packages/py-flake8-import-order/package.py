@@ -14,7 +14,7 @@ class PyFlake8ImportOrder(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pycodestyle", when="@0.9:")
-        depends_on("py-setuptools", when="@0.12:")
+        depends_on("py-pycodestyle")
+        depends_on("py-setuptools")
     # END DEPENDENCIES
 

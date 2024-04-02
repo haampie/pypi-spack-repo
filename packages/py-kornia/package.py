@@ -29,11 +29,12 @@ class PyKornia(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.7:")
+        depends_on("python@3.7:", when="@0.6.9:0.6")
         depends_on("py-kornia-rs@0.1:", when="@0.7.2:")
-        depends_on("py-numpy", when="@0.3:0.5.4")
         depends_on("py-packaging", when="@0.5.11:")
         depends_on("py-torch@1.9.1:", when="@0.6.9:")
         depends_on("py-torch@1.8.1:", when="@0.6:0.6.8")
-        depends_on("py-torch@1.6:", when="@0.4.1:0.5")
+        depends_on("py-torch@1.6:", when="@:0.5")
     # END DEPENDENCIES
 

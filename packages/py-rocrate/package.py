@@ -14,11 +14,12 @@ class PyRocrate(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.6.1:")
         depends_on("py-arcp@0.2.1:")
         depends_on("py-click", when="@0.4:")
         depends_on("py-galaxy2cwl")
         depends_on("py-jinja2")
-        depends_on("py-python-dateutil", when="@0.2.3:")
+        depends_on("py-python-dateutil")
         depends_on("py-requests", when="@0.3.1:")
     # END DEPENDENCIES
 

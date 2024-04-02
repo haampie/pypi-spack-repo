@@ -19,6 +19,7 @@ class PyGsd(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@1.8.1:2.5.2")
         depends_on("py-numpy@1.9.3:", when="@3.2:")
         depends_on("py-numpy@1.9.3:1", when="@1.6.2:1.9")
     # END DEPENDENCIES

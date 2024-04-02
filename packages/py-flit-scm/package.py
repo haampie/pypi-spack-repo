@@ -17,6 +17,5 @@ class PyFlitScm(PythonPackage):
         depends_on("py-flit-core@3.5:", when="@1.2,1.6:")
         depends_on("py-setuptools-scm@6.4:", when="@1.7:")
         depends_on("py-tomli", when="@1.7: ^python@:3.10")
-        depends_on("py-tomli", when="@1.6.2:1.6")
     # END DEPENDENCIES
 

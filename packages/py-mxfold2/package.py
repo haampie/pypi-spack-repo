@@ -14,6 +14,7 @@ class PyMxfold2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3")
         depends_on("py-numpy@1.18.0:1")
         depends_on("py-torch@1.4:1")
         depends_on("py-torchvision")

@@ -11,12 +11,13 @@ class PyCelery(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("redis", default=False)
-    variant("sqlalchemy", default=False)
+    variant("redis", default=False, description="redis")
+    variant("sqlalchemy", default=False, description="sqlalchemy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5:5.3.0")
         depends_on("py-billiard@3.6.4:3", when="@5:5.2")
         depends_on("py-click@8.0.3:", when="@5.2.3:5.2")
         depends_on("py-click-didyoumean@0.0.3:", when="@5:5.2")

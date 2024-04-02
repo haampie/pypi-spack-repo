@@ -14,6 +14,7 @@ class PyDlioProfilerPy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-pybind11", when="@:0.0.2")
     # END DEPENDENCIES
 

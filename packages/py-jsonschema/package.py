@@ -20,17 +20,19 @@ class PyJsonschema(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("format", default=False)
-    variant("format-nongpl", default=False)
+    variant("format", default=False, description="format")
+    variant("format-nongpl", default=False, description="format-nongpl")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.0.1:4.17")
         depends_on("py-attrs@17.4:", when="@3.0.0-alpha4:4.17")
         depends_on("py-fqdn", when="@4:+format-nongpl")
         depends_on("py-fqdn", when="@4:+format")
         depends_on("py-idna", when="@3.2:+format-nongpl")
         depends_on("py-idna", when="@3.0.0-alpha4:+format")
+        depends_on("py-importlib-metadata", when="@3.2:4.18.0-alpha1 ^python@:3.7")
         depends_on("py-importlib-metadata", when="@3.1")
         depends_on("py-importlib-resources@1.4:", when="@4.2.1: ^python@:3.8")
         depends_on("py-isoduration", when="@4.0.0-alpha3:+format-nongpl")
@@ -47,6 +49,7 @@ class PyJsonschema(PythonPackage):
         depends_on("py-setuptools", when="@3.0.0-alpha4:3")
         depends_on("py-six@1.11:", when="@3.0.0-alpha4:3")
         depends_on("py-strict-rfc3339", when="@2.5,3.0.0-alpha4:4.0.0-alpha5+format")
+        depends_on("py-typing-extensions", when="@4.3:4.18.0-alpha1 ^python@:3.7")
         depends_on("py-uri-template", when="@4.0.0-alpha2:+format-nongpl")
         depends_on("py-uri-template", when="@4.0.0-alpha2:+format")
         depends_on("py-webcolors@1.11:", when="@4.0.0-alpha6:+format-nongpl")

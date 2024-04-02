@@ -17,9 +17,9 @@ class PyHypothesis(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("django", default=False)
-    variant("numpy", default=False)
-    variant("pandas", default=False)
+    variant("django", default=False, description="django")
+    variant("numpy", default=False, description="numpy")
+    variant("pandas", default=False, description="pandas")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

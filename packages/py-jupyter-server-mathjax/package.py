@@ -15,6 +15,7 @@ class PyJupyterServerMathjax(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2.4:")
         depends_on("py-jupyter-server@1.1:", when="@0.2.6:")
         depends_on("py-jupyter-server@1.1:1", when="@:0.2.5")
     # END DEPENDENCIES

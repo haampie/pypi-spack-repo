@@ -25,16 +25,15 @@ class PyYt(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("astropy", default=False)
-    variant("h5py", default=False)
-    variant("rockstar", default=False)
-    variant("scipy", default=False)
+    variant("astropy", default=False, description="astropy")
+    variant("h5py", default=False, description="h5py")
+    variant("rockstar", default=False, description="rockstar")
+    variant("scipy", default=False, description="scipy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@4.3:")
-        depends_on("python@:3.11", when="@4:4.0")
+        depends_on("python@3.7:", when="@4.1")
         depends_on("py-cython", when="@3.3.2:3.3")
         depends_on("py-ipython@1:", when="@3.4:3.6.0")
         depends_on("py-ipython", when="@3.3.2:3.3")

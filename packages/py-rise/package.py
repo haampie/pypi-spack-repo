@@ -14,6 +14,7 @@ class PyRise(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@5.4:")
         depends_on("py-notebook@5.5.0:", when="@5.3:5.6")
     # END DEPENDENCIES
 

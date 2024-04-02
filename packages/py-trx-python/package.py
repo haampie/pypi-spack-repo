@@ -14,6 +14,7 @@ class PyTrxPython(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.2:")
         depends_on("py-deepdiff")
         depends_on("py-nibabel@5:", when="@0.2:")
         depends_on("py-numpy@1.22.0:", when="@0.2:")

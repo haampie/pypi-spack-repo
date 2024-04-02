@@ -11,12 +11,9 @@ class PyPythonBox(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("extras", default=False)
+    variant("extras", default=False, description="extras")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("py-ruamel-yaml", when="@4")
-        depends_on("py-toml", when="@4")
     # END DEPENDENCIES
 

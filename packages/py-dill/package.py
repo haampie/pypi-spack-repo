@@ -25,5 +25,7 @@ class PyDill(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.5:0.3.7")
     # END DEPENDENCIES
 

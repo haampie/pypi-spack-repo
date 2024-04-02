@@ -16,12 +16,12 @@ class PyPyroPpl(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-graphviz@0.8:", when="@0.5.1:1.0")
-        depends_on("py-numpy@1.7:", when="@0.5.1:")
-        depends_on("py-opt-einsum@2.3.2:", when="@0.5.1:")
-        depends_on("py-pyro-api@0.1.1:", when="@0.5.1:")
+        depends_on("python@3.7:", when="@1.8.1:1.8")
+        depends_on("py-numpy@1.7:")
+        depends_on("py-opt-einsum@2.3.2:")
+        depends_on("py-pyro-api@0.1.1:")
         depends_on("py-torch@1.11:", when="@1.8.1:1.8.4,1.8.6:1.8")
         depends_on("py-torch@1.9:", when="@1.7:1.8.0")
-        depends_on("py-tqdm@4.36:", when="@0.5.1:")
+        depends_on("py-tqdm@4.36:")
     # END DEPENDENCIES
 

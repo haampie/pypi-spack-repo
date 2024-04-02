@@ -11,7 +11,7 @@ class PyGidgetlab(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("aiohttp", default=False)
+    variant("aiohttp", default=False, description="aiohttp")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

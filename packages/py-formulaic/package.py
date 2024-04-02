@@ -16,9 +16,10 @@ class PyFormulaic(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-astor@0.8:", when="@1: ^python@:3.8")
+        depends_on("python@3.7:", when="@0.3:0.3.2,0.5:")
         depends_on("py-astor@0.8:", when="@0.3.4:0")
         depends_on("py-astor", when="@0.1:0.2")
+        depends_on("py-cached-property@1.3:", when="@0.4: ^python@:3.7")
         depends_on("py-graphlib-backport", when="@0.5: ^python@:3.8")
         depends_on("py-interface-meta@1.2:", when="@0.2:0.3.2,0.5:")
         depends_on("py-numpy@1.16.5:", when="@0.5:")

@@ -15,11 +15,12 @@ class PyVersioneer(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("toml", default=False)
+    variant("toml", default=False, description="toml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.23:")
         depends_on("py-tomli", when="@0.28:+toml ^python@:3.10")
         depends_on("py-tomli", when="@0.26:0.27+toml")
     # END DEPENDENCIES

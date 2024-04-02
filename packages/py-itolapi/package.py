@@ -14,6 +14,6 @@ class PyItolapi(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-requests@2:", when="@1.3.2:3.0.1,3.0.3:")
+        depends_on("py-requests@2:", when="@:3.0.1,3.0.3:")
     # END DEPENDENCIES
 

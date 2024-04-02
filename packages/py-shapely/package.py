@@ -26,6 +26,7 @@ class PyShapely(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2:")
         depends_on("py-numpy@1.14.0:1", when="@2.0.3:")
         depends_on("py-numpy@1.14.0:", when="@2.0.2")
     # END DEPENDENCIES

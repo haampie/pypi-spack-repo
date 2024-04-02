@@ -18,5 +18,7 @@ class PyPyspark(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.3:3.4")
     # END DEPENDENCIES
 

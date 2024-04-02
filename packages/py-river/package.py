@@ -14,6 +14,6 @@ class PyRiver(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:3.12", when="@0.20:")
+        depends_on("python@3.8:", when="@0.11:0.19")
     # END DEPENDENCIES
 

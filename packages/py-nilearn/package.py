@@ -20,11 +20,13 @@ class PyNilearn(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("plotting", default=False)
+    variant("plotting", default=False, description="plotting")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.10.3:")
+        depends_on("python@3.7:", when="@0.10:0.10.2")
         depends_on("py-joblib@1:", when="@0.10:")
         depends_on("py-joblib@0.15:", when="@0.9.1:0.9")
         depends_on("py-joblib@0.12:", when="@0.7:0.9.0")

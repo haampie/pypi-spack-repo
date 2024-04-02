@@ -15,8 +15,8 @@ class PyVirtualenvwrapper(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-stevedore", when="@:0,4.8:4.8.2,6:")
-        depends_on("py-virtualenv", when="@:0,4.8:4.8.2,6:")
-        depends_on("py-virtualenv-clone", when="@:0,4.8:4.8.2,6:")
+        depends_on("py-stevedore", when="@4.8:4.8.2,6:")
+        depends_on("py-virtualenv", when="@4.8:4.8.2,6:")
+        depends_on("py-virtualenv-clone", when="@4.8:4.8.2,6:")
     # END DEPENDENCIES
 

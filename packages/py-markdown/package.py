@@ -16,7 +16,9 @@ class PyMarkdown(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.4")
         depends_on("py-importlib-metadata@4.4:", when="@3.3.6: ^python@:3.9")
+        depends_on("py-importlib-metadata", when="@3.2.2:3.3.4 ^python@:3.7")
         depends_on("py-setuptools@36:", when="@3.1:3.2.1")
     # END DEPENDENCIES
 

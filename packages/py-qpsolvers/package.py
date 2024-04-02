@@ -15,12 +15,11 @@ class PyQpsolvers(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-cvxopt@1.2.6:", when="@3:3.0")
+        depends_on("python@3.7:")
         depends_on("py-ecos@2.0.8:", when="@3:4.2")
         depends_on("py-numpy@1.15.4:", when="@2.6:")
         depends_on("py-osqp@0.6.2:", when="@3:4.2")
-        depends_on("py-quadprog@0.1.11:", when="@3:3.0")
-        depends_on("py-scipy@1.2.0:", when="@1.7.2:")
+        depends_on("py-scipy@1.2.0:")
         depends_on("py-scs@3.2:", when="@3:4.2")
     # END DEPENDENCIES
 

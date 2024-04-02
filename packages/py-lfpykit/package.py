@@ -14,6 +14,7 @@ class PyLfpykit(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.5-rc0:")
         depends_on("py-meautility", when="@0.2-rc2:")
         depends_on("py-numpy@1.15.2:", when="@0.2-rc2:")
         depends_on("py-scipy", when="@0.2-rc2:")

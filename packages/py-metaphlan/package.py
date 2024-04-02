@@ -15,17 +15,17 @@ class PyMetaphlan(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-biom-format", when="@3.0.1:")
-        depends_on("py-biopython", when="@3.0.1:")
-        depends_on("py-cmseq", when="@3.0.1:4.0")
-        depends_on("py-dendropy", when="@3.0.1:")
-        depends_on("py-h5py", when="@3.0.1:")
+        depends_on("py-biom-format")
+        depends_on("py-biopython")
+        depends_on("py-cmseq", when="@:4.0")
+        depends_on("py-dendropy")
+        depends_on("py-h5py")
         depends_on("py-hclust2", when="@4.0.2:")
-        depends_on("py-numpy", when="@3.0.1:")
-        depends_on("py-pandas", when="@3.0.1:")
-        depends_on("py-phylophlan", when="@3.0.1:")
-        depends_on("py-pysam", when="@3.0.1:")
-        depends_on("py-requests", when="@3.0.1:")
-        depends_on("py-scipy", when="@3.0.1:")
+        depends_on("py-numpy")
+        depends_on("py-pandas")
+        depends_on("py-phylophlan")
+        depends_on("py-pysam")
+        depends_on("py-requests")
+        depends_on("py-scipy")
     # END DEPENDENCIES
 

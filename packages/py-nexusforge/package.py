@@ -13,9 +13,12 @@ class PyNexusforge(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("sklearn", default=False)
+    variant("sklearn", default=False, description="sklearn")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.8.1:")
+        depends_on("python@3.7:", when="@0.7:0.8.0")
     # END DEPENDENCIES
 

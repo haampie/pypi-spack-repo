@@ -13,10 +13,12 @@ class PyNiworkflows(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("ants", default=False)
-    variant("fsl", default=False)
+    variant("ants", default=False, description="ants")
+    variant("fsl", default=False, description="fsl")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.3.3:1.3,1.4.0-rc3:1.7")
     # END DEPENDENCIES
 

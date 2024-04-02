@@ -14,21 +14,22 @@ class PyGrayskull(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:")
         depends_on("py-beautifulsoup4", when="@2:")
         depends_on("py-colorama")
-        depends_on("py-conda-souschef@2.2.3:", when="@1.8.2:")
-        depends_on("py-packaging@21.3:", when="@1.7:")
+        depends_on("py-conda-souschef@2.2.3:")
+        depends_on("py-packaging@21.3:")
         depends_on("py-pip")
-        depends_on("py-pkginfo", when="@1.1:")
-        depends_on("py-progressbar2@3.53:", when="@0.8.2:")
+        depends_on("py-pkginfo")
+        depends_on("py-progressbar2@3.53:")
         depends_on("py-rapidfuzz@3:", when="@2.3.1:")
         depends_on("py-requests")
-        depends_on("py-ruamel-yaml@0.16.10:", when="@0.8.2:")
+        depends_on("py-ruamel-yaml@0.16.10:")
         depends_on("py-ruamel-yaml-jinja2")
         depends_on("py-semver@3.0.0:3.0.0.0,3.0.1:", when="@2.3.1:")
         depends_on("py-setuptools@30.3:")
         depends_on("py-stdlib-list")
-        depends_on("py-tomli", when="@1.4.1:")
-        depends_on("py-tomli-w", when="@1.4.1:")
+        depends_on("py-tomli")
+        depends_on("py-tomli-w")
     # END DEPENDENCIES
 

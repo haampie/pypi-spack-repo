@@ -14,6 +14,7 @@ class PyBranca(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.6:")
         depends_on("py-jinja2@3.0.0:", when="@0.7.1:")
     # END DEPENDENCIES
 

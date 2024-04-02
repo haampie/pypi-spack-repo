@@ -14,6 +14,6 @@ class PyFlaskPaginate(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-flask", when="@0.5.3:")
+        depends_on("py-flask")
     # END DEPENDENCIES
 

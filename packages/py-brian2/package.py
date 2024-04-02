@@ -19,7 +19,7 @@ class PyBrian2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.5.2:")
+        depends_on("python@3.7:", when="@2.5:2.5.1")
         depends_on("py-jinja2@2.7:", when="@2.0-rc3,2.6:")
         depends_on("py-numpy@1.8.2:", when="@2.0-rc3")
         depends_on("py-py-cpuinfo@0.1.6:", when="@2.0-rc3")

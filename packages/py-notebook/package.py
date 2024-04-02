@@ -37,6 +37,7 @@ class PyNotebook(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@6.4.11:7.0.0-alpha11")
         depends_on("py-argon2-cffi", when="@6.1.0:6")
         depends_on("py-ipykernel", when="@4.1:6")
         depends_on("py-ipython-genutils", when="@4.1:6")

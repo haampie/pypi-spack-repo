@@ -14,6 +14,7 @@ class PyPytestAiohttp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1:")
         depends_on("py-aiohttp@3.8.1:", when="@1:")
         depends_on("py-pytest@6.1:", when="@1:")
         depends_on("py-pytest-asyncio@0.17.2:", when="@1:")

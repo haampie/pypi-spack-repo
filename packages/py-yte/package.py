@@ -14,7 +14,7 @@ class PyYte(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@:0.1")
+        depends_on("python@3.7:", when="@0.2:")
         depends_on("py-dpath@2:", when="@1.3:1.5.1")
         depends_on("py-plac@1.3.4:")
         depends_on("py-pyyaml@6.0:")

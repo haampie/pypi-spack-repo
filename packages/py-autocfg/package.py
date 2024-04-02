@@ -14,6 +14,7 @@ class PyAutocfg(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-dataclasses", when="^python@:3.6")
         depends_on("py-pyyaml")
     # END DEPENDENCIES
 

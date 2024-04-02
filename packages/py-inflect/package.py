@@ -15,6 +15,7 @@ class PyInflect(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pydantic@1.9.1:", when="@6.0.2:6.0.4,6.2:")
+        depends_on("python@3.7:", when="@5.4:6.0")
+        depends_on("py-pydantic@1.9.1:", when="@6.0.2:6.0.4,6.2:7.0")
     # END DEPENDENCIES
 

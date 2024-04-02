@@ -14,9 +14,7 @@ class PyPoetryPluginTweakDependenciesVersion(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.5.2:")
         depends_on("python@3.9:3.11", when="@1.5:1.5.1")
-        depends_on("python@:3.11", when="@1.2:1.4")
         depends_on("py-poetry@1.6", when="@1.5.1")
     # END DEPENDENCIES
 

@@ -14,13 +14,14 @@ class PyGoogleCloudLogging(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-google-api-core@1.33.2:1,2.8:+grpc", when="@3.4:3.9")
-        depends_on("py-google-cloud-appengine-logging", when="@2.7:")
-        depends_on("py-google-cloud-audit-log", when="@2.5:")
-        depends_on("py-google-cloud-core@2.0.0:", when="@3.2:")
-        depends_on("py-grpc-google-iam-v1@0.12.4:", when="@3.1.2:")
+        depends_on("py-google-cloud-appengine-logging")
+        depends_on("py-google-cloud-audit-log")
+        depends_on("py-google-cloud-core@2.0.0:")
+        depends_on("py-grpc-google-iam-v1@0.12.4:")
         depends_on("py-proto-plus@1.22.2:", when="@3.5: ^python@3.11:")
-        depends_on("py-proto-plus@1.22:", when="@3.2.2:")
+        depends_on("py-proto-plus@1.22:")
         depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0-rc2,4.21.6:4", when="@3.4:")
     # END DEPENDENCIES
 

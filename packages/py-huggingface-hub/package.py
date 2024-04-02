@@ -15,14 +15,17 @@ class PyHuggingfaceHub(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cli", default=False)
+    variant("cli", default=False, description="cli")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.17:")
+        depends_on("python@3.7:", when="@0.5:0.16")
         depends_on("py-filelock")
         depends_on("py-fsspec@2023.5:", when="@0.18:")
         depends_on("py-fsspec", when="@0.14:0.17")
+        depends_on("py-importlib-metadata", when="@0.0.2:0.16 ^python@:3.7")
         depends_on("py-inquirerpy@0.3.4:", when="@0.10:+cli")
         depends_on("py-packaging@20.9:", when="@0.0.11:")
         depends_on("py-pyyaml@5.1:", when="@0.7:")

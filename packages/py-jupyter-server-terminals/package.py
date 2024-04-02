@@ -14,9 +14,10 @@ class PyJupyterServerTerminals(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.4.1:")
         depends_on("py-terminado@0.8.3:", when="@:0.1,0.3:")
+    # END DEPENDENCIES
+
 
         # marker: os_name == "nt"
         # depends_on("py-pywinpty@2.0.3:", when="@:0.1,0.3:")
-    # END DEPENDENCIES
-

@@ -14,7 +14,7 @@ class PyEmailValidator(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-dnspython@1.15:", when="@1.0.3:1")
-        depends_on("py-idna@2:", when="@1.0.3:")
+        depends_on("py-dnspython@1.15:", when="@:1")
+        depends_on("py-idna@2:")
     # END DEPENDENCIES
 

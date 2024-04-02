@@ -14,7 +14,7 @@ class PyColorcet(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-param@1.7:", when="@1:3.0.0-alpha7,3.0.0")
-        depends_on("py-pyct@0.4.4:", when="@1:3.0")
+        depends_on("py-param@1.7:", when="@:3.0.0-alpha7,3.0.0")
+        depends_on("py-pyct@0.4.4:", when="@:3.0")
     # END DEPENDENCIES
 

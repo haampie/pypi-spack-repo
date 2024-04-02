@@ -15,9 +15,9 @@ class PyCheroot(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-backports-functools-lru-cache", when="@6.2:6.2.2,6.2.4:6.5")
+        depends_on("py-backports-functools-lru-cache", when="@:6.5")
         depends_on("py-jaraco-functools", when="@7:")
-        depends_on("py-more-itertools@2.6:", when="@6:")
-        depends_on("py-six@1.11:", when="@5.9.2:9")
+        depends_on("py-more-itertools@2.6:")
+        depends_on("py-six@1.11:", when="@:9")
     # END DEPENDENCIES
 

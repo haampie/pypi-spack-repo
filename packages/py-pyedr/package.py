@@ -15,7 +15,6 @@ class PyPyedr(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.8:")
         depends_on("py-mda-xdrlib", when="@0.7.2:")
         depends_on("py-numpy@1.19.0:", when="@:0.7")
         depends_on("py-pbr", when="@:0.7")

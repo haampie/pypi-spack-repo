@@ -15,6 +15,7 @@ class PyGcovr(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.1:6")
         depends_on("py-jinja2", when="@4:")
         depends_on("py-lxml", when="@4.2:")
         depends_on("py-pygments", when="@5:6")

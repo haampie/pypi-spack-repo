@@ -13,7 +13,7 @@ class PyDmHaiku(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("jax", default=False)
+    variant("jax", default=False, description="jax")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -29,5 +29,6 @@ class PyDmHaiku(PythonPackage):
         depends_on("py-jmp@0.0.2:", when="@0.0.5:0.0.5.0,0.0.6:")
         depends_on("py-numpy@1.18.0:")
         depends_on("py-tabulate@0.8.9:", when="@0.0.4:")
+        depends_on("py-typing-extensions", when="@0.0.4:0.0.9 ^python@:3.7")
     # END DEPENDENCIES
 

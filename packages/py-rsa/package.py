@@ -17,6 +17,7 @@ class PyRsa(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@4.1:4.1.0,4.3,4.4.1:4.7.0,4.7.2:")
         depends_on("py-pyasn1@0.1.3:", when="@4.1:4.1.0,4.3:4.7.0,4.7.2:")
     # END DEPENDENCIES
 

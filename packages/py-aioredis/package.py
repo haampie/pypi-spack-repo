@@ -15,6 +15,6 @@ class PyAioredis(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-async-timeout", when="@1:")
-        depends_on("py-hiredis", when="@0.1:0.1.3,0.1.5:1")
+        depends_on("py-hiredis", when="@:1")
     # END DEPENDENCIES
 

@@ -18,5 +18,7 @@ class PyArgcomplete(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-importlib-metadata@0.23:6", when="@3.1:3.1.2 ^python@:3.7")
     # END DEPENDENCIES
 

@@ -14,55 +14,50 @@ class PyZfit(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("hs3", default=False)
-    variant("nlopt", default=False)
+    variant("hs3", default=False, description="hs3")
+    variant("nlopt", default=False, description="nlopt")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:3.11", when="@0.18:")
-        depends_on("python@:3.11", when="@0.14:0.17")
-        depends_on("python@:3.10", when="@0.13")
-        depends_on("python@:3.9", when="@0.7:0.9")
-        depends_on("python@:3.8", when="@0.6")
+        depends_on("python@3.8:3.11", when="@0.14:0.17")
         depends_on("py-asdf", when="@0.13:+hs3")
         depends_on("py-attrs", when="@0.15.2:0.18.0,0.18.2:")
-        depends_on("py-boost-histogram", when="@0.9:")
-        depends_on("py-colorama", when="@0.5:")
-        depends_on("py-colored", when="@0.5:")
+        depends_on("py-boost-histogram")
+        depends_on("py-colorama")
+        depends_on("py-colored")
         depends_on("py-colorlog")
-        depends_on("py-deprecated", when="@0.9:")
+        depends_on("py-deprecated")
         depends_on("py-dill", when="@0.13:")
-        depends_on("py-dotmap", when="@0.6:")
+        depends_on("py-dotmap")
         depends_on("py-frozendict", when="@0.13:")
-        depends_on("py-hist", when="@0.9:")
-        depends_on("py-iminuit@2.3:", when="@0.6:0.11,0.14.1:")
+        depends_on("py-hist")
+        depends_on("py-iminuit@2.3:", when="@:0.11,0.14.1:")
         depends_on("py-jacobi", when="@0.11:")
         depends_on("py-nlopt@2.7.1:", when="@0.10:+nlopt")
-        depends_on("py-numdifftools", when="@0.4:")
-        depends_on("py-numpy@1.16.0:", when="@0.4:")
-        depends_on("py-ordered-set", when="@0.3.7:")
+        depends_on("py-numdifftools")
+        depends_on("py-numpy@1.16.0:")
+        depends_on("py-ordered-set")
         depends_on("py-pandas")
         depends_on("py-pydantic@:1", when="@0.14.1:")
         depends_on("py-pyyaml", when="@0.13:")
         depends_on("py-scipy@1.2.0:")
-        depends_on("py-tabulate", when="@0.5:")
+        depends_on("py-tabulate")
         depends_on("py-tensorflow@2.13.0:2.13", when="@0.15:0.17")
         depends_on("py-tensorflow-probability@0.21", when="@0.17")
         depends_on("py-tensorflow-probability@0.20:0.21", when="@0.15:0.16")
         depends_on("py-tensorflow-probability@0.20", when="@0.14")
         depends_on("py-texttable")
         depends_on("py-typing-extensions", when="@0.14:0.17 ^python@:3.8")
-        depends_on("py-typing-extensions", when="@0.13")
-        depends_on("py-uhi", when="@0.9.0-alpha3:")
-        depends_on("py-uproot@4.0.0:", when="@0.13:")
+        depends_on("py-uhi")
+        depends_on("py-uproot@4.0.0:", when="@0.13:0.13.0,0.14:")
         depends_on("py-xxhash", when="@0.10:")
-        depends_on("py-zfit-interface", when="@0.9:")
+        depends_on("py-zfit-interface")
+    # END DEPENDENCIES
+
 
         # marker: sys_platform != "darwin" or platform_machine != "arm64"
         # depends_on("py-tensorflow@2.12.0:2.12", when="@0.14")
 
         # marker: sys_platform == "darwin" and platform_machine == "arm64"
         # depends_on("py-tensorflow-macos@2.11:2.12", when="@0.14")
-    # END DEPENDENCIES
-

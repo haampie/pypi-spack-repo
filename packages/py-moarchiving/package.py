@@ -11,7 +11,7 @@ class PyMoarchiving(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("arbitrary_precision", default=False)
+    variant("arbitrary_precision", default=False, description="arbitrary_precision")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

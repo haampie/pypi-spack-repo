@@ -11,15 +11,14 @@ class PyModin(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("engine", default=False)
+    variant("engine", default=False, description="engine")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.24:")
-        depends_on("py-fsspec", when="@0.12:0.23.0")
-        depends_on("py-numpy@1.18.5:", when="@0.13:0.23.0")
-        depends_on("py-packaging", when="@0.7.1:0.7,0.12:0.23.0")
+        depends_on("py-fsspec", when="@:0.23.0")
+        depends_on("py-numpy@1.18.5:", when="@:0.23.0")
+        depends_on("py-packaging", when="@:0.23.0")
         depends_on("py-pandas@1.5.1", when="@0.16.2:0.17.0")
         depends_on("py-psutil", when="@0.15.2:0.23.0")
     # END DEPENDENCIES

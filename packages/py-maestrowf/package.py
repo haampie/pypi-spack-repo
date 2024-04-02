@@ -23,6 +23,7 @@ class PyMaestrowf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@1.1.9")
         depends_on("py-coloredlogs", when="@1.1.7:1.1.7.0,1.1.8:")
         depends_on("py-dill", when="@1.1.7:1.1.7.0,1.1.8:")
         depends_on("py-enum34", when="@:1.1.3")

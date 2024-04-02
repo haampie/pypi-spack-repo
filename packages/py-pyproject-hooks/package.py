@@ -14,7 +14,7 @@ class PyPyprojectHooks(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-tomli@1.1:", when="@1: ^python@:3.10")
-        depends_on("py-tomli@1.1:", when="@:0")
     # END DEPENDENCIES
 

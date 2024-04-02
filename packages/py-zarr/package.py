@@ -20,11 +20,13 @@ class PyZarr(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.17:")
-        depends_on("py-asciitree", when="@:0.0,2.5:")
-        depends_on("py-fasteners", when="@:0.0,2.5:")
+        depends_on("python@3.7:3", when="@2.9:2.12")
+        depends_on("python@:3", when="@2.6:2.8")
+        depends_on("py-asciitree", when="@2.5:")
+        depends_on("py-fasteners", when="@2.5:")
         depends_on("py-numcodecs@0.10.0:", when="@2.13.0:")
-        depends_on("py-numcodecs@0.6.4:", when="@:0.0,2.5:2.13.0-alpha2")
+        depends_on("py-numcodecs@0.6.4:", when="@2.5:2.13.0-alpha2")
         depends_on("py-numpy@1.21.1:", when="@2.17:")
-        depends_on("py-numpy@1.7:", when="@:0.0,2.5:2.13.3")
+        depends_on("py-numpy@1.7:", when="@2.5:2.13.3")
     # END DEPENDENCIES
 

@@ -43,12 +43,12 @@ class PyHorovod(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("controllers", default=False)
-    variant("cuda", default=False)
-    variant("cuda_arch", default=False)
-    variant("frameworks", default=False)
-    variant("rocm", default=False)
-    variant("tensor_ops", default=False)
+    variant("controllers", default=False, description="controllers")
+    variant("cuda", default=False, description="cuda")
+    variant("cuda_arch", default=False, description="cuda_arch")
+    variant("frameworks", default=False, description="frameworks")
+    variant("rocm", default=False, description="rocm")
+    variant("tensor_ops", default=False, description="tensor_ops")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

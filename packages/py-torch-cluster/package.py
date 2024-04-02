@@ -13,9 +13,11 @@ class PyTorchCluster(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cuda", default=False)
+    variant("cuda", default=False, description="cuda")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.6.2:")
     # END DEPENDENCIES
 

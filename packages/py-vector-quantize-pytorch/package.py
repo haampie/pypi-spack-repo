@@ -15,6 +15,6 @@ class PyVectorQuantizePytorch(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-einops", when="@0.3:1.0.2")
-        depends_on("py-torch", when="@0.2:")
+        depends_on("py-torch")
     # END DEPENDENCIES
 

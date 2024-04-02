@@ -15,7 +15,7 @@ class PyMike(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-jinja2", when="@:1")
-        depends_on("py-mkdocs@1.0:", when="@0.5:")
+        depends_on("py-mkdocs@1.0:")
         depends_on("py-pyyaml@5.1:", when="@1.1:")
         depends_on("py-verspec", when="@1:")
     # END DEPENDENCIES

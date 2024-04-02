@@ -14,10 +14,9 @@ class PySpherical(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@1.0.12:1.0.13")
-        depends_on("python@:3.10", when="@1.0.11")
         depends_on("python@:3.9", when="@1.0.6:1.0.10")
         depends_on("py-black@20.8-beta1:", when="@:1.0.10")
+        depends_on("py-importlib-metadata@1", when="@:1.0.10,1.0.12:1.0.13 ^python@:3.7")
         depends_on("py-numba@0.50.0:", when="@:1.0.10,1.0.12:1.0.13")
         depends_on("py-numpy@1.13.0:1", when="@:1.0.10,1.0.12:1.0.13")
         depends_on("py-quaternionic@1:", when="@1.0.10:1.0.13")

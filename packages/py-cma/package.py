@@ -11,8 +11,8 @@ class PyCma(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("constrained_solution_tracking", default=False)
-    variant("plotting", default=False)
+    variant("constrained_solution_tracking", default=False, description="constrained_solution_tracking")
+    variant("plotting", default=False, description="plotting")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

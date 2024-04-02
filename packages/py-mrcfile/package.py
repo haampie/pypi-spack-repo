@@ -16,6 +16,6 @@ class PyMrcfile(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.16.0:", when="@1.4:")
-        depends_on("py-numpy@1.12.0:", when="@0.2:0.2.3,1.2:1.3")
+        depends_on("py-numpy@1.12.0:", when="@1.2:1.3")
     # END DEPENDENCIES
 

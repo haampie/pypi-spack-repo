@@ -12,16 +12,16 @@ class PySingularityHpc(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("modules", default=False)
-    variant("runtime", default=False)
+    variant("modules", default=False, description="modules")
+    variant("runtime", default=False, description="runtime")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-jinja2", when="@0.0.5,0.0.43:0.0.49,0.0.51:")
-        depends_on("py-jsonschema", when="@0.0.5,0.0.43:0.0.49,0.0.51:")
-        depends_on("py-requests", when="@0.0.5,0.0.49,0.0.51:")
-        depends_on("py-ruamel-yaml", when="@0.0.5,0.0.43:0.0.49,0.0.51:0.1.23,0.1.26:")
-        depends_on("py-spython@0.2:", when="@0.0.51:")
+        depends_on("py-jinja2")
+        depends_on("py-jsonschema")
+        depends_on("py-requests")
+        depends_on("py-ruamel-yaml", when="@:0.1.23,0.1.26:")
+        depends_on("py-spython@0.2:")
     # END DEPENDENCIES
 

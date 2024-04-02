@@ -24,15 +24,17 @@ class PyPyarrow(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cuda", default=False)
-    variant("cuda_arch", default=False)
-    variant("dataset", default=False)
-    variant("orc", default=False)
-    variant("parquet", default=False)
+    variant("cuda", default=False, description="cuda")
+    variant("cuda_arch", default=False, description="cuda_arch")
+    variant("dataset", default=False, description="dataset")
+    variant("orc", default=False, description="orc")
+    variant("parquet", default=False, description="parquet")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@13:")
+        depends_on("python@3.7:", when="@7:12")
         depends_on("py-futures", when="@:0.9")
         depends_on("py-numpy@1.14.0:", when="@0.11:0")
         depends_on("py-numpy@1.10:", when="@:0.10")

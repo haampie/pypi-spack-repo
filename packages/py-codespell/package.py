@@ -13,5 +13,7 @@ class PyCodespell(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@2.2.6:")
     # END DEPENDENCIES
 

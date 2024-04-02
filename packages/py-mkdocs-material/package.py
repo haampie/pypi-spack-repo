@@ -15,11 +15,12 @@ class PyMkdocsMaterial(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@:9.2")
         depends_on("py-jinja2@3.0.2:", when="@8.3.1:9.0.0-beta4")
-        depends_on("py-markdown@3.2:", when="@4.6.1:6.1,6.2.2:9.2.6")
-        depends_on("py-mkdocs@1.3:", when="@8.2.8:8.5.4")
-        depends_on("py-mkdocs-material-extensions@1.0.3:", when="@8.2.8:8.5.7")
-        depends_on("py-pygments@2.12:", when="@8.2.12:9.0.0-beta4")
-        depends_on("py-pymdown-extensions@9.4:", when="@8.2.12:8")
+        depends_on("py-markdown@3.2:", when="@:9.2.6")
+        depends_on("py-mkdocs@1.3:", when="@:8.5.4")
+        depends_on("py-mkdocs-material-extensions@1.0.3:", when="@:8.5.7")
+        depends_on("py-pygments@2.12:", when="@:9.0.0-beta4")
+        depends_on("py-pymdown-extensions@9.4:", when="@:8")
     # END DEPENDENCIES
 

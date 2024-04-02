@@ -16,6 +16,7 @@ class PyLoguru(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-aiocontextvars@0.2:", when="@0.4: ^python@:3.6")
         depends_on("py-ansimarkup@1.4:", when="@:0.2")
         depends_on("py-better-exceptions-fork@0.2.1.post6:", when="@:0.2")
         depends_on("py-colorama@0.3.4:", when="@0.3: platform=windows")

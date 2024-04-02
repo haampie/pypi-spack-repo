@@ -11,7 +11,7 @@ class PyArgparseManpage(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("setuptools", default=False)
+    variant("setuptools", default=False, description="setuptools")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

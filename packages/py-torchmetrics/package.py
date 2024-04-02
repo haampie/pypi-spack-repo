@@ -39,6 +39,8 @@ class PyTorchmetrics(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1:")
+        depends_on("python@3.7:", when="@0.9:0")
         depends_on("py-lightning-utilities@0.8:", when="@1.1:")
         depends_on("py-lightning-utilities@0.7:", when="@1:1.0")
         depends_on("py-numpy@1.20.1:", when="@1:")
@@ -51,6 +53,9 @@ class PyTorchmetrics(PythonPackage):
         depends_on("py-torch@1.8.1:", when="@0.11:1.2")
         depends_on("py-torch@1.3.1:", when="@0.2:0.10")
         depends_on("py-typing-extensions", when="@0.10: ^python@:3.8")
+        depends_on("py-typing-extensions", when="@0.9 ^python@:3.7")
+    # END DEPENDENCIES
+
 
         # marker: extra == "-tests"
         # depends_on("py-bert-score@0.3.13:", when="@1.2.1:1.3.0.0")
@@ -78,5 +83,3 @@ class PyTorchmetrics(PythonPackage):
         # depends_on("py-sewar@0.4.4:", when="@1.2.1:1.3.0.0")
         # depends_on("py-statsmodels@0.14:", when="@1.2.1:1.3.0.0")
         # depends_on("py-torch-complex", when="@1.2.1:1.3.0.0")
-    # END DEPENDENCIES
-

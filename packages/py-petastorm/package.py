@@ -17,15 +17,14 @@ class PyPetastorm(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-dill@0.2.1:", when="@0.6:")
+        depends_on("py-dill@0.2.1:")
         depends_on("py-diskcache@3:")
         depends_on("py-fsspec", when="@0.10:")
-        depends_on("py-future@0.10.2:", when="@0.7.3-rc0:")
-        depends_on("py-gcsfs@0.2:", when="@0.9.3-rc0:0.9.4")
+        depends_on("py-future@0.10.2:")
         depends_on("py-numpy@1.13.3:")
-        depends_on("py-packaging@15:", when="@0.7.7-rc6,0.7.7-rc8:")
+        depends_on("py-packaging@15:", when="@0.7.7-rc8:")
         depends_on("py-pandas@0.19.0:")
-        depends_on("py-psutil@4:", when="@0.4.2-rc0:")
+        depends_on("py-psutil@4:")
         depends_on("py-pyarrow@0.17.1:", when="@0.9.7-rc0:")
         depends_on("py-pyarrow@0.12:", when="@0.8.2:0.9.6")
         depends_on("py-pyspark")

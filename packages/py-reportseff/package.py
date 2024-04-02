@@ -14,6 +14,8 @@ class PyReportseff(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@6.7:6.7.0,7:", when="@2.1.2:")
+        depends_on("python@3.7:3", when="@2.4:")
+        depends_on("py-click@6.7:6.7.0,7:")
+        depends_on("py-importlib-metadata@4.8.2:4", when="^python@:3.7")
     # END DEPENDENCIES
 

@@ -16,7 +16,5 @@ class PyAsserts(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@0.13:")
     # END DEPENDENCIES
 

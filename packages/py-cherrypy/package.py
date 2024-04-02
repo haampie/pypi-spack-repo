@@ -14,13 +14,10 @@ class PyCherrypy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-cheroot@6.2.4:", when="@14.1:18.3")
+        depends_on("py-cheroot@6.2.4:", when="@:18.3")
         depends_on("py-more-itertools", when="@17.2:")
-        depends_on("py-portend@2.1.1:", when="@11:")
-        depends_on("py-pywin32", when="@8.1.1,14.0.1:18.6.0 platform=windows")
+        depends_on("py-portend@2.1.1:")
+        depends_on("py-pywin32", when="@:18.6.0 platform=windows")
         depends_on("py-zc-lockfile", when="@17.3:")
-
-        # marker: extra == "this section defines feature flags end-users can use in dependenciesmemcached-session"
-        # depends_on("py-python-memcached@1.58:", when="@8:8.1.0")
     # END DEPENDENCIES
 

@@ -18,11 +18,8 @@ class PyReproject(PythonPackage):
         depends_on("py-astropy-healpix@0.2:", when="@0.6:0.7")
         depends_on("py-numpy@1.13.0:", when="@0.6:0.7")
         depends_on("py-scipy@1.1.0:", when="@0.7.1:0.7")
+    # END DEPENDENCIES
 
-        # marker: platform_machine != "i686" and extra == "test"
-        # depends_on("py-sunpy", when="@0.7:0.7.0")
 
         # marker: platform_machine != "i686" and extra == "testall"
         # depends_on("py-sunpy", when="@0.7.1:0.7")
-    # END DEPENDENCIES
-

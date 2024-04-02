@@ -22,6 +22,7 @@ class PyClickOptionGroup(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3")
         depends_on("py-click@7:", when="@0.5.3:")
         depends_on("py-click@7", when="@:0.5.2")
     # END DEPENDENCIES

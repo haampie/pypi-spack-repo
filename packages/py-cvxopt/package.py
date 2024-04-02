@@ -11,10 +11,10 @@ class PyCvxopt(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("dsdp", default=False)
-    variant("fftw", default=False)
-    variant("glpk", default=False)
-    variant("gsl", default=False)
+    variant("dsdp", default=False, description="dsdp")
+    variant("fftw", default=False, description="fftw")
+    variant("glpk", default=False, description="glpk")
+    variant("gsl", default=False, description="gsl")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

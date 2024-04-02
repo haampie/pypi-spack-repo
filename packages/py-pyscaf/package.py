@@ -6,14 +6,14 @@
 from spack.package import *
 
 class PyPyscaf(PythonPackage):
-    # BEGIN VERSIONS [WHEEL ONLY]
-    version("0.12-alpha4", sha256="8df880c5c0560fa1d2f76b509f964ed14baa0ed884b46616f28be5da4d538dac", url="https://pypi.org/packages/29/e4/fdc8ffca0a993076d240bc95afcc26c73feaec6128dd3073d07aad3cbed9/pyScaf-0.12a4-py2-none-any.whl")
+    # BEGIN VERSIONS
+    version("0.12-alpha4", sha256="3ce3f6fe80bd058831b6a38a56d464ef10f3ebbdd6bc3dcb0d7f127c0b2c1b36", url="https://pypi.org/packages/ee/52/a947347d00c323a87588d6b6d5ad54b3656a5df2f3bcaad477833a43d1f6/pyScaf-0.12a4.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-fastaindex", when="@0.12-alpha4:")
+        depends_on("py-fastaindex")
     # END DEPENDENCIES
 

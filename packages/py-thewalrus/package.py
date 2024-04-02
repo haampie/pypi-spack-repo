@@ -14,10 +14,10 @@ class PyThewalrus(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-dask+delayed", when="@0.12:0.13.0-rc1,0.18:0.19,0.21:")
+        depends_on("py-dask+delayed", when="@:0.13.0-rc1,0.18:0.19,0.21:")
         depends_on("py-numba@0.49.1:", when="@0.19,0.21:")
         depends_on("py-numpy@1.19.2:", when="@0.18:0.19,0.21:")
         depends_on("py-scipy@1.2.1:", when="@:0.13.0-rc1,0.18:0.19,0.21:")
-        depends_on("py-sympy@1.5.1:", when="@0.13:0.13.0-rc1,0.18:0.19,0.21:")
+        depends_on("py-sympy@1.5.1:", when="@:0.13.0-rc1,0.18:0.19,0.21:")
     # END DEPENDENCIES
 

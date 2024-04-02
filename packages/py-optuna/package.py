@@ -14,14 +14,14 @@ class PyOptuna(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.1:")
         depends_on("py-alembic@1.5:", when="@3.0.2:")
         depends_on("py-cmaes@0.9.1:", when="@3.1.0:3.2")
-        depends_on("py-colorlog", when="@2.4:")
-        depends_on("py-numpy", when="@2.4:2.5,2.7:")
-        depends_on("py-packaging@20:", when="@2.4:")
-        depends_on("py-pyyaml", when="@2.9:")
+        depends_on("py-colorlog")
+        depends_on("py-numpy")
+        depends_on("py-packaging@20:")
+        depends_on("py-pyyaml")
         depends_on("py-sqlalchemy@1.3.0:", when="@3.0.2:")
-        depends_on("py-tqdm", when="@2.4:")
-        depends_on("py-typing-extensions@3.10:", when="@3.0.0:3.0.1")
+        depends_on("py-tqdm")
     # END DEPENDENCIES
 

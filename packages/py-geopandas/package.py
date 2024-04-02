@@ -26,6 +26,8 @@ class PyGeopandas(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.14:")
+        depends_on("python@3.8:", when="@0.11:0.13")
+        depends_on("python@3.7:", when="@0.10")
         depends_on("py-descartes", when="@0.2.1:0.3")
         depends_on("py-fiona@1.8.21:", when="@0.14:")
         depends_on("py-fiona@1.8.0:", when="@0.9:0.12")

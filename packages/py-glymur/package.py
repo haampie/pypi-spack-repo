@@ -14,6 +14,7 @@ class PyGlymur(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.9.7:0.12.0")
         depends_on("py-lxml", when="@0.9.2,0.9.7:")
         depends_on("py-numpy", when="@0.9.2,0.9.7:")
         depends_on("py-packaging", when="@0.9.8:")

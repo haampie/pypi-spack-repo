@@ -11,7 +11,7 @@ class PyPydotplus(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("docs", default=False)
+    variant("docs", default=False, description="docs")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

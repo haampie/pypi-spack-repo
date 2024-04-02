@@ -24,6 +24,6 @@ class PyDocutils(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.21-rc1:")
+        depends_on("python@3.7:", when="@0.19-beta1:0.20")
     # END DEPENDENCIES
 

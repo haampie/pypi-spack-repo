@@ -15,8 +15,8 @@ class PyPythonBioformats(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-boto3@1.14.23:", when="@4.0.0-rc4:4.0.0,4.0.4:")
-        depends_on("py-future@0.18.2:", when="@4.0.0-rc4:4.0.0,4.0.4:")
+        depends_on("py-boto3@1.14.23:", when="@4.0.0,4.0.4:")
+        depends_on("py-future@0.18.2:", when="@4.0.0,4.0.4:")
         depends_on("py-python-javabridge@4.0.3:", when="@4.0.4:")
         depends_on("py-python-javabridge@4.0.0", when="@4.0.0")
     # END DEPENDENCIES

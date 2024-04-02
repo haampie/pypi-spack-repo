@@ -16,6 +16,8 @@ class PyMeshio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy", when="@1.8:1.11.9,1.11.12:5.3.4")
+        depends_on("python@3.7:", when="@5:5.3.4")
+        depends_on("py-importlib-metadata", when="^python@:3.7")
+        depends_on("py-numpy", when="@:5.3.4")
     # END DEPENDENCIES
 

@@ -14,6 +14,6 @@ class PyThop(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-torch", when="@:0.0.5,0.0.22.post:0.0.31.post2005141830,0.1:")
+        depends_on("py-torch", when="@:0.0.31.post2005141830,0.1:")
     # END DEPENDENCIES
 

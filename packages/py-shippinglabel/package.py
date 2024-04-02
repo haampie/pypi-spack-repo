@@ -16,10 +16,10 @@ class PyShippinglabel(PythonPackage):
     with default_args(type="run"):
         depends_on("py-apeye@1:", when="@1:")
         depends_on("py-dist-meta@0.1.2:", when="@1:")
-        depends_on("py-dom-toml@0.2.2:", when="@0.13:")
+        depends_on("py-dom-toml@0.2.2:")
         depends_on("py-domdf-python-tools@3.1:", when="@1:")
-        depends_on("py-packaging@20.9:", when="@0.16:")
+        depends_on("py-packaging@20.9:")
         depends_on("py-platformdirs@2.3:", when="@1.2:")
-        depends_on("py-typing-extensions@3.7.4.3:", when="@0.2.3:")
+        depends_on("py-typing-extensions@3.7.4.3:")
     # END DEPENDENCIES
 

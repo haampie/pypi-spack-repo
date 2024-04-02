@@ -36,8 +36,9 @@ class PyGrpcio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-enum34@1.0.4:", when="@0.13:0.14,1.0.0-rc2,1.0.1-rc1:1.0.2-rc0,1.0.3:1.0,1.2:1.19")
-        depends_on("py-futures@2.2:", when="@0.13:0.14,1.0.0-rc2,1.0.1-rc1:1.0.2-rc0,1.0.3:1.0,1.2:1.19")
-        depends_on("py-six@1.5.2:", when="@1.0.0-rc2,1.0.1-rc1:1.0.2-rc0,1.0.3:1.0,1.2:1.30")
+        depends_on("python@3.7:", when="@1.49:")
+        depends_on("py-enum34@1.0.4:", when="@:1.19")
+        depends_on("py-futures@2.2:", when="@:1.19")
+        depends_on("py-six@1.5.2:", when="@:1.30")
     # END DEPENDENCIES
 

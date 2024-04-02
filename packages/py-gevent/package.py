@@ -17,9 +17,8 @@ class PyGevent(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@23:")
         depends_on("py-cffi@1.12.2:", when="@1.5-alpha1:1.5-alpha3,1.5.0:1,23.9.1: platform=windows")
         depends_on("py-greenlet@0.4.14:", when="@1.3.7:1.5-alpha3,1.5.0:1")
-        depends_on("py-zope-event", when="@23.9.1:")
-        depends_on("py-zope-interface", when="@23.9.1:")
     # END DEPENDENCIES
 

@@ -17,14 +17,14 @@ class PyPystan(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@3.9:")
+        depends_on("python@3.8:3", when="@3.4:3.8")
         depends_on("py-aiohttp@3.6.0:3", when="@3:")
         depends_on("py-clikit@0.6:", when="@3.0.0:")
         depends_on("py-cython@0.22:0.25.0,0.25.2:", when="@2.16,2.18:2")
         depends_on("py-httpstan@4.8", when="@3.5")
         depends_on("py-httpstan@4.7", when="@3.4")
         depends_on("py-numpy@1.19.0:1", when="@3.4:")
-        depends_on("py-numpy@1.7:", when="@2.4.0.2,2.8.0.1:2.8,2.10:2.11,2.16,2.18:2")
+        depends_on("py-numpy@1.7:", when="@:2.11,2.16,2.18:2")
         depends_on("py-pysimdjson@3.2:3", when="@3.0.0:3.5")
         depends_on("py-setuptools", when="@3.4:")
     # END DEPENDENCIES

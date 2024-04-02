@@ -18,6 +18,7 @@ class PyAiodns(PythonPackage):
     with default_args(type="run"):
         depends_on("py-pycares@3.0.0:", when="@2.0.0:2")
         depends_on("py-pycares@1:", when="@1.1:1")
+        depends_on("py-typing", when="@2.0.0-beta1:2 ^python@:3.6")
         depends_on("py-typing", when="@1.2:2.0.0-beta0")
     # END DEPENDENCIES
 

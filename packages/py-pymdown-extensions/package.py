@@ -14,6 +14,7 @@ class PyPymdownExtensions(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-markdown@3.2:", when="@7.0-rc1,7.1:10.4")
+        depends_on("python@3.7:", when="@9.2:10.2")
+        depends_on("py-markdown@3.2:", when="@:10.4")
     # END DEPENDENCIES
 

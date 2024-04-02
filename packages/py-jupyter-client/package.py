@@ -30,6 +30,8 @@ class PyJupyterClient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@8.0.0-alpha2:")
+        depends_on("python@3.7:", when="@7.2:8.0.0-alpha1")
         depends_on("py-entrypoints", when="@7.0.0-alpha1:8.0.0-alpha2")
         depends_on("py-importlib-metadata@4.8.3:", when="@8.0.0-alpha3: ^python@:3.9")
         depends_on("py-jupyter-core@4.12:4,5.1:", when="@8.0.0-beta2:")
@@ -38,7 +40,6 @@ class PyJupyterClient(PythonPackage):
         depends_on("py-jupyter-core", when="@4.2:5.3.3")
         depends_on("py-nest-asyncio@1.5.4:", when="@7.2.1:7")
         depends_on("py-nest-asyncio@1.5:", when="@6.1.13:7.1")
-        depends_on("py-pytest", when="@5.2:5.2.0")
         depends_on("py-python-dateutil@2.8.2:", when="@7.2.1:")
         depends_on("py-python-dateutil@2:", when="@5:7.2.0")
         depends_on("py-pywin32", when="@5.3.2:5 platform=windows")

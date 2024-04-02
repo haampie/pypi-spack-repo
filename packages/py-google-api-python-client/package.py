@@ -15,15 +15,16 @@ class PyGoogleApiPythonClient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.53:")
         depends_on("py-google-api-core@1.31.5:1,2.3.1:", when="@2.40:")
         depends_on("py-google-auth@1.19:", when="@2.52:")
-        depends_on("py-google-auth@1.4.1:", when="@1.7:1.8")
+        depends_on("py-google-auth@1.4.1:", when="@:1.8")
         depends_on("py-google-auth-httplib2@0.1:", when="@2.1:")
-        depends_on("py-google-auth-httplib2@0.0.3:", when="@1.7:2.0")
+        depends_on("py-google-auth-httplib2@0.0.3:", when="@:2.0")
         depends_on("py-httplib2@0.15:", when="@1.12.3:")
-        depends_on("py-httplib2@0.9.2:", when="@1.5.5:1.7.11,1.8:1.12.2")
-        depends_on("py-six@1.6.1:", when="@1.5.4:1.12.0")
+        depends_on("py-httplib2@0.9.2:", when="@:1.7.11,1.8:1.12.2")
+        depends_on("py-six@1.6.1:", when="@:1.12.0")
         depends_on("py-uritemplate@3.0.1:", when="@2.34:")
-        depends_on("py-uritemplate@3", when="@1.5.4:2.25")
+        depends_on("py-uritemplate@3", when="@:2.25")
     # END DEPENDENCIES
 

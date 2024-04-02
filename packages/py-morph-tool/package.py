@@ -12,11 +12,13 @@ class PyMorphTool(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("nrn", default=False)
-    variant("parallel", default=False)
-    variant("plot", default=False)
+    variant("nrn", default=False, description="nrn")
+    variant("parallel", default=False, description="parallel")
+    variant("plot", default=False, description="plot")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.9.1:2.9")
     # END DEPENDENCIES
 

@@ -11,15 +11,16 @@ class PyHeat(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("dev", default=False)
-    variant("docutils", default=False)
-    variant("examples", default=False)
-    variant("hdf5", default=False)
-    variant("netcdf", default=False)
+    variant("dev", default=False, description="dev")
+    variant("docutils", default=False, description="docutils")
+    variant("examples", default=False, description="examples")
+    variant("hdf5", default=False, description="hdf5")
+    variant("netcdf", default=False, description="netcdf")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.3:")
         depends_on("py-docutils@0.16:", when="@1:+docutils")
         depends_on("py-h5py@2.8.0:", when="@0.4:+hdf5")
         depends_on("py-matplotlib@3.1.0:", when="@1.2:+examples")

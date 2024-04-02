@@ -16,6 +16,7 @@ class PyPytestMock(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.7:3.11")
         depends_on("py-pytest@5:", when="@3.3:")
         depends_on("py-pytest@2.7:", when="@1.6.1,1.6.3:3.2")
     # END DEPENDENCIES

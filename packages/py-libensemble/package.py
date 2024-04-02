@@ -35,13 +35,13 @@ class PyLibensemble(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("deap", default=False)
-    variant("mpi", default=False)
-    variant("mpmath", default=False)
-    variant("nlopt", default=False)
-    variant("petsc4py", default=False)
-    variant("scipy", default=False)
-    variant("tasmanian", default=False)
+    variant("deap", default=False, description="deap")
+    variant("mpi", default=False, description="mpi")
+    variant("mpmath", default=False, description="mpmath")
+    variant("nlopt", default=False, description="nlopt")
+    variant("petsc4py", default=False, description="petsc4py")
+    variant("scipy", default=False, description="scipy")
+    variant("tasmanian", default=False, description="tasmanian")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

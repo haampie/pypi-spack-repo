@@ -16,6 +16,7 @@ class PyLinearOperator(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:")
         depends_on("py-scipy")
         depends_on("py-torch@1.11:")
     # END DEPENDENCIES

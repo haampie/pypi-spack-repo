@@ -14,16 +14,17 @@ class PyPromptToolkit(PythonPackage):
     version("3.0.17", sha256="4cea7d09e46723885cb8bc54678175453e5071e9449821dce6f017b1d1fbfc1a", url="https://pypi.org/packages/ce/ee/08ceeb759c570bf96b4c636582ebf18c14c3c844a601b2e77b17f462aa6b/prompt_toolkit-3.0.17-py3-none-any.whl")
     version("3.0.16", sha256="62c811e46bd09130fb11ab759012a4ae385ce4fb2073442d1898867a824183bd", url="https://pypi.org/packages/a6/0b/c6de29441b29f8b54d5bbe29a8b223de6e400714ff50e85541bd4c783421/prompt_toolkit-3.0.16-py3-none-any.whl")
     version("3.0.7", sha256="83074ee28ad4ba6af190593d4d4c607ff525272a504eb159199b6dd9f950c950", url="https://pypi.org/packages/2b/c1/53ac685833200eb77ef485c2220dac5bfc255418e660790a9eb5cf3abf25/prompt_toolkit-3.0.7-py3-none-any.whl")
-    version("2.0.10", sha256="e7f8af9e3d70f514373bf41aa51bc33af12a6db3f71461ea47fea985defb2c31", url="https://pypi.org/packages/66/6a/2c0693ec21528c10dfea279662788b28b2a01cce961160791084d975521a/prompt_toolkit-2.0.10-py2-none-any.whl")
-    version("2.0.9", sha256="977c6583ae813a37dc1c2e1b715892461fcbdaa57f6fc62f33a528c4886c8f55", url="https://pypi.org/packages/c8/ab/10d2c114828bd20ca0d757acee37ab5a7bae588139739b24d6cd3f45f8de/prompt_toolkit-2.0.9-py2-none-any.whl")
+    version("2.0.10", sha256="46642344ce457641f28fc9d1c9ca939b63dadf8df128b86f1b9860e59c73a5e4", url="https://pypi.org/packages/87/61/2dfea88583d5454e3a64f9308a686071d58d59a55db638268a6413e1eb6d/prompt_toolkit-2.0.10-py3-none-any.whl")
+    version("2.0.9", sha256="11adf3389a996a6d45cc277580d0d53e8a5afd281d0c9ec71b28e6f121463780", url="https://pypi.org/packages/f7/a7/9b1dd14ef45345f186ef69d175bdd2491c40ab1dfa4b2b3e4352df719ed7/prompt_toolkit-2.0.9-py3-none-any.whl")
     version("1.0.16", sha256="1e71341526efa4b11bb44d323e687a5d9cef204aabe2907e3f0dc1534cda0ecc", url="https://pypi.org/packages/57/a8/a151b6c61718eabe6b4672b6aa760b734989316d62ec1ba4996765e602d4/prompt_toolkit-1.0.16-py3-none-any.whl")
-    version("1.0.9", sha256="b7bbbc221159be8daab91269d48575f6c740000c03d537fc076ee176476c8b4c", url="https://pypi.org/packages/fc/80/6a3cb891118635fd79be261c1f5a5d1fe479f15841526808c5aaa246f1ef/prompt_toolkit-1.0.9-py2-none-any.whl")
+    version("1.0.9", sha256="2a90e971bd5cb958a80ce35507c97e063521b22dfd85ce05b5705c347d1193ed", url="https://pypi.org/packages/0f/da/93c34968e6c3e15e2358b0a75ceddfaf6e322c8a8fd28332ad8952f6ac4c/prompt_toolkit-1.0.9-py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.0.37:")
         depends_on("py-wcwidth", when="@3:")
     # END DEPENDENCIES
 

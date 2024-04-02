@@ -16,6 +16,7 @@ class PyCfgv(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-six", when="@0.0.2:2")
+        depends_on("python@3.8:", when="@3.4:")
+        depends_on("py-six", when="@:2")
     # END DEPENDENCIES
 

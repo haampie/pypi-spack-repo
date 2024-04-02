@@ -13,10 +13,10 @@ class PyHtseq(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("h5ad", default=False)
-    variant("loom", default=False)
-    variant("mtx", default=False)
-    variant("qa", default=False)
+    variant("h5ad", default=False, description="h5ad")
+    variant("loom", default=False, description="loom")
+    variant("mtx", default=False, description="mtx")
+    variant("qa", default=False, description="qa")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

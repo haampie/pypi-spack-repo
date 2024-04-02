@@ -23,6 +23,8 @@ class PyGpytorch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.9:")
+        depends_on("python@3.7:", when="@1.7:1.8")
         depends_on("py-linear-operator@0.4:", when="@1.10")
         depends_on("py-linear-operator@0.2:", when="@1.9.1:1.9")
         depends_on("py-linear-operator@0.1.1:", when="@1.9:1.9.0")

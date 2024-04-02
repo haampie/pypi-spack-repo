@@ -14,8 +14,7 @@ class PySnakemakeExecutorPluginDrmaa(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:", when="@0.1.1:")
-        depends_on("python@3.9:", when="@:0.1.0")
+        depends_on("python@3.11:3", when="@0.1.1:")
         depends_on("py-drmaa@0.7.9:")
         depends_on("py-snakemake-interface-common@1.13:", when="@0.1.1:")
         depends_on("py-snakemake-interface-executor-plugins@8.1:8", when="@0.1.2:0.1.3")

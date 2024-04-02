@@ -14,10 +14,7 @@ class PyFastcore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-matplotlib", when="@:0.0.1")
-        depends_on("py-numpy", when="@:1.0.4")
-        depends_on("py-packaging", when="@0.1.25:")
-        depends_on("py-pandas", when="@:0.1.5")
-        depends_on("py-pip", when="@0.1.25:")
+        depends_on("py-packaging")
+        depends_on("py-pip")
     # END DEPENDENCIES
 

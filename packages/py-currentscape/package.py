@@ -14,6 +14,7 @@ class PyCurrentscape(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:")
         depends_on("py-matplotlib")
         depends_on("py-numpy")
         depends_on("py-palettable")

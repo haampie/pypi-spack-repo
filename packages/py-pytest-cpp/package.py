@@ -15,7 +15,7 @@ class PyPytestCpp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-colorama", when="@0.4.1:")
+        depends_on("py-colorama")
         depends_on("py-pytest@:5.3,5.4.2:", when="@1.2.1:2.1")
     # END DEPENDENCIES
 

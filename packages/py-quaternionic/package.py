@@ -14,11 +14,10 @@ class PyQuaternionic(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@1.0.6")
-        depends_on("python@:3.10", when="@1.0.2:1.0.5")
         depends_on("python@:3.9", when="@0.3:1.0.1")
-        depends_on("py-black@20.8-beta1:", when="@0.1.10:1.0.1")
-        depends_on("py-numba@0.50.0:", when="@0.1.10:1.0.1")
+        depends_on("py-black@20.8-beta1:", when="@:1.0.1")
+        depends_on("py-importlib-metadata@1:", when="@0.3.4:1.0.1 ^python@:3.7")
+        depends_on("py-numba@0.50.0:", when="@:1.0.1")
         depends_on("py-numpy@1.13.0:1", when="@:1.0.1")
         depends_on("py-scipy@1.0.0:", when="@:1.0.6")
     # END DEPENDENCIES

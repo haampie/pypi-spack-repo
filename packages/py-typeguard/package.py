@@ -16,6 +16,7 @@ class PyTypeguard(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3:4.1.2")
         depends_on("py-importlib-metadata@3.6:", when="@3: ^python@:3.9")
         depends_on("py-typing-extensions@4.4:", when="@3.0.0-rc1:4.0.0 ^python@:3.10")
     # END DEPENDENCIES

@@ -14,8 +14,8 @@ class PyAzureMgmtRdbms(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-azure-common@1.1:", when="@0.2:")
-        depends_on("py-msrest@0.5:", when="@1.3:8.1.0-beta2")
-        depends_on("py-msrestazure@0.4.32:", when="@1.3:3")
+        depends_on("py-azure-common@1.1:")
+        depends_on("py-msrest@0.5:", when="@:8.1.0-beta2")
+        depends_on("py-msrestazure@0.4.32:", when="@:3")
     # END DEPENDENCIES
 

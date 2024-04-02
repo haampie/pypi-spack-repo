@@ -11,8 +11,8 @@ class PyAtropos(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("pysam", default=False)
-    variant("tqdm", default=False)
+    variant("pysam", default=False, description="pysam")
+    variant("tqdm", default=False, description="tqdm")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

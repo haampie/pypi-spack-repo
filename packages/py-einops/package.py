@@ -17,5 +17,8 @@ class PyEinops(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.6.2-rc0:")
+        depends_on("python@3.7:", when="@0.5:0.6.1")
     # END DEPENDENCIES
 

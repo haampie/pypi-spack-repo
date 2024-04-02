@@ -16,6 +16,6 @@ class PyGmxapi(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.8", when="@0.1.0-beta2:0.2.0-alpha1")
+        depends_on("python@3.7:")
     # END DEPENDENCIES
 

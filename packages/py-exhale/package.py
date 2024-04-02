@@ -14,6 +14,7 @@ class PyExhale(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.2:0.3.6")
         depends_on("py-beautifulsoup4", when="@0.2.4:")
         depends_on("py-breathe@4.32:", when="@0.3:0.3.6")
         depends_on("py-docutils@0.12:", when="@0.3:0.3.6")

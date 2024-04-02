@@ -21,21 +21,22 @@ class PyJupyterServer(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("typescript", default=False)
+    variant("typescript", default=False, description="typescript")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2.0.0-rc4:")
+        depends_on("python@3.7:", when="@1.13.2:2.0.0-rc3")
         depends_on("py-anyio@3.1:", when="@1.15:1.16,2.2.1:")
         depends_on("py-anyio@3.1:3", when="@1.8:1.13,1.17:2.2.0")
-        depends_on("py-anyio@2.0.2:", when="@1.1:1.6.2")
+        depends_on("py-anyio@2.0.2:", when="@:1.6.2")
         depends_on("py-argon2-cffi", when="@1.5:")
-        depends_on("py-ipykernel", when="@:1.0.0-rc0")
         depends_on("py-ipython-genutils", when="@:1.15.2")
         depends_on("py-jinja2")
         depends_on("py-jupyter-client@7.4.4:", when="@2.0.0-rc4:")
         depends_on("py-jupyter-client@6.1.12:", when="@1.16:2.0.0-rc3")
-        depends_on("py-jupyter-client@6.1.1:", when="@0.3:1.15")
+        depends_on("py-jupyter-client@6.1.1:", when="@:1.15")
         depends_on("py-jupyter-core@4.12:4,5.1:", when="@1.23.5:1,2.0.1:")
         depends_on("py-jupyter-core@4.7.0:", when="@1.16:1.23.4,2:2.0.0-rc3")
         depends_on("py-jupyter-core@4.6:", when="@1.7.0-alpha2:1.15")
@@ -43,29 +44,29 @@ class PyJupyterServer(PythonPackage):
         depends_on("py-jupyter-events@0.6:", when="@2.6:2.10.0")
         depends_on("py-jupyter-server-terminals", when="@2:")
         depends_on("py-nbconvert@6.4.4:", when="@1.16:")
-        depends_on("py-nbconvert", when="@:0.1,0.3:1.15")
+        depends_on("py-nbconvert", when="@:1.15")
         depends_on("py-nbformat@5.3.0:", when="@2.0.0-rc8:")
         depends_on("py-nbformat@5.2:", when="@1.15:2.0.0-rc7")
         depends_on("py-nbformat", when="@:1.13")
         depends_on("py-overrides", when="@2.6:")
         depends_on("py-packaging", when="@1.13.2:")
         depends_on("py-prometheus-client")
-        depends_on("py-pywin32", when="@0.2:1.7.0-alpha2 platform=windows")
+        depends_on("py-pywin32", when="@:1.7.0-alpha2 platform=windows")
         depends_on("py-pyzmq@24:", when="@2.0.0-rc4:")
         depends_on("py-pyzmq@17.0.0:", when="@:2.0.0-rc3")
         depends_on("py-requests-unixsocket", when="@1.9:1.11.1")
         depends_on("py-send2trash", when="@:2.7.0")
-        depends_on("py-terminado@0.8.3:", when="@0.3:")
+        depends_on("py-terminado@0.8.3:")
         depends_on("py-tornado@6.2:", when="@2.0.0-rc4:")
-        depends_on("py-tornado@6.1:", when="@1.0.9:2.0.0-rc3")
+        depends_on("py-tornado@6.1:", when="@:2.0.0-rc3")
         depends_on("py-traitlets@5.6:", when="@2.0.1:")
         depends_on("py-traitlets@5.1:", when="@1.16:2.0.0-rc4")
         depends_on("py-traitlets@5.0.0:", when="@1.13.3:1.15")
         depends_on("py-traitlets@4.2.1:", when="@:1.13.2")
         depends_on("py-websocket-client", when="@1.7:")
+    # END DEPENDENCIES
+
 
         # marker: os_name == "nt"
         # depends_on("py-pywinpty", when="@1.15:")
         # depends_on("py-pywinpty@:1", when="@1.13.5:1.13")
-    # END DEPENDENCIES
-

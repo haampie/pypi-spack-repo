@@ -15,6 +15,6 @@ class PyFabric(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-invoke@1.3:1", when="@2.5:2")
-        depends_on("py-paramiko@2.4:", when="@2:")
+        depends_on("py-paramiko@2.4:")
     # END DEPENDENCIES
 

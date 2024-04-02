@@ -16,6 +16,7 @@ class PyTwine(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4")
         depends_on("py-importlib-metadata@3.6:", when="@3.4:")
         depends_on("py-keyring@15.1:", when="@3:")
         depends_on("py-pkginfo@1.8.1:", when="@3.7:")
@@ -26,7 +27,7 @@ class PyTwine(PythonPackage):
         depends_on("py-requests-toolbelt@0.8,0.9.1:", when="@1.13:")
         depends_on("py-rfc3986@1.4:", when="@3.2:")
         depends_on("py-rich@12.0.0:", when="@4:")
-        depends_on("py-setuptools@0.7:", when="@1.6:3.3")
+        depends_on("py-setuptools@0.7:", when="@:3.3")
         depends_on("py-tqdm@4.14:", when="@1.10:3")
         depends_on("py-urllib3@1.26:", when="@3.8:")
     # END DEPENDENCIES

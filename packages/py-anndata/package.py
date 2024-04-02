@@ -14,12 +14,14 @@ class PyAnndata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.10:")
+        depends_on("python@3.7:", when="@0.8")
         depends_on("py-h5py@3.0.0:", when="@0.8:0.10.5")
-        depends_on("py-natsort", when="@0.5:0.5.1,0.6.1:0.6.4,0.6.15,0.6.18,0.6.22-rc1,0.7-rc1,0.7:")
+        depends_on("py-importlib-metadata@0.7:", when="@:0.8 ^python@:3.7")
+        depends_on("py-natsort")
         depends_on("py-numpy@1.16.5:", when="@0.7.6:0.10.5")
         depends_on("py-packaging@20:", when="@0.7.6:")
         depends_on("py-pandas@1.1.1:", when="@0.7.6:0.9.1")
         depends_on("py-scipy@1.4.1:", when="@0.7.6:0.10.5")
+        depends_on("py-typing-extensions", when="@0.8 ^python@:3.7")
     # END DEPENDENCIES
 

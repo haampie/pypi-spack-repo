@@ -15,6 +15,7 @@ class PyGoogleCloudCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.3.2:")
         depends_on("py-google-api-core@1.31.6:1,2.3.1:", when="@2.3.2:")
         depends_on("py-google-api-core@1.14:1", when="@1.0.3:1.1")
         depends_on("py-google-auth@1.25:", when="@2.2.3:")

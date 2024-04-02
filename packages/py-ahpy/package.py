@@ -14,6 +14,7 @@ class PyAhpy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3")
         depends_on("py-numpy")
         depends_on("py-scipy")
     # END DEPENDENCIES

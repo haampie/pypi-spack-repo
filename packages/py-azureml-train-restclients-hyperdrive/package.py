@@ -16,8 +16,9 @@ class PyAzuremlTrainRestclientsHyperdrive(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-msrest@0.5.1:", when="@1:1.0.0,1.0.39:")
-        depends_on("py-msrestazure@0.4.33:", when="@1:1.0.0,1.0.39:")
-        depends_on("py-requests@2.19.1:", when="@1:1.0.0,1.0.39:")
+        depends_on("python@:3", when="@1.2:1.47")
+        depends_on("py-msrest@0.5.1:")
+        depends_on("py-msrestazure@0.4.33:")
+        depends_on("py-requests@2.19.1:")
     # END DEPENDENCIES
 

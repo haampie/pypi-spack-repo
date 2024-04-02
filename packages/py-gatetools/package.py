@@ -16,6 +16,7 @@ class PyGatetools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.12:")
         depends_on("py-click", when="@:0.9.3,0.9.5:")
         depends_on("py-colorama", when="@0.11:")
         depends_on("py-colored", when="@:0.9.3,0.9.5:")

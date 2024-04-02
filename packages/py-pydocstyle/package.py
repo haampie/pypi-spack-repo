@@ -13,11 +13,12 @@ class PyPydocstyle(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("toml", default=False)
+    variant("toml", default=False, description="toml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-importlib-metadata@2:4", when="@6.2: ^python@:3.7")
         depends_on("py-snowballstemmer@2.2:", when="@6.2:")
         depends_on("py-snowballstemmer", when="@4:6.1")
         depends_on("py-toml@0.10.2:", when="@6.2:6.2.0+toml")

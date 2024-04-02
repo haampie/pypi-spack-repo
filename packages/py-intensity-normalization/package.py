@@ -14,8 +14,6 @@ class PyIntensityNormalization(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.2.4:")
-        depends_on("python@3.9,3.12:", when="@2.2:2.2.3")
         depends_on("py-matplotlib", when="@:2.1.2")
         depends_on("py-nibabel", when="@:2.1.2")
         depends_on("py-numpy", when="@:2.1.2")

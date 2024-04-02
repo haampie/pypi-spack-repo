@@ -18,6 +18,7 @@ class PyAwscli(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.25:1.31")
         depends_on("py-botocore@1.31.41", when="@1.29.41")
         depends_on("py-botocore@1.29.84", when="@1.27.84")
         depends_on("py-botocore@1.29.56", when="@1.27.56")

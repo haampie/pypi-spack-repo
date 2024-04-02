@@ -17,6 +17,7 @@ class PyDuecredit(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-citeproc-py@0.4:", when="@0.9.1:")
+        depends_on("py-importlib-metadata", when="@0.9.1: ^python@:3.7")
         depends_on("py-requests", when="@0.9.1:")
         depends_on("py-six", when="@0.9.1:0.9.2")
     # END DEPENDENCIES

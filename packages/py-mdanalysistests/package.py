@@ -20,6 +20,7 @@ class PyMdanalysistests(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.5:")
+        depends_on("python@3.8:", when="@2.2:2.4")
         depends_on("py-hypothesis", when="@2.7:")
         depends_on("py-mdanalysis@2.7:", when="@2.7:")
         depends_on("py-pytest@3.3:", when="@2.7:")

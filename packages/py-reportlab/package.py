@@ -16,8 +16,7 @@ class PyReportlab(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-freetype-py@2.3", when="@4:4.0.0")
+        depends_on("python@3.7:3", when="@3.6.9:")
         depends_on("py-pillow@9:", when="@4:")
-        depends_on("py-rlpycairo@0.2:", when="@4:4.0.0")
     # END DEPENDENCIES
 

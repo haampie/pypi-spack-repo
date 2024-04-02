@@ -7,8 +7,8 @@ from spack.package import *
 
 class PyNdgHttpsclient(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("0.5.1", sha256="d2c7225f6a1c6cf698af4ebc962da70178a99bcde24ee6d1961c4f3338130d57", url="https://pypi.org/packages/bf/b2/26470fde7ff55169df8e071fb42cb1f83e22bd952520ab2b5c5a5edc2acd/ndg_httpsclient-0.5.1-py2-none-any.whl")
-    version("0.5.0", sha256="683b7a17e8b093e422562e8b089a3ad5d87e00f8f8765aac128791ab9140eef3", url="https://pypi.org/packages/4b/a1/73ba15c5e56be36f184b0eabf7ea0873ea54022238313757e55781e8a2ad/ndg_httpsclient-0.5.0-py2-none-any.whl")
+    version("0.5.1", sha256="dd174c11d971b6244a891f7be2b32ca9853d3797a72edb34fa5d7b07d8fff7d4", url="https://pypi.org/packages/fb/67/c2f508c00ed2a6911541494504b7cac16fe0b0473912568df65fd1801132/ndg_httpsclient-0.5.1-py3-none-any.whl")
+    version("0.5.0", sha256="8647bb775de60e79fe795eeee602d705de4500a5b1a3d2224247c217dfa200a9", url="https://pypi.org/packages/78/60/1458ed478eb5777498ca57f4fabf2cf9328ac43e5f6db7839cf73704f3a6/ndg_httpsclient-0.5.0-py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS

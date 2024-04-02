@@ -14,8 +14,9 @@ class PyPytestMypy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-mypy@0.700:", when="@0.8: ^python@:3.8")
-        depends_on("py-mypy@0.700:", when="@0.4.2:0.7")
+        depends_on("python@:3", when="@0.3.3:0.6")
+        depends_on("py-mypy@0.501:", when="@0.4.2: ^python@:3.7")
+        depends_on("py-mypy@0.700:", when="@0.4.2:0.7 ^python@3.8:")
         depends_on("py-pytest@2.8:", when="@0.3.3:0.4")
     # END DEPENDENCIES
 

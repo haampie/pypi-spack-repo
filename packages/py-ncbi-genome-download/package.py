@@ -15,7 +15,7 @@ class PyNcbiGenomeDownload(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-appdirs", when="@0.2.7:")
-        depends_on("py-requests@2.4.3:", when="@0.2.4:")
+        depends_on("py-requests@2.4.3:")
         depends_on("py-tqdm", when="@0.3.1:")
     # END DEPENDENCIES
 

@@ -32,6 +32,9 @@ class PyImportlibMetadata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@6.8:")
+        depends_on("python@3.7:", when="@4.9:6.7")
+        depends_on("py-typing-extensions@3.6.5:", when="@3.2: ^python@:3.7")
         depends_on("py-zipp@0.5:", when="@0.11:")
     # END DEPENDENCIES
 

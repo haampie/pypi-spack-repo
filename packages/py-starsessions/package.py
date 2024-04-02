@@ -15,8 +15,9 @@ class PyStarsessions(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:3", when="@2.0.0-alpha1:")
+        depends_on("python@:3", when="@:1")
         depends_on("py-itsdangerous@2.0.1:")
-        depends_on("py-redis@4.2:", when="@2.1:2.1.0")
         depends_on("py-starlette", when="@1.1.4:")
     # END DEPENDENCIES
 

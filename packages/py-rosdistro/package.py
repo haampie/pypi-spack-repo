@@ -14,9 +14,9 @@ class PyRosdistro(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-catkin-pkg", when="@0.6.9:")
-        depends_on("py-pyyaml", when="@0.6.9:")
-        depends_on("py-rospkg", when="@0.6.9:")
-        depends_on("py-setuptools", when="@0.6.9:")
+        depends_on("py-catkin-pkg")
+        depends_on("py-pyyaml")
+        depends_on("py-rospkg")
+        depends_on("py-setuptools")
     # END DEPENDENCIES
 

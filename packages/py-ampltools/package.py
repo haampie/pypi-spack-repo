@@ -14,6 +14,6 @@ class PyAmpltools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-requests", when="@0.4.2-beta0:")
+        depends_on("py-requests")
     # END DEPENDENCIES
 

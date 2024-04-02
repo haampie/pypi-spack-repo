@@ -14,8 +14,7 @@ class PySnakemakeStoragePluginS3(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:", when="@0.2.3:")
-        depends_on("python@3.9:", when="@:0.2.1")
+        depends_on("python@3.11:3", when="@0.2.3:")
         depends_on("py-boto3@1.33:", when="@0.2.9:")
         depends_on("py-botocore@1.33:", when="@0.2.9:")
         depends_on("py-snakemake-interface-common@1.14:", when="@0.2.8:")

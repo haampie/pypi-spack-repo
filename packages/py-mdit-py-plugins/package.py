@@ -15,6 +15,8 @@ class PyMditPyPlugins(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.1:0.3")
+        depends_on("python@:3", when="@:0.3.0")
         depends_on("py-markdown-it-py@1.0.0:2", when="@0.3")
         depends_on("py-markdown-it-py@1.0.0:1", when="@0.2.7:0.2")
     # END DEPENDENCIES

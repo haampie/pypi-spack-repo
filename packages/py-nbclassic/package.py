@@ -17,6 +17,7 @@ class PyNbclassic(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.6:")
         depends_on("py-argon2-cffi", when="@0.4:")
         depends_on("py-ipykernel", when="@0.4:")
         depends_on("py-ipython-genutils", when="@0.4:")
@@ -28,7 +29,7 @@ class PyNbclassic(PythonPackage):
         depends_on("py-nbconvert@5.0.0:", when="@0.4:")
         depends_on("py-nbformat", when="@0.4:")
         depends_on("py-nest-asyncio@1.5:", when="@0.4:")
-        depends_on("py-notebook@:6", when="@0.0.3:0.3")
+        depends_on("py-notebook@:6", when="@:0.2.0,0.2.2:0.3")
         depends_on("py-notebook-shim@0.2.3:", when="@0.5.6:")
         depends_on("py-notebook-shim@0.1:", when="@0.3.6:0.5.5")
         depends_on("py-prometheus-client", when="@0.4:")

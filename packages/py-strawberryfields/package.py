@@ -14,18 +14,18 @@ class PyStrawberryfields(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-networkx@2:", when="@0.7.3:")
-        depends_on("py-numba", when="@0.13:")
-        depends_on("py-numpy@1.17.4:", when="@0.12:")
-        depends_on("py-python-dateutil@2.8:", when="@0.13:")
+        depends_on("py-networkx@2:")
+        depends_on("py-numba")
+        depends_on("py-numpy@1.17.4:")
+        depends_on("py-python-dateutil@2.8:")
         depends_on("py-quantum-blackbird@0.3:", when="@0.17:")
         depends_on("py-quantum-xir@0.1.1:", when="@0.21:")
-        depends_on("py-requests@2.22:", when="@0.13:")
-        depends_on("py-scipy@1.0.0:", when="@0.7.3:")
-        depends_on("py-sympy@1.5:", when="@0.13:")
+        depends_on("py-requests@2.22:")
+        depends_on("py-scipy@1.0.0:")
+        depends_on("py-sympy@1.5:")
         depends_on("py-thewalrus@0.18:", when="@0.21:")
-        depends_on("py-toml", when="@0.11:")
-        depends_on("py-urllib3@1.25.3:", when="@0.13:")
+        depends_on("py-toml")
+        depends_on("py-urllib3@1.25.3:")
         depends_on("py-xanadu-cloud-client@0.2.1:", when="@0.23:")
     # END DEPENDENCIES
 

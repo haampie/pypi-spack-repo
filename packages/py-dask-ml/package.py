@@ -11,28 +11,28 @@ class PyDaskMl(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("docs", default=False)
-    variant("xgboost", default=False)
+    variant("docs", default=False, description="docs")
+    variant("xgboost", default=False, description="xgboost")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-dask@2.4:+array+dataframe", when="@1.2,1.5:")
         depends_on("py-dask-glm@0.2:", when="@1.1:1.2,1.5:")
-        depends_on("py-dask-xgboost", when="@0.9,0.11:1.2,1.5:+xgboost")
+        depends_on("py-dask-xgboost", when="@:1.2,1.5:+xgboost")
         depends_on("py-distributed@2.4:", when="@1.2,1.5:")
-        depends_on("py-multipledispatch@0.4.9:", when="@0.9,0.11:1.2,1.5:")
-        depends_on("py-nbsphinx", when="@0.9,0.11:1.2,1.5:+docs")
-        depends_on("py-numba", when="@0.9,0.11:1.2,1.5:1.8")
+        depends_on("py-multipledispatch@0.4.9:", when="@:1.2,1.5:")
+        depends_on("py-nbsphinx", when="@:1.2,1.5:+docs")
+        depends_on("py-numba", when="@:1.2,1.5:1.8")
         depends_on("py-numpy@1.17.3:", when="@1.2,1.5:1,2021.10")
-        depends_on("py-numpydoc", when="@0.9,0.11:1.2,1.5:+docs")
-        depends_on("py-packaging", when="@0.9,0.11:1.2,1.5:")
+        depends_on("py-numpydoc", when="@:1.2,1.5:+docs")
+        depends_on("py-packaging", when="@:1.2,1.5:")
         depends_on("py-pandas@0.24.2:", when="@1.7:")
         depends_on("py-scikit-learn@0.23.0:", when="@1.5:1")
-        depends_on("py-scipy", when="@0.9,0.11:1.2,1.5:")
-        depends_on("py-sphinx", when="@0.9,0.11:1.2,1.5:+docs")
-        depends_on("py-sphinx-gallery", when="@0.9,0.11:1.2,1.5:+docs")
-        depends_on("py-sphinx-rtd-theme", when="@0.9,0.11:1.2,1.5:+docs")
-        depends_on("py-xgboost", when="@0.9,0.11:1.2,1.5:+xgboost")
+        depends_on("py-scipy", when="@:1.2,1.5:")
+        depends_on("py-sphinx", when="@:1.2,1.5:+docs")
+        depends_on("py-sphinx-gallery", when="@:1.2,1.5:+docs")
+        depends_on("py-sphinx-rtd-theme", when="@:1.2,1.5:+docs")
+        depends_on("py-xgboost", when="@:1.2,1.5:+xgboost")
     # END DEPENDENCIES
 

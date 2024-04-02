@@ -28,6 +28,7 @@ class PySympy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.11-rc1:")
         depends_on("py-mpmath@0.19:", when="@1.4:1.5-beta1,1.5:")
     # END DEPENDENCIES
 

@@ -14,9 +14,9 @@ class PyToytree(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-future", when="@0.1.9:")
+        depends_on("py-future")
         depends_on("py-numpy", when="@1.2:")
-        depends_on("py-requests", when="@0.1.9:")
+        depends_on("py-requests")
         depends_on("py-toyplot", when="@1.2:")
     # END DEPENDENCIES
 

@@ -14,7 +14,7 @@ class PyVcstool(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pyyaml", when="@0.1.36:")
-        depends_on("py-setuptools", when="@0.1.36:")
+        depends_on("py-pyyaml")
+        depends_on("py-setuptools")
     # END DEPENDENCIES
 

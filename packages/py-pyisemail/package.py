@@ -14,6 +14,7 @@ class PyPyisemail(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2:")
         depends_on("py-dnspython@2.0.0:", when="@2:")
     # END DEPENDENCIES
 

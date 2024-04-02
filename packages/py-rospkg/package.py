@@ -14,8 +14,8 @@ class PyRospkg(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-catkin-pkg", when="@1.1.5:")
+        depends_on("py-catkin-pkg")
         depends_on("py-distro", when="@1.2.1:1.2.4,1.2.6:1.3")
-        depends_on("py-pyyaml", when="@1.1.5:")
+        depends_on("py-pyyaml")
     # END DEPENDENCIES
 

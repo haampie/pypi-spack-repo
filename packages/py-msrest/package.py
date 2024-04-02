@@ -17,9 +17,9 @@ class PyMsrest(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-azure-core@1.24:", when="@0.7:")
-        depends_on("py-certifi@2017.4:", when="@0.4.8:")
-        depends_on("py-isodate@0.6:", when="@0.4.26:")
-        depends_on("py-requests@2.16:", when="@0.5:")
-        depends_on("py-requests-oauthlib@0.5:", when="@0.0.2:")
+        depends_on("py-certifi@2017.4:")
+        depends_on("py-isodate@0.6:")
+        depends_on("py-requests@2.16:")
+        depends_on("py-requests-oauthlib@0.5:")
     # END DEPENDENCIES
 

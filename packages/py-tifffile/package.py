@@ -19,6 +19,8 @@ class PyTifffile(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2023.7.18:")
+        depends_on("python@3.8:", when="@2022:2023.7.10")
+        depends_on("python@3.7:", when="@2020.9.22:2021")
         depends_on("py-numpy", when="@2023:")
         depends_on("py-numpy@1.19.2:", when="@2022")
         depends_on("py-numpy@1.15.1:", when="@2020:2021")

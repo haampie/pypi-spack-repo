@@ -15,13 +15,13 @@ class PyNetpyne(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bokeh", when="@0.9.8:")
-        depends_on("py-future", when="@0.8:")
+        depends_on("py-future")
         depends_on("py-lfpykit", when="@1.0.2:")
         depends_on("py-matplotlib@:3.5.1", when="@1.0.3:1.0.4.1")
-        depends_on("py-matplotlib-scalebar", when="@0.9.1:")
-        depends_on("py-numpy", when="@0.7.7:")
-        depends_on("py-pandas", when="@0.9.2:0.9.3,0.9.8:")
+        depends_on("py-matplotlib-scalebar")
+        depends_on("py-numpy")
+        depends_on("py-pandas", when="@0.9.8:")
         depends_on("py-schema", when="@1.0.1:")
-        depends_on("py-scipy", when="@0.7.7:")
+        depends_on("py-scipy")
     # END DEPENDENCIES
 

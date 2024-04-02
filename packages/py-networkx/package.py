@@ -24,29 +24,24 @@ class PyNetworkx(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("default", default=False)
-    variant("extra", default=False)
+    variant("default", default=False, description="default")
+    variant("extra", default=False, description="extra")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@3.2-rc0:")
+        depends_on("python@3.8:", when="@2.7-rc1:3.1")
+        depends_on("python@3.7:", when="@2.6-rc1:2.6")
         depends_on("py-decorator@4.3:4", when="@2.5.1:2.5")
         depends_on("py-decorator@4.3:", when="@2.4-rc2:2.5.0")
         depends_on("py-lxml@4.6:", when="@2.7-rc1:+extra")
         depends_on("py-lxml@4.5:", when="@2.6-rc1:2.6+extra")
         depends_on("py-matplotlib@3.4.0:", when="@2.7-rc1:3.1+default")
         depends_on("py-matplotlib@3.3.0:", when="@2.6.2:2.6+default")
-        depends_on("py-matplotlib@3.3.0:", when="@2.6-rc2:2.6.1")
-        depends_on("py-matplotlib@3.3.0:", when="@2.6-rc1 ^python@:3.9")
         depends_on("py-numpy@1.20.0:", when="@3:3.1+default")
         depends_on("py-numpy@1.19.0:", when="@2.6.2:2+default")
-        depends_on("py-numpy@1.19.0:", when="@2.6-rc2:2.6.1")
-        depends_on("py-numpy@1.19.0:", when="@2.6-rc1 ^python@:3.9")
         depends_on("py-pandas@1.3.0:", when="@2.7-rc1:3.1+default")
         depends_on("py-pandas@1.1.0:", when="@2.6.2:2.6+default")
-        depends_on("py-pandas@1.1.0:", when="@2.6-rc2:2.6.1")
-        depends_on("py-pandas@1.1.0:", when="@2.6-rc1 ^python@:3.9")
         depends_on("py-pydot@1.4.2:", when="@2.7-rc1:+extra")
         depends_on("py-pydot@1.4.1:", when="@2.6-rc1:2.6+extra")
         depends_on("py-pygraphviz@1.10:", when="@3:3.1+extra")
@@ -54,8 +49,6 @@ class PyNetworkx(PythonPackage):
         depends_on("py-pygraphviz@1.7:", when="@2.6-rc1:2.6+extra")
         depends_on("py-scipy@1.8.0:", when="@2.7-rc1:3.1+default")
         depends_on("py-scipy@1.5.0:1.6.0,1.6.2:", when="@2.6.2:2.6+default")
-        depends_on("py-scipy@1.5.0:1.6.0,1.6.2:", when="@2.6-rc2:2.6.1")
-        depends_on("py-scipy@1.5.0:1.6.0,1.6.2:", when="@2.6-rc1 ^python@:3.9")
         depends_on("py-sympy@1.10:", when="@2.8-rc1:+extra")
     # END DEPENDENCIES
 

@@ -19,11 +19,12 @@ class PyGoogleApiCore(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("grpc", default=False)
+    variant("grpc", default=False, description="grpc")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.33:1,2.9:")
         depends_on("py-google-auth@2.14.1:", when="@2.11:")
         depends_on("py-google-auth@0.4:1", when="@:1.16")
         depends_on("py-googleapis-common-protos@1.56.2:", when="@1.33:1,2.8.1:")
@@ -34,8 +35,8 @@ class PyGoogleApiCore(PythonPackage):
         depends_on("py-grpcio-status@1.49.1:", when="@2.11:+grpc ^python@3.11:")
         depends_on("py-grpcio-status@1.33.2:", when="@1.33:1,2.2:+grpc")
         depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0-rc2,4.21.6:4", when="@2.10.2:")
-        depends_on("py-protobuf@3.4:", when="@1.4.1:1.20.0")
-        depends_on("py-pytz", when="@0.1.2:1.32")
+        depends_on("py-protobuf@3.4:", when="@:1.20.0")
+        depends_on("py-pytz", when="@:1.32")
         depends_on("py-requests@2.18:")
         depends_on("py-setuptools@34:", when="@:1.24")
         depends_on("py-six@1.10:", when="@:1.22.2")

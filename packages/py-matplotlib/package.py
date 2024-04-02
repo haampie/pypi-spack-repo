@@ -51,17 +51,19 @@ class PyMatplotlib(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("animation", default=False)
-    variant("backend", default=False)
-    variant("fonts", default=False)
-    variant("image", default=False)
-    variant("latex", default=False)
-    variant("movies", default=False)
+    variant("animation", default=False, description="animation")
+    variant("backend", default=False, description="backend")
+    variant("fonts", default=False, description="fonts")
+    variant("image", default=False, description="image")
+    variant("latex", default=False, description="latex")
+    variant("movies", default=False, description="movies")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@3.8:")
+        depends_on("python@3.8:", when="@3.6:3.7")
+        depends_on("python@3.7:", when="@3.4:3.5")
         depends_on("py-contourpy@1.0.1:", when="@3.7.3:3.7,3.8.0:")
         depends_on("py-cycler@0.10:", when="@2:2.0.0-beta1,3.7.3:3.7,3.8.0:")
         depends_on("py-fonttools@4.22:", when="@3.7.3:3.7,3.8.0:")

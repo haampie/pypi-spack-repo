@@ -15,11 +15,12 @@ class PyNetcdf4(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("mpi", default=False)
+    variant("mpi", default=False, description="mpi")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.6.3:")
         depends_on("py-cftime", when="@1.4:1.5.3")
         depends_on("py-numpy@1.7:", when="@1.3:1.5.3")
     # END DEPENDENCIES

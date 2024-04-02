@@ -14,9 +14,9 @@ class PyAdal(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-cryptography@1.1:", when="@0.4.3:0.4.5,0.4.7:")
-        depends_on("py-pyjwt@1:", when="@0.4.3:0.4.5,0.4.7:1.2.5")
-        depends_on("py-python-dateutil@2:", when="@0.4.3:0.4.5,0.4.7:1.2.5")
-        depends_on("py-requests@2:", when="@0.4.4:0.4.5,0.4.7:1.2.5")
+        depends_on("py-cryptography@1.1:")
+        depends_on("py-pyjwt@1:", when="@:1.2.5")
+        depends_on("py-python-dateutil@2:", when="@:1.2.5")
+        depends_on("py-requests@2:", when="@:1.2.5")
     # END DEPENDENCIES
 

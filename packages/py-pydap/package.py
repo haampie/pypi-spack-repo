@@ -18,7 +18,6 @@ class PyPydap(PythonPackage):
         depends_on("py-docopt", when="@3.2.2:")
         depends_on("py-jinja2", when="@3.2.2:")
         depends_on("py-numpy", when="@3.2.2:")
-        depends_on("py-requests", when="@3.4:")
         depends_on("py-six@1.4:", when="@3.2.2:")
         depends_on("py-webob", when="@3.2.2:")
     # END DEPENDENCIES

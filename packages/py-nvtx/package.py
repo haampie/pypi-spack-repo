@@ -11,7 +11,9 @@ class PyNvtx(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
+    variant("python", default=False, description="python")
     # END VARIANTS
+
     # BEGIN DEPENDENCIES
     # END DEPENDENCIES
 

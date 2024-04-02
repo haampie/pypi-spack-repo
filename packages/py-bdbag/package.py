@@ -14,10 +14,11 @@ class PyBdbag(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@1.5:1.6")
         depends_on("py-bagit@1.8.1:", when="@1.6:")
         depends_on("py-bagit-profile@1.3.1:", when="@1.6:")
-        depends_on("py-certifi", when="@1.3:")
-        depends_on("py-pytz", when="@1.3:")
+        depends_on("py-certifi")
+        depends_on("py-pytz")
         depends_on("py-requests@2.7:", when="@1.5:1.7.1")
         depends_on("py-setuptools-scm@:5", when="@1.6.1:")
         depends_on("py-tzlocal@2.1:2", when="@1.6")

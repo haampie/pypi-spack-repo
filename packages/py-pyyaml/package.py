@@ -19,7 +19,7 @@ class PyPyyaml(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("libyaml", default=False)
+    variant("libyaml", default=False, description="libyaml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

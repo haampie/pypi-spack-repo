@@ -12,7 +12,7 @@ class PyPylops(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("advanced", default=False)
+    variant("advanced", default=False, description="advanced")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

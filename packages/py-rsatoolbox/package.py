@@ -18,8 +18,7 @@ class PyRsatoolbox(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@0.1.3:0.1.4,0.1.5.dev:0.1.5.dev46")
-        depends_on("python@:3.10", when="@0.0.5:0.1.2,0.1.3.dev:0.1.3.dev32")
+        depends_on("python@3.7:3.10", when="@0.0.5:0.1.2,0.1.3.dev:0.1.3.dev32")
         depends_on("py-coverage", when="@:0.0.4")
         depends_on("py-h5py", when="@:0.0.4,0.1.5:")
         depends_on("py-joblib", when="@:0.0.4,0.1.5:")

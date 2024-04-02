@@ -16,20 +16,20 @@ class PyGoogleAuth(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("aiohttp", default=False)
+    variant("aiohttp", default=False, description="aiohttp")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.23:")
         depends_on("py-aiohttp@3.6.2:3", when="@1.22.1:+aiohttp")
-        depends_on("py-aiohttp@3.6.2:3", when="@1.22:1.22.0")
         depends_on("py-cachetools@2:4", when="@1.10:2.3")
-        depends_on("py-cachetools@2:", when="@0.10:1.6,2.4:")
+        depends_on("py-cachetools@2:", when="@:1.6,2.4:")
         depends_on("py-pyasn1-modules@0.2:", when="@1.3:")
         depends_on("py-requests@2.20:", when="@1.30.2:2.0.0.0,2.0.1:+aiohttp")
-        depends_on("py-rsa@3.1.4:", when="@0.1:0.6,0.9:1.6,1.17:")
+        depends_on("py-rsa@3.1.4:", when="@:1.6,1.17:")
         depends_on("py-setuptools@40.3:", when="@1.7:2.3")
-        depends_on("py-six@1.9:", when="@0.1:0.6,0.9:1,2.0.0.dev:2.0.0,2.3.1:2.22")
+        depends_on("py-six@1.9:", when="@:1,2.0.0.dev:2.0.0,2.3.1:2.22")
         depends_on("py-urllib3@:1", when="@2.18:2.23.0")
     # END DEPENDENCIES
 

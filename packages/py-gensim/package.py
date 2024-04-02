@@ -17,11 +17,12 @@ class PyGensim(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@4.3:")
         depends_on("py-cython@0.29.14", when="@3.8.3:3")
         depends_on("py-numpy@1.11.3:1.16.1", when="@3.8.1")
-        depends_on("py-numpy@1.11.3:", when="@2.2:3.1,3.3:3.6,3.7.1:3.8.0,3.8.2:3")
-        depends_on("py-scipy@0.18.1:", when="@2.3:3.1,3.3:3.6,3.7.1:3.8.1,3.8.3:3")
-        depends_on("py-six@1.5:", when="@0.12.3:0.13.0-rc1,0.13.1,0.13.3:0,1.0.0-rc2:1,2.1:3.1,3.3:3.6,3.7.1:3")
+        depends_on("py-numpy@1.11.3:", when="@:3.1,3.3:3.6,3.7.1:3.8.0,3.8.2:3")
+        depends_on("py-scipy@0.18.1:", when="@:3.1,3.3:3.6,3.7.1:3.8.1,3.8.3:3")
+        depends_on("py-six@1.5:", when="@:3.1,3.3:3.6,3.7.1:3")
         depends_on("py-smart-open@1.8.1:", when="@3.8.1:3")
         depends_on("py-smart-open@1.7:", when="@3.7.1:3.8.0")
     # END DEPENDENCIES

@@ -15,12 +15,10 @@ class PyConsolekit(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click@7.1.2:")
-        depends_on("py-colorama@0.4.3:", when="@1.2: platform=windows ^python@:3.9")
-        depends_on("py-colorama@0.4.3:", when="@0.7.1:1.1 ^python@:3.9")
-        depends_on("py-colorama@0.4.3:", when="@0.3.1:0.7.0")
-        depends_on("py-deprecation-alias@0.1.1:", when="@1.1:")
+        depends_on("py-colorama@0.4.3:", when="platform=windows ^python@:3.9")
+        depends_on("py-deprecation-alias@0.1.1:")
         depends_on("py-domdf-python-tools@2.6:", when="@1.2.2:1.5")
-        depends_on("py-mistletoe@0.7.2:", when="@0.8:")
+        depends_on("py-mistletoe@0.7.2:")
         depends_on("py-typing-extensions@3.10:3.10.0.0,3.10.0.2:", when="@1.3.2:")
     # END DEPENDENCIES
 

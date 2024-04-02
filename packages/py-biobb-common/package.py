@@ -14,10 +14,9 @@ class PyBiobbCommon(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10.0", when="@4:4.0")
-        depends_on("python@:3.9", when="@3.9:3")
-        depends_on("py-biopython", when="@0.0.4:0.0.8,4.1:")
+        depends_on("python@3.8:", when="@4.1:")
+        depends_on("py-biopython", when="@4.1:")
         depends_on("py-pyyaml")
-        depends_on("py-requests", when="@0.0.4:")
+        depends_on("py-requests")
     # END DEPENDENCIES
 

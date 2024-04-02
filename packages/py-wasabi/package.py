@@ -15,6 +15,7 @@ class PyWasabi(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-colorama@0.4.6:", when="@1: platform=windows")
+        depends_on("py-colorama@0.4.6:", when="@1: platform=windows ^python@3.7:")
+        depends_on("py-typing-extensions@3.7.4.1:4.4", when="@1.1.1: ^python@:3.7")
     # END DEPENDENCIES
 

@@ -24,11 +24,13 @@ class PyNbconvert(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("serve", default=False)
+    variant("serve", default=False, description="serve")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@7.7:")
+        depends_on("python@3.7:", when="@6.1:7.6")
         depends_on("py-beautifulsoup4", when="@6.4.4:")
         depends_on("py-bleach@:4,5.0.1:", when="@7.5:")
         depends_on("py-bleach", when="@5:7.4")

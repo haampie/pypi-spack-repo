@@ -14,9 +14,8 @@ class PyArviz(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.16:")
-        depends_on("py-matplotlib@3.0.0:", when="@0.2:0.12")
-        depends_on("py-netcdf4", when="@0.1:0.14")
+        depends_on("py-matplotlib@3.0.0:", when="@:0.12")
+        depends_on("py-netcdf4", when="@:0.14")
         depends_on("py-numpy@1.12.0:", when="@0.5:0.12")
         depends_on("py-packaging", when="@0.6:")
         depends_on("py-pandas@0.23.0:", when="@0.5:0.12")

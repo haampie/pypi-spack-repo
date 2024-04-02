@@ -16,7 +16,7 @@ class PyTypedAst(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("wheel", default=False)
+    variant("wheel", default=False, description="wheel")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

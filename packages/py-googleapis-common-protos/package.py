@@ -13,11 +13,12 @@ class PyGoogleapisCommonProtos(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("grpc", default=False)
+    variant("grpc", default=False, description="grpc")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.56.4:")
         depends_on("py-grpcio@1.44.0:", when="@1.57:1.61,1.62.0-rc2:+grpc")
         depends_on("py-grpcio@1.0.0:", when="@1.52:1.56.1+grpc")
         depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0,4.21.6:4", when="@1.57:")

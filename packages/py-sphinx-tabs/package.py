@@ -17,6 +17,8 @@ class PySphinxTabs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@3.4:")
+        depends_on("python@:3", when="@1.2:3.3")
         depends_on("py-docutils@0.18", when="@3.4.1:3.4.4")
         depends_on("py-docutils@0.17", when="@3.3:3.4.0")
         depends_on("py-docutils@0.16", when="@3:3.2")

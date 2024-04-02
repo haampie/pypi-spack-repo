@@ -20,7 +20,9 @@ class PyLightningUtilities(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2:0.10")
         depends_on("py-fire", when="@0.2:0.3")
+        depends_on("py-importlib-metadata@4:", when="@0.4.1: ^python@:3.7")
         depends_on("py-packaging@17.1:", when="@0.6.0.post:")
         depends_on("py-packaging@20:", when="@0.5:0.6.0.0")
         depends_on("py-typing-extensions", when="@0.5:")

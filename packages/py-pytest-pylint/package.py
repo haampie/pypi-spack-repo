@@ -14,6 +14,7 @@ class PyPytestPylint(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.19:")
         depends_on("py-pylint@2.15:", when="@0.21:")
         depends_on("py-pytest@7.0.0:", when="@0.21:")
         depends_on("py-tomli@1.1:", when="@0.21: ^python@:3.10")

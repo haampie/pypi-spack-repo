@@ -11,9 +11,9 @@ class PyKneaddata(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("bam", default=False)
-    variant("fastqc", default=False)
-    variant("trf", default=False)
+    variant("bam", default=False, description="bam")
+    variant("fastqc", default=False, description="fastqc")
+    variant("trf", default=False, description="trf")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

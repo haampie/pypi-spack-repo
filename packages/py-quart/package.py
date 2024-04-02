@@ -14,13 +14,16 @@ class PyQuart(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-aiofiles", when="@0.2:")
-        depends_on("py-blinker", when="@0.2:0.18.3")
-        depends_on("py-click", when="@0.4:0.18.0")
+        depends_on("python@3.7:", when="@:0.18")
+        depends_on("py-aiofiles")
+        depends_on("py-blinker", when="@:0.18.3")
+        depends_on("py-click", when="@:0.18.0")
         depends_on("py-hypercorn@0.11.2:", when="@0.15,0.16.1:")
-        depends_on("py-itsdangerous", when="@0.2:")
-        depends_on("py-jinja2", when="@0.2:")
-        depends_on("py-toml", when="@0.11:0.17")
+        depends_on("py-importlib-metadata", when="@0.16:0.17 ^python@:3.7")
+        depends_on("py-itsdangerous")
+        depends_on("py-jinja2")
+        depends_on("py-toml", when="@:0.17")
+        depends_on("py-typing-extensions", when="@0.14:0.18 ^python@:3.7")
         depends_on("py-werkzeug@2.0.0:", when="@0.15,0.16.1:0.17")
     # END DEPENDENCIES
 

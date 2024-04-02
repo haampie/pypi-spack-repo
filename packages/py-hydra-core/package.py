@@ -15,7 +15,7 @@ class PyHydraCore(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-antlr4-python3-runtime@4.9", when="@1.2:1.2.0.0,1.3:")
-        depends_on("py-importlib-resources", when="@1.0.0-rc2:1.1.1,1.2: ^python@:3.8")
+        depends_on("py-importlib-resources", when="@1.2: ^python@:3.8")
         depends_on("py-omegaconf@2.2:2.2.0.0,2.2.1:2.3", when="@1.3.1:")
         depends_on("py-packaging", when="@1.2:")
     # END DEPENDENCIES

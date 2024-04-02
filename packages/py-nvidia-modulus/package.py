@@ -14,16 +14,13 @@ class PyNvidiaModulus(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.2:")
         depends_on("py-certifi@2023.7:", when="@0.2.1:")
         depends_on("py-fsspec@2023:", when="@0.3:")
-        depends_on("py-h5py@3.7:", when="@:0.2")
-        depends_on("py-netcdf4@1.6.3:", when="@:0.2")
         depends_on("py-numpy@1.22.4:1.24", when="@0.3:")
         depends_on("py-nvidia-dali-cuda110@1:")
         depends_on("py-nvtx@0.2.8:", when="@0.5:")
-        depends_on("py-pytest@6.0.0:", when="@:0.2")
         depends_on("py-pytz@2023.3:", when="@0.4:")
-        depends_on("py-ruamel-yaml@0.17.22:", when="@0.2")
         depends_on("py-s3fs@2023.5:", when="@0.2:")
         depends_on("py-setuptools@67.6:")
         depends_on("py-torch@2:", when="@0.3:")

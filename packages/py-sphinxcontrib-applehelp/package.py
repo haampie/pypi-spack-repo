@@ -16,6 +16,6 @@ class PySphinxcontribApplehelp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.0.5:")
+        depends_on("python@3.8:", when="@1.0.3:1.0.4")
     # END DEPENDENCIES
 

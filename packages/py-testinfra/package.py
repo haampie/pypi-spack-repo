@@ -17,7 +17,7 @@ class PyTestinfra(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pytest@:3.0.1,3.0.3:", when="@1.5.5:1.17,2.1:5")
-        depends_on("py-six@1.4:", when="@1.5.5:1.17,2.1:3")
+        depends_on("py-pytest@:3.0.1,3.0.3:", when="@:1.17,2.1:5")
+        depends_on("py-six@1.4:", when="@:1.17,2.1:3")
     # END DEPENDENCIES
 

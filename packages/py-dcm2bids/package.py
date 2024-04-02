@@ -15,6 +15,7 @@ class PyDcm2bids(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.1.7:")
         depends_on("py-future@0.17.1:", when="@2.1.5:2")
         depends_on("py-packaging@23.1:", when="@3:")
     # END DEPENDENCIES

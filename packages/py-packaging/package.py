@@ -23,6 +23,7 @@ class PyPackaging(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@22:")
         depends_on("py-attrs", when="@19.1")
         depends_on("py-pyparsing@2.0.2:3.0.4,3.0.6:", when="@21.3:21")
         depends_on("py-pyparsing@2.0.2:", when="@17:21.0")

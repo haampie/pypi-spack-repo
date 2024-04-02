@@ -20,6 +20,7 @@ class PyBabel(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.12:")
         depends_on("py-pytz@2015.7:", when="@2.12: ^python@:3.8")
         depends_on("py-pytz@2015.7:", when="@2.7:2.11")
         depends_on("py-pytz", when="@2.1:2.6")

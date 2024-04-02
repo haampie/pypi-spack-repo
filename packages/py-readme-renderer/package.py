@@ -16,9 +16,9 @@ class PyReadmeRenderer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@35:37")
         depends_on("py-bleach@2.1:", when="@17.3:41")
         depends_on("py-bleach", when="@:16")
-        depends_on("py-cmarkgfm@0.2:", when="@18:22")
         depends_on("py-docutils@0.13:", when="@16:")
         depends_on("py-pygments@2.5:", when="@25:")
         depends_on("py-pygments", when="@:24")

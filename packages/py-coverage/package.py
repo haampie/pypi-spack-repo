@@ -21,11 +21,13 @@ class PyCoverage(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("toml", default=False)
+    variant("toml", default=False, description="toml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@6.3:7.2")
+        depends_on("python@:3", when="@4.5:5.5")
         depends_on("py-toml", when="@5.0-beta1:5.2.0+toml")
     # END DEPENDENCIES
 

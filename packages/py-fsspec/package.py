@@ -20,13 +20,16 @@ class PyFsspec(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("http", default=False)
+    variant("http", default=False, description="http")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2023.3:")
+        depends_on("python@3.7:", when="@2022.2:2023.1")
         depends_on("py-aiohttp@:3", when="@2022.8:+http")
         depends_on("py-aiohttp", when="@0.8.1:2022.7+http")
+        depends_on("py-importlib-metadata", when="@0.8.6:0 ^python@:3.7")
         depends_on("py-requests", when="@0.8.1:2023+http")
     # END DEPENDENCIES
 

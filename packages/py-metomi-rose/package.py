@@ -14,12 +14,13 @@ class PyMetomiRose(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.0-rc1:")
         depends_on("py-aiofiles")
-        depends_on("py-jinja2@2.10.1:", when="@2.0-beta1:")
+        depends_on("py-jinja2@2.10.1:")
         depends_on("py-keyring@23", when="@2.1:")
         depends_on("py-ldap3")
         depends_on("py-metomi-isodatetime@1.3:", when="@2.0-rc3:")
-        depends_on("py-psutil@5.6:", when="@2.0-beta1:")
+        depends_on("py-psutil@5.6:")
         depends_on("py-requests")
         depends_on("py-sqlalchemy@1", when="@2.0.3:")
     # END DEPENDENCIES

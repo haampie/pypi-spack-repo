@@ -20,13 +20,15 @@ class PyXarray(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("io", default=False)
-    variant("parallel", default=False)
+    variant("io", default=False, description="io")
+    variant("parallel", default=False, description="parallel")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2023.2:")
+        depends_on("python@3.8:", when="@0.21:2023.1")
+        depends_on("python@3.7:", when="@0.17:0.20")
         depends_on("py-cfgrib", when="@0.16.2:2023.3+io")
         depends_on("py-cftime", when="@0.16.2:+io")
         depends_on("py-dask+complete", when="@0.16.2:+parallel")

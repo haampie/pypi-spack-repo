@@ -14,12 +14,13 @@ class PyCachecontrol(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("filecache", default=False)
-    variant("redis", default=False)
+    variant("filecache", default=False, description="filecache")
+    variant("redis", default=False, description="redis")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.13.1-rc0:")
         depends_on("py-filelock@3.8:", when="@0.12.12:0.12.13,0.13:+filecache")
         depends_on("py-lockfile@0.9:", when="@0.12.6:0.12.11,0.12.14:0.12+filecache")
         depends_on("py-msgpack@0.5.2:", when="@0.12.6:0.13")

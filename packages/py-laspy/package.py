@@ -14,5 +14,7 @@ class PyLaspy(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.2:2.5.0")
     # END DEPENDENCIES
 

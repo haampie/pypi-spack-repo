@@ -14,6 +14,7 @@ class PyGoogleCloudAuditLog(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2.3:")
         depends_on("py-googleapis-common-protos@1.56.2:", when="@0.2.1:")
         depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0,4.21.6:4", when="@0.2.5:")
     # END DEPENDENCIES

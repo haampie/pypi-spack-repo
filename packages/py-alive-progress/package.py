@@ -15,6 +15,8 @@ class PyAliveProgress(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@2.2:")
+        depends_on("python@:3", when="@:2.1")
         depends_on("py-about-time@3.1.1:3.1", when="@2")
         depends_on("py-grapheme@0.6:", when="@2:")
     # END DEPENDENCIES

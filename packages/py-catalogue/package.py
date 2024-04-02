@@ -15,5 +15,8 @@ class PyCatalogue(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-typing-extensions@3.6.5:", when="@1.0.1:1,2.0.3: ^python@:3.7")
+        depends_on("py-zipp@0.5:", when="@1.0.1:1,2.0.3: ^python@:3.7")
     # END DEPENDENCIES
 

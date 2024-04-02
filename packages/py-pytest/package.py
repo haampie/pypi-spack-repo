@@ -36,12 +36,15 @@ class PyPytest(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@8:")
+        depends_on("python@3.7:", when="@7.1:7")
         depends_on("py-atomicwrites@1:", when="@5.3:7.1.2 platform=windows")
         depends_on("py-atomicwrites@1:", when="@3.6:5.2")
         depends_on("py-attrs@19.2:", when="@6.2:7.2")
         depends_on("py-attrs@17.4:", when="@3.5:6.1")
-        depends_on("py-colorama", when="@2.8.3,3.0.6,3.1.1:3.1.2,3.2:3.2.2,3.3.2: platform=windows")
+        depends_on("py-colorama", when="@:2.8.3,3.0.6,3.1.1:3.1.2,3.2:3.2.2,3.3.2: platform=windows")
         depends_on("py-exceptiongroup@1.0.0-rc8:", when="@7.2: ^python@:3.10")
+        depends_on("py-importlib-metadata@0.12:", when="@4.6.6:4,5.1:7 ^python@:3.7")
         depends_on("py-importlib-metadata@0.12:", when="@4.6:4.6.5,5:5.0")
         depends_on("py-iniconfig", when="@6:")
         depends_on("py-more-itertools@4:", when="@3.5:6.0")

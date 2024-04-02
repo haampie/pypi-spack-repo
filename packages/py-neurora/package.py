@@ -18,13 +18,13 @@ class PyNeurora(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-matplotlib", when="@:1.0.0,1.0.3,1.0.5:1.0.5.1,1.0.7:")
-        depends_on("py-mne", when="@1.1.1.3:")
-        depends_on("py-nibabel", when="@:1.0.0,1.0.3,1.0.5:1.0.5.1,1.0.7:")
-        depends_on("py-nilearn", when="@1.1.3.5:")
-        depends_on("py-numpy", when="@:1.0.0,1.0.3,1.0.5:1.0.5.1,1.0.7:")
-        depends_on("py-scikit-image", when="@1.1.4.27:")
-        depends_on("py-scikit-learn", when="@1.1.4.27:")
-        depends_on("py-scipy@1.6.2:", when="@1.1.4.14:")
+        depends_on("py-matplotlib")
+        depends_on("py-mne")
+        depends_on("py-nibabel")
+        depends_on("py-nilearn")
+        depends_on("py-numpy")
+        depends_on("py-scikit-image")
+        depends_on("py-scikit-learn")
+        depends_on("py-scipy@1.6.2:")
     # END DEPENDENCIES
 

@@ -14,8 +14,7 @@ class PyAzuremlSdk(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.9", when="@1.45:1.48")
-        depends_on("python@:3.8", when="@1.26:1.44")
+        depends_on("python@:3", when="@:1.25")
         depends_on("py-azureml-core@1.23", when="@1.23")
         depends_on("py-azureml-dataset-runtime@1.23+fuse", when="@1.23")
         depends_on("py-azureml-pipeline@1.23", when="@1.23")

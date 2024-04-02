@@ -14,7 +14,7 @@ class PyPatsy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("splines", default=False)
+    variant("splines", default=False, description="splines")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

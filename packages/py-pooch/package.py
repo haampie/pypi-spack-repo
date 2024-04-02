@@ -16,7 +16,8 @@ class PyPooch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-appdirs", when="@0.3:1.5")
+        depends_on("python@3.7:", when="@1.7:")
+        depends_on("py-appdirs", when="@:1.5")
         depends_on("py-packaging@20:", when="@1.6:")
         depends_on("py-packaging", when="@:1.5")
         depends_on("py-platformdirs@2.5:", when="@1.7:")

@@ -14,7 +14,6 @@ class PyRioxarray(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@0.15.1:")
-        depends_on("python@3.9:", when="@0.14:0.15.0")
+        depends_on("python@3.7:", when="@0.4:0.9")
     # END DEPENDENCIES
 

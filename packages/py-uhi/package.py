@@ -18,5 +18,6 @@ class PyUhi(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy@1.13.3:", when="@0.2:")
+        depends_on("py-typing-extensions@3.7:", when="@0.1.2: ^python@:3.7")
     # END DEPENDENCIES
 

@@ -14,6 +14,7 @@ class PyPyobjcFrameworkBrowserenginekit(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:")
         depends_on("py-pyobjc-core@10.2:")
         depends_on("py-pyobjc-framework-cocoa@10.2:")
         depends_on("py-pyobjc-framework-coreaudio@10.2:")

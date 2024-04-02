@@ -13,18 +13,18 @@ class PyCfgrib(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("xarray", default=False)
+    variant("xarray", default=False, description="xarray")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@19.2:", when="@0.9.7.7:0.9.10.1,0.9.10.4:")
         depends_on("py-cffi", when="@:0.9.8")
-        depends_on("py-click", when="@0.9.5.1:0.9.10.1,0.9.10.4:")
+        depends_on("py-click", when="@:0.9.10.1,0.9.10.4:")
         depends_on("py-eccodes@0.9.8:", when="@0.9.9.1:0.9.10.1,0.9.10.4:")
         depends_on("py-eccodes", when="@0.9.9:0.9.9.0")
         depends_on("py-numpy", when="@:0.9.10.1,0.9.10.4:")
         depends_on("py-xarray@0.15:", when="@0.9.9.1:0.9.10.1,0.9.10.4:+xarray")
-        depends_on("py-xarray@0.12:", when="@0.9.7-rc1:0.9.9.0+xarray")
+        depends_on("py-xarray@0.12:", when="@:0.9.9.0+xarray")
     # END DEPENDENCIES
 

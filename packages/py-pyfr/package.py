@@ -13,21 +13,21 @@ class PyPyfr(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("amdgpu_target", default=False)
-    variant("cuda", default=False)
-    variant("cuda_arch", default=False)
-    variant("hip", default=False)
-    variant("libxsmm", default=False)
-    variant("metis", default=False)
-    variant("rocm", default=False)
-    variant("scipy", default=False)
-    variant("scotch", default=False)
+    variant("amdgpu_target", default=False, description="amdgpu_target")
+    variant("cuda", default=False, description="cuda")
+    variant("cuda_arch", default=False, description="cuda_arch")
+    variant("hip", default=False, description="hip")
+    variant("libxsmm", default=False, description="libxsmm")
+    variant("metis", default=False, description="metis")
+    variant("rocm", default=False, description="rocm")
+    variant("scipy", default=False, description="scipy")
+    variant("scotch", default=False, description="scotch")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@2:")
         depends_on("python@3.9:", when="@1.14:1")
+        depends_on("python@3.8:", when="@1.12.1:1.13")
         depends_on("py-gimmik@3:", when="@1.15:1")
         depends_on("py-gimmik@2.3:2", when="@1.14")
         depends_on("py-gimmik@2.2:2", when="@1.13")

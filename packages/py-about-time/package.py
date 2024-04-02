@@ -15,5 +15,7 @@ class PyAboutTime(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:3", when="@4:")
     # END DEPENDENCIES
 

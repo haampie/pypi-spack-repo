@@ -14,10 +14,9 @@ class PySnakemakeInterfaceExecutorPlugins(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:", when="@7:")
-        depends_on("python@3.9:", when="@:6")
+        depends_on("python@3.11:3")
         depends_on("py-argparse-dataclass@2:")
-        depends_on("py-snakemake-interface-common@1.12:", when="@6:")
+        depends_on("py-snakemake-interface-common@1.12:")
         depends_on("py-throttler@1.2.2:")
     # END DEPENDENCIES
 

@@ -16,7 +16,7 @@ class PyPywavelets(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.5:")
+        depends_on("python@3.8:", when="@1.4.1:1.4")
         depends_on("py-numpy@1.13.3:", when="@1.1")
     # END DEPENDENCIES
 

@@ -18,8 +18,8 @@ class PyBeautifulsoup4(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("html5lib", default=False)
-    variant("lxml", default=False)
+    variant("html5lib", default=False, description="html5lib")
+    variant("lxml", default=False, description="lxml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

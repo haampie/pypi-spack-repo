@@ -14,10 +14,8 @@ class PyMonai(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-nibabel", when="@:0.1")
-        depends_on("py-numpy@1.20.0:", when="@1.2:")
-        depends_on("py-pillow", when="@:0.1")
-        depends_on("py-tensorboard", when="@:0.1")
-        depends_on("py-torch@1.9:", when="@1.2.0-rc3:")
+        depends_on("python@3.8:")
+        depends_on("py-numpy@1.20.0:")
+        depends_on("py-torch@1.9:")
     # END DEPENDENCIES
 

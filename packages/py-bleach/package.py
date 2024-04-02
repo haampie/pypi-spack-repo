@@ -20,6 +20,7 @@ class PyBleach(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5:6.0")
         depends_on("py-html5lib@0.999,0.999999:0.9999999", when="@1.5:1")
         depends_on("py-packaging", when="@3.1.5:4")
         depends_on("py-six@1.9:", when="@3.1:3.1.0,3.1.2:")

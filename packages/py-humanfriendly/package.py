@@ -17,7 +17,8 @@ class PyHumanfriendly(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pyreadline", when="@4.4.2:9 platform=windows")
-        depends_on("py-pyreadline3", when="@10: platform=windows")
+        depends_on("py-pyreadline", when="@10: platform=windows ^python@:3.7")
+        depends_on("py-pyreadline", when="@:9 platform=windows")
+        depends_on("py-pyreadline3", when="@10: platform=windows ^python@3.8:")
     # END DEPENDENCIES
 

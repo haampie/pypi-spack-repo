@@ -14,7 +14,7 @@ class PySnakemakeExecutorPluginKubernetes(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-kubernetes@27.2.0:27", when="@:0.1.4")
         depends_on("py-snakemake-interface-common@1.14.1:", when="@0.1.2:")
         depends_on("py-snakemake-interface-executor-plugins@8.0.2:8", when="@0.1.3:0.1.4")

@@ -11,31 +11,26 @@ class PyDace(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("counters", default=False)
+    variant("counters", default=False, description="counters")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@:3.12", when="@0.15:")
-        depends_on("python@:3.11", when="@0.14.4:0.14")
-        depends_on("python@:3.10", when="@0.11.4:0.14.3")
-        depends_on("python@:3.9", when="@0.11:0.11.3")
-        depends_on("python@:3.8", when="@0.10.8:0.10")
-        depends_on("py-absl-py", when="@:0.9")
         depends_on("py-aenum@3.1:", when="@0.15:")
-        depends_on("py-astunparse", when="@:0.10,0.15:")
-        depends_on("py-dill", when="@0.10.8:0.10,0.15:")
-        depends_on("py-flask", when="@:0.10,0.15:")
+        depends_on("py-astunparse", when="@0.15:")
+        depends_on("py-dataclasses", when="@0.15: ^python@:3.6")
+        depends_on("py-dill", when="@0.15:")
+        depends_on("py-flask", when="@0.15:")
         depends_on("py-fparser@0.1.3:", when="@0.15:")
         depends_on("py-networkx@2.5:", when="@0.15:")
-        depends_on("py-numpy", when="@:0.10,0.15:")
-        depends_on("py-ply", when="@:0.10,0.15:")
+        depends_on("py-numpy", when="@0.15:")
+        depends_on("py-ply", when="@0.15:")
         depends_on("py-pyreadline", when="@0.15: platform=windows")
-        depends_on("py-pyreadline", when="@0.10.8:0.10")
-        depends_on("py-pyyaml", when="@:0.10,0.15:")
-        depends_on("py-requests", when="@:0.10,0.15:")
-        depends_on("py-scipy", when="@:0.9")
+        depends_on("py-pyyaml", when="@0.15:")
+        depends_on("py-requests", when="@0.15:")
         depends_on("py-sympy@:1.9", when="@0.15:")
-        depends_on("py-websockets", when="@:0.10,0.15:")
+        depends_on("py-typing-compat", when="@0.15: ^python@:3.7")
+        depends_on("py-websockets", when="@0.15:")
     # END DEPENDENCIES
 

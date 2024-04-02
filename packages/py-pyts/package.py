@@ -15,7 +15,6 @@ class PyPyts(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-joblib@0.12:", when="@0.11:0.12")
-        depends_on("py-matplotlib", when="@:0.6")
         depends_on("py-numba@0.48:", when="@0.11:0.12")
         depends_on("py-numpy@1.17.5:", when="@0.11:0.12")
         depends_on("py-scikit-learn@0.22.1:", when="@0.11:0.12")

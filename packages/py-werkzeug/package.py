@@ -29,6 +29,9 @@ class PyWerkzeug(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2.3:")
+        depends_on("python@3.7:", when="@2.1:2.2")
+        depends_on("py-dataclasses", when="@2:2.0 ^python@:3.6")
         depends_on("py-markupsafe@2.1.1:", when="@2.2:")
     # END DEPENDENCIES
 

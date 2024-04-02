@@ -20,8 +20,8 @@ class PyScikitImage(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@0.23:")
-        depends_on("python@3.9:", when="@0.22")
+        depends_on("python@3.8:", when="@0.20:0.21")
+        depends_on("python@3.7:", when="@0.18.0-rc2:0.19")
         depends_on("py-cloudpickle@0.2:", when="@0.14")
         depends_on("py-dask@1:+array", when="@0.14.2")
         depends_on("py-imageio@2.4.1:", when="@0.20.0-rc8:0.20")
@@ -38,16 +38,13 @@ class PyScikitImage(PythonPackage):
         depends_on("py-pillow@9.0.1:", when="@0.20.0-rc8:0.22")
         depends_on("py-pillow@4.3:7.0,7.1.2:", when="@0.17")
         depends_on("py-pillow@4.3:", when="@0.14:0.16")
-        depends_on("py-pooch@0.5.2:", when="@0.17:0.17.1")
         depends_on("py-pywavelets@1.1.1:", when="@0.17,0.20.0-rc8:0.21")
         depends_on("py-pywavelets@0.4:", when="@0.13:0.16")
-        depends_on("py-scipy@1.8.0:", when="@0.21:0.22")
-        depends_on("py-scipy@1.8.0:1.9.1", when="@0.20.0-rc8:0.20 ^python@:3.9.0")
-        depends_on("py-scipy@1.8.0:", when="@0.20.0-rc8:0.20 ^python@3.9.1:")
+        depends_on("py-scipy@1.8.0:1.9.1", when="@0.20.0-rc8:0.20 ^python@:3.8")
+        depends_on("py-scipy@1.8.0:", when="@0.20.0-rc8:0.20 ^python@3.9:")
         depends_on("py-scipy@1.0.1:", when="@0.17")
         depends_on("py-scipy@0.17:", when="@0.13:0.15")
         depends_on("py-six@1.10:", when="@0.14")
-        depends_on("py-tifffile@2022.8.12:", when="@0.21:")
         depends_on("py-tifffile@2019.7.26:", when="@0.17,0.20.0-rc8:0.20")
     # END DEPENDENCIES
 

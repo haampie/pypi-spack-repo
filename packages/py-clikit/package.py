@@ -14,7 +14,7 @@ class PyClikit(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-crashtest@:0.3", when="@0.6:")
+        depends_on("py-crashtest@:0.3", when="@0.6: ^python@:3")
         depends_on("py-pastel@0.2:", when="@0.4.2:")
         depends_on("py-pylev@1.3:")
     # END DEPENDENCIES

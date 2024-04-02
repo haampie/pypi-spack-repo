@@ -14,7 +14,9 @@ class PyRichClick(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@7:", when="@1.1:")
+        depends_on("python@3.7:", when="@1.3:")
+        depends_on("py-click@7:")
+        depends_on("py-importlib-metadata", when="@1.2: ^python@:3.7")
         depends_on("py-rich@10.7:", when="@1.3.1:")
     # END DEPENDENCIES
 

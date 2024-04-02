@@ -11,12 +11,12 @@ class PyRaven(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("flask", default=False)
+    variant("flask", default=False, description="flask")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-blinker@1.1:", when="@5.2,5.4:5.4.1,5.7.2:5.7,5.33:5,6.1:6.2,6.4,6.6:+flask")
-        depends_on("py-flask@0.8:", when="@5.2,5.4:5.4.1,5.7.2:5.7,5.33:5,6.1:6.2,6.4,6.6:+flask")
+        depends_on("py-blinker@1.1:", when="@:6.2,6.4,6.6:+flask")
+        depends_on("py-flask@0.8:", when="@:6.2,6.4,6.6:+flask")
     # END DEPENDENCIES
 

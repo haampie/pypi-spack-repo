@@ -15,8 +15,8 @@ class PyDeepdiff(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@6:")
         depends_on("py-ordered-set@4.0.2:", when="@6:")
         depends_on("py-ordered-set@4.0.2:4.0", when="@5.2:5.7")
-        depends_on("py-orjson", when="@6.2.3:6.2")
     # END DEPENDENCIES
 

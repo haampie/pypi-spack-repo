@@ -34,16 +34,17 @@ class PyUproot(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("lz4", default=False)
-    variant("xrootd", default=False)
-    variant("zstd", default=False)
+    variant("lz4", default=False, description="lz4")
+    variant("xrootd", default=False, description="xrootd")
+    variant("zstd", default=False, description="zstd")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.0.0-rc4:5.1.0-rc2")
         depends_on("py-awkward@2.0.0:", when="@5.0.0:5.1.0-rc1")
-        depends_on("py-lz4", when="@3:3.2")
-        depends_on("py-numpy", when="@2.9.9:2,4:")
+        depends_on("py-importlib-metadata", when="@5.0.0-rc2:5.3.1 ^python@:3.7")
+        depends_on("py-numpy")
         depends_on("py-packaging", when="@5.0.0-rc2:")
         depends_on("py-setuptools", when="@4.0.8:5.0.0-rc1")
     # END DEPENDENCIES

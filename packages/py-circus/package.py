@@ -14,6 +14,7 @@ class PyCircus(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.18:")
         depends_on("py-psutil", when="@0.16:")
         depends_on("py-pyzmq@17.0.0:", when="@0.16:")
         depends_on("py-tornado@5.0.2:", when="@0.17:")

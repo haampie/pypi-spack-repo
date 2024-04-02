@@ -20,6 +20,7 @@ class PyWidgetsnbextension(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.0.0-beta1:")
         depends_on("py-notebook@4.4.1:", when="@2.0.0-beta18:3.0.0-alpha2,3.0.0-alpha4:3")
     # END DEPENDENCIES
 

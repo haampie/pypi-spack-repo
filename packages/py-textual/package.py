@@ -14,10 +14,9 @@ class PyTextual(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-markdown-it-py@2.1:+linkify+plugins", when="@0.29.0-alpha2:")
-        depends_on("py-rich@13.3.3:", when="@0.17:")
-        depends_on("py-tree-sitter@0.20.1:0.20", when="@0.38")
-        depends_on("py-tree-sitter-languages@1.7:", when="@0.38")
-        depends_on("py-typing-extensions@4.4:", when="@0.14:")
+        depends_on("python@3.8:3", when="@0.44:")
+        depends_on("py-markdown-it-py@2.1:+linkify+plugins")
+        depends_on("py-rich@13.3.3:")
+        depends_on("py-typing-extensions@4.4:")
     # END DEPENDENCIES
 

@@ -14,13 +14,14 @@ class PyRobocrys(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2.7")
         depends_on("py-inflect", when="@:0.2.4,0.2.6:")
         depends_on("py-matminer", when="@:0.1,0.2.6:")
         depends_on("py-monty", when="@:0.2.4,0.2.6:")
         depends_on("py-networkx", when="@:0.2.4,0.2.6:")
         depends_on("py-numpy", when="@:0.2.4,0.2.6:")
         depends_on("py-pubchempy", when="@:0.2.4,0.2.6:")
-        depends_on("py-pybtex", when="@0.1.1:0.2.4,0.2.6:")
+        depends_on("py-pybtex", when="@:0.2.4,0.2.6:")
         depends_on("py-pymatgen@2020.10.20:", when="@0.2.6:")
         depends_on("py-ruamel-yaml", when="@0.2.7:")
         depends_on("py-scipy", when="@:0.2.4,0.2.6:")

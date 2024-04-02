@@ -22,14 +22,17 @@ class PyAltair(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-entrypoints", when="@2.1:4")
-        depends_on("py-jinja2", when="@2.3:")
+        depends_on("python@3.8:", when="@5.1:")
+        depends_on("python@3.7:", when="@4.2:5.0")
+        depends_on("py-entrypoints", when="@:4")
+        depends_on("py-importlib-metadata", when="@5:5.0 ^python@:3.7")
+        depends_on("py-jinja2")
         depends_on("py-jsonschema@3.0.0:", when="@4.2.0:5.0.0-rc2,5.0.0:")
-        depends_on("py-numpy", when="@2.1:")
+        depends_on("py-numpy")
         depends_on("py-packaging", when="@5.1:")
         depends_on("py-pandas@0.25.0:", when="@5.1:")
         depends_on("py-pandas@0.18:", when="@4.1:5.0")
-        depends_on("py-toolz", when="@2.1:")
+        depends_on("py-toolz")
         depends_on("py-typing-extensions@4.0.1:", when="@5: ^python@:3.10")
     # END DEPENDENCIES
 

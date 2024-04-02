@@ -14,11 +14,12 @@ class PyPyinstrument(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("jupyter", default=False)
+    variant("jupyter", default=False, description="jupyter")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4:")
         depends_on("py-pyinstrument-cext@0.2.2:", when="@3.0.3:3")
     # END DEPENDENCIES
 

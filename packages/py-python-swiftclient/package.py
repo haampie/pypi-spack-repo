@@ -17,13 +17,13 @@ class PyPythonSwiftclient(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("keystone", default=False)
+    variant("keystone", default=False, description="keystone")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-python-keystoneclient@0.7:", when="@3.1:+keystone")
-        depends_on("py-requests@1.1:", when="@2.4:3")
+        depends_on("py-python-keystoneclient@0.7:", when="+keystone")
+        depends_on("py-requests@1.1:", when="@:3")
         depends_on("py-six@1.9:", when="@3.6:3")
     # END DEPENDENCIES
 

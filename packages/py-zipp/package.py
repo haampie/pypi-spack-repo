@@ -18,6 +18,8 @@ class PyZipp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@3.16:")
+        depends_on("python@3.7:", when="@3.7:3.15")
         depends_on("py-more-itertools", when="@0.6:1.0,2:2.0")
     # END DEPENDENCIES
 

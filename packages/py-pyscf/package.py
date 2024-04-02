@@ -23,8 +23,8 @@ class PyPyscf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-h5py", when="@1.4.3:1.4,1.5.3:1.7.3")
-        depends_on("py-numpy", when="@1.4.3:1.4,1.5.1:1.7.3")
-        depends_on("py-scipy", when="@1.4.3:1.4,1.5.1:1.7.3")
+        depends_on("py-h5py", when="@:1.7.3")
+        depends_on("py-numpy", when="@:1.7.3")
+        depends_on("py-scipy", when="@:1.7.3")
     # END DEPENDENCIES
 

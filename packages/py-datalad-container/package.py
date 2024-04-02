@@ -16,8 +16,9 @@ class PyDataladContainer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.1.6:")
         depends_on("py-datalad@0.18:", when="@1.1.9:")
         depends_on("py-datalad@0.13.0:", when="@1.1:1.1.8")
-        depends_on("py-requests@1.2:", when="@0.1.1:0.3,0.5.1:0,1.0.1:")
+        depends_on("py-requests@1.2:", when="@0.5.1:0,1.0.1:")
     # END DEPENDENCIES
 

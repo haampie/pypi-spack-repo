@@ -16,6 +16,6 @@ class PyTenacity(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-six@1.9:", when="@4.5:4,5.0.3:5.0,6:7")
+        depends_on("py-six@1.9:", when="@:5.0,6:7")
     # END DEPENDENCIES
 

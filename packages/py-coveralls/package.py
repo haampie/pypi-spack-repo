@@ -11,13 +11,13 @@ class PyCoveralls(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("pyyaml", default=False)
+    variant("pyyaml", default=False, description="pyyaml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-coverage@4.1:5", when="@2:3.2")
-        depends_on("py-docopt@0.6.1:", when="@1.1:")
-        depends_on("py-requests@1:", when="@1.1:")
+        depends_on("py-docopt@0.6.1:")
+        depends_on("py-requests@1:")
     # END DEPENDENCIES
 

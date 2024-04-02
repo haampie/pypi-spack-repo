@@ -16,7 +16,7 @@ class PyGalaxyToolUtil(PythonPackage):
     with default_args(type="run"):
         depends_on("py-galaxy-containers@22:", when="@22.1.2:22.1")
         depends_on("py-galaxy-util@22:", when="@22.1.2:")
-        depends_on("py-lxml", when="@21:")
+        depends_on("py-lxml")
         depends_on("py-pydantic", when="@21.9:23.0.3")
         depends_on("py-pyyaml", when="@22:")
         depends_on("py-sortedcontainers", when="@21.9:")

@@ -14,6 +14,7 @@ class PyReadchar(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.0.4:4.0.5")
         depends_on("py-setuptools@41:", when="@4.0.3:")
     # END DEPENDENCIES
 

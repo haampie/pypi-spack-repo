@@ -21,6 +21,7 @@ class PyFlake8(PythonPackage):
     version("3.7.7", sha256="a796a115208f5c03b18f332f7c11729812c8c3ded6c46319c59b53efd3819da8", url="https://pypi.org/packages/e9/76/b915bd28976068a9843bf836b789794aa4a8eb13338b23581005cd9177c0/flake8-3.7.7-py2.py3-none-any.whl")
     version("3.5.0", sha256="c7841163e2b576d435799169b78703ad6ac1bbb0f199994fc05f700b2a90ea37", url="https://pypi.org/packages/b9/dc/14e9d94c770b8c4ef584e906c7583e74864786a58d47de101f2767d50c0b/flake8-3.5.0-py2.py3-none-any.whl")
     version("3.0.4", sha256="603a3ae7c8030219fee084728ca02a8bbd3a51829cacf97b445172a46cb04662", url="https://pypi.org/packages/70/fd/93266c6af1a23ea4d8b9a557b1fa02e6bdb43702b817c9151da5a3af3aa7/flake8-3.0.4-py2.py3-none-any.whl")
+    version("2.6.2", sha256="7ac3bbaac27174d95bc4734ed23a07de567ffbcf4fc7e316854b4f3015d4fd15", url="https://pypi.org/packages/70/a9/9b66f22d038de51e05f92d5e677fd89d8f9c980db0b8a130621baad052f5/flake8-2.6.2-py2.py3-none-any.whl")
     version("2.5.4", sha256="fb5a67af4024622287a76abf6b7fe4fb3cfacf765a790976ce64f52c44c88e4a", url="https://pypi.org/packages/e1/16/fba9e558dd7215b9a54abfc65a7032c5239c983cbb4f9eac9abf0e8f399b/flake8-2.5.4-py2.py3-none-any.whl")
     # END VERSIONS
 
@@ -28,11 +29,15 @@ class PyFlake8(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@6:")
+        depends_on("python@3.8:", when="@6:")
         depends_on("py-entrypoints@0.3", when="@3.7")
+        depends_on("py-importlib-metadata@1.1:4.2", when="@5.0.4:5 ^python@:3.7")
+        depends_on("py-importlib-metadata@:4.2", when="@4:5.0.3 ^python@:3.7")
+        depends_on("py-importlib-metadata", when="@3.8:3 ^python@:3.7")
         depends_on("py-mccabe@0.7:", when="@5:")
         depends_on("py-mccabe@0.6", when="@3.3:4")
         depends_on("py-mccabe@0.5", when="@3:3.2")
+        depends_on("py-mccabe@0.2.1:0.5", when="@2.6:2")
         depends_on("py-mccabe@0.2.1:0.4", when="@2.5.2:2.5")
         depends_on("py-pep8@1.5.7:1.5,1.7:", when="@2.4.1:2.5")
         depends_on("py-pycodestyle@2.11:", when="@6.1:")

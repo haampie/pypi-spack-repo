@@ -14,6 +14,7 @@ class PyAuditwheel(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pyelftools@0.24:", when="@1.5,1.8:2.0,2.1.1:2,3.0.0.0-rc1:3.0,3.1.1:3.1,3.3:")
+        depends_on("py-importlib-metadata", when="@5 ^python@:3.7")
+        depends_on("py-pyelftools@0.24:", when="@3.1.1:3.1,3.3:")
     # END DEPENDENCIES
 

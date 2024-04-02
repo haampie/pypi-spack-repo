@@ -14,8 +14,8 @@ class PyAzureDatalakeStore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-adal@0.4.2:", when="@:0.0.1,0.0.10:0.0.12,0.0.14:0.0.52")
-        depends_on("py-cffi", when="@:0.0.1,0.0.10:0.0.12,0.0.14:")
-        depends_on("py-requests@2.20:", when="@0.0.35:")
+        depends_on("py-adal@0.4.2:", when="@:0.0.52")
+        depends_on("py-cffi")
+        depends_on("py-requests@2.20:")
     # END DEPENDENCIES
 

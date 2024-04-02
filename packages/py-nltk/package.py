@@ -12,11 +12,12 @@ class PyNltk(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("data", default=False)
+    variant("data", default=False, description="data")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.7:")
         depends_on("py-click", when="@3.6:")
         depends_on("py-joblib", when="@3.6:")
         depends_on("py-regex@2021.8:", when="@3.6.5:")

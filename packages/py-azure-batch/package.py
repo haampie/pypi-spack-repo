@@ -19,7 +19,7 @@ class PyAzureBatch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-azure-common@1.1:", when="@3.1:")
+        depends_on("py-azure-common@1.1:")
         depends_on("py-msrest@0.6.21:", when="@11:12")
         depends_on("py-msrest@0.5:", when="@5.1.1:10")
         depends_on("py-msrestazure@0.4.32:", when="@5.1.1:")

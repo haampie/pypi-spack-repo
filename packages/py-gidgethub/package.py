@@ -11,15 +11,16 @@ class PyGidgethub(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("aiohttp", default=False)
-    variant("tornado", default=False)
+    variant("aiohttp", default=False, description="aiohttp")
+    variant("tornado", default=False, description="tornado")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.2.1:")
         depends_on("py-aiohttp", when="+aiohttp")
         depends_on("py-pyjwt@2.4:+crypto", when="@5.2:")
-        depends_on("py-tornado", when="@2.3:+tornado")
+        depends_on("py-tornado", when="+tornado")
         depends_on("py-uritemplate@3.0.1:", when="@4:")
     # END DEPENDENCIES
 

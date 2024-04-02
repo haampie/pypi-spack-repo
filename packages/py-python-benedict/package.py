@@ -14,16 +14,16 @@ class PyPythonBenedict(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ftfy", when="@0.3:0.24")
-        depends_on("py-mailchecker", when="@0.4:0.24")
-        depends_on("py-phonenumbers", when="@0.4:0.24")
-        depends_on("py-python-dateutil", when="@0.3:0.24")
+        depends_on("py-ftfy", when="@:0.24")
+        depends_on("py-mailchecker", when="@:0.24")
+        depends_on("py-phonenumbers", when="@:0.24")
+        depends_on("py-python-dateutil", when="@:0.24")
         depends_on("py-python-fsutil", when="@0.23:0.24")
-        depends_on("py-python-slugify", when="@0.3:0.24")
-        depends_on("py-pyyaml", when="@0.5:0.24")
-        depends_on("py-requests", when="@0.5:0.24")
-        depends_on("py-six", when="@0.5:0.24")
-        depends_on("py-toml", when="@0.5:0.24")
-        depends_on("py-xmltodict", when="@0.5:0.24")
+        depends_on("py-python-slugify", when="@:0.24")
+        depends_on("py-pyyaml", when="@:0.24")
+        depends_on("py-requests", when="@:0.24")
+        depends_on("py-six", when="@:0.24")
+        depends_on("py-toml", when="@:0.24")
+        depends_on("py-xmltodict", when="@:0.24")
     # END DEPENDENCIES
 

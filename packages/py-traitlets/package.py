@@ -27,6 +27,7 @@ class PyTraitlets(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5:5.9")
         depends_on("py-decorator", when="@4.1.0:4")
         depends_on("py-ipython-genutils", when="@4.1.0:5.0")
         depends_on("py-six", when="@4.3:4")

@@ -14,8 +14,7 @@ class PyBiobbStructureUtils(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10.0", when="@4:4.0")
-        depends_on("python@:3.9", when="@3.9:3")
+        depends_on("python@3.8:", when="@4.1:")
         depends_on("py-biobb-common@4.1:", when="@4.1:")
         depends_on("py-biobb-structure-checking@3.13.4:", when="@4.1:")
     # END DEPENDENCIES

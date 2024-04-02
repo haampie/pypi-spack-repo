@@ -14,10 +14,7 @@ class PyCloudbridge(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-boto3@1.9.86:", when="@2.2:2")
         depends_on("py-deprecation@2.0.7:", when="@2.1:")
-        depends_on("py-google-api-python-client@2:", when="@2.2:2")
-        depends_on("py-openstacksdk@0.12:0", when="@2.2:2")
         depends_on("py-pyeventsystem", when="@2:")
         depends_on("py-six@1.11:", when="@1.0.2:")
         depends_on("py-tenacity@6:", when="@2.1:")

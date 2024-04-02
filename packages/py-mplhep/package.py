@@ -15,11 +15,11 @@ class PyMplhep(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-matplotlib@3.4.0:", when="@0.3:")
-        depends_on("py-mplhep-data", when="@0.3:")
-        depends_on("py-numpy@1.16.0:", when="@0.0.26:")
-        depends_on("py-packaging", when="@0.0.26:")
-        depends_on("py-scipy@1.1.0:", when="@0.0.26:0.2")
-        depends_on("py-uhi@0.2:", when="@0.3:")
+        depends_on("python@3.7:", when="@:0.3.28")
+        depends_on("py-matplotlib@3.4.0:")
+        depends_on("py-mplhep-data")
+        depends_on("py-numpy@1.16.0:")
+        depends_on("py-packaging")
+        depends_on("py-uhi@0.2:")
     # END DEPENDENCIES
 

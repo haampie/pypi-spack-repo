@@ -14,7 +14,7 @@ class PyCryodrgn(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10", when="@3.2:")
+        depends_on("python@3.7:", when="@:3.1")
         depends_on("py-cufflinks")
         depends_on("py-healpy", when="@2:")
         depends_on("py-ipywidgets@:7")

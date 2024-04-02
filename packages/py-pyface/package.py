@@ -12,7 +12,7 @@ class PyPyface(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("backend", default=False)
+    variant("backend", default=False, description="backend")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

@@ -14,8 +14,8 @@ class PyCatkinPkg(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-docutils", when="@0.4.3:")
-        depends_on("py-pyparsing", when="@0.4.3:0.4.16,0.4.19:")
-        depends_on("py-python-dateutil", when="@0.4.3:")
+        depends_on("py-docutils")
+        depends_on("py-pyparsing", when="@:0.4.16,0.4.19:")
+        depends_on("py-python-dateutil")
     # END DEPENDENCIES
 

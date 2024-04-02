@@ -12,7 +12,7 @@ class PySpython(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("runtime", default=False)
+    variant("runtime", default=False, description="runtime")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

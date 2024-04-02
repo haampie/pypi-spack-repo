@@ -17,5 +17,7 @@ class PyArgon2Cffi(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-argon2-cffi-bindings", when="@21.2:")
+        depends_on("py-dataclasses", when="@21.2:21 ^python@:3.6")
+        depends_on("py-typing-extensions", when="@21.2: ^python@:3.7")
     # END DEPENDENCIES
 

@@ -11,7 +11,7 @@ class PyYtopt(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("online", default=False)
+    variant("online", default=False, description="online")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

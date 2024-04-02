@@ -42,9 +42,12 @@ class PyGitpython(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.1.22:")
         depends_on("py-gitdb@4:", when="@3.1:")
         depends_on("py-gitdb2@3", when="@3.0.9:3.0")
+        depends_on("py-typing-extensions@3.7.4.3:", when="@3.1.25: ^python@:3.7")
         depends_on("py-typing-extensions@3.7.4.3:", when="@3.1.19:3.1.24 ^python@:3.9")
+        depends_on("py-typing-extensions@3.7.4:", when="@3.1.16:3.1.18 ^python@:3.7")
         depends_on("py-typing-extensions@3.7.4:", when="@3.1.15")
     # END DEPENDENCIES
 

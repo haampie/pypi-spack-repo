@@ -15,8 +15,8 @@ class PyPickleshare(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     # with default_args(type="run"):
+    # END DEPENDENCIES
+
 
         # marker: python_version in "2.6 2.7 3.2 3.3"
         # depends_on("py-pathlib2", when="@0.7.3:")
-    # END DEPENDENCIES
-

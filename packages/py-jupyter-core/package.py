@@ -32,6 +32,8 @@ class PyJupyterCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@5.0.0:")
+        depends_on("python@3.7:", when="@4.10:5.0.0-rc2")
         depends_on("py-platformdirs@2.5:", when="@5.1:")
         depends_on("py-pywin32@300:", when="@5.3: platform=windows")
         depends_on("py-pywin32", when="@4.6:5.2 platform=windows")

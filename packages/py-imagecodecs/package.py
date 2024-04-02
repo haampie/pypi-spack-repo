@@ -14,6 +14,6 @@ class PyImagecodecs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2023.7:")
+        depends_on("python@3.8:", when="@2022:2023.3")
     # END DEPENDENCIES
 

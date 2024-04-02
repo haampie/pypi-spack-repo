@@ -14,7 +14,7 @@ class PyAzureMgmtWeb(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-azure-common@1.1:", when="@0.33:")
+        depends_on("py-azure-common@1.1:")
         depends_on("py-msrest@0.5:", when="@0.40:2")
         depends_on("py-msrestazure@0.4.32:", when="@0.40:0")
     # END DEPENDENCIES

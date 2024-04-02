@@ -16,8 +16,9 @@ class PyGraphqlCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@3:3.2")
         depends_on("py-promise@2.3:", when="@2.3:2")
         depends_on("py-rx@1.6:1", when="@2.3:2")
-        depends_on("py-six@1.10:", when="@2:2.0.0,2.1-rc0:2")
+        depends_on("py-six@1.10:", when="@:2")
     # END DEPENDENCIES
 

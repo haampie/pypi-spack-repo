@@ -57,6 +57,7 @@ class PyNumpy(PythonPackage):
     version("1.17.5", sha256="16507ba6617f62ae3c6ab1725ae6f550331025d4d9a369b83f6d5a470446c342", url="https://pypi.org/packages/d9/09/8e89c05abc450ea347f40b4fa917ec5c69b5228da344487f178586a3187c/numpy-1.17.5.zip")
     version("1.17.4", sha256="f58913e9227400f1395c7b800503ebfdb0772f1c33ff8cb4d6451c06cabdf316", url="https://pypi.org/packages/ff/59/d3f6d46aa1fd220d020bdd61e76ca51f6548c6ad6d24ddb614f4037cf49d/numpy-1.17.4.zip")
     version("1.17.3", sha256="a0678793096205a4d784bd99f32803ba8100f639cf3b932dc63b21621390ea7e", url="https://pypi.org/packages/b6/d6/be8f975f5322336f62371c9abeb936d592c98c047ad63035f1b38ae08efe/numpy-1.17.3.zip")
+    version("1.16.1", sha256="31d3fe5b673e99d33d70cfee2ea8fe8dccd60f265c3ed990873a88647e3dd288", url="https://pypi.org/packages/2b/26/07472b0de91851b6656cbc86e2f0d5d3a3128e7580f23295ef58b6862d6c/numpy-1.16.1.zip")
     # END VERSIONS
 
     # BEGIN VARIANTS
@@ -65,6 +66,8 @@ class PyNumpy(PythonPackage):
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.25,1.26.2:")
         depends_on("python@3.9:3.12", when="@1.26:1.26.1")
-        depends_on("python@:3.10", when="@1.21.2:1.21")
+        depends_on("python@3.8:", when="@1.22:1.24")
+        depends_on("python@3.7:", when="@1.20:1.21.1")
+        depends_on("python@3.7:3.10", when="@1.21.2:1.21")
     # END DEPENDENCIES
 

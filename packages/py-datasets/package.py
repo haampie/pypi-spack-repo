@@ -15,32 +15,33 @@ class PyDatasets(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.5:2.13")
         depends_on("py-aiohttp", when="@1.12:")
+        depends_on("py-dataclasses", when="@:2.4 ^python@:3.6")
         depends_on("py-dill@:0.3.6", when="@2.7:2.9")
-        depends_on("py-dill", when="@1:2.2.1")
+        depends_on("py-dill", when="@:2.2.1")
         depends_on("py-fsspec@2021.11.1:+http", when="@2.4:2.14.4")
         depends_on("py-fsspec", when="@1.3:1.8")
         depends_on("py-huggingface-hub@0.2:", when="@2.5.2:2.10")
         depends_on("py-huggingface-hub@:0.0", when="@1.5:1.11")
-        depends_on("py-multiprocess", when="@1.1:")
-        depends_on("py-numpy@1.17.0:", when="@1:")
+        depends_on("py-importlib-metadata", when="@1.2.1:2.13 ^python@:3.7")
+        depends_on("py-multiprocess")
+        depends_on("py-numpy@1.17.0:")
         depends_on("py-packaging", when="@1.6:")
-        depends_on("py-pandas", when="@1:")
+        depends_on("py-pandas")
         depends_on("py-pyarrow@6:", when="@2.2:2.10")
         depends_on("py-pyarrow@1:3", when="@1.7:1.8")
         depends_on("py-pyyaml@5.1:", when="@2.6:")
-        depends_on("py-requests@2.19:", when="@1:")
+        depends_on("py-requests@2.19:")
         depends_on("py-responses@:0.18", when="@1.18.4:2.12")
         depends_on("py-tqdm@4.62.1:", when="@1.12:")
-        depends_on("py-tqdm@4.27:4.49", when="@1.1.2:1.8")
-        depends_on("py-xxhash", when="@1:")
+        depends_on("py-tqdm@4.27:4.49", when="@:1.8")
+        depends_on("py-xxhash")
+    # END DEPENDENCIES
+
 
         # marker: (sys_platform != "darwin" or platform_machine != "arm64") and extra == "dev"
-        # depends_on("py-tensorflow@2.2.0:2.6.0-rc2,2.6.2:", when="@2.14.1:")
         # depends_on("py-tensorflow@2.3.0:2.6.0-rc2,2.6.2:", when="@2.7:")
-
-        # marker: (sys_platform != "darwin" or platform_machine != "arm64") and extra == "docs"
-        # depends_on("py-tensorflow@2.2.0:2.6.0-rc2,2.6.2:", when="@2.14.1:")
 
         # marker: (sys_platform != "darwin" or platform_machine != "arm64") and extra == "tensorflow"
         # depends_on("py-tensorflow@2.2.0:2.6.0-rc2,2.6.2:", when="@2.7:")
@@ -51,13 +52,8 @@ class PyDatasets(PythonPackage):
         # marker: (sys_platform == "darwin" and platform_machine == "arm64") and extra == "dev"
         # depends_on("py-tensorflow-macos", when="@2.7:")
 
-        # marker: (sys_platform == "darwin" and platform_machine == "arm64") and extra == "docs"
-        # depends_on("py-tensorflow-macos", when="@2.14.1:")
-
         # marker: (sys_platform == "darwin" and platform_machine == "arm64") and extra == "tensorflow"
         # depends_on("py-tensorflow-macos", when="@2.7:")
 
         # marker: (sys_platform == "darwin" and platform_machine == "arm64") and extra == "tests"
         # depends_on("py-tensorflow-macos", when="@2.7:")
-    # END DEPENDENCIES
-

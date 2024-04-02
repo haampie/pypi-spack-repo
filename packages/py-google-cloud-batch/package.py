@@ -14,9 +14,10 @@ class PyGoogleCloudBatch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-google-api-core@1.34:1,2.11:+grpc", when="@0.5:0.17.11")
+        depends_on("python@3.7:")
+        depends_on("py-google-api-core@1.34:1,2.11:+grpc", when="@:0.17.11")
         depends_on("py-google-auth@2.14.1:", when="@0.17.11:0.17.13")
         depends_on("py-proto-plus@1.22.3:", when="@0.17.6-rc0:")
-        depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0-rc2,4.21.6:4", when="@0.3.2:")
+        depends_on("py-protobuf@3.19.5:3.20.0-rc2,3.20.1-rc1,3.20.2:4.21.0-rc2,4.21.6:4")
     # END DEPENDENCIES
 

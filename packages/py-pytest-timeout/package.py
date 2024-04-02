@@ -15,6 +15,7 @@ class PyPytestTimeout(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.2:")
         depends_on("py-pytest@5:", when="@2:2.2")
         depends_on("py-pytest@3.6:", when="@1.3:1")
     # END DEPENDENCIES

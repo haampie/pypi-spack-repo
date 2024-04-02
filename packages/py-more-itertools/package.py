@@ -24,6 +24,7 @@ class PyMoreItertools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@9")
         depends_on("py-six@1.0.0:", when="@2.5:5")
     # END DEPENDENCIES
 

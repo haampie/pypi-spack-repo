@@ -14,11 +14,12 @@ class PySphinxImmaterial(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.11.1:")
         depends_on("py-appdirs", when="@0.9:")
-        depends_on("py-markupsafe", when="@0.4.1:")
-        depends_on("py-pydantic", when="@0.6:0.11.4")
+        depends_on("py-markupsafe")
+        depends_on("py-pydantic", when="@:0.11.4")
         depends_on("py-requests", when="@0.9:")
         depends_on("py-sphinx@4.0.0:", when="@:0.11.2")
-        depends_on("py-typing-extensions", when="@0.6.1:")
+        depends_on("py-typing-extensions")
     # END DEPENDENCIES
 

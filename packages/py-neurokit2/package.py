@@ -18,11 +18,11 @@ class PyNeurokit2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-matplotlib", when="@0.0.34:")
-        depends_on("py-numpy", when="@0.0.34:")
-        depends_on("py-pandas", when="@0.0.34:")
+        depends_on("py-matplotlib")
+        depends_on("py-numpy")
+        depends_on("py-pandas")
         depends_on("py-scikit-learn@1.0:", when="@0.2:")
         depends_on("py-scikit-learn", when="@0.1")
-        depends_on("py-scipy", when="@0.0.34:")
+        depends_on("py-scipy")
     # END DEPENDENCIES
 

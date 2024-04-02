@@ -11,29 +11,28 @@ class PyCellpose(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("gui", default=False)
+    variant("gui", default=False, description="gui")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-fastremap", when="@0.7:")
-        depends_on("py-google-cloud-storage", when="@0.0.1.1:0.0.1.9,0.0.1.24:0.0,0.7:+gui")
-        depends_on("py-google-cloud-storage", when="@:0.0.1.0,0.0.1.10:0.0.1.23")
+        depends_on("py-fastremap")
+        depends_on("py-google-cloud-storage", when="+gui")
         depends_on("py-imagecodecs", when="@2.0.5:")
         depends_on("py-llvmlite", when="@2.0.5:")
-        depends_on("py-natsort", when="@:0.0,0.7:")
+        depends_on("py-natsort")
         depends_on("py-numba@0.53.0:", when="@2.0.5:")
-        depends_on("py-numpy@1.20.0:", when="@0.7:")
-        depends_on("py-opencv-python-headless", when="@0.0.3:0.0,0.7:")
+        depends_on("py-numpy@1.20.0:")
+        depends_on("py-opencv-python-headless")
         depends_on("py-pyqt6", when="@2.2.3:+gui")
         depends_on("py-pyqt6-sip", when="@2.2.3:+gui")
-        depends_on("py-pyqtgraph@0.11:", when="@2:+gui")
+        depends_on("py-pyqtgraph@0.11:", when="+gui")
         depends_on("py-qtpy", when="@2.2.3:+gui")
         depends_on("py-roifile", when="@2.2.2:")
-        depends_on("py-scipy", when="@:0.0,0.7:")
+        depends_on("py-scipy")
         depends_on("py-superqt", when="@2.2:+gui")
-        depends_on("py-tifffile", when="@0.0.3:0.0,0.7:")
-        depends_on("py-torch@1.6:", when="@0.7:")
-        depends_on("py-tqdm", when="@:0.0,0.7:")
+        depends_on("py-tifffile")
+        depends_on("py-torch@1.6:")
+        depends_on("py-tqdm")
     # END DEPENDENCIES
 

@@ -14,6 +14,6 @@ class PyGeopy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-geographiclib@1.49:1", when="@1.13:2.2")
+        depends_on("py-geographiclib@1.49:1", when="@:2.2")
     # END DEPENDENCIES
 

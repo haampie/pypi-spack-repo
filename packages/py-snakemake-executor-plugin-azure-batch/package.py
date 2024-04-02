@@ -14,7 +14,7 @@ class PySnakemakeExecutorPluginAzureBatch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-azure-batch@14:")
         depends_on("py-azure-identity@1.14.0:")
         depends_on("py-azure-mgmt-batch@17:", when="@0.1.3:")

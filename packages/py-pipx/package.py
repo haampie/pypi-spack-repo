@@ -14,10 +14,11 @@ class PyPipx(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.1:1.2")
         depends_on("py-argcomplete@1.9.4:", when="@1:")
         depends_on("py-colorama@0.4.4:", when="@0.16.3: platform=windows")
-        depends_on("py-colorama@0.4.4:", when="@0.16.1:0.16.2")
-        depends_on("py-packaging@20:", when="@0.15.5:")
+        depends_on("py-importlib-metadata@3.3:", when="@:1.2 ^python@:3.7")
+        depends_on("py-packaging@20:")
         depends_on("py-userpath@1.6:", when="@0.16.4:1.2")
     # END DEPENDENCIES
 

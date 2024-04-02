@@ -14,6 +14,7 @@ class PyCylcRose(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1:")
         depends_on("py-cylc-flow@8.2:", when="@1.3:")
         depends_on("py-jinja2", when="@1:")
         depends_on("py-metomi-isodatetime", when="@1:")

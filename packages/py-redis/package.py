@@ -14,15 +14,16 @@ class PyRedis(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("hiredis", default=False)
+    variant("hiredis", default=False, description="hiredis")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-async-timeout@4.0.2:", when="@4.5.4:4,5.0.0-rc2:5.0.1,5.1:5.1.0-beta2 ^python@:3.11.2")
-        depends_on("py-async-timeout@4.0.2:", when="@4.5.2:4.5.3,5:5.0.0-rc1 ^python@:3.10")
+        depends_on("python@3.7:", when="@4.4:5.1.0-alpha1")
         depends_on("py-async-timeout@4.0.2:", when="@4.2:4.5.1")
         depends_on("py-hiredis@1:", when="@4.0.0-rc1:+hiredis")
-        depends_on("py-hiredis@0.1.3:", when="@3+hiredis")
+        depends_on("py-hiredis@0.1.3:", when="@:3+hiredis")
+        depends_on("py-importlib-metadata@1:", when="@4.1.0:5.1.0-alpha1 ^python@:3.7")
+        depends_on("py-typing-extensions", when="@4.2.1:5.1.0-alpha1,5.1.0-beta3 ^python@:3.7")
     # END DEPENDENCIES
 

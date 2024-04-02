@@ -13,16 +13,19 @@ class PyScikitBuildCore(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("pyproject", default=False)
+    variant("pyproject", default=False, description="pyproject")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-exceptiongroup", when="^python@:3.10")
+        depends_on("py-importlib-metadata", when="@0.3: ^python@:3.7")
         depends_on("py-importlib-resources@1.3:", when="@0.1.0-rc1: ^python@:3.8")
         depends_on("py-packaging@20.9:", when="@0.1.0-rc1:")
         depends_on("py-pathspec@0.10.1:", when="@0.1.0-rc1:+pyproject")
         depends_on("py-pyproject-metadata@0.5:", when="@0.1.0-rc1:+pyproject")
         depends_on("py-tomli@1.1:", when="@0.1.0-rc1: ^python@:3.10")
+        depends_on("py-typing-extensions@3.10:", when="@0.1.0-rc1:0.7 ^python@:3.7")
     # END DEPENDENCIES
 

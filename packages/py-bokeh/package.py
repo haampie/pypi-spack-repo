@@ -20,8 +20,8 @@ class PyBokeh(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@3.5:")
         depends_on("python@3.9:", when="@3.2:3.4")
+        depends_on("python@3.7:", when="@2.4:2,3.0.0.dev:3.0.0.dev2")
         depends_on("py-contourpy@1:", when="@3:3.3,3.4.0.dev:3.4.0.dev3")
         depends_on("py-jinja2@2.9:", when="@2.4:")
         depends_on("py-numpy@1.16.0:", when="@3.1:")

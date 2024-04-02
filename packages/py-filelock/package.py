@@ -28,6 +28,7 @@ class PyFilelock(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-typing-extensions@4.7.1:", when="@3.12.3 ^python@:3.10")
+        depends_on("python@3.8:", when="@3.12.3:")
+        depends_on("python@3.7:", when="@3.4.2:3.12.2")
     # END DEPENDENCIES
 

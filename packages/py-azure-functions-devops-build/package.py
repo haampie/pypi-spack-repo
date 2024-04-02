@@ -14,8 +14,8 @@ class PyAzureFunctionsDevopsBuild(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-jinja2", when="@0.0.9:0.0.11,0.0.18:")
-        depends_on("py-msrest", when="@0.0.9,0.0.11,0.0.18:")
-        depends_on("py-vsts", when="@0.0.9,0.0.11,0.0.18:")
+        depends_on("py-jinja2", when="@0.0.18:")
+        depends_on("py-msrest", when="@0.0.18:")
+        depends_on("py-vsts", when="@0.0.18:")
     # END DEPENDENCIES
 

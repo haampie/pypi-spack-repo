@@ -16,8 +16,8 @@ class PyPythonDaemon(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-docutils", when="@:0,2.2.1:")
-        depends_on("py-lockfile@0.10:", when="@:0,2.2.1:")
-        depends_on("py-setuptools", when="@:0,2.2.1:3.0.0")
+        depends_on("py-docutils", when="@2.2.1:")
+        depends_on("py-lockfile@0.10:", when="@2.2.1:")
+        depends_on("py-setuptools", when="@2.2.1:3.0.0")
     # END DEPENDENCIES
 

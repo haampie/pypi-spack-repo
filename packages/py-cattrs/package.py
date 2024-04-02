@@ -14,8 +14,9 @@ class PyCattrs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@22.2:23.1")
         depends_on("py-attrs@20:", when="@1.8:23.1")
         depends_on("py-exceptiongroup", when="@22.2:23.1 ^python@:3.10")
-        depends_on("py-exceptiongroup", when="@22:22.1 ^python@:3.10.0")
+        depends_on("py-typing-extensions", when="@22.2:22 ^python@:3.7")
     # END DEPENDENCIES
 

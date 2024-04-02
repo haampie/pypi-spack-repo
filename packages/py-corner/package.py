@@ -15,7 +15,6 @@ class PyCorner(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.2.2-rc3:")
-        depends_on("py-arviz@0.9:", when="@2.2:2.2.0")
         depends_on("py-matplotlib@2.1.0:", when="@2.1,2.2.1:")
     # END DEPENDENCIES
 

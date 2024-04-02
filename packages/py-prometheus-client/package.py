@@ -16,7 +16,7 @@ class PyPrometheusClient(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("twisted", default=False)
+    variant("twisted", default=False, description="twisted")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

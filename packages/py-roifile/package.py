@@ -11,7 +11,7 @@ class PyRoifile(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("all", default=False)
+    variant("all", default=False, description="all")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

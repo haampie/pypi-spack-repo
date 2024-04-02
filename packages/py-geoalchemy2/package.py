@@ -12,7 +12,7 @@ class PyGeoalchemy2(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("dev", default=False)
+    variant("dev", default=False, description="dev")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

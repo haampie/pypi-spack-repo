@@ -18,14 +18,14 @@ class PyTables(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("bzip2", default=False)
-    variant("lzo", default=False)
-    variant("zlib", default=False)
+    variant("bzip2", default=False, description="bzip2")
+    variant("lzo", default=False, description="lzo")
+    variant("zlib", default=False, description="zlib")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@3.9.1:")
+        depends_on("python@3.8:", when="@3.8:3.9.0")
         depends_on("py-blosc2@2.2.8:", when="@3.9:3.9.1")
         depends_on("py-numexpr@2.6.2:", when="@3.6,3.9:")
         depends_on("py-numexpr@2.5.2:", when="@3.4.4:3.4")

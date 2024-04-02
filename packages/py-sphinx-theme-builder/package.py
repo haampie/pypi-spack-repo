@@ -14,12 +14,13 @@ class PySphinxThemeBuilder(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-nodeenv", when="@0.2.0-alpha3:")
-        depends_on("py-packaging", when="@0.2:")
+        depends_on("python@3.7:", when="@0.2.0-alpha14:")
+        depends_on("py-nodeenv")
+        depends_on("py-packaging")
         depends_on("py-pyproject-metadata", when="@0.2.0-beta1:")
-        depends_on("py-rich", when="@0.2:")
-        depends_on("py-setuptools", when="@0.2.0-alpha5:")
+        depends_on("py-rich")
+        depends_on("py-setuptools")
         depends_on("py-tomli", when="@0.2.0-beta2: ^python@:3.10")
-        depends_on("py-tomli", when="@0.2:0.2.0-beta1")
+        depends_on("py-typing-extensions", when="@0.2.0-alpha15: ^python@:3.6")
     # END DEPENDENCIES
 

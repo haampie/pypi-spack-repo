@@ -16,6 +16,7 @@ class PyAzuremlTrainCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@1.2:1.47")
         depends_on("py-azureml-core@1.23", when="@1.23")
         depends_on("py-azureml-core@1.11", when="@1.11")
         depends_on("py-azureml-core@1.8", when="@1.8")
@@ -25,6 +26,6 @@ class PyAzuremlTrainCore(PythonPackage):
         depends_on("py-azureml-train-restclients-hyperdrive@1.23", when="@1.23")
         depends_on("py-azureml-train-restclients-hyperdrive@1.11", when="@1.11")
         depends_on("py-azureml-train-restclients-hyperdrive@1.8", when="@1.8")
-        depends_on("py-flake8@3.1:3.7", when="@1.0.76:1.9")
+        depends_on("py-flake8@3.1:3.7", when="@:1.9")
     # END DEPENDENCIES
 

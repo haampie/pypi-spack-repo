@@ -14,6 +14,7 @@ class PyHatchJupyterBuilder(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.8.2:")
         depends_on("py-hatchling@1.5:", when="@0.8.2:0.8")
     # END DEPENDENCIES
 

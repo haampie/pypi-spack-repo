@@ -14,16 +14,16 @@ class PyParamiko(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("invoke", default=False)
+    variant("invoke", default=False, description="invoke")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bcrypt@3.1.3:", when="@2.2.1:2")
         depends_on("py-cryptography@2.5:", when="@2.5:2")
-        depends_on("py-cryptography@1.1:", when="@2:2.2")
+        depends_on("py-cryptography@1.1:", when="@:2.2")
         depends_on("py-invoke@1.3:", when="@2.7:2+invoke")
-        depends_on("py-pyasn1@0.1.7:", when="@2:2.4")
+        depends_on("py-pyasn1@0.1.7:", when="@:2.4")
         depends_on("py-pynacl@1.0.1:", when="@2.2:2")
         depends_on("py-six", when="@2.9.3:2")
     # END DEPENDENCIES

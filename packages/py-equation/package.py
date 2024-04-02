@@ -11,8 +11,8 @@ class PyEquation(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("sciconst", default=False)
-    variant("vectormaths", default=False)
+    variant("sciconst", default=False, description="sciconst")
+    variant("vectormaths", default=False, description="vectormaths")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

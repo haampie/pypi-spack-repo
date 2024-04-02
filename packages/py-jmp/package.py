@@ -14,6 +14,7 @@ class PyJmp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-dataclasses@0.7:", when="@0.0.2: ^python@:3.6")
         depends_on("py-numpy@1.19.5:", when="@0.0.2:")
     # END DEPENDENCIES
 

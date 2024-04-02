@@ -11,8 +11,8 @@ class PyNumpyQuaternion(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("numba", default=False)
-    variant("scipy", default=False)
+    variant("numba", default=False, description="numba")
+    variant("scipy", default=False, description="scipy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

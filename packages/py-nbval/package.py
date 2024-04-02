@@ -15,10 +15,10 @@ class PyNbval(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-coverage", when="@0.9:0.9.3,0.9.5:")
-        depends_on("py-ipykernel", when="@:0.3.2,0.4.1:")
-        depends_on("py-jupyter-client", when="@:0.3.2,0.3.6:")
-        depends_on("py-nbformat", when="@:0.3.2,0.3.6:")
-        depends_on("py-pytest@2.8:", when="@0.5:0.10")
-        depends_on("py-six", when="@:0.3.2,0.3.6:0.9")
+        depends_on("py-ipykernel")
+        depends_on("py-jupyter-client")
+        depends_on("py-nbformat")
+        depends_on("py-pytest@2.8:", when="@:0.10")
+        depends_on("py-six", when="@:0.9")
     # END DEPENDENCIES
 

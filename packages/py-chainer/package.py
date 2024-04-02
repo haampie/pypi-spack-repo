@@ -12,7 +12,7 @@ class PyChainer(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("mn", default=False)
+    variant("mn", default=False, description="mn")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

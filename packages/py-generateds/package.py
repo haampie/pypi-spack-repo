@@ -19,8 +19,8 @@ class PyGenerateds(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-lxml", when="@2.38.6:")
-        depends_on("py-requests@2.21:", when="@2.38.6:")
-        depends_on("py-six", when="@2.38.6:")
+        depends_on("py-lxml")
+        depends_on("py-requests@2.21:")
+        depends_on("py-six")
     # END DEPENDENCIES
 

@@ -51,11 +51,12 @@ class PyProtobuf(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cpp", default=False)
+    variant("cpp", default=False, description="cpp")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.20:3,4.21:4.24")
         depends_on("py-setuptools", when="@3.5.2.post:3.6.0,3.8.0:3.12.2,4:4.0.0-rc1")
         depends_on("py-six@1.9:", when="@3.5.2.post:3.6.0,3.8.0:3.12.2,4:4.0.0-rc1")
     # END DEPENDENCIES

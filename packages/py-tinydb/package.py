@@ -17,5 +17,10 @@ class PyTinydb(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:3", when="@4.7.1:")
+        depends_on("python@:3", when="@4:4.7.0")
+        depends_on("py-typing-extensions@3.10:", when="@4.6: ^python@:3.6")
+        depends_on("py-typing-extensions@3.10:3", when="@4.5 ^python@:3.6")
     # END DEPENDENCIES
 

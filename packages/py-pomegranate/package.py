@@ -14,10 +14,10 @@ class PyPomegranate(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-joblib@0.9.0-beta4:", when="@0.7.2,0.11.2:0.12.0,0.13.1-rc0:0.13.1")
+        depends_on("py-joblib@0.9.0-beta4:", when="@0.11.2:0.12.0,0.13.1-rc0:0.13.1")
         depends_on("py-networkx@2:", when="@0.11.2:0.12.0,0.13.1-rc0:0.13.1")
-        depends_on("py-numpy@1.8:", when="@0.7.2,0.11.2:0.12.0,0.13.1-rc0:0.13.1")
+        depends_on("py-numpy@1.8:", when="@0.11.2:0.12.0,0.13.1-rc0:0.13.1")
         depends_on("py-pyyaml", when="@0.11.2:0.12.0,0.13.1-rc0:0.13.1")
-        depends_on("py-scipy@0.17:", when="@0.7.2,0.11.2:0.12.0,0.13.1-rc0:0.13.1")
+        depends_on("py-scipy@0.17:", when="@0.11.2:0.12.0,0.13.1-rc0:0.13.1")
     # END DEPENDENCIES
 

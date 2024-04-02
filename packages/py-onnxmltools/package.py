@@ -17,7 +17,7 @@ class PyOnnxmltools(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-numpy")
-        depends_on("py-onnx", when="@1.2:")
-        depends_on("py-skl2onnx", when="@1.3.2:1.11")
+        depends_on("py-onnx")
+        depends_on("py-skl2onnx", when="@:1.11")
     # END DEPENDENCIES
 

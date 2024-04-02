@@ -15,9 +15,10 @@ class PyMerlin(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cached-property")
-        depends_on("py-celery@5.0.3:+redis+sqlalchemy", when="@1.7.6:")
+        depends_on("py-celery@5.0.3:+redis+sqlalchemy")
         depends_on("py-coloredlogs")
         depends_on("py-cryptography")
+        depends_on("py-importlib-resources", when="^python@:3.6")
         depends_on("py-maestrowf@1.1.9:", when="@1.9:")
         depends_on("py-numpy")
         depends_on("py-parse")

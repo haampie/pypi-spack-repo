@@ -12,7 +12,7 @@ class PyCorrectionlib(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("convert", default=False)
+    variant("convert", default=False, description="convert")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

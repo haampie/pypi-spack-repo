@@ -14,7 +14,7 @@ class PyOpencensus(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-google-api-core@1", when="@0.1.10:0.7")
-        depends_on("py-opencensus-context@0.1.1", when="@0.7:0.7.10")
+        depends_on("py-google-api-core@1", when="@:0.7")
+        depends_on("py-opencensus-context@0.1.1", when="@:0.7.10")
     # END DEPENDENCIES
 

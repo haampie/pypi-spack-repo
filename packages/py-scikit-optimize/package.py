@@ -12,7 +12,7 @@ class PyScikitOptimize(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("plots", default=False)
+    variant("plots", default=False, description="plots")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -20,7 +20,6 @@ class PyScikitOptimize(PythonPackage):
         depends_on("py-joblib@0.11:", when="@0.7.3:")
         depends_on("py-matplotlib@2.0.0:", when="@0.7.3:+plots")
         depends_on("py-matplotlib", when="@0.5.2:0.7.2+plots")
-        depends_on("py-matplotlib", when="@:0.5.1")
         depends_on("py-numpy@1.13.3:", when="@0.8.0:0.9")
         depends_on("py-numpy", when="@:0.7.2")
         depends_on("py-pyaml@16:", when="@0.7.3:")

@@ -12,11 +12,12 @@ class PyRfc3986(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("idna2008", default=False)
+    variant("idna2008", default=False, description="idna2008")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2:")
         depends_on("py-idna", when="@1.3:+idna2008")
     # END DEPENDENCIES
 

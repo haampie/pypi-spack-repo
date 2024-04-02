@@ -14,6 +14,7 @@ class PyZfitInterface(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.0.3:")
         depends_on("py-numpy", when="@0.0.3:")
         depends_on("py-typing-extensions", when="@0.0.3:")
         depends_on("py-uhi", when="@0.0.3:")

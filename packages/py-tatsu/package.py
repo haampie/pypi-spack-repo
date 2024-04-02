@@ -11,12 +11,9 @@ class PyTatsu(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("future_regex", default=False)
+    variant("future_regex", default=False, description="future_regex")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("python@3.11:", when="@5.9:")
-        depends_on("python@3.10:", when="@5.7.1:5.7.3,5.8:5.8.2")
     # END DEPENDENCIES
 

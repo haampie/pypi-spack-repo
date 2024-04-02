@@ -16,6 +16,6 @@ class PyTyper(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-click@7.1.1:", when="@0.4:0.10")
-        depends_on("py-typing-extensions@3.7.4.3:", when="@0.9:")
+        depends_on("py-typing-extensions@3.7.4.3:", when="@0.9:0.11")
     # END DEPENDENCIES
 

@@ -14,7 +14,7 @@ class PySnakemakeExecutorPluginFlux(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-snakemake-interface-common@1.14:")
         depends_on("py-snakemake-interface-executor-plugins@8.1.1:8", when="@:0.1.0")
     # END DEPENDENCIES

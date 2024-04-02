@@ -15,11 +15,13 @@ class PyAccelerate(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy@1.17.0:", when="@0.5:")
+        depends_on("python@3.8:", when="@0.21:")
+        depends_on("python@3.7:", when="@0.10:0.20")
+        depends_on("py-numpy@1.17.0:")
         depends_on("py-packaging@20:", when="@0.10:")
         depends_on("py-psutil", when="@0.10:")
-        depends_on("py-pyyaml", when="@0.4:")
+        depends_on("py-pyyaml")
         depends_on("py-torch@1.10:", when="@0.21:")
-        depends_on("py-torch@1.4:", when="@0.1:0.18")
+        depends_on("py-torch@1.4:", when="@:0.18")
     # END DEPENDENCIES
 

@@ -15,9 +15,8 @@ class PyPanedr(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.8:")
-        depends_on("py-pandas", when="@0.2:")
-        depends_on("py-pbr", when="@0.5:0.7")
+        depends_on("py-pandas")
+        depends_on("py-pbr", when="@:0.7")
         depends_on("py-pyedr", when="@0.6:")
     # END DEPENDENCIES
 

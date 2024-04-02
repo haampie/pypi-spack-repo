@@ -14,7 +14,7 @@ class PyCondaInject(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:")
+        depends_on("python@3.9:3")
         depends_on("py-pyyaml@6.0:")
     # END DEPENDENCIES
 

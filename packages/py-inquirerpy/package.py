@@ -14,6 +14,7 @@ class PyInquirerpy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@0.2.2:")
         depends_on("py-pfzy@0.3.1:", when="@0.3:")
         depends_on("py-prompt-toolkit@3.0.1:", when="@0.2.2:")
     # END DEPENDENCIES

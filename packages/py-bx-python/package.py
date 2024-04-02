@@ -15,6 +15,7 @@ class PyBxPython(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.8.13:0.10")
         depends_on("py-numpy", when="@0.8.3:0.8.9,0.11:")
         depends_on("py-six", when="@0.8.3:0.8.8")
     # END DEPENDENCIES

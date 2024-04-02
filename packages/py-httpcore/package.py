@@ -16,13 +16,13 @@ class PyHttpcore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.15:0.17")
         depends_on("py-anyio@3.0.0:", when="@0.16:0")
         depends_on("py-anyio@3", when="@0.13.4:0.15")
         depends_on("py-certifi", when="@0.14.1:")
         depends_on("py-h11@0.13:", when="@0.16:")
         depends_on("py-h11@0.11:0.12", when="@0.13.3:0.15")
-        depends_on("py-h11@0.8:0.9", when="@0.5:0.11")
-        depends_on("py-h2@3", when="@0.5:0.9")
-        depends_on("py-sniffio@1:", when="@0.5:0")
+        depends_on("py-h11@0.8:0.9", when="@:0.11")
+        depends_on("py-sniffio@1:", when="@:0")
     # END DEPENDENCIES
 

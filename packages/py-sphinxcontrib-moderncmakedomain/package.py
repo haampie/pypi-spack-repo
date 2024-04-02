@@ -16,6 +16,7 @@ class PySphinxcontribModerncmakedomain(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.26:")
         depends_on("py-sphinx@2.0.0:", when="@3.27:")
         depends_on("py-sphinx", when="@3.25:3.26")
     # END DEPENDENCIES

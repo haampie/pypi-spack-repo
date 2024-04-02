@@ -14,6 +14,7 @@ class PyMkdocsAutorefs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.4")
         depends_on("py-markdown@3.3:", when="@0.4:")
         depends_on("py-mkdocs@1.1:", when="@0.4:")
     # END DEPENDENCIES

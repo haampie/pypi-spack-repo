@@ -14,6 +14,7 @@ class PyPytestAstropy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.9:")
         depends_on("py-attrs@19.2:", when="@0.9:")
         depends_on("py-hypothesis@5.1:", when="@0.8:")
         depends_on("py-pytest@4.6:", when="@0.8:")

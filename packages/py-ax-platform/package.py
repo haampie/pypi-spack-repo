@@ -14,14 +14,14 @@ class PyAxPlatform(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.3.4:")
+        depends_on("python@3.8:", when="@0.2.7:0.3.3")
         depends_on("py-botorch@0.8.3", when="@0.3.1")
         depends_on("py-ipywidgets", when="@0.3:")
-        depends_on("py-jinja2", when="@0.1:")
-        depends_on("py-pandas", when="@0.1:")
+        depends_on("py-jinja2")
+        depends_on("py-pandas")
         depends_on("py-plotly@5.12:", when="@0.3:")
-        depends_on("py-scikit-learn", when="@0.1.7:")
-        depends_on("py-scipy", when="@0.1:")
+        depends_on("py-scikit-learn")
+        depends_on("py-scipy")
         depends_on("py-typeguard@2.13.3:2", when="@0.3.1:0.3.5")
     # END DEPENDENCIES
 

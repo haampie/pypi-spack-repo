@@ -14,7 +14,7 @@ class PyOsloI18n(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pbr@2:2.0,3:", when="@3.15.1:")
-        depends_on("py-six@1.10:", when="@3.19:5.0")
+        depends_on("py-pbr@2:2.0,3:")
+        depends_on("py-six@1.10:", when="@:5.0")
     # END DEPENDENCIES
 

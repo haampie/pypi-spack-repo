@@ -24,16 +24,20 @@ class PyKeyring(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-entrypoints", when="@11.1:19.2")
+        depends_on("python@3.8:", when="@24.2:")
+        depends_on("python@3.7:", when="@23.5:24.1")
+        depends_on("py-entrypoints", when="@:19.2")
         depends_on("py-importlib-metadata@4.11.4:", when="@23.10: ^python@:3.11")
         depends_on("py-importlib-metadata@3.6:", when="@23.6:23.9 ^python@:3.9")
         depends_on("py-importlib-metadata@3.6:", when="@22.4:23.5")
+        depends_on("py-importlib-metadata@1:", when="@21.5:22.3 ^python@:3.7")
+        depends_on("py-importlib-metadata", when="@19.3:21.4 ^python@:3.7")
         depends_on("py-importlib-resources", when="@23.13: ^python@:3.8")
         depends_on("py-jaraco-classes", when="@23.9:")
         depends_on("py-jeepney@0.4.2:", when="@21.1: platform=linux")
         depends_on("py-pywin32-ctypes@0.2:", when="@23.12: platform=windows")
-        depends_on("py-pywin32-ctypes@:0.0,0.1.2:", when="@10.4:23.11 platform=windows")
+        depends_on("py-pywin32-ctypes@:0.0,0.1.2:", when="@:23.11 platform=windows")
         depends_on("py-secretstorage@3.2:", when="@21.5: platform=linux")
-        depends_on("py-secretstorage", when="@10:12.0.1,12.1:21.0 platform=linux")
+        depends_on("py-secretstorage", when="@:21.0 platform=linux")
     # END DEPENDENCIES
 

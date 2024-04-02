@@ -18,9 +18,15 @@ class PyPlatformdirs(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("wheel", default=False)
+    variant("wheel", default=False, description="wheel")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.4.1:4.0")
+        depends_on("py-typing-extensions@4.7.1:", when="@3.10:4.0 ^python@:3.7")
+        depends_on("py-typing-extensions@4.6.3:", when="@3.5.2:3.9 ^python@:3.7")
+        depends_on("py-typing-extensions@4.5:", when="@3.2:3.5.1 ^python@:3.7")
+        depends_on("py-typing-extensions@4.4:", when="@2.6.2:3.1 ^python@:3.7")
     # END DEPENDENCIES
 

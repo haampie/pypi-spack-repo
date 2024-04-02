@@ -17,7 +17,7 @@ class PyPiper(PythonPackage):
         depends_on("py-attmap@0.12.5:", when="@0.12.3:0.13")
         depends_on("py-logmuse@0.2.4:", when="@0.12.3:")
         depends_on("py-pandas", when="@0.12.3:")
-        depends_on("py-psutil", when="@0.9.2,0.12.3:")
+        depends_on("py-psutil", when="@0.12.3:")
         depends_on("py-ubiquerg@0.4.5:", when="@0.12.3:")
         depends_on("py-yacman", when="@0.12.3:")
     # END DEPENDENCIES

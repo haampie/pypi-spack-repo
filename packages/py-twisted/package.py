@@ -21,7 +21,6 @@ class PyTwisted(PythonPackage):
         depends_on("py-constantly@15.1:", when="@18.4.0:18.4,18.7.0:18.7,21:21.2,21.7.0-rc3:")
         depends_on("py-hyperlink@17.1.1:", when="@18.4.0:18.4,18.7.0:18.7,21:21.2,21.7.0-rc3:")
         depends_on("py-incremental@21:", when="@21.7.0-rc3:22")
-        depends_on("py-pyhamcrest@1.9:", when="@18.7.0:18.7")
         depends_on("py-twisted-iocpsupport@1:", when="@21:21.2,21.7.0-rc3:21 platform=windows")
         depends_on("py-typing-extensions@3.6.5:", when="@21.7.0-rc3:22")
         depends_on("py-zope-interface@4.4.2:", when="@18.4.0:18.4,18.7.0:18.7,21:21.2,21.7.0-rc3:22")

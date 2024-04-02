@@ -15,11 +15,11 @@ class PySkl2onnx(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy@1.15.0:", when="@1.4.8:1.6.0,1.7:1.13")
-        depends_on("py-onnx@1.2:", when="@1.4.8:1.6.0,1.7:")
+        depends_on("py-numpy@1.15.0:", when="@1.7:1.13")
+        depends_on("py-onnx@1.2:", when="@1.7:")
         depends_on("py-onnxconverter-common@1.7:", when="@1.9.3:")
-        depends_on("py-protobuf", when="@1.4.2:1.4.3,1.4.5:1.6.0,1.7:1.13")
-        depends_on("py-scikit-learn@0.19.0:", when="@1.4.6:1.6.0,1.7:1.13,1.15:")
+        depends_on("py-protobuf", when="@1.7:1.13")
+        depends_on("py-scikit-learn@0.19.0:", when="@1.7:1.13,1.15:")
         depends_on("py-scipy@1.0.0:", when="@1.7:1.13")
     # END DEPENDENCIES
 

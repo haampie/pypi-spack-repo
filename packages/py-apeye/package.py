@@ -15,9 +15,7 @@ class PyApeye(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-apeye-core@1.0.0-beta2:", when="@1.3:")
-        depends_on("py-cachecontrol@0.12.6:+filecache", when="@:0.8")
         depends_on("py-domdf-python-tools@2.6:", when="@1.2:")
-        depends_on("py-lockfile@0.12:", when="@0.0.4:0.8")
         depends_on("py-platformdirs@2.3:", when="@1.2:")
         depends_on("py-requests@2.24:")
     # END DEPENDENCIES

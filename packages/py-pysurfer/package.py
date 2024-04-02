@@ -11,7 +11,7 @@ class PyPysurfer(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("save_movie", default=False)
+    variant("save_movie", default=False, description="save_movie")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

@@ -15,6 +15,6 @@ class PyPaste(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-setuptools", when="@3.4.6:")
-        depends_on("py-six@1.4:", when="@3.0.6:")
+        depends_on("py-six@1.4:")
     # END DEPENDENCIES
 

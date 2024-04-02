@@ -14,6 +14,6 @@ class PyLibcst(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.2:")
+        depends_on("python@3.7:", when="@0.4.2:1.0")
     # END DEPENDENCIES
 

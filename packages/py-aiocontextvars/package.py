@@ -13,5 +13,7 @@ class PyAiocontextvars(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-contextvars@2.4:", when="@0.2.2: ^python@:3.6")
     # END DEPENDENCIES
 

@@ -14,6 +14,7 @@ class PySuperqt(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.5.1:")
         depends_on("py-packaging", when="@0.5:0.6.1")
         depends_on("py-pygments@2.4:", when="@0.5:")
         depends_on("py-qtpy@1.1:", when="@0.5:")

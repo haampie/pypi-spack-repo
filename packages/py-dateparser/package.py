@@ -11,13 +11,13 @@ class PyDateparser(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("calendars", default=False)
+    variant("calendars", default=False, description="calendars")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-python-dateutil", when="@0.3.5:")
-        depends_on("py-pytz", when="@0.3.2:")
+        depends_on("py-pytz")
         depends_on("py-regex", when="@0.3.3:0.7.2")
         depends_on("py-tzlocal", when="@0.5:")
     # END DEPENDENCIES

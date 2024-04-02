@@ -16,16 +16,19 @@ class PyKombu(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("redis", default=False)
+    variant("redis", default=False, description="redis")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.2.0:5.3.0-beta3")
         depends_on("py-amqp@5.0.9:", when="@5.2.3:5.2")
         depends_on("py-amqp@5.0.0:", when="@5.0.2:5.0")
         depends_on("py-amqp@2.6:2", when="@4.6.9:5.0.1")
         depends_on("py-amqp@2.5.2:2.5", when="@4.6.6:4.6.8")
         depends_on("py-amqp@2.4:2", when="@4.3:4.5")
+        depends_on("py-cached-property", when="@5.1:5.3.0-beta3 ^python@:3.7")
+        depends_on("py-importlib-metadata@0.18:", when="@4.6.7:5.3.0-beta1 ^python@:3.7")
         depends_on("py-importlib-metadata@0.18:", when="@4.6.4:4.6.6")
         depends_on("py-redis@3.4.1:4.0.0-rc2,4.0.2:", when="@5.2.3:5.2+redis")
         depends_on("py-redis@3.3.11:", when="@4.6.6:5.2.0+redis")

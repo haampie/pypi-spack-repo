@@ -20,15 +20,15 @@ class PyNumba(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("tbb", default=False)
+    variant("tbb", default=False, description="tbb")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.59:")
-        depends_on("python@:3.10", when="@0.55")
-        depends_on("python@:3.9", when="@0.53:0.54")
-        depends_on("python@:3.8", when="@0.52.0-rc3:0.52")
+        depends_on("python@3.8:", when="@0.57:0.58")
+        depends_on("python@3.7:", when="@0.56")
+        depends_on("python@3.7:3.10", when="@0.55")
+        depends_on("python@3.7:3.9", when="@0.54")
         depends_on("py-llvmlite@0.33", when="@0.50")
         depends_on("py-llvmlite@0.31", when="@0.48")
         depends_on("py-numpy@1.15.0:", when="@0.48:0.50")

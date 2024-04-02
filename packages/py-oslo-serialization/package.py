@@ -14,10 +14,9 @@ class PyOsloSerialization(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-msgpack@0.5.2:", when="@2.27:")
-        depends_on("py-oslo-utils@3.33:", when="@2.23:")
-        depends_on("py-pbr@2:2.0,3:", when="@2.19:")
-        depends_on("py-pytz@2013.6:", when="@5.4: ^python@:3.8")
-        depends_on("py-pytz@2013.6:", when="@1.3:5.3")
+        depends_on("py-msgpack@0.5.2:")
+        depends_on("py-oslo-utils@3.33:")
+        depends_on("py-pbr@2:2.0,3:")
+        depends_on("py-pytz@2013.6:", when="@:5.3")
     # END DEPENDENCIES
 

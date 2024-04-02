@@ -17,6 +17,6 @@ class PyArchspec(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@8.0.0:", when="@0.1.4:0.2.0")
+        depends_on("py-click@8.0.0:", when="@0.2:0.2.0")
     # END DEPENDENCIES
 

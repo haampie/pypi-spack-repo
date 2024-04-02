@@ -14,23 +14,25 @@ class PyHttpx(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("http2", default=False)
+    variant("http2", default=False, description="http2")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-certifi", when="@0.7.5:")
-        depends_on("py-chardet@3", when="@0.7.5:0.14")
+        depends_on("python@3.7:", when="@0.23:0.24")
+        depends_on("py-async-generator", when="@0.18:0.22,1: ^python@:3.6")
+        depends_on("py-certifi")
+        depends_on("py-chardet@3", when="@:0.14")
         depends_on("py-charset-normalizer", when="@0.19:0.22,1:")
         depends_on("py-h11@0.8:0.9", when="@0.10:0.12")
         depends_on("py-h2@3:", when="@0.19:+http2")
         depends_on("py-h2@3", when="@0.14:0.18+http2")
-        depends_on("py-h2@3", when="@0.7.5:0.12")
+        depends_on("py-h2@3", when="@:0.12")
         depends_on("py-hstspreload", when="@0.9:0.13")
         depends_on("py-httpcore@0.15:0.16", when="@0.23.1:0.23")
         depends_on("py-httpcore@0.14.5:0.14", when="@0.22")
         depends_on("py-httpcore@0.11", when="@0.15")
-        depends_on("py-idna@2", when="@0.7.5:0.14.1")
+        depends_on("py-idna@2", when="@:0.14.1")
         depends_on("py-rfc3986@1.3:1+idna2008", when="@0.14.2:0.23,1:")
         depends_on("py-rfc3986@1.3:1", when="@0.9:0.14.1")
         depends_on("py-sniffio", when="@0.13.0:")

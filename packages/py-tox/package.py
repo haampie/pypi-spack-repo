@@ -15,12 +15,13 @@ class PyTox(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama@0.4.1:", when="@3.14.2:3 platform=windows")
-        depends_on("py-filelock@3:", when="@:0.0,3.5:3.15.0")
+        depends_on("py-filelock@3:", when="@:3.15.0")
+        depends_on("py-importlib-metadata@1.1:1", when="@3.14.2 ^python@:3.7")
         depends_on("py-packaging", when="@3.13:3")
         depends_on("py-pluggy@0.12:0", when="@3.13:3.15.0")
-        depends_on("py-py@1.4.17:", when="@:0.0,3.1:3.15.0")
-        depends_on("py-six@1.0.0:", when="@:0.0,3.1:3.14.3")
-        depends_on("py-toml@0.9.4:", when="@:0.0,3.3:3.25")
+        depends_on("py-py@1.4.17:", when="@:3.15.0")
+        depends_on("py-six@1.0.0:", when="@:3.14.3")
+        depends_on("py-toml@0.9.4:", when="@:3.25")
         depends_on("py-virtualenv@16:", when="@3.14.1:3.14.5")
     # END DEPENDENCIES
 

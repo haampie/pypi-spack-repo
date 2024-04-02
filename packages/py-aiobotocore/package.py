@@ -17,12 +17,14 @@ class PyAiobotocore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2.7:")
+        depends_on("python@3.7:", when="@2.4:2.6")
         depends_on("py-aiohttp@3.7.4.post:3", when="@2.6:")
-        depends_on("py-aiohttp@3.3.1:", when="@0.9.2:1.1,2.1.2:2.1,2.3.4:2.5.0")
-        depends_on("py-aioitertools@0.5.1:", when="@0.12:1.1,2.1.2:2.1,2.3.4:")
+        depends_on("py-aiohttp@3.3.1:", when="@:1.1,2.1.2:2.1,2.3.4:2.5.0")
+        depends_on("py-aioitertools@0.5.1:", when="@:1.1,2.1.2:2.1,2.3.4:")
         depends_on("py-botocore@1.34.41:1.34.51", when="@2.12:")
         depends_on("py-botocore@1.29.76", when="@2.5:2.5.0")
         depends_on("py-botocore@1.27.59", when="@2.4")
-        depends_on("py-wrapt@1.10.10:", when="@0.3.2:0.8,0.9.1:1.1,2.1.2:2.1,2.3.4:")
+        depends_on("py-wrapt@1.10.10:", when="@:1.1,2.1.2:2.1,2.3.4:")
     # END DEPENDENCIES
 

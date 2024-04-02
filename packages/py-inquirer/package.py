@@ -14,7 +14,7 @@ class PyInquirer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@3.2:")
+        depends_on("python@3.8:", when="@3.1:")
         depends_on("py-blessed@1.19:", when="@2.9:")
         depends_on("py-python-editor@1.0.4:", when="@2.9:3.1")
         depends_on("py-readchar@3.0.6:", when="@2.10:")

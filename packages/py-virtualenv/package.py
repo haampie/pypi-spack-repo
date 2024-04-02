@@ -25,6 +25,7 @@ class PyVirtualenv(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@20.18:")
         depends_on("py-backports-entry-points-selectable@1.0.4:", when="@20.5:20.10")
         depends_on("py-distlib@0.3.7:", when="@20.24.2:")
         depends_on("py-distlib@0.3.6:", when="@20.16.6:20.24.1")
@@ -34,6 +35,12 @@ class PyVirtualenv(PythonPackage):
         depends_on("py-filelock@3.11:", when="@20.22:20.23.0")
         depends_on("py-filelock@3.4.1:", when="@20.16.3:20.21")
         depends_on("py-filelock@3.2:", when="@20.9:20.16.2")
+        depends_on("py-importlib-metadata@6.6:", when="@20.23.1: ^python@:3.7")
+        depends_on("py-importlib-metadata@6.4.1:", when="@20.22:20.23.0 ^python@:3.7")
+        depends_on("py-importlib-metadata@4.8.3:", when="@20.16.3:20.21 ^python@:3.7")
+        depends_on("py-importlib-metadata@0.12:", when="@20.2.1:20.16.2 ^python@:3.7")
+        depends_on("py-importlib-resources@5.4:", when="@20.16.3:20.17 ^python@:3.6")
+        depends_on("py-importlib-resources@1:", when="@20.0.22:20.16.2 ^python@:3.6")
         depends_on("py-platformdirs@3.9.1:3", when="@20.24.2:20.24.6")
         depends_on("py-platformdirs@3.2:3", when="@20.22:20.23.0")
         depends_on("py-platformdirs@2.4:2", when="@20.16.3:20.18")

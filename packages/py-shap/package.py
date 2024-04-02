@@ -13,7 +13,5 @@ class PyShap(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.45:")
     # END DEPENDENCIES
 

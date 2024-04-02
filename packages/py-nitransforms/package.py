@@ -15,6 +15,7 @@ class PyNitransforms(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@20.0.0-rc4:")
         depends_on("py-h5py")
         depends_on("py-nibabel@3.0.0:")
         depends_on("py-numpy", when="@:21.0.0")

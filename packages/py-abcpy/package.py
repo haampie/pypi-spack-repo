@@ -15,16 +15,16 @@ class PyAbcpy(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-cloudpickle", when="@0.5.6:")
-        depends_on("py-coverage", when="@0.2.2:")
+        depends_on("py-coverage")
         depends_on("py-glmnet@2.2.1:", when="@0.6:")
         depends_on("py-matplotlib", when="@0.5.7:")
         depends_on("py-mpi4py", when="@0.5.6:")
         depends_on("py-pot", when="@0.6:")
         depends_on("py-scikit-learn@0.23.1:", when="@0.6:")
-        depends_on("py-scipy", when="@0.2.2:")
-        depends_on("py-sklearn", when="@0.2.2:")
+        depends_on("py-scipy")
+        depends_on("py-sklearn")
         depends_on("py-sphinx", when="@0.5.3:")
-        depends_on("py-sphinx-rtd-theme", when="@0.2.2:")
+        depends_on("py-sphinx-rtd-theme")
         depends_on("py-tqdm", when="@0.5.7:")
     # END DEPENDENCIES
 

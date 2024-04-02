@@ -24,9 +24,9 @@ class PyLxml(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cssselect", default=False)
-    variant("html5", default=False)
-    variant("htmlsoup", default=False)
+    variant("cssselect", default=False, description="cssselect")
+    variant("html5", default=False, description="html5")
+    variant("htmlsoup", default=False, description="htmlsoup")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

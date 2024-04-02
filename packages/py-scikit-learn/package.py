@@ -33,12 +33,14 @@ class PyScikitLearn(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("openmp", default=False)
+    variant("openmp", default=False, description="openmp")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@1.4:")
+        depends_on("python@3.8:", when="@1.1:1.3")
+        depends_on("python@3.7:", when="@1:1.0")
         depends_on("py-joblib@0.11:", when="@0.21-rc2:0.23.1")
         depends_on("py-numpy@1.13.3:", when="@0.23:0.23.1")
         depends_on("py-numpy@1.11.0:", when="@0.21-rc2:0.22")

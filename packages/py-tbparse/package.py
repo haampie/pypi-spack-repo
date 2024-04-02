@@ -14,6 +14,7 @@ class PyTbparse(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-pandas@1.3.0:")
         depends_on("py-tensorboard@2:", when="@0.0.7:")
     # END DEPENDENCIES

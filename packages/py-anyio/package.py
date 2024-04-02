@@ -19,8 +19,13 @@ class PyAnyio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@4:")
+        depends_on("py-async-generator", when="@:3.2 ^python@:3.6")
+        depends_on("py-contextvars", when="@3.4:3.6 ^python@:3.6")
+        depends_on("py-dataclasses", when="@:3.6 ^python@:3.6")
         depends_on("py-exceptiongroup@1.0.2:", when="@4: ^python@:3.10")
-        depends_on("py-idna@2.8:", when="@1.4:")
-        depends_on("py-sniffio@1.1:", when="@1.0.0-rc2:")
+        depends_on("py-idna@2.8:")
+        depends_on("py-sniffio@1.1:")
+        depends_on("py-typing-extensions", when="@:3 ^python@:3.7")
     # END DEPENDENCIES
 

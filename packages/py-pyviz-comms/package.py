@@ -14,6 +14,6 @@ class PyPyvizComms(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-param", when="@0.7.2:")
+        depends_on("py-param")
     # END DEPENDENCIES
 

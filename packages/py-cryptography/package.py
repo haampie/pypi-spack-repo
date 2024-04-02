@@ -24,9 +24,11 @@ class PyCryptography(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("idna", default=False)
+    variant("idna", default=False, description="idna")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@41:")
     # END DEPENDENCIES
 

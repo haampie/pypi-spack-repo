@@ -15,6 +15,9 @@ class PyPintXarray(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.3:")
+        depends_on("python@3.7:", when="@0.2")
+        depends_on("py-importlib-metadata", when="@:0.2 ^python@:3.7")
         depends_on("py-numpy@1.17.0:")
         depends_on("py-pint@0.16:", when="@0.2:")
         depends_on("py-xarray@0.16.1:", when="@0.2:")

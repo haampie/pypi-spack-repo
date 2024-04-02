@@ -40,12 +40,14 @@ class PyKeras(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("backend", default=False)
+    variant("backend", default=False, description="backend")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.14,3:")
+        depends_on("python@3.8:", when="@2.12:2.13,2.15:2")
+        depends_on("python@3.7:", when="@2.11")
         depends_on("py-absl-py", when="@3:")
         depends_on("py-dm-tree", when="@3:3.0")
         depends_on("py-h5py", when="@2.1.6:2.4,3:")
@@ -62,7 +64,7 @@ class PyKeras(PythonPackage):
         depends_on("py-numpy", when="@3:")
         depends_on("py-numpy@1.9.1:", when="@2.0.8:2.4")
         depends_on("py-optree", when="@3.1:")
-        depends_on("py-pyyaml", when="@2.0.6:2.4")
+        depends_on("py-pyyaml", when="@:2.4")
         depends_on("py-rich", when="@3:")
         depends_on("py-scipy@0.14:", when="@2.0.8:2.4")
         depends_on("py-six@1.9:", when="@2.0.8:2.3")

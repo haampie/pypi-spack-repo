@@ -24,6 +24,10 @@ class PyPint(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.22-rc1:")
+        depends_on("python@3.8:", when="@0.19:0.21")
+        depends_on("python@3.7:", when="@0.18")
+        depends_on("py-importlib-metadata", when="@0.13:0.18 ^python@:3.7")
+        depends_on("py-importlib-resources", when="@0.16:0.17 ^python@:3.6")
         depends_on("py-packaging", when="@0.13:0.18")
         depends_on("py-setuptools", when="@0.10:0.15")
         depends_on("py-typing-extensions", when="@0.22-rc1:")

@@ -14,7 +14,8 @@ class PyElasticTransport(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-certifi", when="@0.1:0,7:")
-        depends_on("py-urllib3@1.26.2:1", when="@8:8.4")
+        depends_on("py-certifi")
+        depends_on("py-dataclasses", when="@:8.12 ^python@:3.6")
+        depends_on("py-urllib3@1.26.2:1", when="@:8.4")
     # END DEPENDENCIES
 

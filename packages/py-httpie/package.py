@@ -16,9 +16,11 @@ class PyHttpie(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3:")
         depends_on("py-charset-normalizer@2:", when="@2.6:")
         depends_on("py-colorama@0.2.4:", when="@1.0.3: platform=windows")
         depends_on("py-defusedxml@0.6.0:", when="@2.5:")
+        depends_on("py-importlib-metadata@1.4:", when="@3: ^python@:3.7")
         depends_on("py-multidict@4.7:", when="@3:")
         depends_on("py-pip", when="@3.2:")
         depends_on("py-pygments@2.5.2:", when="@2:")

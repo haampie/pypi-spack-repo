@@ -15,12 +15,12 @@ class PyCvxpy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ecos@2:", when="@0.4.11:0,1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3,1.4:")
-        depends_on("py-multiprocess", when="@0.4.11:0,1.0.24:1.0")
+        depends_on("py-ecos@2:", when="@1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3,1.4:")
+        depends_on("py-multiprocess", when="@1.0.24:1.0")
         depends_on("py-numpy@1.15.0:", when="@1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3,1.4:")
         depends_on("py-osqp@0.4.1:", when="@1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3")
         depends_on("py-scipy@1.1.0:", when="@1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3,1.4:")
-        depends_on("py-scs@1.1.3:", when="@0.4.11:0,1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3")
-        depends_on("py-six", when="@0.4.11:0,1.0.24:1.0.25")
+        depends_on("py-scs@1.1.3:", when="@1.0.24:1.0,1.1.0-alpha2,1.1.2:1.1.3")
+        depends_on("py-six", when="@1.0.24:1.0.25")
     # END DEPENDENCIES
 

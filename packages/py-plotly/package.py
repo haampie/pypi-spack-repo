@@ -22,6 +22,7 @@ class PyPlotly(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@5.19:")
         depends_on("py-packaging", when="@5.14:")
         depends_on("py-six", when="@3.1.1-rc1:3.1,3.2.0-alpha2:3.6.0-rc1,3.6.1:5.7")
         depends_on("py-tenacity@6.2:", when="@5:")

@@ -21,19 +21,21 @@ class PyTorchgeo(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("datasets", default=False)
-    variant("docs", default=False)
-    variant("style", default=False)
-    variant("tests", default=False)
+    variant("datasets", default=False, description="datasets")
+    variant("docs", default=False, description="docs")
+    variant("style", default=False, description="style")
+    variant("tests", default=False, description="tests")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.5:")
+        depends_on("python@3.7:3", when="@0.3:0.4")
         depends_on("py-black@21.9-beta0:+jupyter", when="@0.5:+style")
         depends_on("py-black@21.9-beta0:23+jupyter", when="@0.4.1:0.4+style")
         depends_on("py-black@21.9-beta0:22+jupyter", when="@0.3:0.4.0+style")
         depends_on("py-black@21:", when="@:0.2+style")
+        depends_on("py-dataclasses", when="@0.2 ^python@:3.6")
         depends_on("py-einops@0.3:", when="@0.5:")
         depends_on("py-einops@0.3:0.6", when="@0.4")
         depends_on("py-einops@0.3:0.4", when="@0.3")

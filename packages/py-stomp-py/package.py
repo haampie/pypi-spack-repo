@@ -14,6 +14,7 @@ class PyStompPy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@6:")
         depends_on("py-docopt@0.6.2:", when="@6:")
         depends_on("py-pyopenssl@20.0.1:20", when="@8:8.0.0")
     # END DEPENDENCIES

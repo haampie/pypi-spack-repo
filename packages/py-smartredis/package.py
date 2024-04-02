@@ -15,7 +15,6 @@ class PySmartredis(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@0.5.1:")
-        depends_on("python@:3.10", when="@0.4:0.5.0")
+        depends_on("python@3.7:3.10", when="@0.4:0.5.0")
     # END DEPENDENCIES
 

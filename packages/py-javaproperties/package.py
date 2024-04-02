@@ -15,6 +15,7 @@ class PyJavaproperties(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@0.5:")
         depends_on("py-six@1.4:", when="@0.5:0.7")
     # END DEPENDENCIES
 

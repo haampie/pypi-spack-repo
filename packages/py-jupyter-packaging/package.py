@@ -18,6 +18,7 @@ class PyJupyterPackaging(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.11:")
         depends_on("py-deprecation", when="@0.8:")
         depends_on("py-packaging", when="@0.7.3:")
         depends_on("py-setuptools@60.2:", when="@0.12:")

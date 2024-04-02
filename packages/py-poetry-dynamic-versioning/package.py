@@ -14,8 +14,9 @@ class PyPoetryDynamicVersioning(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@0.18:0,1.0.0:")
         depends_on("py-dunamai@1.12:", when="@0.16:0.19")
-        depends_on("py-jinja2@2.11.1:", when="@0.13:")
-        depends_on("py-tomlkit@0.4:", when="@0.2:0,1.0.0:")
+        depends_on("py-jinja2@2.11.1:", when="@0.18:")
+        depends_on("py-tomlkit@0.4:", when="@:0,1.0.0:")
     # END DEPENDENCIES
 

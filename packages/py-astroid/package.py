@@ -29,16 +29,19 @@ class PyAstroid(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.12:2")
+        depends_on("python@:3", when="@2.5.4:2.9.0")
         depends_on("py-lazy-object-proxy@1.4:", when="@2.5:2")
         depends_on("py-lazy-object-proxy@1.4", when="@2:2.4")
         depends_on("py-lazy-object-proxy", when="@1.6:1")
         depends_on("py-setuptools@20:", when="@2.6.3:2.11")
         depends_on("py-six@1.12:", when="@2:2.4")
         depends_on("py-six", when="@1.6:1")
+        depends_on("py-typed-ast@1.4:", when="@2.8.5:2 ^python@:3.7")
+        depends_on("py-typed-ast@1.4", when="@2:2.8.4 ^python@:3.7")
         depends_on("py-typing-extensions@4:", when="@2.13.3: ^python@:3.10")
-        depends_on("py-typing-extensions@4:", when="@2.13.2")
-        depends_on("py-typing-extensions@4:", when="@2.13.1 ^python@:3.9")
         depends_on("py-typing-extensions@3.10:", when="@2.8:2.13.0 ^python@:3.9")
+        depends_on("py-typing-extensions@3.7.4:", when="@2.5.7:2.7 ^python@:3.7")
         depends_on("py-wrapt@1.11:", when="@2.12.3:2 ^python@:3.10")
         depends_on("py-wrapt@1.14.0:", when="@2.12.3:2 ^python@3.11:")
         depends_on("py-wrapt@1.11:1.13", when="@2.8.3:2.10")

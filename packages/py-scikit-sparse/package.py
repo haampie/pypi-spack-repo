@@ -18,6 +18,5 @@ class PyScikitSparse(PythonPackage):
     with default_args(type="run"):
         depends_on("python@:3.11", when="@0.4.11:0.4.12")
         depends_on("python@:3.10", when="@0.4.7:0.4.8")
-        depends_on("python@:3.9", when="@0.4.5:0.4.6")
     # END DEPENDENCIES
 

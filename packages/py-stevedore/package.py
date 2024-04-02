@@ -16,6 +16,8 @@ class PyStevedore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@4:")
+        depends_on("py-importlib-metadata@1.7:", when="@3 ^python@:3.7")
         depends_on("py-pbr@2:2.0,3:", when="@1.22:")
         depends_on("py-six@1.10:", when="@1.28:1")
     # END DEPENDENCIES

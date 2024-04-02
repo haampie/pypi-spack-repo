@@ -20,6 +20,8 @@ class PyImportlibResources(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.6:5.12")
         depends_on("py-zipp@3.1:", when="@5.1.4: ^python@:3.9")
+        depends_on("py-zipp@0.4:", when="@1.1:5.1.3 ^python@:3.7")
     # END DEPENDENCIES
 

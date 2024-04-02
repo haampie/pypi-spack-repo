@@ -15,6 +15,7 @@ class PyContourpy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.2:")
+        depends_on("python@3.8:", when="@1.0.7:1.1")
+        depends_on("python@3.7:", when="@:1.0.6")
     # END DEPENDENCIES
 

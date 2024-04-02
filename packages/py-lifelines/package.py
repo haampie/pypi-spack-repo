@@ -15,8 +15,6 @@ class PyLifelines(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.28:")
-        depends_on("python@:3.10,3.12:", when="@0.27.3")
         depends_on("py-autograd@1.3:", when="@0.22.3:0.27.3")
         depends_on("py-autograd-gamma@0.3:", when="@0.22.1:")
         depends_on("py-matplotlib@3.0.0:", when="@0.20:")

@@ -14,7 +14,7 @@ class PySnakemakeExecutorPluginSlurm(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-snakemake-executor-plugin-slurm-jobstep@0.1.10:", when="@0.2.1:")
         depends_on("py-snakemake-interface-common@1.13:")
         depends_on("py-snakemake-interface-executor-plugins@8.2:8", when="@0.2.1:0.4.1")

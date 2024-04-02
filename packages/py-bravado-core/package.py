@@ -14,15 +14,15 @@ class PyBravadoCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-jsonref", when="@1:1.0,1.1.0:2.0,2.2:2.3,2.4.1:3,4.11.3:6.1.0")
-        depends_on("py-jsonschema@2.5.1:+format", when="@4.11.3:6.1.0")
+        depends_on("py-jsonref", when="@:6.1.0")
+        depends_on("py-jsonschema@2.5.1:+format", when="@:6.1.0")
         depends_on("py-msgpack@0.5.2:", when="@5.16.1:6.1.0")
-        depends_on("py-python-dateutil", when="@1:1.0,1.1.0:2.0,2.2:2.3,2.4.1:4.2.2,4.11.3:6.1.0")
-        depends_on("py-pytz", when="@4.11.3:6.1.0")
-        depends_on("py-pyyaml", when="@4.1:4.2.2,4.11.3:6.1.0")
+        depends_on("py-python-dateutil", when="@:6.1.0")
+        depends_on("py-pytz", when="@:6.1.0")
+        depends_on("py-pyyaml", when="@:6.1.0")
         depends_on("py-requests", when="@5.17.1:6.1.0")
-        depends_on("py-simplejson", when="@1:1.0,1.1.0:2.0,2.2:2.3,2.4.1:4.2.2,4.11.3:6.1.0")
-        depends_on("py-six", when="@1.1.0:2.0,2.2:2.3,2.4.1:4.2.2,4.11.3:6.1.0")
-        depends_on("py-swagger-spec-validator@2.0.1:", when="@4:4.2.2,4.11.3:6.1.0")
+        depends_on("py-simplejson", when="@:6.1.0")
+        depends_on("py-six", when="@:6.1.0")
+        depends_on("py-swagger-spec-validator@2.0.1:", when="@:6.1.0")
     # END DEPENDENCIES
 

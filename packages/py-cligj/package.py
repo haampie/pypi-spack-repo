@@ -9,13 +9,14 @@ class PyCligj(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
     version("0.7.2", sha256="c1ca117dbce1fe20a5809dc96f01e1c2840f6dcc939b3ddbb1111bf330ba82df", url="https://pypi.org/packages/73/86/43fa9f15c5b9fb6e82620428827cd3c284aa933431405d1bcf5231ae3d3e/cligj-0.7.2-py3-none-any.whl")
     version("0.5.0", sha256="20f24ce9abfde3f758aec3399e6811b936b6772f360846c662c19bf5537b4f14", url="https://pypi.org/packages/e4/be/30a58b4b0733850280d01f8bd132591b4668ed5c7046761098d665ac2174/cligj-0.5.0-py3-none-any.whl")
-    version("0.4.0", sha256="7588487f1afcefbe65ae477cdbd4fca1828a3000fc3332e165dacb1dcb005f8a", url="https://pypi.org/packages/e8/c1/d2a5a83f1bf59b820b5ffb0c63fc31d13279d7b985f260c1f8c5ca1693d0/cligj-0.4.0-py2-none-any.whl")
+    version("0.4.0", sha256="2efdeb0ae64f2c2198ce7540ae0a5d67187d5fe9d79529ad8f4dbb8909210009", url="https://pypi.org/packages/fc/05/e8384e1f7c8689cd1b91818a24cc860077c73368fb285ba53fbd8556ec98/cligj-0.4.0-py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@0.7:")
         depends_on("py-click@4:7", when="@0.5:0.7.1")
         depends_on("py-click@4:", when="@0.3:0.4,0.7.2:")
     # END DEPENDENCIES

@@ -14,8 +14,8 @@ class PyYaspin(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@3:")
-        depends_on("python@3.8.1:", when="@2.5:2")
+        depends_on("python@:3", when="@2:2.1")
+        depends_on("py-dataclasses@0.8:", when="@2.1 ^python@:3.6")
         depends_on("py-termcolor@1.1:1", when="@2:2.1")
     # END DEPENDENCIES
 

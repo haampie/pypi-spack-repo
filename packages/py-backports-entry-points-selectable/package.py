@@ -14,5 +14,7 @@ class PyBackportsEntryPointsSelectable(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-importlib-metadata", when="^python@:3.7")
     # END DEPENDENCIES
 

@@ -11,7 +11,7 @@ class PyPytecplot(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("extras", default=False)
+    variant("extras", default=False, description="extras")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

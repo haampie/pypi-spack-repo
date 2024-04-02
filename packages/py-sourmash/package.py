@@ -14,15 +14,15 @@ class PySourmash(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@4.8.5:")
+        depends_on("python@3.8:", when="@:4.8.4")
         depends_on("py-bitstring@3.1.9:", when="@4.7:")
         depends_on("py-cachetools@4:", when="@4.7:")
-        depends_on("py-cffi@1.14:", when="@3.3.1:3.4.0,4.7:")
-        depends_on("py-deprecation@2.0.6:", when="@3.2.2,3.3.1:3.4.0,4.7:")
+        depends_on("py-cffi@1.14:", when="@4.7:")
+        depends_on("py-deprecation@2.0.6:", when="@4.7:")
         depends_on("py-importlib-metadata@3.6:", when="@4.8:4.8.4 ^python@:3.9")
-        depends_on("py-matplotlib", when="@3.2.2,3.3.1:3.4.0,4.7:")
-        depends_on("py-numpy", when="@3.2.2,3.3.1:3.4.0,4.7:")
-        depends_on("py-scipy", when="@3.2.2,3.3.1:3.4.0,4.7:")
+        depends_on("py-matplotlib", when="@4.7:")
+        depends_on("py-numpy", when="@4.7:")
+        depends_on("py-scipy", when="@4.7:")
         depends_on("py-screed@1.1.2:", when="@4.8:")
     # END DEPENDENCIES
 

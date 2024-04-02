@@ -14,6 +14,7 @@ class PyOdcGeo(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.1.1-alpha1:")
         depends_on("py-affine")
         depends_on("py-cachetools")
         depends_on("py-numpy")

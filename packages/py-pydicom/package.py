@@ -14,9 +14,11 @@ class PyPydicom(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("numpy", default=False)
+    variant("numpy", default=False, description="numpy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.4:")
     # END DEPENDENCIES
 

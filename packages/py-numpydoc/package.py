@@ -16,6 +16,7 @@ class PyNumpydoc(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.2-rc1:1.5")
         depends_on("py-jinja2@2.10:", when="@1.2-rc1:1.2.0,1.3-rc1:")
         depends_on("py-jinja2@2.3:", when="@1:1.1")
         depends_on("py-sphinx@4.2:", when="@1.5")

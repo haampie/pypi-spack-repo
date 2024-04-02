@@ -15,6 +15,7 @@ class PyPygraphviz(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@1.12-rc3:")
+        depends_on("python@3.8:", when="@1.9:1.11")
+        depends_on("python@3.7:", when="@1.7-rc1:1.8")
     # END DEPENDENCIES
 

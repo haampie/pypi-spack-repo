@@ -15,5 +15,7 @@ class PyIso8601(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@:3", when="@1")
     # END DEPENDENCIES
 

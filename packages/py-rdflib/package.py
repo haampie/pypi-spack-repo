@@ -18,7 +18,11 @@ class PyRdflib(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@7:")
+        depends_on("python@3.8:3", when="@7:")
+        depends_on("python@3.7:", when="@6:6.2")
+        depends_on("python@3.7:3", when="@6.3:6")
+        depends_on("py-importlib-metadata@4", when="@6.3:6 ^python@3.7")
+        depends_on("py-importlib-metadata", when="@6.1:6.2 ^python@:3.7")
         depends_on("py-isodate@0.6:", when="@6.3:")
         depends_on("py-isodate", when="@4.2.2:6.2")
         depends_on("py-pyparsing@2.1:", when="@6.3:")

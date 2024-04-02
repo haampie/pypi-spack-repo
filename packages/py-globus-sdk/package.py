@@ -21,12 +21,8 @@ class PyGlobusSdk(PythonPackage):
     with default_args(type="run"):
         depends_on("py-cryptography@3.3.1:3.3,3.4.1:", when="@3.1:")
         depends_on("py-cryptography@2:3.3,3.4.1:3", when="@3.0.2:3.0")
-        depends_on("py-pyjwt@2.0.0:+crypto", when="@3:")
+        depends_on("py-pyjwt@2.0.0:+crypto")
         depends_on("py-requests@2.19.1:", when="@3.0.2:")
         depends_on("py-typing-extensions@4:", when="@3.4.1: ^python@:3.9")
-        depends_on("py-typing-extensions", when="@3.3:3.4.0 ^python@:3.9")
-
-        # marker: python_version < "3,8" and extra == "dev"
-        # depends_on("py-typing-extensions", when="@3.0.0-beta3:3.0.0")
     # END DEPENDENCIES
 

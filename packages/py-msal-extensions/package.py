@@ -27,7 +27,6 @@ class PyMsalExtensions(PythonPackage):
         depends_on("py-portalocker@1", when="@0.2.1:0.3.0 platform=freebsd")
         depends_on("py-portalocker@1", when="@0.2.1:0.3.0 platform=darwin")
         depends_on("py-portalocker@1", when="@0.2.1:0.3.0 platform=cray")
-        depends_on("py-portalocker@1.6:1", when="@0.2:0.2.0")
         depends_on("py-portalocker@1", when="@:0.1")
     # END DEPENDENCIES
 

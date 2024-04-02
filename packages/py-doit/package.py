@@ -14,6 +14,7 @@ class PyDoit(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.35:")
         depends_on("py-cloudpickle", when="@0.33:")
         depends_on("py-importlib-metadata@4.4:", when="@0.36:")
     # END DEPENDENCIES

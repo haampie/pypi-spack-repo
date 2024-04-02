@@ -56,13 +56,15 @@ class PyPandas(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("excel", default=False)
-    variant("performance", default=False)
+    variant("excel", default=False, description="excel")
+    variant("performance", default=False, description="performance")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.1:")
+        depends_on("python@3.8:", when="@1.4:2.0")
+        depends_on("python@3.7:", when="@1.2:1.3")
         depends_on("py-bottleneck@1.3.6:", when="@2.2:+performance")
         depends_on("py-bottleneck@1.3.4:", when="@2.1+performance")
         depends_on("py-numba@0.56.4:", when="@2.2:+performance")
@@ -70,10 +72,8 @@ class PyPandas(PythonPackage):
         depends_on("py-numexpr@2.8.4:", when="@2.2:+performance")
         depends_on("py-numexpr@2.8:", when="@2.1+performance")
         depends_on("py-numpy@1.26.0:1", when="@2.1.2:2.1,2.2.0: ^python@3.12:")
-        depends_on("py-numpy@1.23.2:1", when="@2.1.2:2.1,2.2.0: ^python@3.11:3.11.0")
         depends_on("py-numpy@1.22.4:1", when="@2.1.2:2.1,2.2.0: ^python@:3.10")
         depends_on("py-numpy@1.26.0:", when="@2.1.1,2.2:2.2.0-rc0 ^python@3.12:")
-        depends_on("py-numpy@1.23.2:", when="@2.1.1,2.2:2.2.0-rc0 ^python@3.11:3.11.0")
         depends_on("py-numpy@1.22.4:", when="@2.1:2.1.1,2.2:2.2.0-rc0 ^python@:3.10")
         depends_on("py-numpy@1.23.2:", when="@2.1:2.1.0 ^python@3.11:")
         depends_on("py-numpy@1.13.3:", when="@0.25:1.0")

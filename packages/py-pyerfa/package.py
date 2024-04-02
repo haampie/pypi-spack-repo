@@ -14,6 +14,6 @@ class PyPyerfa(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.0.1:")
+        depends_on("python@3.7:", when="@2:2.0.0")
     # END DEPENDENCIES
 

@@ -14,7 +14,6 @@ class PyMatminer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.9.1:")
         depends_on("py-future", when="@0.8:0.9.0")
         depends_on("py-monty", when="@0.8:0.9.0")
         depends_on("py-numpy@1.20.1:", when="@0.8:0.9.0")

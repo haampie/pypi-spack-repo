@@ -15,6 +15,7 @@ class PyCleanText(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.6:")
         depends_on("py-emoji@1", when="@0.6:")
         depends_on("py-emoji", when="@0.3:0.5")
         depends_on("py-ftfy@6:", when="@0.4:")

@@ -11,13 +11,14 @@ class PyOpenai(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("datalib", default=False)
-    variant("embeddings", default=False)
-    variant("wandb", default=False)
+    variant("datalib", default=False, description="datalib")
+    variant("embeddings", default=False, description="embeddings")
+    variant("wandb", default=False, description="wandb")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@:0,1.0.0-rc1:")
         depends_on("py-aiohttp", when="@0.27:0.27.0,0.27.2:0")
         depends_on("py-matplotlib", when="@0.27:0.27.0,0.27.2:0+embeddings")
         depends_on("py-numpy", when="@0.27:0.27.0,0.27.2:0+wandb")
@@ -38,6 +39,7 @@ class PyOpenai(PythonPackage):
         depends_on("py-scipy", when="@0.27:0.27.0,0.27.2:0+embeddings")
         depends_on("py-tenacity@8.0.1:", when="@0.27:0.27.0,0.27.2:0+embeddings")
         depends_on("py-tqdm", when="@0.27:0.27.0,0.27.2:0")
+        depends_on("py-typing-extensions", when="@0.27:0.27.0,0.27.2:0 ^python@:3.7")
         depends_on("py-wandb", when="@0.27:0.27.0,0.27.2:0+wandb")
     # END DEPENDENCIES
 

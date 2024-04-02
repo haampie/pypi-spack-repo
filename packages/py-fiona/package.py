@@ -24,14 +24,14 @@ class PyFiona(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.10-alpha1:")
+        depends_on("python@3.7:", when="@1.9-alpha1:1.9")
         depends_on("py-attrs@19.2:", when="@1.9.5:")
         depends_on("py-certifi", when="@1.9.5:")
         depends_on("py-click@8.0.0:", when="@1.9.5:")
-        depends_on("py-click-plugins", when="@1.8-beta1:1.8.13,1.9.5:")
-        depends_on("py-cligj@0.5:", when="@1.8-alpha3:1.8.13,1.9.5:")
+        depends_on("py-click-plugins", when="@:1.8.13,1.9.5:")
+        depends_on("py-cligj@0.5:", when="@:1.8.13,1.9.5:")
         depends_on("py-importlib-metadata", when="@1.9.5: ^python@:3.9")
         depends_on("py-setuptools", when="@1.9.5")
-        depends_on("py-six", when="@1.5:1.7.2,1.7.4:1.7.11.post1,1.8-alpha1,1.9.5:1.9")
+        depends_on("py-six", when="@1.9.5:1.9")
     # END DEPENDENCIES
 

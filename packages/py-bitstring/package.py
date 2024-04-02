@@ -14,5 +14,7 @@ class PyBitstring(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.0.0-beta2:4.1")
     # END DEPENDENCIES
 

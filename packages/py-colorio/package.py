@@ -14,9 +14,9 @@ class PyColorio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-matplotlib")
-        depends_on("py-npx", when="@0.7.4:")
-        depends_on("py-numpy@1.20.0:", when="@0.8:")
-        depends_on("py-scipy", when="@0.2.3:0.5.5")
+        depends_on("py-npx")
+        depends_on("py-numpy@1.20.0:")
     # END DEPENDENCIES
 

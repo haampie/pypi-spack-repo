@@ -12,11 +12,12 @@ class PyProv(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("dot", default=False)
+    variant("dot", default=False, description="dot")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@2:")
         depends_on("py-lxml@3.3.5:", when="@1.5.2:")
         depends_on("py-lxml", when="@1.5.1")
         depends_on("py-networkx@2:", when="@1.5.2:")

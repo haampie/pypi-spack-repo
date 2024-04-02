@@ -11,7 +11,7 @@ class PyPylikwid(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cuda", default=False)
+    variant("cuda", default=False, description="cuda")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

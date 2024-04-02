@@ -19,6 +19,7 @@ class PyTokenizers(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.14:")
         depends_on("py-huggingface-hub@0.16.4:", when="@0.15:")
     # END DEPENDENCIES
 

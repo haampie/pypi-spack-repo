@@ -17,11 +17,13 @@ class PySeaborn(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("stats", default=False)
+    variant("stats", default=False, description="stats")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.13:")
+        depends_on("python@3.7:", when="@0.12")
         depends_on("py-matplotlib@3.4.0:3.6.0,3.6.2:", when="@0.13.1:")
         depends_on("py-matplotlib@3.1.0:3.6.0,3.6.2:", when="@0.12.1:0.12")
         depends_on("py-matplotlib@3.1.0:", when="@0.12:0.12.0")
@@ -42,5 +44,6 @@ class PySeaborn(PythonPackage):
         depends_on("py-scipy@0.14:", when="@0.9:0.9.0")
         depends_on("py-statsmodels@0.12.0:", when="@0.13:+stats")
         depends_on("py-statsmodels@0.10.0:", when="@0.12.0-rc0:0.12+stats")
+        depends_on("py-typing-extensions", when="@0.12 ^python@:3.7")
     # END DEPENDENCIES
 

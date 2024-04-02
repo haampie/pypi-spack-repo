@@ -17,11 +17,11 @@ class PyLlnlSina(PythonPackage):
     with default_args(type="run"):
         depends_on("py-six")
         depends_on("py-sqlalchemy", when="@:1.13")
+    # END DEPENDENCIES
+
 
         # marker: python_version >= "3.6" and platform_machine != "ppc64le"
         # depends_on("py-orjson", when="@1.10:")
 
         # marker: python_version >= "3.6" and platform_machine == "ppc64le"
         # depends_on("py-ujson", when="@1.10:")
-    # END DEPENDENCIES
-

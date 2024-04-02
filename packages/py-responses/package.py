@@ -14,8 +14,8 @@ class PyResponses(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-requests@2:", when="@0.7:0.8,0.10.1:0.17")
-        depends_on("py-six", when="@0.7:0.8,0.10.1:0.17")
+        depends_on("py-requests@2:", when="@:0.17")
+        depends_on("py-six", when="@:0.17")
         depends_on("py-urllib3@1.25.10:", when="@0.10.16:0.23.1")
     # END DEPENDENCIES
 

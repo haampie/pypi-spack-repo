@@ -17,14 +17,14 @@ class PyIsort(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("colors", default=False)
+    variant("colors", default=False, description="colors")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@5.12:5")
+        depends_on("python@3.7:", when="@5.11,6:")
+        depends_on("python@:3", when="@5:5.10")
         depends_on("py-colorama@0.4.3:", when="@5.2.1:5.12,6:+colors")
-        depends_on("py-pip-api", when="@5.13:5.13.0")
-        depends_on("py-pipreqs", when="@5.13:5.13.0")
-        depends_on("py-requirementslib", when="@5.13:5.13.0")
     # END DEPENDENCIES
 

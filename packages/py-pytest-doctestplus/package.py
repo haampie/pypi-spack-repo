@@ -15,6 +15,7 @@ class PyPytestDoctestplus(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.10:1.0")
         depends_on("py-packaging@17:", when="@0.10:")
         depends_on("py-pytest@4.6:", when="@0.9:")
         depends_on("py-setuptools@30.3:", when="@0.9:")

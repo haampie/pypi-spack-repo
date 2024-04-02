@@ -15,7 +15,9 @@ class PyHatchFancyPypiReadme(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@22.3:")
         depends_on("py-hatchling")
         depends_on("py-tomli", when="^python@:3.10")
+        depends_on("py-typing-extensions", when="@22.3: ^python@:3.7")
     # END DEPENDENCIES
 

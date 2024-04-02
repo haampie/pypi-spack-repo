@@ -14,6 +14,7 @@ class PyLibsonata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.1.23:")
         depends_on("py-numpy@1.17.3:", when="@0.1.24:")
     # END DEPENDENCIES
 

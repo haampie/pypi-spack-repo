@@ -21,16 +21,21 @@ class PyPreCommit(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@3.6:")
-        depends_on("py-aspy-yaml", when="@0.8:2.0")
+        depends_on("python@3.8:", when="@3:3.5")
+        depends_on("python@3.7:", when="@2.18:2")
+        depends_on("py-aspy-yaml", when="@:2.0")
         depends_on("py-cfgv@2:", when="@1.17:")
-        depends_on("py-identify@1:", when="@0.15:")
-        depends_on("py-nodeenv@0.11.1:", when="@0.8:")
+        depends_on("py-identify@1:")
+        depends_on("py-importlib-metadata", when="@1.19:2 ^python@:3.7")
+        depends_on("py-importlib-resources@:5.2", when="@2.16:2.17 ^python@:3.6")
+        depends_on("py-importlib-resources", when="@:2.15 ^python@:3.6")
+        depends_on("py-nodeenv@0.11.1:")
         depends_on("py-pyyaml@5.1:", when="@2.1:")
-        depends_on("py-pyyaml", when="@0.8:2.0")
-        depends_on("py-six", when="@0.13.4:1")
-        depends_on("py-toml", when="@1.10:2.20")
+        depends_on("py-pyyaml", when="@:2.0")
+        depends_on("py-six", when="@:1")
+        depends_on("py-toml", when="@:2.20")
         depends_on("py-virtualenv@20.10:", when="@2.21:")
         depends_on("py-virtualenv@20.0.8:", when="@2.4:2.20")
-        depends_on("py-virtualenv@15.2:", when="@1.14.3:2.3")
+        depends_on("py-virtualenv@15.2:", when="@:2.3")
     # END DEPENDENCIES
 

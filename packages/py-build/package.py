@@ -16,23 +16,23 @@ class PyBuild(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("virtualenv", default=False)
+    variant("virtualenv", default=False, description="virtualenv")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-importlib-metadata@4.6:", when="@1.1: ^python@:3.10.1")
-        depends_on("py-importlib-metadata@4.6:", when="@1:1.0 ^python@:3.9")
+        depends_on("python@3.7:", when="@0.10:1.1")
+        depends_on("py-importlib-metadata@4.6:", when="@1: ^python@:3.9")
+        depends_on("py-importlib-metadata@0.22:", when="@0.4:0 ^python@:3.7")
         depends_on("py-packaging@19:", when="@0.4:1.1")
         depends_on("py-pep517@0.9:", when="@0.4:0.9")
         depends_on("py-pyproject-hooks", when="@0.10:")
-        depends_on("py-toml@0.10:", when="@0.4:0.5")
         depends_on("py-tomli@1.1:", when="@0.10: ^python@:3.10")
         depends_on("py-tomli@1:", when="@0.8:0.9 ^python@:3.10")
         depends_on("py-tomli@1:", when="@0.6:0.7")
-        depends_on("py-virtualenv@20.0.35:", when="@0.2:+virtualenv")
+        depends_on("py-virtualenv@20.0.35:", when="+virtualenv")
+    # END DEPENDENCIES
+
 
         # marker: os_name == "nt"
         # depends_on("py-colorama", when="@0.4:")
-    # END DEPENDENCIES
-

@@ -19,12 +19,15 @@ class PyDamask(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@3.0.0-alpha6:3.0.0-alpha8,3.0.0-beta0:")
+        depends_on("python@3.7:", when="@3.0.0-alpha5")
         depends_on("py-h5py@2.9.0:", when="@3.0.0-alpha3:3.0.0-alpha8,3.0.0-beta0:")
+        depends_on("py-importlib-metadata", when="@3.0.0-alpha7 ^python@:3.7")
         depends_on("py-matplotlib@3.0.0:", when="@3.0.0-alpha3:3.0.0-alpha8,3.0.0-beta0:")
         depends_on("py-numpy@1.17.0:", when="@3.0.0-alpha5:3.0.0-alpha8,3.0.0-beta0:")
         depends_on("py-pandas@0.24.0:", when="@3.0.0-alpha3:3.0.0-alpha8,3.0.0-beta0:")
         depends_on("py-pyaml", when="@3.0.0-alpha3:3.0.0-alpha4")
-        depends_on("py-pyyaml", when="@3.0.0-alpha7 ^python@:3.12.0")
+        depends_on("py-pyyaml", when="@3.0.0-alpha7 ^python@:3.11")
         depends_on("py-pyyaml@3.12:", when="@3.0.0-alpha5:3.0.0-alpha8,3.0.0-beta0:")
         depends_on("py-scipy@1.2.0:", when="@3.0.0-alpha3:3.0.0-alpha8,3.0.0-beta0:")
         depends_on("py-vtk@8.1:", when="@3.0.0-alpha3:3.0.0-alpha8,3.0.0-beta0:")

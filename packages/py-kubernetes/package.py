@@ -29,21 +29,20 @@ class PyKubernetes(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-adal@1.0.2:", when="@7.0.0-beta1:9.0.0-alpha1")
-        depends_on("py-certifi@14:", when="@:0,3:")
-        depends_on("py-google-auth@1.0.1:", when="@:0,3:")
+        depends_on("py-certifi@14:")
+        depends_on("py-google-auth@1.0.1:")
         depends_on("py-oauthlib@3.2.2:", when="@27:")
-        depends_on("py-python-dateutil@2.5.3:", when="@:0,3:")
+        depends_on("py-python-dateutil@2.5.3:")
         depends_on("py-pyyaml@5.4.1:", when="@18.20:")
-        depends_on("py-pyyaml@3.12:", when="@3:10.0,11:18.17")
-        depends_on("py-pyyaml@3.12:3", when="@:0,10.1:10")
-        depends_on("py-requests", when="@:0,3.0.0-beta1:")
-        depends_on("py-requests-oauthlib", when="@:0,4:")
-        depends_on("py-setuptools@21:", when="@:0,3:27.2.0-beta1")
-        depends_on("py-six@1.9:", when="@:0,3:")
+        depends_on("py-pyyaml@3.12:3", when="@10.1:10")
+        depends_on("py-pyyaml@3.12:", when="@:10.0,11:18.17")
+        depends_on("py-requests")
+        depends_on("py-requests-oauthlib")
+        depends_on("py-setuptools@21:", when="@:27.2.0-beta1")
+        depends_on("py-six@1.9:")
         depends_on("py-urllib3@1.24.2:1", when="@28")
+        depends_on("py-urllib3@1.24.2:", when="@8.0.2:8,9.0.1:9,10.0.1:27,29:")
         depends_on("py-urllib3@1.23:", when="@7.0.1:7,8.0.1,9:9.0.0,10:10.0.0")
-        depends_on("py-urllib3@1.24.2:", when="@:0,8.0.2:8,9.0.1:9,10.0.1:27,29:")
-        depends_on("py-websocket-client@0.32:0.39,0.43:", when="@:0,5:")
+        depends_on("py-websocket-client@0.32:0.39,0.43:")
     # END DEPENDENCIES
 

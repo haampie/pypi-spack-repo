@@ -16,6 +16,7 @@ class PyKeyringsAlt(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.1.1:4")
         depends_on("py-jaraco-classes", when="@4.1.2:")
     # END DEPENDENCIES
 

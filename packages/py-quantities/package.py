@@ -17,6 +17,7 @@ class PyQuantities(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.14:")
         depends_on("py-numpy@1.19.0:", when="@0.14")
     # END DEPENDENCIES
 

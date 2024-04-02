@@ -19,6 +19,7 @@ class PySegmentationModelsPytorch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.2:")
         depends_on("py-efficientnet-pytorch@0.7.1:", when="@0.3:")
         depends_on("py-efficientnet-pytorch@0.6.3:0.6", when="@0.1.2:0.2")
         depends_on("py-pillow", when="@0.3:")

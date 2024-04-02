@@ -14,7 +14,8 @@ class PyJupyterLsp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2:")
         depends_on("py-importlib-metadata@4.8.3:", when="@2: ^python@:3.9")
-        depends_on("py-jupyter-server@1.1.2:", when="@1.0.0:")
+        depends_on("py-jupyter-server@1.1.2:")
     # END DEPENDENCIES
 

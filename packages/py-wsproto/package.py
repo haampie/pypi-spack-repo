@@ -14,6 +14,7 @@ class PyWsproto(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-dataclasses", when="@0.15:1.0 ^python@:3.6")
         depends_on("py-h11@0.9:", when="@1:")
     # END DEPENDENCIES
 

@@ -36,14 +36,16 @@ class PyPyomo(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cython", default=False)
-    variant("docs", default=False)
-    variant("optional", default=False)
-    variant("tests", default=False)
+    variant("cython", default=False, description="cython")
+    variant("docs", default=False, description="docs")
+    variant("optional", default=False, description="optional")
+    variant("tests", default=False, description="tests")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@6.7:")
+        depends_on("python@3.7:", when="@6.4:6.6")
         depends_on("python@:3.9", when="@6.2")
         depends_on("py-appdirs", when="@5.5.1:5.7.0")
         depends_on("py-ply", when="@5.5.1:5.7.0")

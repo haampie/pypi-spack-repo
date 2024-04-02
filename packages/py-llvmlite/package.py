@@ -25,8 +25,9 @@ class PyLlvmlite(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.42:")
-        depends_on("python@:3.10", when="@0.38")
-        depends_on("python@:3.9", when="@0.36.0-rc2:0.37")
+        depends_on("python@3.8:", when="@0.40:0.41")
+        depends_on("python@3.7:", when="@0.39")
+        depends_on("python@3.7:3.10", when="@0.38")
+        depends_on("python@3.7:3.9", when="@0.37")
     # END DEPENDENCIES
 

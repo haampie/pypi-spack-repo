@@ -15,7 +15,8 @@ class PyPyqtBuilder(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-packaging", when="@1.5:")
+        depends_on("python@3.7:", when="@1.13:")
+        depends_on("py-packaging")
         depends_on("py-sip@6.7:", when="@1.14:")
         depends_on("py-sip@6.3:", when="@1.12:1.13")
     # END DEPENDENCIES

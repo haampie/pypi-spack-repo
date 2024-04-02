@@ -14,10 +14,8 @@ class PyPandasStubs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.1:")
-        depends_on("python@:3.11", when="@1.5.2:1")
-        depends_on("python@:3.10", when="@1.4:1.5.1")
+        depends_on("python@3.8:", when="@2:2.0")
         depends_on("py-numpy@1.24.3:", when="@2.0.2")
-        depends_on("py-types-pytz@2022.1.1:", when="@1.4.3.220718:")
+        depends_on("py-types-pytz@2022.1.1:")
     # END DEPENDENCIES
 

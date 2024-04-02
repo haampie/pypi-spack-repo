@@ -13,5 +13,7 @@ class PyBackportsCachedProperty(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-typing@3.6:", when="^python@:3.6")
     # END DEPENDENCIES
 

@@ -14,8 +14,8 @@ class PyLightningFabric(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2:")
         depends_on("py-fsspec@2021.6.1:+http", when="@1:2.1.2")
-        depends_on("py-lightning-utilities@0.8:", when="@2.1:")
         depends_on("py-lightning-utilities@0.7:", when="@2.0.0:2.0")
         depends_on("py-numpy@1.17.2:", when="@1:")
         depends_on("py-packaging@17.1:", when="@1.9.0:2.0")

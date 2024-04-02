@@ -14,15 +14,15 @@ class PyPythonKeystoneclient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-debtcollector@1.2:", when="@2.2:")
-        depends_on("py-keystoneauth1@3.4:", when="@3.16:")
-        depends_on("py-oslo-config@5.2:", when="@3.16:")
-        depends_on("py-oslo-i18n@3.15.3:", when="@3.14:")
-        depends_on("py-oslo-serialization@2.18:2.19.0,2.20:", when="@3.14:")
-        depends_on("py-oslo-utils@3.33:", when="@3.15:")
-        depends_on("py-pbr@2:2.0,3:", when="@3.11:")
-        depends_on("py-requests@2.14.2:", when="@3.12:")
-        depends_on("py-six@1.10:", when="@3.14:5.3")
-        depends_on("py-stevedore@1.20:", when="@3.11:")
+        depends_on("py-debtcollector@1.2:")
+        depends_on("py-keystoneauth1@3.4:")
+        depends_on("py-oslo-config@5.2:")
+        depends_on("py-oslo-i18n@3.15.3:")
+        depends_on("py-oslo-serialization@2.18:2.19.0,2.20:")
+        depends_on("py-oslo-utils@3.33:")
+        depends_on("py-pbr@2:2.0,3:")
+        depends_on("py-requests@2.14.2:")
+        depends_on("py-six@1.10:", when="@:5.3")
+        depends_on("py-stevedore@1.20:")
     # END DEPENDENCIES
 

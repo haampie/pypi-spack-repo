@@ -14,6 +14,7 @@ class PyGoogleCloudAppengineLogging(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-google-api-core@1.34:1,2.11:+grpc", when="@1.2:1.4.1")
         depends_on("py-google-auth@2.14.1:", when="@1.4.1:1.4.2")
         depends_on("py-proto-plus@1.22.3:", when="@1.4:")

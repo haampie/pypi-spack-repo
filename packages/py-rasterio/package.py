@@ -27,13 +27,13 @@ class PyRasterio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.4-alpha1:")
-        depends_on("py-affine", when="@0.29:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
-        depends_on("py-attrs", when="@1.0-alpha10:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
-        depends_on("py-click@4:7", when="@1.0.8:1.0.18,1.0.21:1.1.5")
-        depends_on("py-click-plugins", when="@0.26:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
-        depends_on("py-cligj@0.5:", when="@1.0.7:1.0.18,1.0.21:1.1.5")
-        depends_on("py-numpy", when="@0.29:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
-        depends_on("py-snuggs@1.4.1:", when="@1.0-alpha6:1.0.3,1.0.5:1.0.18,1.0.21:1.1.5")
+        depends_on("python@3.8:", when="@1.3-alpha4:1.3")
+        depends_on("py-affine", when="@:1.1.5")
+        depends_on("py-attrs", when="@:1.1.5")
+        depends_on("py-click@4:7", when="@:1.1.5")
+        depends_on("py-click-plugins", when="@:1.1.5")
+        depends_on("py-cligj@0.5:", when="@:1.1.5")
+        depends_on("py-numpy", when="@:1.1.5")
+        depends_on("py-snuggs@1.4.1:", when="@:1.1.5")
     # END DEPENDENCIES
 

@@ -14,6 +14,7 @@ class PyPydevtool(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:")
         depends_on("py-doit@0.36:", when="@0.3:")
     # END DEPENDENCIES
 

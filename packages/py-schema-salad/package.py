@@ -14,8 +14,6 @@ class PySchemaSalad(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.12", when="@8.4.20230808163024:")
         depends_on("python@:3.11", when="@8.3.20221115203138:8.4.20230606143604")
-        depends_on("python@:3.11.0", when="@8.3.20220825114525:8.3.20221028160159")
     # END DEPENDENCIES
 

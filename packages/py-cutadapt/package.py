@@ -22,6 +22,8 @@ class PyCutadapt(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@4.7:")
+        depends_on("python@3.7:", when="@4:4.6")
         depends_on("py-dnaio@1.2:", when="@4.7:")
         depends_on("py-dnaio@0.3", when="@2.5")
         depends_on("py-xopen@1.6:", when="@4.5:")

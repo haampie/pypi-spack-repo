@@ -16,27 +16,27 @@ class PyMdanalysis(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("analysis", default=False)
-    variant("extra_formats", default=False)
+    variant("analysis", default=False, description="analysis")
+    variant("extra_formats", default=False, description="extra_formats")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.5:")
-        depends_on("python@:3.8", when="@1.0.1:1")
+        depends_on("python@3.8:", when="@2.2:2.4")
         depends_on("py-biopython@1.80:", when="@2.7:+analysis")
         depends_on("py-fasteners", when="@2.7:")
         depends_on("py-griddataformats@0.4:", when="@2.7:")
         depends_on("py-joblib@0.12:", when="@2.7:")
-        depends_on("py-matplotlib@1.5.1:", when="@0.16.2:0.16,2.7:")
+        depends_on("py-matplotlib@1.5.1:", when="@2.7:")
         depends_on("py-mda-xdrlib", when="@2.7:")
-        depends_on("py-mmtf-python@1:", when="@0.16.2:0.16,2.7:")
+        depends_on("py-mmtf-python@1:", when="@2.7:")
         depends_on("py-networkx@2:", when="@2.7:+analysis")
         depends_on("py-numpy@1.22.3:1", when="@2.7:")
         depends_on("py-packaging", when="@2.7:")
         depends_on("py-scikit-learn", when="@2.7:+analysis")
         depends_on("py-scipy@1.5.0:", when="@2.7:")
-        depends_on("py-seaborn", when="@0.16.2:0.16,2.7:+analysis")
+        depends_on("py-seaborn", when="@2.7:+analysis")
         depends_on("py-threadpoolctl", when="@2.7:")
         depends_on("py-tidynamics@1:", when="@2.7:+analysis")
         depends_on("py-tqdm@4.43:", when="@2.7:")

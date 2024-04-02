@@ -16,6 +16,7 @@ class PyOptax(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.1.9:")
+        depends_on("python@3.8:", when="@0.1.5:0.1.8")
         depends_on("py-absl-py@0.7.1:")
         depends_on("py-chex@0.1.7:", when="@0.1.8:")
         depends_on("py-chex@0.1.5:", when="@0.1.4:0.1.7")

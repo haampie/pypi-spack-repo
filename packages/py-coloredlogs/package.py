@@ -16,7 +16,7 @@ class PyColoredlogs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-colorama", when="@5.1.1:12 platform=windows")
+        depends_on("py-colorama", when="@:12 platform=windows")
         depends_on("py-humanfriendly@9.1:", when="@15:")
         depends_on("py-humanfriendly@7.1:", when="@14")
         depends_on("py-humanfriendly@4.7:", when="@9:10")

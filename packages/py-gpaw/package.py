@@ -15,10 +15,10 @@ class PyGpaw(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("fftw", default=False)
-    variant("libvdwxc", default=False)
-    variant("mpi", default=False)
-    variant("scalapack", default=False)
+    variant("fftw", default=False, description="fftw")
+    variant("libvdwxc", default=False, description="libvdwxc")
+    variant("mpi", default=False, description="mpi")
+    variant("scalapack", default=False, description="scalapack")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

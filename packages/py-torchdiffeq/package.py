@@ -14,6 +14,7 @@ class PyTorchdiffeq(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@0.1:")
         depends_on("py-scipy@1.4.0:", when="@0.2.2:")
         depends_on("py-torch@1.3:", when="@0.1:")
     # END DEPENDENCIES

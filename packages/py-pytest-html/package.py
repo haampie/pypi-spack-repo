@@ -17,6 +17,6 @@ class PyPytestHtml(PythonPackage):
     with default_args(type="run"):
         depends_on("py-py@1.8.2:", when="@3.2:3")
         depends_on("py-pytest@5:6.0.0-rc1,6.0.1:", when="@3")
-        depends_on("py-pytest-metadata", when="@1.14:3")
+        depends_on("py-pytest-metadata", when="@:3")
     # END DEPENDENCIES
 

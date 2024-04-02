@@ -12,26 +12,24 @@ class PyFastapi(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("all", default=False)
+    variant("all", default=False, description="all")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.84:0.103")
         depends_on("py-email-validator@1.1.1:", when="@0.87:0.99+all")
-        depends_on("py-email-validator@1.1.1:1", when="@0.59:0.86+all")
         depends_on("py-httpx@0.23:", when="@0.87:+all")
         depends_on("py-itsdangerous@1:", when="@0.87:+all")
         depends_on("py-jinja2@2.11.2:", when="@0.87:+all")
-        depends_on("py-orjson@3.2.1:", when="@0.59:+all")
+        depends_on("py-orjson@3.2.1:", when="@0.87:+all")
         depends_on("py-pydantic@1.7.4:1.7,1.8.2:1", when="@0.96.1:0.99")
-        depends_on("py-pydantic@1.6.2:1.6,1.7.4:1.7,1.8.2:1", when="@0.65.1:0.96.0")
+        depends_on("py-pydantic@1.6.2:1.6,1.7.4:1.7,1.8.2:1", when="@:0.96.0")
         depends_on("py-python-multipart@0.0.5:", when="@0.87:0.109.0+all")
-        depends_on("py-python-multipart@0.0.5", when="@0.59:0.86+all")
-        depends_on("py-pyyaml@5.3.1:", when="@0.75.2:+all")
+        depends_on("py-pyyaml@5.3.1:", when="@0.87:+all")
         depends_on("py-starlette@0.27", when="@0.95.2:0.106")
         depends_on("py-starlette@0.22", when="@0.88:0.89")
-        depends_on("py-ujson@4.0.1,5.2:", when="@0.75.2:+all")
+        depends_on("py-ujson@4.0.1,5.2:", when="@0.87:+all")
         depends_on("py-uvicorn@0.12:+standard", when="@0.87:+all")
-        depends_on("py-uvicorn@0.12:0.18+standard", when="@0.85:0.86+all")
     # END DEPENDENCIES
 

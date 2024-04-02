@@ -16,6 +16,8 @@ class PyS3fs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2023.3:")
+        depends_on("python@3.7:", when="@0.5.2:0,2022.2:2023.1")
         depends_on("py-aiobotocore@2.5.4:", when="@2023.12:")
         depends_on("py-aiobotocore@2.4", when="@2022.8:2022")
         depends_on("py-aiobotocore@1.0.1:", when="@0.5:2021.7")

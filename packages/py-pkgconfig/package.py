@@ -16,5 +16,7 @@ class PyPkgconfig(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@:3", when="@1.5.3:")
     # END DEPENDENCIES
 

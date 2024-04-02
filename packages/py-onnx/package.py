@@ -8,6 +8,8 @@ from spack.package import *
 class PyOnnx(PythonPackage):
     # BEGIN VERSIONS
     version("1.15.0", sha256="b18461a7d38f286618ca2a6e78062a2a9c634ce498e631e708a8041b00094825", url="https://pypi.org/packages/f4/6e/2b2963f9e3a7201c8c3a30656f9c81bc9d32d198a88a747456ab2874166a/onnx-1.15.0.tar.gz")
+    version("1.14.1", sha256="70903afe163643bd71195c78cedcc3f4fa05a2af651fd950ef3acbb15175b2d1", url="https://pypi.org/packages/8f/71/1543d8dad6a26df1da8953653ebdbedacea9f1a5bcd023fe10f8c5f66d63/onnx-1.14.1.tar.gz")
+    version("1.14.0", sha256="43b85087c6b919de66872a043c7f4899fe6f840e11ffca7e662b2ce9e4cc2927", url="https://pypi.org/packages/d2/f4/8bdd479ace89b7957231157cfdfec4be629e5bbbbebe21535d6c40df6d02/onnx-1.14.0.tar.gz")
     version("1.13.1", sha256="0bdcc25c2c1ce4a8750e4ffbd93ae945442e7fac6e51176f38e366b74a97dfd9", url="https://pypi.org/packages/56/b5/f5889d518276061f999d7cda5714f288b1718cbbc3f538e943822626eead/onnx-1.13.1.tar.gz")
     version("1.13.0", sha256="410b39950367857f97b65093681fe2495a2e23d63777a8aceaf96c56a16d166e", url="https://pypi.org/packages/6c/f6/215ba9e8d2587755df363170e3be54892b087bad0a99935fe456f7555255/onnx-1.13.0.tar.gz")
     version("1.12.0", sha256="13b3e77d27523b9dbf4f30dfc9c959455859d5e34e921c44f712d69b8369eff9", url="https://pypi.org/packages/2c/6a/39b0580858589a67c3322aabc2634f158391ffbf98fa410127533e7f1495/onnx-1.12.0.tar.gz")
@@ -22,6 +24,7 @@ class PyOnnx(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.15:")
         depends_on("py-numpy", when="@1.6:1.7,1.15")
         depends_on("py-protobuf@3.20.2:", when="@1.15:")
         depends_on("py-protobuf", when="@1.6:1.7")

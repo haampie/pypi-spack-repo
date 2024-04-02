@@ -18,7 +18,8 @@ class PyYarl(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-idna@2:", when="@0.17:1.2.5-alpha0,1.2.5-alpha3,1.2.5-alpha5:1.4,1.9.3:")
-        depends_on("py-multidict@4:", when="@1:1.2.5-alpha0,1.2.5-alpha3,1.2.5-alpha5:1.4,1.9.3:")
+        depends_on("python@3.7:", when="@1.8:")
+        depends_on("py-idna@2:", when="@:1.2.5-alpha0,1.2.5-alpha3,1.2.5-alpha5:1.4,1.9.3:")
+        depends_on("py-multidict@4:", when="@:1.2.5-alpha0,1.2.5-alpha3,1.2.5-alpha5:1.4,1.9.3:")
     # END DEPENDENCIES
 

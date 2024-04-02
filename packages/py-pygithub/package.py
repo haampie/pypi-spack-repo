@@ -16,6 +16,7 @@ class PyPygithub(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.57:")
         depends_on("py-deprecated", when="@1.46:")
         depends_on("py-pyjwt@2.4:+crypto", when="@1.58.1:")
         depends_on("py-pyjwt@2.0.0:", when="@1.55:1.56")

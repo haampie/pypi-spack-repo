@@ -12,12 +12,12 @@ class PyScs(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("blas64", default=False)
-    variant("cuda", default=False)
-    variant("cuda_arch", default=False)
-    variant("extra_verbose", default=False)
-    variant("float32", default=False)
-    variant("int32", default=False)
+    variant("blas64", default=False, description="blas64")
+    variant("cuda", default=False, description="cuda")
+    variant("cuda_arch", default=False, description="cuda_arch")
+    variant("extra_verbose", default=False, description="extra_verbose")
+    variant("float32", default=False, description="float32")
+    variant("int32", default=False, description="int32")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

@@ -14,6 +14,6 @@ class PyIpyvue(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ipywidgets@7.0.0:", when="@1.4:")
+        depends_on("py-ipywidgets@7.0.0:")
     # END DEPENDENCIES
 

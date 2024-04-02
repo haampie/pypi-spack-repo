@@ -16,14 +16,15 @@ class PyFord(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-beautifulsoup4@4.5.1:", when="@6.1:")
-        depends_on("py-graphviz", when="@6.1:6.1.13,6.15:6")
-        depends_on("py-jinja2@2.1:", when="@6.1:6")
-        depends_on("py-markdown", when="@6.1:6.1.13,6.15:6")
-        depends_on("py-markdown-include@0.5.1:", when="@6.1:6.1.13,6.15:6")
-        depends_on("py-pygments", when="@6.1:6.1.13,6.15:6")
+        depends_on("py-beautifulsoup4@4.5.1:")
+        depends_on("py-graphviz", when="@:6.1.13,6.15:6")
+        depends_on("py-importlib-metadata", when="@:6.1,6.15:6 ^python@:3.7")
+        depends_on("py-jinja2@2.1:", when="@:6")
+        depends_on("py-markdown", when="@:6.1.13,6.15:6")
+        depends_on("py-markdown-include@0.5.1:", when="@:6.1.13,6.15:6")
+        depends_on("py-pygments", when="@:6.1.13,6.15:6")
         depends_on("py-python-markdown-math@0.8:", when="@6.1.9:6.2,7:")
-        depends_on("py-toposort", when="@6.1:6.1.13,6.15:6")
-        depends_on("py-tqdm", when="@6.1:6.1.13,6.15:6")
+        depends_on("py-toposort", when="@:6.1.13,6.15:6")
+        depends_on("py-tqdm", when="@:6.1.13,6.15:6")
     # END DEPENDENCIES
 

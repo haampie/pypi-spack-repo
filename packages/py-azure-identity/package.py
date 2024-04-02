@@ -19,6 +19,7 @@ class PyAzureIdentity(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.11.0-beta3:1.15")
         depends_on("py-azure-core@1.23:", when="@1.15.0:")
         depends_on("py-azure-core@1.11:", when="@1.7.0-beta2:1.15.0-beta2")
         depends_on("py-azure-core@1.0.0:", when="@1.0.0:1.7.0-beta1")

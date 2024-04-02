@@ -6,8 +6,8 @@
 from spack.package import *
 
 class PyParsedatetime(PythonPackage):
-    # BEGIN VERSIONS [WHEEL ONLY]
-    version("2.5", sha256="3b835fc54e472c17ef447be37458b400e3fefdf14bb1ffdedb5d2c853acf4ba1", url="https://pypi.org/packages/4e/26/7612745a21452f6d822c0868ff7168dd8cf592645b2a553a177e1de43901/parsedatetime-2.5-py2-none-any.whl")
+    # BEGIN VERSIONS
+    version("2.5", sha256="d2e9ddb1e463de871d32088a3f3cea3dc8282b1b2800e081bd0ef86900451667", url="https://pypi.org/packages/5f/19/43357ced106dd1ab6bceb1decb866e8619172fc271991a54eb2f680a2e9b/parsedatetime-2.5.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS

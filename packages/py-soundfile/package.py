@@ -11,7 +11,7 @@ class PySoundfile(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("numpy", default=False)
+    variant("numpy", default=False, description="numpy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

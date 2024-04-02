@@ -6,14 +6,14 @@
 from spack.package import *
 
 class PyAbipy(PythonPackage):
-    # BEGIN VERSIONS [WHEEL ONLY]
+    # BEGIN VERSIONS
     version("0.9.3", sha256="c8102dbcea012d6e8d53eccbe62e4d84411e5cd136493fe6ffdd40d1f0248ca5", url="https://pypi.org/packages/e9/3d/9b0722eb114fa3052266f998b5456c4d25eb50d347c65e222be687007228/abipy-0.9.3-py2.py3-none-any.whl")
-    version("0.2.0", sha256="3d2cc9c40ef3998684067e78817ea1d936562fe77f1d333c2dc187450ff64dda", url="https://pypi.org/packages/58/d9/35e46e22871757769d79cffbd31f1b53d0bcc65658d3c2bb3fea03672cbe/abipy-0.2.0-py27-none-any.whl")
+    version("0.2.0", sha256="c72b796ba0f9ea4299eac3085bede092d2652e9e5e8074d3badd19ef7b600792", url="https://pypi.org/packages/cb/1b/744d93d03cab82a120d2581aa8a724975dce4d6b4ef0a8197846b0b5715e/abipy-0.2.0.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("gui", default=False)
-    variant("ipython", default=False)
+    variant("gui", default=False, description="gui")
+    variant("ipython", default=False, description="ipython")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

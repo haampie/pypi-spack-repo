@@ -20,6 +20,7 @@ class PyIpywidgets(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@8.0.0-beta1:")
         depends_on("py-ipykernel@4.5.1:", when="@6.0.0:7.7.3,7.7.5:7.7,8:8.0.4,8.0.6:8.0")
         depends_on("py-ipython@6.1:", when="@8:")
         depends_on("py-ipython@4.0.0:", when="@5.2.3:5,6.0.0:7")

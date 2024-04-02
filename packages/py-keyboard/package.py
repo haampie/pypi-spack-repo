@@ -15,6 +15,5 @@ class PyKeyboard(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-pyobjc", when="@0.13.2: platform=darwin")
-        depends_on("py-pyobjc", when="@0.13:0.13.0")
     # END DEPENDENCIES
 

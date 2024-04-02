@@ -15,7 +15,5 @@ class PyPyct(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-param@1.7:", when="@0.4.4:")
-        depends_on("py-pyyaml", when="@0.2.3,0.4:0.4.3")
-        depends_on("py-requests", when="@0.4:0.4.3")
     # END DEPENDENCIES
 

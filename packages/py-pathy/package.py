@@ -14,8 +14,8 @@ class PyPathy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-google-cloud-storage@1.26:1", when="@:0.2")
+        depends_on("py-dataclasses@0.6:", when="^python@:3.6")
         depends_on("py-smart-open@5.2.1:6", when="@0.10.1:")
-        depends_on("py-typer@0.3:", when="@0.1.3:")
+        depends_on("py-typer@0.3:")
     # END DEPENDENCIES
 

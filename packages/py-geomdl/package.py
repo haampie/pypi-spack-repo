@@ -11,7 +11,7 @@ class PyGeomdl(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("viz", default=False)
+    variant("viz", default=False, description="viz")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

@@ -13,21 +13,22 @@ class PyDocker(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("ssh", default=False)
+    variant("ssh", default=False, description="ssh")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@6")
         depends_on("py-packaging", when="@6:")
         depends_on("py-paramiko@2.4.3:", when="@6:+ssh")
-        depends_on("py-paramiko@2.4.2:", when="@3.6:5+ssh")
-        depends_on("py-pypiwin32@223:", when="@3.5:4.2 platform=windows")
+        depends_on("py-paramiko@2.4.2:", when="@:5+ssh")
+        depends_on("py-pypiwin32@223:", when="@:4.2 platform=windows")
         depends_on("py-pywin32@304:", when="@6: platform=windows")
         depends_on("py-pywin32@227", when="@4.3:5 platform=windows")
         depends_on("py-requests@2.26:", when="@6:")
-        depends_on("py-requests@2.14.2:2.17,2.18.1:", when="@3.3,3.4.1:5")
-        depends_on("py-six@1.4:", when="@3.3,3.4.1:4")
+        depends_on("py-requests@2.14.2:2.17,2.18.1:", when="@:5")
+        depends_on("py-six@1.4:", when="@:4")
         depends_on("py-urllib3@1.26:", when="@6:")
-        depends_on("py-websocket-client@0.32:", when="@3.3,3.4.1:6")
+        depends_on("py-websocket-client@0.32:", when="@:6")
     # END DEPENDENCIES
 

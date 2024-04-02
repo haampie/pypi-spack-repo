@@ -14,17 +14,17 @@ class PySmoteVariants(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-joblib", when="@0.1.1:")
-        depends_on("py-keras", when="@0.1.5:")
-        depends_on("py-metric-learn", when="@0.5:")
+        depends_on("py-joblib")
+        depends_on("py-keras")
+        depends_on("py-metric-learn")
         depends_on("py-minisom")
-        depends_on("py-mkl", when="@0.3.10:")
-        depends_on("py-numpy", when="@:0.1.2,0.7.3:")
-        depends_on("py-pandas", when="@:0.1.2,0.2.6:")
-        depends_on("py-scikit-learn", when="@0.2.1:")
-        depends_on("py-scipy", when="@:0.1.2,0.2.1:")
-        depends_on("py-seaborn", when="@0.6:")
+        depends_on("py-mkl")
+        depends_on("py-numpy", when="@0.7.3:")
+        depends_on("py-pandas")
+        depends_on("py-scikit-learn")
+        depends_on("py-scipy")
+        depends_on("py-seaborn")
         depends_on("py-statistics")
-        depends_on("py-tensorflow", when="@0.1.5:")
+        depends_on("py-tensorflow")
     # END DEPENDENCIES
 

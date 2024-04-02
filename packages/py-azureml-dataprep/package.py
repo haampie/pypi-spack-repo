@@ -12,17 +12,17 @@ class PyAzuremlDataprep(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("fuse", default=False)
+    variant("fuse", default=False, description="fuse")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-azure-identity@1.2:1.4", when="@2.4.3:2.4,2.5.2:2.23")
+        depends_on("py-azure-identity@1.2:1.4", when="@:2.23")
         depends_on("py-azureml-dataprep-native@30", when="@2.10:2.11")
         depends_on("py-azureml-dataprep-rslex@1.9", when="@2.11")
         depends_on("py-azureml-dataprep-rslex@1.8", when="@2.10")
-        depends_on("py-cloudpickle@1.1:1", when="@2:2.25")
-        depends_on("py-dotnetcore2@2.1.14:2", when="@2:3")
-        depends_on("py-fusepy@3:", when="@2:+fuse")
+        depends_on("py-cloudpickle@1.1:1", when="@:2.25")
+        depends_on("py-dotnetcore2@2.1.14:2", when="@:3")
+        depends_on("py-fusepy@3:", when="+fuse")
     # END DEPENDENCIES
 

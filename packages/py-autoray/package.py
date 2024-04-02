@@ -13,7 +13,5 @@ class PyAutoray(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("py-numpy", when="@:0.5.1")
     # END DEPENDENCIES
 

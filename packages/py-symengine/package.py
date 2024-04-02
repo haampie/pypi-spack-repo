@@ -15,5 +15,8 @@ class PySymengine(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:3", when="@0.9:0.10")
+        depends_on("python@:3", when="@0.5.1:0.6,0.8")
     # END DEPENDENCIES
 

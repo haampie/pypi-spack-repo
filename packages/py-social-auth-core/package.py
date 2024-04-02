@@ -12,7 +12,7 @@ class PySocialAuthCore(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("openidconnect", default=False)
+    variant("openidconnect", default=False, description="openidconnect")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

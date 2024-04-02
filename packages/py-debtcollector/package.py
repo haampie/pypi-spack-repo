@@ -14,8 +14,8 @@ class PyDebtcollector(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pbr@2:2.0,3:", when="@1.14:2.4")
+        depends_on("py-pbr@2:2.0,3:", when="@:2.4")
         depends_on("py-six@1.10:", when="@1.19:2.3")
-        depends_on("py-wrapt@1.7:", when="@0.2:")
+        depends_on("py-wrapt@1.7:")
     # END DEPENDENCIES
 

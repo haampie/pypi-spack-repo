@@ -14,7 +14,7 @@ class PyJupyterServerProxy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-aiohttp", when="@1.0:1.1,1.3:")
+        depends_on("py-aiohttp")
         depends_on("py-jupyter-server@1.0.0:", when="@3.0.0:")
         depends_on("py-simpervisor@0.4:", when="@1.5.3:4.0")
     # END DEPENDENCIES

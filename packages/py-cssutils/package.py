@@ -13,5 +13,8 @@ class PyCssutils(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.4:2.7")
+        depends_on("py-importlib-metadata", when="^python@:3.7")
     # END DEPENDENCIES
 

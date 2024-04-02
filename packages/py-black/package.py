@@ -30,31 +30,33 @@ class PyBlack(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("colorama", default=False)
-    variant("d", default=False)
-    variant("jupyter", default=False)
-    variant("uvloop", default=False)
+    variant("colorama", default=False, description="colorama")
+    variant("d", default=False, description="d")
+    variant("jupyter", default=False, description="jupyter")
+    variant("uvloop", default=False, description="uvloop")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@23.7:")
+        depends_on("python@3.7:", when="@22.10:23.3")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=linux")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=freebsd")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=darwin")
         depends_on("py-aiohttp@3.7.4:", when="@23.12:23.12.0,24:24.1.0 platform=cray")
         depends_on("py-aiohttp@3.7.4:", when="@21.10-beta0:21,22.10:+d")
         depends_on("py-click@8.0.0:", when="@22.10:")
-        depends_on("py-colorama@0.4.3:", when="@20:21,22.10:+colorama")
+        depends_on("py-colorama@0.4.3:", when="@:21,22.10:+colorama")
         depends_on("py-ipython@7.8:", when="@21.8-beta0:21,22.10:+jupyter")
-        depends_on("py-mypy-extensions@0.4.3:", when="@20:21,22.10:")
+        depends_on("py-mypy-extensions@0.4.3:", when="@:21,22.10:")
         depends_on("py-packaging@22:", when="@23.1.0:")
         depends_on("py-pathspec@0.9:", when="@22.10:")
         depends_on("py-platformdirs@2.0.0:", when="@21.8-beta0:21,22.10:")
         depends_on("py-tokenize-rt@3.2:", when="@21.8-beta0:21,22.10:+jupyter")
         depends_on("py-tomli@1.1:", when="@22.10: ^python@:3.10")
+        depends_on("py-typed-ast@1.4.2:", when="@:21,22.10:23.3 ^python@:3.7")
         depends_on("py-typing-extensions@4.0.1:", when="@23.9: ^python@:3.10")
         depends_on("py-typing-extensions@3.10:", when="@22.10:23.7 ^python@:3.9")
-        depends_on("py-typing-extensions@3.10:", when="@21.8-beta0:21")
         depends_on("py-uvloop@0.15.2:", when="@21.5-beta2:21,22.10:+uvloop")
     # END DEPENDENCIES
 

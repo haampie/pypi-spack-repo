@@ -14,12 +14,10 @@ class PyDatacube(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@1.9:1.9.0-rc1,1.9.0-rc3:")
-        depends_on("python@3.9:", when="@1.8.16:1.8,1.9.0-rc2")
-        depends_on("py-affine", when="@1.2:")
+        depends_on("py-affine")
         depends_on("py-cachetools")
         depends_on("py-click@5:")
-        depends_on("py-cloudpickle@0.4:", when="@1.6-rc1:")
+        depends_on("py-cloudpickle@0.4:")
         depends_on("py-dask+array")
         depends_on("py-distributed", when="@1.8:")
         depends_on("py-jsonschema", when="@:1.8.15")
@@ -30,11 +28,10 @@ class PyDatacube(PythonPackage):
         depends_on("py-pyproj@2.5:", when="@1.8:")
         depends_on("py-python-dateutil")
         depends_on("py-pyyaml")
-        depends_on("py-rasterio@1.0.2:", when="@1.6.1:1.8.7")
-        depends_on("py-setuptools", when="@:1.1")
+        depends_on("py-rasterio@1.0.2:", when="@:1.8.7")
         depends_on("py-shapely@1.6.4:", when="@1.8:1.8.9")
         depends_on("py-sqlalchemy", when="@:1.8.9")
-        depends_on("py-toolz", when="@1.6.1:")
-        depends_on("py-xarray@0.9.0:", when="@1.5:1.8.7,1.8.10:")
+        depends_on("py-toolz")
+        depends_on("py-xarray@0.9.0:", when="@:1.8.7,1.8.10:")
     # END DEPENDENCIES
 

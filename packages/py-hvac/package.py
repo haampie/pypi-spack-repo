@@ -19,7 +19,7 @@ class PyHvac(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-requests@2.21:", when="@0.7.2:0.11.0,0.11.2:0")
-        depends_on("py-requests@2.7:", when="@0.2.6:0.2,0.6.2:0.7.1")
+        depends_on("py-requests@2.7:", when="@:0.2,0.6.2:0.7.1")
         depends_on("py-six@1.5:", when="@0.9.6:0.11.0,0.11.2:0")
     # END DEPENDENCIES
 

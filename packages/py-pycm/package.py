@@ -14,7 +14,7 @@ class PyPycm(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-art@1.8:", when="@2.9:")
-        depends_on("py-numpy@1.9:", when="@2.9:")
+        depends_on("py-art@1.8:")
+        depends_on("py-numpy@1.9:")
     # END DEPENDENCIES
 

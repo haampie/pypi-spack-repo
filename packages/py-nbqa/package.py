@@ -14,8 +14,9 @@ class PyNbqa(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ipython@7.8:", when="@0.5:")
-        depends_on("py-tokenize-rt@3.2:", when="@0.7:")
-        depends_on("py-tomli", when="@1.2.3:")
+        depends_on("python@3.8:", when="@1.6:")
+        depends_on("py-ipython@7.8:")
+        depends_on("py-tokenize-rt@3.2:")
+        depends_on("py-tomli")
     # END DEPENDENCIES
 

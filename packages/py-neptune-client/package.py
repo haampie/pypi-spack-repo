@@ -14,5 +14,7 @@ class PyNeptuneClient(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.16:0.16.11")
     # END DEPENDENCIES
 

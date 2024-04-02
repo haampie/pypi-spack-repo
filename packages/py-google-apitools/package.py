@@ -14,9 +14,9 @@ class PyGoogleApitools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-fasteners@0.14:", when="@0.5.18:0.5.21,0.5.23:")
-        depends_on("py-httplib2@0.8:", when="@0.4.13:0.4,0.5.3,0.5.5,0.5.7:0.5.9,0.5.11:0.5.21,0.5.23:")
-        depends_on("py-oauth2client@1.4.12:", when="@0.5.18:0.5.21,0.5.23:")
+        depends_on("py-fasteners@0.14:", when="@0.5.23:")
+        depends_on("py-httplib2@0.8:", when="@0.5.23:")
+        depends_on("py-oauth2client@1.4.12:", when="@0.5.23:")
         depends_on("py-six@1.12:", when="@0.5.27:")
     # END DEPENDENCIES
 

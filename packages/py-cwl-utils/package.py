@@ -16,10 +16,9 @@ class PyCwlUtils(PythonPackage):
     with default_args(type="run"):
         depends_on("py-cachecontrol", when="@0.15:0.25")
         depends_on("py-cwl-upgrader@1.2.3:", when="@0.15:")
-        depends_on("py-cwlformat", when="@0.8:0.12")
         depends_on("py-packaging", when="@0.14:")
         depends_on("py-rdflib", when="@0.15:")
-        depends_on("py-requests", when="@0.2:0.3,0.8:")
+        depends_on("py-requests")
         depends_on("py-schema-salad@8.3.20220825114525:", when="@0.16:0.31")
     # END DEPENDENCIES
 

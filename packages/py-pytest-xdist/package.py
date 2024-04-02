@@ -20,12 +20,12 @@ class PyPytestXdist(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-execnet@1.1:", when="@:0,1.13,1.20.1:")
-        depends_on("py-psutil@3:", when="@2:2.0")
+        depends_on("python@3.7:", when="@3.1:")
+        depends_on("py-execnet@1.1:", when="@1.13,1.20.1:")
+        depends_on("py-pytest@6.2:", when="@2.5:")
         depends_on("py-pytest@4.4:", when="@1.28:1")
         depends_on("py-pytest@3.6:", when="@1.25:1.27")
         depends_on("py-pytest@3:", when="@1.20.1:1.22.3,1.22.5:1.24")
-        depends_on("py-pytest@6.2:", when="@:0,2.5:")
         depends_on("py-pytest-forked", when="@1.20.1:2")
         depends_on("py-six", when="@1.22.5:1")
     # END DEPENDENCIES

@@ -15,8 +15,9 @@ class PyDataladMetadataModel(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-appdirs", when="@0.1.0-rc3:")
-        depends_on("py-click", when="@0.1.0-rc3:")
-        depends_on("py-fasteners", when="@0.1.0-rc3:")
+        depends_on("python@3.7:", when="@0.3.2:")
+        depends_on("py-appdirs")
+        depends_on("py-click")
+        depends_on("py-fasteners")
     # END DEPENDENCIES
 

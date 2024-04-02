@@ -19,13 +19,14 @@ class PyPika(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("gevent", default=False)
-    variant("tornado", default=False)
-    variant("twisted", default=False)
+    variant("gevent", default=False, description="gevent")
+    variant("tornado", default=False, description="tornado")
+    variant("twisted", default=False, description="twisted")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.3.2:")
         depends_on("py-gevent", when="@1.2:+gevent")
         depends_on("py-tornado", when="@0.12:+tornado")
         depends_on("py-twisted", when="@0.12:+twisted")

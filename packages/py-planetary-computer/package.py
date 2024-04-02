@@ -14,10 +14,11 @@ class PyPlanetaryComputer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-click@7.1:")
         depends_on("py-pydantic@1.7.3:+dotenv", when="@:0")
-        depends_on("py-pystac@1.0.0:", when="@0.3.0:")
-        depends_on("py-pystac-client@0.2.0:", when="@0.3.0:")
+        depends_on("py-pystac@1.0.0:")
+        depends_on("py-pystac-client@0.2.0:")
         depends_on("py-pytz@2020.5:")
         depends_on("py-requests@2.25.1:")
     # END DEPENDENCIES

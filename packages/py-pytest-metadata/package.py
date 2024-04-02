@@ -14,7 +14,6 @@ class PyPytestMetadata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.10", when="@2.0.1")
         depends_on("py-pytest@2.9:", when="@1.4:1")
     # END DEPENDENCIES
 

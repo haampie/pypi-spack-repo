@@ -14,6 +14,7 @@ class PyNpx(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.0.17:0.0.20,0.0.23:")
         depends_on("py-numpy@1.20.0:", when="@0.0.17:")
     # END DEPENDENCIES
 

@@ -19,7 +19,8 @@ class PyNibabel(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.8", when="@2.5.2:2")
+        depends_on("python@3.8:", when="@5:")
+        depends_on("python@3.7:", when="@4")
         depends_on("py-importlib-resources@1.3:", when="@5.1: ^python@:3.8")
         depends_on("py-numpy@1.20.0:", when="@5.2:")
         depends_on("py-numpy@1.19.0:", when="@5:5.1")

@@ -23,6 +23,8 @@ class PyS3transfer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.9:")
+        depends_on("python@3.7:", when="@0.6:0.8")
         depends_on("py-botocore@1.33.2:", when="@0.8.1:")
         depends_on("py-botocore@1.12.36:", when="@0.3.4:0.7")
     # END DEPENDENCIES

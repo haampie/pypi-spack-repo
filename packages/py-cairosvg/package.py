@@ -14,10 +14,10 @@ class PyCairosvg(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-cairocffi", when="@2.3:")
-        depends_on("py-cssselect2", when="@2.3:")
-        depends_on("py-defusedxml", when="@2.3:")
-        depends_on("py-pillow", when="@2.3:")
-        depends_on("py-tinycss2", when="@2.3:")
+        depends_on("py-cairocffi")
+        depends_on("py-cssselect2")
+        depends_on("py-defusedxml")
+        depends_on("py-pillow")
+        depends_on("py-tinycss2")
     # END DEPENDENCIES
 

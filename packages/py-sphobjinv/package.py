@@ -15,7 +15,7 @@ class PySphobjinv(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-attrs@19.2:", when="@2.1:")
-        depends_on("py-certifi", when="@2.0:2.0.0,2.1-alpha1:")
+        depends_on("py-certifi", when="@2.1-alpha1:")
         depends_on("py-jsonschema@3.0.0:", when="@2.1:")
     # END DEPENDENCIES
 

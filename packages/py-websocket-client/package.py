@@ -19,5 +19,8 @@ class PyWebsocketClient(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.6.2:")
+        depends_on("python@3.7:", when="@1.3.2:1.6.1")
     # END DEPENDENCIES
 

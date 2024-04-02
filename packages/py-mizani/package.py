@@ -17,13 +17,13 @@ class PyMizani(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.10:")
+        depends_on("python@3.8:", when="@0.7.4:0.9")
         depends_on("py-backports-zoneinfo", when="@0.8:0.9 ^python@:3.8")
         depends_on("py-matplotlib@3.5.0:", when="@0.7.4:0.9")
         depends_on("py-matplotlib@3.1.1:", when="@0.6:0.7.3")
         depends_on("py-numpy@1.19.0:", when="@0.7.4:0.10")
-        depends_on("py-numpy", when="@0.2:0.7.3")
-        depends_on("py-palettable", when="@0.2:0.8")
+        depends_on("py-numpy", when="@:0.7.3")
+        depends_on("py-palettable", when="@:0.8")
         depends_on("py-pandas@1.3.5:", when="@0.7.4:0.10")
         depends_on("py-pandas@1.1.0:", when="@0.7.2:0.7.3")
         depends_on("py-pandas@0.25.0:", when="@0.6")

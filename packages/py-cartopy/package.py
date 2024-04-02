@@ -21,13 +21,15 @@ class PyCartopy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("epsg", default=False)
-    variant("ows", default=False)
-    variant("plotting", default=False)
+    variant("epsg", default=False, description="epsg")
+    variant("ows", default=False, description="ows")
+    variant("plotting", default=False, description="plotting")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.22:")
+        depends_on("python@3.8:", when="@0.21")
+        depends_on("python@3.7:", when="@0.20")
     # END DEPENDENCIES
 

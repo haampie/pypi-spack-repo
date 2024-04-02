@@ -14,10 +14,12 @@ class PyHypercorn(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-h11", when="@0.3:")
-        depends_on("py-h2@3.1:", when="@0.5:")
-        depends_on("py-priority", when="@0.8:")
-        depends_on("py-toml", when="@0.7:0.14.3")
-        depends_on("py-wsproto@0.14:", when="@0.5.4:")
+        depends_on("python@3.7:", when="@:0.15")
+        depends_on("py-h11")
+        depends_on("py-h2@3.1:")
+        depends_on("py-priority")
+        depends_on("py-toml", when="@:0.14.3")
+        depends_on("py-typing-extensions@3.7.4:", when="@0.12:0.14 ^python@:3.7")
+        depends_on("py-wsproto@0.14:")
     # END DEPENDENCIES
 

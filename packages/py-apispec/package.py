@@ -15,7 +15,7 @@ class PyApispec(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.2:6.3")
         depends_on("py-packaging@21.3:", when="@6:")
-        depends_on("py-pyyaml", when="@0.17:0.22.0,0.22.3:0")
     # END DEPENDENCIES
 

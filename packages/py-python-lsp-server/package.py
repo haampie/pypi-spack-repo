@@ -17,6 +17,8 @@ class PyPythonLspServer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.8:")
+        depends_on("python@3.7:", when="@1.4:1.7")
         depends_on("py-docstring-to-markdown", when="@1.6:")
         depends_on("py-importlib-metadata@4.8.3:", when="@1.8: ^python@:3.9")
         depends_on("py-jedi@0.17.2:", when="@1.8:")
@@ -24,7 +26,7 @@ class PyPythonLspServer(PythonPackage):
         depends_on("py-pluggy@1:1.0.0.0,1.1:", when="@1.4:")
         depends_on("py-python-lsp-jsonrpc@1.1:", when="@1.8:")
         depends_on("py-python-lsp-jsonrpc", when="@:1.7")
-        depends_on("py-setuptools@39:", when="@1.0.1:1.7")
+        depends_on("py-setuptools@39:", when="@:1.7")
         depends_on("py-ujson@3:")
     # END DEPENDENCIES
 

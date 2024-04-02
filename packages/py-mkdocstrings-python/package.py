@@ -14,7 +14,8 @@ class PyMkdocstringsPython(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-griffe@0.11.1:", when="@0.5.1:0.7")
+        depends_on("python@3.7:", when="@:1.1")
+        depends_on("py-griffe@0.11.1:", when="@:0.7")
         depends_on("py-mkdocstrings@0.19:", when="@0.7:0.8")
     # END DEPENDENCIES
 

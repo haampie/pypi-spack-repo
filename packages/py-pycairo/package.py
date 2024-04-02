@@ -14,5 +14,8 @@ class PyPycairo(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.24:")
+        depends_on("python@:3", when="@1.19:1.20")
     # END DEPENDENCIES
 

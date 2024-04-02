@@ -15,7 +15,7 @@ class PyPyupgrade(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.8.1:", when="@3.9:")
-        depends_on("py-tokenize-rt@3.2:", when="@1.20.2:2.38.2,3:3.9")
+        depends_on("python@3.7:", when="@2.31.1:3.3")
+        depends_on("py-tokenize-rt@3.2:", when="@:2.38.2,3:3.9")
     # END DEPENDENCIES
 

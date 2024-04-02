@@ -11,11 +11,12 @@ class PyBlight(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("dev", default=False)
+    variant("dev", default=False, description="dev")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-black", when="@0.0.35:0.0.47+dev")
         depends_on("py-click@7.1:", when="@0.0.38:")
         depends_on("py-coverage+toml", when="@0.0.35:0.0.47+dev")

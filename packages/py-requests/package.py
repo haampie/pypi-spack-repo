@@ -26,11 +26,13 @@ class PyRequests(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("socks", default=False)
+    variant("socks", default=False, description="socks")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.29:")
+        depends_on("python@3.7:3", when="@2.28")
         depends_on("py-certifi@2017.4:", when="@2.16:")
         depends_on("py-chardet@3.0.2:4", when="@2.25.1:2.25")
         depends_on("py-chardet@3.0.2:3", when="@2.16:2.25.0")

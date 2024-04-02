@@ -14,6 +14,7 @@ class PyAutodocsumm(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2.9:")
         depends_on("py-sphinx@2.2:", when="@0.2.11:")
     # END DEPENDENCIES
 

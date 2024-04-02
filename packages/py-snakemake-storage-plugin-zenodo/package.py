@@ -14,7 +14,7 @@ class PySnakemakeStoragePluginZenodo(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-requests@2.31:")
         depends_on("py-snakemake-interface-common@1.14.4:")
         depends_on("py-snakemake-interface-storage-plugins@3:", when="@0.1.1:")

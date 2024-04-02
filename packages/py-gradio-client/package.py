@@ -14,12 +14,13 @@ class PyGradioClient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.2.7:")
         depends_on("py-fsspec")
-        depends_on("py-httpx", when="@0.0.9:0.10.0")
-        depends_on("py-huggingface-hub@0.13.0:", when="@0.0.5:0.7.1")
+        depends_on("py-httpx", when="@:0.10.0")
+        depends_on("py-huggingface-hub@0.13.0:", when="@:0.7.1")
         depends_on("py-packaging")
         depends_on("py-requests", when="@:0.2.9")
-        depends_on("py-typing-extensions", when="@0.0.6-beta10,0.0.7:0.2.9")
+        depends_on("py-typing-extensions", when="@:0.2.9")
         depends_on("py-websockets", when="@:0.2.9")
     # END DEPENDENCIES
 

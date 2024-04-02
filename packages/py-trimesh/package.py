@@ -12,7 +12,7 @@ class PyTrimesh(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("easy", default=False)
+    variant("easy", default=False, description="easy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -32,11 +32,9 @@ class PyTrimesh(PythonPackage):
         depends_on("py-rtree", when="@3.6.2:+easy")
         depends_on("py-scipy", when="@3.6.2:+easy")
         depends_on("py-setuptools", when="@3.6.2:+easy")
-        depends_on("py-setuptools", when="@3.6.2:3.9")
         depends_on("py-shapely", when="@3.6.2:+easy")
         depends_on("py-svg-path", when="@3.6.2:+easy")
         depends_on("py-sympy", when="@3.6.2:3.23.3+easy")
-        depends_on("py-xatlas", when="@4.1.4:+easy")
         depends_on("py-xxhash", when="@3.6.2:+easy")
     # END DEPENDENCIES
 

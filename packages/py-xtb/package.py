@@ -14,6 +14,7 @@ class PyXtb(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-cffi")
         depends_on("py-numpy")
     # END DEPENDENCIES

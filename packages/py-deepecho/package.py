@@ -14,15 +14,10 @@ class PyDeepecho(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.11", when="@0.4.2:")
-        depends_on("python@:3.10", when="@0.4:0.4.1")
         depends_on("python@:3.9", when="@0.3")
-        depends_on("python@:3.8", when="@0.0.2:0.2")
-        depends_on("py-numpy@1.20.0:1", when="@0.4: ^python@:3.9")
-        depends_on("py-numpy@1.20.0:1", when="@0.3")
-        depends_on("py-pandas@1.1.3:1", when="@0.4:0.4.0 ^python@:3.9")
+        depends_on("py-numpy@1.20.0:1", when="@0.3 ^python@3.7:")
+        depends_on("py-numpy@1.18.0:1.19", when="@0.3 ^python@:3.6")
         depends_on("py-pandas@1.1.3:1", when="@0.3")
-        depends_on("py-torch@1.8:1", when="@0.4:0.4.0 ^python@:3.9")
         depends_on("py-torch@1.8:1", when="@0.3")
         depends_on("py-tqdm@4.15:", when="@0.3:")
     # END DEPENDENCIES

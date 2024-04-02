@@ -14,6 +14,6 @@ class PyTypeshedClient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-importlib-resources@1.4:", when="@1:")
+        depends_on("py-importlib-resources@1.4:")
     # END DEPENDENCIES
 

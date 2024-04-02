@@ -11,7 +11,7 @@ class PyImbalancedLearn(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("optional", default=False)
+    variant("optional", default=False, description="optional")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

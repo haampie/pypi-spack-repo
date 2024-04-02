@@ -14,14 +14,14 @@ class PyOpenmim(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click", when="@0.2:")
-        depends_on("py-colorama", when="@0.2:")
-        depends_on("py-model-index", when="@0.2:")
+        depends_on("py-click")
+        depends_on("py-colorama")
+        depends_on("py-model-index")
         depends_on("py-opendatalab", when="@0.3.9:")
-        depends_on("py-pandas", when="@0.2:")
-        depends_on("py-pip@19.3:", when="@0.2:")
-        depends_on("py-requests", when="@0.2:")
-        depends_on("py-rich", when="@0.2:")
-        depends_on("py-tabulate", when="@0.2:")
+        depends_on("py-pandas")
+        depends_on("py-pip@19.3:")
+        depends_on("py-requests")
+        depends_on("py-rich")
+        depends_on("py-tabulate")
     # END DEPENDENCIES
 

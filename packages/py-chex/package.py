@@ -17,7 +17,9 @@ class PyChex(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@0.1.8:")
+        depends_on("python@3.7:", when="@0.1:0.1.5")
         depends_on("py-absl-py@0.9:")
+        depends_on("py-dataclasses@0.7:", when="@0.0.3:0.1.5 ^python@:3.6")
         depends_on("py-dm-tree@0.1.5:", when="@0.0.3:0.1.81")
         depends_on("py-jax@0.4.16:", when="@0.1.83:")
         depends_on("py-jax@0.1.55:", when="@:0.1.6")
@@ -27,6 +29,5 @@ class PyChex(PythonPackage):
         depends_on("py-setuptools", when="@0.1.85: ^python@3.12:")
         depends_on("py-toolz@0.9:")
         depends_on("py-typing-extensions@4.2:", when="@0.1.8:")
-        depends_on("py-typing-extensions@4.2:", when="@0.1.6:0.1.7 ^python@:3.10")
     # END DEPENDENCIES
 

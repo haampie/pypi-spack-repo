@@ -25,6 +25,8 @@ class PyJupyterlab(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@4.0.0-alpha33:")
+        depends_on("python@3.7:", when="@3.3.0-alpha2:3,4.0.0-alpha18:4.0.0-alpha32")
         depends_on("py-async-lru@1:", when="@4.0.0-alpha29:")
         depends_on("py-importlib-metadata@4.8.3:", when="@4.0.0-alpha31: ^python@:3.9")
         depends_on("py-importlib-resources@1.4:", when="@4.0.0-alpha24: ^python@:3.8")
@@ -32,7 +34,7 @@ class PyJupyterlab(PythonPackage):
         depends_on("py-ipython", when="@3.0.0-alpha5:4.0.0-alpha19")
         depends_on("py-jinja2@3.0.3:", when="@4.0.0-alpha22:")
         depends_on("py-jinja2@2.1:", when="@3.0.15:3.0,3.1.0-alpha5:4.0.0-alpha21")
-        depends_on("py-jinja2@2.10:", when="@1.0.7:1.0,1.1.0-rc0:3.0.14,3.1:3.1.0-alpha4")
+        depends_on("py-jinja2@2.10:", when="@:3.0.14,3.1:3.1.0-alpha4")
         depends_on("py-jupyter-core", when="@3.0.0-rc7:")
         depends_on("py-jupyter-lsp@2:", when="@4.0.0-alpha37:")
         depends_on("py-jupyter-server@2.4:", when="@4.0.0-beta1:")
@@ -46,14 +48,14 @@ class PyJupyterlab(PythonPackage):
         depends_on("py-nbclassic", when="@3.4.4:3")
         depends_on("py-nbclassic@0.2.0:0", when="@3.0.0-rc14:3.4.3,4:4.0.0-alpha19")
         depends_on("py-notebook@:6", when="@3.4.4:3")
-        depends_on("py-notebook@4.3.1:", when="@0.23:3.0.0-alpha4")
+        depends_on("py-notebook@4.3.1:", when="@:3.0.0-alpha4")
         depends_on("py-notebook-shim@0.2:", when="@4.0.0-alpha31:")
         depends_on("py-packaging", when="@3.0.0-beta6:")
         depends_on("py-tomli", when="@3.6.0-alpha3:3,4.0.0-alpha31: ^python@:3.10")
         depends_on("py-tomli", when="@3.4.7:3.6.0-alpha2,4.0.0-alpha27:4.0.0-alpha30")
         depends_on("py-tornado@6.2:", when="@4.0.0-alpha33:")
         depends_on("py-tornado@6.1:", when="@3.0.0-rc14:4.0.0-alpha32")
-        depends_on("py-tornado@:6.0-beta1,6.0.3:", when="@1.0.0-rc1:3.0.0-rc13")
+        depends_on("py-tornado@:6.0-beta1,6.0.3:", when="@:3.0.0-rc13")
         depends_on("py-traitlets", when="@4.0.0-alpha29:")
     # END DEPENDENCIES
 

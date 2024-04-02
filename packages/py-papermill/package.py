@@ -14,17 +14,15 @@ class PyPapermill(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ansiwrap", when="@0.8.8:0.13.2,0.13.4:2.4.0")
-        depends_on("py-azure-datalake-store@0.0.30:", when="@0.15:0.17")
-        depends_on("py-boto3", when="@0.8:0.13.2,0.13.4:0.17")
-        depends_on("py-click", when="@0.4:0.13.2,0.13.4:")
-        depends_on("py-entrypoints", when="@0.16.2:")
-        depends_on("py-ipython@5.0.0:", when="@0.13.2,0.13.4:1.0")
-        depends_on("py-nbclient@0.2:", when="@2.1:")
+        depends_on("python@3.7:", when="@2.4:2.4.0")
+        depends_on("py-ansiwrap", when="@:2.4.0")
+        depends_on("py-click")
+        depends_on("py-entrypoints")
+        depends_on("py-nbclient@0.2:")
         depends_on("py-nbformat@5.1.2:", when="@2.3.1:")
-        depends_on("py-pyyaml", when="@0.4:0.13.2,0.13.4:")
-        depends_on("py-requests", when="@0.11:0.13.2,0.13.4:")
-        depends_on("py-tenacity", when="@0.19.1:2.4.0")
-        depends_on("py-tqdm@4.32.2:", when="@1.1:")
+        depends_on("py-pyyaml")
+        depends_on("py-requests")
+        depends_on("py-tenacity", when="@:2.4.0")
+        depends_on("py-tqdm@4.32.2:")
     # END DEPENDENCIES
 

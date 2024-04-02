@@ -20,6 +20,9 @@ class PyNbclient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.8:")
+        depends_on("python@3.7:", when="@0.5.10:0.7")
+        depends_on("py-async-generator", when="@0.5.4:0.5.9 ^python@:3.6")
         depends_on("py-async-generator", when="@0.2:0.5.3")
         depends_on("py-jupyter-client@6.1.12:", when="@0.7.2:")
         depends_on("py-jupyter-client@6.1.5:", when="@0.4.1:0.7.0")

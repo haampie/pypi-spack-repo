@@ -16,8 +16,8 @@ class PyYacman(PythonPackage):
     with default_args(type="run"):
         depends_on("py-attmap@0.13:", when="@0.7.1:")
         depends_on("py-jsonschema@3.2:", when="@0.8:")
-        depends_on("py-oyaml", when="@0.6:0.6.2,0.6.8:")
-        depends_on("py-pyyaml@3.13:", when="@0.6:0.6.2,0.6.8:")
+        depends_on("py-oyaml", when="@0.6.8:")
+        depends_on("py-pyyaml@3.13:", when="@0.6.8:")
         depends_on("py-ubiquerg@0.6.1:", when="@0.6.9:0.9.2")
     # END DEPENDENCIES
 

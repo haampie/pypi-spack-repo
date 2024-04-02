@@ -48,9 +48,10 @@ class PyMypy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.5:")
+        depends_on("python@3.7:", when="@0.981:1.4")
         depends_on("py-mypy-extensions@1:", when="@1.6:")
         depends_on("py-mypy-extensions@0.4:0", when="@0.630:0.650,0.670:0.750")
-        depends_on("py-psutil@5.4", when="@0.550:0.560")
         depends_on("py-tomli@1.1:", when="@1.6: ^python@:3.10")
         depends_on("py-typed-ast@1.4", when="@0.710:0.782")
         depends_on("py-typed-ast@1.3.1:1.3", when="@0.670:0.701")

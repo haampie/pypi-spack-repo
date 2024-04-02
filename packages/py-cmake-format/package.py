@@ -13,8 +13,8 @@ class PyCmakeFormat(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("htmlgen", default=False)
-    variant("yaml", default=False)
+    variant("htmlgen", default=False, description="htmlgen")
+    variant("yaml", default=False, description="yaml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

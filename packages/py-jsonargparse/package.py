@@ -13,31 +13,31 @@ class PyJsonargparse(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("signatures", default=False)
-    variant("typing-extensions", default=False)
+    variant("signatures", default=False, description="signatures")
+    variant("typing-extensions", default=False, description="typing-extensions")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4.25:")
         depends_on("py-docstring-parser@0.15:", when="@4.14:+signatures")
-        depends_on("py-jsonschema@3.2:", when="@3:3.8+signatures")
         depends_on("py-pyyaml@3.13:")
         depends_on("py-typeshed-client@2.1:", when="@4.19:+signatures")
         depends_on("py-typing-extensions@3.10:", when="@4.21:+typing-extensions ^python@:3.9")
+    # END DEPENDENCIES
+
 
         # marker: os_name != "posix" and extra == "all"
-        # depends_on("py-jsonnet-binary", when="@4.12:4.20")
+        # depends_on("py-jsonnet-binary", when="@:4.20")
 
         # marker: os_name != "posix" and extra == "jsonnet"
-        # depends_on("py-jsonnet-binary", when="@4.12:")
+        # depends_on("py-jsonnet-binary")
 
         # marker: os_name == "posix" and extra == "all"
-        # depends_on("py-jsonnet@0.13.0:", when="@4.12:4.20")
+        # depends_on("py-jsonnet@0.13.0:", when="@:4.20")
 
         # marker: os_name == "posix" and extra == "jsonnet"
-        # depends_on("py-jsonnet@0.13.0:", when="@4.12:")
+        # depends_on("py-jsonnet@0.13.0:")
 
         # self-dependency
         # depends_on("py-jsonargparse+typing-extensions", when="@4.21:+signatures")
-    # END DEPENDENCIES
-

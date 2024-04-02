@@ -14,8 +14,8 @@ class PySwaggerSpecValidator(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-jsonschema", when="@1.0.12:1.0,1.1.1:2.0.2,2.2:2.7.4,2.7.6:")
-        depends_on("py-pyyaml", when="@2.2:")
-        depends_on("py-six", when="@1.0.12:1.0,1.1.1:2.0.2,2.2:2")
+        depends_on("py-jsonschema", when="@:2.7.4,2.7.6:")
+        depends_on("py-pyyaml")
+        depends_on("py-six", when="@:2")
     # END DEPENDENCIES
 

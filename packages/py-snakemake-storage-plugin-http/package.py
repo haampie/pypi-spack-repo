@@ -14,8 +14,7 @@ class PySnakemakeStoragePluginHttp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:", when="@0.2.2:")
-        depends_on("python@3.9:", when="@:0.2.1")
+        depends_on("python@3.11:3", when="@0.2.2:")
         depends_on("py-requests@2.31:")
         depends_on("py-requests-oauthlib@1.3.1:1")
         depends_on("py-snakemake-interface-common@1.14:", when="@0.2.2:")

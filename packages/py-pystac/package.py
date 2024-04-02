@@ -19,7 +19,8 @@ class PyPystac(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.9:")
-        depends_on("py-python-dateutil@2.7:", when="@0.3.1:")
+        depends_on("python@3.7:", when="@1.0.0-rc3:1.5")
+        depends_on("py-python-dateutil@2.7:")
+        depends_on("py-typing-extensions@3.7:", when="@1.0.0-beta3:1.5 ^python@:3.7")
     # END DEPENDENCIES
 

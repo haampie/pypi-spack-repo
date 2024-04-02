@@ -15,5 +15,8 @@ class PyPygobject(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:3", when="@3.46:")
+        depends_on("python@:3", when="@3.32.2:3.42")
     # END DEPENDENCIES
 

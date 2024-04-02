@@ -15,6 +15,7 @@ class PyEtelemetry(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3:")
         depends_on("py-ci-info@0.2:", when="@0.2.1:")
         depends_on("py-requests")
     # END DEPENDENCIES

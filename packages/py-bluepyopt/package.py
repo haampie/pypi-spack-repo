@@ -11,20 +11,20 @@ class PyBluepyopt(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("scoop", default=False)
+    variant("scoop", default=False, description="scoop")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-deap@1.3.3:", when="@:0.0,1.12.63:")
-        depends_on("py-efel@2.13:", when="@:0.0,1.12.7:")
-        depends_on("py-future", when="@:0.0,1.12.7:1.14.4")
-        depends_on("py-ipyparallel", when="@:0.0,1.12.7:")
-        depends_on("py-jinja2@2.8:", when="@:0.0,1.12.7:")
-        depends_on("py-numpy@1.6:", when="@:0.0,1.12.7:")
-        depends_on("py-pandas@0.18:", when="@:0.0,1.12.7:")
+        depends_on("py-deap@1.3.3:")
+        depends_on("py-efel@2.13:")
+        depends_on("py-future", when="@:1.14.4")
+        depends_on("py-ipyparallel")
+        depends_on("py-jinja2@2.8:")
+        depends_on("py-numpy@1.6:")
+        depends_on("py-pandas@0.18:")
         depends_on("py-pebble@4.6:", when="@1.14.1:")
-        depends_on("py-pickleshare@0.7.3:", when="@:0.0,1.12.7:")
-        depends_on("py-scoop", when="@:0.0,1.12.7:+scoop")
+        depends_on("py-pickleshare@0.7.3:")
+        depends_on("py-scoop", when="+scoop")
     # END DEPENDENCIES
 

@@ -14,7 +14,7 @@ class PyGxformat2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-bioblend", when="@:0.1.0.0,0.1.1:")
-        depends_on("py-pyyaml", when="@:0.1.0.0,0.1.1:")
+        depends_on("py-bioblend")
+        depends_on("py-pyyaml")
     # END DEPENDENCIES
 

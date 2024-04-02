@@ -14,6 +14,7 @@ class PyCssselect2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.5:")
         depends_on("py-tinycss2", when="@0.2.2:0.2,0.4:")
         depends_on("py-webencodings", when="@0.4:")
     # END DEPENDENCIES

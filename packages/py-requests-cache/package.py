@@ -14,14 +14,12 @@ class PyRequestsCache(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@:1.1")
         depends_on("py-appdirs@1.4.4:", when="@0.9.6:0.9")
         depends_on("py-attrs@21.2:", when="@0.9.6:0.9,0.10.0.dev1:")
         depends_on("py-cattrs@22.2:", when="@0.9.7:0.9,1.0.0-beta1:")
-        depends_on("py-pymongo@3:", when="@0.10.0.dev2:0.10.0.dev3 ^python@3.9:")
-        depends_on("py-pyyaml@5.4:", when="@0.7:0.7.0.0,0.7.1:0.7,0.8.0.dev:0.8.0")
-        depends_on("py-redis@3:", when="@0.10.0.dev2:0.10.0.dev3 ^python@3.9:")
         depends_on("py-requests@2.22:", when="@0.9.6:0.9,1.0.0-alpha2:")
-        depends_on("py-url-normalize@1.4:", when="@0.6,0.7.0.dev:0.7.0.dev315,0.9.6:0.9,1.0.0-alpha2:")
+        depends_on("py-url-normalize@1.4:", when="@0.9.6:0.9,1.0.0-alpha2:")
         depends_on("py-urllib3@1.25.5:", when="@0.9.6:0.9,0.10.0.dev1:")
     # END DEPENDENCIES
 

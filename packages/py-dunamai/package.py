@@ -16,6 +16,8 @@ class PyDunamai(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@:1.19.0")
+        depends_on("py-importlib-metadata@1.6:", when="@1.8: ^python@:3.7")
         depends_on("py-packaging@20.9:", when="@1.7:")
     # END DEPENDENCIES
 

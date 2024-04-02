@@ -15,6 +15,7 @@ class PyZict(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@3:")
         depends_on("py-heapdict", when="@0.0.3:2")
     # END DEPENDENCIES
 

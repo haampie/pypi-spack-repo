@@ -16,10 +16,10 @@ class PyOauthlib(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("extras", default=False)
-    variant("rsa", default=False)
-    variant("signals", default=False)
-    variant("signedtoken", default=False)
+    variant("extras", default=False, description="extras")
+    variant("rsa", default=False, description="rsa")
+    variant("signals", default=False, description="signals")
+    variant("signedtoken", default=False, description="signedtoken")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

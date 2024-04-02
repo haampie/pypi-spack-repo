@@ -14,6 +14,7 @@ class PySysrsync(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@0.2:")
         depends_on("py-toml@0.10:", when="@0.2:")
     # END DEPENDENCIES
 

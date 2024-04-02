@@ -20,6 +20,8 @@ class PyClick(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@8.1:")
         depends_on("py-colorama", when="@8.0.0-rc1: platform=windows")
+        depends_on("py-importlib-metadata", when="@8.0.1: ^python@:3.7")
     # END DEPENDENCIES
 

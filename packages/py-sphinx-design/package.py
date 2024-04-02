@@ -16,6 +16,7 @@ class PySphinxDesign(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.1:0.4")
         depends_on("py-sphinx@4.0.0:6", when="@0.4")
         depends_on("py-sphinx@4.0.0:5", when="@0.2:0.3")
     # END DEPENDENCIES

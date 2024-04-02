@@ -21,6 +21,7 @@ class PyTimm(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.6.13:0.6,0.8.13:0.9.12")
         depends_on("py-huggingface-hub", when="@0.6.11:")
         depends_on("py-pyyaml", when="@0.6.11:")
         depends_on("py-safetensors", when="@0.8.13:")

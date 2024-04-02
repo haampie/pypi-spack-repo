@@ -14,13 +14,11 @@ class PyPulsarGalaxyLib(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-paramiko", when="@0.12:0.13.0,0.14:")
-        depends_on("py-paste", when="@:0.7.0.0,0.8:0.13.0,0.14.0.dev:0.14.0")
-        depends_on("py-pastedeploy", when="@0.12:0.13.0,0.14:")
-        depends_on("py-pastescript", when="@:0.7.0.0,0.8:0.13.0,0.14.0.dev:0.14.0")
-        depends_on("py-psutil", when="@:0.7.0.0,0.8:0.13.0,0.14:")
-        depends_on("py-pyyaml", when="@:0.7.0.0,0.8:0.13.0,0.14:")
+        depends_on("py-paramiko")
+        depends_on("py-pastedeploy")
+        depends_on("py-psutil")
+        depends_on("py-pyyaml")
         depends_on("py-typing-extensions", when="@0.14.14:0.14,0.15.0.dev:")
-        depends_on("py-webob", when="@:0.7.0.0,0.8:0.13.0,0.14:")
+        depends_on("py-webob")
     # END DEPENDENCIES
 

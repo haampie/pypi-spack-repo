@@ -18,11 +18,13 @@ class PyScikitBuild(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.17:")
         depends_on("py-distro", when="@0.11:")
         depends_on("py-packaging", when="@0.7:")
         depends_on("py-setuptools@42:", when="@0.16:")
         depends_on("py-setuptools@28:", when="@0.5:0.15")
         depends_on("py-tomli", when="@0.17: ^python@:3.10")
+        depends_on("py-typing-extensions@3.7:", when="@0.16: ^python@:3.7")
         depends_on("py-wheel@0.32:", when="@0.16:")
         depends_on("py-wheel@0.29:", when="@0.6:0.15")
     # END DEPENDENCIES

@@ -23,12 +23,14 @@ class PyElephant(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("docs", default=False)
-    variant("extras", default=False)
+    variant("docs", default=False, description="docs")
+    variant("extras", default=False, description="extras")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.12:")
+        depends_on("python@3.7:", when="@0.11")
         depends_on("py-jinja2@2.11.2:", when="@0.14:+extras")
         depends_on("py-jupyter", when="@0.14:+docs")
         depends_on("py-matplotlib@3.3.2:", when="@0.14:+docs")

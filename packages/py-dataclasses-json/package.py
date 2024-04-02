@@ -14,8 +14,7 @@ class PyDataclassesJson(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@:3.12", when="@0.5.14:0.5")
-        depends_on("python@:3.11", when="@0.5.12:0.5.13")
+        depends_on("python@3.7:3.11", when="@0.5.12:0.5.13")
         depends_on("py-marshmallow@3.18:", when="@0.5.12:")
         depends_on("py-typing-inspect@0.4:", when="@0.5.12:")
     # END DEPENDENCIES

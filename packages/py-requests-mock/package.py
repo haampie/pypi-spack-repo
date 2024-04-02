@@ -15,6 +15,6 @@ class PyRequestsMock(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-requests@2.3:", when="@1.7:1.11")
-        depends_on("py-six", when="@0.6:1.11")
+        depends_on("py-six", when="@:1.11")
     # END DEPENDENCIES
 

@@ -16,8 +16,11 @@ class PyPytestAsyncio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.22:")
+        depends_on("python@3.7:", when="@0.17:0.21")
         depends_on("py-pytest@7.0.0:", when="@0.23.5-alpha0:")
         depends_on("py-pytest@6.1:", when="@0.17.1:0.20")
         depends_on("py-pytest@3.0.6:", when="@0.6:0.10")
+        depends_on("py-typing-extensions@3.7:", when="@0.18:0.21 ^python@:3.7")
     # END DEPENDENCIES
 

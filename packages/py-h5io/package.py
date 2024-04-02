@@ -14,6 +14,7 @@ class PyH5io(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.1.4:")
         depends_on("py-h5py", when="@0.1.7:")
         depends_on("py-numpy", when="@0.1.6:")
     # END DEPENDENCIES

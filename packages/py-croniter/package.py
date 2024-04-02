@@ -14,6 +14,6 @@ class PyCroniter(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-python-dateutil", when="@0.3.25:")
+        depends_on("py-python-dateutil")
     # END DEPENDENCIES
 

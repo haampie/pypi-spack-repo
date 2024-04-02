@@ -18,6 +18,8 @@ class PyHumanize(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@4:4.6")
+        depends_on("py-importlib-metadata", when="@3.12:4.6 ^python@:3.7")
         depends_on("py-setuptools", when="@3:3.12")
     # END DEPENDENCIES
 

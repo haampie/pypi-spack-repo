@@ -7,7 +7,7 @@ from spack.package import *
 
 class PyAzureMgmtNspkg(PythonPackage):
     # BEGIN VERSIONS [WHEEL ONLY]
-    version("3.0.2", sha256="1c6f5134de78c8907e8b73a8ceaaf1f336a24193a543039994fe002bb5f7f39f", url="https://pypi.org/packages/a1/6e/464d039ec6184234b188d6a9d199e658cce86b38afe4db0e8edd1629f3f6/azure_mgmt_nspkg-3.0.2-py2-none-any.whl")
+    version("3.0.2", sha256="d638ea5fda3ed323db943feb29acaa200f5d8ff092078bf8d29d4a2f8ed16999", url="https://pypi.org/packages/b3/c2/af4b47845f27dc7d206ed4908b9e580f8bc94a4b2f3956a0d87c40719d90/azure_mgmt_nspkg-3.0.2-py3-none-any.whl")
     # END VERSIONS
 
     # BEGIN VARIANTS

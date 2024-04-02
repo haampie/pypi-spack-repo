@@ -38,6 +38,8 @@ class PyBotocore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.34:")
+        depends_on("python@3.7:", when="@1.27:1.33")
         depends_on("py-jmespath@0.7.1:", when="@1.24.21:")
         depends_on("py-jmespath@0.7.1:0", when="@1.17.25:1.21.40,1.21.42:1.24.20")
         depends_on("py-python-dateutil@2:", when="@1.17.25:1.21.40,1.21.42:")

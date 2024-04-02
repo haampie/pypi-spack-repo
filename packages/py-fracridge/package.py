@@ -15,6 +15,7 @@ class PyFracridge(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2:")
         depends_on("py-numba")
         depends_on("py-pillow")
         depends_on("py-scikit-learn@0.23.2:0.23", when="@1.3.2:1")

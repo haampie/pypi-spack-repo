@@ -25,6 +25,8 @@ class PyTypingExtensions(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@4.8:")
+        depends_on("python@3.7:", when="@4.2:4.7")
         depends_on("py-typing@3.7:", when="@3.7.4:3.7.4.0")
         depends_on("py-typing@3.6.2:", when="@:3.7.2")
     # END DEPENDENCIES

@@ -15,13 +15,12 @@ class PyNbdime(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama")
-        depends_on("py-gitpython@:2.1.3,2.1.7:", when="@0.4:")
-        depends_on("py-jinja2@2.9:", when="@1:")
+        depends_on("py-gitpython@:2.1.3,2.1.7:")
+        depends_on("py-jinja2@2.9:")
         depends_on("py-jupyter-server", when="@3:")
         depends_on("py-jupyter-server-mathjax@0.2.2:", when="@3.0.0:3,4.0.0-alpha1:")
         depends_on("py-nbformat")
-        depends_on("py-notebook", when="@0.4:2")
-        depends_on("py-pygments", when="@1.0.6:")
+        depends_on("py-pygments")
         depends_on("py-requests")
         depends_on("py-tornado")
     # END DEPENDENCIES

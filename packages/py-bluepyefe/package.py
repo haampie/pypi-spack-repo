@@ -15,14 +15,16 @@ class PyBluepyefe(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-efel", when="@0.3.123:0,2.1.26:")
-        depends_on("py-h5py", when="@2.1.26:")
-        depends_on("py-igor", when="@0.3.123:0,2.1.26:2.2.25")
+        depends_on("python@3.8:", when="@2.2.30:")
+        depends_on("python@3.7:", when="@:2.2.25")
+        depends_on("py-efel")
+        depends_on("py-h5py")
+        depends_on("py-igor", when="@:2.2.25")
         depends_on("py-igor2", when="@2.2.30:")
-        depends_on("py-matplotlib", when="@0.3.123:0,2.1.26:")
-        depends_on("py-neo", when="@0.3.123:0,2.1.26:")
+        depends_on("py-matplotlib")
+        depends_on("py-neo")
         depends_on("py-numpy@:1.23", when="@2.2.11:2.2.25")
-        depends_on("py-numpy", when="@0.4.7:0,2.1.26:2.2.2,2.2.30:")
-        depends_on("py-scipy", when="@0.3.123:0,2.1.26:")
+        depends_on("py-numpy", when="@:2.2.2,2.2.30:")
+        depends_on("py-scipy")
     # END DEPENDENCIES
 

@@ -13,11 +13,11 @@ class PyOpenpmdViewer(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("backend", default=False)
-    variant("jupyter", default=False)
-    variant("numba", default=False)
-    variant("plot", default=False)
-    variant("tutorials", default=False)
+    variant("backend", default=False, description="backend")
+    variant("jupyter", default=False, description="jupyter")
+    variant("numba", default=False, description="numba")
+    variant("plot", default=False, description="plot")
+    variant("tutorials", default=False, description="tutorials")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -26,8 +26,7 @@ class PyOpenpmdViewer(PythonPackage):
         depends_on("py-ipympl", when="@1.3:+tutorials")
         depends_on("py-ipywidgets", when="@0.8:+tutorials")
         depends_on("py-matplotlib", when="@0.8:+tutorials")
-        depends_on("py-matplotlib", when="@0.7:+plot")
-        depends_on("py-matplotlib", when="@:0.6")
+        depends_on("py-matplotlib", when="+plot")
         depends_on("py-numba", when="@1.3:+numba")
         depends_on("py-numpy@1.15.0:1", when="@1.2:")
         depends_on("py-scipy")

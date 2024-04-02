@@ -22,16 +22,17 @@ class PyGoogleCloudStorage(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.1:")
         depends_on("py-google-api-core@1.31.5:1,2.3.1:", when="@2.2:2.14")
         depends_on("py-google-auth@2.23.3:", when="@2.12:2.14")
         depends_on("py-google-auth@1.25:", when="@1.42:2.11")
-        depends_on("py-google-auth@1.2:", when="@1.7,1.16:1.23")
+        depends_on("py-google-auth@1.2:", when="@1.16:1.23")
         depends_on("py-google-cloud-core@2.3:", when="@2.3:")
         depends_on("py-google-cloud-core@1", when="@1.16:1.18")
         depends_on("py-google-crc32c@1:", when="@2.12:")
         depends_on("py-google-resumable-media@2.6:", when="@2.11:")
         depends_on("py-google-resumable-media@2.3.2:", when="@2.2:2.10")
-        depends_on("py-google-resumable-media@0.3.1:", when="@1.6:1.11.0,1.12:1.12.0,1.13:1.13.2,1.14:1.14.0,1.15:1.15.1,1.16:1.16.1,1.17:1.17.0,1.18:1.18.0,1.19:1.19.0")
+        depends_on("py-google-resumable-media@0.3.1:", when="@:1.14.0,1.15:1.15.1,1.16:1.16.1,1.17:1.17.0,1.18:1.18.0,1.19:1.19.0")
         depends_on("py-requests@2.18:", when="@1.31.1:")
     # END DEPENDENCIES
 

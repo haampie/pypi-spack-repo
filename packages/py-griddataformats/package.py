@@ -14,7 +14,7 @@ class PyGriddataformats(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.0.2:")
+        depends_on("python@3.8:", when="@1.0.1")
         depends_on("py-mrcfile", when="@0.7:")
         depends_on("py-numpy@1.19.0:", when="@1:1.0.1")
         depends_on("py-scipy", when="@0.4.1:")

@@ -24,5 +24,8 @@ class PyAsgiref(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.5:3.7")
+        depends_on("py-typing-extensions", when="@3.3.2:3.6 ^python@:3.7")
     # END DEPENDENCIES
 

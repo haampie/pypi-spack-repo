@@ -15,7 +15,7 @@ class PyTempora(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-jaraco-functools@1.20:", when="@1.13:5.1,5.2.1:")
-        depends_on("py-pytz", when="@1.6:")
-        depends_on("py-six", when="@1.6:1")
+        depends_on("py-pytz")
+        depends_on("py-six", when="@:1")
     # END DEPENDENCIES
 

@@ -14,7 +14,7 @@ class PyEnumTools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pygments@2.6.1:", when="@0.2:")
-        depends_on("py-typing-extensions@3.7.4.3:", when="@0.2.1:")
+        depends_on("py-pygments@2.6.1:")
+        depends_on("py-typing-extensions@3.7.4.3:")
     # END DEPENDENCIES
 

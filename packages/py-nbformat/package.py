@@ -22,7 +22,9 @@ class PyNbformat(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5.2:5.8")
         depends_on("py-fastjsonschema", when="@5.3:")
+        depends_on("py-importlib-metadata@3.6:", when="@5.6.1:5.8 ^python@:3.7")
         depends_on("py-ipython-genutils", when="@4.1:5.1")
         depends_on("py-jsonschema@2.6:", when="@5.3:")
         depends_on("py-jsonschema@2.4,2.5.1:", when="@4.2:5.2")

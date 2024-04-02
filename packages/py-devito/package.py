@@ -11,8 +11,8 @@ class PyDevito(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("mpi", default=False)
-    variant("optional", default=False)
+    variant("mpi", default=False, description="mpi")
+    variant("optional", default=False, description="optional")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
@@ -28,7 +28,7 @@ class PyDevito(PythonPackage):
         depends_on("py-mpi4py", when="@4.7:4.8.2+mpi")
         depends_on("py-multidict")
         depends_on("py-nbval", when="@:4.8.1")
-        depends_on("py-numpy@1.16.1:", when="@4.2.3:")
+        depends_on("py-numpy@1.16.1:")
         depends_on("py-pip@9.0.1:")
         depends_on("py-psutil@5.1:", when="@4.6.1:")
         depends_on("py-py-cpuinfo", when="@4.8:")

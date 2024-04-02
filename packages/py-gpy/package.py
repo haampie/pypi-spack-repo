@@ -13,12 +13,11 @@ class PyGpy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("plotting", default=False)
+    variant("plotting", default=False, description="plotting")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.13:")
         depends_on("py-matplotlib@3.0.0:", when="@1.9.6:1.9+plotting")
         depends_on("py-numpy@1.7:", when="@1.0.1:1.0.6,1.2:1.8.3,1.8.5:1.9")
         depends_on("py-paramz@0.9:", when="@1.9")

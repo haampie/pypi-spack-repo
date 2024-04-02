@@ -11,7 +11,7 @@ class PyPubchempy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("pandas", default=False)
+    variant("pandas", default=False, description="pandas")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

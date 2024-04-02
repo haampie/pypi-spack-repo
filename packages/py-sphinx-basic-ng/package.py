@@ -14,6 +14,7 @@ class PySphinxBasicNg(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.0.1-alpha11:")
         depends_on("py-sphinx@4.0.0:", when="@1:")
     # END DEPENDENCIES
 

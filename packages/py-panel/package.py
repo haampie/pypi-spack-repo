@@ -14,18 +14,16 @@ class PyPanel(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.3.0-beta1:")
-        depends_on("py-bleach", when="@0.12:")
-        depends_on("py-bokeh@2.4.0:2.4.0.0,2.4.1-rc1:2", when="@0.12.2-rc1:0.12,0.13.0-alpha6:0")
-        depends_on("py-markdown", when="@0.3:0.10.0-alpha4,0.10.0-alpha6:0.10.0-alpha7,0.10.0-alpha9,0.10.0-alpha11,0.10.0-alpha17:")
-        depends_on("py-markdown-it-py", when="@1.0.0-beta17:1.1.0-rc1,1.2:")
-        depends_on("py-param@1.12.0:", when="@0.13.0-alpha10:1.2")
-        depends_on("py-param@1.9.2:", when="@0.8.1:0.9.3")
-        depends_on("py-pyct@0.4.4:", when="@0.3.1:0.10.0-alpha4,0.10.0-alpha6:0.10.0-alpha7,0.10.0-alpha9,0.10.0-alpha11,0.10.0-alpha17:1.0.0-beta16")
-        depends_on("py-pyviz-comms@0.7.4:", when="@0.9.1:0.10.0-alpha4,0.10.0-alpha6:0.10.0-alpha7,0.10.0-alpha9,0.10.0-alpha11,0.10.0-alpha17:1.3.1")
-        depends_on("py-requests", when="@0.10.1:")
-        depends_on("py-setuptools@42:", when="@0.14.2-rc2:1.0.2")
-        depends_on("py-tqdm@4.48:", when="@0.12.1-rc1:")
-        depends_on("py-typing-extensions", when="@0.13.1-alpha7:")
+        depends_on("python@3.7:", when="@:0")
+        depends_on("py-bleach")
+        depends_on("py-bokeh@2.4.0:2.4.0.0,2.4.1-rc1:2", when="@:0")
+        depends_on("py-markdown")
+        depends_on("py-param@1.12.0:", when="@:1.2")
+        depends_on("py-pyct@0.4.4:", when="@:1.0.0-beta16")
+        depends_on("py-pyviz-comms@0.7.4:", when="@:1.3.1")
+        depends_on("py-requests")
+        depends_on("py-setuptools@42:", when="@:1.0.2")
+        depends_on("py-tqdm@4.48:")
+        depends_on("py-typing-extensions")
     # END DEPENDENCIES
 

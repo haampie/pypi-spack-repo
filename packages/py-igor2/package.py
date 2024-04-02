@@ -14,6 +14,7 @@ class PyIgor2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:3")
         depends_on("py-numpy@1.25.1:", when="@0.5.3:")
     # END DEPENDENCIES
 

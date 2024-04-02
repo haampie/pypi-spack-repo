@@ -18,5 +18,8 @@ class PyTornado(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@6.3-beta1:")
+        depends_on("python@3.7:", when="@6.2-beta1:6.2")
     # END DEPENDENCIES
 

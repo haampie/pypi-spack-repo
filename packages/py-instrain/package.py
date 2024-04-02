@@ -12,7 +12,7 @@ class PyInstrain(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("prodigal", default=False)
+    variant("prodigal", default=False, description="prodigal")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

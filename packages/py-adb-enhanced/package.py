@@ -15,9 +15,9 @@ class PyAdbEnhanced(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-asyncio", when="@:0,2.2:2.5.4")
-        depends_on("py-docopt", when="@:0,1.7.2:")
-        depends_on("py-future", when="@:0,1.8:2.5.4")
-        depends_on("py-psutil", when="@:0,1.9:")
+        depends_on("py-asyncio", when="@2.2:2.5.4")
+        depends_on("py-docopt")
+        depends_on("py-future", when="@:2.5.4")
+        depends_on("py-psutil")
     # END DEPENDENCIES
 

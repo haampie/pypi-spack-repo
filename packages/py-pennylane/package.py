@@ -17,24 +17,24 @@ class PyPennylane(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-appdirs", when="@:0.3,0.5:0.14.0,0.15:")
+        depends_on("py-appdirs")
         depends_on("py-autograd@:1.5", when="@0.31:0.32")
-        depends_on("py-autograd", when="@:0.3,0.5:0.14.0,0.15:0.30,0.33:")
+        depends_on("py-autograd", when="@:0.30,0.33:")
         depends_on("py-autoray@0.3:", when="@0.23.1:0.31.0,0.32")
-        depends_on("py-cachetools", when="@0.18:")
-        depends_on("py-networkx", when="@0.5:0.14.0,0.15:")
+        depends_on("py-cachetools")
+        depends_on("py-networkx")
         depends_on("py-numpy@:1.23", when="@0.28:0.32")
         depends_on("py-pennylane-lightning@0.32:", when="@0.32")
         depends_on("py-pennylane-lightning@0.31:", when="@0.31")
         depends_on("py-pennylane-lightning@0.30:", when="@0.30")
         depends_on("py-pennylane-lightning@0.28:", when="@0.28:0.29")
         depends_on("py-requests", when="@0.27:")
-        depends_on("py-retworkx", when="@0.21:0.29")
+        depends_on("py-retworkx", when="@:0.29")
         depends_on("py-rustworkx", when="@0.30:")
         depends_on("py-scipy@:1.10.0", when="@0.31:0.31.0")
-        depends_on("py-scipy", when="@:0.3,0.5:0.14.0,0.15:0.30,0.31.1:")
+        depends_on("py-scipy", when="@:0.30,0.31.1:")
         depends_on("py-semantic-version@2.7:", when="@0.25:")
-        depends_on("py-toml", when="@:0.3,0.5:0.14.0,0.15:")
+        depends_on("py-toml")
         depends_on("py-typing-extensions", when="@0.31.1:")
     # END DEPENDENCIES
 

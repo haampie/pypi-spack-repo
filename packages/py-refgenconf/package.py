@@ -14,11 +14,11 @@ class PyRefgenconf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-future", when="@0.8:0.9.1,0.10:")
+        depends_on("py-future", when="@:0.9.1,0.10:")
         depends_on("py-jsonschema@3.0.1:", when="@0.10:")
         depends_on("py-pyfaidx", when="@0.9.1:")
-        depends_on("py-pyyaml", when="@0.8:")
-        depends_on("py-requests", when="@0.8:")
+        depends_on("py-pyyaml")
+        depends_on("py-requests")
         depends_on("py-rich@9.0.1:", when="@0.10:")
         depends_on("py-tqdm", when="@0.12.1:")
         depends_on("py-yacman@0.8.3:", when="@0.12.2:")

@@ -15,7 +15,7 @@ class PyMkdocsJupyter(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.24.4:")
+        depends_on("python@3.7:3", when="@0.17.4:0.22")
         depends_on("py-jupytext@1.13.8:", when="@0.21:0.22")
         depends_on("py-jupytext@1.11.2:", when="@0.18.1:0.20")
         depends_on("py-mkdocs@1.2.3:", when="@0.19:0.22")

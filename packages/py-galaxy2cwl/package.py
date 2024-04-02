@@ -14,6 +14,7 @@ class PyGalaxy2cwl(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3")
         depends_on("py-gxformat2@0.11:")
         depends_on("py-pyyaml@5.3:")
     # END DEPENDENCIES

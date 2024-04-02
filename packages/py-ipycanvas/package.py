@@ -16,7 +16,7 @@ class PyIpycanvas(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-ipywidgets@7.6.0:", when="@0.8.1:0.12.0")
-        depends_on("py-numpy", when="@0.2.1:")
-        depends_on("py-pillow@6:", when="@0.4:")
+        depends_on("py-numpy")
+        depends_on("py-pillow@6:")
     # END DEPENDENCIES
 

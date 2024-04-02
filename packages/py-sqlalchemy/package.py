@@ -22,9 +22,11 @@ class PySqlalchemy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("backend", default=False)
+    variant("backend", default=False, description="backend")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2:")
     # END DEPENDENCIES
 

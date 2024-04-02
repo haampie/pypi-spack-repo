@@ -15,7 +15,5 @@ class PyNetket(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("python@3.9:", when="@3.10:")
     # END DEPENDENCIES
 

@@ -14,8 +14,9 @@ class PyDomdfPythonTools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-importlib-metadata@3.6:", when="@3: ^python@:3.8")
-        depends_on("py-natsort@7.0.1:", when="@3:")
-        depends_on("py-typing-extensions@3.7.4.1:", when="@3:")
+        depends_on("py-importlib-metadata@3.6:", when="^python@:3.8")
+        depends_on("py-importlib-resources@3:", when="^python@:3.6")
+        depends_on("py-natsort@7.0.1:")
+        depends_on("py-typing-extensions@3.7.4.1:")
     # END DEPENDENCIES
 

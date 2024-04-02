@@ -14,10 +14,11 @@ class PyFolium(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.15:")
         depends_on("py-branca@0.6:", when="@0.14:")
-        depends_on("py-jinja2@2.9:", when="@:0.0,0.9:")
-        depends_on("py-numpy", when="@:0.0,0.6:")
-        depends_on("py-requests", when="@:0.0,0.6:")
+        depends_on("py-jinja2@2.9:")
+        depends_on("py-numpy")
+        depends_on("py-requests")
         depends_on("py-xyzservices", when="@0.15.1:")
     # END DEPENDENCIES
 

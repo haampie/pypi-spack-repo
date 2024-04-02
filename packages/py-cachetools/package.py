@@ -16,5 +16,8 @@ class PyCachetools(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:3", when="@5:5.3.0")
+        depends_on("python@:3", when="@4")
     # END DEPENDENCIES
 

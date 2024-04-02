@@ -23,10 +23,11 @@ class PyAzureCore(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.25:")
         depends_on("py-requests@2.21:", when="@1.29.6:")
         depends_on("py-requests@2.18.4:", when="@:1.29.5")
         depends_on("py-six@1.11:", when="@1.11:")
-        depends_on("py-six@1.6:", when="@1.0.0-beta4:1.10")
+        depends_on("py-six@1.6:", when="@:1.10")
         depends_on("py-typing-extensions@4.6:", when="@1.29.2:")
         depends_on("py-typing-extensions@4.3:", when="@1.26.4:1.29.1")
         depends_on("py-typing-extensions@4.0.1:", when="@1.23:1.26.3")

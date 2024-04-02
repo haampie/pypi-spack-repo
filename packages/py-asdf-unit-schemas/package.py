@@ -14,6 +14,7 @@ class PyAsdfUnitSchemas(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:")
         depends_on("py-asdf-standard@1.0.1:", when="@:0.1")
         depends_on("py-importlib-resources@3:", when="@:0.1 ^python@:3.8")
     # END DEPENDENCIES

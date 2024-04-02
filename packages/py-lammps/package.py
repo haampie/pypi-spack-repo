@@ -5,6 +5,6 @@
 
 from spack.package import *
 
-class PyTfNightly(PythonPackage):
+class PyLammps(PythonPackage):
     # No versions available.
     pass

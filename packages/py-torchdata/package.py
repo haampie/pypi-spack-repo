@@ -14,6 +14,7 @@ class PyTorchdata(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@:0.1,0.3.0-alpha1:")
         depends_on("py-requests", when="@0.3:")
         depends_on("py-torch@1.11", when="@0.3.0:")
         depends_on("py-urllib3@1.25:", when="@0.3.0:")

@@ -21,10 +21,9 @@ class PyDjango(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@5:")
         depends_on("py-asgiref@3.2:", when="@3.0")
-        depends_on("py-pytz", when="@1.11-alpha1:3")
+        depends_on("py-pytz", when="@:3")
         depends_on("py-sqlparse@0.2.2:", when="@2.2.14:2,3.0-rc1:4.2-beta1")
-        depends_on("py-sqlparse", when="@2.2-alpha1:2.2.13,3:3.0-beta1")
+        depends_on("py-sqlparse", when="@:2.2.13,3:3.0-beta1")
     # END DEPENDENCIES
 

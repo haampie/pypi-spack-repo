@@ -15,7 +15,9 @@ class PyVector(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-importlib-metadata@0.22:", when="@0.8.2:1.0 ^python@:3.7")
         depends_on("py-numpy@1.13.3:", when="@0.8:")
         depends_on("py-packaging@19:", when="@0.8.2:")
+        depends_on("py-typing-extensions", when="@0.8:1.0 ^python@:3.7")
     # END DEPENDENCIES
 

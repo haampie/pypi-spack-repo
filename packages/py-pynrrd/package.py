@@ -14,8 +14,9 @@ class PyPynrrd(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1:")
         depends_on("py-nptyping", when="@1:")
-        depends_on("py-numpy@1.11.1:", when="@0.3:")
+        depends_on("py-numpy@1.11.1:")
         depends_on("py-typing-extensions", when="@1:")
     # END DEPENDENCIES
 

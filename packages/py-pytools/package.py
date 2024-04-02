@@ -15,9 +15,12 @@ class PyPytools(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("numpy", default=False)
+    variant("numpy", default=False, description="numpy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:3", when="@2022.1.13:")
+        depends_on("python@:3", when="@2020.3.1:2022.1.12")
     # END DEPENDENCIES
 

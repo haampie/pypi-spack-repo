@@ -15,6 +15,8 @@ class PyFuro(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2023.8.19:")
+        depends_on("python@3.7:", when="@2022.6:2023.8.17")
         depends_on("py-beautifulsoup4")
         depends_on("py-pygments@2.7:", when="@2022.9:")
         depends_on("py-sphinx@6.0.0:", when="@2023.5:")

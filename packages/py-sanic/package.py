@@ -14,20 +14,18 @@ class PySanic(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-aiofiles@0.3:", when="@0.5.4:20.9")
-        depends_on("py-httptools@0.0.10:", when="@18:")
+        depends_on("py-aiofiles@0.3:", when="@:20.9")
+        depends_on("py-httptools@0.0.10:")
         depends_on("py-httpx@0.11.1:0.11", when="@20:20.6")
-        depends_on("py-multidict@4", when="@0.8:19.12.2,20:20.9.0")
-        depends_on("py-ujson@1.35:", when="@0.8: platform=linux")
-        depends_on("py-ujson@1.35:", when="@0.8: platform=freebsd")
-        depends_on("py-ujson@1.35:", when="@0.8: platform=darwin")
-        depends_on("py-ujson@1.35:", when="@0.8: platform=cray")
-        depends_on("py-ujson@1.35:", when="@0.5.4:0.7")
-        depends_on("py-uvloop@0.5.3:", when="@0.8:19.12.4,20:20.12.1,20.12.4:22.9 platform=linux")
-        depends_on("py-uvloop@0.5.3:", when="@0.8:19.12.4,20:20.12.1,20.12.4:22.9 platform=freebsd")
-        depends_on("py-uvloop@0.5.3:", when="@0.8:19.12.4,20:20.12.1,20.12.4:22.9 platform=darwin")
-        depends_on("py-uvloop@0.5.3:", when="@0.8:19.12.4,20:20.12.1,20.12.4:22.9 platform=cray")
-        depends_on("py-uvloop@0.5.3:", when="@0.5.4:0.7")
+        depends_on("py-multidict@4", when="@:19.12.2,20:20.9.0")
+        depends_on("py-ujson@1.35:", when="platform=linux")
+        depends_on("py-ujson@1.35:", when="platform=freebsd")
+        depends_on("py-ujson@1.35:", when="platform=darwin")
+        depends_on("py-ujson@1.35:", when="platform=cray")
+        depends_on("py-uvloop@0.5.3:", when="@:19.12.4,20:20.12.1,20.12.4:22.9 platform=linux")
+        depends_on("py-uvloop@0.5.3:", when="@:19.12.4,20:20.12.1,20.12.4:22.9 platform=freebsd")
+        depends_on("py-uvloop@0.5.3:", when="@:19.12.4,20:20.12.1,20.12.4:22.9 platform=darwin")
+        depends_on("py-uvloop@0.5.3:", when="@:19.12.4,20:20.12.1,20.12.4:22.9 platform=cray")
         depends_on("py-websockets@8.1:8", when="@20.6:20.12.4,21:21.3")
     # END DEPENDENCIES
 

@@ -11,7 +11,7 @@ class PyOracledb(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("impl", default=False)
+    variant("impl", default=False, description="impl")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

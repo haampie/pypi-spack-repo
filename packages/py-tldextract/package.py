@@ -15,9 +15,11 @@ class PyTldextract(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-filelock@3.0.8:", when="@3:")
-        depends_on("py-idna", when="@2.2.1:")
-        depends_on("py-requests@2.1:", when="@2.2.1:")
-        depends_on("py-requests-file@1.4:", when="@2.2.1:")
+        depends_on("python@3.8:", when="@5:")
+        depends_on("python@3.7:", when="@3.2:4")
+        depends_on("py-filelock@3.0.8:")
+        depends_on("py-idna")
+        depends_on("py-requests@2.1:")
+        depends_on("py-requests-file@1.4:")
     # END DEPENDENCIES
 

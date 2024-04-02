@@ -14,7 +14,6 @@ class PyContextily(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.6:")
         depends_on("py-geopy", when="@1:")
         depends_on("py-joblib", when="@1.0-rc2:")
         depends_on("py-matplotlib", when="@1.0-rc2:")

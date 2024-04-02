@@ -15,12 +15,12 @@ class PyTorchmeta(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-h5py", when="@1.4.4:")
-        depends_on("py-numpy@1.14.0:", when="@1.1.0-rc2:")
+        depends_on("py-numpy@1.14.0:")
         depends_on("py-ordered-set", when="@1.4.5:")
-        depends_on("py-pillow@7:", when="@1.3.2:")
-        depends_on("py-requests", when="@1.1.1:")
+        depends_on("py-pillow@7:")
+        depends_on("py-requests")
         depends_on("py-torch@1.4:1.8", when="@1.7")
         depends_on("py-torchvision@0.5:0.9", when="@1.7")
-        depends_on("py-tqdm@4:", when="@1.1.0-rc2:")
+        depends_on("py-tqdm@4:")
     # END DEPENDENCIES
 

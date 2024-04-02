@@ -12,11 +12,12 @@ class PyPythonDotenv(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cli", default=False)
+    variant("cli", default=False, description="cli")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@5:", when="@0.10.3:0.10.4,0.11:+cli")
+        depends_on("python@3.8:", when="@1:")
+        depends_on("py-click@5:", when="+cli")
     # END DEPENDENCIES
 

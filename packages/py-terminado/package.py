@@ -20,9 +20,11 @@ class PyTerminado(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ptyprocess", when="@0.7")
+        depends_on("python@3.7:", when="@0.13.1:0.17")
         depends_on("py-tornado@6.1:", when="@0.15:")
         depends_on("py-tornado@4:", when="@0.7:0.13")
+    # END DEPENDENCIES
+
 
         # marker: os_name != "nt"
         # depends_on("py-ptyprocess", when="@0.8:")
@@ -30,5 +32,3 @@ class PyTerminado(PythonPackage):
         # marker: os_name == "nt"
         # depends_on("py-pywinpty@1.1:", when="@0.10:")
         # depends_on("py-pywinpty@0.5:", when="@0.8.1:0.9.4")
-    # END DEPENDENCIES
-

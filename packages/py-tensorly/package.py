@@ -14,7 +14,7 @@ class PyTensorly(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy", when="@0.1.6:0.4.3,0.6:")
-        depends_on("py-scipy", when="@0.1.6:0.4.3,0.6:")
+        depends_on("py-numpy", when="@:0.4.3,0.6:")
+        depends_on("py-scipy", when="@:0.4.3,0.6:")
     # END DEPENDENCIES
 

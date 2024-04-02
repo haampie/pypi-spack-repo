@@ -14,6 +14,7 @@ class PyCmaes(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.9.1:")
         depends_on("py-numpy", when="@:0.7.0,0.8.1:")
     # END DEPENDENCIES
 

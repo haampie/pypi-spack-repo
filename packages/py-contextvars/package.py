@@ -5,9 +5,9 @@
 
 from spack.package import *
 
-class PyLevenshtein(PythonPackage):
+class PyContextvars(PythonPackage):
     # BEGIN VERSIONS
-    version("0.20.2", sha256="e1528eb56d74146582aa4180a71c8808f0428fa0e08812c39923cac97faf414a", url="https://pypi.org/packages/e2/ab/968a332d8ace90277debda7517520c770c2aa140d35469fc1ffa6d24b388/Levenshtein-0.20.2.tar.gz")
+    version("2.4", sha256="f38c908aaa59c14335eeea12abea5f443646216c4e29380d7bf34d2018e2c39e", url="https://pypi.org/packages/83/96/55b82d9f13763be9d672622e1b8106c85acb83edd7cc2fa5bc67cd9877e9/contextvars-2.4.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS

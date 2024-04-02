@@ -14,6 +14,7 @@ class PyJupyterEvents(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@:0.6")
         depends_on("py-jsonschema@3.2:+format-nongpl", when="@0.6.1:0.6")
         depends_on("py-python-json-logger@2.0.4:", when="@0.6:")
         depends_on("py-pyyaml@5.3:", when="@0.6.2:")

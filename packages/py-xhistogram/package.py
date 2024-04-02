@@ -14,6 +14,7 @@ class PyXhistogram(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.2:")
         depends_on("py-dask@2.3:+array", when="@0.3.2:")
         depends_on("py-numpy@1.17.0:", when="@0.3:")
         depends_on("py-xarray@0.12:")

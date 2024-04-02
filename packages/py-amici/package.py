@@ -12,12 +12,12 @@ class PyAmici(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("boost", default=False)
-    variant("hdf5", default=False)
+    variant("boost", default=False, description="boost")
+    variant("hdf5", default=False, description="hdf5")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.17:")
+        depends_on("python@3.8:", when="@0.11.24:0.16")
     # END DEPENDENCIES
 

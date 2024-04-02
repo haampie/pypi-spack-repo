@@ -12,24 +12,20 @@ class PyHist(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("plot", default=False)
+    variant("plot", default=False, description="plot")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.5:")
         depends_on("py-boost-histogram@1.3.1:1.3", when="@2.6:2.7.1")
         depends_on("py-boost-histogram@1.2", when="@2.5")
         depends_on("py-histoprint@2.2:", when="@2.5:")
-        depends_on("py-iminuit@2:", when="@2.6.2:2.6+plot ^python@:3.10")
         depends_on("py-iminuit@2:", when="@2.3:2.6.1,2.7:2.7.0+plot")
-        depends_on("py-matplotlib@3.0.0:", when="@2.0.0:+plot")
+        depends_on("py-matplotlib@3.0.0:", when="+plot")
         depends_on("py-mplhep@0.2.16:", when="@2.1:+plot")
-        depends_on("py-numpy@1.14.5:", when="@2.7.2: ^python@:3.11")
         depends_on("py-numpy@1.14.5:", when="@2.5:2.7.1")
-        depends_on("py-scipy@1.4.0:", when="@2.6.2:2.6+plot ^python@:3.10")
-        depends_on("py-scipy@1.4.0:", when="@2.0.0:2.6.1,2.7:2.7.0+plot")
-        depends_on("py-scipy@1.4.0:", when="@2.0.0-alpha4:2.0.0-beta1")
-        depends_on("py-uncertainties@3:", when="@2.0.0:2.2+plot")
-        depends_on("py-uncertainties@3:", when="@2:2.0.0-beta1")
+        depends_on("py-scipy@1.4.0:", when="@:2.6.1,2.7:2.7.0+plot")
+        depends_on("py-typing-extensions@3.7:", when="@2.5.2:2.6 ^python@:3.7")
     # END DEPENDENCIES
 

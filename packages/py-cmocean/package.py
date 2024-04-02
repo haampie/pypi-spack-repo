@@ -15,6 +15,7 @@ class PyCmocean(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@3:")
         depends_on("py-matplotlib", when="@3:")
         depends_on("py-numpy", when="@3:")
         depends_on("py-packaging", when="@3:")

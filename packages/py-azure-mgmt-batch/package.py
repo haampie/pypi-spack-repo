@@ -19,6 +19,7 @@ class PyAzureMgmtBatch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@17:")
         depends_on("py-azure-common@1.1:", when="@5:")
         depends_on("py-azure-mgmt-core@1.3.2:", when="@17:")
         depends_on("py-azure-mgmt-core@1.3.0:", when="@16.1:16")
@@ -27,5 +28,6 @@ class PyAzureMgmtBatch(PythonPackage):
         depends_on("py-msrest@0.6.21:", when="@16")
         depends_on("py-msrest@0.5:", when="@6:15")
         depends_on("py-msrestazure@0.4.32:", when="@6:10")
+        depends_on("py-typing-extensions@4.3:", when="@17: ^python@:3.7")
     # END DEPENDENCIES
 

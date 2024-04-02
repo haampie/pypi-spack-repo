@@ -14,6 +14,7 @@ class PyQiskitIbmProvider(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@:0.5.2")
         depends_on("py-numpy@1.13.0:")
         depends_on("py-python-dateutil@2.8:")
         depends_on("py-qiskit-terra@0.23.1:", when="@0.3:0.5.2")

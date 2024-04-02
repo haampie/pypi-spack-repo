@@ -14,11 +14,11 @@ class PyGravity(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click", when="@0.9:")
+        depends_on("py-click")
         depends_on("py-jsonref", when="@0.11:")
         depends_on("py-pydantic", when="@0.11:1.0.3")
-        depends_on("py-pyyaml", when="@0.9:")
-        depends_on("py-ruamel-yaml", when="@0.9:0")
+        depends_on("py-pyyaml")
+        depends_on("py-ruamel-yaml", when="@:0")
         depends_on("py-supervisor")
     # END DEPENDENCIES
 

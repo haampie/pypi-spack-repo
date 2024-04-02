@@ -13,5 +13,7 @@ class PyOpencensusContext(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-contextvars", when="^python@:3.6")
     # END DEPENDENCIES
 

@@ -24,13 +24,16 @@ class PyUrllib3(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("brotli", default=False)
-    variant("secure", default=False)
-    variant("socks", default=False)
+    variant("brotli", default=False, description="brotli")
+    variant("secure", default=False, description="secure")
+    variant("socks", default=False, description="socks")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2.1:")
+        depends_on("python@3.7:", when="@2:2.0")
+        depends_on("python@:3", when="@1.23:1.26.12")
         depends_on("py-brotli@1.0.9:", when="@1.26.9:+brotli")
         depends_on("py-brotlipy@0.6:", when="@1.25:1.26.8+brotli")
         depends_on("py-certifi", when="@1.13:2.0+secure")
@@ -42,11 +45,5 @@ class PyUrllib3(PythonPackage):
         depends_on("py-pyopenssl@0.14:", when="@1.24:1.24.1,1.24.3:2.0.0-alpha1+secure")
         depends_on("py-pysocks@1.5.6,1.6:", when="@1.17:+socks")
         depends_on("py-urllib3-secure-extra", when="@1.26.12:2.0+secure")
-
-        # marker: extra == "secure;python-version<="2-7""
-        # depends_on("py-certifi", when="@1.11:1.12")
-
-        # marker: extra == "secure;python-version>"2-7""
-        # depends_on("py-certifi", when="@1.11:1.12")
     # END DEPENDENCIES
 

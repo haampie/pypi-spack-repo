@@ -14,13 +14,13 @@ class PyPydataSphinxTheme(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.15:")
-        depends_on("py-accessible-pygments", when="@0.13:")
+        depends_on("python@3.8:", when="@0.14")
+        depends_on("py-accessible-pygments")
         depends_on("py-babel", when="@0.13.0-rc5:")
-        depends_on("py-beautifulsoup4", when="@0.5:")
-        depends_on("py-docutils@:0.17-beta1,0.17.1-beta1:", when="@0.7:")
-        depends_on("py-packaging", when="@0.8.1:")
-        depends_on("py-pygments@2.7:", when="@0.10:")
+        depends_on("py-beautifulsoup4")
+        depends_on("py-docutils@:0.17-beta1,0.17.1-beta1:")
+        depends_on("py-packaging")
+        depends_on("py-pygments@2.7:")
         depends_on("py-sphinx@5.0.0:", when="@0.14:")
         depends_on("py-typing-extensions", when="@0.13.3:")
     # END DEPENDENCIES

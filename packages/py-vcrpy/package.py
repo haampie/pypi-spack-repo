@@ -16,10 +16,12 @@ class PyVcrpy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-pyyaml", when="@1.13:5")
-        depends_on("py-six@1.5:", when="@1.13:5.0")
+        depends_on("python@3.8:", when="@5:")
+        depends_on("python@3.7:", when="@4.2:4")
+        depends_on("py-pyyaml", when="@:5")
+        depends_on("py-six@1.5:", when="@:5.0")
         depends_on("py-urllib3@:1", when="@4.3.1:5 ^python@:3.9")
-        depends_on("py-wrapt", when="@1.13:5")
-        depends_on("py-yarl", when="@1.13:5")
+        depends_on("py-wrapt", when="@:5")
+        depends_on("py-yarl", when="@:5")
     # END DEPENDENCIES
 

@@ -21,5 +21,6 @@ class PyArrow(PythonPackage):
     with default_args(type="run"):
         depends_on("py-python-dateutil@2.7:", when="@0.16:")
         depends_on("py-python-dateutil", when="@0.14.3:0.15")
+        depends_on("py-typing-extensions", when="@1:1.2 ^python@:3.7")
     # END DEPENDENCIES
 

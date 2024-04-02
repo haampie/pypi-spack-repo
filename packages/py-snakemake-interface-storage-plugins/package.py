@@ -14,11 +14,10 @@ class PySnakemakeInterfaceStoragePlugins(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:", when="@1.2:")
-        depends_on("python@3.9:", when="@:1.1")
+        depends_on("python@3.11:3", when="@1.2:")
         depends_on("py-reretry@0.11.8:")
         depends_on("py-snakemake-interface-common@1.12:", when="@1.2:")
-        depends_on("py-throttler@1.2.2:", when="@1.1:")
+        depends_on("py-throttler@1.2.2:")
         depends_on("py-wrapt@1.15.0:")
     # END DEPENDENCIES
 

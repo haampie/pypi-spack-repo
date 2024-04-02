@@ -15,5 +15,7 @@ class PyJupyterlabWidgets(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.0.0-beta1:")
     # END DEPENDENCIES
 

@@ -22,6 +22,8 @@ class PyPybids(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@0.16:")
+        depends_on("python@3.7:", when="@0.15")
         depends_on("py-bids-validator@1.11:", when="@0.16:")
         depends_on("py-bids-validator", when="@0.9.4:0.15")
         depends_on("py-click@8.0.0:", when="@0.15.2:")

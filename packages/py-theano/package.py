@@ -15,8 +15,8 @@ class PyTheano(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cuda", default=False)
-    variant("cuda_arch", default=False)
+    variant("cuda", default=False, description="cuda")
+    variant("cuda_arch", default=False, description="cuda_arch")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

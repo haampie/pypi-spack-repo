@@ -17,6 +17,7 @@ class PyPartd(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.3:")
         depends_on("py-locket", when="@0.3.3,0.3.5,0.3.7:")
         depends_on("py-toolz", when="@0.3.3,0.3.5,0.3.7:")
     # END DEPENDENCIES

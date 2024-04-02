@@ -23,7 +23,7 @@ class PyNumexpr(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.8.7:")
+        depends_on("python@3.7:", when="@2.8.2:2.8.6")
         depends_on("py-numpy@1.7:", when="@2.6.4:2.6.6.0,2.6.7,2.6.9:2.7.1")
     # END DEPENDENCIES
 

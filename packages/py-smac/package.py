@@ -14,6 +14,7 @@ class PySmac(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.14:1.2,1.3.1:1")
         depends_on("py-configspace@0.4.14:0.4", when="@0.14:1.1")
         depends_on("py-dask", when="@0.14:1.1")
         depends_on("py-distributed", when="@0.14:1.1")

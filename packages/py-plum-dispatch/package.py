@@ -14,7 +14,8 @@ class PyPlumDispatch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2.2:")
         depends_on("py-beartype@0.16.2:", when="@2.2.2:")
-        depends_on("py-typing-extensions", when="@2.2: ^python@:3.10.0")
+        depends_on("py-typing-extensions", when="@2.2: ^python@:3.9")
     # END DEPENDENCIES
 

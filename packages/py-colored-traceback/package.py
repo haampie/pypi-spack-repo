@@ -6,8 +6,8 @@
 from spack.package import *
 
 class PyColoredTraceback(PythonPackage):
-    # BEGIN VERSIONS [WHEEL ONLY]
-    version("0.3.0", sha256="f76c21a4b4c72e9e09763d4d1b234afc469c88693152a763ad6786467ef9e79f", url="https://pypi.org/packages/68/95/d9b20efe099fff830502c6c7b83da4f1cdfd3346922d87da9bca3e63f897/colored_traceback-0.3.0-py2-none-any.whl")
+    # BEGIN VERSIONS
+    version("0.3.0", sha256="6da7ce2b1da869f6bb54c927b415b95727c4bb6d9a84c4615ea77d9872911b05", url="https://pypi.org/packages/9a/8b/0a4e2a8cdc14279b265532f11c9cb75396880e6295c99a0bed7281b6076a/colored-traceback-0.3.0.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS

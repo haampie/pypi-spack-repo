@@ -19,10 +19,11 @@ class PyCleo(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:3", when="@1.0.0-alpha5:")
         depends_on("py-clikit@0.6:", when="@0.8.1:0")
         depends_on("py-crashtest@0.4.1:", when="@1.0.0:")
         depends_on("py-crashtest@0.3.1:0.3", when="@1:1.0.0-alpha5")
-        depends_on("py-pylev@1.3:", when="@0.6.4-beta1:0.7.4,1:1.0.0-alpha5")
+        depends_on("py-pylev@1.3:", when="@:0.7.4,1:1.0.0-alpha5")
         depends_on("py-rapidfuzz@3:", when="@2.1:")
         depends_on("py-rapidfuzz@2.2:2", when="@1.0.0:2.0")
     # END DEPENDENCIES

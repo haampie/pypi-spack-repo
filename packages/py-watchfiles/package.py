@@ -14,7 +14,7 @@ class PyWatchfiles(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@0.0.1:0.0.2,0.0.8:0.0")
+        depends_on("python@3.7:", when="@:0.20")
         depends_on("py-anyio@3.0.0:", when="@0.18.1:")
     # END DEPENDENCIES
 

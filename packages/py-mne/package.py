@@ -18,16 +18,17 @@ class PyMne(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("full", default=False)
-    variant("hdf5", default=False)
+    variant("full", default=False, description="full")
+    variant("hdf5", default=False, description="hdf5")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.4:")
+        depends_on("python@3.7:", when="@0.24:1.3")
         depends_on("py-darkdetect", when="@1.6:+full")
         depends_on("py-decorator", when="@1:1.0.0,1.0.2:")
         depends_on("py-defusedxml", when="@1.6.1:+full")
-        depends_on("py-defusedxml", when="@1.6:1.6.0")
         depends_on("py-dipy", when="@1.6:+full")
         depends_on("py-edflib-python", when="@1.6.1:+full")
         depends_on("py-eeglabio", when="@1.6.1:+full")
@@ -84,8 +85,8 @@ class PyMne(PythonPackage):
         depends_on("py-trame-vuetify", when="@1.6:+full")
         depends_on("py-vtk", when="@1.6:+full")
         depends_on("py-xlrd", when="@1.6:+full")
+    # END DEPENDENCIES
+
 
         # self-dependency
         # depends_on("py-mne+hdf5", when="@1.6:+full")
-    # END DEPENDENCIES
-

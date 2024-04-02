@@ -16,7 +16,8 @@ class PyBotorch(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.9:")
+        depends_on("python@3.8:", when="@0.7:0.8")
+        depends_on("python@3.7:", when="@:0.6")
         depends_on("py-gpytorch@1.10", when="@0.8.4:0.8")
         depends_on("py-gpytorch@1.9.1:1.9", when="@0.8.1:0.8.3")
         depends_on("py-gpytorch@1.6:", when="@0.6:0.6.4")

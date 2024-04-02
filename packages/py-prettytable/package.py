@@ -19,6 +19,8 @@ class PyPrettytable(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3:3.7")
+        depends_on("py-importlib-metadata", when="@2.1:3.7 ^python@:3.7")
         depends_on("py-wcwidth", when="@1:")
     # END DEPENDENCIES
 

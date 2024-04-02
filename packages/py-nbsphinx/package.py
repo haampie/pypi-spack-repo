@@ -19,9 +19,9 @@ class PyNbsphinx(PythonPackage):
     with default_args(type="run"):
         depends_on("py-docutils")
         depends_on("py-jinja2", when="@:0.8.4,0.8.6:")
-        depends_on("py-nbconvert@:5.3,5.4.1:", when="@0.3.5:")
+        depends_on("py-nbconvert@:5.3,5.4.1:")
         depends_on("py-nbformat")
         depends_on("py-sphinx@1.8.0:", when="@0.5:")
-        depends_on("py-traitlets", when="@0.2.10:0.8.8")
+        depends_on("py-traitlets", when="@:0.8.8")
     # END DEPENDENCIES
 

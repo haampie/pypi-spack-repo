@@ -14,7 +14,8 @@ class PySnakemakeInterfaceCommon(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-argparse-dataclass@2:", when="@1.4:")
-        depends_on("py-configargparse@1.7:", when="@1.9.2:")
+        depends_on("python@3.8:3")
+        depends_on("py-argparse-dataclass@2:")
+        depends_on("py-configargparse@1.7:")
     # END DEPENDENCIES
 

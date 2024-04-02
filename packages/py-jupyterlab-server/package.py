@@ -18,6 +18,7 @@ class PyJupyterlabServer(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.11:2.24")
         depends_on("py-babel@2.10:", when="@2.16.4:")
         depends_on("py-babel", when="@1.3:2.16.3")
         depends_on("py-entrypoints@0.2.2:", when="@2.7:2.12")
@@ -27,10 +28,10 @@ class PyJupyterlabServer(PythonPackage):
         depends_on("py-json5@0.9:", when="@2.16.4:")
         depends_on("py-json5", when="@1.0.0:2.16.3")
         depends_on("py-jsonschema@4.17.3:", when="@2.17:2.24")
-        depends_on("py-jsonschema@3.0.1:", when="@0.3.4:2.16")
+        depends_on("py-jsonschema@3.0.1:", when="@:2.16")
         depends_on("py-jupyter-server@1.21:", when="@2.16.5:")
         depends_on("py-jupyter-server@1.4:1", when="@2.3:2.10")
-        depends_on("py-notebook@4.2.0:", when="@:0.3.2,0.3.4:2.0.0-alpha0")
+        depends_on("py-notebook@4.2.0:", when="@:2.0.0-alpha0")
         depends_on("py-packaging@21.3:", when="@2.16.4:")
         depends_on("py-packaging", when="@1.3:2.16.3")
         depends_on("py-requests@2.28:", when="@2.16.4:2.24")

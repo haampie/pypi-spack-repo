@@ -12,23 +12,21 @@ class PyEtils(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("epath", default=False)
-    variant("epy", default=False)
+    variant("epath", default=False, description="epath")
+    variant("epy", default=False, description="epy")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:", when="@1.8:")
         depends_on("python@3.10:", when="@1.6:1.7")
-        depends_on("python@3.9:", when="@:0.1,1.4:1.5")
+        depends_on("python@3.7:", when="@:0")
         depends_on("py-fsspec", when="@1.5:+epath")
-        depends_on("py-importlib-resources", when="@0.2,0.6:+epath")
-        depends_on("py-tf-nightly", when="@0.2:0.5+epath")
+        depends_on("py-importlib-resources", when="@0.6:+epath")
         depends_on("py-typing-extensions", when="@0.7:+epath")
         depends_on("py-typing-extensions", when="@0.5:+epy")
-        depends_on("py-zipp", when="@0.2,0.6:+epath")
-
-        # self-dependency
-        # depends_on("py-etils+epy", when="@0.2,0.6:+epath")
+        depends_on("py-zipp", when="@0.6:+epath")
     # END DEPENDENCIES
 
+
+        # self-dependency
+        # depends_on("py-etils+epy", when="@0.6:+epath")

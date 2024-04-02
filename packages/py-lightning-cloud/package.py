@@ -17,16 +17,17 @@ class PyLightningCloud(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click", when="@0.0.4:")
+        depends_on("python@3.7:")
+        depends_on("py-click")
         depends_on("py-fastapi", when="@0.5.33:")
-        depends_on("py-fastapi+all", when="@0.5:0.5.32")
-        depends_on("py-pyjwt", when="@0.5:")
+        depends_on("py-fastapi+all", when="@:0.5.32")
+        depends_on("py-pyjwt")
         depends_on("py-python-multipart", when="@0.5.33:")
-        depends_on("py-requests", when="@0.5:")
-        depends_on("py-rich", when="@0.5:")
-        depends_on("py-six", when="@0.5:")
-        depends_on("py-urllib3", when="@0.5:")
+        depends_on("py-requests")
+        depends_on("py-rich")
+        depends_on("py-six")
+        depends_on("py-urllib3")
         depends_on("py-uvicorn", when="@0.5.33:")
-        depends_on("py-websocket-client", when="@0.5:")
+        depends_on("py-websocket-client")
     # END DEPENDENCIES
 

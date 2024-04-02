@@ -14,13 +14,13 @@ class PyOgb(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-numpy@1.16.0:", when="@:1.0.0,1.1:")
-        depends_on("py-outdated@0.2:", when="@1.2.2:")
-        depends_on("py-pandas@0.24.0:", when="@:1.0.0,1.1:")
-        depends_on("py-scikit-learn@0.20.0:", when="@:1.0.0,1.1:")
-        depends_on("py-six@1.12:", when="@:1.0.0,1.1:")
+        depends_on("py-numpy@1.16.0:")
+        depends_on("py-outdated@0.2:")
+        depends_on("py-pandas@0.24.0:")
+        depends_on("py-scikit-learn@0.20.0:")
+        depends_on("py-six@1.12:")
         depends_on("py-torch@1.6:", when="@1.3.1:")
-        depends_on("py-tqdm@4.29:", when="@:1.0.0,1.1:")
-        depends_on("py-urllib3@1.24:", when="@:1.0.0,1.1:")
+        depends_on("py-tqdm@4.29:")
+        depends_on("py-urllib3@1.24:")
     # END DEPENDENCIES
 

@@ -15,7 +15,6 @@ class PyAlpacaFarm(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.10:", when="@0.1.6:")
-        depends_on("python@3.9:", when="@:0.1.5")
         depends_on("py-accelerate@0.18:", when="@:0.1.9")
         depends_on("py-alpaca-eval@0.2.8:", when="@0.1.9:0.1")
         depends_on("py-datasets")

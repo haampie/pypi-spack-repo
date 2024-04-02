@@ -13,5 +13,7 @@ class PyBackportsZoneinfo(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("py-importlib-resources", when="@0.1.0: ^python@:3.6")
     # END DEPENDENCIES
 

@@ -41,6 +41,7 @@ class PyAwkward(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.10:2.2")
         depends_on("py-awkward-cpp@12", when="@2.1:2.1.1")
         depends_on("py-awkward-cpp@11", when="@2.0.10:2.0")
         depends_on("py-awkward-cpp@10", when="@2.0.9")

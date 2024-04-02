@@ -42,6 +42,8 @@ class PyTensorboard(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("python@3.9:", when="@2.14.1:")
+        depends_on("python@3.8:", when="@2.12:2.14.0")
+        depends_on("python@3.7:", when="@2.11")
         depends_on("py-absl-py@0.4:", when="@1.13:")
         depends_on("py-google-auth@1.6.3:", when="@2.7:2.15")
         depends_on("py-google-auth@1.6.3:1", when="@2.0.1:2.6")

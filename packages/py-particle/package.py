@@ -28,10 +28,13 @@ class PyParticle(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.21:")
         depends_on("py-attrs@19.2:", when="@0.10:")
         depends_on("py-deprecated", when="@0.16:0.20.0,0.22:0.23.0")
         depends_on("py-hepunits@2:", when="@0.13:")
         depends_on("py-hepunits@1.2:", when="@0.10:0.12")
         depends_on("py-importlib-resources@2:", when="@0.16: ^python@:3.8")
+        depends_on("py-importlib-resources@1:", when="@:0.15 ^python@:3.6")
+        depends_on("py-typing-extensions", when="@0.16:0.23.0 ^python@:3.7")
     # END DEPENDENCIES
 

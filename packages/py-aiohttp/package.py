@@ -18,10 +18,12 @@ class PyAiohttp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-async-timeout@3", when="@3.2:3.6.2,4:")
-        depends_on("py-attrs@17.3:", when="@3.0.3:3.6.2,3.8.6:")
-        depends_on("py-chardet@2:3", when="@3.0.0:3.6.2,4:")
+        depends_on("py-async-timeout@3", when="@:3.6.2,4:")
+        depends_on("py-attrs@17.3:", when="@:3.6.2,3.8.6:")
+        depends_on("py-chardet@2:3", when="@:3.6.2,4:")
+        depends_on("py-idna-ssl@1:", when="@:3.6.2,3.8.6:3.8,4: ^python@:3.6")
         depends_on("py-multidict@4.5:4", when="@3.6.1-beta3:3.6.2,4.0.0-alpha1:")
-        depends_on("py-yarl@1:", when="@3.0.0:3.6.2,3.8.6:")
+        depends_on("py-typing-extensions@3.6.5:", when="@:3.6.2,4:4.0.0-alpha0 ^python@:3.6")
+        depends_on("py-yarl@1:", when="@:3.6.2,3.8.6:")
     # END DEPENDENCIES
 

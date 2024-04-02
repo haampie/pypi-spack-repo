@@ -14,6 +14,6 @@ class PyJaracoFunctools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-more-itertools", when="@1.13:")
+        depends_on("py-more-itertools")
     # END DEPENDENCIES
 

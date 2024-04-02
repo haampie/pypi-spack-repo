@@ -14,18 +14,17 @@ class PyOrbaxCheckpoint(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@0.2.4:")
-        depends_on("py-absl-py", when="@0.1:")
-        depends_on("py-etils+epath+epy", when="@0.2.7:")
-        depends_on("py-flax", when="@0.1:0.1.1")
-        depends_on("py-jax@0.4.9:", when="@0.2.3:")
-        depends_on("py-jaxlib", when="@0.1:")
-        depends_on("py-msgpack", when="@0.1.4:")
-        depends_on("py-nest-asyncio", when="@0.1.6:")
-        depends_on("py-numpy", when="@0.1:")
-        depends_on("py-protobuf", when="@0.2.7:")
-        depends_on("py-pyyaml", when="@0.1:")
+        depends_on("python@3.9:")
+        depends_on("py-absl-py")
+        depends_on("py-etils+epath+epy")
+        depends_on("py-jax@0.4.9:")
+        depends_on("py-jaxlib")
+        depends_on("py-msgpack")
+        depends_on("py-nest-asyncio")
+        depends_on("py-numpy")
+        depends_on("py-protobuf")
+        depends_on("py-pyyaml")
         depends_on("py-tensorstore@0.1.51:", when="@0.4.5:")
-        depends_on("py-typing-extensions", when="@0.1.4:")
+        depends_on("py-typing-extensions")
     # END DEPENDENCIES
 

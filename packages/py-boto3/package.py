@@ -31,6 +31,8 @@ class PyBoto3(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.34:")
+        depends_on("python@3.7:", when="@1.24:1.33")
         depends_on("py-botocore@1.34.44:", when="@1.34.44")
         depends_on("py-botocore@1.29.26:1.29", when="@1.26.26")
         depends_on("py-botocore@1.28.5:1.28", when="@1.25.5:1.25")

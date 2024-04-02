@@ -14,8 +14,7 @@ class PySphinxBookTheme(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.1:")
-        depends_on("py-beautifulsoup4", when="@0.0.31:0.0.39")
+        depends_on("python@3.7:", when="@:1.0")
         depends_on("py-pydata-sphinx-theme@0.13.3:", when="@1.0.1:1.0")
         depends_on("py-sphinx@4.0.0:6", when="@1:1.0")
     # END DEPENDENCIES

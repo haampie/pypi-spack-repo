@@ -15,13 +15,15 @@ class PyGcsfs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@2023.3:")
+        depends_on("python@3.7:", when="@2022.2:2023.1")
         depends_on("py-aiohttp@:3", when="@2022.8:")
-        depends_on("py-decorator@4.2:", when="@2021.10:")
+        depends_on("py-decorator@4.2:")
         depends_on("py-fsspec@2024:2024.2", when="@2024:2024.2")
         depends_on("py-fsspec@2023:2023.1", when="@2023:2023.1")
-        depends_on("py-google-auth@1.2:", when="@0.0.4,0.3:0.3.0,0.4:")
-        depends_on("py-google-auth-oauthlib", when="@0.0.4,0.3:0.3.0,0.4:")
-        depends_on("py-google-cloud-storage", when="@2021.10.1:")
-        depends_on("py-requests", when="@0.0.3:0.0.4,0.3:0.3.0,0.4:")
+        depends_on("py-google-auth@1.2:")
+        depends_on("py-google-auth-oauthlib")
+        depends_on("py-google-cloud-storage")
+        depends_on("py-requests")
     # END DEPENDENCIES
 

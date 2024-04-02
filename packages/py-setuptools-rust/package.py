@@ -18,11 +18,12 @@ class PySetuptoolsRust(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.2:1.7")
         depends_on("py-semantic-version@2.8.2:", when="@1:")
-        depends_on("py-semantic-version@2.6:", when="@0.9.2:0")
+        depends_on("py-semantic-version@2.6:", when="@:0")
         depends_on("py-setuptools@62.4:", when="@1.4:")
         depends_on("py-setuptools@46.1:", when="@0.12:1.2")
-        depends_on("py-toml@0.9:", when="@0.10.2:0")
+        depends_on("py-toml@0.9:", when="@:0")
         depends_on("py-typing-extensions@3.7.4.3:", when="@1:1.7")
     # END DEPENDENCIES
 

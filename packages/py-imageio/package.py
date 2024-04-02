@@ -21,6 +21,7 @@ class PyImageio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.16.1:2.31.2")
         depends_on("py-numpy@1.20.0:", when="@2.16")
         depends_on("py-numpy", when="@2.10:2.15,2.17:")
         depends_on("py-pillow@8.3.2:", when="@2.10:2.31.5,2.33:")

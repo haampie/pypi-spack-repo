@@ -14,6 +14,7 @@ class PyBarectf(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@3:")
         depends_on("py-jinja2@3.0.0:", when="@3.0.2:")
         depends_on("py-jsonschema@3.2:3", when="@3:")
         depends_on("py-pyyaml@5.3:5", when="@3:")

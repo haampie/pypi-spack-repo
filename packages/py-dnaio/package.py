@@ -18,6 +18,7 @@ class PyDnaio(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.8:")
         depends_on("py-xopen@1.4:", when="@1:")
         depends_on("py-xopen@0.8.2:", when="@0.4:0.4.2")
         depends_on("py-xopen", when="@0.2:0.3")

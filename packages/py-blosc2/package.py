@@ -15,7 +15,8 @@ class PyBlosc2(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.2.8")
+        depends_on("python@3.9:3", when="@2.2.8")
+        depends_on("python@3.8:3", when="@:0,2.0.0:2.2.7,2.2.9:2.5")
         depends_on("py-msgpack", when="@2.2.7:")
         depends_on("py-ndindex@1.4:", when="@2.2.7:")
         depends_on("py-numpy@1.20.3:", when="@2.2.7:")

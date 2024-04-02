@@ -17,13 +17,15 @@ class PyJupytext(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@1.16:")
+        depends_on("python@:3", when="@:1.15")
         depends_on("py-markdown-it-py@1.0.0:", when="@1.14.7:")
         depends_on("py-markdown-it-py@1.0.0:2", when="@1.13.8:1.14.6")
         depends_on("py-markdown-it-py@1.0.0:1", when="@1.11.4:1.13.7")
         depends_on("py-mdit-py-plugins", when="@1.11.4:")
-        depends_on("py-nbformat", when="@1.10.1-rc0:")
+        depends_on("py-nbformat")
         depends_on("py-packaging", when="@1.16:")
-        depends_on("py-pyyaml", when="@1.7.0-rc1:")
-        depends_on("py-toml", when="@1.7.0-rc1:")
+        depends_on("py-pyyaml")
+        depends_on("py-toml")
     # END DEPENDENCIES
 

@@ -11,10 +11,10 @@ class PyPylatex(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("docs", default=False)
-    variant("matplotlib", default=False)
-    variant("matrices", default=False)
-    variant("quantities", default=False)
+    variant("docs", default=False, description="docs")
+    variant("matplotlib", default=False, description="matplotlib")
+    variant("matrices", default=False, description="matrices")
+    variant("quantities", default=False, description="quantities")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

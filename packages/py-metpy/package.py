@@ -14,7 +14,7 @@ class PyMetpy(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.6:")
+        depends_on("py-importlib-metadata@1:", when="@1:1.2 ^python@:3.7")
         depends_on("py-importlib-resources@1.3:", when="@1:1.5 ^python@:3.8")
         depends_on("py-matplotlib@2.1.0:", when="@0.11:1.0")
         depends_on("py-numpy@1.16.0:", when="@0.12.1:1.0")
@@ -23,7 +23,7 @@ class PyMetpy(PythonPackage):
         depends_on("py-pooch@0.1:", when="@0.10.2:1.2")
         depends_on("py-pyproj@2.3:", when="@1.0.1:1.1")
         depends_on("py-scipy@1.0.0:", when="@0.12:1.0")
-        depends_on("py-traitlets@4.3.0:", when="@0.10:1.3")
+        depends_on("py-traitlets@4.3.0:", when="@:1.3")
         depends_on("py-xarray@0.14.1:", when="@1:1.3")
     # END DEPENDENCIES
 

@@ -14,6 +14,7 @@ class PyBatchspawner(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@:1.2")
         depends_on("py-async-generator@1.8:", when="@1:1.2")
         depends_on("py-jinja2", when="@1:1.2")
         depends_on("py-jupyterhub@0.5:", when="@:1.1")

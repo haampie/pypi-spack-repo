@@ -21,7 +21,7 @@ class PyWatchdog(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("watchmedo", default=False)
+    variant("watchmedo", default=False, description="watchmedo")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

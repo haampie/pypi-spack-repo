@@ -16,8 +16,8 @@ class PyGrapheneTornado(PythonPackage):
     with default_args(type="run"):
         depends_on("py-graphene@2.1:2", when="@2.1.1:2.1,2.3:2")
         depends_on("py-jinja2@2.10.1:", when="@2.0.3:2.1,2.3:2,3.0.0-beta2:")
-        depends_on("py-six@1.10:", when="@2.0.2:2.1,2.3:2,3.0.0-beta2:")
-        depends_on("py-tornado@5.1:", when="@2.0.2:2.1,2.3:2")
-        depends_on("py-werkzeug@0.12.2:0.12", when="@2.0.2:2.1,2.3:2")
+        depends_on("py-six@1.10:", when="@:2.1,2.3:2,3.0.0-beta2:")
+        depends_on("py-tornado@5.1:", when="@:2.1,2.3:2")
+        depends_on("py-werkzeug@0.12.2:0.12", when="@:2.1,2.3:2")
     # END DEPENDENCIES
 

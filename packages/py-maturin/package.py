@@ -17,6 +17,7 @@ class PyMaturin(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-tomli@1.1:", when="@0.12.10-beta4: ^python@:3.10")
+        depends_on("python@3.7:")
+        depends_on("py-tomli@1.1:", when="^python@:3.10")
     # END DEPENDENCIES
 

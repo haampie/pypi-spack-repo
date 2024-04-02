@@ -14,6 +14,7 @@ class PyPyTes(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@0.3:1.1.0-rc1")
         depends_on("py-attrs@17.4:", when="@0.4:1.1.0-rc1")
         depends_on("py-future@0.16:", when="@0.3:1.1.0-rc1")
         depends_on("py-python-dateutil@2.6.1:", when="@0.4.2:1.1.0-rc1")

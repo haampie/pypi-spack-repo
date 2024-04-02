@@ -16,6 +16,7 @@ class PyOwslib(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-dataclasses", when="@0.25: ^python@:3.6")
         depends_on("py-pyproj@2:", when="@0.19.2:0.25")
         depends_on("py-python-dateutil@1.5:", when="@0.19.1:")
         depends_on("py-pytz", when="@0.19.1:")

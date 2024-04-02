@@ -17,6 +17,7 @@ class PyPyamg(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@5:5.0")
         depends_on("py-numpy@1.7:", when="@3.2.1:4.0")
         depends_on("py-pybind11@2.2:", when="@4:4.0")
         depends_on("py-pytest", when="@3.2.1:4.0")

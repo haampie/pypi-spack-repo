@@ -18,6 +18,7 @@ class PyDeeptools(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.5.3:3.5.4")
         depends_on("py-deeptoolsintervals@0.1.8:", when="@3.5.1,3.5.3:")
         depends_on("py-importlib-metadata", when="@3.5.3:3.5.4")
         depends_on("py-matplotlib@3.3.0:", when="@3.5.1,3.5.3")

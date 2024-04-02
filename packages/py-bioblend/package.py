@@ -14,6 +14,7 @@ class PyBioblend(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.17:")
         depends_on("py-requests@2.20:", when="@0.12:")
         depends_on("py-requests-toolbelt@0.5.1:0.8,0.9.1:", when="@0.13:")
         depends_on("py-tuspy", when="@0.18:")

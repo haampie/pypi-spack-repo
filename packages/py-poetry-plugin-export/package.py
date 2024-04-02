@@ -15,6 +15,8 @@ class PyPoetryPluginExport(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:3", when="@1.5:")
+        depends_on("python@3.7:3", when="@:1.4")
         depends_on("py-poetry@1.6:", when="@1.6")
         depends_on("py-poetry@1.2.0:", when="@1.0.7:1.1")
         depends_on("py-poetry-core@1.7:", when="@1.6:")

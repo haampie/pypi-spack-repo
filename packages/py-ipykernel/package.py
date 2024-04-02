@@ -37,10 +37,15 @@ class PyIpykernel(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@6.17:")
+        depends_on("python@3.7:", when="@6.0.0-alpha1:6.16")
         depends_on("py-appnope", when="@5.1.3:5.3.1,5.3.3: platform=darwin")
+        depends_on("py-argcomplete@1.12.3:", when="@6.1:6.6 ^python@:3.7")
         depends_on("py-comm@0.1.1:", when="@6.19:")
         depends_on("py-debugpy@1.6.5:", when="@6.21:")
         depends_on("py-debugpy@1.0.0:", when="@6:6.20")
+        depends_on("py-importlib-metadata@:4", when="@6.1:6.6 ^python@:3.7")
+        depends_on("py-importlib-metadata@:3", when="@6.0.0-alpha5:6.0 ^python@:3.7")
         depends_on("py-ipython@7.23.1:", when="@6.5.1:")
         depends_on("py-ipython@7.23.1:7", when="@6.0.2:6.5.0")
         depends_on("py-ipython@5.0.0:", when="@5.0.0:5.3.1,5.3.3:5")

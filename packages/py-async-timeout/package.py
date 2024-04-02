@@ -17,6 +17,7 @@ class PyAsyncTimeout(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-typing-extensions@3.6.5:", when="@4.0.2: ^python@:3.7")
         depends_on("py-typing-extensions@3.6.5:", when="@4.0.0-alpha2:4.0.1")
     # END DEPENDENCIES
 

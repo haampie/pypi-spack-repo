@@ -6,15 +6,15 @@
 from spack.package import *
 
 class PyPydeps(PythonPackage):
-    # BEGIN VERSIONS [WHEEL ONLY]
-    version("1.9.0", sha256="59d6d0f5a2b8ebdb11caf0439dd36ad7b918de7c8c338ba9d526b8fd700a346d", url="https://pypi.org/packages/0a/84/4553dfa9ba5a778f677745806a214028ef2f8e4ec20dfd7ea0a5fd52fd5d/pydeps-1.9.0-py2-none-any.whl")
-    version("1.7.1", sha256="0cc20d7d0c626a3cbec611498e7a79a33898430a044e316e6c1a50567c3a353a", url="https://pypi.org/packages/26/a7/2af0a6e78dd1413c78d5c3ec6f9effaa654e4ec4e5afc29bcafa66479081/pydeps-1.7.1-py2-none-any.whl")
+    # BEGIN VERSIONS
+    version("1.9.0", sha256="ba9b8c7d72cb4dfd3f4dd6b8a250c240d15824850a415fd428f2660ed371361f", url="https://pypi.org/packages/6b/64/04a9bb1bcc687a5c3b3e14f75d01f9b00f01656917e5bfa6fd3690464f1a/pydeps-1.9.0.tar.gz")
+    version("1.7.1", sha256="7eeb8d0ec2713befe81dd0d15eac540e843b1daae13613df1c572528552d6340", url="https://pypi.org/packages/24/36/21e47c6aa9ded60221135921d3fcdf439be75d11bc38c7869328a98d08ae/pydeps-1.7.1.tar.gz")
     # END VERSIONS
 
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-stdlib-list", when="@1.3.7:")
+        depends_on("py-stdlib-list", when="@:1.9.3,1.9.6,1.9.14:")
     # END DEPENDENCIES
 

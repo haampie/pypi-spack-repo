@@ -15,8 +15,8 @@ class PyTypesentry(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-colorama@0.3:")
+    # END DEPENDENCIES
+
 
         # self-dependency
         # depends_on("py-typesentry@0.2.7:", when="@0.2.7:")
-    # END DEPENDENCIES
-

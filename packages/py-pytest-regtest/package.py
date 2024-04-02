@@ -14,7 +14,6 @@ class PyPytestRegtest(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2:2.1.0")
         depends_on("py-pytest@7.2.1:", when="@2:")
     # END DEPENDENCIES
 

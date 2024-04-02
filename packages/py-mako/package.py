@@ -20,6 +20,8 @@ class PyMako(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@1.2")
+        depends_on("py-importlib-metadata", when="@1.2 ^python@:3.7")
         depends_on("py-markupsafe@0.9.2:", when="@1.1.4:")
     # END DEPENDENCIES
 

@@ -14,6 +14,7 @@ class PyQiskitNature(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-dataclasses", when="@0.2:0.3.1 ^python@:3.6")
         depends_on("py-h5py@:3.2", when="@0.1.4:0.2")
         depends_on("py-numpy@1.17.0:")
         depends_on("py-psutil@5:")

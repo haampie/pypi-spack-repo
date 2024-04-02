@@ -15,13 +15,13 @@ class PyBravado(PythonPackage):
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
         depends_on("py-bravado-core@5.16.1:", when="@10.5:")
-        depends_on("py-monotonic", when="@9.3:")
+        depends_on("py-monotonic")
         depends_on("py-msgpack", when="@10.6.3:")
-        depends_on("py-python-dateutil", when="@1.0.0-rc2:2.0,3:8.1,9.3:")
-        depends_on("py-pyyaml", when="@8.1,9.3:")
+        depends_on("py-python-dateutil")
+        depends_on("py-pyyaml")
         depends_on("py-requests@2.17:", when="@10.5:")
-        depends_on("py-simplejson", when="@10.3:")
-        depends_on("py-six", when="@2:2.0,3:8.1,9.3:")
-        depends_on("py-typing-extensions", when="@10.3.1:")
+        depends_on("py-simplejson")
+        depends_on("py-six")
+        depends_on("py-typing-extensions")
     # END DEPENDENCIES
 

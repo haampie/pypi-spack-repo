@@ -18,9 +18,7 @@ class PyRuamelYaml(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-ruamel-yaml-clib@0.2.7:", when="@0.17.34: ^python@:3.12")
         depends_on("py-ruamel-yaml-clib@0.2.7:", when="@0.17.23:0.17.33 ^python@:3.11")
         depends_on("py-ruamel-yaml-clib@0.1.2:", when="@0.16.13:0.17.17 ^python@:3.9")
-        depends_on("py-ruamel-yaml-clib@0.1.2:", when="@0.16.11:0.16.12 ^python@:3.8")
     # END DEPENDENCIES
 

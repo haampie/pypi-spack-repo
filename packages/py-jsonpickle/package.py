@@ -16,6 +16,7 @@ class PyJsonpickle(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-importlib-metadata", when="@1.4.2: ^python@:3.7")
         depends_on("py-importlib-metadata", when="@1.4:1.4.1")
     # END DEPENDENCIES
 

@@ -14,6 +14,7 @@ class PyOptree(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:")
         depends_on("py-typing-extensions@4:", when="@0.9.2:")
     # END DEPENDENCIES
 

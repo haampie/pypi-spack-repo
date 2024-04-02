@@ -21,11 +21,13 @@ class PySetuptoolsScm(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("toml", default=False)
+    variant("toml", default=False, description="toml")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@7")
+        depends_on("py-importlib-metadata", when="@7.0.1:7 ^python@:3.7")
         depends_on("py-packaging@20:", when="@6.3:")
         depends_on("py-setuptools@42:", when="@6.3:7+toml")
         depends_on("py-setuptools@45:", when="@6:6.2")
@@ -34,7 +36,6 @@ class PySetuptoolsScm(PythonPackage):
         depends_on("py-tomli@1:", when="@7.1: ^python@:3.10")
         depends_on("py-tomli@1:", when="@6.3+toml")
         depends_on("py-tomli@1:", when="@6.2,6.3.1:7.0")
-        depends_on("py-typing-extensions", when="@8:8.0.3 ^python@:3.10")
         depends_on("py-typing-extensions", when="@7,8.0.4:")
     # END DEPENDENCIES
 

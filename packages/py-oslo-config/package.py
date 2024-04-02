@@ -14,12 +14,13 @@ class PyOsloConfig(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-debtcollector@1.2:", when="@3.6:")
-        depends_on("py-netaddr@0.7.18:", when="@4.13:")
-        depends_on("py-oslo-i18n@3.15.3:", when="@4.13:")
+        depends_on("py-debtcollector@1.2:")
+        depends_on("py-importlib-metadata@1.7:", when="@:9.2 ^python@:3.7")
+        depends_on("py-netaddr@0.7.18:")
+        depends_on("py-oslo-i18n@3.15.3:")
         depends_on("py-pyyaml@5.1:", when="@8.5:")
-        depends_on("py-requests@2.18:", when="@6.4:")
-        depends_on("py-rfc3986@1.2:", when="@6.8:")
-        depends_on("py-stevedore@1.20:", when="@3.23:")
+        depends_on("py-requests@2.18:")
+        depends_on("py-rfc3986@1.2:")
+        depends_on("py-stevedore@1.20:")
     # END DEPENDENCIES
 

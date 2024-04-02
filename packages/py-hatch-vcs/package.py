@@ -15,6 +15,7 @@ class PyHatchVcs(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3")
         depends_on("py-hatchling@1.1:", when="@0.3:")
         depends_on("py-hatchling@0.21:", when="@0.2")
         depends_on("py-setuptools-scm@6.4:")

@@ -11,7 +11,7 @@ class PyPythonSocketio(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("eventlet", default=False)
+    variant("eventlet", default=False, description="eventlet")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

@@ -14,15 +14,12 @@ class PyAlpacaEval(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.10:", when="@0.1.3:")
-        depends_on("python@3.9:", when="@:0.1.2")
+        depends_on("python@3.10:")
         depends_on("py-datasets")
         depends_on("py-fire")
-        depends_on("py-huggingface-hub", when="@0.5.4:")
         depends_on("py-openai", when="@:0.5.1")
         depends_on("py-pandas")
         depends_on("py-python-dotenv", when="@0.2.2:")
-        depends_on("py-scipy", when="@0.5:")
         depends_on("py-tiktoken@0.3.2:")
     # END DEPENDENCIES
 

@@ -11,16 +11,14 @@ class PyArmPyart(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("cartopy", default=False)
-    variant("cylp", default=False)
-    variant("gdal", default=False)
-    variant("hdf5", default=False)
-    variant("rsl", default=False)
-    variant("wradlib", default=False)
+    variant("cartopy", default=False, description="cartopy")
+    variant("cylp", default=False, description="cylp")
+    variant("gdal", default=False, description="gdal")
+    variant("hdf5", default=False, description="hdf5")
+    variant("rsl", default=False, description="rsl")
+    variant("wradlib", default=False, description="wradlib")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("python@3.9:", when="@1.14.6:")
     # END DEPENDENCIES
 

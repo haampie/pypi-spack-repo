@@ -13,5 +13,8 @@ class PyPastedeploy(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.0.1:")
+        depends_on("py-importlib-metadata", when="@3: ^python@:3.7")
     # END DEPENDENCIES
 

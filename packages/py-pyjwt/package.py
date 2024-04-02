@@ -13,7 +13,7 @@ class PyPyjwt(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("crypto", default=False)
+    variant("crypto", default=False, description="crypto")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

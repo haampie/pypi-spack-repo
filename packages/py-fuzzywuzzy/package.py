@@ -11,7 +11,7 @@ class PyFuzzywuzzy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("speedup", default=False)
+    variant("speedup", default=False, description="speedup")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

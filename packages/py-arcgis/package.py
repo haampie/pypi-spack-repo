@@ -13,8 +13,5 @@ class PyArcgis(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
-    with default_args(type="run"):
-        depends_on("python@3.9:3.11", when="@2.2:")
-        depends_on("python@:3.9", when="@2.0.1:2.1")
     # END DEPENDENCIES
 

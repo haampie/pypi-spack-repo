@@ -16,5 +16,7 @@ class PyIdentify(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.4.5:2.5.24")
     # END DEPENDENCIES
 

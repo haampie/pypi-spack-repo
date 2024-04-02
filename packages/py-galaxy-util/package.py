@@ -16,7 +16,6 @@ class PyGalaxyUtil(PythonPackage):
     with default_args(type="run"):
         depends_on("py-bleach")
         depends_on("py-boltons")
-        depends_on("py-cheetah3", when="@19.9.0.dev:19.9.0.dev1")
         depends_on("py-docutils")
         depends_on("py-importlib-resources", when="@22:")
         depends_on("py-markupsafe", when="@:22.5.0.dev0")

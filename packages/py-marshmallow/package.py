@@ -15,6 +15,7 @@ class PyMarshmallow(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@3.15:3.19")
         depends_on("py-packaging@17:", when="@3.16:")
         depends_on("py-packaging", when="@3.15")
     # END DEPENDENCIES

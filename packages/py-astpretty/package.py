@@ -11,7 +11,7 @@ class PyAstpretty(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("typed", default=False)
+    variant("typed", default=False, description="typed")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

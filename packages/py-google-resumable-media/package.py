@@ -16,6 +16,7 @@ class PyGoogleResumableMedia(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@2.4:")
         depends_on("py-google-crc32c@1:", when="@1:2.0.1,2.0.3:")
         depends_on("py-six", when="@:1.3.0")
     # END DEPENDENCIES

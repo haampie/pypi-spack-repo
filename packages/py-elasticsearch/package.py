@@ -16,11 +16,12 @@ class PyElasticsearch(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("async", default=False)
+    variant("async", default=False, description="async")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@:3", when="@6.8:6,7.6:8.10")
         depends_on("py-aiohttp@3.0.0:3", when="@7.8:+async")
         depends_on("py-elastic-transport@8.0.0:", when="@8.0.0:8.12")
         depends_on("py-urllib3@1.21.1:", when="@6.8:6,7.6:7.9")

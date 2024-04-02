@@ -15,6 +15,7 @@ class PySqlalchemyUtils(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("py-importlib-metadata", when="@0.38.3: ^python@:3.7")
         depends_on("py-sqlalchemy@1.3.0:", when="@0.38.3:")
     # END DEPENDENCIES
 

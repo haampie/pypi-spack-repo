@@ -13,5 +13,7 @@ class PyFilecheck(PythonPackage):
     # BEGIN VARIANTS
     # END VARIANTS
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@:3", when="@:0.0.23")
     # END DEPENDENCIES
 

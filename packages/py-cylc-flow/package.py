@@ -16,23 +16,25 @@ class PyCylcFlow(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-aiofiles@0.7", when="@8.0-beta2:8.1")
-        depends_on("py-ansimarkup@1:", when="@8.0-alpha1:")
-        depends_on("py-async-timeout@3:", when="@8.0-rc1:")
-        depends_on("py-colorama@0.4:", when="@8.0-beta0:")
-        depends_on("py-graphene@2.1:2", when="@8.0-alpha1:")
+        depends_on("python@3.7:")
+        depends_on("py-aiofiles@0.7", when="@:8.1")
+        depends_on("py-ansimarkup@1:")
+        depends_on("py-async-timeout@3:")
+        depends_on("py-colorama@0.4:")
+        depends_on("py-graphene@2.1:2")
+        depends_on("py-importlib-metadata", when="@8.1.3: ^python@:3.7")
         depends_on("py-jinja2@3:3.0", when="@8.0.0:")
         depends_on("py-metomi-isodatetime@1.3:", when="@8.2.3:")
         depends_on("py-metomi-isodatetime@1.3:1.3.0", when="@8.0-rc3:8.2.2")
         depends_on("py-promise", when="@8.0-rc3:")
         depends_on("py-protobuf@4.21.2:4.21", when="@8.1:")
-        depends_on("py-psutil@5.6:", when="@8.0-alpha2:")
+        depends_on("py-psutil@5.6:")
         depends_on("py-pyzmq@22:", when="@8.2:")
-        depends_on("py-pyzmq@22", when="@8.0-rc1:8.1")
+        depends_on("py-pyzmq@22", when="@:8.1")
         depends_on("py-rx", when="@8.0-rc3:")
         depends_on("py-setuptools@49:66,68:", when="@8.2:")
         depends_on("py-setuptools@49:66", when="@8.1")
         depends_on("py-tomli@2:", when="@8.1: ^python@:3.10")
-        depends_on("py-urwid@2:", when="@8.0-alpha2:")
+        depends_on("py-urwid@2:")
     # END DEPENDENCIES
 

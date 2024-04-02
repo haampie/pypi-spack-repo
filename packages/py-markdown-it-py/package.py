@@ -13,16 +13,20 @@ class PyMarkdownItPy(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("linkify", default=False)
-    variant("plugins", default=False)
+    variant("linkify", default=False, description="linkify")
+    variant("plugins", default=False, description="plugins")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.8:", when="@3:")
+        depends_on("python@3.7:", when="@2.1:2")
+        depends_on("python@:3", when="@:2.0")
         depends_on("py-attrs@19:21", when="@1.1:2.0")
         depends_on("py-linkify-it-py@1:", when="@2.2:+linkify")
         depends_on("py-linkify-it-py@1", when="@0.5.8:2.1+linkify")
         depends_on("py-mdit-py-plugins", when="@1.0.0-beta2:+plugins")
         depends_on("py-mdurl@0.1:", when="@2:")
+        depends_on("py-typing-extensions@3.7.4:", when="@1.0.0-beta3:2 ^python@:3.7")
     # END DEPENDENCIES
 

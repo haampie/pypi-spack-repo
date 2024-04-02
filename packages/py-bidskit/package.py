@@ -16,9 +16,9 @@ class PyBidskit(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2024:")
-        depends_on("py-numpy@1.21.0:", when="@2022:")
-        depends_on("py-pybids@0.15:", when="@2022.5:")
-        depends_on("py-pydicom@2.2.0:", when="@2022:")
+        depends_on("python@3.7:3", when="@:2023")
+        depends_on("py-numpy@1.21.0:")
+        depends_on("py-pybids@0.15:")
+        depends_on("py-pydicom@2.2.0:")
     # END DEPENDENCIES
 

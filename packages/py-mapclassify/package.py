@@ -14,7 +14,6 @@ class PyMapclassify(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.9:", when="@2.6.1:2")
         depends_on("py-networkx", when="@2.3:2.6.0,23:")
         depends_on("py-numpy@1.3:", when="@2.3:2.6.0,23:")
         depends_on("py-pandas@1.0.0:", when="@2.3:2.6.0,23:")

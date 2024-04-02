@@ -15,7 +15,7 @@ class PyHistoprint(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-click@7:", when="@1.2:")
+        depends_on("py-click@7:")
         depends_on("py-numpy", when="@2:")
         depends_on("py-uhi@0.2.1:", when="@2.2:")
     # END DEPENDENCIES

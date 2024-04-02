@@ -14,7 +14,8 @@ class PyPep517(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("py-tomli@1.1:", when="@0.13: ^python@:3.10")
+        depends_on("py-importlib-metadata", when="@0.8: ^python@:3.7")
         depends_on("py-tomli@1.1:", when="@0.11.1:0.12")
+        depends_on("py-zipp", when="@0.8: ^python@:3.7")
     # END DEPENDENCIES
 

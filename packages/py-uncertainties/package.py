@@ -13,8 +13,8 @@ class PyUncertainties(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("docs", default=False)
-    variant("optional", default=False)
+    variant("docs", default=False, description="docs")
+    variant("optional", default=False, description="optional")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES

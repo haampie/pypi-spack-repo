@@ -14,7 +14,7 @@ class PySnakemakeStoragePluginSftp(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
-        depends_on("python@3.11:")
+        depends_on("python@3.11:3")
         depends_on("py-pysftp@0.2.9:")
         depends_on("py-snakemake-interface-common@1.14.3:")
         depends_on("py-snakemake-interface-storage-plugins@3:", when="@0.1.1:")

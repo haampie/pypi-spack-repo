@@ -11,9 +11,11 @@ class PyNeurom(PythonPackage):
     # END VERSIONS
 
     # BEGIN VARIANTS
-    variant("plotly", default=False)
+    variant("plotly", default=False, description="plotly")
     # END VARIANTS
 
     # BEGIN DEPENDENCIES
+    with default_args(type="run"):
+        depends_on("python@3.8:", when="@3.2.4:")
     # END DEPENDENCIES
 

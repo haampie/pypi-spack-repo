@@ -14,6 +14,7 @@ class PyPystacClient(PythonPackage):
     # END VARIANTS
     # BEGIN DEPENDENCIES
     with default_args(type="run"):
+        depends_on("python@3.7:", when="@0.3.1:0.5")
         depends_on("py-pystac@1.4:", when="@0.3.3:0.6.0")
         depends_on("py-python-dateutil@2.7:", when="@:0.3.0,0.3.4:0.6")
         depends_on("py-requests@2.27.1:", when="@0.5:0.6")
